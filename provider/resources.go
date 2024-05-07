@@ -1,4 +1,4 @@
-// Copyright 2016-2024, Pulumi Corporation.
+// Copyright 2016-2018, Pulumi Corporation.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,16 +37,23 @@ import (
 //go:embed cmd/pulumi-resource-ise/bridge-metadata.json
 var bridgeMetadata []byte
 
+// all of the token components used below.
+const (
+	// This variable controls the default name of the package in the package
+	mainMod = "index" // the ise module
+)
+
 func convertName(tfname string) (module string, name string) {
 	tfNameItems := strings.Split(tfname, "_")
 	contract.Assertf(len(tfNameItems) >= 2, "Invalid snake case name %s", tfname)
 	contract.Assertf(tfNameItems[0] == "ise", "Invalid snake case name %s. Does not start with ise", tfname)
 	if len(tfNameItems) == 2 {
-		panic("expected at least one module name")
+		module = mainMod
+		name = tfNameItems[1]
+	} else {
+		module = strcase.ToPascal(strings.Join(tfNameItems[1:len(tfNameItems)-1], "_"))
+		name = tfNameItems[len(tfNameItems)-1]
 	}
-	module = strcase.ToPascal(strings.Join(tfNameItems[1:len(tfNameItems)-1], "_"))
-	name = tfNameItems[len(tfNameItems)-1]
-
 	contract.Assertf(!unicode.IsDigit(rune(module[0])), "Pulumi namespace must not start with a digit: %s", name)
 	name = strcase.ToPascal(name)
 	contract.Assertf(!unicode.IsDigit(rune(name[0])), "Pulumi name must not start with a digit: %s", name)
