@@ -12,6 +12,7 @@ plugins:
     kind: converter
 
 team: ecosystem
+providerDefaultBranch: main
 
 actions:
   preTest:
