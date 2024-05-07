@@ -32,7 +32,7 @@ builds:
     - env GOOS={{ .Os }} GOARCH={{ .Arch }} go clean -modcache
   ignore: []
   ldflags:
-  - -X github.com/pulumi/pulumi-random/provider/pkg/version.Version={{.Tag}}
+  - -X github.com/pulumi/pulumi-ise/provider/pkg/version.Version={{.Tag}}
   main: ./cmd/pulumi-resource-ise/
 changelog:
   filters:
@@ -48,4 +48,4 @@ release:
   disable: false
 snapshot:
   name_template: "{{ .Tag }}-SNAPSHOT"
-project_name: "pulumi-random"
+project_name: "pulumi-ise"
