@@ -122,12 +122,8 @@ func Provider() tfbridge.ProviderInfo {
 		//
 		// You may host a logo on a domain you control or add an SVG logo for your package
 		// in your repository and use the raw content URL for that file as your logo URL.
-		LogoURL: "https://raw.githubusercontent.com/pulumi/pulumi-ise/main/docs/ise.png",
-		// PluginDownloadURL is an optional URL used to download the Provider
-		// for use in Pulumi programs
-		// e.g https://github.com/org/pulumi-provider-name/releases/
-		PluginDownloadURL: "github://api.github.com/pulumi/pulumi-ise",
-		Description:       "A Pulumi package for creating and managing resources on a Cisco ISE (Identity Service Engine) instance.",
+		LogoURL:     "https://raw.githubusercontent.com/pulumi/pulumi-ise/main/docs/ise.png",
+		Description: "A Pulumi package for creating and managing resources on a Cisco ISE (Identity Service Engine) instance.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
 		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
@@ -141,36 +137,24 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/pulumi/pulumi-ise",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
-		GitHubOrg:         "CiscoDevNet",
-		UpstreamRepoPath:  "./upstream",
-		MetadataInfo:      tfbridge.NewProviderMetadata(bridgeMetadata),
-		TFProviderVersion: "0.2.1",
-		Version:           version.Version,
-		Config:            map[string]*tfbridge.SchemaInfo{
-			// Add any required configuration here, or remove the example below if
-			// no additional points are required.
-			// "region": {
-			// 	Type: tfbridge.MakeType("region", "Region"),
-			// 	Default: &tfbridge.DefaultInfo{
-			// 		EnvVars: []string{"AWS_REGION", "AWS_DEFAULT_REGION"},
-			// 	},
-			// },
-		},
+		GitHubOrg:            "CiscoDevNet",
+		UpstreamRepoPath:     "./upstream",
+		MetadataInfo:         tfbridge.NewProviderMetadata(bridgeMetadata),
+		TFProviderVersion:    "0.2.1",
+		Version:              version.Version,
+		Config:               map[string]*tfbridge.SchemaInfo{},
 		PreConfigureCallback: preConfigureCallback,
-		Resources:            map[string]*tfbridge.ResourceInfo{
-			// Map each resource in the Terraform provider to a Pulumi type.
-			//
-			// "aws_iam_role": {
-			//   Tok: makeResource(mainMod, "aws_iam_role"),
-			// },
+		Resources: map[string]*tfbridge.ResourceInfo{
+			"ise_active_directory_add_groups": {
+				Tok: makeResource("ise_active_directory_add_groups"),
+				Fields: map[string]*tfbridge.SchemaInfo{
+					"groups": {
+						CSharpName: "GroupsValue",
+					},
+				},
+			},
 		},
-		DataSources: map[string]*tfbridge.DataSourceInfo{
-			// Map each data source in the Terraform provider to a Pulumi function.
-			//
-			// "aws_ami": {
-			//	Tok: makeDataSource(mainMod, "aws_ami"),
-			// },
-		},
+		DataSources: map[string]*tfbridge.DataSourceInfo{},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@pulumi/ise",
 
@@ -182,19 +166,15 @@ func Provider() tfbridge.ProviderInfo {
 				"@types/node": "^10.0.0", // so we can access strongly typed node definitions.
 				"@types/mime": "^2.0.0",
 			},
-			// See the documentation for tfbridge.OverlayInfo for how to lay out this
-			// section, or refer to the AWS provider. Delete this section if there are
-			// no overlay files.
-			//Overlay: &tfbridge.OverlayInfo{},
 		},
-		Python: &tfbridge.PythonInfo{
-			PackageName: "pulumi-ise",
-
-			// List any Python dependencies and their version ranges
-			Requires: map[string]string{
-				"pulumi": ">=3.0.0,<4.0.0",
-			},
-		},
+		Python: (func() *tfbridge.PythonInfo {
+			i := &tfbridge.PythonInfo{
+				Requires: map[string]string{
+					"pulumi": ">=3.0.0,<4.0.0",
+				}}
+			i.PyProject.Enabled = true
+			return i
+		})(),
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
 				fmt.Sprintf("github.com/pulumi/pulumi-%[1]s/sdk/", "ise"),
