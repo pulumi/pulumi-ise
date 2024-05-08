@@ -142,7 +142,7 @@ func Provider() tfbridge.ProviderInfo {
 		Name: "ise",
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
-		DisplayName: "Ise",
+		DisplayName: "Cisco ISE",
 		// The default publisher for all packages is Pulumi.
 		// Change this to your personal name (or a company name) that you
 		// would like to be shown in the Pulumi Registry if this package is published
