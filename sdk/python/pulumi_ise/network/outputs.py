@@ -8,11 +8,1862 @@ import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
+from . import outputs
 
 __all__ = [
+    'AccessAuthenticationRuleChildren',
+    'AccessAuthenticationRuleChildrenChildren',
+    'AccessAuthorizationExceptionRuleChildren',
+    'AccessAuthorizationExceptionRuleChildrenChildren',
+    'AccessAuthorizationGlobalExceptionRuleChildren',
+    'AccessAuthorizationGlobalExceptionRuleChildrenChildren',
+    'AccessAuthorizationRuleChildren',
+    'AccessAuthorizationRuleChildrenChildren',
+    'AccessConditionChildren',
+    'AccessConditionChildrenChildren',
+    'AccessPolicySetChildren',
+    'AccessPolicySetChildrenChildren',
+    'AuthorizationProfileAdvancedAttribute',
     'DeviceIp',
+    'GetAccessAuthenticationRuleChildrenResult',
+    'GetAccessAuthenticationRuleChildrenChildrenResult',
+    'GetAccessAuthorizationExceptionRuleChildrenResult',
+    'GetAccessAuthorizationExceptionRuleChildrenChildrenResult',
+    'GetAccessAuthorizationGlobalExceptionRuleChildrenResult',
+    'GetAccessAuthorizationGlobalExceptionRuleChildrenChildrenResult',
+    'GetAccessAuthorizationRuleChildrenResult',
+    'GetAccessAuthorizationRuleChildrenChildrenResult',
+    'GetAccessConditionChildrenResult',
+    'GetAccessConditionChildrenChildrenResult',
+    'GetAccessPolicySetChildrenResult',
+    'GetAccessPolicySetChildrenChildrenResult',
+    'GetAuthorizationProfileAdvancedAttributeResult',
     'GetDeviceIpResult',
 ]
+
+@pulumi.output_type
+class AccessAuthenticationRuleChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthenticationRuleChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthenticationRuleChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthenticationRuleChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 childrens: Optional[Sequence['outputs.AccessAuthenticationRuleChildrenChildren']] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['AccessAuthenticationRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.AccessAuthenticationRuleChildrenChildren']]:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthenticationRuleChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthenticationRuleChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthenticationRuleChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthenticationRuleChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Condition type.
+                 - Choices: `ConditionAttributes`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+          - Choices: `ConditionAttributes`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthorizationExceptionRuleChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthorizationExceptionRuleChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthorizationExceptionRuleChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthorizationExceptionRuleChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 childrens: Optional[Sequence['outputs.AccessAuthorizationExceptionRuleChildrenChildren']] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['AccessAuthorizationExceptionRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.AccessAuthorizationExceptionRuleChildrenChildren']]:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthorizationExceptionRuleChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthorizationExceptionRuleChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthorizationExceptionRuleChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthorizationExceptionRuleChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Condition type.
+                 - Choices: `ConditionAttributes`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+          - Choices: `ConditionAttributes`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthorizationGlobalExceptionRuleChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthorizationGlobalExceptionRuleChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthorizationGlobalExceptionRuleChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthorizationGlobalExceptionRuleChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 childrens: Optional[Sequence['outputs.AccessAuthorizationGlobalExceptionRuleChildrenChildren']] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['AccessAuthorizationGlobalExceptionRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.AccessAuthorizationGlobalExceptionRuleChildrenChildren']]:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthorizationGlobalExceptionRuleChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthorizationGlobalExceptionRuleChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthorizationGlobalExceptionRuleChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthorizationGlobalExceptionRuleChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Condition type.
+                 - Choices: `ConditionAttributes`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+          - Choices: `ConditionAttributes`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthorizationRuleChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthorizationRuleChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthorizationRuleChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthorizationRuleChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 childrens: Optional[Sequence['outputs.AccessAuthorizationRuleChildrenChildren']] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['AccessAuthorizationRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.AccessAuthorizationRuleChildrenChildren']]:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessAuthorizationRuleChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessAuthorizationRuleChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessAuthorizationRuleChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessAuthorizationRuleChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Condition type.
+                 - Choices: `ConditionAttributes`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+          - Choices: `ConditionAttributes`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessConditionChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessConditionChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessConditionChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessConditionChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 childrens: Optional[Sequence['outputs.AccessConditionChildrenChildren']] = None,
+                 description: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 name: Optional[str] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['AccessConditionChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str description: Condition description
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str name: Condition name
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if description is not None:
+            pulumi.set(__self__, "description", description)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.AccessConditionChildrenChildren']]:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter
+    def description(self) -> Optional[str]:
+        """
+        Condition description
+        """
+        return pulumi.get(self, "description")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[str]:
+        """
+        Condition name
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessConditionChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessConditionChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessConditionChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessConditionChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 description: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 name: Optional[str] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Condition type.
+                 - Choices: `ConditionAttributes`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str description: Condition description
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str name: Condition name
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if description is not None:
+            pulumi.set(__self__, "description", description)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+          - Choices: `ConditionAttributes`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def description(self) -> Optional[str]:
+        """
+        Condition description
+        """
+        return pulumi.get(self, "description")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[str]:
+        """
+        Condition name
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessPolicySetChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessPolicySetChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessPolicySetChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessPolicySetChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 childrens: Optional[Sequence['outputs.AccessPolicySetChildrenChildren']] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['AccessPolicySetChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.AccessPolicySetChildrenChildren']]:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AccessPolicySetChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AccessPolicySetChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AccessPolicySetChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AccessPolicySetChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: str,
+                 attribute_name: Optional[str] = None,
+                 attribute_value: Optional[str] = None,
+                 dictionary_name: Optional[str] = None,
+                 dictionary_value: Optional[str] = None,
+                 id: Optional[str] = None,
+                 is_negate: Optional[bool] = None,
+                 operator: Optional[str] = None):
+        """
+        :param str condition_type: Condition type.
+                 - Choices: `ConditionAttributes`, `ConditionReference`
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+          - Choices: `ConditionAttributes`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[str]:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> Optional[str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AuthorizationProfileAdvancedAttribute(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "attributeLeftDictionaryName":
+            suggest = "attribute_left_dictionary_name"
+        elif key == "attributeLeftName":
+            suggest = "attribute_left_name"
+        elif key == "attributeRightDictionaryName":
+            suggest = "attribute_right_dictionary_name"
+        elif key == "attributeRightName":
+            suggest = "attribute_right_name"
+        elif key == "attributeRightValue":
+            suggest = "attribute_right_value"
+        elif key == "attributeRightValueType":
+            suggest = "attribute_right_value_type"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AuthorizationProfileAdvancedAttribute. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AuthorizationProfileAdvancedAttribute.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AuthorizationProfileAdvancedAttribute.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 attribute_left_dictionary_name: Optional[str] = None,
+                 attribute_left_name: Optional[str] = None,
+                 attribute_right_dictionary_name: Optional[str] = None,
+                 attribute_right_name: Optional[str] = None,
+                 attribute_right_value: Optional[str] = None,
+                 attribute_right_value_type: Optional[str] = None):
+        """
+        :param str attribute_left_dictionary_name: Dictionary name
+        :param str attribute_left_name: Attribute name
+        :param str attribute_right_dictionary_name: Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        :param str attribute_right_name: Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        :param str attribute_right_value: Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+        :param str attribute_right_value_type: Advanced attribute value type
+                 - Choices: `AdvancedDictionaryAttribute`, `AttributeValue`
+        """
+        if attribute_left_dictionary_name is not None:
+            pulumi.set(__self__, "attribute_left_dictionary_name", attribute_left_dictionary_name)
+        if attribute_left_name is not None:
+            pulumi.set(__self__, "attribute_left_name", attribute_left_name)
+        if attribute_right_dictionary_name is not None:
+            pulumi.set(__self__, "attribute_right_dictionary_name", attribute_right_dictionary_name)
+        if attribute_right_name is not None:
+            pulumi.set(__self__, "attribute_right_name", attribute_right_name)
+        if attribute_right_value is not None:
+            pulumi.set(__self__, "attribute_right_value", attribute_right_value)
+        if attribute_right_value_type is not None:
+            pulumi.set(__self__, "attribute_right_value_type", attribute_right_value_type)
+
+    @property
+    @pulumi.getter(name="attributeLeftDictionaryName")
+    def attribute_left_dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "attribute_left_dictionary_name")
+
+    @property
+    @pulumi.getter(name="attributeLeftName")
+    def attribute_left_name(self) -> Optional[str]:
+        """
+        Attribute name
+        """
+        return pulumi.get(self, "attribute_left_name")
+
+    @property
+    @pulumi.getter(name="attributeRightDictionaryName")
+    def attribute_right_dictionary_name(self) -> Optional[str]:
+        """
+        Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        """
+        return pulumi.get(self, "attribute_right_dictionary_name")
+
+    @property
+    @pulumi.getter(name="attributeRightName")
+    def attribute_right_name(self) -> Optional[str]:
+        """
+        Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        """
+        return pulumi.get(self, "attribute_right_name")
+
+    @property
+    @pulumi.getter(name="attributeRightValue")
+    def attribute_right_value(self) -> Optional[str]:
+        """
+        Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+        """
+        return pulumi.get(self, "attribute_right_value")
+
+    @property
+    @pulumi.getter(name="attributeRightValueType")
+    def attribute_right_value_type(self) -> Optional[str]:
+        """
+        Advanced attribute value type
+          - Choices: `AdvancedDictionaryAttribute`, `AttributeValue`
+        """
+        return pulumi.get(self, "attribute_right_value_type")
+
 
 @pulumi.output_type
 class DeviceIp(dict):
@@ -71,6 +1922,1329 @@ class DeviceIp(dict):
         Subnet mask length
         """
         return pulumi.get(self, "mask")
+
+
+@pulumi.output_type
+class GetAccessAuthenticationRuleChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 childrens: Sequence['outputs.GetAccessAuthenticationRuleChildrenChildrenResult'],
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['GetAccessAuthenticationRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetAccessAuthenticationRuleChildrenChildrenResult']:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthenticationRuleChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str condition_type: Condition type.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthorizationExceptionRuleChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 childrens: Sequence['outputs.GetAccessAuthorizationExceptionRuleChildrenChildrenResult'],
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['GetAccessAuthorizationExceptionRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetAccessAuthorizationExceptionRuleChildrenChildrenResult']:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthorizationExceptionRuleChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str condition_type: Condition type.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthorizationGlobalExceptionRuleChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 childrens: Sequence['outputs.GetAccessAuthorizationGlobalExceptionRuleChildrenChildrenResult'],
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['GetAccessAuthorizationGlobalExceptionRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetAccessAuthorizationGlobalExceptionRuleChildrenChildrenResult']:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthorizationGlobalExceptionRuleChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str condition_type: Condition type.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthorizationRuleChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 childrens: Sequence['outputs.GetAccessAuthorizationRuleChildrenChildrenResult'],
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['GetAccessAuthorizationRuleChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetAccessAuthorizationRuleChildrenChildrenResult']:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessAuthorizationRuleChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str condition_type: Condition type.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessConditionChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 childrens: Sequence['outputs.GetAccessConditionChildrenChildrenResult'],
+                 condition_type: str,
+                 description: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 name: str,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['GetAccessConditionChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        :param str description: Condition description
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str name: Condition name
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "description", description)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetAccessConditionChildrenChildrenResult']:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter
+    def description(self) -> str:
+        """
+        Condition description
+        """
+        return pulumi.get(self, "description")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def name(self) -> str:
+        """
+        Condition name
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessConditionChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 condition_type: str,
+                 description: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 name: str,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str condition_type: Condition type.
+        :param str description: Condition description
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str name: Condition name
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "description", description)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter
+    def description(self) -> str:
+        """
+        Condition description
+        """
+        return pulumi.get(self, "description")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def name(self) -> str:
+        """
+        Condition name
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessPolicySetChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 childrens: Sequence['outputs.GetAccessPolicySetChildrenChildrenResult'],
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param Sequence['GetAccessPolicySetChildrenChildrenArgs'] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param str condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetAccessPolicySetChildrenChildrenResult']:
+        """
+        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        """
+        return pulumi.get(self, "childrens")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAccessPolicySetChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: str,
+                 attribute_value: str,
+                 condition_type: str,
+                 dictionary_name: str,
+                 dictionary_value: str,
+                 id: str,
+                 is_negate: bool,
+                 operator: str):
+        """
+        :param str attribute_name: Dictionary attribute name
+        :param str attribute_value: Attribute value for condition. Value type is specified in dictionary object.
+        :param str condition_type: Condition type.
+        :param str dictionary_name: Dictionary name
+        :param str dictionary_value: Dictionary value
+        :param str id: UUID for condition
+        :param bool is_negate: Indicates whereas this condition is in negate mode
+        :param str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> str:
+        """
+        Attribute value for condition. Value type is specified in dictionary object.
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @property
+    @pulumi.getter
+    def id(self) -> str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @property
+    @pulumi.getter
+    def operator(self) -> str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetAuthorizationProfileAdvancedAttributeResult(dict):
+    def __init__(__self__, *,
+                 attribute_left_dictionary_name: str,
+                 attribute_left_name: str,
+                 attribute_right_dictionary_name: str,
+                 attribute_right_name: str,
+                 attribute_right_value: str,
+                 attribute_right_value_type: str):
+        """
+        :param str attribute_left_dictionary_name: Dictionary name
+        :param str attribute_left_name: Attribute name
+        :param str attribute_right_dictionary_name: Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        :param str attribute_right_name: Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        :param str attribute_right_value: Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+        :param str attribute_right_value_type: Advanced attribute value type
+        """
+        pulumi.set(__self__, "attribute_left_dictionary_name", attribute_left_dictionary_name)
+        pulumi.set(__self__, "attribute_left_name", attribute_left_name)
+        pulumi.set(__self__, "attribute_right_dictionary_name", attribute_right_dictionary_name)
+        pulumi.set(__self__, "attribute_right_name", attribute_right_name)
+        pulumi.set(__self__, "attribute_right_value", attribute_right_value)
+        pulumi.set(__self__, "attribute_right_value_type", attribute_right_value_type)
+
+    @property
+    @pulumi.getter(name="attributeLeftDictionaryName")
+    def attribute_left_dictionary_name(self) -> str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "attribute_left_dictionary_name")
+
+    @property
+    @pulumi.getter(name="attributeLeftName")
+    def attribute_left_name(self) -> str:
+        """
+        Attribute name
+        """
+        return pulumi.get(self, "attribute_left_name")
+
+    @property
+    @pulumi.getter(name="attributeRightDictionaryName")
+    def attribute_right_dictionary_name(self) -> str:
+        """
+        Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        """
+        return pulumi.get(self, "attribute_right_dictionary_name")
+
+    @property
+    @pulumi.getter(name="attributeRightName")
+    def attribute_right_name(self) -> str:
+        """
+        Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        """
+        return pulumi.get(self, "attribute_right_name")
+
+    @property
+    @pulumi.getter(name="attributeRightValue")
+    def attribute_right_value(self) -> str:
+        """
+        Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+        """
+        return pulumi.get(self, "attribute_right_value")
+
+    @property
+    @pulumi.getter(name="attributeRightValueType")
+    def attribute_right_value_type(self) -> str:
+        """
+        Advanced attribute value type
+        """
+        return pulumi.get(self, "attribute_right_value_type")
 
 
 @pulumi.output_type

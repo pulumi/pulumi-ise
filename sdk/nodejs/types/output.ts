@@ -5,8 +5,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as inputs from "../types/input";
 import * as outputs from "../types/output";
 
-export namespace ActiveDirectoryAdd {
-    export interface GroupsGroup {
+export namespace activeDirectory {
+    export interface AddGroupsGroup {
         /**
          * Required for each group in the group list with no duplication between groups
          */
@@ -18,10 +18,7 @@ export namespace ActiveDirectoryAdd {
         type?: string;
     }
 
-}
-
-export namespace ActiveDirectoryGroupsBy {
-    export interface GetDomainGroup {
+    export interface GetGroupsByDomainGroup {
         /**
          * Group name
          */
@@ -36,10 +33,7 @@ export namespace ActiveDirectoryGroupsBy {
         type: string;
     }
 
-}
-
-export namespace ActiveDirectoryJoin {
-    export interface GetPointAttribute {
+    export interface GetJoinPointAttribute {
         /**
          * Required for each attribute in the attribute list. Can contain an empty string.
          */
@@ -58,7 +52,7 @@ export namespace ActiveDirectoryJoin {
         type: string;
     }
 
-    export interface GetPointGroup {
+    export interface GetJoinPointGroup {
         /**
          * Required for each group in the group list with no duplication between groups
          */
@@ -70,7 +64,7 @@ export namespace ActiveDirectoryJoin {
         type: string;
     }
 
-    export interface GetPointRewriteRule {
+    export interface GetJoinPointRewriteRule {
         /**
          * Required for each rule in the list with no duplication between rules
          */
@@ -85,7 +79,18 @@ export namespace ActiveDirectoryJoin {
         rowId: string;
     }
 
-    export interface PointAttribute {
+    export interface JoinDomainWithAllNodesAdditionalData {
+        /**
+         * Additional attribute name
+         */
+        name: string;
+        /**
+         * Additional attribute value
+         */
+        value: string;
+    }
+
+    export interface JoinPointAttribute {
         /**
          * Required for each attribute in the attribute list. Can contain an empty string.
          */
@@ -105,7 +110,7 @@ export namespace ActiveDirectoryJoin {
         type: string;
     }
 
-    export interface PointGroup {
+    export interface JoinPointGroup {
         /**
          * Required for each group in the group list with no duplication between groups
          */
@@ -117,7 +122,7 @@ export namespace ActiveDirectoryJoin {
         type?: string;
     }
 
-    export interface PointRewriteRule {
+    export interface JoinPointRewriteRule {
         /**
          * Required for each rule in the list with no duplication between rules
          */
@@ -134,49 +139,1464 @@ export namespace ActiveDirectoryJoin {
 
 }
 
-export namespace ActiveDirectoryJoinDomainWithAll {
-    export interface NodesAdditionalData {
+export namespace deviceAdmin {
+    export interface AuthenticationRuleChildren {
         /**
-         * Additional attribute name
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.deviceAdmin.AuthenticationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthenticationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.deviceAdmin.AuthorizationExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.deviceAdmin.AuthorizationGlobalExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.deviceAdmin.AuthorizationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface ConditionChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.deviceAdmin.ConditionChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description?: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Condition name
+         */
+        name?: string;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface ConditionChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description?: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Condition name
+         */
+        name?: string;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface GetAuthenticationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.deviceAdmin.GetAuthenticationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthenticationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.deviceAdmin.GetAuthorizationExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationGlobalExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.deviceAdmin.GetAuthorizationGlobalExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationGlobalExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.deviceAdmin.GetAuthorizationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetConditionChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.deviceAdmin.GetConditionChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Condition name
          */
         name: string;
         /**
-         * Additional attribute value
+         * Equality operator
          */
-        value: string;
+        operator: string;
+    }
+
+    export interface GetConditionChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Condition name
+         */
+        name: string;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetPolicySetChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.deviceAdmin.GetPolicySetChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetPolicySetChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface PolicySetChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.deviceAdmin.PolicySetChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface PolicySetChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
     }
 
 }
 
-export namespace Authorization {
-    export interface GetProfileAdvancedAttribute {
+export namespace identity {
+    export interface GetIdentitySourceSequenceIdentitySource {
+        /**
+         * Name of the identity source
+         */
+        name: string;
+        /**
+         * Order of the identity source in the sequence
+         */
+        order: number;
+    }
+
+    export interface IdentitySourceSequenceIdentitySource {
+        /**
+         * Name of the identity source
+         */
+        name: string;
+        /**
+         * Order of the identity source in the sequence
+         */
+        order: number;
+    }
+
+}
+
+export namespace network {
+    export interface AccessAuthenticationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.network.AccessAuthenticationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
         /**
          * Dictionary name
          */
-        attributeLeftDictionaryName: string;
+        dictionaryName?: string;
         /**
-         * Attribute name
+         * Dictionary value
          */
-        attributeLeftName: string;
+        dictionaryValue?: string;
         /**
-         * Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
+         * UUID for condition
          */
-        attributeRightDictionaryName: string;
+        id?: string;
         /**
-         * Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
+         * Indicates whereas this condition is in negate mode
          */
-        attributeRightName: string;
+        isNegate?: boolean;
         /**
-         * Attribute value, only required when `attributeRightValueType` is `AttributeValue`
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
-        attributeRightValue: string;
-        /**
-         * Advanced attribute value type
-         */
-        attributeRightValueType: string;
+        operator?: string;
     }
 
-    export interface ProfileAdvancedAttribute {
+    export interface AccessAuthenticationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessAuthorizationExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.network.AccessAuthorizationExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessAuthorizationExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessAuthorizationGlobalExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.network.AccessAuthorizationGlobalExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessAuthorizationGlobalExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessAuthorizationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.network.AccessAuthorizationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessAuthorizationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessConditionChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.network.AccessConditionChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description?: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Condition name
+         */
+        name?: string;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessConditionChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description?: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Condition name
+         */
+        name?: string;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessPolicySetChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: outputs.network.AccessPolicySetChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AccessPolicySetChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: string;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface AuthorizationProfileAdvancedAttribute {
         /**
          * Dictionary name
          */
@@ -204,1023 +1624,6 @@ export namespace Authorization {
         attributeRightValueType?: string;
     }
 
-}
-
-export namespace DeviceAdmin {
-    export interface ConditionChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.DeviceAdmin.ConditionChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description?: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Condition name
-         */
-        name?: string;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface ConditionChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description?: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Condition name
-         */
-        name?: string;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface GetConditionChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.DeviceAdmin.GetConditionChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Condition name
-         */
-        name: string;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetConditionChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Condition name
-         */
-        name: string;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-}
-
-export namespace DeviceAdminAuthentication {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.DeviceAdminAuthentication.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.DeviceAdminAuthentication.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace DeviceAdminAuthorization {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.DeviceAdminAuthorization.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.DeviceAdminAuthorization.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace DeviceAdminAuthorizationException {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.DeviceAdminAuthorizationException.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.DeviceAdminAuthorizationException.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace DeviceAdminAuthorizationGlobalException {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.DeviceAdminAuthorizationGlobalException.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.DeviceAdminAuthorizationGlobalException.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace DeviceAdminPolicy {
-    export interface GetSetChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.DeviceAdminPolicy.GetSetChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetSetChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface SetChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.DeviceAdminPolicy.SetChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface SetChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace IdentitySource {
-    export interface GetSequenceIdentitySource {
-        /**
-         * Name of the identity source
-         */
-        name: string;
-        /**
-         * Order of the identity source in the sequence
-         */
-        order: number;
-    }
-
-    export interface SequenceIdentitySource {
-        /**
-         * Name of the identity source
-         */
-        name: string;
-        /**
-         * Order of the identity source in the sequence
-         */
-        order: number;
-    }
-
-}
-
-export namespace LicenseTier {
-    export interface GetStateLicense {
-        /**
-         * License name
-         */
-        name: string;
-        /**
-         * License status
-         */
-        status: string;
-    }
-
-    export interface StateLicense {
-        /**
-         * License name
-         *   - Choices: `ESSENTIAL`, `ADVANTAGE`, `PREMIER`, `DEVICEADMIN`, `VM`
-         */
-        name: string;
-        /**
-         * License status
-         *   - Choices: `ENABLED`, `DISABLED`
-         */
-        status: string;
-    }
-
-}
-
-export namespace Network {
     export interface DeviceIp {
         /**
          * It can be either single ip address or ip range address
@@ -1234,6 +1637,493 @@ export namespace Network {
          * Subnet mask length
          */
         mask?: string;
+    }
+
+    export interface GetAccessAuthenticationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.network.GetAccessAuthenticationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthenticationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthorizationExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.network.GetAccessAuthorizationExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthorizationExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthorizationGlobalExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.network.GetAccessAuthorizationGlobalExceptionRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthorizationGlobalExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthorizationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.network.GetAccessAuthorizationRuleChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessAuthorizationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessConditionChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.network.GetAccessConditionChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Condition name
+         */
+        name: string;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessConditionChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Condition description
+         */
+        description: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Condition name
+         */
+        name: string;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessPolicySetChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens: outputs.network.GetAccessPolicySetChildrenChildren[];
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAccessPolicySetChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue: string;
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetAuthorizationProfileAdvancedAttribute {
+        /**
+         * Dictionary name
+         */
+        attributeLeftDictionaryName: string;
+        /**
+         * Attribute name
+         */
+        attributeLeftName: string;
+        /**
+         * Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
+         */
+        attributeRightDictionaryName: string;
+        /**
+         * Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
+         */
+        attributeRightName: string;
+        /**
+         * Attribute value, only required when `attributeRightValueType` is `AttributeValue`
+         */
+        attributeRightValue: string;
+        /**
+         * Advanced attribute value type
+         */
+        attributeRightValueType: string;
     }
 
     export interface GetDeviceIp {
@@ -1253,969 +2143,65 @@ export namespace Network {
 
 }
 
-export namespace NetworkAccess {
-    export interface ConditionChildren {
+export namespace system {
+    export interface GetLicenseTierStateLicense {
         /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.NetworkAccess.ConditionChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description?: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Condition name
-         */
-        name?: string;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface ConditionChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description?: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Condition name
-         */
-        name?: string;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface GetConditionChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.NetworkAccess.GetConditionChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Condition name
+         * License name
          */
         name: string;
         /**
-         * Equality operator
+         * License status
          */
-        operator: string;
+        status: string;
     }
 
-    export interface GetConditionChildrenChildren {
+    export interface LicenseTierStateLicense {
         /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Condition description
-         */
-        description: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Condition name
+         * License name
+         *   - Choices: `ESSENTIAL`, `ADVANTAGE`, `PREMIER`, `DEVICEADMIN`, `VM`
          */
         name: string;
         /**
-         * Equality operator
+         * License status
+         *   - Choices: `ENABLED`, `DISABLED`
          */
-        operator: string;
+        status: string;
     }
 
 }
 
-export namespace NetworkAccessAuthentication {
-    export interface GetRuleChildren {
+export namespace tacacs {
+    export interface CommandSetCommand {
         /**
-         * Dictionary attribute name
+         * Command arguments
          */
-        attributeName: string;
+        arguments: string;
         /**
-         * Attribute value for condition. Value type is specified in dictionary object.
+         * Command
          */
-        attributeValue: string;
+        command: string;
         /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * Grant
+         *   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
          */
-        childrens: outputs.NetworkAccessAuthentication.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
+        grant: string;
     }
 
-    export interface GetRuleChildrenChildren {
+    export interface GetCommandSetCommand {
         /**
-         * Dictionary attribute name
+         * Command arguments
          */
-        attributeName: string;
+        arguments: string;
         /**
-         * Attribute value for condition. Value type is specified in dictionary object.
+         * Command
          */
-        attributeValue: string;
+        command: string;
         /**
-         * Condition type.
+         * Grant
          */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
+        grant: string;
     }
 
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.NetworkAccessAuthentication.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace NetworkAccessAuthorization {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.NetworkAccessAuthorization.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.NetworkAccessAuthorization.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace NetworkAccessAuthorizationException {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.NetworkAccessAuthorizationException.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.NetworkAccessAuthorizationException.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace NetworkAccessAuthorizationGlobalException {
-    export interface GetRuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.NetworkAccessAuthorizationGlobalException.GetRuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetRuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.NetworkAccessAuthorizationGlobalException.RuleChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace NetworkAccessPolicy {
-    export interface GetSetChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens: outputs.NetworkAccessPolicy.GetSetChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface GetSetChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue: string;
-        /**
-         * Condition type.
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue: string;
-        /**
-         * UUID for condition
-         */
-        id: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate: boolean;
-        /**
-         * Equality operator
-         */
-        operator: string;
-    }
-
-    export interface SetChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: outputs.NetworkAccessPolicy.SetChildrenChildren[];
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-    export interface SetChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: string;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: string;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: string;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: string;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: string;
-        /**
-         * UUID for condition
-         */
-        id?: string;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: boolean;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: string;
-    }
-
-}
-
-export namespace Tacacs {
     export interface GetProfileSessionAttribute {
         /**
          * Name
@@ -2245,40 +2231,6 @@ export namespace Tacacs {
          * Value
          */
         value: string;
-    }
-
-}
-
-export namespace TacacsCommand {
-    export interface GetSetCommand {
-        /**
-         * Command arguments
-         */
-        arguments: string;
-        /**
-         * Command
-         */
-        command: string;
-        /**
-         * Grant
-         */
-        grant: string;
-    }
-
-    export interface SetCommand {
-        /**
-         * Command arguments
-         */
-        arguments: string;
-        /**
-         * Command
-         */
-        command: string;
-        /**
-         * Grant
-         *   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
-         */
-        grant: string;
     }
 
 }

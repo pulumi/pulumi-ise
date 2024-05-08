@@ -21,7 +21,11 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "ise:Tacacs/profile:Profile":
+	case "ise:tacacs/allowedProtocols:AllowedProtocols":
+		r = &AllowedProtocols{}
+	case "ise:tacacs/commandSet:CommandSet":
+		r = &CommandSet{}
+	case "ise:tacacs/profile:Profile":
 		r = &Profile{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
@@ -38,7 +42,17 @@ func init() {
 	}
 	pulumi.RegisterResourceModule(
 		"ise",
-		"Tacacs/profile",
+		"tacacs/allowedProtocols",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"tacacs/commandSet",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"tacacs/profile",
 		&module{version},
 	)
 }

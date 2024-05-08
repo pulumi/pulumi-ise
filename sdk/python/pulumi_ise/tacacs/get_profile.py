@@ -90,7 +90,7 @@ def get_profile(id: Optional[str] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.Tacacs.get_profile(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
+    example = ise.tacacs.get_profile(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
     ```
 
 
@@ -101,7 +101,7 @@ def get_profile(id: Optional[str] = None,
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
-    __ret__ = pulumi.runtime.invoke('ise:Tacacs/getProfile:getProfile', __args__, opts=opts, typ=GetProfileResult).value
+    __ret__ = pulumi.runtime.invoke('ise:tacacs/getProfile:getProfile', __args__, opts=opts, typ=GetProfileResult).value
 
     return AwaitableGetProfileResult(
         description=pulumi.get(__ret__, 'description'),
@@ -123,7 +123,7 @@ def get_profile_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.Tacacs.get_profile(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
+    example = ise.tacacs.get_profile(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
     ```
 
 

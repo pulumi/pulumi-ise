@@ -15,7 +15,7 @@ import * as utilities from "../utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.Network.getDevice({
+ * const example = ise.network.getDevice({
  *     id: "76d24097-41c4-4558-a4d0-a8c07ac08470",
  * });
  * ```
@@ -24,7 +24,7 @@ export function getDevice(args?: GetDeviceArgs, opts?: pulumi.InvokeOptions): Pr
     args = args || {};
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
-    return pulumi.runtime.invoke("ise:Network/getDevice:getDevice", {
+    return pulumi.runtime.invoke("ise:network/getDevice:getDevice", {
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -103,7 +103,7 @@ export interface GetDeviceResult {
     /**
      * List of IP subnets
      */
-    readonly ips: outputs.Network.GetDeviceIp[];
+    readonly ips: outputs.network.GetDeviceIp[];
     /**
      * Model name
      */
@@ -230,7 +230,7 @@ export interface GetDeviceResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.Network.getDevice({
+ * const example = ise.network.getDevice({
  *     id: "76d24097-41c4-4558-a4d0-a8c07ac08470",
  * });
  * ```

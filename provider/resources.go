@@ -18,18 +18,16 @@ import (
 	"fmt"
 	"path/filepath"
 	"strings"
-	"unicode"
 
 	// embed is used to store bridge-metadata.json in the compiled binary
 	_ "embed"
 
 	"github.com/CiscoDevNet/terraform-provider-ise/ise"
-	"github.com/ettle/strcase"
 
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
+	tks "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 
 	"github.com/pulumi/pulumi-ise/provider/pkg/version"
 )
@@ -37,50 +35,20 @@ import (
 //go:embed cmd/pulumi-resource-ise/bridge-metadata.json
 var bridgeMetadata []byte
 
-// all of the token components used below.
 const (
-	// This variable controls the default name of the package in the package
-	mainMod = "index" // the ise module
+	mainPkg = "ise"
+
+	mainMod = "index"
 )
 
-func convertName(tfname string) (module string, name string) {
-	tfNameItems := strings.Split(tfname, "_")
-	contract.Assertf(len(tfNameItems) >= 2, "Invalid snake case name %s", tfname)
-	contract.Assertf(tfNameItems[0] == "ise", "Invalid snake case name %s. Does not start with ise", tfname)
-	if len(tfNameItems) == 2 {
-		module = mainMod
-		name = tfNameItems[1]
-	} else {
-		module = strcase.ToPascal(strings.Join(tfNameItems[1:len(tfNameItems)-1], "_"))
-		name = tfNameItems[len(tfNameItems)-1]
-	}
-	contract.Assertf(!unicode.IsDigit(rune(module[0])), "Pulumi namespace must not start with a digit: %s", name)
-	name = strcase.ToPascal(name)
-	contract.Assertf(!unicode.IsDigit(rune(name[0])), "Pulumi name must not start with a digit: %s", name)
-	return
+func makeDataSource(mod string, res string) tokens.ModuleMember {
+	mod = strings.ToLower(mod)
+	return tfbridge.MakeDataSource(mainPkg, mod, res)
 }
 
-func makeDataSource(ds string) tokens.ModuleMember {
-	mod, name := convertName(ds)
-	return tfbridge.MakeDataSource("ise", mod, "get"+name)
-}
-
-func makeResource(res string) tokens.Type {
-	mod, name := convertName(res)
-	return tfbridge.MakeResource("ise", mod, name)
-}
-
-func moduleComputeStrategy() tfbridge.Strategy {
-	return tfbridge.Strategy{
-		Resource: func(tfToken string, elem *tfbridge.ResourceInfo) error {
-			elem.Tok = makeResource(tfToken)
-			return nil
-		},
-		DataSource: func(tfToken string, elem *tfbridge.DataSourceInfo) error {
-			elem.Tok = makeDataSource(tfToken)
-			return nil
-		},
-	}
+func makeResource(mod string, res string) tokens.Type {
+	mod = strings.ToLower(mod)
+	return tfbridge.MakeResource(mainPkg, mod, res)
 }
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
@@ -127,16 +95,33 @@ func Provider() tfbridge.ProviderInfo {
 		Version:           version.Version,
 		Config:            map[string]*tfbridge.SchemaInfo{},
 		Resources: map[string]*tfbridge.ResourceInfo{
-			"ise_active_directory_add_groups": {
-				Tok: makeResource("ise_active_directory_add_groups"),
-				Fields: map[string]*tfbridge.SchemaInfo{
-					"groups": {
-						CSharpName: "GroupsValue",
-					},
-				},
-			},
+			"ise_allowed_protocols_tacacs":           {Tok: makeResource("tacacs", "AllowedProtocols")},
+			"ise_license_tier_state":                 {Tok: makeResource("system", "LicenseTierState")},
+			"ise_repository":                         {Tok: makeResource("system", "Repository")},
+			"ise_certificate_authentication_profile": {Tok: makeResource("identity", "CertificateAuthenticationProfile")},
+			"ise_endpoint":                           {Tok: makeResource("identity", "Endpoint")},
+			"ise_endpoint_identity_group":            {Tok: makeResource("identity", "EndpointIdentityGroup")},
+			"ise_identity_source_sequence":           {Tok: makeResource("identity", "IdentitySourceSequence")},
+			"ise_internal_user":                      {Tok: makeResource("identity", "InternalUser")},
+			"ise_user_identity_group":                {Tok: makeResource("identity", "UserIdentityGroup")},
+			"ise_allowed_protocols":                  {Tok: makeResource("network", "AllowedProtocols")},
+			"ise_authorization_profile":              {Tok: makeResource("network", "AuthorizationProfile")},
+			"ise_downloadable_acl":                   {Tok: makeResource("network", "DownloadableAcl")},
 		},
-		DataSources: map[string]*tfbridge.DataSourceInfo{},
+		DataSources: map[string]*tfbridge.DataSourceInfo{
+			"ise_allowed_protocols_tacacs":           {Tok: makeDataSource("tacacs", "getAllowedProtocols")},
+			"ise_license_tier_state":                 {Tok: makeDataSource("system", "getLicenseTierState")},
+			"ise_repository":                         {Tok: makeDataSource("system", "getRepository")},
+			"ise_certificate_authentication_profile": {Tok: makeDataSource("identity", "getCertificateAuthenticationProfile")},
+			"ise_endpoint":                           {Tok: makeDataSource("identity", "getEndpoint")},
+			"ise_endpoint_identity_group":            {Tok: makeDataSource("identity", "getEndpointIdentityGroup")},
+			"ise_identity_source_sequence":           {Tok: makeDataSource("identity", "getIdentitySourceSequence")},
+			"ise_internal_user":                      {Tok: makeDataSource("identity", "getInternalUser")},
+			"ise_user_identity_group":                {Tok: makeDataSource("identity", "getUserIdentityGroup")},
+			"ise_allowed_protocols":                  {Tok: makeDataSource("network", "getAllowedProtocols")},
+			"ise_authorization_profile":              {Tok: makeDataSource("network", "getAuthorizationProfile")},
+			"ise_downloadable_acl":                   {Tok: makeDataSource("network", "getDownloadableAcl")},
+		},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@pulumi/ise",
 
@@ -178,7 +163,14 @@ func Provider() tfbridge.ProviderInfo {
 		},
 	}
 
-	prov.MustComputeTokens(moduleComputeStrategy())
+	prov.MustComputeTokens(tks.KnownModules("ise_", mainMod, []string{
+		"active_directory_",
+		"network",
+		"system_",
+		"trustsec_",
+		"device_admin_",
+		"tacacs_",
+	}, tks.MakeStandard(mainPkg)))
 	prov.SetAutonaming(255, "-")
 
 	return prov

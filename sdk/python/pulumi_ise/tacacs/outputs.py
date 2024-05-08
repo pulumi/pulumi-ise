@@ -10,9 +10,53 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
+    'CommandSetCommand',
     'ProfileSessionAttribute',
+    'GetCommandSetCommandResult',
     'GetProfileSessionAttributeResult',
 ]
+
+@pulumi.output_type
+class CommandSetCommand(dict):
+    def __init__(__self__, *,
+                 arguments: str,
+                 command: str,
+                 grant: str):
+        """
+        :param str arguments: Command arguments
+        :param str command: Command
+        :param str grant: Grant
+                 - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+        """
+        pulumi.set(__self__, "arguments", arguments)
+        pulumi.set(__self__, "command", command)
+        pulumi.set(__self__, "grant", grant)
+
+    @property
+    @pulumi.getter
+    def arguments(self) -> str:
+        """
+        Command arguments
+        """
+        return pulumi.get(self, "arguments")
+
+    @property
+    @pulumi.getter
+    def command(self) -> str:
+        """
+        Command
+        """
+        return pulumi.get(self, "command")
+
+    @property
+    @pulumi.getter
+    def grant(self) -> str:
+        """
+        Grant
+          - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+        """
+        return pulumi.get(self, "grant")
+
 
 @pulumi.output_type
 class ProfileSessionAttribute(dict):
@@ -54,6 +98,46 @@ class ProfileSessionAttribute(dict):
         Value
         """
         return pulumi.get(self, "value")
+
+
+@pulumi.output_type
+class GetCommandSetCommandResult(dict):
+    def __init__(__self__, *,
+                 arguments: str,
+                 command: str,
+                 grant: str):
+        """
+        :param str arguments: Command arguments
+        :param str command: Command
+        :param str grant: Grant
+        """
+        pulumi.set(__self__, "arguments", arguments)
+        pulumi.set(__self__, "command", command)
+        pulumi.set(__self__, "grant", grant)
+
+    @property
+    @pulumi.getter
+    def arguments(self) -> str:
+        """
+        Command arguments
+        """
+        return pulumi.get(self, "arguments")
+
+    @property
+    @pulumi.getter
+    def command(self) -> str:
+        """
+        Command
+        """
+        return pulumi.get(self, "command")
+
+    @property
+    @pulumi.getter
+    def grant(self) -> str:
+        """
+        Grant
+        """
+        return pulumi.get(self, "grant")
 
 
 @pulumi.output_type

@@ -561,7 +561,7 @@ def get_device(id: Optional[str] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.Network.get_device(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
+    example = ise.network.get_device(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
     ```
 
 
@@ -572,7 +572,7 @@ def get_device(id: Optional[str] = None,
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
-    __ret__ = pulumi.runtime.invoke('ise:Network/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult).value
+    __ret__ = pulumi.runtime.invoke('ise:network/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult).value
 
     return AwaitableGetDeviceResult(
         authentication_dtls_required=pulumi.get(__ret__, 'authentication_dtls_required'),
@@ -633,7 +633,7 @@ def get_device_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.Network.get_device(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
+    example = ise.network.get_device(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
     ```
 
 

@@ -20,14 +20,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/Tacacs"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/tacacs"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := Tacacs.GetProfile(ctx, &tacacs.GetProfileArgs{
+//			_, err := tacacs.LookupProfile(ctx, &tacacs.LookupProfileArgs{
 //				Id: pulumi.StringRef("76d24097-41c4-4558-a4d0-a8c07ac08470"),
 //			}, nil)
 //			if err != nil {
@@ -41,7 +41,7 @@ import (
 func LookupProfile(ctx *pulumi.Context, args *LookupProfileArgs, opts ...pulumi.InvokeOption) (*LookupProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupProfileResult
-	err := ctx.Invoke("ise:Tacacs/getProfile:getProfile", args, &rv, opts...)
+	err := ctx.Invoke("ise:tacacs/getProfile:getProfile", args, &rv, opts...)
 	if err != nil {
 		return nil, err
 	}

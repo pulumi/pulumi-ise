@@ -13,6 +13,124 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type CommandSetCommand struct {
+	// Command arguments
+	Arguments string `pulumi:"arguments"`
+	// Command
+	Command string `pulumi:"command"`
+	// Grant
+	//   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+	Grant string `pulumi:"grant"`
+}
+
+// CommandSetCommandInput is an input type that accepts CommandSetCommandArgs and CommandSetCommandOutput values.
+// You can construct a concrete instance of `CommandSetCommandInput` via:
+//
+//	CommandSetCommandArgs{...}
+type CommandSetCommandInput interface {
+	pulumi.Input
+
+	ToCommandSetCommandOutput() CommandSetCommandOutput
+	ToCommandSetCommandOutputWithContext(context.Context) CommandSetCommandOutput
+}
+
+type CommandSetCommandArgs struct {
+	// Command arguments
+	Arguments pulumi.StringInput `pulumi:"arguments"`
+	// Command
+	Command pulumi.StringInput `pulumi:"command"`
+	// Grant
+	//   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+	Grant pulumi.StringInput `pulumi:"grant"`
+}
+
+func (CommandSetCommandArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*CommandSetCommand)(nil)).Elem()
+}
+
+func (i CommandSetCommandArgs) ToCommandSetCommandOutput() CommandSetCommandOutput {
+	return i.ToCommandSetCommandOutputWithContext(context.Background())
+}
+
+func (i CommandSetCommandArgs) ToCommandSetCommandOutputWithContext(ctx context.Context) CommandSetCommandOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(CommandSetCommandOutput)
+}
+
+// CommandSetCommandArrayInput is an input type that accepts CommandSetCommandArray and CommandSetCommandArrayOutput values.
+// You can construct a concrete instance of `CommandSetCommandArrayInput` via:
+//
+//	CommandSetCommandArray{ CommandSetCommandArgs{...} }
+type CommandSetCommandArrayInput interface {
+	pulumi.Input
+
+	ToCommandSetCommandArrayOutput() CommandSetCommandArrayOutput
+	ToCommandSetCommandArrayOutputWithContext(context.Context) CommandSetCommandArrayOutput
+}
+
+type CommandSetCommandArray []CommandSetCommandInput
+
+func (CommandSetCommandArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]CommandSetCommand)(nil)).Elem()
+}
+
+func (i CommandSetCommandArray) ToCommandSetCommandArrayOutput() CommandSetCommandArrayOutput {
+	return i.ToCommandSetCommandArrayOutputWithContext(context.Background())
+}
+
+func (i CommandSetCommandArray) ToCommandSetCommandArrayOutputWithContext(ctx context.Context) CommandSetCommandArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(CommandSetCommandArrayOutput)
+}
+
+type CommandSetCommandOutput struct{ *pulumi.OutputState }
+
+func (CommandSetCommandOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*CommandSetCommand)(nil)).Elem()
+}
+
+func (o CommandSetCommandOutput) ToCommandSetCommandOutput() CommandSetCommandOutput {
+	return o
+}
+
+func (o CommandSetCommandOutput) ToCommandSetCommandOutputWithContext(ctx context.Context) CommandSetCommandOutput {
+	return o
+}
+
+// Command arguments
+func (o CommandSetCommandOutput) Arguments() pulumi.StringOutput {
+	return o.ApplyT(func(v CommandSetCommand) string { return v.Arguments }).(pulumi.StringOutput)
+}
+
+// Command
+func (o CommandSetCommandOutput) Command() pulumi.StringOutput {
+	return o.ApplyT(func(v CommandSetCommand) string { return v.Command }).(pulumi.StringOutput)
+}
+
+// Grant
+//   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+func (o CommandSetCommandOutput) Grant() pulumi.StringOutput {
+	return o.ApplyT(func(v CommandSetCommand) string { return v.Grant }).(pulumi.StringOutput)
+}
+
+type CommandSetCommandArrayOutput struct{ *pulumi.OutputState }
+
+func (CommandSetCommandArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]CommandSetCommand)(nil)).Elem()
+}
+
+func (o CommandSetCommandArrayOutput) ToCommandSetCommandArrayOutput() CommandSetCommandArrayOutput {
+	return o
+}
+
+func (o CommandSetCommandArrayOutput) ToCommandSetCommandArrayOutputWithContext(ctx context.Context) CommandSetCommandArrayOutput {
+	return o
+}
+
+func (o CommandSetCommandArrayOutput) Index(i pulumi.IntInput) CommandSetCommandOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) CommandSetCommand {
+		return vs[0].([]CommandSetCommand)[vs[1].(int)]
+	}).(CommandSetCommandOutput)
+}
+
 type ProfileSessionAttribute struct {
 	// Name
 	Name string `pulumi:"name"`
@@ -131,6 +249,121 @@ func (o ProfileSessionAttributeArrayOutput) Index(i pulumi.IntInput) ProfileSess
 	}).(ProfileSessionAttributeOutput)
 }
 
+type GetCommandSetCommand struct {
+	// Command arguments
+	Arguments string `pulumi:"arguments"`
+	// Command
+	Command string `pulumi:"command"`
+	// Grant
+	Grant string `pulumi:"grant"`
+}
+
+// GetCommandSetCommandInput is an input type that accepts GetCommandSetCommandArgs and GetCommandSetCommandOutput values.
+// You can construct a concrete instance of `GetCommandSetCommandInput` via:
+//
+//	GetCommandSetCommandArgs{...}
+type GetCommandSetCommandInput interface {
+	pulumi.Input
+
+	ToGetCommandSetCommandOutput() GetCommandSetCommandOutput
+	ToGetCommandSetCommandOutputWithContext(context.Context) GetCommandSetCommandOutput
+}
+
+type GetCommandSetCommandArgs struct {
+	// Command arguments
+	Arguments pulumi.StringInput `pulumi:"arguments"`
+	// Command
+	Command pulumi.StringInput `pulumi:"command"`
+	// Grant
+	Grant pulumi.StringInput `pulumi:"grant"`
+}
+
+func (GetCommandSetCommandArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetCommandSetCommand)(nil)).Elem()
+}
+
+func (i GetCommandSetCommandArgs) ToGetCommandSetCommandOutput() GetCommandSetCommandOutput {
+	return i.ToGetCommandSetCommandOutputWithContext(context.Background())
+}
+
+func (i GetCommandSetCommandArgs) ToGetCommandSetCommandOutputWithContext(ctx context.Context) GetCommandSetCommandOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetCommandSetCommandOutput)
+}
+
+// GetCommandSetCommandArrayInput is an input type that accepts GetCommandSetCommandArray and GetCommandSetCommandArrayOutput values.
+// You can construct a concrete instance of `GetCommandSetCommandArrayInput` via:
+//
+//	GetCommandSetCommandArray{ GetCommandSetCommandArgs{...} }
+type GetCommandSetCommandArrayInput interface {
+	pulumi.Input
+
+	ToGetCommandSetCommandArrayOutput() GetCommandSetCommandArrayOutput
+	ToGetCommandSetCommandArrayOutputWithContext(context.Context) GetCommandSetCommandArrayOutput
+}
+
+type GetCommandSetCommandArray []GetCommandSetCommandInput
+
+func (GetCommandSetCommandArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetCommandSetCommand)(nil)).Elem()
+}
+
+func (i GetCommandSetCommandArray) ToGetCommandSetCommandArrayOutput() GetCommandSetCommandArrayOutput {
+	return i.ToGetCommandSetCommandArrayOutputWithContext(context.Background())
+}
+
+func (i GetCommandSetCommandArray) ToGetCommandSetCommandArrayOutputWithContext(ctx context.Context) GetCommandSetCommandArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetCommandSetCommandArrayOutput)
+}
+
+type GetCommandSetCommandOutput struct{ *pulumi.OutputState }
+
+func (GetCommandSetCommandOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetCommandSetCommand)(nil)).Elem()
+}
+
+func (o GetCommandSetCommandOutput) ToGetCommandSetCommandOutput() GetCommandSetCommandOutput {
+	return o
+}
+
+func (o GetCommandSetCommandOutput) ToGetCommandSetCommandOutputWithContext(ctx context.Context) GetCommandSetCommandOutput {
+	return o
+}
+
+// Command arguments
+func (o GetCommandSetCommandOutput) Arguments() pulumi.StringOutput {
+	return o.ApplyT(func(v GetCommandSetCommand) string { return v.Arguments }).(pulumi.StringOutput)
+}
+
+// Command
+func (o GetCommandSetCommandOutput) Command() pulumi.StringOutput {
+	return o.ApplyT(func(v GetCommandSetCommand) string { return v.Command }).(pulumi.StringOutput)
+}
+
+// Grant
+func (o GetCommandSetCommandOutput) Grant() pulumi.StringOutput {
+	return o.ApplyT(func(v GetCommandSetCommand) string { return v.Grant }).(pulumi.StringOutput)
+}
+
+type GetCommandSetCommandArrayOutput struct{ *pulumi.OutputState }
+
+func (GetCommandSetCommandArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetCommandSetCommand)(nil)).Elem()
+}
+
+func (o GetCommandSetCommandArrayOutput) ToGetCommandSetCommandArrayOutput() GetCommandSetCommandArrayOutput {
+	return o
+}
+
+func (o GetCommandSetCommandArrayOutput) ToGetCommandSetCommandArrayOutputWithContext(ctx context.Context) GetCommandSetCommandArrayOutput {
+	return o
+}
+
+func (o GetCommandSetCommandArrayOutput) Index(i pulumi.IntInput) GetCommandSetCommandOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetCommandSetCommand {
+		return vs[0].([]GetCommandSetCommand)[vs[1].(int)]
+	}).(GetCommandSetCommandOutput)
+}
+
 type GetProfileSessionAttribute struct {
 	// Name
 	Name string `pulumi:"name"`
@@ -247,12 +480,20 @@ func (o GetProfileSessionAttributeArrayOutput) Index(i pulumi.IntInput) GetProfi
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*CommandSetCommandInput)(nil)).Elem(), CommandSetCommandArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*CommandSetCommandArrayInput)(nil)).Elem(), CommandSetCommandArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ProfileSessionAttributeInput)(nil)).Elem(), ProfileSessionAttributeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ProfileSessionAttributeArrayInput)(nil)).Elem(), ProfileSessionAttributeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetCommandSetCommandInput)(nil)).Elem(), GetCommandSetCommandArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetCommandSetCommandArrayInput)(nil)).Elem(), GetCommandSetCommandArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetProfileSessionAttributeInput)(nil)).Elem(), GetProfileSessionAttributeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetProfileSessionAttributeArrayInput)(nil)).Elem(), GetProfileSessionAttributeArray{})
+	pulumi.RegisterOutputType(CommandSetCommandOutput{})
+	pulumi.RegisterOutputType(CommandSetCommandArrayOutput{})
 	pulumi.RegisterOutputType(ProfileSessionAttributeOutput{})
 	pulumi.RegisterOutputType(ProfileSessionAttributeArrayOutput{})
+	pulumi.RegisterOutputType(GetCommandSetCommandOutput{})
+	pulumi.RegisterOutputType(GetCommandSetCommandArrayOutput{})
 	pulumi.RegisterOutputType(GetProfileSessionAttributeOutput{})
 	pulumi.RegisterOutputType(GetProfileSessionAttributeArrayOutput{})
 }

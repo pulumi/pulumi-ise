@@ -29,7 +29,7 @@ import * as utilities from "../utilities";
  * ## Import
  *
  * ```sh
- * $ pulumi import ise:Tacacs/profile:Profile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+ * $ pulumi import ise:tacacs/profile:Profile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
  * ```
  */
 export class Profile extends pulumi.CustomResource {
@@ -47,7 +47,7 @@ export class Profile extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'ise:Tacacs/profile:Profile';
+    public static readonly __pulumiType = 'ise:tacacs/profile:Profile';
 
     /**
      * Returns true if the given object is an instance of Profile.  This is designed to work even
@@ -68,7 +68,7 @@ export class Profile extends pulumi.CustomResource {
      * The name of the TACACS profile
      */
     public readonly name!: pulumi.Output<string>;
-    public readonly sessionAttributes!: pulumi.Output<outputs.Tacacs.ProfileSessionAttribute[] | undefined>;
+    public readonly sessionAttributes!: pulumi.Output<outputs.tacacs.ProfileSessionAttribute[] | undefined>;
 
     /**
      * Create a Profile resource with the given unique name, arguments, and options.
@@ -109,7 +109,7 @@ export interface ProfileState {
      * The name of the TACACS profile
      */
     name?: pulumi.Input<string>;
-    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.Tacacs.ProfileSessionAttribute>[]>;
+    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.tacacs.ProfileSessionAttribute>[]>;
 }
 
 /**
@@ -124,5 +124,5 @@ export interface ProfileArgs {
      * The name of the TACACS profile
      */
     name?: pulumi.Input<string>;
-    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.Tacacs.ProfileSessionAttribute>[]>;
+    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.tacacs.ProfileSessionAttribute>[]>;
 }

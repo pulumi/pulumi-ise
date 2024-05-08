@@ -20,14 +20,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/Network"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/network"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := Network.GetDevice(ctx, &network.GetDeviceArgs{
+//			_, err := network.LookupDevice(ctx, &network.LookupDeviceArgs{
 //				Id: pulumi.StringRef("76d24097-41c4-4558-a4d0-a8c07ac08470"),
 //			}, nil)
 //			if err != nil {
@@ -41,7 +41,7 @@ import (
 func LookupDevice(ctx *pulumi.Context, args *LookupDeviceArgs, opts ...pulumi.InvokeOption) (*LookupDeviceResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDeviceResult
-	err := ctx.Invoke("ise:Network/getDevice:getDevice", args, &rv, opts...)
+	err := ctx.Invoke("ise:network/getDevice:getDevice", args, &rv, opts...)
 	if err != nil {
 		return nil, err
 	}

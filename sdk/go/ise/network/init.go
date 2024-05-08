@@ -21,8 +21,32 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "ise:Network/device:Device":
+	case "ise:network/accessAuthenticationRule:AccessAuthenticationRule":
+		r = &AccessAuthenticationRule{}
+	case "ise:network/accessAuthorizationExceptionRule:AccessAuthorizationExceptionRule":
+		r = &AccessAuthorizationExceptionRule{}
+	case "ise:network/accessAuthorizationGlobalExceptionRule:AccessAuthorizationGlobalExceptionRule":
+		r = &AccessAuthorizationGlobalExceptionRule{}
+	case "ise:network/accessAuthorizationRule:AccessAuthorizationRule":
+		r = &AccessAuthorizationRule{}
+	case "ise:network/accessCondition:AccessCondition":
+		r = &AccessCondition{}
+	case "ise:network/accessDictionary:AccessDictionary":
+		r = &AccessDictionary{}
+	case "ise:network/accessPolicySet:AccessPolicySet":
+		r = &AccessPolicySet{}
+	case "ise:network/accessTimeAndDateCondition:AccessTimeAndDateCondition":
+		r = &AccessTimeAndDateCondition{}
+	case "ise:network/allowedProtocols:AllowedProtocols":
+		r = &AllowedProtocols{}
+	case "ise:network/authorizationProfile:AuthorizationProfile":
+		r = &AuthorizationProfile{}
+	case "ise:network/device:Device":
 		r = &Device{}
+	case "ise:network/deviceGroup:DeviceGroup":
+		r = &DeviceGroup{}
+	case "ise:network/downloadableAcl:DownloadableAcl":
+		r = &DownloadableAcl{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -38,7 +62,67 @@ func init() {
 	}
 	pulumi.RegisterResourceModule(
 		"ise",
-		"Network/device",
+		"network/accessAuthenticationRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessAuthorizationExceptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessAuthorizationGlobalExceptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessAuthorizationRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessCondition",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessDictionary",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessPolicySet",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/accessTimeAndDateCondition",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/allowedProtocols",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/authorizationProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/device",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/deviceGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/downloadableAcl",
 		&module{version},
 	)
 }

@@ -33,7 +33,7 @@ namespace Pulumi.Ise.Tacacs
         /// ```
         /// </summary>
         public static Task<GetProfileResult> InvokeAsync(GetProfileArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.InvokeAsync<GetProfileResult>("ise:Tacacs/getProfile:getProfile", args ?? new GetProfileArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.InvokeAsync<GetProfileResult>("ise:tacacs/getProfile:getProfile", args ?? new GetProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// This data source can read the TACACS Profile.
@@ -57,7 +57,7 @@ namespace Pulumi.Ise.Tacacs
         /// ```
         /// </summary>
         public static Output<GetProfileResult> Invoke(GetProfileInvokeArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.Invoke<GetProfileResult>("ise:Tacacs/getProfile:getProfile", args ?? new GetProfileInvokeArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.Invoke<GetProfileResult>("ise:tacacs/getProfile:getProfile", args ?? new GetProfileInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -15,7 +15,7 @@ import * as utilities from "../utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.Tacacs.getProfile({
+ * const example = ise.tacacs.getProfile({
  *     id: "76d24097-41c4-4558-a4d0-a8c07ac08470",
  * });
  * ```
@@ -24,7 +24,7 @@ export function getProfile(args?: GetProfileArgs, opts?: pulumi.InvokeOptions): 
     args = args || {};
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
-    return pulumi.runtime.invoke("ise:Tacacs/getProfile:getProfile", {
+    return pulumi.runtime.invoke("ise:tacacs/getProfile:getProfile", {
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -60,7 +60,7 @@ export interface GetProfileResult {
      * The name of the TACACS profile
      */
     readonly name: string;
-    readonly sessionAttributes: outputs.Tacacs.GetProfileSessionAttribute[];
+    readonly sessionAttributes: outputs.tacacs.GetProfileSessionAttribute[];
 }
 /**
  * This data source can read the TACACS Profile.
@@ -71,7 +71,7 @@ export interface GetProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.Tacacs.getProfile({
+ * const example = ise.tacacs.getProfile({
  *     id: "76d24097-41c4-4558-a4d0-a8c07ac08470",
  * });
  * ```

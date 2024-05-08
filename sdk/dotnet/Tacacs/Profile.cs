@@ -43,10 +43,10 @@ namespace Pulumi.Ise.Tacacs
     /// ## Import
     /// 
     /// ```sh
-    /// $ pulumi import ise:Tacacs/profile:Profile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+    /// $ pulumi import ise:tacacs/profile:Profile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
     /// ```
     /// </summary>
-    [IseResourceType("ise:Tacacs/profile:Profile")]
+    [IseResourceType("ise:tacacs/profile:Profile")]
     public partial class Profile : global::Pulumi.CustomResource
     {
         /// <summary>
@@ -73,12 +73,12 @@ namespace Pulumi.Ise.Tacacs
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public Profile(string name, ProfileArgs? args = null, CustomResourceOptions? options = null)
-            : base("ise:Tacacs/profile:Profile", name, args ?? new ProfileArgs(), MakeResourceOptions(options, ""))
+            : base("ise:tacacs/profile:Profile", name, args ?? new ProfileArgs(), MakeResourceOptions(options, ""))
         {
         }
 
         private Profile(string name, Input<string> id, ProfileState? state = null, CustomResourceOptions? options = null)
-            : base("ise:Tacacs/profile:Profile", name, state, MakeResourceOptions(options, id))
+            : base("ise:tacacs/profile:Profile", name, state, MakeResourceOptions(options, id))
         {
         }
 

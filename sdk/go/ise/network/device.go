@@ -21,14 +21,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/Network"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/network"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := Network.NewDevice(ctx, "example", &Network.DeviceArgs{
+//			_, err := network.NewDevice(ctx, "example", &network.DeviceArgs{
 //				Name:                              pulumi.String("Device1"),
 //				Description:                       pulumi.String("My device"),
 //				AuthenticationEnableKeyWrap:       pulumi.Bool(true),
@@ -86,7 +86,7 @@ import (
 // ## Import
 //
 // ```sh
-// $ pulumi import ise:Network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+// $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
 // ```
 type Device struct {
 	pulumi.CustomResourceState
@@ -189,7 +189,7 @@ func NewDevice(ctx *pulumi.Context,
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Device
-	err := ctx.RegisterResource("ise:Network/device:Device", name, args, &resource, opts...)
+	err := ctx.RegisterResource("ise:network/device:Device", name, args, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -201,7 +201,7 @@ func NewDevice(ctx *pulumi.Context,
 func GetDevice(ctx *pulumi.Context,
 	name string, id pulumi.IDInput, state *DeviceState, opts ...pulumi.ResourceOption) (*Device, error) {
 	var resource Device
-	err := ctx.ReadResource("ise:Network/device:Device", name, id, state, &resource, opts...)
+	err := ctx.ReadResource("ise:network/device:Device", name, id, state, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}

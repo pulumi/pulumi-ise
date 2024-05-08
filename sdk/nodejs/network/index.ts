@@ -5,26 +5,182 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "../utilities";
 
 // Export members:
+export { AccessAuthenticationRuleArgs, AccessAuthenticationRuleState } from "./accessAuthenticationRule";
+export type AccessAuthenticationRule = import("./accessAuthenticationRule").AccessAuthenticationRule;
+export const AccessAuthenticationRule: typeof import("./accessAuthenticationRule").AccessAuthenticationRule = null as any;
+utilities.lazyLoad(exports, ["AccessAuthenticationRule"], () => require("./accessAuthenticationRule"));
+
+export { AccessAuthorizationExceptionRuleArgs, AccessAuthorizationExceptionRuleState } from "./accessAuthorizationExceptionRule";
+export type AccessAuthorizationExceptionRule = import("./accessAuthorizationExceptionRule").AccessAuthorizationExceptionRule;
+export const AccessAuthorizationExceptionRule: typeof import("./accessAuthorizationExceptionRule").AccessAuthorizationExceptionRule = null as any;
+utilities.lazyLoad(exports, ["AccessAuthorizationExceptionRule"], () => require("./accessAuthorizationExceptionRule"));
+
+export { AccessAuthorizationGlobalExceptionRuleArgs, AccessAuthorizationGlobalExceptionRuleState } from "./accessAuthorizationGlobalExceptionRule";
+export type AccessAuthorizationGlobalExceptionRule = import("./accessAuthorizationGlobalExceptionRule").AccessAuthorizationGlobalExceptionRule;
+export const AccessAuthorizationGlobalExceptionRule: typeof import("./accessAuthorizationGlobalExceptionRule").AccessAuthorizationGlobalExceptionRule = null as any;
+utilities.lazyLoad(exports, ["AccessAuthorizationGlobalExceptionRule"], () => require("./accessAuthorizationGlobalExceptionRule"));
+
+export { AccessAuthorizationRuleArgs, AccessAuthorizationRuleState } from "./accessAuthorizationRule";
+export type AccessAuthorizationRule = import("./accessAuthorizationRule").AccessAuthorizationRule;
+export const AccessAuthorizationRule: typeof import("./accessAuthorizationRule").AccessAuthorizationRule = null as any;
+utilities.lazyLoad(exports, ["AccessAuthorizationRule"], () => require("./accessAuthorizationRule"));
+
+export { AccessConditionArgs, AccessConditionState } from "./accessCondition";
+export type AccessCondition = import("./accessCondition").AccessCondition;
+export const AccessCondition: typeof import("./accessCondition").AccessCondition = null as any;
+utilities.lazyLoad(exports, ["AccessCondition"], () => require("./accessCondition"));
+
+export { AccessDictionaryArgs, AccessDictionaryState } from "./accessDictionary";
+export type AccessDictionary = import("./accessDictionary").AccessDictionary;
+export const AccessDictionary: typeof import("./accessDictionary").AccessDictionary = null as any;
+utilities.lazyLoad(exports, ["AccessDictionary"], () => require("./accessDictionary"));
+
+export { AccessPolicySetArgs, AccessPolicySetState } from "./accessPolicySet";
+export type AccessPolicySet = import("./accessPolicySet").AccessPolicySet;
+export const AccessPolicySet: typeof import("./accessPolicySet").AccessPolicySet = null as any;
+utilities.lazyLoad(exports, ["AccessPolicySet"], () => require("./accessPolicySet"));
+
+export { AccessTimeAndDateConditionArgs, AccessTimeAndDateConditionState } from "./accessTimeAndDateCondition";
+export type AccessTimeAndDateCondition = import("./accessTimeAndDateCondition").AccessTimeAndDateCondition;
+export const AccessTimeAndDateCondition: typeof import("./accessTimeAndDateCondition").AccessTimeAndDateCondition = null as any;
+utilities.lazyLoad(exports, ["AccessTimeAndDateCondition"], () => require("./accessTimeAndDateCondition"));
+
+export { AllowedProtocolsArgs, AllowedProtocolsState } from "./allowedProtocols";
+export type AllowedProtocols = import("./allowedProtocols").AllowedProtocols;
+export const AllowedProtocols: typeof import("./allowedProtocols").AllowedProtocols = null as any;
+utilities.lazyLoad(exports, ["AllowedProtocols"], () => require("./allowedProtocols"));
+
+export { AuthorizationProfileArgs, AuthorizationProfileState } from "./authorizationProfile";
+export type AuthorizationProfile = import("./authorizationProfile").AuthorizationProfile;
+export const AuthorizationProfile: typeof import("./authorizationProfile").AuthorizationProfile = null as any;
+utilities.lazyLoad(exports, ["AuthorizationProfile"], () => require("./authorizationProfile"));
+
 export { DeviceArgs, DeviceState } from "./device";
 export type Device = import("./device").Device;
 export const Device: typeof import("./device").Device = null as any;
 utilities.lazyLoad(exports, ["Device"], () => require("./device"));
+
+export { DeviceGroupArgs, DeviceGroupState } from "./deviceGroup";
+export type DeviceGroup = import("./deviceGroup").DeviceGroup;
+export const DeviceGroup: typeof import("./deviceGroup").DeviceGroup = null as any;
+utilities.lazyLoad(exports, ["DeviceGroup"], () => require("./deviceGroup"));
+
+export { DownloadableAclArgs, DownloadableAclState } from "./downloadableAcl";
+export type DownloadableAcl = import("./downloadableAcl").DownloadableAcl;
+export const DownloadableAcl: typeof import("./downloadableAcl").DownloadableAcl = null as any;
+utilities.lazyLoad(exports, ["DownloadableAcl"], () => require("./downloadableAcl"));
+
+export { GetAccessAuthenticationRuleArgs, GetAccessAuthenticationRuleResult, GetAccessAuthenticationRuleOutputArgs } from "./getAccessAuthenticationRule";
+export const getAccessAuthenticationRule: typeof import("./getAccessAuthenticationRule").getAccessAuthenticationRule = null as any;
+export const getAccessAuthenticationRuleOutput: typeof import("./getAccessAuthenticationRule").getAccessAuthenticationRuleOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessAuthenticationRule","getAccessAuthenticationRuleOutput"], () => require("./getAccessAuthenticationRule"));
+
+export { GetAccessAuthorizationExceptionRuleArgs, GetAccessAuthorizationExceptionRuleResult, GetAccessAuthorizationExceptionRuleOutputArgs } from "./getAccessAuthorizationExceptionRule";
+export const getAccessAuthorizationExceptionRule: typeof import("./getAccessAuthorizationExceptionRule").getAccessAuthorizationExceptionRule = null as any;
+export const getAccessAuthorizationExceptionRuleOutput: typeof import("./getAccessAuthorizationExceptionRule").getAccessAuthorizationExceptionRuleOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessAuthorizationExceptionRule","getAccessAuthorizationExceptionRuleOutput"], () => require("./getAccessAuthorizationExceptionRule"));
+
+export { GetAccessAuthorizationGlobalExceptionRuleArgs, GetAccessAuthorizationGlobalExceptionRuleResult, GetAccessAuthorizationGlobalExceptionRuleOutputArgs } from "./getAccessAuthorizationGlobalExceptionRule";
+export const getAccessAuthorizationGlobalExceptionRule: typeof import("./getAccessAuthorizationGlobalExceptionRule").getAccessAuthorizationGlobalExceptionRule = null as any;
+export const getAccessAuthorizationGlobalExceptionRuleOutput: typeof import("./getAccessAuthorizationGlobalExceptionRule").getAccessAuthorizationGlobalExceptionRuleOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessAuthorizationGlobalExceptionRule","getAccessAuthorizationGlobalExceptionRuleOutput"], () => require("./getAccessAuthorizationGlobalExceptionRule"));
+
+export { GetAccessAuthorizationRuleArgs, GetAccessAuthorizationRuleResult, GetAccessAuthorizationRuleOutputArgs } from "./getAccessAuthorizationRule";
+export const getAccessAuthorizationRule: typeof import("./getAccessAuthorizationRule").getAccessAuthorizationRule = null as any;
+export const getAccessAuthorizationRuleOutput: typeof import("./getAccessAuthorizationRule").getAccessAuthorizationRuleOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessAuthorizationRule","getAccessAuthorizationRuleOutput"], () => require("./getAccessAuthorizationRule"));
+
+export { GetAccessConditionArgs, GetAccessConditionResult, GetAccessConditionOutputArgs } from "./getAccessCondition";
+export const getAccessCondition: typeof import("./getAccessCondition").getAccessCondition = null as any;
+export const getAccessConditionOutput: typeof import("./getAccessCondition").getAccessConditionOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessCondition","getAccessConditionOutput"], () => require("./getAccessCondition"));
+
+export { GetAccessDictionaryArgs, GetAccessDictionaryResult, GetAccessDictionaryOutputArgs } from "./getAccessDictionary";
+export const getAccessDictionary: typeof import("./getAccessDictionary").getAccessDictionary = null as any;
+export const getAccessDictionaryOutput: typeof import("./getAccessDictionary").getAccessDictionaryOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessDictionary","getAccessDictionaryOutput"], () => require("./getAccessDictionary"));
+
+export { GetAccessPolicySetArgs, GetAccessPolicySetResult, GetAccessPolicySetOutputArgs } from "./getAccessPolicySet";
+export const getAccessPolicySet: typeof import("./getAccessPolicySet").getAccessPolicySet = null as any;
+export const getAccessPolicySetOutput: typeof import("./getAccessPolicySet").getAccessPolicySetOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessPolicySet","getAccessPolicySetOutput"], () => require("./getAccessPolicySet"));
+
+export { GetAccessTimeAndDateConditionArgs, GetAccessTimeAndDateConditionResult, GetAccessTimeAndDateConditionOutputArgs } from "./getAccessTimeAndDateCondition";
+export const getAccessTimeAndDateCondition: typeof import("./getAccessTimeAndDateCondition").getAccessTimeAndDateCondition = null as any;
+export const getAccessTimeAndDateConditionOutput: typeof import("./getAccessTimeAndDateCondition").getAccessTimeAndDateConditionOutput = null as any;
+utilities.lazyLoad(exports, ["getAccessTimeAndDateCondition","getAccessTimeAndDateConditionOutput"], () => require("./getAccessTimeAndDateCondition"));
+
+export { GetAllowedProtocolsArgs, GetAllowedProtocolsResult, GetAllowedProtocolsOutputArgs } from "./getAllowedProtocols";
+export const getAllowedProtocols: typeof import("./getAllowedProtocols").getAllowedProtocols = null as any;
+export const getAllowedProtocolsOutput: typeof import("./getAllowedProtocols").getAllowedProtocolsOutput = null as any;
+utilities.lazyLoad(exports, ["getAllowedProtocols","getAllowedProtocolsOutput"], () => require("./getAllowedProtocols"));
+
+export { GetAuthorizationProfileArgs, GetAuthorizationProfileResult, GetAuthorizationProfileOutputArgs } from "./getAuthorizationProfile";
+export const getAuthorizationProfile: typeof import("./getAuthorizationProfile").getAuthorizationProfile = null as any;
+export const getAuthorizationProfileOutput: typeof import("./getAuthorizationProfile").getAuthorizationProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getAuthorizationProfile","getAuthorizationProfileOutput"], () => require("./getAuthorizationProfile"));
 
 export { GetDeviceArgs, GetDeviceResult, GetDeviceOutputArgs } from "./getDevice";
 export const getDevice: typeof import("./getDevice").getDevice = null as any;
 export const getDeviceOutput: typeof import("./getDevice").getDeviceOutput = null as any;
 utilities.lazyLoad(exports, ["getDevice","getDeviceOutput"], () => require("./getDevice"));
 
+export { GetDeviceGroupArgs, GetDeviceGroupResult, GetDeviceGroupOutputArgs } from "./getDeviceGroup";
+export const getDeviceGroup: typeof import("./getDeviceGroup").getDeviceGroup = null as any;
+export const getDeviceGroupOutput: typeof import("./getDeviceGroup").getDeviceGroupOutput = null as any;
+utilities.lazyLoad(exports, ["getDeviceGroup","getDeviceGroupOutput"], () => require("./getDeviceGroup"));
+
+export { GetDownloadableAclArgs, GetDownloadableAclResult, GetDownloadableAclOutputArgs } from "./getDownloadableAcl";
+export const getDownloadableAcl: typeof import("./getDownloadableAcl").getDownloadableAcl = null as any;
+export const getDownloadableAclOutput: typeof import("./getDownloadableAcl").getDownloadableAclOutput = null as any;
+utilities.lazyLoad(exports, ["getDownloadableAcl","getDownloadableAclOutput"], () => require("./getDownloadableAcl"));
+
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "ise:Network/device:Device":
+            case "ise:network/accessAuthenticationRule:AccessAuthenticationRule":
+                return new AccessAuthenticationRule(name, <any>undefined, { urn })
+            case "ise:network/accessAuthorizationExceptionRule:AccessAuthorizationExceptionRule":
+                return new AccessAuthorizationExceptionRule(name, <any>undefined, { urn })
+            case "ise:network/accessAuthorizationGlobalExceptionRule:AccessAuthorizationGlobalExceptionRule":
+                return new AccessAuthorizationGlobalExceptionRule(name, <any>undefined, { urn })
+            case "ise:network/accessAuthorizationRule:AccessAuthorizationRule":
+                return new AccessAuthorizationRule(name, <any>undefined, { urn })
+            case "ise:network/accessCondition:AccessCondition":
+                return new AccessCondition(name, <any>undefined, { urn })
+            case "ise:network/accessDictionary:AccessDictionary":
+                return new AccessDictionary(name, <any>undefined, { urn })
+            case "ise:network/accessPolicySet:AccessPolicySet":
+                return new AccessPolicySet(name, <any>undefined, { urn })
+            case "ise:network/accessTimeAndDateCondition:AccessTimeAndDateCondition":
+                return new AccessTimeAndDateCondition(name, <any>undefined, { urn })
+            case "ise:network/allowedProtocols:AllowedProtocols":
+                return new AllowedProtocols(name, <any>undefined, { urn })
+            case "ise:network/authorizationProfile:AuthorizationProfile":
+                return new AuthorizationProfile(name, <any>undefined, { urn })
+            case "ise:network/device:Device":
                 return new Device(name, <any>undefined, { urn })
+            case "ise:network/deviceGroup:DeviceGroup":
+                return new DeviceGroup(name, <any>undefined, { urn })
+            case "ise:network/downloadableAcl:DownloadableAcl":
+                return new DownloadableAcl(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("ise", "Network/device", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessAuthenticationRule", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessAuthorizationExceptionRule", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessAuthorizationGlobalExceptionRule", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessAuthorizationRule", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessCondition", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessDictionary", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessPolicySet", _module)
+pulumi.runtime.registerResourceModule("ise", "network/accessTimeAndDateCondition", _module)
+pulumi.runtime.registerResourceModule("ise", "network/allowedProtocols", _module)
+pulumi.runtime.registerResourceModule("ise", "network/authorizationProfile", _module)
+pulumi.runtime.registerResourceModule("ise", "network/device", _module)
+pulumi.runtime.registerResourceModule("ise", "network/deviceGroup", _module)
+pulumi.runtime.registerResourceModule("ise", "network/downloadableAcl", _module)

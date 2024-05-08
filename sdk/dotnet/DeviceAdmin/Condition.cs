@@ -40,10 +40,10 @@ namespace Pulumi.Ise.DeviceAdmin
     /// ## Import
     /// 
     /// ```sh
-    /// $ pulumi import ise:DeviceAdmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+    /// $ pulumi import ise:deviceAdmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
     /// ```
     /// </summary>
-    [IseResourceType("ise:DeviceAdmin/condition:Condition")]
+    [IseResourceType("ise:deviceAdmin/condition:Condition")]
     public partial class Condition : global::Pulumi.CustomResource
     {
         /// <summary>
@@ -119,12 +119,12 @@ namespace Pulumi.Ise.DeviceAdmin
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public Condition(string name, ConditionArgs args, CustomResourceOptions? options = null)
-            : base("ise:DeviceAdmin/condition:Condition", name, args ?? new ConditionArgs(), MakeResourceOptions(options, ""))
+            : base("ise:deviceAdmin/condition:Condition", name, args ?? new ConditionArgs(), MakeResourceOptions(options, ""))
         {
         }
 
         private Condition(string name, Input<string> id, ConditionState? state = null, CustomResourceOptions? options = null)
-            : base("ise:DeviceAdmin/condition:Condition", name, state, MakeResourceOptions(options, id))
+            : base("ise:deviceAdmin/condition:Condition", name, state, MakeResourceOptions(options, id))
         {
         }
 

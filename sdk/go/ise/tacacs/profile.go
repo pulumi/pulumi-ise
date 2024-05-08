@@ -20,14 +20,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/Tacacs"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/tacacs"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := Tacacs.NewProfile(ctx, "example", &Tacacs.ProfileArgs{
+//			_, err := tacacs.NewProfile(ctx, "example", &tacacs.ProfileArgs{
 //				Name:        pulumi.String("Profile1"),
 //				Description: pulumi.String("My TACACS profile"),
 //				SessionAttributes: tacacs.ProfileSessionAttributeArray{
@@ -50,7 +50,7 @@ import (
 // ## Import
 //
 // ```sh
-// $ pulumi import ise:Tacacs/profile:Profile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+// $ pulumi import ise:tacacs/profile:Profile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
 // ```
 type Profile struct {
 	pulumi.CustomResourceState
@@ -71,7 +71,7 @@ func NewProfile(ctx *pulumi.Context,
 
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Profile
-	err := ctx.RegisterResource("ise:Tacacs/profile:Profile", name, args, &resource, opts...)
+	err := ctx.RegisterResource("ise:tacacs/profile:Profile", name, args, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -83,7 +83,7 @@ func NewProfile(ctx *pulumi.Context,
 func GetProfile(ctx *pulumi.Context,
 	name string, id pulumi.IDInput, state *ProfileState, opts ...pulumi.ResourceOption) (*Profile, error) {
 	var resource Profile
-	err := ctx.ReadResource("ise:Tacacs/profile:Profile", name, id, state, &resource, opts...)
+	err := ctx.ReadResource("ise:tacacs/profile:Profile", name, id, state, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}

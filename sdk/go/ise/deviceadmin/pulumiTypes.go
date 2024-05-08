@@ -13,6 +13,1374 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type AuthenticationRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []AuthenticationRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthenticationRuleChildrenInput is an input type that accepts AuthenticationRuleChildrenArgs and AuthenticationRuleChildrenOutput values.
+// You can construct a concrete instance of `AuthenticationRuleChildrenInput` via:
+//
+//	AuthenticationRuleChildrenArgs{...}
+type AuthenticationRuleChildrenInput interface {
+	pulumi.Input
+
+	ToAuthenticationRuleChildrenOutput() AuthenticationRuleChildrenOutput
+	ToAuthenticationRuleChildrenOutputWithContext(context.Context) AuthenticationRuleChildrenOutput
+}
+
+type AuthenticationRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens AuthenticationRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthenticationRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (i AuthenticationRuleChildrenArgs) ToAuthenticationRuleChildrenOutput() AuthenticationRuleChildrenOutput {
+	return i.ToAuthenticationRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthenticationRuleChildrenArgs) ToAuthenticationRuleChildrenOutputWithContext(ctx context.Context) AuthenticationRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthenticationRuleChildrenOutput)
+}
+
+// AuthenticationRuleChildrenArrayInput is an input type that accepts AuthenticationRuleChildrenArray and AuthenticationRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthenticationRuleChildrenArrayInput` via:
+//
+//	AuthenticationRuleChildrenArray{ AuthenticationRuleChildrenArgs{...} }
+type AuthenticationRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthenticationRuleChildrenArrayOutput() AuthenticationRuleChildrenArrayOutput
+	ToAuthenticationRuleChildrenArrayOutputWithContext(context.Context) AuthenticationRuleChildrenArrayOutput
+}
+
+type AuthenticationRuleChildrenArray []AuthenticationRuleChildrenInput
+
+func (AuthenticationRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (i AuthenticationRuleChildrenArray) ToAuthenticationRuleChildrenArrayOutput() AuthenticationRuleChildrenArrayOutput {
+	return i.ToAuthenticationRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthenticationRuleChildrenArray) ToAuthenticationRuleChildrenArrayOutputWithContext(ctx context.Context) AuthenticationRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthenticationRuleChildrenArrayOutput)
+}
+
+type AuthenticationRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthenticationRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (o AuthenticationRuleChildrenOutput) ToAuthenticationRuleChildrenOutput() AuthenticationRuleChildrenOutput {
+	return o
+}
+
+func (o AuthenticationRuleChildrenOutput) ToAuthenticationRuleChildrenOutputWithContext(ctx context.Context) AuthenticationRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthenticationRuleChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthenticationRuleChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o AuthenticationRuleChildrenOutput) Childrens() AuthenticationRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) []AuthenticationRuleChildrenChildren { return v.Childrens }).(AuthenticationRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+func (o AuthenticationRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthenticationRuleChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthenticationRuleChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthenticationRuleChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthenticationRuleChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthenticationRuleChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthenticationRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthenticationRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (o AuthenticationRuleChildrenArrayOutput) ToAuthenticationRuleChildrenArrayOutput() AuthenticationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthenticationRuleChildrenArrayOutput) ToAuthenticationRuleChildrenArrayOutputWithContext(ctx context.Context) AuthenticationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthenticationRuleChildrenArrayOutput) Index(i pulumi.IntInput) AuthenticationRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthenticationRuleChildren {
+		return vs[0].([]AuthenticationRuleChildren)[vs[1].(int)]
+	}).(AuthenticationRuleChildrenOutput)
+}
+
+type AuthenticationRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthenticationRuleChildrenChildrenInput is an input type that accepts AuthenticationRuleChildrenChildrenArgs and AuthenticationRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `AuthenticationRuleChildrenChildrenInput` via:
+//
+//	AuthenticationRuleChildrenChildrenArgs{...}
+type AuthenticationRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToAuthenticationRuleChildrenChildrenOutput() AuthenticationRuleChildrenChildrenOutput
+	ToAuthenticationRuleChildrenChildrenOutputWithContext(context.Context) AuthenticationRuleChildrenChildrenOutput
+}
+
+type AuthenticationRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthenticationRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthenticationRuleChildrenChildrenArgs) ToAuthenticationRuleChildrenChildrenOutput() AuthenticationRuleChildrenChildrenOutput {
+	return i.ToAuthenticationRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthenticationRuleChildrenChildrenArgs) ToAuthenticationRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthenticationRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthenticationRuleChildrenChildrenOutput)
+}
+
+// AuthenticationRuleChildrenChildrenArrayInput is an input type that accepts AuthenticationRuleChildrenChildrenArray and AuthenticationRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthenticationRuleChildrenChildrenArrayInput` via:
+//
+//	AuthenticationRuleChildrenChildrenArray{ AuthenticationRuleChildrenChildrenArgs{...} }
+type AuthenticationRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthenticationRuleChildrenChildrenArrayOutput() AuthenticationRuleChildrenChildrenArrayOutput
+	ToAuthenticationRuleChildrenChildrenArrayOutputWithContext(context.Context) AuthenticationRuleChildrenChildrenArrayOutput
+}
+
+type AuthenticationRuleChildrenChildrenArray []AuthenticationRuleChildrenChildrenInput
+
+func (AuthenticationRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthenticationRuleChildrenChildrenArray) ToAuthenticationRuleChildrenChildrenArrayOutput() AuthenticationRuleChildrenChildrenArrayOutput {
+	return i.ToAuthenticationRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthenticationRuleChildrenChildrenArray) ToAuthenticationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthenticationRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthenticationRuleChildrenChildrenArrayOutput)
+}
+
+type AuthenticationRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthenticationRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthenticationRuleChildrenChildrenOutput) ToAuthenticationRuleChildrenChildrenOutput() AuthenticationRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o AuthenticationRuleChildrenChildrenOutput) ToAuthenticationRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthenticationRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthenticationRuleChildrenChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthenticationRuleChildrenChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// Condition type.
+//   - Choices: `ConditionAttributes`, `ConditionReference`
+func (o AuthenticationRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthenticationRuleChildrenChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthenticationRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthenticationRuleChildrenChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthenticationRuleChildrenChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthenticationRuleChildrenChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleChildrenChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthenticationRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthenticationRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthenticationRuleChildrenChildrenArrayOutput) ToAuthenticationRuleChildrenChildrenArrayOutput() AuthenticationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthenticationRuleChildrenChildrenArrayOutput) ToAuthenticationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthenticationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthenticationRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) AuthenticationRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthenticationRuleChildrenChildren {
+		return vs[0].([]AuthenticationRuleChildrenChildren)[vs[1].(int)]
+	}).(AuthenticationRuleChildrenChildrenOutput)
+}
+
+type AuthorizationExceptionRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []AuthorizationExceptionRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthorizationExceptionRuleChildrenInput is an input type that accepts AuthorizationExceptionRuleChildrenArgs and AuthorizationExceptionRuleChildrenOutput values.
+// You can construct a concrete instance of `AuthorizationExceptionRuleChildrenInput` via:
+//
+//	AuthorizationExceptionRuleChildrenArgs{...}
+type AuthorizationExceptionRuleChildrenInput interface {
+	pulumi.Input
+
+	ToAuthorizationExceptionRuleChildrenOutput() AuthorizationExceptionRuleChildrenOutput
+	ToAuthorizationExceptionRuleChildrenOutputWithContext(context.Context) AuthorizationExceptionRuleChildrenOutput
+}
+
+type AuthorizationExceptionRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens AuthorizationExceptionRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthorizationExceptionRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i AuthorizationExceptionRuleChildrenArgs) ToAuthorizationExceptionRuleChildrenOutput() AuthorizationExceptionRuleChildrenOutput {
+	return i.ToAuthorizationExceptionRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthorizationExceptionRuleChildrenArgs) ToAuthorizationExceptionRuleChildrenOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationExceptionRuleChildrenOutput)
+}
+
+// AuthorizationExceptionRuleChildrenArrayInput is an input type that accepts AuthorizationExceptionRuleChildrenArray and AuthorizationExceptionRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthorizationExceptionRuleChildrenArrayInput` via:
+//
+//	AuthorizationExceptionRuleChildrenArray{ AuthorizationExceptionRuleChildrenArgs{...} }
+type AuthorizationExceptionRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationExceptionRuleChildrenArrayOutput() AuthorizationExceptionRuleChildrenArrayOutput
+	ToAuthorizationExceptionRuleChildrenArrayOutputWithContext(context.Context) AuthorizationExceptionRuleChildrenArrayOutput
+}
+
+type AuthorizationExceptionRuleChildrenArray []AuthorizationExceptionRuleChildrenInput
+
+func (AuthorizationExceptionRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i AuthorizationExceptionRuleChildrenArray) ToAuthorizationExceptionRuleChildrenArrayOutput() AuthorizationExceptionRuleChildrenArrayOutput {
+	return i.ToAuthorizationExceptionRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationExceptionRuleChildrenArray) ToAuthorizationExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationExceptionRuleChildrenArrayOutput)
+}
+
+type AuthorizationExceptionRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationExceptionRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o AuthorizationExceptionRuleChildrenOutput) ToAuthorizationExceptionRuleChildrenOutput() AuthorizationExceptionRuleChildrenOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleChildrenOutput) ToAuthorizationExceptionRuleChildrenOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthorizationExceptionRuleChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthorizationExceptionRuleChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o AuthorizationExceptionRuleChildrenOutput) Childrens() AuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) []AuthorizationExceptionRuleChildrenChildren {
+		return v.Childrens
+	}).(AuthorizationExceptionRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+func (o AuthorizationExceptionRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthorizationExceptionRuleChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthorizationExceptionRuleChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthorizationExceptionRuleChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthorizationExceptionRuleChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthorizationExceptionRuleChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthorizationExceptionRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationExceptionRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o AuthorizationExceptionRuleChildrenArrayOutput) ToAuthorizationExceptionRuleChildrenArrayOutput() AuthorizationExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleChildrenArrayOutput) ToAuthorizationExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleChildrenArrayOutput) Index(i pulumi.IntInput) AuthorizationExceptionRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationExceptionRuleChildren {
+		return vs[0].([]AuthorizationExceptionRuleChildren)[vs[1].(int)]
+	}).(AuthorizationExceptionRuleChildrenOutput)
+}
+
+type AuthorizationExceptionRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthorizationExceptionRuleChildrenChildrenInput is an input type that accepts AuthorizationExceptionRuleChildrenChildrenArgs and AuthorizationExceptionRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `AuthorizationExceptionRuleChildrenChildrenInput` via:
+//
+//	AuthorizationExceptionRuleChildrenChildrenArgs{...}
+type AuthorizationExceptionRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToAuthorizationExceptionRuleChildrenChildrenOutput() AuthorizationExceptionRuleChildrenChildrenOutput
+	ToAuthorizationExceptionRuleChildrenChildrenOutputWithContext(context.Context) AuthorizationExceptionRuleChildrenChildrenOutput
+}
+
+type AuthorizationExceptionRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthorizationExceptionRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthorizationExceptionRuleChildrenChildrenArgs) ToAuthorizationExceptionRuleChildrenChildrenOutput() AuthorizationExceptionRuleChildrenChildrenOutput {
+	return i.ToAuthorizationExceptionRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthorizationExceptionRuleChildrenChildrenArgs) ToAuthorizationExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationExceptionRuleChildrenChildrenOutput)
+}
+
+// AuthorizationExceptionRuleChildrenChildrenArrayInput is an input type that accepts AuthorizationExceptionRuleChildrenChildrenArray and AuthorizationExceptionRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthorizationExceptionRuleChildrenChildrenArrayInput` via:
+//
+//	AuthorizationExceptionRuleChildrenChildrenArray{ AuthorizationExceptionRuleChildrenChildrenArgs{...} }
+type AuthorizationExceptionRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationExceptionRuleChildrenChildrenArrayOutput() AuthorizationExceptionRuleChildrenChildrenArrayOutput
+	ToAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(context.Context) AuthorizationExceptionRuleChildrenChildrenArrayOutput
+}
+
+type AuthorizationExceptionRuleChildrenChildrenArray []AuthorizationExceptionRuleChildrenChildrenInput
+
+func (AuthorizationExceptionRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthorizationExceptionRuleChildrenChildrenArray) ToAuthorizationExceptionRuleChildrenChildrenArrayOutput() AuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return i.ToAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationExceptionRuleChildrenChildrenArray) ToAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationExceptionRuleChildrenChildrenArrayOutput)
+}
+
+type AuthorizationExceptionRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationExceptionRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) ToAuthorizationExceptionRuleChildrenChildrenOutput() AuthorizationExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) ToAuthorizationExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// Condition type.
+//   - Choices: `ConditionAttributes`, `ConditionReference`
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthorizationExceptionRuleChildrenChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleChildrenChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthorizationExceptionRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationExceptionRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthorizationExceptionRuleChildrenChildrenArrayOutput) ToAuthorizationExceptionRuleChildrenChildrenArrayOutput() AuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleChildrenChildrenArrayOutput) ToAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) AuthorizationExceptionRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationExceptionRuleChildrenChildren {
+		return vs[0].([]AuthorizationExceptionRuleChildrenChildren)[vs[1].(int)]
+	}).(AuthorizationExceptionRuleChildrenChildrenOutput)
+}
+
+type AuthorizationGlobalExceptionRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []AuthorizationGlobalExceptionRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthorizationGlobalExceptionRuleChildrenInput is an input type that accepts AuthorizationGlobalExceptionRuleChildrenArgs and AuthorizationGlobalExceptionRuleChildrenOutput values.
+// You can construct a concrete instance of `AuthorizationGlobalExceptionRuleChildrenInput` via:
+//
+//	AuthorizationGlobalExceptionRuleChildrenArgs{...}
+type AuthorizationGlobalExceptionRuleChildrenInput interface {
+	pulumi.Input
+
+	ToAuthorizationGlobalExceptionRuleChildrenOutput() AuthorizationGlobalExceptionRuleChildrenOutput
+	ToAuthorizationGlobalExceptionRuleChildrenOutputWithContext(context.Context) AuthorizationGlobalExceptionRuleChildrenOutput
+}
+
+type AuthorizationGlobalExceptionRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens AuthorizationGlobalExceptionRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthorizationGlobalExceptionRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenArgs) ToAuthorizationGlobalExceptionRuleChildrenOutput() AuthorizationGlobalExceptionRuleChildrenOutput {
+	return i.ToAuthorizationGlobalExceptionRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenArgs) ToAuthorizationGlobalExceptionRuleChildrenOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationGlobalExceptionRuleChildrenOutput)
+}
+
+// AuthorizationGlobalExceptionRuleChildrenArrayInput is an input type that accepts AuthorizationGlobalExceptionRuleChildrenArray and AuthorizationGlobalExceptionRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthorizationGlobalExceptionRuleChildrenArrayInput` via:
+//
+//	AuthorizationGlobalExceptionRuleChildrenArray{ AuthorizationGlobalExceptionRuleChildrenArgs{...} }
+type AuthorizationGlobalExceptionRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationGlobalExceptionRuleChildrenArrayOutput() AuthorizationGlobalExceptionRuleChildrenArrayOutput
+	ToAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(context.Context) AuthorizationGlobalExceptionRuleChildrenArrayOutput
+}
+
+type AuthorizationGlobalExceptionRuleChildrenArray []AuthorizationGlobalExceptionRuleChildrenInput
+
+func (AuthorizationGlobalExceptionRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenArray) ToAuthorizationGlobalExceptionRuleChildrenArrayOutput() AuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return i.ToAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenArray) ToAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationGlobalExceptionRuleChildrenArrayOutput)
+}
+
+type AuthorizationGlobalExceptionRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationGlobalExceptionRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) ToAuthorizationGlobalExceptionRuleChildrenOutput() AuthorizationGlobalExceptionRuleChildrenOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) ToAuthorizationGlobalExceptionRuleChildrenOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) Childrens() AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) []AuthorizationGlobalExceptionRuleChildrenChildren {
+		return v.Childrens
+	}).(AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthorizationGlobalExceptionRuleChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthorizationGlobalExceptionRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationGlobalExceptionRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenArrayOutput) ToAuthorizationGlobalExceptionRuleChildrenArrayOutput() AuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenArrayOutput) ToAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenArrayOutput) Index(i pulumi.IntInput) AuthorizationGlobalExceptionRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationGlobalExceptionRuleChildren {
+		return vs[0].([]AuthorizationGlobalExceptionRuleChildren)[vs[1].(int)]
+	}).(AuthorizationGlobalExceptionRuleChildrenOutput)
+}
+
+type AuthorizationGlobalExceptionRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthorizationGlobalExceptionRuleChildrenChildrenInput is an input type that accepts AuthorizationGlobalExceptionRuleChildrenChildrenArgs and AuthorizationGlobalExceptionRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `AuthorizationGlobalExceptionRuleChildrenChildrenInput` via:
+//
+//	AuthorizationGlobalExceptionRuleChildrenChildrenArgs{...}
+type AuthorizationGlobalExceptionRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToAuthorizationGlobalExceptionRuleChildrenChildrenOutput() AuthorizationGlobalExceptionRuleChildrenChildrenOutput
+	ToAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(context.Context) AuthorizationGlobalExceptionRuleChildrenChildrenOutput
+}
+
+type AuthorizationGlobalExceptionRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthorizationGlobalExceptionRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenChildrenArgs) ToAuthorizationGlobalExceptionRuleChildrenChildrenOutput() AuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return i.ToAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenChildrenArgs) ToAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationGlobalExceptionRuleChildrenChildrenOutput)
+}
+
+// AuthorizationGlobalExceptionRuleChildrenChildrenArrayInput is an input type that accepts AuthorizationGlobalExceptionRuleChildrenChildrenArray and AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthorizationGlobalExceptionRuleChildrenChildrenArrayInput` via:
+//
+//	AuthorizationGlobalExceptionRuleChildrenChildrenArray{ AuthorizationGlobalExceptionRuleChildrenChildrenArgs{...} }
+type AuthorizationGlobalExceptionRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput() AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput
+	ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(context.Context) AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput
+}
+
+type AuthorizationGlobalExceptionRuleChildrenChildrenArray []AuthorizationGlobalExceptionRuleChildrenChildrenInput
+
+func (AuthorizationGlobalExceptionRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenChildrenArray) ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput() AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return i.ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationGlobalExceptionRuleChildrenChildrenArray) ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput)
+}
+
+type AuthorizationGlobalExceptionRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationGlobalExceptionRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) ToAuthorizationGlobalExceptionRuleChildrenChildrenOutput() AuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) ToAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// Condition type.
+//   - Choices: `ConditionAttributes`, `ConditionReference`
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleChildrenChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput() AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) ToAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) AuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationGlobalExceptionRuleChildrenChildren {
+		return vs[0].([]AuthorizationGlobalExceptionRuleChildrenChildren)[vs[1].(int)]
+	}).(AuthorizationGlobalExceptionRuleChildrenChildrenOutput)
+}
+
+type AuthorizationRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []AuthorizationRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthorizationRuleChildrenInput is an input type that accepts AuthorizationRuleChildrenArgs and AuthorizationRuleChildrenOutput values.
+// You can construct a concrete instance of `AuthorizationRuleChildrenInput` via:
+//
+//	AuthorizationRuleChildrenArgs{...}
+type AuthorizationRuleChildrenInput interface {
+	pulumi.Input
+
+	ToAuthorizationRuleChildrenOutput() AuthorizationRuleChildrenOutput
+	ToAuthorizationRuleChildrenOutputWithContext(context.Context) AuthorizationRuleChildrenOutput
+}
+
+type AuthorizationRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens AuthorizationRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthorizationRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (i AuthorizationRuleChildrenArgs) ToAuthorizationRuleChildrenOutput() AuthorizationRuleChildrenOutput {
+	return i.ToAuthorizationRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthorizationRuleChildrenArgs) ToAuthorizationRuleChildrenOutputWithContext(ctx context.Context) AuthorizationRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationRuleChildrenOutput)
+}
+
+// AuthorizationRuleChildrenArrayInput is an input type that accepts AuthorizationRuleChildrenArray and AuthorizationRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthorizationRuleChildrenArrayInput` via:
+//
+//	AuthorizationRuleChildrenArray{ AuthorizationRuleChildrenArgs{...} }
+type AuthorizationRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationRuleChildrenArrayOutput() AuthorizationRuleChildrenArrayOutput
+	ToAuthorizationRuleChildrenArrayOutputWithContext(context.Context) AuthorizationRuleChildrenArrayOutput
+}
+
+type AuthorizationRuleChildrenArray []AuthorizationRuleChildrenInput
+
+func (AuthorizationRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (i AuthorizationRuleChildrenArray) ToAuthorizationRuleChildrenArrayOutput() AuthorizationRuleChildrenArrayOutput {
+	return i.ToAuthorizationRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationRuleChildrenArray) ToAuthorizationRuleChildrenArrayOutputWithContext(ctx context.Context) AuthorizationRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationRuleChildrenArrayOutput)
+}
+
+type AuthorizationRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (o AuthorizationRuleChildrenOutput) ToAuthorizationRuleChildrenOutput() AuthorizationRuleChildrenOutput {
+	return o
+}
+
+func (o AuthorizationRuleChildrenOutput) ToAuthorizationRuleChildrenOutputWithContext(ctx context.Context) AuthorizationRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthorizationRuleChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthorizationRuleChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o AuthorizationRuleChildrenOutput) Childrens() AuthorizationRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) []AuthorizationRuleChildrenChildren { return v.Childrens }).(AuthorizationRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+func (o AuthorizationRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthorizationRuleChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthorizationRuleChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthorizationRuleChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthorizationRuleChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthorizationRuleChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthorizationRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (o AuthorizationRuleChildrenArrayOutput) ToAuthorizationRuleChildrenArrayOutput() AuthorizationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationRuleChildrenArrayOutput) ToAuthorizationRuleChildrenArrayOutputWithContext(ctx context.Context) AuthorizationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationRuleChildrenArrayOutput) Index(i pulumi.IntInput) AuthorizationRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationRuleChildren {
+		return vs[0].([]AuthorizationRuleChildren)[vs[1].(int)]
+	}).(AuthorizationRuleChildrenOutput)
+}
+
+type AuthorizationRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// AuthorizationRuleChildrenChildrenInput is an input type that accepts AuthorizationRuleChildrenChildrenArgs and AuthorizationRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `AuthorizationRuleChildrenChildrenInput` via:
+//
+//	AuthorizationRuleChildrenChildrenArgs{...}
+type AuthorizationRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToAuthorizationRuleChildrenChildrenOutput() AuthorizationRuleChildrenChildrenOutput
+	ToAuthorizationRuleChildrenChildrenOutputWithContext(context.Context) AuthorizationRuleChildrenChildrenOutput
+}
+
+type AuthorizationRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (AuthorizationRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthorizationRuleChildrenChildrenArgs) ToAuthorizationRuleChildrenChildrenOutput() AuthorizationRuleChildrenChildrenOutput {
+	return i.ToAuthorizationRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i AuthorizationRuleChildrenChildrenArgs) ToAuthorizationRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthorizationRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationRuleChildrenChildrenOutput)
+}
+
+// AuthorizationRuleChildrenChildrenArrayInput is an input type that accepts AuthorizationRuleChildrenChildrenArray and AuthorizationRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `AuthorizationRuleChildrenChildrenArrayInput` via:
+//
+//	AuthorizationRuleChildrenChildrenArray{ AuthorizationRuleChildrenChildrenArgs{...} }
+type AuthorizationRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationRuleChildrenChildrenArrayOutput() AuthorizationRuleChildrenChildrenArrayOutput
+	ToAuthorizationRuleChildrenChildrenArrayOutputWithContext(context.Context) AuthorizationRuleChildrenChildrenArrayOutput
+}
+
+type AuthorizationRuleChildrenChildrenArray []AuthorizationRuleChildrenChildrenInput
+
+func (AuthorizationRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i AuthorizationRuleChildrenChildrenArray) ToAuthorizationRuleChildrenChildrenArrayOutput() AuthorizationRuleChildrenChildrenArrayOutput {
+	return i.ToAuthorizationRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationRuleChildrenChildrenArray) ToAuthorizationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthorizationRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationRuleChildrenChildrenArrayOutput)
+}
+
+type AuthorizationRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthorizationRuleChildrenChildrenOutput) ToAuthorizationRuleChildrenChildrenOutput() AuthorizationRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o AuthorizationRuleChildrenChildrenOutput) ToAuthorizationRuleChildrenChildrenOutputWithContext(ctx context.Context) AuthorizationRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o AuthorizationRuleChildrenChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o AuthorizationRuleChildrenChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// Condition type.
+//   - Choices: `ConditionAttributes`, `ConditionReference`
+func (o AuthorizationRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o AuthorizationRuleChildrenChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o AuthorizationRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o AuthorizationRuleChildrenChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o AuthorizationRuleChildrenChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o AuthorizationRuleChildrenChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleChildrenChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type AuthorizationRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o AuthorizationRuleChildrenChildrenArrayOutput) ToAuthorizationRuleChildrenChildrenArrayOutput() AuthorizationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationRuleChildrenChildrenArrayOutput) ToAuthorizationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) AuthorizationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o AuthorizationRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) AuthorizationRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationRuleChildrenChildren {
+		return vs[0].([]AuthorizationRuleChildrenChildren)[vs[1].(int)]
+	}).(AuthorizationRuleChildrenChildrenOutput)
+}
+
 type ConditionChildren struct {
 	// Dictionary attribute name
 	AttributeName *string `pulumi:"attributeName"`
@@ -390,6 +1758,1667 @@ func (o ConditionChildrenChildrenArrayOutput) Index(i pulumi.IntInput) Condition
 	}).(ConditionChildrenChildrenOutput)
 }
 
+type PolicySetChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []PolicySetChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// PolicySetChildrenInput is an input type that accepts PolicySetChildrenArgs and PolicySetChildrenOutput values.
+// You can construct a concrete instance of `PolicySetChildrenInput` via:
+//
+//	PolicySetChildrenArgs{...}
+type PolicySetChildrenInput interface {
+	pulumi.Input
+
+	ToPolicySetChildrenOutput() PolicySetChildrenOutput
+	ToPolicySetChildrenOutputWithContext(context.Context) PolicySetChildrenOutput
+}
+
+type PolicySetChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens PolicySetChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (PolicySetChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicySetChildren)(nil)).Elem()
+}
+
+func (i PolicySetChildrenArgs) ToPolicySetChildrenOutput() PolicySetChildrenOutput {
+	return i.ToPolicySetChildrenOutputWithContext(context.Background())
+}
+
+func (i PolicySetChildrenArgs) ToPolicySetChildrenOutputWithContext(ctx context.Context) PolicySetChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicySetChildrenOutput)
+}
+
+// PolicySetChildrenArrayInput is an input type that accepts PolicySetChildrenArray and PolicySetChildrenArrayOutput values.
+// You can construct a concrete instance of `PolicySetChildrenArrayInput` via:
+//
+//	PolicySetChildrenArray{ PolicySetChildrenArgs{...} }
+type PolicySetChildrenArrayInput interface {
+	pulumi.Input
+
+	ToPolicySetChildrenArrayOutput() PolicySetChildrenArrayOutput
+	ToPolicySetChildrenArrayOutputWithContext(context.Context) PolicySetChildrenArrayOutput
+}
+
+type PolicySetChildrenArray []PolicySetChildrenInput
+
+func (PolicySetChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicySetChildren)(nil)).Elem()
+}
+
+func (i PolicySetChildrenArray) ToPolicySetChildrenArrayOutput() PolicySetChildrenArrayOutput {
+	return i.ToPolicySetChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i PolicySetChildrenArray) ToPolicySetChildrenArrayOutputWithContext(ctx context.Context) PolicySetChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicySetChildrenArrayOutput)
+}
+
+type PolicySetChildrenOutput struct{ *pulumi.OutputState }
+
+func (PolicySetChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicySetChildren)(nil)).Elem()
+}
+
+func (o PolicySetChildrenOutput) ToPolicySetChildrenOutput() PolicySetChildrenOutput {
+	return o
+}
+
+func (o PolicySetChildrenOutput) ToPolicySetChildrenOutputWithContext(ctx context.Context) PolicySetChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o PolicySetChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o PolicySetChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o PolicySetChildrenOutput) Childrens() PolicySetChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v PolicySetChildren) []PolicySetChildrenChildren { return v.Childrens }).(PolicySetChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+func (o PolicySetChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v PolicySetChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o PolicySetChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o PolicySetChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o PolicySetChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o PolicySetChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o PolicySetChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type PolicySetChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicySetChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicySetChildren)(nil)).Elem()
+}
+
+func (o PolicySetChildrenArrayOutput) ToPolicySetChildrenArrayOutput() PolicySetChildrenArrayOutput {
+	return o
+}
+
+func (o PolicySetChildrenArrayOutput) ToPolicySetChildrenArrayOutputWithContext(ctx context.Context) PolicySetChildrenArrayOutput {
+	return o
+}
+
+func (o PolicySetChildrenArrayOutput) Index(i pulumi.IntInput) PolicySetChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicySetChildren {
+		return vs[0].([]PolicySetChildren)[vs[1].(int)]
+	}).(PolicySetChildrenOutput)
+}
+
+type PolicySetChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName *string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue *string `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName *string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue *string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id *string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate *bool `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator *string `pulumi:"operator"`
+}
+
+// PolicySetChildrenChildrenInput is an input type that accepts PolicySetChildrenChildrenArgs and PolicySetChildrenChildrenOutput values.
+// You can construct a concrete instance of `PolicySetChildrenChildrenInput` via:
+//
+//	PolicySetChildrenChildrenArgs{...}
+type PolicySetChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToPolicySetChildrenChildrenOutput() PolicySetChildrenChildrenOutput
+	ToPolicySetChildrenChildrenOutputWithContext(context.Context) PolicySetChildrenChildrenOutput
+}
+
+type PolicySetChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringPtrInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringPtrInput `pulumi:"attributeValue"`
+	// Condition type.
+	//   - Choices: `ConditionAttributes`, `ConditionReference`
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringPtrInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringPtrInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	Operator pulumi.StringPtrInput `pulumi:"operator"`
+}
+
+func (PolicySetChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (i PolicySetChildrenChildrenArgs) ToPolicySetChildrenChildrenOutput() PolicySetChildrenChildrenOutput {
+	return i.ToPolicySetChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i PolicySetChildrenChildrenArgs) ToPolicySetChildrenChildrenOutputWithContext(ctx context.Context) PolicySetChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicySetChildrenChildrenOutput)
+}
+
+// PolicySetChildrenChildrenArrayInput is an input type that accepts PolicySetChildrenChildrenArray and PolicySetChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `PolicySetChildrenChildrenArrayInput` via:
+//
+//	PolicySetChildrenChildrenArray{ PolicySetChildrenChildrenArgs{...} }
+type PolicySetChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToPolicySetChildrenChildrenArrayOutput() PolicySetChildrenChildrenArrayOutput
+	ToPolicySetChildrenChildrenArrayOutputWithContext(context.Context) PolicySetChildrenChildrenArrayOutput
+}
+
+type PolicySetChildrenChildrenArray []PolicySetChildrenChildrenInput
+
+func (PolicySetChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (i PolicySetChildrenChildrenArray) ToPolicySetChildrenChildrenArrayOutput() PolicySetChildrenChildrenArrayOutput {
+	return i.ToPolicySetChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i PolicySetChildrenChildrenArray) ToPolicySetChildrenChildrenArrayOutputWithContext(ctx context.Context) PolicySetChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicySetChildrenChildrenArrayOutput)
+}
+
+type PolicySetChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (PolicySetChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (o PolicySetChildrenChildrenOutput) ToPolicySetChildrenChildrenOutput() PolicySetChildrenChildrenOutput {
+	return o
+}
+
+func (o PolicySetChildrenChildrenOutput) ToPolicySetChildrenChildrenOutputWithContext(ctx context.Context) PolicySetChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o PolicySetChildrenChildrenOutput) AttributeName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *string { return v.AttributeName }).(pulumi.StringPtrOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o PolicySetChildrenChildrenOutput) AttributeValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *string { return v.AttributeValue }).(pulumi.StringPtrOutput)
+}
+
+// Condition type.
+//   - Choices: `ConditionAttributes`, `ConditionReference`
+func (o PolicySetChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o PolicySetChildrenChildrenOutput) DictionaryName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *string { return v.DictionaryName }).(pulumi.StringPtrOutput)
+}
+
+// Dictionary value
+func (o PolicySetChildrenChildrenOutput) DictionaryValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *string { return v.DictionaryValue }).(pulumi.StringPtrOutput)
+}
+
+// UUID for condition
+func (o PolicySetChildrenChildrenOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o PolicySetChildrenChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
+}
+
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+func (o PolicySetChildrenChildrenOutput) Operator() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetChildrenChildren) *string { return v.Operator }).(pulumi.StringPtrOutput)
+}
+
+type PolicySetChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicySetChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (o PolicySetChildrenChildrenArrayOutput) ToPolicySetChildrenChildrenArrayOutput() PolicySetChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o PolicySetChildrenChildrenArrayOutput) ToPolicySetChildrenChildrenArrayOutputWithContext(ctx context.Context) PolicySetChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o PolicySetChildrenChildrenArrayOutput) Index(i pulumi.IntInput) PolicySetChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicySetChildrenChildren {
+		return vs[0].([]PolicySetChildrenChildren)[vs[1].(int)]
+	}).(PolicySetChildrenChildrenOutput)
+}
+
+type GetAuthenticationRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []GetAuthenticationRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthenticationRuleChildrenInput is an input type that accepts GetAuthenticationRuleChildrenArgs and GetAuthenticationRuleChildrenOutput values.
+// You can construct a concrete instance of `GetAuthenticationRuleChildrenInput` via:
+//
+//	GetAuthenticationRuleChildrenArgs{...}
+type GetAuthenticationRuleChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthenticationRuleChildrenOutput() GetAuthenticationRuleChildrenOutput
+	ToGetAuthenticationRuleChildrenOutputWithContext(context.Context) GetAuthenticationRuleChildrenOutput
+}
+
+type GetAuthenticationRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens GetAuthenticationRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthenticationRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthenticationRuleChildrenArgs) ToGetAuthenticationRuleChildrenOutput() GetAuthenticationRuleChildrenOutput {
+	return i.ToGetAuthenticationRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthenticationRuleChildrenArgs) ToGetAuthenticationRuleChildrenOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthenticationRuleChildrenOutput)
+}
+
+// GetAuthenticationRuleChildrenArrayInput is an input type that accepts GetAuthenticationRuleChildrenArray and GetAuthenticationRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthenticationRuleChildrenArrayInput` via:
+//
+//	GetAuthenticationRuleChildrenArray{ GetAuthenticationRuleChildrenArgs{...} }
+type GetAuthenticationRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthenticationRuleChildrenArrayOutput() GetAuthenticationRuleChildrenArrayOutput
+	ToGetAuthenticationRuleChildrenArrayOutputWithContext(context.Context) GetAuthenticationRuleChildrenArrayOutput
+}
+
+type GetAuthenticationRuleChildrenArray []GetAuthenticationRuleChildrenInput
+
+func (GetAuthenticationRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthenticationRuleChildrenArray) ToGetAuthenticationRuleChildrenArrayOutput() GetAuthenticationRuleChildrenArrayOutput {
+	return i.ToGetAuthenticationRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthenticationRuleChildrenArray) ToGetAuthenticationRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthenticationRuleChildrenArrayOutput)
+}
+
+type GetAuthenticationRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthenticationRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthenticationRuleChildrenOutput) ToGetAuthenticationRuleChildrenOutput() GetAuthenticationRuleChildrenOutput {
+	return o
+}
+
+func (o GetAuthenticationRuleChildrenOutput) ToGetAuthenticationRuleChildrenOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthenticationRuleChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthenticationRuleChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o GetAuthenticationRuleChildrenOutput) Childrens() GetAuthenticationRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) []GetAuthenticationRuleChildrenChildren { return v.Childrens }).(GetAuthenticationRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+func (o GetAuthenticationRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthenticationRuleChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthenticationRuleChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthenticationRuleChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthenticationRuleChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthenticationRuleChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthenticationRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthenticationRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthenticationRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthenticationRuleChildrenArrayOutput) ToGetAuthenticationRuleChildrenArrayOutput() GetAuthenticationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthenticationRuleChildrenArrayOutput) ToGetAuthenticationRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthenticationRuleChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthenticationRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthenticationRuleChildren {
+		return vs[0].([]GetAuthenticationRuleChildren)[vs[1].(int)]
+	}).(GetAuthenticationRuleChildrenOutput)
+}
+
+type GetAuthenticationRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthenticationRuleChildrenChildrenInput is an input type that accepts GetAuthenticationRuleChildrenChildrenArgs and GetAuthenticationRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `GetAuthenticationRuleChildrenChildrenInput` via:
+//
+//	GetAuthenticationRuleChildrenChildrenArgs{...}
+type GetAuthenticationRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthenticationRuleChildrenChildrenOutput() GetAuthenticationRuleChildrenChildrenOutput
+	ToGetAuthenticationRuleChildrenChildrenOutputWithContext(context.Context) GetAuthenticationRuleChildrenChildrenOutput
+}
+
+type GetAuthenticationRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthenticationRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthenticationRuleChildrenChildrenArgs) ToGetAuthenticationRuleChildrenChildrenOutput() GetAuthenticationRuleChildrenChildrenOutput {
+	return i.ToGetAuthenticationRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthenticationRuleChildrenChildrenArgs) ToGetAuthenticationRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthenticationRuleChildrenChildrenOutput)
+}
+
+// GetAuthenticationRuleChildrenChildrenArrayInput is an input type that accepts GetAuthenticationRuleChildrenChildrenArray and GetAuthenticationRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthenticationRuleChildrenChildrenArrayInput` via:
+//
+//	GetAuthenticationRuleChildrenChildrenArray{ GetAuthenticationRuleChildrenChildrenArgs{...} }
+type GetAuthenticationRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthenticationRuleChildrenChildrenArrayOutput() GetAuthenticationRuleChildrenChildrenArrayOutput
+	ToGetAuthenticationRuleChildrenChildrenArrayOutputWithContext(context.Context) GetAuthenticationRuleChildrenChildrenArrayOutput
+}
+
+type GetAuthenticationRuleChildrenChildrenArray []GetAuthenticationRuleChildrenChildrenInput
+
+func (GetAuthenticationRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthenticationRuleChildrenChildrenArray) ToGetAuthenticationRuleChildrenChildrenArrayOutput() GetAuthenticationRuleChildrenChildrenArrayOutput {
+	return i.ToGetAuthenticationRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthenticationRuleChildrenChildrenArray) ToGetAuthenticationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthenticationRuleChildrenChildrenArrayOutput)
+}
+
+type GetAuthenticationRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthenticationRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthenticationRuleChildrenChildrenOutput) ToGetAuthenticationRuleChildrenChildrenOutput() GetAuthenticationRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o GetAuthenticationRuleChildrenChildrenOutput) ToGetAuthenticationRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthenticationRuleChildrenChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthenticationRuleChildrenChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// Condition type.
+func (o GetAuthenticationRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthenticationRuleChildrenChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthenticationRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthenticationRuleChildrenChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthenticationRuleChildrenChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthenticationRuleChildrenChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleChildrenChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthenticationRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthenticationRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthenticationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthenticationRuleChildrenChildrenArrayOutput) ToGetAuthenticationRuleChildrenChildrenArrayOutput() GetAuthenticationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthenticationRuleChildrenChildrenArrayOutput) ToGetAuthenticationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthenticationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthenticationRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthenticationRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthenticationRuleChildrenChildren {
+		return vs[0].([]GetAuthenticationRuleChildrenChildren)[vs[1].(int)]
+	}).(GetAuthenticationRuleChildrenChildrenOutput)
+}
+
+type GetAuthorizationExceptionRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []GetAuthorizationExceptionRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthorizationExceptionRuleChildrenInput is an input type that accepts GetAuthorizationExceptionRuleChildrenArgs and GetAuthorizationExceptionRuleChildrenOutput values.
+// You can construct a concrete instance of `GetAuthorizationExceptionRuleChildrenInput` via:
+//
+//	GetAuthorizationExceptionRuleChildrenArgs{...}
+type GetAuthorizationExceptionRuleChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationExceptionRuleChildrenOutput() GetAuthorizationExceptionRuleChildrenOutput
+	ToGetAuthorizationExceptionRuleChildrenOutputWithContext(context.Context) GetAuthorizationExceptionRuleChildrenOutput
+}
+
+type GetAuthorizationExceptionRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens GetAuthorizationExceptionRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthorizationExceptionRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationExceptionRuleChildrenArgs) ToGetAuthorizationExceptionRuleChildrenOutput() GetAuthorizationExceptionRuleChildrenOutput {
+	return i.ToGetAuthorizationExceptionRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationExceptionRuleChildrenArgs) ToGetAuthorizationExceptionRuleChildrenOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationExceptionRuleChildrenOutput)
+}
+
+// GetAuthorizationExceptionRuleChildrenArrayInput is an input type that accepts GetAuthorizationExceptionRuleChildrenArray and GetAuthorizationExceptionRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthorizationExceptionRuleChildrenArrayInput` via:
+//
+//	GetAuthorizationExceptionRuleChildrenArray{ GetAuthorizationExceptionRuleChildrenArgs{...} }
+type GetAuthorizationExceptionRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationExceptionRuleChildrenArrayOutput() GetAuthorizationExceptionRuleChildrenArrayOutput
+	ToGetAuthorizationExceptionRuleChildrenArrayOutputWithContext(context.Context) GetAuthorizationExceptionRuleChildrenArrayOutput
+}
+
+type GetAuthorizationExceptionRuleChildrenArray []GetAuthorizationExceptionRuleChildrenInput
+
+func (GetAuthorizationExceptionRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationExceptionRuleChildrenArray) ToGetAuthorizationExceptionRuleChildrenArrayOutput() GetAuthorizationExceptionRuleChildrenArrayOutput {
+	return i.ToGetAuthorizationExceptionRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationExceptionRuleChildrenArray) ToGetAuthorizationExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationExceptionRuleChildrenArrayOutput)
+}
+
+type GetAuthorizationExceptionRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationExceptionRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationExceptionRuleChildrenOutput) ToGetAuthorizationExceptionRuleChildrenOutput() GetAuthorizationExceptionRuleChildrenOutput {
+	return o
+}
+
+func (o GetAuthorizationExceptionRuleChildrenOutput) ToGetAuthorizationExceptionRuleChildrenOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthorizationExceptionRuleChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthorizationExceptionRuleChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o GetAuthorizationExceptionRuleChildrenOutput) Childrens() GetAuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) []GetAuthorizationExceptionRuleChildrenChildren {
+		return v.Childrens
+	}).(GetAuthorizationExceptionRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+func (o GetAuthorizationExceptionRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthorizationExceptionRuleChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthorizationExceptionRuleChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthorizationExceptionRuleChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthorizationExceptionRuleChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthorizationExceptionRuleChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthorizationExceptionRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationExceptionRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationExceptionRuleChildrenArrayOutput) ToGetAuthorizationExceptionRuleChildrenArrayOutput() GetAuthorizationExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationExceptionRuleChildrenArrayOutput) ToGetAuthorizationExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationExceptionRuleChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthorizationExceptionRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthorizationExceptionRuleChildren {
+		return vs[0].([]GetAuthorizationExceptionRuleChildren)[vs[1].(int)]
+	}).(GetAuthorizationExceptionRuleChildrenOutput)
+}
+
+type GetAuthorizationExceptionRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthorizationExceptionRuleChildrenChildrenInput is an input type that accepts GetAuthorizationExceptionRuleChildrenChildrenArgs and GetAuthorizationExceptionRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `GetAuthorizationExceptionRuleChildrenChildrenInput` via:
+//
+//	GetAuthorizationExceptionRuleChildrenChildrenArgs{...}
+type GetAuthorizationExceptionRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationExceptionRuleChildrenChildrenOutput() GetAuthorizationExceptionRuleChildrenChildrenOutput
+	ToGetAuthorizationExceptionRuleChildrenChildrenOutputWithContext(context.Context) GetAuthorizationExceptionRuleChildrenChildrenOutput
+}
+
+type GetAuthorizationExceptionRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthorizationExceptionRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationExceptionRuleChildrenChildrenArgs) ToGetAuthorizationExceptionRuleChildrenChildrenOutput() GetAuthorizationExceptionRuleChildrenChildrenOutput {
+	return i.ToGetAuthorizationExceptionRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationExceptionRuleChildrenChildrenArgs) ToGetAuthorizationExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationExceptionRuleChildrenChildrenOutput)
+}
+
+// GetAuthorizationExceptionRuleChildrenChildrenArrayInput is an input type that accepts GetAuthorizationExceptionRuleChildrenChildrenArray and GetAuthorizationExceptionRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthorizationExceptionRuleChildrenChildrenArrayInput` via:
+//
+//	GetAuthorizationExceptionRuleChildrenChildrenArray{ GetAuthorizationExceptionRuleChildrenChildrenArgs{...} }
+type GetAuthorizationExceptionRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutput() GetAuthorizationExceptionRuleChildrenChildrenArrayOutput
+	ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(context.Context) GetAuthorizationExceptionRuleChildrenChildrenArrayOutput
+}
+
+type GetAuthorizationExceptionRuleChildrenChildrenArray []GetAuthorizationExceptionRuleChildrenChildrenInput
+
+func (GetAuthorizationExceptionRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationExceptionRuleChildrenChildrenArray) ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutput() GetAuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return i.ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationExceptionRuleChildrenChildrenArray) ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationExceptionRuleChildrenChildrenArrayOutput)
+}
+
+type GetAuthorizationExceptionRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationExceptionRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) ToGetAuthorizationExceptionRuleChildrenChildrenOutput() GetAuthorizationExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) ToGetAuthorizationExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// Condition type.
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthorizationExceptionRuleChildrenChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationExceptionRuleChildrenChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthorizationExceptionRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationExceptionRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationExceptionRuleChildrenChildrenArrayOutput) ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutput() GetAuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationExceptionRuleChildrenChildrenArrayOutput) ToGetAuthorizationExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationExceptionRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthorizationExceptionRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthorizationExceptionRuleChildrenChildren {
+		return vs[0].([]GetAuthorizationExceptionRuleChildrenChildren)[vs[1].(int)]
+	}).(GetAuthorizationExceptionRuleChildrenChildrenOutput)
+}
+
+type GetAuthorizationGlobalExceptionRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []GetAuthorizationGlobalExceptionRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthorizationGlobalExceptionRuleChildrenInput is an input type that accepts GetAuthorizationGlobalExceptionRuleChildrenArgs and GetAuthorizationGlobalExceptionRuleChildrenOutput values.
+// You can construct a concrete instance of `GetAuthorizationGlobalExceptionRuleChildrenInput` via:
+//
+//	GetAuthorizationGlobalExceptionRuleChildrenArgs{...}
+type GetAuthorizationGlobalExceptionRuleChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationGlobalExceptionRuleChildrenOutput() GetAuthorizationGlobalExceptionRuleChildrenOutput
+	ToGetAuthorizationGlobalExceptionRuleChildrenOutputWithContext(context.Context) GetAuthorizationGlobalExceptionRuleChildrenOutput
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthorizationGlobalExceptionRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenArgs) ToGetAuthorizationGlobalExceptionRuleChildrenOutput() GetAuthorizationGlobalExceptionRuleChildrenOutput {
+	return i.ToGetAuthorizationGlobalExceptionRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenArgs) ToGetAuthorizationGlobalExceptionRuleChildrenOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationGlobalExceptionRuleChildrenOutput)
+}
+
+// GetAuthorizationGlobalExceptionRuleChildrenArrayInput is an input type that accepts GetAuthorizationGlobalExceptionRuleChildrenArray and GetAuthorizationGlobalExceptionRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthorizationGlobalExceptionRuleChildrenArrayInput` via:
+//
+//	GetAuthorizationGlobalExceptionRuleChildrenArray{ GetAuthorizationGlobalExceptionRuleChildrenArgs{...} }
+type GetAuthorizationGlobalExceptionRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutput() GetAuthorizationGlobalExceptionRuleChildrenArrayOutput
+	ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(context.Context) GetAuthorizationGlobalExceptionRuleChildrenArrayOutput
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenArray []GetAuthorizationGlobalExceptionRuleChildrenInput
+
+func (GetAuthorizationGlobalExceptionRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenArray) ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutput() GetAuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return i.ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenArray) ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationGlobalExceptionRuleChildrenArrayOutput)
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationGlobalExceptionRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) ToGetAuthorizationGlobalExceptionRuleChildrenOutput() GetAuthorizationGlobalExceptionRuleChildrenOutput {
+	return o
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) ToGetAuthorizationGlobalExceptionRuleChildrenOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) Childrens() GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) []GetAuthorizationGlobalExceptionRuleChildrenChildren {
+		return v.Childrens
+	}).(GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthorizationGlobalExceptionRuleChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationGlobalExceptionRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationGlobalExceptionRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenArrayOutput) ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutput() GetAuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenArrayOutput) ToGetAuthorizationGlobalExceptionRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthorizationGlobalExceptionRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthorizationGlobalExceptionRuleChildren {
+		return vs[0].([]GetAuthorizationGlobalExceptionRuleChildren)[vs[1].(int)]
+	}).(GetAuthorizationGlobalExceptionRuleChildrenOutput)
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthorizationGlobalExceptionRuleChildrenChildrenInput is an input type that accepts GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs and GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `GetAuthorizationGlobalExceptionRuleChildrenChildrenInput` via:
+//
+//	GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs{...}
+type GetAuthorizationGlobalExceptionRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutput() GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput
+	ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(context.Context) GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutput() GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return i.ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput)
+}
+
+// GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayInput is an input type that accepts GetAuthorizationGlobalExceptionRuleChildrenChildrenArray and GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayInput` via:
+//
+//	GetAuthorizationGlobalExceptionRuleChildrenChildrenArray{ GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs{...} }
+type GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput() GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput
+	ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(context.Context) GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenChildrenArray []GetAuthorizationGlobalExceptionRuleChildrenChildrenInput
+
+func (GetAuthorizationGlobalExceptionRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenChildrenArray) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput() GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return i.ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationGlobalExceptionRuleChildrenChildrenArray) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput)
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutput() GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// Condition type.
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationGlobalExceptionRuleChildrenChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationGlobalExceptionRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput() GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) ToGetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthorizationGlobalExceptionRuleChildrenChildren {
+		return vs[0].([]GetAuthorizationGlobalExceptionRuleChildrenChildren)[vs[1].(int)]
+	}).(GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput)
+}
+
+type GetAuthorizationRuleChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []GetAuthorizationRuleChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthorizationRuleChildrenInput is an input type that accepts GetAuthorizationRuleChildrenArgs and GetAuthorizationRuleChildrenOutput values.
+// You can construct a concrete instance of `GetAuthorizationRuleChildrenInput` via:
+//
+//	GetAuthorizationRuleChildrenArgs{...}
+type GetAuthorizationRuleChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationRuleChildrenOutput() GetAuthorizationRuleChildrenOutput
+	ToGetAuthorizationRuleChildrenOutputWithContext(context.Context) GetAuthorizationRuleChildrenOutput
+}
+
+type GetAuthorizationRuleChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens GetAuthorizationRuleChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthorizationRuleChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationRuleChildrenArgs) ToGetAuthorizationRuleChildrenOutput() GetAuthorizationRuleChildrenOutput {
+	return i.ToGetAuthorizationRuleChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationRuleChildrenArgs) ToGetAuthorizationRuleChildrenOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationRuleChildrenOutput)
+}
+
+// GetAuthorizationRuleChildrenArrayInput is an input type that accepts GetAuthorizationRuleChildrenArray and GetAuthorizationRuleChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthorizationRuleChildrenArrayInput` via:
+//
+//	GetAuthorizationRuleChildrenArray{ GetAuthorizationRuleChildrenArgs{...} }
+type GetAuthorizationRuleChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationRuleChildrenArrayOutput() GetAuthorizationRuleChildrenArrayOutput
+	ToGetAuthorizationRuleChildrenArrayOutputWithContext(context.Context) GetAuthorizationRuleChildrenArrayOutput
+}
+
+type GetAuthorizationRuleChildrenArray []GetAuthorizationRuleChildrenInput
+
+func (GetAuthorizationRuleChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationRuleChildrenArray) ToGetAuthorizationRuleChildrenArrayOutput() GetAuthorizationRuleChildrenArrayOutput {
+	return i.ToGetAuthorizationRuleChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationRuleChildrenArray) ToGetAuthorizationRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationRuleChildrenArrayOutput)
+}
+
+type GetAuthorizationRuleChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationRuleChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationRuleChildrenOutput) ToGetAuthorizationRuleChildrenOutput() GetAuthorizationRuleChildrenOutput {
+	return o
+}
+
+func (o GetAuthorizationRuleChildrenOutput) ToGetAuthorizationRuleChildrenOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthorizationRuleChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthorizationRuleChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o GetAuthorizationRuleChildrenOutput) Childrens() GetAuthorizationRuleChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) []GetAuthorizationRuleChildrenChildren { return v.Childrens }).(GetAuthorizationRuleChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+func (o GetAuthorizationRuleChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthorizationRuleChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthorizationRuleChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthorizationRuleChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthorizationRuleChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthorizationRuleChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthorizationRuleChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationRuleChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationRuleChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationRuleChildrenArrayOutput) ToGetAuthorizationRuleChildrenArrayOutput() GetAuthorizationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationRuleChildrenArrayOutput) ToGetAuthorizationRuleChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationRuleChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthorizationRuleChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthorizationRuleChildren {
+		return vs[0].([]GetAuthorizationRuleChildren)[vs[1].(int)]
+	}).(GetAuthorizationRuleChildrenOutput)
+}
+
+type GetAuthorizationRuleChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetAuthorizationRuleChildrenChildrenInput is an input type that accepts GetAuthorizationRuleChildrenChildrenArgs and GetAuthorizationRuleChildrenChildrenOutput values.
+// You can construct a concrete instance of `GetAuthorizationRuleChildrenChildrenInput` via:
+//
+//	GetAuthorizationRuleChildrenChildrenArgs{...}
+type GetAuthorizationRuleChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationRuleChildrenChildrenOutput() GetAuthorizationRuleChildrenChildrenOutput
+	ToGetAuthorizationRuleChildrenChildrenOutputWithContext(context.Context) GetAuthorizationRuleChildrenChildrenOutput
+}
+
+type GetAuthorizationRuleChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetAuthorizationRuleChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationRuleChildrenChildrenArgs) ToGetAuthorizationRuleChildrenChildrenOutput() GetAuthorizationRuleChildrenChildrenOutput {
+	return i.ToGetAuthorizationRuleChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationRuleChildrenChildrenArgs) ToGetAuthorizationRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationRuleChildrenChildrenOutput)
+}
+
+// GetAuthorizationRuleChildrenChildrenArrayInput is an input type that accepts GetAuthorizationRuleChildrenChildrenArray and GetAuthorizationRuleChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `GetAuthorizationRuleChildrenChildrenArrayInput` via:
+//
+//	GetAuthorizationRuleChildrenChildrenArray{ GetAuthorizationRuleChildrenChildrenArgs{...} }
+type GetAuthorizationRuleChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetAuthorizationRuleChildrenChildrenArrayOutput() GetAuthorizationRuleChildrenChildrenArrayOutput
+	ToGetAuthorizationRuleChildrenChildrenArrayOutputWithContext(context.Context) GetAuthorizationRuleChildrenChildrenArrayOutput
+}
+
+type GetAuthorizationRuleChildrenChildrenArray []GetAuthorizationRuleChildrenChildrenInput
+
+func (GetAuthorizationRuleChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (i GetAuthorizationRuleChildrenChildrenArray) ToGetAuthorizationRuleChildrenChildrenArrayOutput() GetAuthorizationRuleChildrenChildrenArrayOutput {
+	return i.ToGetAuthorizationRuleChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetAuthorizationRuleChildrenChildrenArray) ToGetAuthorizationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetAuthorizationRuleChildrenChildrenArrayOutput)
+}
+
+type GetAuthorizationRuleChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationRuleChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetAuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationRuleChildrenChildrenOutput) ToGetAuthorizationRuleChildrenChildrenOutput() GetAuthorizationRuleChildrenChildrenOutput {
+	return o
+}
+
+func (o GetAuthorizationRuleChildrenChildrenOutput) ToGetAuthorizationRuleChildrenChildrenOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetAuthorizationRuleChildrenChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetAuthorizationRuleChildrenChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// Condition type.
+func (o GetAuthorizationRuleChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetAuthorizationRuleChildrenChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetAuthorizationRuleChildrenChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetAuthorizationRuleChildrenChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetAuthorizationRuleChildrenChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetAuthorizationRuleChildrenChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthorizationRuleChildrenChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetAuthorizationRuleChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetAuthorizationRuleChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetAuthorizationRuleChildrenChildren)(nil)).Elem()
+}
+
+func (o GetAuthorizationRuleChildrenChildrenArrayOutput) ToGetAuthorizationRuleChildrenChildrenArrayOutput() GetAuthorizationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationRuleChildrenChildrenArrayOutput) ToGetAuthorizationRuleChildrenChildrenArrayOutputWithContext(ctx context.Context) GetAuthorizationRuleChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetAuthorizationRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) GetAuthorizationRuleChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetAuthorizationRuleChildrenChildren {
+		return vs[0].([]GetAuthorizationRuleChildrenChildren)[vs[1].(int)]
+	}).(GetAuthorizationRuleChildrenChildrenOutput)
+}
+
 type GetConditionChildren struct {
 	// Dictionary attribute name
 	AttributeName string `pulumi:"attributeName"`
@@ -755,21 +3784,430 @@ func (o GetConditionChildrenChildrenArrayOutput) Index(i pulumi.IntInput) GetCon
 	}).(GetConditionChildrenChildrenOutput)
 }
 
+type GetPolicySetChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens []GetPolicySetChildrenChildren `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetPolicySetChildrenInput is an input type that accepts GetPolicySetChildrenArgs and GetPolicySetChildrenOutput values.
+// You can construct a concrete instance of `GetPolicySetChildrenInput` via:
+//
+//	GetPolicySetChildrenArgs{...}
+type GetPolicySetChildrenInput interface {
+	pulumi.Input
+
+	ToGetPolicySetChildrenOutput() GetPolicySetChildrenOutput
+	ToGetPolicySetChildrenOutputWithContext(context.Context) GetPolicySetChildrenOutput
+}
+
+type GetPolicySetChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	Childrens GetPolicySetChildrenChildrenArrayInput `pulumi:"childrens"`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetPolicySetChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicySetChildren)(nil)).Elem()
+}
+
+func (i GetPolicySetChildrenArgs) ToGetPolicySetChildrenOutput() GetPolicySetChildrenOutput {
+	return i.ToGetPolicySetChildrenOutputWithContext(context.Background())
+}
+
+func (i GetPolicySetChildrenArgs) ToGetPolicySetChildrenOutputWithContext(ctx context.Context) GetPolicySetChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicySetChildrenOutput)
+}
+
+// GetPolicySetChildrenArrayInput is an input type that accepts GetPolicySetChildrenArray and GetPolicySetChildrenArrayOutput values.
+// You can construct a concrete instance of `GetPolicySetChildrenArrayInput` via:
+//
+//	GetPolicySetChildrenArray{ GetPolicySetChildrenArgs{...} }
+type GetPolicySetChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetPolicySetChildrenArrayOutput() GetPolicySetChildrenArrayOutput
+	ToGetPolicySetChildrenArrayOutputWithContext(context.Context) GetPolicySetChildrenArrayOutput
+}
+
+type GetPolicySetChildrenArray []GetPolicySetChildrenInput
+
+func (GetPolicySetChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicySetChildren)(nil)).Elem()
+}
+
+func (i GetPolicySetChildrenArray) ToGetPolicySetChildrenArrayOutput() GetPolicySetChildrenArrayOutput {
+	return i.ToGetPolicySetChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetPolicySetChildrenArray) ToGetPolicySetChildrenArrayOutputWithContext(ctx context.Context) GetPolicySetChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicySetChildrenArrayOutput)
+}
+
+type GetPolicySetChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetPolicySetChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicySetChildren)(nil)).Elem()
+}
+
+func (o GetPolicySetChildrenOutput) ToGetPolicySetChildrenOutput() GetPolicySetChildrenOutput {
+	return o
+}
+
+func (o GetPolicySetChildrenOutput) ToGetPolicySetChildrenOutputWithContext(ctx context.Context) GetPolicySetChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetPolicySetChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetPolicySetChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+func (o GetPolicySetChildrenOutput) Childrens() GetPolicySetChildrenChildrenArrayOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) []GetPolicySetChildrenChildren { return v.Childrens }).(GetPolicySetChildrenChildrenArrayOutput)
+}
+
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+func (o GetPolicySetChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetPolicySetChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetPolicySetChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetPolicySetChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetPolicySetChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetPolicySetChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetPolicySetChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetPolicySetChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicySetChildren)(nil)).Elem()
+}
+
+func (o GetPolicySetChildrenArrayOutput) ToGetPolicySetChildrenArrayOutput() GetPolicySetChildrenArrayOutput {
+	return o
+}
+
+func (o GetPolicySetChildrenArrayOutput) ToGetPolicySetChildrenArrayOutputWithContext(ctx context.Context) GetPolicySetChildrenArrayOutput {
+	return o
+}
+
+func (o GetPolicySetChildrenArrayOutput) Index(i pulumi.IntInput) GetPolicySetChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetPolicySetChildren {
+		return vs[0].([]GetPolicySetChildren)[vs[1].(int)]
+	}).(GetPolicySetChildrenOutput)
+}
+
+type GetPolicySetChildrenChildren struct {
+	// Dictionary attribute name
+	AttributeName string `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue string `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType string `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName string `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue string `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id string `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate bool `pulumi:"isNegate"`
+	// Equality operator
+	Operator string `pulumi:"operator"`
+}
+
+// GetPolicySetChildrenChildrenInput is an input type that accepts GetPolicySetChildrenChildrenArgs and GetPolicySetChildrenChildrenOutput values.
+// You can construct a concrete instance of `GetPolicySetChildrenChildrenInput` via:
+//
+//	GetPolicySetChildrenChildrenArgs{...}
+type GetPolicySetChildrenChildrenInput interface {
+	pulumi.Input
+
+	ToGetPolicySetChildrenChildrenOutput() GetPolicySetChildrenChildrenOutput
+	ToGetPolicySetChildrenChildrenOutputWithContext(context.Context) GetPolicySetChildrenChildrenOutput
+}
+
+type GetPolicySetChildrenChildrenArgs struct {
+	// Dictionary attribute name
+	AttributeName pulumi.StringInput `pulumi:"attributeName"`
+	// Attribute value for condition. Value type is specified in dictionary object.
+	AttributeValue pulumi.StringInput `pulumi:"attributeValue"`
+	// Condition type.
+	ConditionType pulumi.StringInput `pulumi:"conditionType"`
+	// Dictionary name
+	DictionaryName pulumi.StringInput `pulumi:"dictionaryName"`
+	// Dictionary value
+	DictionaryValue pulumi.StringInput `pulumi:"dictionaryValue"`
+	// UUID for condition
+	Id pulumi.StringInput `pulumi:"id"`
+	// Indicates whereas this condition is in negate mode
+	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
+	// Equality operator
+	Operator pulumi.StringInput `pulumi:"operator"`
+}
+
+func (GetPolicySetChildrenChildrenArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (i GetPolicySetChildrenChildrenArgs) ToGetPolicySetChildrenChildrenOutput() GetPolicySetChildrenChildrenOutput {
+	return i.ToGetPolicySetChildrenChildrenOutputWithContext(context.Background())
+}
+
+func (i GetPolicySetChildrenChildrenArgs) ToGetPolicySetChildrenChildrenOutputWithContext(ctx context.Context) GetPolicySetChildrenChildrenOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicySetChildrenChildrenOutput)
+}
+
+// GetPolicySetChildrenChildrenArrayInput is an input type that accepts GetPolicySetChildrenChildrenArray and GetPolicySetChildrenChildrenArrayOutput values.
+// You can construct a concrete instance of `GetPolicySetChildrenChildrenArrayInput` via:
+//
+//	GetPolicySetChildrenChildrenArray{ GetPolicySetChildrenChildrenArgs{...} }
+type GetPolicySetChildrenChildrenArrayInput interface {
+	pulumi.Input
+
+	ToGetPolicySetChildrenChildrenArrayOutput() GetPolicySetChildrenChildrenArrayOutput
+	ToGetPolicySetChildrenChildrenArrayOutputWithContext(context.Context) GetPolicySetChildrenChildrenArrayOutput
+}
+
+type GetPolicySetChildrenChildrenArray []GetPolicySetChildrenChildrenInput
+
+func (GetPolicySetChildrenChildrenArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (i GetPolicySetChildrenChildrenArray) ToGetPolicySetChildrenChildrenArrayOutput() GetPolicySetChildrenChildrenArrayOutput {
+	return i.ToGetPolicySetChildrenChildrenArrayOutputWithContext(context.Background())
+}
+
+func (i GetPolicySetChildrenChildrenArray) ToGetPolicySetChildrenChildrenArrayOutputWithContext(ctx context.Context) GetPolicySetChildrenChildrenArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetPolicySetChildrenChildrenArrayOutput)
+}
+
+type GetPolicySetChildrenChildrenOutput struct{ *pulumi.OutputState }
+
+func (GetPolicySetChildrenChildrenOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetPolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (o GetPolicySetChildrenChildrenOutput) ToGetPolicySetChildrenChildrenOutput() GetPolicySetChildrenChildrenOutput {
+	return o
+}
+
+func (o GetPolicySetChildrenChildrenOutput) ToGetPolicySetChildrenChildrenOutputWithContext(ctx context.Context) GetPolicySetChildrenChildrenOutput {
+	return o
+}
+
+// Dictionary attribute name
+func (o GetPolicySetChildrenChildrenOutput) AttributeName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.AttributeName }).(pulumi.StringOutput)
+}
+
+// Attribute value for condition. Value type is specified in dictionary object.
+func (o GetPolicySetChildrenChildrenOutput) AttributeValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.AttributeValue }).(pulumi.StringOutput)
+}
+
+// Condition type.
+func (o GetPolicySetChildrenChildrenOutput) ConditionType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.ConditionType }).(pulumi.StringOutput)
+}
+
+// Dictionary name
+func (o GetPolicySetChildrenChildrenOutput) DictionaryName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.DictionaryName }).(pulumi.StringOutput)
+}
+
+// Dictionary value
+func (o GetPolicySetChildrenChildrenOutput) DictionaryValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.DictionaryValue }).(pulumi.StringOutput)
+}
+
+// UUID for condition
+func (o GetPolicySetChildrenChildrenOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Indicates whereas this condition is in negate mode
+func (o GetPolicySetChildrenChildrenOutput) IsNegate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
+}
+
+// Equality operator
+func (o GetPolicySetChildrenChildrenOutput) Operator() pulumi.StringOutput {
+	return o.ApplyT(func(v GetPolicySetChildrenChildren) string { return v.Operator }).(pulumi.StringOutput)
+}
+
+type GetPolicySetChildrenChildrenArrayOutput struct{ *pulumi.OutputState }
+
+func (GetPolicySetChildrenChildrenArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetPolicySetChildrenChildren)(nil)).Elem()
+}
+
+func (o GetPolicySetChildrenChildrenArrayOutput) ToGetPolicySetChildrenChildrenArrayOutput() GetPolicySetChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetPolicySetChildrenChildrenArrayOutput) ToGetPolicySetChildrenChildrenArrayOutputWithContext(ctx context.Context) GetPolicySetChildrenChildrenArrayOutput {
+	return o
+}
+
+func (o GetPolicySetChildrenChildrenArrayOutput) Index(i pulumi.IntInput) GetPolicySetChildrenChildrenOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetPolicySetChildrenChildren {
+		return vs[0].([]GetPolicySetChildrenChildren)[vs[1].(int)]
+	}).(GetPolicySetChildrenChildrenOutput)
+}
+
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenInput)(nil)).Elem(), AuthenticationRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenArrayInput)(nil)).Elem(), AuthenticationRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenChildrenInput)(nil)).Elem(), AuthenticationRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthenticationRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenArrayInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenChildrenInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenArrayInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenChildrenInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenInput)(nil)).Elem(), AuthorizationRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenArrayInput)(nil)).Elem(), AuthorizationRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenChildrenInput)(nil)).Elem(), AuthorizationRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthorizationRuleChildrenChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenInput)(nil)).Elem(), ConditionChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenArrayInput)(nil)).Elem(), ConditionChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenChildrenInput)(nil)).Elem(), ConditionChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenChildrenArrayInput)(nil)).Elem(), ConditionChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenInput)(nil)).Elem(), PolicySetChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenArrayInput)(nil)).Elem(), PolicySetChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenChildrenInput)(nil)).Elem(), PolicySetChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenChildrenArrayInput)(nil)).Elem(), PolicySetChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenInput)(nil)).Elem(), GetAuthenticationRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenArrayInput)(nil)).Elem(), GetAuthenticationRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenChildrenInput)(nil)).Elem(), GetAuthenticationRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenChildrenArrayInput)(nil)).Elem(), GetAuthenticationRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationExceptionRuleChildrenInput)(nil)).Elem(), GetAuthorizationExceptionRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationExceptionRuleChildrenArrayInput)(nil)).Elem(), GetAuthorizationExceptionRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationExceptionRuleChildrenChildrenInput)(nil)).Elem(), GetAuthorizationExceptionRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationExceptionRuleChildrenChildrenArrayInput)(nil)).Elem(), GetAuthorizationExceptionRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildrenInput)(nil)).Elem(), GetAuthorizationGlobalExceptionRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildrenArrayInput)(nil)).Elem(), GetAuthorizationGlobalExceptionRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildrenChildrenInput)(nil)).Elem(), GetAuthorizationGlobalExceptionRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayInput)(nil)).Elem(), GetAuthorizationGlobalExceptionRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationRuleChildrenInput)(nil)).Elem(), GetAuthorizationRuleChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationRuleChildrenArrayInput)(nil)).Elem(), GetAuthorizationRuleChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationRuleChildrenChildrenInput)(nil)).Elem(), GetAuthorizationRuleChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthorizationRuleChildrenChildrenArrayInput)(nil)).Elem(), GetAuthorizationRuleChildrenChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetConditionChildrenInput)(nil)).Elem(), GetConditionChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetConditionChildrenArrayInput)(nil)).Elem(), GetConditionChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetConditionChildrenChildrenInput)(nil)).Elem(), GetConditionChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetConditionChildrenChildrenArrayInput)(nil)).Elem(), GetConditionChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicySetChildrenInput)(nil)).Elem(), GetPolicySetChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicySetChildrenArrayInput)(nil)).Elem(), GetPolicySetChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicySetChildrenChildrenInput)(nil)).Elem(), GetPolicySetChildrenChildrenArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicySetChildrenChildrenArrayInput)(nil)).Elem(), GetPolicySetChildrenChildrenArray{})
+	pulumi.RegisterOutputType(AuthenticationRuleChildrenOutput{})
+	pulumi.RegisterOutputType(AuthenticationRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthenticationRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(AuthenticationRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenOutput{})
+	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenOutput{})
+	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationRuleChildrenOutput{})
+	pulumi.RegisterOutputType(AuthorizationRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(AuthorizationRuleChildrenChildrenArrayOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenArrayOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(PolicySetChildrenOutput{})
+	pulumi.RegisterOutputType(PolicySetChildrenArrayOutput{})
+	pulumi.RegisterOutputType(PolicySetChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(PolicySetChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationExceptionRuleChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationExceptionRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationExceptionRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationExceptionRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationGlobalExceptionRuleChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationGlobalExceptionRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationGlobalExceptionRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationRuleChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationRuleChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationRuleChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(GetAuthorizationRuleChildrenChildrenArrayOutput{})
 	pulumi.RegisterOutputType(GetConditionChildrenOutput{})
 	pulumi.RegisterOutputType(GetConditionChildrenArrayOutput{})
 	pulumi.RegisterOutputType(GetConditionChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(GetConditionChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetPolicySetChildrenOutput{})
+	pulumi.RegisterOutputType(GetPolicySetChildrenArrayOutput{})
+	pulumi.RegisterOutputType(GetPolicySetChildrenChildrenOutput{})
+	pulumi.RegisterOutputType(GetPolicySetChildrenChildrenArrayOutput{})
 }

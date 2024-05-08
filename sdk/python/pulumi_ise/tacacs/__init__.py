@@ -5,6 +5,10 @@
 from .. import _utilities
 import typing
 # Export this package's modules as members:
+from .allowed_protocols import *
+from .command_set import *
+from .get_allowed_protocols import *
+from .get_command_set import *
 from .get_profile import *
 from .profile import *
 from ._inputs import *

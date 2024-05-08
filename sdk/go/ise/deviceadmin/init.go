@@ -21,8 +21,20 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "ise:DeviceAdmin/condition:Condition":
+	case "ise:deviceAdmin/authenticationRule:AuthenticationRule":
+		r = &AuthenticationRule{}
+	case "ise:deviceAdmin/authorizationExceptionRule:AuthorizationExceptionRule":
+		r = &AuthorizationExceptionRule{}
+	case "ise:deviceAdmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule":
+		r = &AuthorizationGlobalExceptionRule{}
+	case "ise:deviceAdmin/authorizationRule:AuthorizationRule":
+		r = &AuthorizationRule{}
+	case "ise:deviceAdmin/condition:Condition":
 		r = &Condition{}
+	case "ise:deviceAdmin/policySet:PolicySet":
+		r = &PolicySet{}
+	case "ise:deviceAdmin/timeAndDateCondition:TimeAndDateCondition":
+		r = &TimeAndDateCondition{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -38,7 +50,37 @@ func init() {
 	}
 	pulumi.RegisterResourceModule(
 		"ise",
-		"DeviceAdmin/condition",
+		"deviceAdmin/authenticationRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceAdmin/authorizationExceptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceAdmin/authorizationGlobalExceptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceAdmin/authorizationRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceAdmin/condition",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceAdmin/policySet",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceAdmin/timeAndDateCondition",
 		&module{version},
 	)
 }

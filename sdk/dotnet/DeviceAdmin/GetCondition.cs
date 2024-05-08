@@ -33,7 +33,7 @@ namespace Pulumi.Ise.DeviceAdmin
         /// ```
         /// </summary>
         public static Task<GetConditionResult> InvokeAsync(GetConditionArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.InvokeAsync<GetConditionResult>("ise:DeviceAdmin/getCondition:getCondition", args ?? new GetConditionArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.InvokeAsync<GetConditionResult>("ise:deviceAdmin/getCondition:getCondition", args ?? new GetConditionArgs(), options.WithDefaults());
 
         /// <summary>
         /// This data source can read the Device Admin Condition.
@@ -57,7 +57,7 @@ namespace Pulumi.Ise.DeviceAdmin
         /// ```
         /// </summary>
         public static Output<GetConditionResult> Invoke(GetConditionInvokeArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.Invoke<GetConditionResult>("ise:DeviceAdmin/getCondition:getCondition", args ?? new GetConditionInvokeArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.Invoke<GetConditionResult>("ise:deviceAdmin/getCondition:getCondition", args ?? new GetConditionInvokeArgs(), options.WithDefaults());
     }
 
 

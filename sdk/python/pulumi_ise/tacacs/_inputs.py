@@ -10,8 +10,63 @@ from typing import Any, Mapping, Optional, Sequence, Union, overload
 from .. import _utilities
 
 __all__ = [
+    'CommandSetCommandArgs',
     'ProfileSessionAttributeArgs',
 ]
+
+@pulumi.input_type
+class CommandSetCommandArgs:
+    def __init__(__self__, *,
+                 arguments: pulumi.Input[str],
+                 command: pulumi.Input[str],
+                 grant: pulumi.Input[str]):
+        """
+        :param pulumi.Input[str] arguments: Command arguments
+        :param pulumi.Input[str] command: Command
+        :param pulumi.Input[str] grant: Grant
+                 - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+        """
+        pulumi.set(__self__, "arguments", arguments)
+        pulumi.set(__self__, "command", command)
+        pulumi.set(__self__, "grant", grant)
+
+    @property
+    @pulumi.getter
+    def arguments(self) -> pulumi.Input[str]:
+        """
+        Command arguments
+        """
+        return pulumi.get(self, "arguments")
+
+    @arguments.setter
+    def arguments(self, value: pulumi.Input[str]):
+        pulumi.set(self, "arguments", value)
+
+    @property
+    @pulumi.getter
+    def command(self) -> pulumi.Input[str]:
+        """
+        Command
+        """
+        return pulumi.get(self, "command")
+
+    @command.setter
+    def command(self, value: pulumi.Input[str]):
+        pulumi.set(self, "command", value)
+
+    @property
+    @pulumi.getter
+    def grant(self) -> pulumi.Input[str]:
+        """
+        Grant
+          - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+        """
+        return pulumi.get(self, "grant")
+
+    @grant.setter
+    def grant(self, value: pulumi.Input[str]):
+        pulumi.set(self, "grant", value)
+
 
 @pulumi.input_type
 class ProfileSessionAttributeArgs:
