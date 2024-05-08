@@ -21,14 +21,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/NetworkAccess"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := NetworkAccess.NewDictionary(ctx, "example", &NetworkAccess.DictionaryArgs{
+//			_, err := networkaccess.NewDictionary(ctx, "example", &networkaccess.DictionaryArgs{
 //				Name:               pulumi.String("Dict1"),
 //				Description:        pulumi.String("My description"),
 //				Version:            pulumi.String("1.1"),
@@ -46,7 +46,7 @@ import (
 // ## Import
 //
 // ```sh
-// $ pulumi import ise:NetworkAccess/dictionary:Dictionary example "Dict1"
+// $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
 // ```
 type Dictionary struct {
 	pulumi.CustomResourceState
@@ -76,7 +76,7 @@ func NewDictionary(ctx *pulumi.Context,
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Dictionary
-	err := ctx.RegisterResource("ise:NetworkAccess/dictionary:Dictionary", name, args, &resource, opts...)
+	err := ctx.RegisterResource("ise:networkaccess/dictionary:Dictionary", name, args, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -88,7 +88,7 @@ func NewDictionary(ctx *pulumi.Context,
 func GetDictionary(ctx *pulumi.Context,
 	name string, id pulumi.IDInput, state *DictionaryState, opts ...pulumi.ResourceOption) (*Dictionary, error) {
 	var resource Dictionary
-	err := ctx.ReadResource("ise:NetworkAccess/dictionary:Dictionary", name, id, state, &resource, opts...)
+	err := ctx.ReadResource("ise:networkaccess/dictionary:Dictionary", name, id, state, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}

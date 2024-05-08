@@ -13,7 +13,7 @@ import * as utilities from "../utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.NetworkAccess.getDictionary({
+ * const example = ise.networkaccess.getDictionary({
  *     id: "Dict1",
  * });
  * ```
@@ -22,7 +22,7 @@ export function getDictionary(args?: GetDictionaryArgs, opts?: pulumi.InvokeOpti
     args = args || {};
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
-    return pulumi.runtime.invoke("ise:NetworkAccess/getDictionary:getDictionary", {
+    return pulumi.runtime.invoke("ise:networkaccess/getDictionary:getDictionary", {
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -76,7 +76,7 @@ export interface GetDictionaryResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.NetworkAccess.getDictionary({
+ * const example = ise.networkaccess.getDictionary({
  *     id: "Dict1",
  * });
  * ```

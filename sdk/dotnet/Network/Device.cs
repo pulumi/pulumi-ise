@@ -78,10 +78,10 @@ namespace Pulumi.Ise.Network
     /// ## Import
     /// 
     /// ```sh
-    /// $ pulumi import ise:Network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+    /// $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
     /// ```
     /// </summary>
-    [IseResourceType("ise:Network/device:Device")]
+    [IseResourceType("ise:network/device:Device")]
     public partial class Device : global::Pulumi.CustomResource
     {
         /// <summary>
@@ -345,12 +345,12 @@ namespace Pulumi.Ise.Network
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public Device(string name, DeviceArgs args, CustomResourceOptions? options = null)
-            : base("ise:Network/device:Device", name, args ?? new DeviceArgs(), MakeResourceOptions(options, ""))
+            : base("ise:network/device:Device", name, args ?? new DeviceArgs(), MakeResourceOptions(options, ""))
         {
         }
 
         private Device(string name, Input<string> id, DeviceState? state = null, CustomResourceOptions? options = null)
-            : base("ise:Network/device:Device", name, state, MakeResourceOptions(options, id))
+            : base("ise:network/device:Device", name, state, MakeResourceOptions(options, id))
         {
         }
 

@@ -1477,7 +1477,7 @@ class Device(pulumi.CustomResource):
         ## Import
 
         ```sh
-        $ pulumi import ise:Network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+        $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1588,7 +1588,7 @@ class Device(pulumi.CustomResource):
         ## Import
 
         ```sh
-        $ pulumi import ise:Network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+        $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1702,7 +1702,7 @@ class Device(pulumi.CustomResource):
             __props__.__dict__["trustsec_send_configuration_to_device"] = trustsec_send_configuration_to_device
             __props__.__dict__["trustsec_send_configuration_to_device_using"] = trustsec_send_configuration_to_device_using
         super(Device, __self__).__init__(
-            'ise:Network/device:Device',
+            'ise:network/device:Device',
             resource_name,
             __props__,
             opts)

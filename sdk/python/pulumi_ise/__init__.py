@@ -5,443 +5,346 @@
 from . import _utilities
 import typing
 # Export this package's modules as members:
-from .endpoint import *
-from .get_endpoint import *
-from .get_repository import *
 from .provider import *
-from .repository import *
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
-    import pulumi_ise.activedirectoryadd as __activedirectoryadd
-    activedirectoryadd = __activedirectoryadd
-    import pulumi_ise.activedirectorygroupsby as __activedirectorygroupsby
-    activedirectorygroupsby = __activedirectorygroupsby
-    import pulumi_ise.activedirectoryjoin as __activedirectoryjoin
-    activedirectoryjoin = __activedirectoryjoin
-    import pulumi_ise.activedirectoryjoindomainwithall as __activedirectoryjoindomainwithall
-    activedirectoryjoindomainwithall = __activedirectoryjoindomainwithall
-    import pulumi_ise.allowed as __allowed
-    allowed = __allowed
-    import pulumi_ise.allowedprotocols as __allowedprotocols
-    allowedprotocols = __allowedprotocols
-    import pulumi_ise.authorization as __authorization
-    authorization = __authorization
-    import pulumi_ise.certificateauthentication as __certificateauthentication
-    certificateauthentication = __certificateauthentication
     import pulumi_ise.config as __config
     config = __config
     import pulumi_ise.deviceadmin as __deviceadmin
     deviceadmin = __deviceadmin
-    import pulumi_ise.deviceadminauthentication as __deviceadminauthentication
-    deviceadminauthentication = __deviceadminauthentication
-    import pulumi_ise.deviceadminauthorization as __deviceadminauthorization
-    deviceadminauthorization = __deviceadminauthorization
-    import pulumi_ise.deviceadminauthorizationexception as __deviceadminauthorizationexception
-    deviceadminauthorizationexception = __deviceadminauthorizationexception
-    import pulumi_ise.deviceadminauthorizationglobalexception as __deviceadminauthorizationglobalexception
-    deviceadminauthorizationglobalexception = __deviceadminauthorizationglobalexception
-    import pulumi_ise.deviceadminpolicy as __deviceadminpolicy
-    deviceadminpolicy = __deviceadminpolicy
-    import pulumi_ise.deviceadmintimeanddate as __deviceadmintimeanddate
-    deviceadmintimeanddate = __deviceadmintimeanddate
-    import pulumi_ise.downloadable as __downloadable
-    downloadable = __downloadable
-    import pulumi_ise.endpointidentity as __endpointidentity
-    endpointidentity = __endpointidentity
-    import pulumi_ise.identitysource as __identitysource
-    identitysource = __identitysource
-    import pulumi_ise.internal as __internal
-    internal = __internal
-    import pulumi_ise.licensetier as __licensetier
-    licensetier = __licensetier
+    import pulumi_ise.identitymanagement as __identitymanagement
+    identitymanagement = __identitymanagement
     import pulumi_ise.network as __network
     network = __network
     import pulumi_ise.networkaccess as __networkaccess
     networkaccess = __networkaccess
-    import pulumi_ise.networkaccessauthentication as __networkaccessauthentication
-    networkaccessauthentication = __networkaccessauthentication
-    import pulumi_ise.networkaccessauthorization as __networkaccessauthorization
-    networkaccessauthorization = __networkaccessauthorization
-    import pulumi_ise.networkaccessauthorizationexception as __networkaccessauthorizationexception
-    networkaccessauthorizationexception = __networkaccessauthorizationexception
-    import pulumi_ise.networkaccessauthorizationglobalexception as __networkaccessauthorizationglobalexception
-    networkaccessauthorizationglobalexception = __networkaccessauthorizationglobalexception
-    import pulumi_ise.networkaccesspolicy as __networkaccesspolicy
-    networkaccesspolicy = __networkaccesspolicy
-    import pulumi_ise.networkaccesstimeanddate as __networkaccesstimeanddate
-    networkaccesstimeanddate = __networkaccesstimeanddate
-    import pulumi_ise.networkdevice as __networkdevice
-    networkdevice = __networkdevice
-    import pulumi_ise.tacacs as __tacacs
-    tacacs = __tacacs
-    import pulumi_ise.tacacscommand as __tacacscommand
-    tacacscommand = __tacacscommand
-    import pulumi_ise.trustsecegressmatrix as __trustsecegressmatrix
-    trustsecegressmatrix = __trustsecegressmatrix
-    import pulumi_ise.trustseciptosgt as __trustseciptosgt
-    trustseciptosgt = __trustseciptosgt
-    import pulumi_ise.trustseciptosgtmapping as __trustseciptosgtmapping
-    trustseciptosgtmapping = __trustseciptosgtmapping
-    import pulumi_ise.trustsecsecurity as __trustsecsecurity
-    trustsecsecurity = __trustsecsecurity
-    import pulumi_ise.trustsecsecuritygroup as __trustsecsecuritygroup
-    trustsecsecuritygroup = __trustsecsecuritygroup
-    import pulumi_ise.useridentity as __useridentity
-    useridentity = __useridentity
+    import pulumi_ise.system as __system
+    system = __system
+    import pulumi_ise.trustsec as __trustsec
+    trustsec = __trustsec
 else:
-    activedirectoryadd = _utilities.lazy_import('pulumi_ise.activedirectoryadd')
-    activedirectorygroupsby = _utilities.lazy_import('pulumi_ise.activedirectorygroupsby')
-    activedirectoryjoin = _utilities.lazy_import('pulumi_ise.activedirectoryjoin')
-    activedirectoryjoindomainwithall = _utilities.lazy_import('pulumi_ise.activedirectoryjoindomainwithall')
-    allowed = _utilities.lazy_import('pulumi_ise.allowed')
-    allowedprotocols = _utilities.lazy_import('pulumi_ise.allowedprotocols')
-    authorization = _utilities.lazy_import('pulumi_ise.authorization')
-    certificateauthentication = _utilities.lazy_import('pulumi_ise.certificateauthentication')
     config = _utilities.lazy_import('pulumi_ise.config')
     deviceadmin = _utilities.lazy_import('pulumi_ise.deviceadmin')
-    deviceadminauthentication = _utilities.lazy_import('pulumi_ise.deviceadminauthentication')
-    deviceadminauthorization = _utilities.lazy_import('pulumi_ise.deviceadminauthorization')
-    deviceadminauthorizationexception = _utilities.lazy_import('pulumi_ise.deviceadminauthorizationexception')
-    deviceadminauthorizationglobalexception = _utilities.lazy_import('pulumi_ise.deviceadminauthorizationglobalexception')
-    deviceadminpolicy = _utilities.lazy_import('pulumi_ise.deviceadminpolicy')
-    deviceadmintimeanddate = _utilities.lazy_import('pulumi_ise.deviceadmintimeanddate')
-    downloadable = _utilities.lazy_import('pulumi_ise.downloadable')
-    endpointidentity = _utilities.lazy_import('pulumi_ise.endpointidentity')
-    identitysource = _utilities.lazy_import('pulumi_ise.identitysource')
-    internal = _utilities.lazy_import('pulumi_ise.internal')
-    licensetier = _utilities.lazy_import('pulumi_ise.licensetier')
+    identitymanagement = _utilities.lazy_import('pulumi_ise.identitymanagement')
     network = _utilities.lazy_import('pulumi_ise.network')
     networkaccess = _utilities.lazy_import('pulumi_ise.networkaccess')
-    networkaccessauthentication = _utilities.lazy_import('pulumi_ise.networkaccessauthentication')
-    networkaccessauthorization = _utilities.lazy_import('pulumi_ise.networkaccessauthorization')
-    networkaccessauthorizationexception = _utilities.lazy_import('pulumi_ise.networkaccessauthorizationexception')
-    networkaccessauthorizationglobalexception = _utilities.lazy_import('pulumi_ise.networkaccessauthorizationglobalexception')
-    networkaccesspolicy = _utilities.lazy_import('pulumi_ise.networkaccesspolicy')
-    networkaccesstimeanddate = _utilities.lazy_import('pulumi_ise.networkaccesstimeanddate')
-    networkdevice = _utilities.lazy_import('pulumi_ise.networkdevice')
-    tacacs = _utilities.lazy_import('pulumi_ise.tacacs')
-    tacacscommand = _utilities.lazy_import('pulumi_ise.tacacscommand')
-    trustsecegressmatrix = _utilities.lazy_import('pulumi_ise.trustsecegressmatrix')
-    trustseciptosgt = _utilities.lazy_import('pulumi_ise.trustseciptosgt')
-    trustseciptosgtmapping = _utilities.lazy_import('pulumi_ise.trustseciptosgtmapping')
-    trustsecsecurity = _utilities.lazy_import('pulumi_ise.trustsecsecurity')
-    trustsecsecuritygroup = _utilities.lazy_import('pulumi_ise.trustsecsecuritygroup')
-    useridentity = _utilities.lazy_import('pulumi_ise.useridentity')
+    system = _utilities.lazy_import('pulumi_ise.system')
+    trustsec = _utilities.lazy_import('pulumi_ise.trustsec')
 
 _utilities.register(
     resource_modules="""
 [
  {
   "pkg": "ise",
-  "mod": "ActiveDirectoryAdd/groups",
-  "fqn": "pulumi_ise.activedirectoryadd",
-  "classes": {
-   "ise:ActiveDirectoryAdd/groups:Groups": "Groups"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "ActiveDirectoryJoin/point",
-  "fqn": "pulumi_ise.activedirectoryjoin",
-  "classes": {
-   "ise:ActiveDirectoryJoin/point:Point": "Point"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "ActiveDirectoryJoinDomainWithAll/nodes",
-  "fqn": "pulumi_ise.activedirectoryjoindomainwithall",
-  "classes": {
-   "ise:ActiveDirectoryJoinDomainWithAll/nodes:Nodes": "Nodes"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "Allowed/protocols",
-  "fqn": "pulumi_ise.allowed",
-  "classes": {
-   "ise:Allowed/protocols:Protocols": "Protocols"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "AllowedProtocols/tacacs",
-  "fqn": "pulumi_ise.allowedprotocols",
-  "classes": {
-   "ise:AllowedProtocols/tacacs:Tacacs": "Tacacs"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "Authorization/profile",
-  "fqn": "pulumi_ise.authorization",
-  "classes": {
-   "ise:Authorization/profile:Profile": "Profile"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "CertificateAuthentication/profile",
-  "fqn": "pulumi_ise.certificateauthentication",
-  "classes": {
-   "ise:CertificateAuthentication/profile:Profile": "Profile"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "DeviceAdmin/condition",
+  "mod": "deviceadmin/allowedProtocolsTacacs",
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdmin/condition:Condition": "Condition"
+   "ise:deviceadmin/allowedProtocolsTacacs:AllowedProtocolsTacacs": "AllowedProtocolsTacacs"
   }
  },
  {
   "pkg": "ise",
-  "mod": "DeviceAdminAuthentication/rule",
-  "fqn": "pulumi_ise.deviceadminauthentication",
+  "mod": "deviceadmin/authenticationRule",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdminAuthentication/rule:Rule": "Rule"
+   "ise:deviceadmin/authenticationRule:AuthenticationRule": "AuthenticationRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "DeviceAdminAuthorization/rule",
-  "fqn": "pulumi_ise.deviceadminauthorization",
+  "mod": "deviceadmin/authorizationExceptionRule",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdminAuthorization/rule:Rule": "Rule"
+   "ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule": "AuthorizationExceptionRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "DeviceAdminAuthorizationException/rule",
-  "fqn": "pulumi_ise.deviceadminauthorizationexception",
+  "mod": "deviceadmin/authorizationGlobalExceptionRule",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdminAuthorizationException/rule:Rule": "Rule"
+   "ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": "AuthorizationGlobalExceptionRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "DeviceAdminAuthorizationGlobalException/rule",
-  "fqn": "pulumi_ise.deviceadminauthorizationglobalexception",
+  "mod": "deviceadmin/authorizationRule",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdminAuthorizationGlobalException/rule:Rule": "Rule"
+   "ise:deviceadmin/authorizationRule:AuthorizationRule": "AuthorizationRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "DeviceAdminPolicy/set",
-  "fqn": "pulumi_ise.deviceadminpolicy",
+  "mod": "deviceadmin/condition",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdminPolicy/set:Set": "Set"
+   "ise:deviceadmin/condition:Condition": "Condition"
   }
  },
  {
   "pkg": "ise",
-  "mod": "DeviceAdminTimeAndDate/condition",
-  "fqn": "pulumi_ise.deviceadmintimeanddate",
+  "mod": "deviceadmin/policySet",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:DeviceAdminTimeAndDate/condition:Condition": "Condition"
+   "ise:deviceadmin/policySet:PolicySet": "PolicySet"
   }
  },
  {
   "pkg": "ise",
-  "mod": "Downloadable/acl",
-  "fqn": "pulumi_ise.downloadable",
+  "mod": "deviceadmin/tacacsCommandSet",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:Downloadable/acl:Acl": "Acl"
+   "ise:deviceadmin/tacacsCommandSet:TacacsCommandSet": "TacacsCommandSet"
   }
  },
  {
   "pkg": "ise",
-  "mod": "EndpointIdentity/group",
-  "fqn": "pulumi_ise.endpointidentity",
+  "mod": "deviceadmin/tacacsProfile",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:EndpointIdentity/group:Group": "Group"
+   "ise:deviceadmin/tacacsProfile:TacacsProfile": "TacacsProfile"
   }
  },
  {
   "pkg": "ise",
-  "mod": "IdentitySource/sequence",
-  "fqn": "pulumi_ise.identitysource",
+  "mod": "deviceadmin/timeAndDateCondition",
+  "fqn": "pulumi_ise.deviceadmin",
   "classes": {
-   "ise:IdentitySource/sequence:Sequence": "Sequence"
+   "ise:deviceadmin/timeAndDateCondition:TimeAndDateCondition": "TimeAndDateCondition"
   }
  },
  {
   "pkg": "ise",
-  "mod": "Internal/user",
-  "fqn": "pulumi_ise.internal",
+  "mod": "identitymanagement/activeDirectoryAddGroups",
+  "fqn": "pulumi_ise.identitymanagement",
   "classes": {
-   "ise:Internal/user:User": "User"
+   "ise:identitymanagement/activeDirectoryAddGroups:ActiveDirectoryAddGroups": "ActiveDirectoryAddGroups"
   }
  },
  {
   "pkg": "ise",
-  "mod": "LicenseTier/state",
-  "fqn": "pulumi_ise.licensetier",
+  "mod": "identitymanagement/activeDirectoryJoinDomainWithAllNodes",
+  "fqn": "pulumi_ise.identitymanagement",
   "classes": {
-   "ise:LicenseTier/state:State": "State"
+   "ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes": "ActiveDirectoryJoinDomainWithAllNodes"
   }
  },
  {
   "pkg": "ise",
-  "mod": "Network/device",
+  "mod": "identitymanagement/activeDirectoryJoinPoint",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint": "ActiveDirectoryJoinPoint"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "identitymanagement/certificateAuthenticationProfile",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile": "CertificateAuthenticationProfile"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "identitymanagement/endpoint",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/endpoint:Endpoint": "Endpoint"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "identitymanagement/endpointIdentityGroup",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup": "EndpointIdentityGroup"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "identitymanagement/identitySourceSequence",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/identitySourceSequence:IdentitySourceSequence": "IdentitySourceSequence"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "identitymanagement/internalUser",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/internalUser:InternalUser": "InternalUser"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "identitymanagement/userIdentityGroup",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/userIdentityGroup:UserIdentityGroup": "UserIdentityGroup"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "network/device",
   "fqn": "pulumi_ise.network",
   "classes": {
-   "ise:Network/device:Device": "Device"
+   "ise:network/device:Device": "Device"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccess/condition",
+  "mod": "network/deviceGroup",
+  "fqn": "pulumi_ise.network",
+  "classes": {
+   "ise:network/deviceGroup:DeviceGroup": "DeviceGroup"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/allowedProtocols",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccess/condition:Condition": "Condition"
+   "ise:networkaccess/allowedProtocols:AllowedProtocols": "AllowedProtocols"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccess/dictionary",
+  "mod": "networkaccess/authenticationRule",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccess/dictionary:Dictionary": "Dictionary"
+   "ise:networkaccess/authenticationRule:AuthenticationRule": "AuthenticationRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccessAuthentication/rule",
-  "fqn": "pulumi_ise.networkaccessauthentication",
+  "mod": "networkaccess/authorizationExceptionRule",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccessAuthentication/rule:Rule": "Rule"
+   "ise:networkaccess/authorizationExceptionRule:AuthorizationExceptionRule": "AuthorizationExceptionRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccessAuthorization/rule",
-  "fqn": "pulumi_ise.networkaccessauthorization",
+  "mod": "networkaccess/authorizationGlobalExceptionRule",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccessAuthorization/rule:Rule": "Rule"
+   "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": "AuthorizationGlobalExceptionRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccessAuthorizationException/rule",
-  "fqn": "pulumi_ise.networkaccessauthorizationexception",
+  "mod": "networkaccess/authorizationProfile",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccessAuthorizationException/rule:Rule": "Rule"
+   "ise:networkaccess/authorizationProfile:AuthorizationProfile": "AuthorizationProfile"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccessAuthorizationGlobalException/rule",
-  "fqn": "pulumi_ise.networkaccessauthorizationglobalexception",
+  "mod": "networkaccess/authorizationRule",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccessAuthorizationGlobalException/rule:Rule": "Rule"
+   "ise:networkaccess/authorizationRule:AuthorizationRule": "AuthorizationRule"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccessPolicy/set",
-  "fqn": "pulumi_ise.networkaccesspolicy",
+  "mod": "networkaccess/condition",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccessPolicy/set:Set": "Set"
+   "ise:networkaccess/condition:Condition": "Condition"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkAccessTimeAndDate/condition",
-  "fqn": "pulumi_ise.networkaccesstimeanddate",
+  "mod": "networkaccess/dictionary",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkAccessTimeAndDate/condition:Condition": "Condition"
+   "ise:networkaccess/dictionary:Dictionary": "Dictionary"
   }
  },
  {
   "pkg": "ise",
-  "mod": "NetworkDevice/group",
-  "fqn": "pulumi_ise.networkdevice",
+  "mod": "networkaccess/downloadableAcl",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:NetworkDevice/group:Group": "Group"
+   "ise:networkaccess/downloadableAcl:DownloadableAcl": "DownloadableAcl"
   }
  },
  {
   "pkg": "ise",
-  "mod": "Tacacs/profile",
-  "fqn": "pulumi_ise.tacacs",
+  "mod": "networkaccess/policySet",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:Tacacs/profile:Profile": "Profile"
+   "ise:networkaccess/policySet:PolicySet": "PolicySet"
   }
  },
  {
   "pkg": "ise",
-  "mod": "TacacsCommand/set",
-  "fqn": "pulumi_ise.tacacscommand",
+  "mod": "networkaccess/timeAndDateCondition",
+  "fqn": "pulumi_ise.networkaccess",
   "classes": {
-   "ise:TacacsCommand/set:Set": "Set"
+   "ise:networkaccess/timeAndDateCondition:TimeAndDateCondition": "TimeAndDateCondition"
   }
  },
  {
   "pkg": "ise",
-  "mod": "TrustsecEgressMatrix/cell",
-  "fqn": "pulumi_ise.trustsecegressmatrix",
+  "mod": "system/licenseTierState",
+  "fqn": "pulumi_ise.system",
   "classes": {
-   "ise:TrustsecEgressMatrix/cell:Cell": "Cell"
+   "ise:system/licenseTierState:LicenseTierState": "LicenseTierState"
   }
  },
  {
   "pkg": "ise",
-  "mod": "TrustsecIpToSgt/mapping",
-  "fqn": "pulumi_ise.trustseciptosgt",
+  "mod": "system/repository",
+  "fqn": "pulumi_ise.system",
   "classes": {
-   "ise:TrustsecIpToSgt/mapping:Mapping": "Mapping"
+   "ise:system/repository:Repository": "Repository"
   }
  },
  {
   "pkg": "ise",
-  "mod": "TrustsecIpToSgtMapping/group",
-  "fqn": "pulumi_ise.trustseciptosgtmapping",
+  "mod": "trustsec/egressMatrixCell",
+  "fqn": "pulumi_ise.trustsec",
   "classes": {
-   "ise:TrustsecIpToSgtMapping/group:Group": "Group"
+   "ise:trustsec/egressMatrixCell:EgressMatrixCell": "EgressMatrixCell"
   }
  },
  {
   "pkg": "ise",
-  "mod": "TrustsecSecurity/group",
-  "fqn": "pulumi_ise.trustsecsecurity",
+  "mod": "trustsec/ipToSgtMapping",
+  "fqn": "pulumi_ise.trustsec",
   "classes": {
-   "ise:TrustsecSecurity/group:Group": "Group"
+   "ise:trustsec/ipToSgtMapping:IpToSgtMapping": "IpToSgtMapping"
   }
  },
  {
   "pkg": "ise",
-  "mod": "TrustsecSecurityGroup/acl",
-  "fqn": "pulumi_ise.trustsecsecuritygroup",
+  "mod": "trustsec/ipToSgtMappingGroup",
+  "fqn": "pulumi_ise.trustsec",
   "classes": {
-   "ise:TrustsecSecurityGroup/acl:Acl": "Acl"
+   "ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup": "IpToSgtMappingGroup"
   }
  },
  {
   "pkg": "ise",
-  "mod": "UserIdentity/group",
-  "fqn": "pulumi_ise.useridentity",
+  "mod": "trustsec/securityGroup",
+  "fqn": "pulumi_ise.trustsec",
   "classes": {
-   "ise:UserIdentity/group:Group": "Group"
+   "ise:trustsec/securityGroup:SecurityGroup": "SecurityGroup"
   }
  },
  {
   "pkg": "ise",
-  "mod": "index/endpoint",
-  "fqn": "pulumi_ise",
+  "mod": "trustsec/securityGroupAcl",
+  "fqn": "pulumi_ise.trustsec",
   "classes": {
-   "ise:index/endpoint:Endpoint": "Endpoint"
-  }
- },
- {
-  "pkg": "ise",
-  "mod": "index/repository",
-  "fqn": "pulumi_ise",
-  "classes": {
-   "ise:index/repository:Repository": "Repository"
+   "ise:trustsec/securityGroupAcl:SecurityGroupAcl": "SecurityGroupAcl"
   }
  }
 ]

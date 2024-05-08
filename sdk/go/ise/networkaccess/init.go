@@ -21,10 +21,28 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "ise:NetworkAccess/condition:Condition":
+	case "ise:networkaccess/allowedProtocols:AllowedProtocols":
+		r = &AllowedProtocols{}
+	case "ise:networkaccess/authenticationRule:AuthenticationRule":
+		r = &AuthenticationRule{}
+	case "ise:networkaccess/authorizationExceptionRule:AuthorizationExceptionRule":
+		r = &AuthorizationExceptionRule{}
+	case "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule":
+		r = &AuthorizationGlobalExceptionRule{}
+	case "ise:networkaccess/authorizationProfile:AuthorizationProfile":
+		r = &AuthorizationProfile{}
+	case "ise:networkaccess/authorizationRule:AuthorizationRule":
+		r = &AuthorizationRule{}
+	case "ise:networkaccess/condition:Condition":
 		r = &Condition{}
-	case "ise:NetworkAccess/dictionary:Dictionary":
+	case "ise:networkaccess/dictionary:Dictionary":
 		r = &Dictionary{}
+	case "ise:networkaccess/downloadableAcl:DownloadableAcl":
+		r = &DownloadableAcl{}
+	case "ise:networkaccess/policySet:PolicySet":
+		r = &PolicySet{}
+	case "ise:networkaccess/timeAndDateCondition:TimeAndDateCondition":
+		r = &TimeAndDateCondition{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -40,12 +58,57 @@ func init() {
 	}
 	pulumi.RegisterResourceModule(
 		"ise",
-		"NetworkAccess/condition",
+		"networkaccess/allowedProtocols",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
-		"NetworkAccess/dictionary",
+		"networkaccess/authenticationRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/authorizationExceptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/authorizationGlobalExceptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/authorizationProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/authorizationRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/condition",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/dictionary",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/downloadableAcl",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/policySet",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/timeAndDateCondition",
 		&module{version},
 	)
 }

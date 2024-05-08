@@ -21,8 +21,10 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
-	case "ise:Network/device:Device":
+	case "ise:network/device:Device":
 		r = &Device{}
+	case "ise:network/deviceGroup:DeviceGroup":
+		r = &DeviceGroup{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -38,7 +40,12 @@ func init() {
 	}
 	pulumi.RegisterResourceModule(
 		"ise",
-		"Network/device",
+		"network/device",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"network/deviceGroup",
 		&module{version},
 	)
 }

@@ -389,7 +389,7 @@ class Condition(pulumi.CustomResource):
         import pulumi
         import pulumi_ise as ise
 
-        example = ise.device_admin.Condition("example",
+        example = ise.deviceadmin.Condition("example",
             name="Cond1",
             description="My description",
             condition_type="LibraryConditionAttributes",
@@ -403,7 +403,7 @@ class Condition(pulumi.CustomResource):
         ## Import
 
         ```sh
-        $ pulumi import ise:DeviceAdmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+        $ pulumi import ise:deviceadmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
         :param str resource_name: The name of the resource.
@@ -438,7 +438,7 @@ class Condition(pulumi.CustomResource):
         import pulumi
         import pulumi_ise as ise
 
-        example = ise.device_admin.Condition("example",
+        example = ise.deviceadmin.Condition("example",
             name="Cond1",
             description="My description",
             condition_type="LibraryConditionAttributes",
@@ -452,7 +452,7 @@ class Condition(pulumi.CustomResource):
         ## Import
 
         ```sh
-        $ pulumi import ise:DeviceAdmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+        $ pulumi import ise:deviceadmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
         :param str resource_name: The name of the resource.
@@ -502,7 +502,7 @@ class Condition(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["operator"] = operator
         super(Condition, __self__).__init__(
-            'ise:DeviceAdmin/condition:Condition',
+            'ise:deviceadmin/condition:Condition',
             resource_name,
             __props__,
             opts)

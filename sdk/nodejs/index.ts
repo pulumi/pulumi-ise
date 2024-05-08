@@ -5,130 +5,32 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
-export { EndpointArgs, EndpointState } from "./endpoint";
-export type Endpoint = import("./endpoint").Endpoint;
-export const Endpoint: typeof import("./endpoint").Endpoint = null as any;
-utilities.lazyLoad(exports, ["Endpoint"], () => require("./endpoint"));
-
-export { GetEndpointArgs, GetEndpointResult, GetEndpointOutputArgs } from "./getEndpoint";
-export const getEndpoint: typeof import("./getEndpoint").getEndpoint = null as any;
-export const getEndpointOutput: typeof import("./getEndpoint").getEndpointOutput = null as any;
-utilities.lazyLoad(exports, ["getEndpoint","getEndpointOutput"], () => require("./getEndpoint"));
-
-export { GetRepositoryArgs, GetRepositoryResult, GetRepositoryOutputArgs } from "./getRepository";
-export const getRepository: typeof import("./getRepository").getRepository = null as any;
-export const getRepositoryOutput: typeof import("./getRepository").getRepositoryOutput = null as any;
-utilities.lazyLoad(exports, ["getRepository","getRepositoryOutput"], () => require("./getRepository"));
-
 export { ProviderArgs } from "./provider";
 export type Provider = import("./provider").Provider;
 export const Provider: typeof import("./provider").Provider = null as any;
 utilities.lazyLoad(exports, ["Provider"], () => require("./provider"));
 
-export { RepositoryArgs, RepositoryState } from "./repository";
-export type Repository = import("./repository").Repository;
-export const Repository: typeof import("./repository").Repository = null as any;
-utilities.lazyLoad(exports, ["Repository"], () => require("./repository"));
-
 
 // Export sub-modules:
-import * as activedirectoryadd from "./activedirectoryadd";
-import * as activedirectorygroupsby from "./activedirectorygroupsby";
-import * as activedirectoryjoin from "./activedirectoryjoin";
-import * as activedirectoryjoindomainwithall from "./activedirectoryjoindomainwithall";
-import * as allowed from "./allowed";
-import * as allowedprotocols from "./allowedprotocols";
-import * as authorization from "./authorization";
-import * as certificateauthentication from "./certificateauthentication";
 import * as config from "./config";
 import * as deviceadmin from "./deviceadmin";
-import * as deviceadminauthentication from "./deviceadminauthentication";
-import * as deviceadminauthorization from "./deviceadminauthorization";
-import * as deviceadminauthorizationexception from "./deviceadminauthorizationexception";
-import * as deviceadminauthorizationglobalexception from "./deviceadminauthorizationglobalexception";
-import * as deviceadminpolicy from "./deviceadminpolicy";
-import * as deviceadmintimeanddate from "./deviceadmintimeanddate";
-import * as downloadable from "./downloadable";
-import * as endpointidentity from "./endpointidentity";
-import * as identitysource from "./identitysource";
-import * as internal from "./internal";
-import * as licensetier from "./licensetier";
+import * as identitymanagement from "./identitymanagement";
 import * as network from "./network";
 import * as networkaccess from "./networkaccess";
-import * as networkaccessauthentication from "./networkaccessauthentication";
-import * as networkaccessauthorization from "./networkaccessauthorization";
-import * as networkaccessauthorizationexception from "./networkaccessauthorizationexception";
-import * as networkaccessauthorizationglobalexception from "./networkaccessauthorizationglobalexception";
-import * as networkaccesspolicy from "./networkaccesspolicy";
-import * as networkaccesstimeanddate from "./networkaccesstimeanddate";
-import * as networkdevice from "./networkdevice";
-import * as tacacs from "./tacacs";
-import * as tacacscommand from "./tacacscommand";
-import * as trustsecegressmatrix from "./trustsecegressmatrix";
-import * as trustseciptosgt from "./trustseciptosgt";
-import * as trustseciptosgtmapping from "./trustseciptosgtmapping";
-import * as trustsecsecurity from "./trustsecsecurity";
-import * as trustsecsecuritygroup from "./trustsecsecuritygroup";
+import * as system from "./system";
+import * as trustsec from "./trustsec";
 import * as types from "./types";
-import * as useridentity from "./useridentity";
 
 export {
-    activedirectoryadd,
-    activedirectorygroupsby,
-    activedirectoryjoin,
-    activedirectoryjoindomainwithall,
-    allowed,
-    allowedprotocols,
-    authorization,
-    certificateauthentication,
     config,
     deviceadmin,
-    deviceadminauthentication,
-    deviceadminauthorization,
-    deviceadminauthorizationexception,
-    deviceadminauthorizationglobalexception,
-    deviceadminpolicy,
-    deviceadmintimeanddate,
-    downloadable,
-    endpointidentity,
-    identitysource,
-    internal,
-    licensetier,
+    identitymanagement,
     network,
     networkaccess,
-    networkaccessauthentication,
-    networkaccessauthorization,
-    networkaccessauthorizationexception,
-    networkaccessauthorizationglobalexception,
-    networkaccesspolicy,
-    networkaccesstimeanddate,
-    networkdevice,
-    tacacs,
-    tacacscommand,
-    trustsecegressmatrix,
-    trustseciptosgt,
-    trustseciptosgtmapping,
-    trustsecsecurity,
-    trustsecsecuritygroup,
+    system,
+    trustsec,
     types,
-    useridentity,
 };
-
-const _module = {
-    version: utilities.getVersion(),
-    construct: (name: string, type: string, urn: string): pulumi.Resource => {
-        switch (type) {
-            case "ise:index/endpoint:Endpoint":
-                return new Endpoint(name, <any>undefined, { urn })
-            case "ise:index/repository:Repository":
-                return new Repository(name, <any>undefined, { urn })
-            default:
-                throw new Error(`unknown resource type ${type}`);
-        }
-    },
-};
-pulumi.runtime.registerResourceModule("ise", "index/endpoint", _module)
-pulumi.runtime.registerResourceModule("ise", "index/repository", _module)
 pulumi.runtime.registerResourcePackage("ise", {
     version: utilities.getVersion(),
     constructProvider: (name: string, type: string, urn: string): pulumi.ProviderResource => {

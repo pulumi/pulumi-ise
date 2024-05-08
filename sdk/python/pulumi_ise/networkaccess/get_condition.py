@@ -177,7 +177,7 @@ def get_condition(id: Optional[str] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.NetworkAccess.get_condition(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
+    example = ise.networkaccess.get_condition(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
     ```
 
 
@@ -188,7 +188,7 @@ def get_condition(id: Optional[str] = None,
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
-    __ret__ = pulumi.runtime.invoke('ise:NetworkAccess/getCondition:getCondition', __args__, opts=opts, typ=GetConditionResult).value
+    __ret__ = pulumi.runtime.invoke('ise:networkaccess/getCondition:getCondition', __args__, opts=opts, typ=GetConditionResult).value
 
     return AwaitableGetConditionResult(
         attribute_name=pulumi.get(__ret__, 'attribute_name'),
@@ -217,7 +217,7 @@ def get_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.NetworkAccess.get_condition(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
+    example = ise.networkaccess.get_condition(id="76d24097-41c4-4558-a4d0-a8c07ac08470")
     ```
 
 

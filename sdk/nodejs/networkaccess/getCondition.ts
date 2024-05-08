@@ -15,7 +15,7 @@ import * as utilities from "../utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.NetworkAccess.getCondition({
+ * const example = ise.networkaccess.getCondition({
  *     id: "76d24097-41c4-4558-a4d0-a8c07ac08470",
  * });
  * ```
@@ -24,7 +24,7 @@ export function getCondition(args?: GetConditionArgs, opts?: pulumi.InvokeOption
     args = args || {};
 
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
-    return pulumi.runtime.invoke("ise:NetworkAccess/getCondition:getCondition", {
+    return pulumi.runtime.invoke("ise:networkaccess/getCondition:getCondition", {
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -59,7 +59,7 @@ export interface GetConditionResult {
     /**
      * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
-    readonly childrens: outputs.NetworkAccess.GetConditionChildren[];
+    readonly childrens: outputs.networkaccess.GetConditionChildren[];
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      */
@@ -102,7 +102,7 @@ export interface GetConditionResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as ise from "@pulumi/ise";
  *
- * const example = ise.NetworkAccess.getCondition({
+ * const example = ise.networkaccess.getCondition({
  *     id: "76d24097-41c4-4558-a4d0-a8c07ac08470",
  * });
  * ```

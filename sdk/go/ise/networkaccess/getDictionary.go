@@ -20,14 +20,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/NetworkAccess"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := NetworkAccess.GetDictionary(ctx, &networkaccess.GetDictionaryArgs{
+//			_, err := networkaccess.LookupDictionary(ctx, &networkaccess.LookupDictionaryArgs{
 //				Id: pulumi.StringRef("Dict1"),
 //			}, nil)
 //			if err != nil {
@@ -41,7 +41,7 @@ import (
 func LookupDictionary(ctx *pulumi.Context, args *LookupDictionaryArgs, opts ...pulumi.InvokeOption) (*LookupDictionaryResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDictionaryResult
-	err := ctx.Invoke("ise:NetworkAccess/getDictionary:getDictionary", args, &rv, opts...)
+	err := ctx.Invoke("ise:networkaccess/getDictionary:getDictionary", args, &rv, opts...)
 	if err != nil {
 		return nil, err
 	}

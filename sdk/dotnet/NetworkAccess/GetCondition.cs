@@ -33,7 +33,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// ```
         /// </summary>
         public static Task<GetConditionResult> InvokeAsync(GetConditionArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.InvokeAsync<GetConditionResult>("ise:NetworkAccess/getCondition:getCondition", args ?? new GetConditionArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.InvokeAsync<GetConditionResult>("ise:networkaccess/getCondition:getCondition", args ?? new GetConditionArgs(), options.WithDefaults());
 
         /// <summary>
         /// This data source can read the Network Access Condition.
@@ -57,7 +57,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// ```
         /// </summary>
         public static Output<GetConditionResult> Invoke(GetConditionInvokeArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.Invoke<GetConditionResult>("ise:NetworkAccess/getCondition:getCondition", args ?? new GetConditionInvokeArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.Invoke<GetConditionResult>("ise:networkaccess/getCondition:getCondition", args ?? new GetConditionInvokeArgs(), options.WithDefaults());
     }
 
 

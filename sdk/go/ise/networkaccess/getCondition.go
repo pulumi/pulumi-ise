@@ -20,14 +20,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/NetworkAccess"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := NetworkAccess.GetCondition(ctx, &networkaccess.GetConditionArgs{
+//			_, err := networkaccess.LookupCondition(ctx, &networkaccess.LookupConditionArgs{
 //				Id: pulumi.StringRef("76d24097-41c4-4558-a4d0-a8c07ac08470"),
 //			}, nil)
 //			if err != nil {
@@ -41,7 +41,7 @@ import (
 func LookupCondition(ctx *pulumi.Context, args *LookupConditionArgs, opts ...pulumi.InvokeOption) (*LookupConditionResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupConditionResult
-	err := ctx.Invoke("ise:NetworkAccess/getCondition:getCondition", args, &rv, opts...)
+	err := ctx.Invoke("ise:networkaccess/getCondition:getCondition", args, &rv, opts...)
 	if err != nil {
 		return nil, err
 	}

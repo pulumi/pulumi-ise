@@ -24,7 +24,7 @@ import * as utilities from "../utilities";
  * ## Import
  *
  * ```sh
- * $ pulumi import ise:NetworkAccess/dictionary:Dictionary example "Dict1"
+ * $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
  * ```
  */
 export class Dictionary extends pulumi.CustomResource {
@@ -42,7 +42,7 @@ export class Dictionary extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'ise:NetworkAccess/dictionary:Dictionary';
+    public static readonly __pulumiType = 'ise:networkaccess/dictionary:Dictionary';
 
     /**
      * Returns true if the given object is an instance of Dictionary.  This is designed to work even

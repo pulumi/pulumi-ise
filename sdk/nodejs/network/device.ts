@@ -64,7 +64,7 @@ import * as utilities from "../utilities";
  * ## Import
  *
  * ```sh
- * $ pulumi import ise:Network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+ * $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
  * ```
  */
 export class Device extends pulumi.CustomResource {
@@ -82,7 +82,7 @@ export class Device extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'ise:Network/device:Device';
+    public static readonly __pulumiType = 'ise:network/device:Device';
 
     /**
      * Returns true if the given object is an instance of Device.  This is designed to work even
@@ -146,7 +146,7 @@ export class Device extends pulumi.CustomResource {
     /**
      * List of IP subnets
      */
-    public readonly ips!: pulumi.Output<outputs.Network.DeviceIp[]>;
+    public readonly ips!: pulumi.Output<outputs.network.DeviceIp[]>;
     /**
      * Model name
      */
@@ -427,7 +427,7 @@ export interface DeviceState {
     /**
      * List of IP subnets
      */
-    ips?: pulumi.Input<pulumi.Input<inputs.Network.DeviceIp>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.network.DeviceIp>[]>;
     /**
      * Model name
      */
@@ -601,7 +601,7 @@ export interface DeviceArgs {
     /**
      * List of IP subnets
      */
-    ips: pulumi.Input<pulumi.Input<inputs.Network.DeviceIp>[]>;
+    ips: pulumi.Input<pulumi.Input<inputs.network.DeviceIp>[]>;
     /**
      * Model name
      */

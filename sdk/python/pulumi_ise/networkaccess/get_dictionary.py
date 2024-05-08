@@ -104,7 +104,7 @@ def get_dictionary(id: Optional[str] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.NetworkAccess.get_dictionary(id="Dict1")
+    example = ise.networkaccess.get_dictionary(id="Dict1")
     ```
 
 
@@ -115,7 +115,7 @@ def get_dictionary(id: Optional[str] = None,
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
-    __ret__ = pulumi.runtime.invoke('ise:NetworkAccess/getDictionary:getDictionary', __args__, opts=opts, typ=GetDictionaryResult).value
+    __ret__ = pulumi.runtime.invoke('ise:networkaccess/getDictionary:getDictionary', __args__, opts=opts, typ=GetDictionaryResult).value
 
     return AwaitableGetDictionaryResult(
         description=pulumi.get(__ret__, 'description'),
@@ -138,7 +138,7 @@ def get_dictionary_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     import pulumi
     import pulumi_ise as ise
 
-    example = ise.NetworkAccess.get_dictionary(id="Dict1")
+    example = ise.networkaccess.get_dictionary(id="Dict1")
     ```
 
 

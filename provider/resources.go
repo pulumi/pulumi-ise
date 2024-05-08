@@ -37,27 +37,75 @@ import (
 //go:embed cmd/pulumi-resource-ise/bridge-metadata.json
 var bridgeMetadata []byte
 
-// all of the token components used below.
 const (
-	// This variable controls the default name of the package in the package
-	mainMod = "index" // the ise module
+	modDeviceAdmin        = "DeviceAdmin"
+	modIdentityManagement = "IdentityManagement"
+	modNetwork            = "Network"
+	modNetworkAccess      = "NetworkAccess"
+	modSystem             = "System"
+	modTrustSec           = "TrustSec"
 )
+
+var moduleNames = map[string]string{
+	"active_directory": modIdentityManagement,
+	"certificate":      modIdentityManagement,
+	"device_admin":     modDeviceAdmin,
+	"endpoint":         modIdentityManagement,
+	"identity":         modIdentityManagement,
+	"network_access":   modNetworkAccess,
+	"tacacs":           modDeviceAdmin,
+	"trustsec":         modTrustSec,
+}
+
+var resourceModules = map[string]string{
+	"allowed_protocols":        modNetworkAccess,
+	"allowed_protocols_tacacs": modDeviceAdmin,
+	"authorization_profile":    modNetworkAccess,
+	"downloadable_acl":         modNetworkAccess,
+	"internal_user":            modIdentityManagement,
+	"license_tier_state":       modSystem,
+	"network_device":           modNetwork,
+	"network_device_group":     modNetwork,
+	"repository":               modSystem,
+	"user_identity_group":      modIdentityManagement,
+}
+
+var namespaceMap = map[string]string{}
 
 func convertName(tfname string) (module string, name string) {
 	tfNameItems := strings.Split(tfname, "_")
 	contract.Assertf(len(tfNameItems) >= 2, "Invalid snake case name %s", tfname)
 	contract.Assertf(tfNameItems[0] == "ise", "Invalid snake case name %s. Does not start with ise", tfname)
-	if len(tfNameItems) == 2 {
-		module = mainMod
-		name = tfNameItems[1]
+	fullName := strings.Join(tfNameItems[1:], "_")
+	moduleTitle := ""
+	if mod, ok := resourceModules[fullName]; ok {
+		moduleTitle = mod
 	} else {
-		module = strcase.ToPascal(strings.Join(tfNameItems[1:len(tfNameItems)-1], "_"))
-		name = tfNameItems[len(tfNameItems)-1]
+		for mod, val := range moduleNames {
+			if strings.HasPrefix(fullName, mod) {
+				moduleTitle = val
+				break
+			}
+		}
+		if moduleTitle == "" {
+			contract.Failf("could not determine module for %q", tfname)
+		}
 	}
+	name = strcase.ToPascal(strings.Join(tfNameItems[1:], "_"))
+	name = trimPrefixCaseInsensitive(name, moduleTitle)
+	module = strings.ToLower(moduleTitle)
+	namespaceMap[module] = moduleTitle
+
 	contract.Assertf(!unicode.IsDigit(rune(module[0])), "Pulumi namespace must not start with a digit: %s", name)
-	name = strcase.ToPascal(name)
 	contract.Assertf(!unicode.IsDigit(rune(name[0])), "Pulumi name must not start with a digit: %s", name)
 	return
+}
+
+func trimPrefixCaseInsensitive(s, prefix string) string {
+	if strings.HasPrefix(strings.ToLower(s), strings.ToLower(prefix)) {
+		return s[len(prefix):]
+	}
+	return s
 }
 
 func makeDataSource(ds string) tokens.ModuleMember {
@@ -167,11 +215,10 @@ func Provider() tfbridge.ProviderInfo {
 			GenerateResourceContainerTypes: true,
 		},
 		CSharp: &tfbridge.CSharpInfo{
-			RootNamespace: "Pulumi",
-
 			PackageReferences: map[string]string{
 				"Pulumi": "3.*",
 			},
+			Namespaces: namespaceMap,
 		},
 		Java: &tfbridge.JavaInfo{
 			BasePackage: "com.pulumi",

@@ -5,8 +5,526 @@ import * as pulumi from "@pulumi/pulumi";
 import * as inputs from "../types/input";
 import * as outputs from "../types/output";
 
-export namespace ActiveDirectoryAdd {
-    export interface GroupsGroup {
+export namespace deviceadmin {
+    export interface AuthenticationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.AuthenticationRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthenticationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.AuthorizationExceptionRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.AuthorizationGlobalExceptionRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.AuthorizationRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface ConditionChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Condition description
+         */
+        description?: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Condition name
+         */
+        name?: pulumi.Input<string>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface ConditionChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Condition description
+         */
+        description?: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Condition name
+         */
+        name?: pulumi.Input<string>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface PolicySetChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.PolicySetChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface PolicySetChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface TacacsCommandSetCommand {
+        /**
+         * Command arguments
+         */
+        arguments: pulumi.Input<string>;
+        /**
+         * Command
+         */
+        command: pulumi.Input<string>;
+        /**
+         * Grant
+         *   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
+         */
+        grant: pulumi.Input<string>;
+    }
+
+    export interface TacacsProfileSessionAttribute {
+        /**
+         * Name
+         */
+        name: pulumi.Input<string>;
+        /**
+         * Type
+         *   - Choices: `MANDATORY`, `OPTIONAL`
+         */
+        type: pulumi.Input<string>;
+        /**
+         * Value
+         */
+        value: pulumi.Input<string>;
+    }
+}
+
+export namespace identitymanagement {
+    export interface ActiveDirectoryAddGroupsGroup {
         /**
          * Required for each group in the group list with no duplication between groups
          */
@@ -17,13 +535,19 @@ export namespace ActiveDirectoryAdd {
         sid: pulumi.Input<string>;
         type?: pulumi.Input<string>;
     }
-}
 
-export namespace ActiveDirectoryGroupsBy {
-}
+    export interface ActiveDirectoryJoinDomainWithAllNodesAdditionalData {
+        /**
+         * Additional attribute name
+         */
+        name: pulumi.Input<string>;
+        /**
+         * Additional attribute value
+         */
+        value: pulumi.Input<string>;
+    }
 
-export namespace ActiveDirectoryJoin {
-    export interface PointAttribute {
+    export interface ActiveDirectoryJoinPointAttribute {
         /**
          * Required for each attribute in the attribute list. Can contain an empty string.
          */
@@ -43,7 +567,7 @@ export namespace ActiveDirectoryJoin {
         type: pulumi.Input<string>;
     }
 
-    export interface PointGroup {
+    export interface ActiveDirectoryJoinPointGroup {
         /**
          * Required for each group in the group list with no duplication between groups
          */
@@ -55,7 +579,7 @@ export namespace ActiveDirectoryJoin {
         type?: pulumi.Input<string>;
     }
 
-    export interface PointRewriteRule {
+    export interface ActiveDirectoryJoinPointRewriteRule {
         /**
          * Required for each rule in the list with no duplication between rules
          */
@@ -69,23 +593,273 @@ export namespace ActiveDirectoryJoin {
          */
         rowId: pulumi.Input<string>;
     }
-}
 
-export namespace ActiveDirectoryJoinDomainWithAll {
-    export interface NodesAdditionalData {
+    export interface IdentitySourceSequenceIdentitySource {
         /**
-         * Additional attribute name
+         * Name of the identity source
          */
         name: pulumi.Input<string>;
         /**
-         * Additional attribute value
+         * Order of the identity source in the sequence
          */
-        value: pulumi.Input<string>;
+        order: pulumi.Input<number>;
     }
 }
 
-export namespace Authorization {
-    export interface ProfileAdvancedAttribute {
+export namespace network {
+    export interface DeviceIp {
+        /**
+         * It can be either single ip address or ip range address
+         */
+        ipaddress: pulumi.Input<string>;
+        /**
+         * It can be either single ip address or ip range address
+         */
+        ipaddressExclude?: pulumi.Input<string>;
+        /**
+         * Subnet mask length
+         */
+        mask?: pulumi.Input<string>;
+    }
+
+}
+
+export namespace networkaccess {
+    export interface AuthenticationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthenticationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationGlobalExceptionRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationProfileAdvancedAttribute {
         /**
          * Dictionary name
          */
@@ -112,9 +886,85 @@ export namespace Authorization {
          */
         attributeRightValueType?: pulumi.Input<string>;
     }
-}
 
-export namespace DeviceAdmin {
+    export interface AuthorizationRuleChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         */
+        childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationRuleChildrenChildren>[]>;
+        /**
+         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationRuleChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: pulumi.Input<string>;
+        /**
+         * Attribute value for condition. Value type is specified in dictionary object.
+         */
+        attributeValue?: pulumi.Input<string>;
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         */
+        conditionType: pulumi.Input<string>;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: pulumi.Input<string>;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: pulumi.Input<string>;
+        /**
+         * UUID for condition
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: pulumi.Input<boolean>;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: pulumi.Input<string>;
+    }
+
     export interface ConditionChildren {
         /**
          * Dictionary attribute name
@@ -127,7 +977,7 @@ export namespace DeviceAdmin {
         /**
          * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          */
-        childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdmin.ConditionChildrenChildren>[]>;
+        childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildrenChildren>[]>;
         /**
          * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
          *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
@@ -209,10 +1059,7 @@ export namespace DeviceAdmin {
         operator?: pulumi.Input<string>;
     }
 
-}
-
-export namespace DeviceAdminAuthentication {
-    export interface RuleChildren {
+    export interface PolicySetChildren {
         /**
          * Dictionary attribute name
          */
@@ -224,7 +1071,7 @@ export namespace DeviceAdminAuthentication {
         /**
          * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          */
-        childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdminAuthentication.RuleChildrenChildren>[]>;
+        childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildrenChildren>[]>;
         /**
          * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
          *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
@@ -253,7 +1100,7 @@ export namespace DeviceAdminAuthentication {
         operator?: pulumi.Input<string>;
     }
 
-    export interface RuleChildrenChildren {
+    export interface PolicySetChildrenChildren {
         /**
          * Dictionary attribute name
          */
@@ -291,341 +1138,8 @@ export namespace DeviceAdminAuthentication {
     }
 }
 
-export namespace DeviceAdminAuthorization {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdminAuthorization.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace DeviceAdminAuthorizationException {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdminAuthorizationException.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace DeviceAdminAuthorizationGlobalException {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdminAuthorizationGlobalException.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace DeviceAdminPolicy {
-    export interface SetChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdminPolicy.SetChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface SetChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace IdentitySource {
-    export interface SequenceIdentitySource {
-        /**
-         * Name of the identity source
-         */
-        name: pulumi.Input<string>;
-        /**
-         * Order of the identity source in the sequence
-         */
-        order: pulumi.Input<number>;
-    }
-}
-
-export namespace LicenseTier {
-    export interface StateLicense {
+export namespace system {
+    export interface LicenseTierStateLicense {
         /**
          * License name
          *   - Choices: `ESSENTIAL`, `ADVANTAGE`, `PREMIER`, `DEVICEADMIN`, `VM`
@@ -636,556 +1150,5 @@ export namespace LicenseTier {
          *   - Choices: `ENABLED`, `DISABLED`
          */
         status: pulumi.Input<string>;
-    }
-}
-
-export namespace Network {
-    export interface DeviceIp {
-        /**
-         * It can be either single ip address or ip range address
-         */
-        ipaddress: pulumi.Input<string>;
-        /**
-         * It can be either single ip address or ip range address
-         */
-        ipaddressExclude?: pulumi.Input<string>;
-        /**
-         * Subnet mask length
-         */
-        mask?: pulumi.Input<string>;
-    }
-
-}
-
-export namespace NetworkAccess {
-    export interface ConditionChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.NetworkAccess.ConditionChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Condition description
-         */
-        description?: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Condition name
-         */
-        name?: pulumi.Input<string>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface ConditionChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Condition description
-         */
-        description?: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Condition name
-         */
-        name?: pulumi.Input<string>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-}
-
-export namespace NetworkAccessAuthentication {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.NetworkAccessAuthentication.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace NetworkAccessAuthorization {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.NetworkAccessAuthorization.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace NetworkAccessAuthorizationException {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.NetworkAccessAuthorizationException.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace NetworkAccessAuthorizationGlobalException {
-    export interface RuleChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.NetworkAccessAuthorizationGlobalException.RuleChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface RuleChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace NetworkAccessPolicy {
-    export interface SetChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-         */
-        childrens?: pulumi.Input<pulumi.Input<inputs.NetworkAccessPolicy.SetChildrenChildren>[]>;
-        /**
-         * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-
-    export interface SetChildrenChildren {
-        /**
-         * Dictionary attribute name
-         */
-        attributeName?: pulumi.Input<string>;
-        /**
-         * Attribute value for condition. Value type is specified in dictionary object.
-         */
-        attributeValue?: pulumi.Input<string>;
-        /**
-         * Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
-         */
-        conditionType: pulumi.Input<string>;
-        /**
-         * Dictionary name
-         */
-        dictionaryName?: pulumi.Input<string>;
-        /**
-         * Dictionary value
-         */
-        dictionaryValue?: pulumi.Input<string>;
-        /**
-         * UUID for condition
-         */
-        id?: pulumi.Input<string>;
-        /**
-         * Indicates whereas this condition is in negate mode
-         */
-        isNegate?: pulumi.Input<boolean>;
-        /**
-         * Equality operator
-         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-         */
-        operator?: pulumi.Input<string>;
-    }
-}
-
-export namespace Tacacs {
-    export interface ProfileSessionAttribute {
-        /**
-         * Name
-         */
-        name: pulumi.Input<string>;
-        /**
-         * Type
-         *   - Choices: `MANDATORY`, `OPTIONAL`
-         */
-        type: pulumi.Input<string>;
-        /**
-         * Value
-         */
-        value: pulumi.Input<string>;
-    }
-}
-
-export namespace TacacsCommand {
-    export interface SetCommand {
-        /**
-         * Command arguments
-         */
-        arguments: pulumi.Input<string>;
-        /**
-         * Command
-         */
-        command: pulumi.Input<string>;
-        /**
-         * Grant
-         *   - Choices: `PERMIT`, `DENY`, `DENY_ALWAYS`
-         */
-        grant: pulumi.Input<string>;
     }
 }

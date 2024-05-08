@@ -21,14 +21,14 @@ import (
 //
 // import (
 //
-//	"github.com/pulumi/pulumi-ise/sdk/go/ise/NetworkAccess"
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := NetworkAccess.NewCondition(ctx, "example", &NetworkAccess.ConditionArgs{
+//			_, err := networkaccess.NewCondition(ctx, "example", &networkaccess.ConditionArgs{
 //				Name:           pulumi.String("Cond1"),
 //				Description:    pulumi.String("My description"),
 //				ConditionType:  pulumi.String("LibraryConditionAttributes"),
@@ -50,7 +50,7 @@ import (
 // ## Import
 //
 // ```sh
-// $ pulumi import ise:NetworkAccess/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+// $ pulumi import ise:networkaccess/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
 // ```
 type Condition struct {
 	pulumi.CustomResourceState
@@ -93,7 +93,7 @@ func NewCondition(ctx *pulumi.Context,
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Condition
-	err := ctx.RegisterResource("ise:NetworkAccess/condition:Condition", name, args, &resource, opts...)
+	err := ctx.RegisterResource("ise:networkaccess/condition:Condition", name, args, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -105,7 +105,7 @@ func NewCondition(ctx *pulumi.Context,
 func GetCondition(ctx *pulumi.Context,
 	name string, id pulumi.IDInput, state *ConditionState, opts ...pulumi.ResourceOption) (*Condition, error) {
 	var resource Condition
-	err := ctx.ReadResource("ise:NetworkAccess/condition:Condition", name, id, state, &resource, opts...)
+	err := ctx.ReadResource("ise:networkaccess/condition:Condition", name, id, state, &resource, opts...)
 	if err != nil {
 		return nil, err
 	}

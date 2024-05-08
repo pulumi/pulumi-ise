@@ -36,10 +36,10 @@ namespace Pulumi.Ise.NetworkAccess
     /// ## Import
     /// 
     /// ```sh
-    /// $ pulumi import ise:NetworkAccess/dictionary:Dictionary example "Dict1"
+    /// $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
     /// ```
     /// </summary>
-    [IseResourceType("ise:NetworkAccess/dictionary:Dictionary")]
+    [IseResourceType("ise:networkaccess/dictionary:Dictionary")]
     public partial class Dictionary : global::Pulumi.CustomResource
     {
         /// <summary>
@@ -75,12 +75,12 @@ namespace Pulumi.Ise.NetworkAccess
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public Dictionary(string name, DictionaryArgs args, CustomResourceOptions? options = null)
-            : base("ise:NetworkAccess/dictionary:Dictionary", name, args ?? new DictionaryArgs(), MakeResourceOptions(options, ""))
+            : base("ise:networkaccess/dictionary:Dictionary", name, args ?? new DictionaryArgs(), MakeResourceOptions(options, ""))
         {
         }
 
         private Dictionary(string name, Input<string> id, DictionaryState? state = null, CustomResourceOptions? options = null)
-            : base("ise:NetworkAccess/dictionary:Dictionary", name, state, MakeResourceOptions(options, id))
+            : base("ise:networkaccess/dictionary:Dictionary", name, state, MakeResourceOptions(options, id))
         {
         }
 

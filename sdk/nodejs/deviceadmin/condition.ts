@@ -30,7 +30,7 @@ import * as utilities from "../utilities";
  * ## Import
  *
  * ```sh
- * $ pulumi import ise:DeviceAdmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
+ * $ pulumi import ise:deviceadmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
  * ```
  */
 export class Condition extends pulumi.CustomResource {
@@ -48,7 +48,7 @@ export class Condition extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'ise:DeviceAdmin/condition:Condition';
+    public static readonly __pulumiType = 'ise:deviceadmin/condition:Condition';
 
     /**
      * Returns true if the given object is an instance of Condition.  This is designed to work even
@@ -72,7 +72,7 @@ export class Condition extends pulumi.CustomResource {
     /**
      * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
-    public readonly childrens!: pulumi.Output<outputs.DeviceAdmin.ConditionChildren[] | undefined>;
+    public readonly childrens!: pulumi.Output<outputs.deviceadmin.ConditionChildren[] | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
      * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -165,7 +165,7 @@ export interface ConditionState {
     /**
      * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdmin.ConditionChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildren>[]>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
      * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -215,7 +215,7 @@ export interface ConditionArgs {
     /**
      * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.DeviceAdmin.ConditionChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildren>[]>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
      * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,

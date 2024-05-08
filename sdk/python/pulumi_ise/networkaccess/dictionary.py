@@ -172,7 +172,7 @@ class Dictionary(pulumi.CustomResource):
         import pulumi
         import pulumi_ise as ise
 
-        example = ise.network_access.Dictionary("example",
+        example = ise.networkaccess.Dictionary("example",
             name="Dict1",
             description="My description",
             version="1.1",
@@ -182,7 +182,7 @@ class Dictionary(pulumi.CustomResource):
         ## Import
 
         ```sh
-        $ pulumi import ise:NetworkAccess/dictionary:Dictionary example "Dict1"
+        $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
         ```
 
         :param str resource_name: The name of the resource.
@@ -207,7 +207,7 @@ class Dictionary(pulumi.CustomResource):
         import pulumi
         import pulumi_ise as ise
 
-        example = ise.network_access.Dictionary("example",
+        example = ise.networkaccess.Dictionary("example",
             name="Dict1",
             description="My description",
             version="1.1",
@@ -217,7 +217,7 @@ class Dictionary(pulumi.CustomResource):
         ## Import
 
         ```sh
-        $ pulumi import ise:NetworkAccess/dictionary:Dictionary example "Dict1"
+        $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
         ```
 
         :param str resource_name: The name of the resource.
@@ -257,7 +257,7 @@ class Dictionary(pulumi.CustomResource):
                 raise TypeError("Missing required property 'version'")
             __props__.__dict__["version"] = version
         super(Dictionary, __self__).__init__(
-            'ise:NetworkAccess/dictionary:Dictionary',
+            'ise:networkaccess/dictionary:Dictionary',
             resource_name,
             __props__,
             opts)

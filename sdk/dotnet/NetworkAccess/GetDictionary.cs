@@ -33,7 +33,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// ```
         /// </summary>
         public static Task<GetDictionaryResult> InvokeAsync(GetDictionaryArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.InvokeAsync<GetDictionaryResult>("ise:NetworkAccess/getDictionary:getDictionary", args ?? new GetDictionaryArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.InvokeAsync<GetDictionaryResult>("ise:networkaccess/getDictionary:getDictionary", args ?? new GetDictionaryArgs(), options.WithDefaults());
 
         /// <summary>
         /// This data source can read the Network Access Dictionary.
@@ -57,7 +57,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// ```
         /// </summary>
         public static Output<GetDictionaryResult> Invoke(GetDictionaryInvokeArgs? args = null, InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.Invoke<GetDictionaryResult>("ise:NetworkAccess/getDictionary:getDictionary", args ?? new GetDictionaryInvokeArgs(), options.WithDefaults());
+            => global::Pulumi.Deployment.Instance.Invoke<GetDictionaryResult>("ise:networkaccess/getDictionary:getDictionary", args ?? new GetDictionaryInvokeArgs(), options.WithDefaults());
     }
 
 
