@@ -1,6 +1,6 @@
-# Ise Resource Provider
+# Cisco ISE Resource Provider
 
-The Ise Resource Provider lets you manage [ise](https://www.pulumi.com/registry/packages/ise/) resources.
+A Pulumi package for managing resources on a [Cisco ISE](https://www.pulumi.com/registry/packages/ise/) (Identity Service Engine) instance.
 
 ## Installing
 
@@ -25,7 +25,7 @@ yarn add @pulumi/ise
 To use from Python, install using `pip`:
 
 ```bash
-pip install pulumi-ise
+pip install pulumi_ise
 ```
 
 ### Go
