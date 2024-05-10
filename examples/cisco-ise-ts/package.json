@@ -1,0 +1,12 @@
+{
+    "name": "cisco-ise-ts",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "latest",
+        "typescript": "latest"
+    },
+    "dependencies": {
+        "@pulumi/ise": "latest",
+        "@pulumi/pulumi": "latest"
+    }
+}
