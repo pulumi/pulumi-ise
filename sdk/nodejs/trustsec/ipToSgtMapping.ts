@@ -56,7 +56,7 @@ export class IpToSgtMapping extends pulumi.CustomResource {
     }
 
     /**
-     * Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      */
     public readonly deployTo!: pulumi.Output<string | undefined>;
     /**
@@ -68,15 +68,15 @@ export class IpToSgtMapping extends pulumi.CustomResource {
      */
     public readonly description!: pulumi.Output<string | undefined>;
     /**
-     * Mandatory if `host_name` is empty
+     * Mandatory if `hostName` is empty
      */
     public readonly hostIp!: pulumi.Output<string | undefined>;
     /**
-     * Mandatory if `host_ip` is empty
+     * Mandatory if `hostIp` is empty
      */
     public readonly hostName!: pulumi.Output<string | undefined>;
     /**
-     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      */
     public readonly mappingGroup!: pulumi.Output<string | undefined>;
     /**
@@ -84,7 +84,7 @@ export class IpToSgtMapping extends pulumi.CustomResource {
      */
     public readonly name!: pulumi.Output<string>;
     /**
-     * Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      */
     public readonly sgt!: pulumi.Output<string | undefined>;
 
@@ -130,7 +130,7 @@ export class IpToSgtMapping extends pulumi.CustomResource {
  */
 export interface IpToSgtMappingState {
     /**
-     * Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      */
     deployTo?: pulumi.Input<string>;
     /**
@@ -142,15 +142,15 @@ export interface IpToSgtMappingState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Mandatory if `host_name` is empty
+     * Mandatory if `hostName` is empty
      */
     hostIp?: pulumi.Input<string>;
     /**
-     * Mandatory if `host_ip` is empty
+     * Mandatory if `hostIp` is empty
      */
     hostName?: pulumi.Input<string>;
     /**
-     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      */
     mappingGroup?: pulumi.Input<string>;
     /**
@@ -158,7 +158,7 @@ export interface IpToSgtMappingState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      */
     sgt?: pulumi.Input<string>;
 }
@@ -168,7 +168,7 @@ export interface IpToSgtMappingState {
  */
 export interface IpToSgtMappingArgs {
     /**
-     * Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      */
     deployTo?: pulumi.Input<string>;
     /**
@@ -180,15 +180,15 @@ export interface IpToSgtMappingArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Mandatory if `host_name` is empty
+     * Mandatory if `hostName` is empty
      */
     hostIp?: pulumi.Input<string>;
     /**
-     * Mandatory if `host_ip` is empty
+     * Mandatory if `hostIp` is empty
      */
     hostName?: pulumi.Input<string>;
     /**
-     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      */
     mappingGroup?: pulumi.Input<string>;
     /**
@@ -196,7 +196,7 @@ export interface IpToSgtMappingArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      */
     sgt?: pulumi.Input<string>;
 }

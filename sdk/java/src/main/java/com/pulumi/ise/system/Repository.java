@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,19 +43,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Repository(&#34;example&#34;, RepositoryArgs.builder()        
- *             .name(&#34;repo1&#34;)
- *             .protocol(&#34;SFTP&#34;)
- *             .path(&#34;/dir&#34;)
- *             .serverName(&#34;server1&#34;)
- *             .userName(&#34;user9&#34;)
- *             .password(&#34;cisco123&#34;)
+ *         var example = new Repository("example", RepositoryArgs.builder()        
+ *             .name("repo1")
+ *             .protocol("SFTP")
+ *             .path("/dir")
+ *             .serverName("server1")
+ *             .userName("user9")
+ *             .password("cisco123")
  *             .enablePki(false)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

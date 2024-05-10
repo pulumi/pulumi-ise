@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,24 +46,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PolicySet(&#34;example&#34;, PolicySetArgs.builder()        
- *             .name(&#34;PolicySet1&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new PolicySet("example", PolicySetArgs.builder()        
+ *             .name("PolicySet1")
+ *             .description("My description")
  *             .isProxy(false)
  *             .rank(0)
- *             .serviceName(&#34;Default Network Access&#34;)
- *             .state(&#34;enabled&#34;)
- *             .conditionType(&#34;ConditionAttributes&#34;)
+ *             .serviceName("Default Network Access")
+ *             .state("enabled")
+ *             .conditionType("ConditionAttributes")
  *             .conditionIsNegate(false)
- *             .conditionAttributeName(&#34;Location&#34;)
- *             .conditionAttributeValue(&#34;All Locations&#34;)
- *             .conditionDictionaryName(&#34;DEVICE&#34;)
- *             .conditionOperator(&#34;equals&#34;)
+ *             .conditionAttributeName("Location")
+ *             .conditionAttributeValue("All Locations")
+ *             .conditionDictionaryName("DEVICE")
+ *             .conditionOperator("equals")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

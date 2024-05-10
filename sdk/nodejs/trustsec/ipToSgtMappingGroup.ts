@@ -55,7 +55,7 @@ export class IpToSgtMappingGroup extends pulumi.CustomResource {
     }
 
     /**
-     * Mandatory unless `deploy_type` is `ALL`
+     * Mandatory unless `deployType` is `ALL`
      */
     public readonly deployTo!: pulumi.Output<string | undefined>;
     /**
@@ -117,7 +117,7 @@ export class IpToSgtMappingGroup extends pulumi.CustomResource {
  */
 export interface IpToSgtMappingGroupState {
     /**
-     * Mandatory unless `deploy_type` is `ALL`
+     * Mandatory unless `deployType` is `ALL`
      */
     deployTo?: pulumi.Input<string>;
     /**
@@ -143,7 +143,7 @@ export interface IpToSgtMappingGroupState {
  */
 export interface IpToSgtMappingGroupArgs {
     /**
-     * Mandatory unless `deploy_type` is `ALL`
+     * Mandatory unless `deployType` is `ALL`
      */
     deployTo?: pulumi.Input<string>;
     /**

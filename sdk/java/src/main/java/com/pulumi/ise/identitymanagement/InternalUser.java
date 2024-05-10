@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,24 +43,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InternalUser(&#34;example&#34;, InternalUserArgs.builder()        
- *             .name(&#34;UserTF&#34;)
- *             .password(&#34;Cisco123&#34;)
+ *         var example = new InternalUser("example", InternalUserArgs.builder()        
+ *             .name("UserTF")
+ *             .password("Cisco123")
  *             .changePassword(true)
- *             .email(&#34;aaa@cisco.com&#34;)
- *             .accountNameAlias(&#34;User 1&#34;)
- *             .enablePassword(&#34;Cisco123&#34;)
+ *             .email("aaa{@literal @}cisco.com")
+ *             .accountNameAlias("User 1")
+ *             .enablePassword("Cisco123")
  *             .enabled(true)
  *             .passwordNeverExpires(false)
- *             .firstName(&#34;John&#34;)
- *             .lastName(&#34;Doe&#34;)
- *             .passwordIdStore(&#34;Internal Users&#34;)
- *             .description(&#34;My first Terraform user&#34;)
+ *             .firstName("John")
+ *             .lastName("Doe")
+ *             .passwordIdStore("Internal Users")
+ *             .description("My first Terraform user")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

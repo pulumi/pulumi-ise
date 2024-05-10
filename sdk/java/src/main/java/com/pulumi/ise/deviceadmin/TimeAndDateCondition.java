@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,25 +44,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TimeAndDateCondition(&#34;example&#34;, TimeAndDateConditionArgs.builder()        
- *             .name(&#34;Cond1&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new TimeAndDateCondition("example", TimeAndDateConditionArgs.builder()        
+ *             .name("Cond1")
+ *             .description("My description")
  *             .isNegate(false)
- *             .weekDays(&#34;Monday&#34;)
- *             .weekDaysExceptions(&#34;Tuesday&#34;)
- *             .startDate(&#34;2022-05-06&#34;)
- *             .endDate(&#34;2022-05-10&#34;)
- *             .exceptionStartDate(&#34;2022-06-06&#34;)
- *             .exceptionEndDate(&#34;2022-06-10&#34;)
- *             .startTime(&#34;08:00&#34;)
- *             .endTime(&#34;15:00&#34;)
- *             .exceptionStartTime(&#34;20:00&#34;)
- *             .exceptionEndTime(&#34;22:00&#34;)
+ *             .weekDays("Monday")
+ *             .weekDaysExceptions("Tuesday")
+ *             .startDate("2022-05-06")
+ *             .endDate("2022-05-10")
+ *             .exceptionStartDate("2022-06-06")
+ *             .exceptionEndDate("2022-06-10")
+ *             .startTime("08:00")
+ *             .endTime("15:00")
+ *             .exceptionStartTime("20:00")
+ *             .exceptionEndTime("22:00")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

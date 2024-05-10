@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,20 +46,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TacacsCommandSet(&#34;example&#34;, TacacsCommandSetArgs.builder()        
- *             .name(&#34;CommandSet1&#34;)
- *             .description(&#34;My TACACS command set&#34;)
+ *         var example = new TacacsCommandSet("example", TacacsCommandSetArgs.builder()        
+ *             .name("CommandSet1")
+ *             .description("My TACACS command set")
  *             .permitUnmatched(true)
  *             .commands(TacacsCommandSetCommandArgs.builder()
- *                 .grant(&#34;PERMIT&#34;)
- *                 .command(&#34;show&#34;)
- *                 .arguments(&#34;&#34;)
+ *                 .grant("PERMIT")
+ *                 .command("show")
+ *                 .arguments("")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

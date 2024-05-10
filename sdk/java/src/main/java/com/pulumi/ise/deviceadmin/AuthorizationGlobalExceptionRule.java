@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,24 +46,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AuthorizationGlobalExceptionRule(&#34;example&#34;, AuthorizationGlobalExceptionRuleArgs.builder()        
- *             .name(&#34;Rule1&#34;)
+ *         var example = new AuthorizationGlobalExceptionRule("example", AuthorizationGlobalExceptionRuleArgs.builder()        
+ *             .name("Rule1")
  *             .default_(false)
  *             .rank(0)
- *             .state(&#34;enabled&#34;)
- *             .conditionType(&#34;ConditionAttributes&#34;)
+ *             .state("enabled")
+ *             .conditionType("ConditionAttributes")
  *             .conditionIsNegate(false)
- *             .conditionAttributeName(&#34;Location&#34;)
- *             .conditionAttributeValue(&#34;All Locations&#34;)
- *             .conditionDictionaryName(&#34;DEVICE&#34;)
- *             .conditionOperator(&#34;equals&#34;)
- *             .commandSets(&#34;DenyAllCommands&#34;)
- *             .profile(&#34;Default Shell Profile&#34;)
+ *             .conditionAttributeName("Location")
+ *             .conditionAttributeValue("All Locations")
+ *             .conditionDictionaryName("DEVICE")
+ *             .conditionOperator("equals")
+ *             .commandSets("DenyAllCommands")
+ *             .profile("Default Shell Profile")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

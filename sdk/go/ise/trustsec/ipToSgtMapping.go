@@ -50,21 +50,21 @@ import (
 type IpToSgtMapping struct {
 	pulumi.CustomResourceState
 
-	// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrOutput `pulumi:"deployTo"`
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrOutput `pulumi:"deployType"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Mandatory if `host_name` is empty
+	// Mandatory if `hostName` is empty
 	HostIp pulumi.StringPtrOutput `pulumi:"hostIp"`
-	// Mandatory if `host_ip` is empty
+	// Mandatory if `hostIp` is empty
 	HostName pulumi.StringPtrOutput `pulumi:"hostName"`
-	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
 	MappingGroup pulumi.StringPtrOutput `pulumi:"mappingGroup"`
 	// The name of the IP to SGT mapping
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+	// Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
 	Sgt pulumi.StringPtrOutput `pulumi:"sgt"`
 }
 
@@ -98,40 +98,40 @@ func GetIpToSgtMapping(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IpToSgtMapping resources.
 type ipToSgtMappingState struct {
-	// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType *string `pulumi:"deployType"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Mandatory if `host_name` is empty
+	// Mandatory if `hostName` is empty
 	HostIp *string `pulumi:"hostIp"`
-	// Mandatory if `host_ip` is empty
+	// Mandatory if `hostIp` is empty
 	HostName *string `pulumi:"hostName"`
-	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
 	MappingGroup *string `pulumi:"mappingGroup"`
 	// The name of the IP to SGT mapping
 	Name *string `pulumi:"name"`
-	// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+	// Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
 	Sgt *string `pulumi:"sgt"`
 }
 
 type IpToSgtMappingState struct {
-	// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrInput
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Mandatory if `host_name` is empty
+	// Mandatory if `hostName` is empty
 	HostIp pulumi.StringPtrInput
-	// Mandatory if `host_ip` is empty
+	// Mandatory if `hostIp` is empty
 	HostName pulumi.StringPtrInput
-	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
 	MappingGroup pulumi.StringPtrInput
 	// The name of the IP to SGT mapping
 	Name pulumi.StringPtrInput
-	// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+	// Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
 	Sgt pulumi.StringPtrInput
 }
 
@@ -140,41 +140,41 @@ func (IpToSgtMappingState) ElementType() reflect.Type {
 }
 
 type ipToSgtMappingArgs struct {
-	// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType *string `pulumi:"deployType"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Mandatory if `host_name` is empty
+	// Mandatory if `hostName` is empty
 	HostIp *string `pulumi:"hostIp"`
-	// Mandatory if `host_ip` is empty
+	// Mandatory if `hostIp` is empty
 	HostName *string `pulumi:"hostName"`
-	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
 	MappingGroup *string `pulumi:"mappingGroup"`
 	// The name of the IP to SGT mapping
 	Name *string `pulumi:"name"`
-	// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+	// Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
 	Sgt *string `pulumi:"sgt"`
 }
 
 // The set of arguments for constructing a IpToSgtMapping resource.
 type IpToSgtMappingArgs struct {
-	// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrInput
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Mandatory if `host_name` is empty
+	// Mandatory if `hostName` is empty
 	HostIp pulumi.StringPtrInput
-	// Mandatory if `host_ip` is empty
+	// Mandatory if `hostIp` is empty
 	HostName pulumi.StringPtrInput
-	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+	// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
 	MappingGroup pulumi.StringPtrInput
 	// The name of the IP to SGT mapping
 	Name pulumi.StringPtrInput
-	// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+	// Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
 	Sgt pulumi.StringPtrInput
 }
 
@@ -265,7 +265,7 @@ func (o IpToSgtMappingOutput) ToIpToSgtMappingOutputWithContext(ctx context.Cont
 	return o
 }
 
-// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 func (o IpToSgtMappingOutput) DeployTo() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.DeployTo }).(pulumi.StringPtrOutput)
 }
@@ -280,17 +280,17 @@ func (o IpToSgtMappingOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Mandatory if `host_name` is empty
+// Mandatory if `hostName` is empty
 func (o IpToSgtMappingOutput) HostIp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.HostIp }).(pulumi.StringPtrOutput)
 }
 
-// Mandatory if `host_ip` is empty
+// Mandatory if `hostIp` is empty
 func (o IpToSgtMappingOutput) HostName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.HostName }).(pulumi.StringPtrOutput)
 }
 
-// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
 func (o IpToSgtMappingOutput) MappingGroup() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.MappingGroup }).(pulumi.StringPtrOutput)
 }
@@ -300,7 +300,7 @@ func (o IpToSgtMappingOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+// Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
 func (o IpToSgtMappingOutput) Sgt() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.Sgt }).(pulumi.StringPtrOutput)
 }

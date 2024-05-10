@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,9 +44,9 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AllowedProtocols(&#34;example&#34;, AllowedProtocolsArgs.builder()        
- *             .name(&#34;Protocols1&#34;)
- *             .description(&#34;My allowed protocols&#34;)
+ *         var example = new AllowedProtocols("example", AllowedProtocolsArgs.builder()        
+ *             .name("Protocols1")
+ *             .description("My allowed protocols")
  *             .processHostLookup(true)
  *             .allowPapAscii(true)
  *             .allowChap(true)
@@ -59,14 +60,14 @@ import javax.annotation.Nullable;
  *             .allowPeap(true)
  *             .allowTeap(true)
  *             .allowPreferredEapProtocol(true)
- *             .preferredEapProtocol(&#34;LEAP&#34;)
+ *             .preferredEapProtocol("LEAP")
  *             .eapTlsLBit(true)
  *             .allowWeakCiphersForEap(true)
  *             .requireMessageAuth(true)
  *             .eapTlsAllowAuthOfExpiredCerts(true)
  *             .eapTlsEnableStatelessSessionResume(true)
  *             .eapTlsSessionTicketTtl(5)
- *             .eapTlsSessionTicketTtlUnit(&#34;DAYS&#34;)
+ *             .eapTlsSessionTicketTtlUnit("DAYS")
  *             .eapTlsSessionTicketPercentage(5)
  *             .peapAllowPeapEapMsChapV2(true)
  *             .peapAllowPeapEapMsChapV2PwdChange(true)
@@ -97,7 +98,7 @@ import javax.annotation.Nullable;
  *             .eapFastEnableEapChaining(true)
  *             .eapFastUsePacs(true)
  *             .eapFastPacsTunnelPacTtl(5)
- *             .eapFastPacsTunnelPacTtlUnit(&#34;DAYS&#34;)
+ *             .eapFastPacsTunnelPacTtlUnit("DAYS")
  *             .eapFastPacsUseProactivePacUpdatePercentage(5)
  *             .eapFastPacsAllowAnonymousProvisioning(true)
  *             .eapFastPacsAllowAuthenticatedProvisioning(true)
@@ -105,10 +106,10 @@ import javax.annotation.Nullable;
  *             .eapFastPacsAllowClientCert(true)
  *             .eapFastPacsAllowMachineAuthentication(true)
  *             .eapFastPacsMachinePacTtl(5)
- *             .eapFastPacsMachinePacTtlUnit(&#34;DAYS&#34;)
+ *             .eapFastPacsMachinePacTtlUnit("DAYS")
  *             .eapFastPacsStatelessSessionResume(true)
  *             .eapFastPacsAuthorizationPacTtl(5)
- *             .eapFastPacsAuthorizationPacTtlUnit(&#34;HOURS&#34;)
+ *             .eapFastPacsAuthorizationPacTtlUnit("HOURS")
  *             .teapEapMsChapV2(true)
  *             .teapEapMsChapV2PwdChange(true)
  *             .teapEapMsChapV2PwdChangeRetries(3)
@@ -123,7 +124,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

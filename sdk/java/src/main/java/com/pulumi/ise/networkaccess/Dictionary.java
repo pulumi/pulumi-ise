@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,16 +42,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Dictionary(&#34;example&#34;, DictionaryArgs.builder()        
- *             .name(&#34;Dict1&#34;)
- *             .description(&#34;My description&#34;)
- *             .version(&#34;1.1&#34;)
- *             .dictionaryAttrType(&#34;ENTITY_ATTR&#34;)
+ *         var example = new Dictionary("example", DictionaryArgs.builder()        
+ *             .name("Dict1")
+ *             .description("My description")
+ *             .version("1.1")
+ *             .dictionaryAttrType("ENTITY_ATTR")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

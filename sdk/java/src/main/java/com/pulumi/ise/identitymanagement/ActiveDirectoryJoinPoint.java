@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -50,27 +51,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActiveDirectoryJoinPoint(&#34;example&#34;, ActiveDirectoryJoinPointArgs.builder()        
- *             .name(&#34;cisco.local&#34;)
- *             .description(&#34;My AD join point&#34;)
- *             .domain(&#34;cisco.local&#34;)
- *             .adScopesNames(&#34;Default_Scope&#34;)
+ *         var example = new ActiveDirectoryJoinPoint("example", ActiveDirectoryJoinPointArgs.builder()        
+ *             .name("cisco.local")
+ *             .description("My AD join point")
+ *             .domain("cisco.local")
+ *             .adScopesNames("Default_Scope")
  *             .enableDomainAllowedList(true)
  *             .groups(ActiveDirectoryJoinPointGroupArgs.builder()
- *                 .name(&#34;cisco.local/operators&#34;)
- *                 .sid(&#34;S-1-5-32-548&#34;)
- *                 .type(&#34;GLOBAL&#34;)
+ *                 .name("cisco.local/operators")
+ *                 .sid("S-1-5-32-548")
+ *                 .type("GLOBAL")
  *                 .build())
  *             .attributes(ActiveDirectoryJoinPointAttributeArgs.builder()
- *                 .name(&#34;Attribute_1&#34;)
- *                 .type(&#34;STRING&#34;)
- *                 .internal_name(&#34;internal_name&#34;)
- *                 .default_value(&#34;default_string&#34;)
+ *                 .name("Attribute_1")
+ *                 .type("STRING")
+ *                 .internal_name("internal_name")
+ *                 .default_value("default_string")
  *                 .build())
  *             .rewriteRules(ActiveDirectoryJoinPointRewriteRuleArgs.builder()
- *                 .row_id(&#34;0&#34;)
- *                 .rewrite_match(&#34;rewrite_match&#34;)
- *                 .rewrite_result(&#34;rewrite_result&#34;)
+ *                 .row_id("0")
+ *                 .rewrite_match("rewrite_match")
+ *                 .rewrite_result("rewrite_result")
  *                 .build())
  *             .enableRewrites(false)
  *             .enablePassChange(true)
@@ -80,28 +81,29 @@ import javax.annotation.Nullable;
  *             .plaintextAuth(false)
  *             .agingTime(5)
  *             .enableCallbackForDialinClient(false)
- *             .identityNotInAdBehaviour(&#34;SEARCH_JOINED_FOREST&#34;)
- *             .unreachableDomainsBehaviour(&#34;PROCEED&#34;)
- *             .schema(&#34;ACTIVE_DIRECTORY&#34;)
- *             .firstName(&#34;givenName&#34;)
- *             .department(&#34;department&#34;)
- *             .lastName(&#34;sn&#34;)
- *             .organizationalUnit(&#34;company&#34;)
- *             .jobTitle(&#34;title&#34;)
- *             .locality(&#34;l&#34;)
- *             .email(&#34;mail&#34;)
- *             .stateOrProvince(&#34;st&#34;)
- *             .telephone(&#34;telephoneNumber&#34;)
- *             .country(&#34;co&#34;)
- *             .streetAddress(&#34;streetAddress&#34;)
+ *             .identityNotInAdBehaviour("SEARCH_JOINED_FOREST")
+ *             .unreachableDomainsBehaviour("PROCEED")
+ *             .schema("ACTIVE_DIRECTORY")
+ *             .firstName("givenName")
+ *             .department("department")
+ *             .lastName("sn")
+ *             .organizationalUnit("company")
+ *             .jobTitle("title")
+ *             .locality("l")
+ *             .email("mail")
+ *             .stateOrProvince("st")
+ *             .telephone("telephoneNumber")
+ *             .country("co")
+ *             .streetAddress("streetAddress")
  *             .enableFailedAuthProtection(false)
  *             .failedAuthThreshold(5)
- *             .authProtectionType(&#34;WIRELESS&#34;)
+ *             .authProtectionType("WIRELESS")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

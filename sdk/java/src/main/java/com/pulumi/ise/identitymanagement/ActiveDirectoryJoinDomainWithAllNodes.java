@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,17 +44,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActiveDirectoryJoinDomainWithAllNodes(&#34;example&#34;, ActiveDirectoryJoinDomainWithAllNodesArgs.builder()        
- *             .joinPointId(&#34;73808580-b6e6-11ee-8960-de6d7692bc40&#34;)
+ *         var example = new ActiveDirectoryJoinDomainWithAllNodes("example", ActiveDirectoryJoinDomainWithAllNodesArgs.builder()        
+ *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
  *             .additionalDatas(ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs.builder()
- *                 .name(&#34;username&#34;)
- *                 .value(&#34;administrator&#34;)
+ *                 .name("username")
+ *                 .value("administrator")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

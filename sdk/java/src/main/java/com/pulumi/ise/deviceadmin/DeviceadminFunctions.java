@@ -47,7 +47,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -69,12 +70,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -87,7 +89,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -109,12 +112,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -127,7 +131,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -149,12 +154,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -167,7 +173,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -189,12 +196,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -207,7 +215,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -229,12 +238,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -247,7 +257,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -269,12 +280,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -287,7 +299,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -309,13 +322,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -328,7 +342,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -350,13 +365,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -369,7 +385,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -391,13 +408,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -410,7 +428,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -432,13 +451,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -451,7 +471,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -473,13 +494,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -492,7 +514,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -514,13 +537,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -533,7 +557,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -555,13 +580,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -574,7 +600,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -596,13 +623,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -615,7 +643,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -637,12 +666,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -655,7 +685,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -677,12 +708,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -695,7 +727,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -717,12 +750,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -735,7 +769,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -757,12 +792,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -775,7 +811,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -797,12 +834,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -815,7 +853,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -837,12 +876,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -855,7 +895,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -877,13 +918,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -896,7 +938,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -918,13 +961,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -937,7 +981,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -959,13 +1004,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -978,7 +1024,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1000,13 +1047,14 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1019,7 +1067,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1041,12 +1090,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1059,7 +1109,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1081,12 +1132,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1099,7 +1151,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1121,12 +1174,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1139,7 +1193,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1161,12 +1216,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1179,7 +1235,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1201,12 +1258,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1219,7 +1277,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1241,12 +1300,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1259,7 +1319,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1281,12 +1342,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1299,7 +1361,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1321,12 +1384,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1339,7 +1403,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1361,12 +1426,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1379,7 +1445,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1401,12 +1468,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1419,7 +1487,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1441,12 +1510,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1459,7 +1529,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1481,12 +1552,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1499,7 +1571,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1521,12 +1594,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1539,7 +1613,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1561,12 +1636,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1579,7 +1655,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1601,12 +1678,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1619,7 +1697,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1641,12 +1720,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1659,7 +1739,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1681,12 +1762,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1699,7 +1781,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1721,12 +1804,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1739,7 +1823,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1761,12 +1846,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1779,7 +1865,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1801,12 +1888,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1819,7 +1907,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1841,12 +1930,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1859,7 +1949,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1881,12 +1972,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1899,7 +1991,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1921,12 +2014,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1939,7 +2033,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1961,12 +2056,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1979,7 +2075,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2001,12 +2098,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2019,7 +2117,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2041,12 +2140,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2059,7 +2159,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2081,12 +2182,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2099,7 +2201,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2121,12 +2224,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2139,7 +2243,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2161,12 +2266,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2179,7 +2285,8 @@ public final class DeviceadminFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2201,12 +2308,13 @@ public final class DeviceadminFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

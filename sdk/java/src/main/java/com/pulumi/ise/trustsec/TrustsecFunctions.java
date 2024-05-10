@@ -32,7 +32,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -54,12 +55,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getEgressMatrixCell(GetEgressMatrixCellArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -72,7 +74,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -94,12 +97,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getEgressMatrixCell(GetEgressMatrixCellArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -112,7 +116,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -134,12 +139,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getEgressMatrixCell(GetEgressMatrixCellArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -152,7 +158,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -174,12 +181,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getEgressMatrixCell(GetEgressMatrixCellArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -192,7 +200,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -214,12 +223,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -232,7 +242,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -254,12 +265,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -272,7 +284,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -294,12 +307,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -312,7 +326,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -334,12 +349,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -352,7 +368,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -374,12 +391,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -392,7 +410,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -414,12 +433,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -432,7 +452,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -454,12 +475,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -472,7 +494,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -494,12 +517,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -512,7 +536,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -534,12 +559,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -552,7 +578,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -574,12 +601,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -592,7 +620,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -614,12 +643,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -632,7 +662,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -654,12 +685,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -672,7 +704,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -694,12 +727,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -712,7 +746,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -734,12 +769,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -752,7 +788,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -774,12 +811,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -792,7 +830,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -814,12 +853,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -832,7 +872,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -854,12 +895,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -872,7 +914,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -894,12 +937,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -912,7 +956,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -934,12 +979,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -952,7 +998,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -974,12 +1021,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -992,7 +1040,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1014,12 +1063,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1032,7 +1082,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1054,12 +1105,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1072,7 +1124,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1094,12 +1147,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1112,7 +1166,8 @@ public final class TrustsecFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1134,12 +1189,13 @@ public final class TrustsecFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

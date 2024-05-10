@@ -59,7 +59,7 @@ type Condition struct {
 	AttributeName pulumi.StringPtrOutput `pulumi:"attributeName"`
 	// Attribute value for condition. Value type is specified in dictionary object.
 	AttributeValue pulumi.StringPtrOutput `pulumi:"attributeValue"`
-	// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens ConditionChildrenArrayOutput `pulumi:"childrens"`
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
 	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -118,7 +118,7 @@ type conditionState struct {
 	AttributeName *string `pulumi:"attributeName"`
 	// Attribute value for condition. Value type is specified in dictionary object.
 	AttributeValue *string `pulumi:"attributeValue"`
-	// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens []ConditionChildren `pulumi:"childrens"`
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
 	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -145,7 +145,7 @@ type ConditionState struct {
 	AttributeName pulumi.StringPtrInput
 	// Attribute value for condition. Value type is specified in dictionary object.
 	AttributeValue pulumi.StringPtrInput
-	// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens ConditionChildrenArrayInput
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
 	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -176,7 +176,7 @@ type conditionArgs struct {
 	AttributeName *string `pulumi:"attributeName"`
 	// Attribute value for condition. Value type is specified in dictionary object.
 	AttributeValue *string `pulumi:"attributeValue"`
-	// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens []ConditionChildren `pulumi:"childrens"`
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
 	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -204,7 +204,7 @@ type ConditionArgs struct {
 	AttributeName pulumi.StringPtrInput
 	// Attribute value for condition. Value type is specified in dictionary object.
 	AttributeValue pulumi.StringPtrInput
-	// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens ConditionChildrenArrayInput
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
 	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
@@ -323,7 +323,7 @@ func (o ConditionOutput) AttributeValue() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Condition) pulumi.StringPtrOutput { return v.AttributeValue }).(pulumi.StringPtrOutput)
 }
 
-// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 func (o ConditionOutput) Childrens() ConditionChildrenArrayOutput {
 	return o.ApplyT(func(v *Condition) ConditionChildrenArrayOutput { return v.Childrens }).(ConditionChildrenArrayOutput)
 }

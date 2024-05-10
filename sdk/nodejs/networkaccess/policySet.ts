@@ -66,7 +66,7 @@ export class PolicySet extends pulumi.CustomResource {
     }
 
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
     public readonly childrens!: pulumi.Output<outputs.networkaccess.PolicySetChildren[] | undefined>;
     /**
@@ -196,7 +196,7 @@ export class PolicySet extends pulumi.CustomResource {
  */
 export interface PolicySetState {
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildren>[]>;
     /**
@@ -271,7 +271,7 @@ export interface PolicySetState {
  */
 export interface PolicySetArgs {
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildren>[]>;
     /**

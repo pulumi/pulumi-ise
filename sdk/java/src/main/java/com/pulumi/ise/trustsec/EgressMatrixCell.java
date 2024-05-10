@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,18 +43,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EgressMatrixCell(&#34;example&#34;, EgressMatrixCellArgs.builder()        
- *             .description(&#34;EgressMatrixCell Description&#34;)
- *             .defaultRule(&#34;NONE&#34;)
- *             .matrixCellStatus(&#34;ENABLED&#34;)
- *             .sgacls(&#34;26b76b10-66e6-11ee-9cc1-9eb2a3ecc82a, 9d64dcd0-6384-11ee-9cc1-9eb2a3ecc82a&#34;)
- *             .sourceSgtId(&#34;93c66ed0-8c01-11e6-996c-525400b48521&#34;)
- *             .destinationSgtId(&#34;93e1bf00-8c01-11e6-996c-525400b48521&#34;)
+ *         var example = new EgressMatrixCell("example", EgressMatrixCellArgs.builder()        
+ *             .description("EgressMatrixCell Description")
+ *             .defaultRule("NONE")
+ *             .matrixCellStatus("ENABLED")
+ *             .sgacls("26b76b10-66e6-11ee-9cc1-9eb2a3ecc82a, 9d64dcd0-6384-11ee-9cc1-9eb2a3ecc82a")
+ *             .sourceSgtId("93c66ed0-8c01-11e6-996c-525400b48521")
+ *             .destinationSgtId("93e1bf00-8c01-11e6-996c-525400b48521")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

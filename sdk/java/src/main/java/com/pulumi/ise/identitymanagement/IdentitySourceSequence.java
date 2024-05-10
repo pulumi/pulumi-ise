@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,20 +46,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IdentitySourceSequence(&#34;example&#34;, IdentitySourceSequenceArgs.builder()        
- *             .name(&#34;Sequence1&#34;)
- *             .description(&#34;My identity source sequence&#34;)
+ *         var example = new IdentitySourceSequence("example", IdentitySourceSequenceArgs.builder()        
+ *             .name("Sequence1")
+ *             .description("My identity source sequence")
  *             .breakOnStoreFail(true)
- *             .certificateAuthenticationProfile(&#34;Preloaded_Certificate_Profile&#34;)
+ *             .certificateAuthenticationProfile("Preloaded_Certificate_Profile")
  *             .identitySources(IdentitySourceSequenceIdentitySourceArgs.builder()
- *                 .name(&#34;Internal Users&#34;)
+ *                 .name("Internal Users")
  *                 .order(1)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

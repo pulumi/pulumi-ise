@@ -50,7 +50,7 @@ import (
 type IpToSgtMappingGroup struct {
 	pulumi.CustomResourceState
 
-	// Mandatory unless `deploy_type` is `ALL`
+	// Mandatory unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrOutput `pulumi:"deployTo"`
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringOutput `pulumi:"deployType"`
@@ -98,7 +98,7 @@ func GetIpToSgtMappingGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IpToSgtMappingGroup resources.
 type ipToSgtMappingGroupState struct {
-	// Mandatory unless `deploy_type` is `ALL`
+	// Mandatory unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType *string `pulumi:"deployType"`
@@ -111,7 +111,7 @@ type ipToSgtMappingGroupState struct {
 }
 
 type IpToSgtMappingGroupState struct {
-	// Mandatory unless `deploy_type` is `ALL`
+	// Mandatory unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrInput
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrInput
@@ -128,7 +128,7 @@ func (IpToSgtMappingGroupState) ElementType() reflect.Type {
 }
 
 type ipToSgtMappingGroupArgs struct {
-	// Mandatory unless `deploy_type` is `ALL`
+	// Mandatory unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType string `pulumi:"deployType"`
@@ -142,7 +142,7 @@ type ipToSgtMappingGroupArgs struct {
 
 // The set of arguments for constructing a IpToSgtMappingGroup resource.
 type IpToSgtMappingGroupArgs struct {
-	// Mandatory unless `deploy_type` is `ALL`
+	// Mandatory unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrInput
 	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringInput
@@ -241,7 +241,7 @@ func (o IpToSgtMappingGroupOutput) ToIpToSgtMappingGroupOutputWithContext(ctx co
 	return o
 }
 
-// Mandatory unless `deploy_type` is `ALL`
+// Mandatory unless `deployType` is `ALL`
 func (o IpToSgtMappingGroupOutput) DeployTo() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMappingGroup) pulumi.StringPtrOutput { return v.DeployTo }).(pulumi.StringPtrOutput)
 }

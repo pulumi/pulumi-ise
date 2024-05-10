@@ -69,7 +69,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
     }
 
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
     public readonly childrens!: pulumi.Output<outputs.networkaccess.AuthenticationRuleChildren[] | undefined>;
     /**
@@ -220,7 +220,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
  */
 export interface AuthenticationRuleState {
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildren>[]>;
     /**
@@ -303,7 +303,7 @@ export interface AuthenticationRuleState {
  */
 export interface AuthenticationRuleArgs {
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildren>[]>;
     /**

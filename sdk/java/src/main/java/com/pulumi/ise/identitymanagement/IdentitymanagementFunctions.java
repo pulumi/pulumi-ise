@@ -41,7 +41,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -63,16 +64,17 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryGroupsByDomain(GetActiveDirectoryGroupsByDomainArgs.builder()
-     *             .joinPointId(&#34;73808580-b6e6-11ee-8960-de6d7692bc40&#34;)
-     *             .domain(&#34;cisco.com&#34;)
-     *             .filter(&#34;CN=ISE Admins&#34;)
-     *             .sidFilter(&#34;cisco.com/S-1-5-33-544&#34;)
-     *             .typeFilter(&#34;UNIVERSAL&#34;)
+     *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
+     *             .domain("cisco.com")
+     *             .filter("CN=ISE Admins")
+     *             .sidFilter("cisco.com/S-1-5-33-544")
+     *             .typeFilter("UNIVERSAL")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -85,7 +87,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -107,16 +110,17 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryGroupsByDomain(GetActiveDirectoryGroupsByDomainArgs.builder()
-     *             .joinPointId(&#34;73808580-b6e6-11ee-8960-de6d7692bc40&#34;)
-     *             .domain(&#34;cisco.com&#34;)
-     *             .filter(&#34;CN=ISE Admins&#34;)
-     *             .sidFilter(&#34;cisco.com/S-1-5-33-544&#34;)
-     *             .typeFilter(&#34;UNIVERSAL&#34;)
+     *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
+     *             .domain("cisco.com")
+     *             .filter("CN=ISE Admins")
+     *             .sidFilter("cisco.com/S-1-5-33-544")
+     *             .typeFilter("UNIVERSAL")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -129,7 +133,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -151,16 +156,17 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryGroupsByDomain(GetActiveDirectoryGroupsByDomainArgs.builder()
-     *             .joinPointId(&#34;73808580-b6e6-11ee-8960-de6d7692bc40&#34;)
-     *             .domain(&#34;cisco.com&#34;)
-     *             .filter(&#34;CN=ISE Admins&#34;)
-     *             .sidFilter(&#34;cisco.com/S-1-5-33-544&#34;)
-     *             .typeFilter(&#34;UNIVERSAL&#34;)
+     *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
+     *             .domain("cisco.com")
+     *             .filter("CN=ISE Admins")
+     *             .sidFilter("cisco.com/S-1-5-33-544")
+     *             .typeFilter("UNIVERSAL")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -173,7 +179,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -195,16 +202,17 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryGroupsByDomain(GetActiveDirectoryGroupsByDomainArgs.builder()
-     *             .joinPointId(&#34;73808580-b6e6-11ee-8960-de6d7692bc40&#34;)
-     *             .domain(&#34;cisco.com&#34;)
-     *             .filter(&#34;CN=ISE Admins&#34;)
-     *             .sidFilter(&#34;cisco.com/S-1-5-33-544&#34;)
-     *             .typeFilter(&#34;UNIVERSAL&#34;)
+     *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
+     *             .domain("cisco.com")
+     *             .filter("CN=ISE Admins")
+     *             .sidFilter("cisco.com/S-1-5-33-544")
+     *             .typeFilter("UNIVERSAL")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -217,7 +225,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -239,12 +248,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -257,7 +267,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -279,12 +290,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -297,7 +309,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -319,12 +332,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -337,7 +351,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -359,12 +374,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -377,7 +393,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -399,12 +416,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -417,7 +435,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -439,12 +458,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -457,7 +477,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -479,12 +500,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -497,7 +519,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -519,12 +542,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -537,7 +561,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -559,12 +584,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -577,7 +603,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -599,12 +626,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -617,7 +645,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -639,12 +668,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -657,7 +687,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -679,12 +710,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -697,7 +729,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -719,12 +752,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -737,7 +771,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -759,12 +794,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -777,7 +813,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -799,12 +836,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -817,7 +855,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -839,12 +878,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -857,7 +897,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -879,12 +920,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -897,7 +939,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -919,12 +962,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -937,7 +981,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -959,12 +1004,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -977,7 +1023,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -999,12 +1046,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1017,7 +1065,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1039,12 +1088,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1057,7 +1107,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1079,12 +1130,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1097,7 +1149,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1119,12 +1172,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1137,7 +1191,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1159,12 +1214,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1177,7 +1233,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1199,12 +1256,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1217,7 +1275,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1239,12 +1298,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1257,7 +1317,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1279,12 +1340,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1297,7 +1359,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1319,12 +1382,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1337,7 +1401,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1359,12 +1424,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1377,7 +1443,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1399,12 +1466,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1417,7 +1485,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1439,12 +1508,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1457,7 +1527,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1479,12 +1550,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1497,7 +1569,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1519,12 +1592,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1537,7 +1611,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1559,12 +1634,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1577,7 +1653,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1599,12 +1676,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1617,7 +1695,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1639,12 +1718,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1657,7 +1737,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1679,12 +1760,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1697,7 +1779,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1719,12 +1802,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1737,7 +1821,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1759,12 +1844,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1777,7 +1863,8 @@ public final class IdentitymanagementFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1799,12 +1886,13 @@ public final class IdentitymanagementFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
