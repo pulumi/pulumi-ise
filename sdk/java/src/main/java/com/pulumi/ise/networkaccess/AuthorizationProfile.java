@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,48 +47,49 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AuthorizationProfile(&#34;example&#34;, AuthorizationProfileArgs.builder()        
- *             .name(&#34;AuthzProfile1&#34;)
- *             .description(&#34;My Authorization Profile&#34;)
- *             .vlanNameId(&#34;VLAN10&#34;)
+ *         var example = new AuthorizationProfile("example", AuthorizationProfileArgs.builder()        
+ *             .name("AuthzProfile1")
+ *             .description("My Authorization Profile")
+ *             .vlanNameId("VLAN10")
  *             .vlanTagId(0)
- *             .webRedirectionType(&#34;CentralizedWebAuth&#34;)
- *             .webRedirectionAcl(&#34;TEST_ACL&#34;)
- *             .webRedirectionPortalName(&#34;Sponsored Guest Portal (default)&#34;)
- *             .webRedirectionStaticIpHostNameFqdn(&#34;1.2.3.4&#34;)
+ *             .webRedirectionType("CentralizedWebAuth")
+ *             .webRedirectionAcl("TEST_ACL")
+ *             .webRedirectionPortalName("Sponsored Guest Portal (default)")
+ *             .webRedirectionStaticIpHostNameFqdn("1.2.3.4")
  *             .webRedirectionDisplayCertificatesRenewalMessages(true)
  *             .agentlessPosture(false)
- *             .accessType(&#34;ACCESS_ACCEPT&#34;)
- *             .profileName(&#34;Cisco&#34;)
- *             .airespaceAcl(&#34;ACL1&#34;)
- *             .acl(&#34;ACL1&#34;)
- *             .autoSmartPort(&#34;PROFILE1&#34;)
- *             .interfaceTemplate(&#34;TEMP1&#34;)
- *             .ipv6AclFilter(&#34;ACL1&#34;)
- *             .avcProfile(&#34;PROF1&#34;)
- *             .asaVpn(&#34;1&#34;)
- *             .uniqueIdentifier(&#34;ID1234&#34;)
+ *             .accessType("ACCESS_ACCEPT")
+ *             .profileName("Cisco")
+ *             .airespaceAcl("ACL1")
+ *             .acl("ACL1")
+ *             .autoSmartPort("PROFILE1")
+ *             .interfaceTemplate("TEMP1")
+ *             .ipv6AclFilter("ACL1")
+ *             .avcProfile("PROF1")
+ *             .asaVpn("1")
+ *             .uniqueIdentifier("ID1234")
  *             .trackMovement(false)
  *             .serviceTemplate(false)
  *             .easywiredSessionCandidate(false)
  *             .voiceDomainPermission(false)
  *             .neat(false)
  *             .webAuth(false)
- *             .macSecPolicy(&#34;MUST_SECURE&#34;)
- *             .reauthenticationConnectivity(&#34;DEFAULT&#34;)
+ *             .macSecPolicy("MUST_SECURE")
+ *             .reauthenticationConnectivity("DEFAULT")
  *             .reauthenticationTimer(1)
  *             .advancedAttributes(AuthorizationProfileAdvancedAttributeArgs.builder()
- *                 .attribute_left_dictionary_name(&#34;Cisco&#34;)
- *                 .attribute_left_name(&#34;cisco-av-pair&#34;)
- *                 .attribute_right_value_type(&#34;AttributeValue&#34;)
- *                 .attribute_right_value(&#34;set_nadprofile_vlan=true,vlan=TEST,tag=1&#34;)
+ *                 .attribute_left_dictionary_name("Cisco")
+ *                 .attribute_left_name("cisco-av-pair")
+ *                 .attribute_right_value_type("AttributeValue")
+ *                 .attribute_right_value("set_nadprofile_vlan=true,vlan=TEST,tag=1")
  *                 .build())
- *             .airespaceIpv6Acl(&#34;ACL1&#34;)
+ *             .airespaceIpv6Acl("ACL1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

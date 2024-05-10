@@ -63,7 +63,7 @@ export class CertificateAuthenticationProfile extends pulumi.CustomResource {
      */
     public readonly allowedAsUserName!: pulumi.Output<boolean>;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
      * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
      * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
      * `SUBJECT_COMMON_NAME`
@@ -138,7 +138,7 @@ export interface CertificateAuthenticationProfileState {
      */
     allowedAsUserName?: pulumi.Input<boolean>;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
      * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
      * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
      * `SUBJECT_COMMON_NAME`
@@ -179,7 +179,7 @@ export interface CertificateAuthenticationProfileArgs {
      */
     allowedAsUserName?: pulumi.Input<boolean>;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
      * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
      * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
      * `SUBJECT_COMMON_NAME`

@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,19 +43,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CertificateAuthenticationProfile(&#34;example&#34;, CertificateAuthenticationProfileArgs.builder()        
- *             .name(&#34;CertProf1&#34;)
- *             .description(&#34;My cert profile&#34;)
+ *         var example = new CertificateAuthenticationProfile("example", CertificateAuthenticationProfileArgs.builder()        
+ *             .name("CertProf1")
+ *             .description("My cert profile")
  *             .allowedAsUserName(false)
- *             .externalIdentityStoreName(&#34;[not applicable]&#34;)
- *             .certificateAttributeName(&#34;SUBJECT_COMMON_NAME&#34;)
- *             .matchMode(&#34;NEVER&#34;)
- *             .usernameFrom(&#34;CERTIFICATE&#34;)
+ *             .externalIdentityStoreName("[not applicable]")
+ *             .certificateAttributeName("SUBJECT_COMMON_NAME")
+ *             .matchMode("NEVER")
+ *             .usernameFrom("CERTIFICATE")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

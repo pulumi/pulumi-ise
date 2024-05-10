@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,19 +45,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TacacsProfile(&#34;example&#34;, TacacsProfileArgs.builder()        
- *             .name(&#34;Profile1&#34;)
- *             .description(&#34;My TACACS profile&#34;)
+ *         var example = new TacacsProfile("example", TacacsProfileArgs.builder()        
+ *             .name("Profile1")
+ *             .description("My TACACS profile")
  *             .sessionAttributes(TacacsProfileSessionAttributeArgs.builder()
- *                 .type(&#34;MANDATORY&#34;)
- *                 .name(&#34;attr1&#34;)
- *                 .value(&#34;value&#34;)
+ *                 .type("MANDATORY")
+ *                 .name("attr1")
+ *                 .value("value")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

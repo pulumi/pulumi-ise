@@ -50,7 +50,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -72,12 +73,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAllowedProtocols(GetAllowedProtocolsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -90,7 +92,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -112,12 +115,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAllowedProtocols(GetAllowedProtocolsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -130,7 +134,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -152,12 +157,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAllowedProtocols(GetAllowedProtocolsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -170,7 +176,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -192,12 +199,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAllowedProtocols(GetAllowedProtocolsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -210,7 +218,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -232,12 +241,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAllowedProtocols(GetAllowedProtocolsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -250,7 +260,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -272,12 +283,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAllowedProtocols(GetAllowedProtocolsArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -290,7 +302,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -312,13 +325,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -331,7 +345,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -353,13 +368,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -372,7 +388,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -394,13 +411,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -413,7 +431,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -435,13 +454,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -454,7 +474,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -476,13 +497,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -495,7 +517,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -517,13 +540,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -536,7 +560,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -558,13 +583,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -577,7 +603,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -599,13 +626,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -618,7 +646,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -640,12 +669,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -658,7 +688,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -680,12 +711,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -698,7 +730,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -720,12 +753,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -738,7 +772,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -760,12 +795,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -778,7 +814,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -800,12 +837,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -818,7 +856,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -840,12 +879,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -858,7 +898,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -880,12 +921,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationProfile(GetAuthorizationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -898,7 +940,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -920,12 +963,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationProfile(GetAuthorizationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -938,7 +982,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -960,12 +1005,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationProfile(GetAuthorizationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -978,7 +1024,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1000,12 +1047,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationProfile(GetAuthorizationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1018,7 +1066,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1040,12 +1089,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationProfile(GetAuthorizationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1058,7 +1108,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1080,12 +1131,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationProfile(GetAuthorizationProfileArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1098,7 +1150,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1120,13 +1173,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1139,7 +1193,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1161,13 +1216,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1180,7 +1236,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1202,13 +1259,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1221,7 +1279,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1243,13 +1302,14 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
-     *             .policySetId(&#34;d82952cb-b901-4b09-b363-5ebf39bdbaf9&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1262,7 +1322,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1284,12 +1345,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1302,7 +1364,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1324,12 +1387,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1342,7 +1406,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1364,12 +1429,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1382,7 +1448,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1404,12 +1471,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1422,7 +1490,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1444,12 +1513,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1462,7 +1532,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1484,12 +1555,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getCondition(GetConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1502,7 +1574,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1524,12 +1597,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDictionary(GetDictionaryArgs.builder()
-     *             .id(&#34;Dict1&#34;)
+     *             .id("Dict1")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1542,7 +1616,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1564,12 +1639,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDictionary(GetDictionaryArgs.builder()
-     *             .id(&#34;Dict1&#34;)
+     *             .id("Dict1")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1582,7 +1658,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1604,12 +1681,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDictionary(GetDictionaryArgs.builder()
-     *             .id(&#34;Dict1&#34;)
+     *             .id("Dict1")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1622,7 +1700,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1644,12 +1723,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDictionary(GetDictionaryArgs.builder()
-     *             .id(&#34;Dict1&#34;)
+     *             .id("Dict1")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1662,7 +1742,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1684,12 +1765,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDictionary(GetDictionaryArgs.builder()
-     *             .id(&#34;Dict1&#34;)
+     *             .id("Dict1")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1702,7 +1784,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1724,12 +1807,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDictionary(GetDictionaryArgs.builder()
-     *             .id(&#34;Dict1&#34;)
+     *             .id("Dict1")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1742,7 +1826,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1764,12 +1849,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDownloadableAcl(GetDownloadableAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1782,7 +1868,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1804,12 +1891,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDownloadableAcl(GetDownloadableAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1822,7 +1910,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1844,12 +1933,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDownloadableAcl(GetDownloadableAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1862,7 +1952,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1884,12 +1975,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDownloadableAcl(GetDownloadableAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1902,7 +1994,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1924,12 +2017,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDownloadableAcl(GetDownloadableAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1942,7 +2036,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1964,12 +2059,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getDownloadableAcl(GetDownloadableAclArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1982,7 +2078,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2004,12 +2101,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2022,7 +2120,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2044,12 +2143,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2062,7 +2162,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2084,12 +2185,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2102,7 +2204,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2124,12 +2227,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2142,7 +2246,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2164,12 +2269,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2182,7 +2288,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2204,12 +2311,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getPolicySet(GetPolicySetArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2222,7 +2330,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2244,12 +2353,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2262,7 +2372,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2284,12 +2395,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2302,7 +2414,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2324,12 +2437,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2342,7 +2456,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2364,12 +2479,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2382,7 +2498,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2404,12 +2521,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2422,7 +2540,8 @@ public final class NetworkaccessFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2444,12 +2563,13 @@ public final class NetworkaccessFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworkaccessFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
-     *             .id(&#34;76d24097-41c4-4558-a4d0-a8c07ac08470&#34;)
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,20 +45,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Condition(&#34;example&#34;, ConditionArgs.builder()        
- *             .name(&#34;Cond1&#34;)
- *             .description(&#34;My description&#34;)
- *             .conditionType(&#34;LibraryConditionAttributes&#34;)
+ *         var example = new Condition("example", ConditionArgs.builder()        
+ *             .name("Cond1")
+ *             .description("My description")
+ *             .conditionType("LibraryConditionAttributes")
  *             .isNegate(false)
- *             .attributeName(&#34;EapAuthentication&#34;)
- *             .attributeValue(&#34;EAP-TLS&#34;)
- *             .dictionaryName(&#34;Network Access&#34;)
- *             .operator(&#34;equals&#34;)
+ *             .attributeName("EapAuthentication")
+ *             .attributeValue("EAP-TLS")
+ *             .dictionaryName("Network Access")
+ *             .operator("equals")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

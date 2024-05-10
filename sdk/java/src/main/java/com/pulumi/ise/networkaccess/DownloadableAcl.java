@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,16 +42,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DownloadableAcl(&#34;example&#34;, DownloadableAclArgs.builder()        
- *             .name(&#34;MyACL&#34;)
- *             .description(&#34;My first downloadable ACL&#34;)
- *             .dacl(&#34;permit ip any any&#34;)
- *             .daclType(&#34;IPV4&#34;)
+ *         var example = new DownloadableAcl("example", DownloadableAclArgs.builder()        
+ *             .name("MyACL")
+ *             .description("My first downloadable ACL")
+ *             .dacl("permit ip any any")
+ *             .daclType("IPV4")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

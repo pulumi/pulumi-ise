@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,9 +43,9 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AllowedProtocolsTacacs(&#34;example&#34;, AllowedProtocolsTacacsArgs.builder()        
- *             .name(&#34;Protocols1&#34;)
- *             .description(&#34;My allowed TACACS protocols&#34;)
+ *         var example = new AllowedProtocolsTacacs("example", AllowedProtocolsTacacsArgs.builder()        
+ *             .name("Protocols1")
+ *             .description("My allowed TACACS protocols")
  *             .allowPapAscii(true)
  *             .allowChap(true)
  *             .allowMsChapV1(true)
@@ -52,7 +53,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

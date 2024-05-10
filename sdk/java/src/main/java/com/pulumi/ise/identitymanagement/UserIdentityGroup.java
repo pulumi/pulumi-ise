@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,15 +42,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new UserIdentityGroup(&#34;example&#34;, UserIdentityGroupArgs.builder()        
- *             .name(&#34;Group1&#34;)
- *             .description(&#34;My endpoint identity group&#34;)
- *             .parent(&#34;NAC Group:NAC:IdentityGroups:User Identity Groups&#34;)
+ *         var example = new UserIdentityGroup("example", UserIdentityGroupArgs.builder()        
+ *             .name("Group1")
+ *             .description("My endpoint identity group")
+ *             .parent("NAC Group:NAC:IdentityGroups:User Identity Groups")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

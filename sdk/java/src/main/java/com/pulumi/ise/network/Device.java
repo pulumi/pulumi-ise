@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,41 +47,41 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Device(&#34;example&#34;, DeviceArgs.builder()        
- *             .name(&#34;Device1&#34;)
- *             .description(&#34;My device&#34;)
+ *         var example = new Device("example", DeviceArgs.builder()        
+ *             .name("Device1")
+ *             .description("My device")
  *             .authenticationEnableKeyWrap(true)
- *             .authenticationEncryptionKey(&#34;cisco123cisco123&#34;)
- *             .authenticationEncryptionKeyFormat(&#34;ASCII&#34;)
- *             .authenticationMessageAuthenticatorCodeKey(&#34;cisco123cisco1235678&#34;)
- *             .authenticationNetworkProtocol(&#34;RADIUS&#34;)
- *             .authenticationRadiusSharedSecret(&#34;cisco123&#34;)
+ *             .authenticationEncryptionKey("cisco123cisco123")
+ *             .authenticationEncryptionKeyFormat("ASCII")
+ *             .authenticationMessageAuthenticatorCodeKey("cisco123cisco1235678")
+ *             .authenticationNetworkProtocol("RADIUS")
+ *             .authenticationRadiusSharedSecret("cisco123")
  *             .authenticationEnableMultiSecret(true)
- *             .authenticationSecondRadiusSharedSecret(&#34;cisco12345&#34;)
+ *             .authenticationSecondRadiusSharedSecret("cisco12345")
  *             .authenticationDtlsRequired(true)
  *             .coaPort(12345)
- *             .dtlsDnsName(&#34;cisco.com&#34;)
+ *             .dtlsDnsName("cisco.com")
  *             .ips(DeviceIpArgs.builder()
- *                 .ipaddress(&#34;2.3.4.5&#34;)
- *                 .mask(&#34;32&#34;)
+ *                 .ipaddress("2.3.4.5")
+ *                 .mask("32")
  *                 .build())
- *             .modelName(&#34;Unknown&#34;)
- *             .softwareVersion(&#34;Unknown&#34;)
- *             .profileName(&#34;Cisco&#34;)
+ *             .modelName("Unknown")
+ *             .softwareVersion("Unknown")
+ *             .profileName("Cisco")
  *             .snmpLinkTrapQuery(true)
  *             .snmpMacTrapQuery(true)
  *             .snmpPollingInterval(1200)
- *             .snmpRoCommunity(&#34;rocom&#34;)
- *             .snmpVersion(&#34;TWO_C&#34;)
- *             .tacacsConnectModeOptions(&#34;OFF&#34;)
- *             .tacacsSharedSecret(&#34;cisco123&#34;)
- *             .trustsecDeviceId(&#34;device123&#34;)
- *             .trustsecDevicePassword(&#34;cisco123&#34;)
- *             .trustsecRestApiUsername(&#34;user123&#34;)
- *             .trustsecRestApiPassword(&#34;Cisco123&#34;)
- *             .trustsecEnableModePassword(&#34;cisco123&#34;)
- *             .trustsecExecModePassword(&#34;cisco123&#34;)
- *             .trustsecExecModeUsername(&#34;user456&#34;)
+ *             .snmpRoCommunity("rocom")
+ *             .snmpVersion("TWO_C")
+ *             .tacacsConnectModeOptions("OFF")
+ *             .tacacsSharedSecret("cisco123")
+ *             .trustsecDeviceId("device123")
+ *             .trustsecDevicePassword("cisco123")
+ *             .trustsecRestApiUsername("user123")
+ *             .trustsecRestApiPassword("Cisco123")
+ *             .trustsecEnableModePassword("cisco123")
+ *             .trustsecExecModePassword("cisco123")
+ *             .trustsecExecModeUsername("user456")
  *             .trustsecIncludeWhenDeployingSgtUpdates(true)
  *             .trustsecDownloadEnviromentDataEveryXSeconds(1000)
  *             .trustsecDownloadPeerAuthorizationPolicyEveryXSeconds(1000)
@@ -88,12 +89,13 @@ import javax.annotation.Nullable;
  *             .trustsecOtherSgaDevicesToTrustThisDevice(true)
  *             .trustsecReAuthenticationEveryXSeconds(1000)
  *             .trustsecSendConfigurationToDevice(true)
- *             .trustsecSendConfigurationToDeviceUsing(&#34;ENABLE_USING_COA&#34;)
+ *             .trustsecSendConfigurationToDeviceUsing("ENABLE_USING_COA")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -160,12 +160,12 @@ export class AuthorizationProfile extends pulumi.CustomResource {
      */
     public readonly webRedirectionAcl!: pulumi.Output<string | undefined>;
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+     * values the field must be ignored.
      */
     public readonly webRedirectionDisplayCertificatesRenewalMessages!: pulumi.Output<boolean | undefined>;
     /**
-     * A portal that exist in the DB and fits the `web_redirection_type`
+     * A portal that exist in the DB and fits the `webRedirectionType`
      */
     public readonly webRedirectionPortalName!: pulumi.Output<string | undefined>;
     /**
@@ -173,7 +173,7 @@ export class AuthorizationProfile extends pulumi.CustomResource {
      */
     public readonly webRedirectionStaticIpHostNameFqdn!: pulumi.Output<string | undefined>;
     /**
-     * This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+     * This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
      * `NativeSupplicanProvisioning`, `ClientProvisioning`
      */
     public readonly webRedirectionType!: pulumi.Output<string | undefined>;
@@ -386,12 +386,12 @@ export interface AuthorizationProfileState {
      */
     webRedirectionAcl?: pulumi.Input<string>;
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+     * values the field must be ignored.
      */
     webRedirectionDisplayCertificatesRenewalMessages?: pulumi.Input<boolean>;
     /**
-     * A portal that exist in the DB and fits the `web_redirection_type`
+     * A portal that exist in the DB and fits the `webRedirectionType`
      */
     webRedirectionPortalName?: pulumi.Input<string>;
     /**
@@ -399,7 +399,7 @@ export interface AuthorizationProfileState {
      */
     webRedirectionStaticIpHostNameFqdn?: pulumi.Input<string>;
     /**
-     * This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+     * This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
      * `NativeSupplicanProvisioning`, `ClientProvisioning`
      */
     webRedirectionType?: pulumi.Input<string>;
@@ -526,12 +526,12 @@ export interface AuthorizationProfileArgs {
      */
     webRedirectionAcl?: pulumi.Input<string>;
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+     * values the field must be ignored.
      */
     webRedirectionDisplayCertificatesRenewalMessages?: pulumi.Input<boolean>;
     /**
-     * A portal that exist in the DB and fits the `web_redirection_type`
+     * A portal that exist in the DB and fits the `webRedirectionType`
      */
     webRedirectionPortalName?: pulumi.Input<string>;
     /**
@@ -539,7 +539,7 @@ export interface AuthorizationProfileArgs {
      */
     webRedirectionStaticIpHostNameFqdn?: pulumi.Input<string>;
     /**
-     * This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+     * This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
      * `NativeSupplicanProvisioning`, `ClientProvisioning`
      */
     webRedirectionType?: pulumi.Input<string>;

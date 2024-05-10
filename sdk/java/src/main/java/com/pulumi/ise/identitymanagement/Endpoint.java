@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,12 +44,12 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Endpoint(&#34;example&#34;, EndpointArgs.builder()        
- *             .name(&#34;00:11:22:33:44:55&#34;)
- *             .description(&#34;My endpoint&#34;)
- *             .mac(&#34;00:11:22:33:44:55&#34;)
- *             .groupId(&#34;3a88eec0-8c00-11e6-996c-525400b48521&#34;)
- *             .profileId(&#34;3a91a150-8c00-11e6-996c-525400b48521&#34;)
+ *         var example = new Endpoint("example", EndpointArgs.builder()        
+ *             .name("00:11:22:33:44:55")
+ *             .description("My endpoint")
+ *             .mac("00:11:22:33:44:55")
+ *             .groupId("3a88eec0-8c00-11e6-996c-525400b48521")
+ *             .profileId("3a91a150-8c00-11e6-996c-525400b48521")
  *             .staticProfileAssignment(true)
  *             .staticProfileAssignmentDefined(true)
  *             .staticGroupAssignment(true)
@@ -57,7 +58,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

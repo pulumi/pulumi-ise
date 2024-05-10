@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,17 +43,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SecurityGroupAcl(&#34;example&#34;, SecurityGroupAclArgs.builder()        
- *             .name(&#34;ACL1&#34;)
- *             .description(&#34;SG ACL 1&#34;)
- *             .aclContent(&#34;Permit IP&#34;)
- *             .ipVersion(&#34;IPV4&#34;)
+ *         var example = new SecurityGroupAcl("example", SecurityGroupAclArgs.builder()        
+ *             .name("ACL1")
+ *             .description("SG ACL 1")
+ *             .aclContent("Permit IP")
+ *             .ipVersion("IPV4")
  *             .readOnly(false)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

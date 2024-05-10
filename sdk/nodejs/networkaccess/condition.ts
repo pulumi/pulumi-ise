@@ -70,7 +70,7 @@ export class Condition extends pulumi.CustomResource {
      */
     public readonly attributeValue!: pulumi.Output<string | undefined>;
     /**
-     * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
     public readonly childrens!: pulumi.Output<outputs.networkaccess.ConditionChildren[] | undefined>;
     /**
@@ -163,7 +163,7 @@ export interface ConditionState {
      */
     attributeValue?: pulumi.Input<string>;
     /**
-     * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildren>[]>;
     /**
@@ -213,7 +213,7 @@ export interface ConditionArgs {
      */
     attributeValue?: pulumi.Input<string>;
     /**
-     * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildren>[]>;
     /**

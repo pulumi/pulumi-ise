@@ -79,14 +79,14 @@ type AuthorizationProfile struct {
 	WebAuth pulumi.BoolOutput `pulumi:"webAuth"`
 	// Web redirection ACL
 	WebRedirectionAcl pulumi.StringPtrOutput `pulumi:"webRedirectionAcl"`
-	// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-	// `web_redirection_type` values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+	// values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages pulumi.BoolPtrOutput `pulumi:"webRedirectionDisplayCertificatesRenewalMessages"`
-	// A portal that exist in the DB and fits the `web_redirection_type`
+	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName pulumi.StringPtrOutput `pulumi:"webRedirectionPortalName"`
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn pulumi.StringPtrOutput `pulumi:"webRedirectionStaticIpHostNameFqdn"`
-	// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
 	// `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType pulumi.StringPtrOutput `pulumi:"webRedirectionType"`
 }
@@ -179,14 +179,14 @@ type authorizationProfileState struct {
 	WebAuth *bool `pulumi:"webAuth"`
 	// Web redirection ACL
 	WebRedirectionAcl *string `pulumi:"webRedirectionAcl"`
-	// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-	// `web_redirection_type` values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+	// values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages *bool `pulumi:"webRedirectionDisplayCertificatesRenewalMessages"`
-	// A portal that exist in the DB and fits the `web_redirection_type`
+	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName *string `pulumi:"webRedirectionPortalName"`
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn *string `pulumi:"webRedirectionStaticIpHostNameFqdn"`
-	// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
 	// `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType *string `pulumi:"webRedirectionType"`
 }
@@ -250,14 +250,14 @@ type AuthorizationProfileState struct {
 	WebAuth pulumi.BoolPtrInput
 	// Web redirection ACL
 	WebRedirectionAcl pulumi.StringPtrInput
-	// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-	// `web_redirection_type` values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+	// values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages pulumi.BoolPtrInput
-	// A portal that exist in the DB and fits the `web_redirection_type`
+	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName pulumi.StringPtrInput
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn pulumi.StringPtrInput
-	// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
 	// `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType pulumi.StringPtrInput
 }
@@ -325,14 +325,14 @@ type authorizationProfileArgs struct {
 	WebAuth *bool `pulumi:"webAuth"`
 	// Web redirection ACL
 	WebRedirectionAcl *string `pulumi:"webRedirectionAcl"`
-	// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-	// `web_redirection_type` values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+	// values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages *bool `pulumi:"webRedirectionDisplayCertificatesRenewalMessages"`
-	// A portal that exist in the DB and fits the `web_redirection_type`
+	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName *string `pulumi:"webRedirectionPortalName"`
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn *string `pulumi:"webRedirectionStaticIpHostNameFqdn"`
-	// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
 	// `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType *string `pulumi:"webRedirectionType"`
 }
@@ -397,14 +397,14 @@ type AuthorizationProfileArgs struct {
 	WebAuth pulumi.BoolPtrInput
 	// Web redirection ACL
 	WebRedirectionAcl pulumi.StringPtrInput
-	// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-	// `web_redirection_type` values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+	// values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages pulumi.BoolPtrInput
-	// A portal that exist in the DB and fits the `web_redirection_type`
+	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName pulumi.StringPtrInput
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn pulumi.StringPtrInput
-	// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
 	// `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType pulumi.StringPtrInput
 }
@@ -643,15 +643,15 @@ func (o AuthorizationProfileOutput) WebRedirectionAcl() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionAcl }).(pulumi.StringPtrOutput)
 }
 
-// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-// `web_redirection_type` values the field must be ignored.
+// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
+// values the field must be ignored.
 func (o AuthorizationProfileOutput) WebRedirectionDisplayCertificatesRenewalMessages() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolPtrOutput {
 		return v.WebRedirectionDisplayCertificatesRenewalMessages
 	}).(pulumi.BoolPtrOutput)
 }
 
-// A portal that exist in the DB and fits the `web_redirection_type`
+// A portal that exist in the DB and fits the `webRedirectionType`
 func (o AuthorizationProfileOutput) WebRedirectionPortalName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionPortalName }).(pulumi.StringPtrOutput)
 }
@@ -661,7 +661,7 @@ func (o AuthorizationProfileOutput) WebRedirectionStaticIpHostNameFqdn() pulumi.
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionStaticIpHostNameFqdn }).(pulumi.StringPtrOutput)
 }
 
-// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
+// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
 // `NativeSupplicanProvisioning`, `ClientProvisioning`
 func (o AuthorizationProfileOutput) WebRedirectionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionType }).(pulumi.StringPtrOutput)

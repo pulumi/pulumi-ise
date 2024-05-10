@@ -55,7 +55,7 @@ type CertificateAuthenticationProfile struct {
 
 	// Allow as username - Default value: `false`
 	AllowedAsUserName pulumi.BoolOutput `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
 	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
 	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
 	// `SUBJECT_COMMON_NAME`
@@ -108,7 +108,7 @@ func GetCertificateAuthenticationProfile(ctx *pulumi.Context,
 type certificateAuthenticationProfileState struct {
 	// Allow as username - Default value: `false`
 	AllowedAsUserName *bool `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
 	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
 	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
 	// `SUBJECT_COMMON_NAME`
@@ -132,7 +132,7 @@ type certificateAuthenticationProfileState struct {
 type CertificateAuthenticationProfileState struct {
 	// Allow as username - Default value: `false`
 	AllowedAsUserName pulumi.BoolPtrInput
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
 	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
 	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
 	// `SUBJECT_COMMON_NAME`
@@ -160,7 +160,7 @@ func (CertificateAuthenticationProfileState) ElementType() reflect.Type {
 type certificateAuthenticationProfileArgs struct {
 	// Allow as username - Default value: `false`
 	AllowedAsUserName *bool `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
 	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
 	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
 	// `SUBJECT_COMMON_NAME`
@@ -185,7 +185,7 @@ type certificateAuthenticationProfileArgs struct {
 type CertificateAuthenticationProfileArgs struct {
 	// Allow as username - Default value: `false`
 	AllowedAsUserName pulumi.BoolPtrInput
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
 	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
 	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
 	// `SUBJECT_COMMON_NAME`
@@ -298,7 +298,7 @@ func (o CertificateAuthenticationProfileOutput) AllowedAsUserName() pulumi.BoolO
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.BoolOutput { return v.AllowedAsUserName }).(pulumi.BoolOutput)
 }
 
-// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
+// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
 // `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
 // `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
 // `SUBJECT_COMMON_NAME`

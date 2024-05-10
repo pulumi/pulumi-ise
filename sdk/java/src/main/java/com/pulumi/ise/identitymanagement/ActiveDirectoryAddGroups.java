@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,23 +46,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActiveDirectoryAddGroups(&#34;example&#34;, ActiveDirectoryAddGroupsArgs.builder()        
- *             .joinPointId(&#34;73808580-b6e6-11ee-8960-de6d7692bc40&#34;)
- *             .name(&#34;cisco.local&#34;)
- *             .description(&#34;My AD join point&#34;)
- *             .domain(&#34;cisco.local&#34;)
- *             .adScopesNames(&#34;Default_Scope&#34;)
+ *         var example = new ActiveDirectoryAddGroups("example", ActiveDirectoryAddGroupsArgs.builder()        
+ *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
+ *             .name("cisco.local")
+ *             .description("My AD join point")
+ *             .domain("cisco.local")
+ *             .adScopesNames("Default_Scope")
  *             .enableDomainAllowedList(true)
  *             .groups(ActiveDirectoryAddGroupsGroupArgs.builder()
- *                 .name(&#34;cisco.local/operators&#34;)
- *                 .sid(&#34;S-1-5-32-548&#34;)
- *                 .type(&#34;GLOBAL&#34;)
+ *                 .name("cisco.local/operators")
+ *                 .sid("S-1-5-32-548")
+ *                 .type("GLOBAL")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

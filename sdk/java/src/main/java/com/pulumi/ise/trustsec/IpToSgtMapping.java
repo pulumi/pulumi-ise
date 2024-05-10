@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,16 +42,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IpToSgtMapping(&#34;example&#34;, IpToSgtMappingArgs.builder()        
- *             .name(&#34;10.0.0.1/32&#34;)
- *             .deployType(&#34;ALL&#34;)
- *             .hostIp(&#34;10.0.0.1/32&#34;)
- *             .sgt(&#34;93e1bf00-8c01-11e6-996c-525400b48521&#34;)
+ *         var example = new IpToSgtMapping("example", IpToSgtMappingArgs.builder()        
+ *             .name("10.0.0.1/32")
+ *             .deployType("ALL")
+ *             .hostIp("10.0.0.1/32")
+ *             .sgt("93e1bf00-8c01-11e6-996c-525400b48521")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

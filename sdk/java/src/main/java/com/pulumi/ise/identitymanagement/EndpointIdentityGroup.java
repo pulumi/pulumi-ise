@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,15 +43,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EndpointIdentityGroup(&#34;example&#34;, EndpointIdentityGroupArgs.builder()        
- *             .name(&#34;Group1&#34;)
- *             .description(&#34;My endpoint identity group&#34;)
+ *         var example = new EndpointIdentityGroup("example", EndpointIdentityGroupArgs.builder()        
+ *             .name("Group1")
+ *             .description("My endpoint identity group")
  *             .systemDefined(false)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
