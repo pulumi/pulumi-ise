@@ -21,10 +21,14 @@ const provider = new ise.Provider("example-ise-provider", {
 const exampleEmployeeGroup = new ise.identitymanagement.UserIdentityGroup("example-employee-group", {
     name: "PulumiEmployeeGroup",
     description: "My pulumi employee identity group",
+}, {
+    provider: provider
 });
 const exampleGuestsGroup = new ise.identitymanagement.UserIdentityGroup("example-guests-group", {
     name: "PulumiGuestGroup",
     description: "My pulumi guest identity group",
+}, {
+    provider: provider
 });
 
 new ise.identitymanagement.InternalUser("example-internal-user-employee", {
@@ -41,6 +45,8 @@ new ise.identitymanagement.InternalUser("example-internal-user-employee", {
     passwordIdStore: "Internal Users",
     description: "My first Pulumi user",
     identityGroups: exampleEmployeeGroup.id
+}, {
+    provider: provider
 });
 
 new ise.identitymanagement.InternalUser("example-internal-user-guest", {
@@ -57,16 +63,22 @@ new ise.identitymanagement.InternalUser("example-internal-user-guest", {
     passwordIdStore: "Internal Users",
     description: "My first Pulumi guest",
     identityGroups: exampleGuestsGroup.id
+}, {
+    provider: provider
 });
 
 const parentEndpointIdentityGroupId = ise.identitymanagement.getEndpointIdentityGroupOutput({
     name: "Profiled"
+}, {
+    provider: provider
 })
 
 const endpointIdentityGroup = new ise.identitymanagement.EndpointIdentityGroup("example-endpoint-identity-group", {
     name: "PulumiEndpointGroup",
     description: "My endpoint identity group for Pulumi",
     parentEndpointIdentityGroupId: parentEndpointIdentityGroupId.id
+}, {
+    provider: provider
 })
 
 new ise.identitymanagement.Endpoint("example-endpoint", {
@@ -77,12 +89,16 @@ new ise.identitymanagement.Endpoint("example-endpoint", {
     profileId: "061f5530-19f6-11ee-88d5-0050568fa0ed",
     staticProfileAssignment: true,
     staticGroupAssignment: true,
+}, {
+    provider: provider
 });
 
 const exampleDeviceGroup = new ise.network.DeviceGroup("example-device-group", {
     name: "All Device Types#All Pulumi Device Types#Group1",
     description: "My pulumi network device group",
     rootGroup: "All Device Types",
+}, {
+    provider: provider
 });
 
 new ise.network.Device("example-network-device", {
@@ -93,6 +109,8 @@ new ise.network.Device("example-network-device", {
         mask: "32",
     }],
     networkDeviceGroups: [exampleDeviceGroup.name]
+}, {
+    provider: provider
 })
 
 new ise.networkaccess.PolicySet("example-network-access-policy-set", {
@@ -108,4 +126,6 @@ new ise.networkaccess.PolicySet("example-network-access-policy-set", {
     conditionAttributeValue: "All Locations",
     conditionDictionaryName: "DEVICE",
     conditionOperator: "equals",
+}, {
+    provider: provider
 })
