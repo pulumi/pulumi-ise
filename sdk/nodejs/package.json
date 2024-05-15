@@ -1,6 +1,6 @@
 {
     "name": "@pulumi/ise",
-    "version": "${VERSION}",
+    "version": "0.0.0-alpha.0+dev",
     "description": "A Pulumi package for managing resources on a Cisco ISE (Identity Service Engine) instance.. Based on terraform-provider-ise: version v0.2.1",
     "keywords": [
         "pulumi",
@@ -23,6 +23,7 @@
     },
     "pulumi": {
         "resource": true,
-        "name": "ise"
+        "name": "ise",
+        "version": "0.0.0-alpha.0+dev"
     }
 }
