@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AllowedProtocolsTacacs("example", AllowedProtocolsTacacsArgs.builder()        
+ *         var example = new AllowedProtocolsTacacs("example", AllowedProtocolsTacacsArgs.builder()
  *             .name("Protocols1")
  *             .description("My allowed TACACS protocols")
  *             .allowPapAscii(true)

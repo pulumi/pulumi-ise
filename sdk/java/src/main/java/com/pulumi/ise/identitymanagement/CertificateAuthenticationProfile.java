@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CertificateAuthenticationProfile("example", CertificateAuthenticationProfileArgs.builder()        
+ *         var example = new CertificateAuthenticationProfile("example", CertificateAuthenticationProfileArgs.builder()
  *             .name("CertProf1")
  *             .description("My cert profile")
  *             .allowedAsUserName(false)

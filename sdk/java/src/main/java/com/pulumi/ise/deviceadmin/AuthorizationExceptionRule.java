@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AuthorizationExceptionRule("example", AuthorizationExceptionRuleArgs.builder()        
+ *         var example = new AuthorizationExceptionRule("example", AuthorizationExceptionRuleArgs.builder()
  *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
  *             .name("Rule1")
  *             .default_(false)

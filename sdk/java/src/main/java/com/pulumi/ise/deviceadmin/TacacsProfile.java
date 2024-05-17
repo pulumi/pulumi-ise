@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TacacsProfile("example", TacacsProfileArgs.builder()        
+ *         var example = new TacacsProfile("example", TacacsProfileArgs.builder()
  *             .name("Profile1")
  *             .description("My TACACS profile")
  *             .sessionAttributes(TacacsProfileSessionAttributeArgs.builder()

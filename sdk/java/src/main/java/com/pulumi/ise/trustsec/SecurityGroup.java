@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SecurityGroup("example", SecurityGroupArgs.builder()        
+ *         var example = new SecurityGroup("example", SecurityGroupArgs.builder()
  *             .name("SGT1234")
  *             .description("My SGT")
  *             .value(1234)

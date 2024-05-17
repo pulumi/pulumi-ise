@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Endpoint("example", EndpointArgs.builder()        
+ *         var example = new Endpoint("example", EndpointArgs.builder()
  *             .name("00:11:22:33:44:55")
  *             .description("My endpoint")
  *             .mac("00:11:22:33:44:55")

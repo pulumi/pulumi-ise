@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TacacsCommandSet("example", TacacsCommandSetArgs.builder()        
+ *         var example = new TacacsCommandSet("example", TacacsCommandSetArgs.builder()
  *             .name("CommandSet1")
  *             .description("My TACACS command set")
  *             .permitUnmatched(true)

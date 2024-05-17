@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InternalUser("example", InternalUserArgs.builder()        
+ *         var example = new InternalUser("example", InternalUserArgs.builder()
  *             .name("UserTF")
  *             .password("Cisco123")
  *             .changePassword(true)
