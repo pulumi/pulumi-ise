@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TimeAndDateCondition("example", TimeAndDateConditionArgs.builder()        
+ *         var example = new TimeAndDateCondition("example", TimeAndDateConditionArgs.builder()
  *             .name("Cond1")
  *             .description("My description")
  *             .isNegate(false)

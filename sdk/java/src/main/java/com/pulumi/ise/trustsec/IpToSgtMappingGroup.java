@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IpToSgtMappingGroup("example", IpToSgtMappingGroupArgs.builder()        
+ *         var example = new IpToSgtMappingGroup("example", IpToSgtMappingGroupArgs.builder()
  *             .name("groupA")
  *             .deployType("ALL")
  *             .sgt("93e1bf00-8c01-11e6-996c-525400b48521")

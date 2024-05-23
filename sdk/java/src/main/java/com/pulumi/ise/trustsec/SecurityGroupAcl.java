@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SecurityGroupAcl("example", SecurityGroupAclArgs.builder()        
+ *         var example = new SecurityGroupAcl("example", SecurityGroupAclArgs.builder()
  *             .name("ACL1")
  *             .description("SG ACL 1")
  *             .aclContent("Permit IP")

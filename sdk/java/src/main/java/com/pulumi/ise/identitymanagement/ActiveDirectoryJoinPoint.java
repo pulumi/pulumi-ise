@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActiveDirectoryJoinPoint("example", ActiveDirectoryJoinPointArgs.builder()        
+ *         var example = new ActiveDirectoryJoinPoint("example", ActiveDirectoryJoinPointArgs.builder()
  *             .name("cisco.local")
  *             .description("My AD join point")
  *             .domain("cisco.local")

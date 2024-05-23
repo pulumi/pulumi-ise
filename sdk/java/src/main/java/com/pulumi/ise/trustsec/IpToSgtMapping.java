@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IpToSgtMapping("example", IpToSgtMappingArgs.builder()        
+ *         var example = new IpToSgtMapping("example", IpToSgtMappingArgs.builder()
  *             .name("10.0.0.1/32")
  *             .deployType("ALL")
  *             .hostIp("10.0.0.1/32")

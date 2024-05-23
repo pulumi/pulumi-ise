@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActiveDirectoryJoinDomainWithAllNodes("example", ActiveDirectoryJoinDomainWithAllNodesArgs.builder()        
+ *         var example = new ActiveDirectoryJoinDomainWithAllNodes("example", ActiveDirectoryJoinDomainWithAllNodesArgs.builder()
  *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
  *             .additionalDatas(ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs.builder()
  *                 .name("username")

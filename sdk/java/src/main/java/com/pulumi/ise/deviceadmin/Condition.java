@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Condition("example", ConditionArgs.builder()        
+ *         var example = new Condition("example", ConditionArgs.builder()
  *             .name("Cond1")
  *             .description("My description")
  *             .conditionType("LibraryConditionAttributes")
