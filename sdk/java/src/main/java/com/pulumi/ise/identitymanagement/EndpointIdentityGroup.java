@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EndpointIdentityGroup("example", EndpointIdentityGroupArgs.builder()        
+ *         var example = new EndpointIdentityGroup("example", EndpointIdentityGroupArgs.builder()
  *             .name("Group1")
  *             .description("My endpoint identity group")
  *             .systemDefined(false)

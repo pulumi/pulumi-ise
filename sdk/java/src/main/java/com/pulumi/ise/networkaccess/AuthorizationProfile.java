@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AuthorizationProfile("example", AuthorizationProfileArgs.builder()        
+ *         var example = new AuthorizationProfile("example", AuthorizationProfileArgs.builder()
  *             .name("AuthzProfile1")
  *             .description("My Authorization Profile")
  *             .vlanNameId("VLAN10")

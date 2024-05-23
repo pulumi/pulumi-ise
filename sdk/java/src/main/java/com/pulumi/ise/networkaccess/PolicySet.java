@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PolicySet("example", PolicySetArgs.builder()        
+ *         var example = new PolicySet("example", PolicySetArgs.builder()
  *             .name("PolicySet1")
  *             .description("My description")
  *             .isProxy(false)

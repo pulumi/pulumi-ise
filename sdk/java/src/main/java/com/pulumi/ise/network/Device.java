@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Device("example", DeviceArgs.builder()        
+ *         var example = new Device("example", DeviceArgs.builder()
  *             .name("Device1")
  *             .description("My device")
  *             .authenticationEnableKeyWrap(true)
