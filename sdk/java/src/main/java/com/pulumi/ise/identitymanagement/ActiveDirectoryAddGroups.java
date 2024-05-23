@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActiveDirectoryAddGroups("example", ActiveDirectoryAddGroupsArgs.builder()        
+ *         var example = new ActiveDirectoryAddGroups("example", ActiveDirectoryAddGroupsArgs.builder()
  *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
  *             .name("cisco.local")
  *             .description("My AD join point")

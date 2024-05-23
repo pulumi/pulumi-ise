@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AuthorizationGlobalExceptionRule("example", AuthorizationGlobalExceptionRuleArgs.builder()        
+ *         var example = new AuthorizationGlobalExceptionRule("example", AuthorizationGlobalExceptionRuleArgs.builder()
  *             .name("Rule1")
  *             .default_(false)
  *             .rank(0)

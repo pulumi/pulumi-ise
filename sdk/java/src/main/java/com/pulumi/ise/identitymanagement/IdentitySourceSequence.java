@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IdentitySourceSequence("example", IdentitySourceSequenceArgs.builder()        
+ *         var example = new IdentitySourceSequence("example", IdentitySourceSequenceArgs.builder()
  *             .name("Sequence1")
  *             .description("My identity source sequence")
  *             .breakOnStoreFail(true)
