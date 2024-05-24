@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Dictionary("example", DictionaryArgs.builder()        
+ *         var example = new Dictionary("example", DictionaryArgs.builder()
  *             .name("Dict1")
  *             .description("My description")
  *             .version("1.1")

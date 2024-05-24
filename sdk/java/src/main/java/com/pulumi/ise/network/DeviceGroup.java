@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DeviceGroup("example", DeviceGroupArgs.builder()        
+ *         var example = new DeviceGroup("example", DeviceGroupArgs.builder()
  *             .name("Device Type#All Device Types#Group1")
  *             .description("My network device group")
  *             .rootGroup("Device Type")

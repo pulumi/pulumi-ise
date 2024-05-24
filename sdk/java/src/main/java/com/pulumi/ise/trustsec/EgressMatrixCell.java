@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EgressMatrixCell("example", EgressMatrixCellArgs.builder()        
+ *         var example = new EgressMatrixCell("example", EgressMatrixCellArgs.builder()
  *             .description("EgressMatrixCell Description")
  *             .defaultRule("NONE")
  *             .matrixCellStatus("ENABLED")

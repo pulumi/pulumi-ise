@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AllowedProtocols("example", AllowedProtocolsArgs.builder()        
+ *         var example = new AllowedProtocols("example", AllowedProtocolsArgs.builder()
  *             .name("Protocols1")
  *             .description("My allowed protocols")
  *             .processHostLookup(true)

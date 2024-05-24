@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new UserIdentityGroup("example", UserIdentityGroupArgs.builder()        
+ *         var example = new UserIdentityGroup("example", UserIdentityGroupArgs.builder()
  *             .name("Group1")
  *             .description("My endpoint identity group")
  *             .parent("NAC Group:NAC:IdentityGroups:User Identity Groups")
