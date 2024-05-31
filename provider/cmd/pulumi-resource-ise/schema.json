@@ -7,12 +7,11 @@
         "ise",
         "category/network"
     ],
-    "homepage": "https://github.com/pulumi/pulumi-ise",
+    "homepage": "https://pulumi.com",
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`ise` Terraform Provider](https://github.com/CiscoDevNet/terraform-provider-ise).",
     "repository": "https://github.com/pulumi/pulumi-ise",
     "logoUrl": "https://raw.githubusercontent.com/pulumi/pulumi-ise/main/docs/ise.png",
-    "publisher": "pulumi",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"
     },
