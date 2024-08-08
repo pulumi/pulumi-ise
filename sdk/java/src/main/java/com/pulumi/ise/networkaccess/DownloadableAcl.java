@@ -125,7 +125,7 @@ public class DownloadableAcl extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DownloadableAcl(String name) {
+    public DownloadableAcl(java.lang.String name) {
         this(name, DownloadableAclArgs.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public class DownloadableAcl extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DownloadableAcl(String name, DownloadableAclArgs args) {
+    public DownloadableAcl(java.lang.String name, DownloadableAclArgs args) {
         this(name, args, null);
     }
     /**
@@ -142,15 +142,22 @@ public class DownloadableAcl extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DownloadableAcl(String name, DownloadableAclArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:networkaccess/downloadableAcl:DownloadableAcl", name, args == null ? DownloadableAclArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public DownloadableAcl(java.lang.String name, DownloadableAclArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:networkaccess/downloadableAcl:DownloadableAcl", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DownloadableAcl(String name, Output<String> id, @Nullable DownloadableAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:networkaccess/downloadableAcl:DownloadableAcl", name, state, makeResourceOptions(options, id));
+    private DownloadableAcl(java.lang.String name, Output<java.lang.String> id, @Nullable DownloadableAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:networkaccess/downloadableAcl:DownloadableAcl", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static DownloadableAclArgs makeArgs(DownloadableAclArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DownloadableAclArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -166,7 +173,7 @@ public class DownloadableAcl extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DownloadableAcl get(String name, Output<String> id, @Nullable DownloadableAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DownloadableAcl get(java.lang.String name, Output<java.lang.String> id, @Nullable DownloadableAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DownloadableAcl(name, id, state, options);
     }
 }
