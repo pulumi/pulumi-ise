@@ -154,7 +154,7 @@ class TacacsCommandSet(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 commands: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsCommandSetCommandArgs']]]]] = None,
+                 commands: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  permit_unmatched: Optional[pulumi.Input[bool]] = None,
@@ -172,11 +172,11 @@ class TacacsCommandSet(pulumi.CustomResource):
             name="CommandSet1",
             description="My TACACS command set",
             permit_unmatched=True,
-            commands=[ise.deviceadmin.TacacsCommandSetCommandArgs(
-                grant="PERMIT",
-                command="show",
-                arguments="",
-            )])
+            commands=[{
+                "grant": "PERMIT",
+                "command": "show",
+                "arguments": "",
+            }])
         ```
 
         ## Import
@@ -210,11 +210,11 @@ class TacacsCommandSet(pulumi.CustomResource):
             name="CommandSet1",
             description="My TACACS command set",
             permit_unmatched=True,
-            commands=[ise.deviceadmin.TacacsCommandSetCommandArgs(
-                grant="PERMIT",
-                command="show",
-                arguments="",
-            )])
+            commands=[{
+                "grant": "PERMIT",
+                "command": "show",
+                "arguments": "",
+            }])
         ```
 
         ## Import
@@ -238,7 +238,7 @@ class TacacsCommandSet(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 commands: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsCommandSetCommandArgs']]]]] = None,
+                 commands: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  permit_unmatched: Optional[pulumi.Input[bool]] = None,
@@ -265,7 +265,7 @@ class TacacsCommandSet(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            commands: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsCommandSetCommandArgs']]]]] = None,
+            commands: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             permit_unmatched: Optional[pulumi.Input[bool]] = None) -> 'TacacsCommandSet':

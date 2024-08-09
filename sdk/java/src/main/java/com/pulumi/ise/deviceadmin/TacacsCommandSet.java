@@ -125,7 +125,7 @@ public class TacacsCommandSet extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TacacsCommandSet(String name) {
+    public TacacsCommandSet(java.lang.String name) {
         this(name, TacacsCommandSetArgs.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public class TacacsCommandSet extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TacacsCommandSet(String name, @Nullable TacacsCommandSetArgs args) {
+    public TacacsCommandSet(java.lang.String name, @Nullable TacacsCommandSetArgs args) {
         this(name, args, null);
     }
     /**
@@ -142,15 +142,22 @@ public class TacacsCommandSet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TacacsCommandSet(String name, @Nullable TacacsCommandSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:deviceadmin/tacacsCommandSet:TacacsCommandSet", name, args == null ? TacacsCommandSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TacacsCommandSet(java.lang.String name, @Nullable TacacsCommandSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:deviceadmin/tacacsCommandSet:TacacsCommandSet", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TacacsCommandSet(String name, Output<String> id, @Nullable TacacsCommandSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:deviceadmin/tacacsCommandSet:TacacsCommandSet", name, state, makeResourceOptions(options, id));
+    private TacacsCommandSet(java.lang.String name, Output<java.lang.String> id, @Nullable TacacsCommandSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:deviceadmin/tacacsCommandSet:TacacsCommandSet", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TacacsCommandSetArgs makeArgs(@Nullable TacacsCommandSetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TacacsCommandSetArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -166,7 +173,7 @@ public class TacacsCommandSet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TacacsCommandSet get(String name, Output<String> id, @Nullable TacacsCommandSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TacacsCommandSet get(java.lang.String name, Output<java.lang.String> id, @Nullable TacacsCommandSetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TacacsCommandSet(name, id, state, options);
     }
 }

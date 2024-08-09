@@ -264,7 +264,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  domain: Optional[pulumi.Input[str]] = None,
                  enable_domain_allowed_list: Optional[pulumi.Input[bool]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryAddGroupsGroupArgs']]]]] = None,
+                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
                  join_point_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -284,11 +284,11 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
             domain="cisco.local",
             ad_scopes_names="Default_Scope",
             enable_domain_allowed_list=True,
-            groups=[ise.identitymanagement.ActiveDirectoryAddGroupsGroupArgs(
-                name="cisco.local/operators",
-                sid="S-1-5-32-548",
-                type="GLOBAL",
-            )])
+            groups=[{
+                "name": "cisco.local/operators",
+                "sid": "S-1-5-32-548",
+                "type": "GLOBAL",
+            }])
         ```
 
         :param str resource_name: The name of the resource.
@@ -298,7 +298,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
         :param pulumi.Input[str] description: Join point Description
         :param pulumi.Input[str] domain: AD domain associated with the join point
         :param pulumi.Input[bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryAddGroupsGroupArgs']]]] groups: List of AD Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]] groups: List of AD Groups
         :param pulumi.Input[str] join_point_id: Active Directory Join Point ID
         :param pulumi.Input[str] name: The name of the active directory join point
         """
@@ -324,11 +324,11 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
             domain="cisco.local",
             ad_scopes_names="Default_Scope",
             enable_domain_allowed_list=True,
-            groups=[ise.identitymanagement.ActiveDirectoryAddGroupsGroupArgs(
-                name="cisco.local/operators",
-                sid="S-1-5-32-548",
-                type="GLOBAL",
-            )])
+            groups=[{
+                "name": "cisco.local/operators",
+                "sid": "S-1-5-32-548",
+                "type": "GLOBAL",
+            }])
         ```
 
         :param str resource_name: The name of the resource.
@@ -350,7 +350,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  domain: Optional[pulumi.Input[str]] = None,
                  enable_domain_allowed_list: Optional[pulumi.Input[bool]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryAddGroupsGroupArgs']]]]] = None,
+                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
                  join_point_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -387,7 +387,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
             description: Optional[pulumi.Input[str]] = None,
             domain: Optional[pulumi.Input[str]] = None,
             enable_domain_allowed_list: Optional[pulumi.Input[bool]] = None,
-            groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryAddGroupsGroupArgs']]]]] = None,
+            groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
             join_point_id: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None) -> 'ActiveDirectoryAddGroups':
         """
@@ -402,7 +402,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
         :param pulumi.Input[str] description: Join point Description
         :param pulumi.Input[str] domain: AD domain associated with the join point
         :param pulumi.Input[bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryAddGroupsGroupArgs']]]] groups: List of AD Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]] groups: List of AD Groups
         :param pulumi.Input[str] join_point_id: Active Directory Join Point ID
         :param pulumi.Input[str] name: The name of the active directory join point
         """

@@ -88,7 +88,7 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 additional_datas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs']]]]] = None,
+                 additional_datas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs', 'ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict']]]]] = None,
                  join_point_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -102,10 +102,10 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
 
         example = ise.identitymanagement.ActiveDirectoryJoinDomainWithAllNodes("example",
             join_point_id="73808580-b6e6-11ee-8960-de6d7692bc40",
-            additional_datas=[ise.identitymanagement.ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs(
-                name="username",
-                value="administrator",
-            )])
+            additional_datas=[{
+                "name": "username",
+                "value": "administrator",
+            }])
         ```
 
         :param str resource_name: The name of the resource.
@@ -129,10 +129,10 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
 
         example = ise.identitymanagement.ActiveDirectoryJoinDomainWithAllNodes("example",
             join_point_id="73808580-b6e6-11ee-8960-de6d7692bc40",
-            additional_datas=[ise.identitymanagement.ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs(
-                name="username",
-                value="administrator",
-            )])
+            additional_datas=[{
+                "name": "username",
+                "value": "administrator",
+            }])
         ```
 
         :param str resource_name: The name of the resource.
@@ -150,7 +150,7 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 additional_datas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs']]]]] = None,
+                 additional_datas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs', 'ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict']]]]] = None,
                  join_point_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -177,7 +177,7 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            additional_datas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs']]]]] = None,
+            additional_datas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs', 'ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict']]]]] = None,
             join_point_id: Optional[pulumi.Input[str]] = None) -> 'ActiveDirectoryJoinDomainWithAllNodes':
         """
         Get an existing ActiveDirectoryJoinDomainWithAllNodes resource's state with the given name, id, and optional extra

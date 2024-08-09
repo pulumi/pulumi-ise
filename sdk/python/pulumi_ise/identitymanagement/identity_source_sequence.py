@@ -186,7 +186,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
                  break_on_store_fail: Optional[pulumi.Input[bool]] = None,
                  certificate_authentication_profile: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
-                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['IdentitySourceSequenceIdentitySourceArgs']]]]] = None,
+                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -203,10 +203,10 @@ class IdentitySourceSequence(pulumi.CustomResource):
             description="My identity source sequence",
             break_on_store_fail=True,
             certificate_authentication_profile="Preloaded_Certificate_Profile",
-            identity_sources=[ise.identitymanagement.IdentitySourceSequenceIdentitySourceArgs(
-                name="Internal Users",
-                order=1,
-            )])
+            identity_sources=[{
+                "name": "Internal Users",
+                "order": 1,
+            }])
         ```
 
         ## Import
@@ -242,10 +242,10 @@ class IdentitySourceSequence(pulumi.CustomResource):
             description="My identity source sequence",
             break_on_store_fail=True,
             certificate_authentication_profile="Preloaded_Certificate_Profile",
-            identity_sources=[ise.identitymanagement.IdentitySourceSequenceIdentitySourceArgs(
-                name="Internal Users",
-                order=1,
-            )])
+            identity_sources=[{
+                "name": "Internal Users",
+                "order": 1,
+            }])
         ```
 
         ## Import
@@ -272,7 +272,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
                  break_on_store_fail: Optional[pulumi.Input[bool]] = None,
                  certificate_authentication_profile: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
-                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['IdentitySourceSequenceIdentitySourceArgs']]]]] = None,
+                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -307,7 +307,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
             break_on_store_fail: Optional[pulumi.Input[bool]] = None,
             certificate_authentication_profile: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
-            identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['IdentitySourceSequenceIdentitySourceArgs']]]]] = None,
+            identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None) -> 'IdentitySourceSequence':
         """
         Get an existing IdentitySourceSequence resource's state with the given name, id, and optional extra

@@ -65,7 +65,7 @@ class LicenseTierState(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LicenseTierStateLicenseArgs']]]]] = None,
+                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a License Tier State.
@@ -76,10 +76,10 @@ class LicenseTierState(pulumi.CustomResource):
         import pulumi
         import pulumi_ise as ise
 
-        example = ise.system.LicenseTierState("example", licenses=[ise.system.LicenseTierStateLicenseArgs(
-            name="ESSENTIAL",
-            status="ENABLED",
-        )])
+        example = ise.system.LicenseTierState("example", licenses=[{
+            "name": "ESSENTIAL",
+            "status": "ENABLED",
+        }])
         ```
 
         ## Import
@@ -90,7 +90,7 @@ class LicenseTierState(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LicenseTierStateLicenseArgs']]]] licenses: List of licenses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]] licenses: List of licenses
         """
         ...
     @overload
@@ -107,10 +107,10 @@ class LicenseTierState(pulumi.CustomResource):
         import pulumi
         import pulumi_ise as ise
 
-        example = ise.system.LicenseTierState("example", licenses=[ise.system.LicenseTierStateLicenseArgs(
-            name="ESSENTIAL",
-            status="ENABLED",
-        )])
+        example = ise.system.LicenseTierState("example", licenses=[{
+            "name": "ESSENTIAL",
+            "status": "ENABLED",
+        }])
         ```
 
         ## Import
@@ -134,7 +134,7 @@ class LicenseTierState(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LicenseTierStateLicenseArgs']]]]] = None,
+                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -157,7 +157,7 @@ class LicenseTierState(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            licenses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LicenseTierStateLicenseArgs']]]]] = None) -> 'LicenseTierState':
+            licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None) -> 'LicenseTierState':
         """
         Get an existing LicenseTierState resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -165,7 +165,7 @@ class LicenseTierState(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LicenseTierStateLicenseArgs']]]] licenses: List of licenses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]] licenses: List of licenses
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

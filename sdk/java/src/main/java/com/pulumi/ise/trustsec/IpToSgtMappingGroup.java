@@ -138,7 +138,7 @@ public class IpToSgtMappingGroup extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IpToSgtMappingGroup(String name) {
+    public IpToSgtMappingGroup(java.lang.String name) {
         this(name, IpToSgtMappingGroupArgs.Empty);
     }
     /**
@@ -146,7 +146,7 @@ public class IpToSgtMappingGroup extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public IpToSgtMappingGroup(String name, IpToSgtMappingGroupArgs args) {
+    public IpToSgtMappingGroup(java.lang.String name, IpToSgtMappingGroupArgs args) {
         this(name, args, null);
     }
     /**
@@ -155,15 +155,22 @@ public class IpToSgtMappingGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IpToSgtMappingGroup(String name, IpToSgtMappingGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup", name, args == null ? IpToSgtMappingGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public IpToSgtMappingGroup(java.lang.String name, IpToSgtMappingGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private IpToSgtMappingGroup(String name, Output<String> id, @Nullable IpToSgtMappingGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup", name, state, makeResourceOptions(options, id));
+    private IpToSgtMappingGroup(java.lang.String name, Output<java.lang.String> id, @Nullable IpToSgtMappingGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static IpToSgtMappingGroupArgs makeArgs(IpToSgtMappingGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IpToSgtMappingGroupArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -179,7 +186,7 @@ public class IpToSgtMappingGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IpToSgtMappingGroup get(String name, Output<String> id, @Nullable IpToSgtMappingGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IpToSgtMappingGroup get(java.lang.String name, Output<java.lang.String> id, @Nullable IpToSgtMappingGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IpToSgtMappingGroup(name, id, state, options);
     }
 }

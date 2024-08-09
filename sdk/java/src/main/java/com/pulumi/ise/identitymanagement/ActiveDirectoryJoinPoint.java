@@ -584,7 +584,7 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ActiveDirectoryJoinPoint(String name) {
+    public ActiveDirectoryJoinPoint(java.lang.String name) {
         this(name, ActiveDirectoryJoinPointArgs.Empty);
     }
     /**
@@ -592,7 +592,7 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ActiveDirectoryJoinPoint(String name, ActiveDirectoryJoinPointArgs args) {
+    public ActiveDirectoryJoinPoint(java.lang.String name, ActiveDirectoryJoinPointArgs args) {
         this(name, args, null);
     }
     /**
@@ -601,15 +601,22 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ActiveDirectoryJoinPoint(String name, ActiveDirectoryJoinPointArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint", name, args == null ? ActiveDirectoryJoinPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ActiveDirectoryJoinPoint(java.lang.String name, ActiveDirectoryJoinPointArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ActiveDirectoryJoinPoint(String name, Output<String> id, @Nullable ActiveDirectoryJoinPointState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint", name, state, makeResourceOptions(options, id));
+    private ActiveDirectoryJoinPoint(java.lang.String name, Output<java.lang.String> id, @Nullable ActiveDirectoryJoinPointState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ActiveDirectoryJoinPointArgs makeArgs(ActiveDirectoryJoinPointArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ActiveDirectoryJoinPointArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -625,7 +632,7 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ActiveDirectoryJoinPoint get(String name, Output<String> id, @Nullable ActiveDirectoryJoinPointState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ActiveDirectoryJoinPoint get(java.lang.String name, Output<java.lang.String> id, @Nullable ActiveDirectoryJoinPointState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ActiveDirectoryJoinPoint(name, id, state, options);
     }
 }
