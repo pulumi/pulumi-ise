@@ -37,17 +37,17 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new InternalUser("example", InternalUserArgs.builder()
  *             .name("UserTF")
  *             .password("Cisco123")
  *             .changePassword(true)
- *             .email("aaa{@literal @}cisco.com")
+ *             .email("aaa}{@literal @}{@code cisco.com")
  *             .accountNameAlias("User 1")
  *             .enablePassword("Cisco123")
  *             .enabled(true)
@@ -58,8 +58,8 @@ import javax.annotation.Nullable;
  *             .description("My first Terraform user")
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -278,7 +278,7 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public InternalUser(String name) {
+    public InternalUser(java.lang.String name) {
         this(name, InternalUserArgs.Empty);
     }
     /**
@@ -286,7 +286,7 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public InternalUser(String name, InternalUserArgs args) {
+    public InternalUser(java.lang.String name, InternalUserArgs args) {
         this(name, args, null);
     }
     /**
@@ -295,15 +295,22 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InternalUser(String name, InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:identitymanagement/internalUser:InternalUser", name, args == null ? InternalUserArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public InternalUser(java.lang.String name, InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:identitymanagement/internalUser:InternalUser", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private InternalUser(String name, Output<String> id, @Nullable InternalUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:identitymanagement/internalUser:InternalUser", name, state, makeResourceOptions(options, id));
+    private InternalUser(java.lang.String name, Output<java.lang.String> id, @Nullable InternalUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:identitymanagement/internalUser:InternalUser", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static InternalUserArgs makeArgs(InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? InternalUserArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -319,7 +326,7 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InternalUser get(String name, Output<String> id, @Nullable InternalUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InternalUser get(java.lang.String name, Output<java.lang.String> id, @Nullable InternalUserState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new InternalUser(name, id, state, options);
     }
 }

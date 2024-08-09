@@ -561,7 +561,7 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationExceptionRuleChildrenArgs']]]]] = None,
+                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationExceptionRuleChildrenArgs', 'AuthorizationExceptionRuleChildrenArgsDict']]]]] = None,
                  condition_attribute_name: Optional[pulumi.Input[str]] = None,
                  condition_attribute_value: Optional[pulumi.Input[str]] = None,
                  condition_dictionary_name: Optional[pulumi.Input[str]] = None,
@@ -611,7 +611,7 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationExceptionRuleChildrenArgs']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationExceptionRuleChildrenArgs', 'AuthorizationExceptionRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[str] condition_dictionary_name: Dictionary name
@@ -684,7 +684,7 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationExceptionRuleChildrenArgs']]]]] = None,
+                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationExceptionRuleChildrenArgs', 'AuthorizationExceptionRuleChildrenArgsDict']]]]] = None,
                  condition_attribute_name: Optional[pulumi.Input[str]] = None,
                  condition_attribute_value: Optional[pulumi.Input[str]] = None,
                  condition_dictionary_name: Optional[pulumi.Input[str]] = None,
@@ -737,7 +737,7 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationExceptionRuleChildrenArgs']]]]] = None,
+            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationExceptionRuleChildrenArgs', 'AuthorizationExceptionRuleChildrenArgsDict']]]]] = None,
             condition_attribute_name: Optional[pulumi.Input[str]] = None,
             condition_attribute_value: Optional[pulumi.Input[str]] = None,
             condition_dictionary_name: Optional[pulumi.Input[str]] = None,
@@ -760,7 +760,7 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationExceptionRuleChildrenArgs']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationExceptionRuleChildrenArgs', 'AuthorizationExceptionRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[str] condition_dictionary_name: Dictionary name

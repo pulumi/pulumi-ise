@@ -86,7 +86,7 @@ public class ActiveDirectoryJoinDomainWithAllNodes extends com.pulumi.resources.
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ActiveDirectoryJoinDomainWithAllNodes(String name) {
+    public ActiveDirectoryJoinDomainWithAllNodes(java.lang.String name) {
         this(name, ActiveDirectoryJoinDomainWithAllNodesArgs.Empty);
     }
     /**
@@ -94,7 +94,7 @@ public class ActiveDirectoryJoinDomainWithAllNodes extends com.pulumi.resources.
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ActiveDirectoryJoinDomainWithAllNodes(String name, ActiveDirectoryJoinDomainWithAllNodesArgs args) {
+    public ActiveDirectoryJoinDomainWithAllNodes(java.lang.String name, ActiveDirectoryJoinDomainWithAllNodesArgs args) {
         this(name, args, null);
     }
     /**
@@ -103,15 +103,22 @@ public class ActiveDirectoryJoinDomainWithAllNodes extends com.pulumi.resources.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ActiveDirectoryJoinDomainWithAllNodes(String name, ActiveDirectoryJoinDomainWithAllNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes", name, args == null ? ActiveDirectoryJoinDomainWithAllNodesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ActiveDirectoryJoinDomainWithAllNodes(java.lang.String name, ActiveDirectoryJoinDomainWithAllNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ActiveDirectoryJoinDomainWithAllNodes(String name, Output<String> id, @Nullable ActiveDirectoryJoinDomainWithAllNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes", name, state, makeResourceOptions(options, id));
+    private ActiveDirectoryJoinDomainWithAllNodes(java.lang.String name, Output<java.lang.String> id, @Nullable ActiveDirectoryJoinDomainWithAllNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ActiveDirectoryJoinDomainWithAllNodesArgs makeArgs(ActiveDirectoryJoinDomainWithAllNodesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ActiveDirectoryJoinDomainWithAllNodesArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -127,7 +134,7 @@ public class ActiveDirectoryJoinDomainWithAllNodes extends com.pulumi.resources.
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ActiveDirectoryJoinDomainWithAllNodes get(String name, Output<String> id, @Nullable ActiveDirectoryJoinDomainWithAllNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ActiveDirectoryJoinDomainWithAllNodes get(java.lang.String name, Output<java.lang.String> id, @Nullable ActiveDirectoryJoinDomainWithAllNodesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ActiveDirectoryJoinDomainWithAllNodes(name, id, state, options);
     }
 }

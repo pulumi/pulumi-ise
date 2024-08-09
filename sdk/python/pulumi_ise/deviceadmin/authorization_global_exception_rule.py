@@ -530,7 +530,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationGlobalExceptionRuleChildrenArgs']]]]] = None,
+                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
                  command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  condition_attribute_name: Optional[pulumi.Input[str]] = None,
                  condition_attribute_value: Optional[pulumi.Input[str]] = None,
@@ -578,7 +578,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationGlobalExceptionRuleChildrenArgs']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] command_sets: Command sets enforce the specified list of commands that can be executed by a device administrator
         :param pulumi.Input[str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
@@ -649,7 +649,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationGlobalExceptionRuleChildrenArgs']]]]] = None,
+                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
                  command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  condition_attribute_name: Optional[pulumi.Input[str]] = None,
                  condition_attribute_value: Optional[pulumi.Input[str]] = None,
@@ -698,7 +698,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationGlobalExceptionRuleChildrenArgs']]]]] = None,
+            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
             command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             condition_attribute_name: Optional[pulumi.Input[str]] = None,
             condition_attribute_value: Optional[pulumi.Input[str]] = None,
@@ -720,7 +720,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AuthorizationGlobalExceptionRuleChildrenArgs']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] command_sets: Command sets enforce the specified list of commands that can be executed by a device administrator
         :param pulumi.Input[str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
