@@ -299,7 +299,7 @@ public class AuthorizationGlobalExceptionRule extends com.pulumi.resources.Custo
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AuthorizationGlobalExceptionRule(String name) {
+    public AuthorizationGlobalExceptionRule(java.lang.String name) {
         this(name, AuthorizationGlobalExceptionRuleArgs.Empty);
     }
     /**
@@ -307,7 +307,7 @@ public class AuthorizationGlobalExceptionRule extends com.pulumi.resources.Custo
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AuthorizationGlobalExceptionRule(String name, @Nullable AuthorizationGlobalExceptionRuleArgs args) {
+    public AuthorizationGlobalExceptionRule(java.lang.String name, @Nullable AuthorizationGlobalExceptionRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -316,15 +316,22 @@ public class AuthorizationGlobalExceptionRule extends com.pulumi.resources.Custo
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AuthorizationGlobalExceptionRule(String name, @Nullable AuthorizationGlobalExceptionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule", name, args == null ? AuthorizationGlobalExceptionRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AuthorizationGlobalExceptionRule(java.lang.String name, @Nullable AuthorizationGlobalExceptionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AuthorizationGlobalExceptionRule(String name, Output<String> id, @Nullable AuthorizationGlobalExceptionRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule", name, state, makeResourceOptions(options, id));
+    private AuthorizationGlobalExceptionRule(java.lang.String name, Output<java.lang.String> id, @Nullable AuthorizationGlobalExceptionRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AuthorizationGlobalExceptionRuleArgs makeArgs(@Nullable AuthorizationGlobalExceptionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AuthorizationGlobalExceptionRuleArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -340,7 +347,7 @@ public class AuthorizationGlobalExceptionRule extends com.pulumi.resources.Custo
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AuthorizationGlobalExceptionRule get(String name, Output<String> id, @Nullable AuthorizationGlobalExceptionRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AuthorizationGlobalExceptionRule get(java.lang.String name, Output<java.lang.String> id, @Nullable AuthorizationGlobalExceptionRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AuthorizationGlobalExceptionRule(name, id, state, options);
     }
 }

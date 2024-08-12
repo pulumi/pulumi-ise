@@ -1389,7 +1389,7 @@ class Device(pulumi.CustomResource):
                  coa_port: Optional[pulumi.Input[int]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  dtls_dns_name: Optional[pulumi.Input[str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DeviceIpArgs']]]]] = None,
+                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
                  model_name: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -1443,10 +1443,10 @@ class Device(pulumi.CustomResource):
             authentication_dtls_required=True,
             coa_port=12345,
             dtls_dns_name="cisco.com",
-            ips=[ise.network.DeviceIpArgs(
-                ipaddress="2.3.4.5",
-                mask="32",
-            )],
+            ips=[{
+                "ipaddress": "2.3.4.5",
+                "mask": "32",
+            }],
             model_name="Unknown",
             software_version="Unknown",
             profile_name="Cisco",
@@ -1494,7 +1494,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[int] coa_port: CoA port - Default value: `1700`
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DeviceIpArgs']]]] ips: List of IP subnets
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
         :param pulumi.Input[str] model_name: Model name
         :param pulumi.Input[str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
@@ -1554,10 +1554,10 @@ class Device(pulumi.CustomResource):
             authentication_dtls_required=True,
             coa_port=12345,
             dtls_dns_name="cisco.com",
-            ips=[ise.network.DeviceIpArgs(
-                ipaddress="2.3.4.5",
-                mask="32",
-            )],
+            ips=[{
+                "ipaddress": "2.3.4.5",
+                "mask": "32",
+            }],
             model_name="Unknown",
             software_version="Unknown",
             profile_name="Cisco",
@@ -1618,7 +1618,7 @@ class Device(pulumi.CustomResource):
                  coa_port: Optional[pulumi.Input[int]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  dtls_dns_name: Optional[pulumi.Input[str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DeviceIpArgs']]]]] = None,
+                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
                  model_name: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -1723,7 +1723,7 @@ class Device(pulumi.CustomResource):
             coa_port: Optional[pulumi.Input[int]] = None,
             description: Optional[pulumi.Input[str]] = None,
             dtls_dns_name: Optional[pulumi.Input[str]] = None,
-            ips: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DeviceIpArgs']]]]] = None,
+            ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
             model_name: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -1772,7 +1772,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[int] coa_port: CoA port - Default value: `1700`
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DeviceIpArgs']]]] ips: List of IP subnets
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
         :param pulumi.Input[str] model_name: Model name
         :param pulumi.Input[str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`

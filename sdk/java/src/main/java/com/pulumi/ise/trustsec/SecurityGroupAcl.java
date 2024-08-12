@@ -141,7 +141,7 @@ public class SecurityGroupAcl extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SecurityGroupAcl(String name) {
+    public SecurityGroupAcl(java.lang.String name) {
         this(name, SecurityGroupAclArgs.Empty);
     }
     /**
@@ -149,7 +149,7 @@ public class SecurityGroupAcl extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SecurityGroupAcl(String name, SecurityGroupAclArgs args) {
+    public SecurityGroupAcl(java.lang.String name, SecurityGroupAclArgs args) {
         this(name, args, null);
     }
     /**
@@ -158,15 +158,22 @@ public class SecurityGroupAcl extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SecurityGroupAcl(String name, SecurityGroupAclArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:trustsec/securityGroupAcl:SecurityGroupAcl", name, args == null ? SecurityGroupAclArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SecurityGroupAcl(java.lang.String name, SecurityGroupAclArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:trustsec/securityGroupAcl:SecurityGroupAcl", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SecurityGroupAcl(String name, Output<String> id, @Nullable SecurityGroupAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("ise:trustsec/securityGroupAcl:SecurityGroupAcl", name, state, makeResourceOptions(options, id));
+    private SecurityGroupAcl(java.lang.String name, Output<java.lang.String> id, @Nullable SecurityGroupAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("ise:trustsec/securityGroupAcl:SecurityGroupAcl", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SecurityGroupAclArgs makeArgs(SecurityGroupAclArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SecurityGroupAclArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -182,7 +189,7 @@ public class SecurityGroupAcl extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecurityGroupAcl get(String name, Output<String> id, @Nullable SecurityGroupAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SecurityGroupAcl get(java.lang.String name, Output<java.lang.String> id, @Nullable SecurityGroupAclState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SecurityGroupAcl(name, id, state, options);
     }
 }
