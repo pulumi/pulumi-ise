@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getPolicySet(args?: GetPolicySetArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicySetResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getPolicySet:getPolicySet", {
         "id": args.id,
@@ -132,7 +131,12 @@ export interface GetPolicySetResult {
  * ```
  */
 export function getPolicySetOutput(args?: GetPolicySetOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicySetResult> {
-    return pulumi.output(args).apply((a: any) => getPolicySet(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getPolicySet:getPolicySet", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

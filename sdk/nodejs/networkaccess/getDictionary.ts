@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getDictionary(args?: GetDictionaryArgs, opts?: pulumi.InvokeOptions): Promise<GetDictionaryResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getDictionary:getDictionary", {
         "id": args.id,
@@ -82,7 +81,12 @@ export interface GetDictionaryResult {
  * ```
  */
 export function getDictionaryOutput(args?: GetDictionaryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDictionaryResult> {
-    return pulumi.output(args).apply((a: any) => getDictionary(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getDictionary:getDictionary", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

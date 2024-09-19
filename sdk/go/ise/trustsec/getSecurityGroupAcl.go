@@ -74,14 +74,20 @@ type LookupSecurityGroupAclResult struct {
 
 func LookupSecurityGroupAclOutput(ctx *pulumi.Context, args LookupSecurityGroupAclOutputArgs, opts ...pulumi.InvokeOption) LookupSecurityGroupAclResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSecurityGroupAclResult, error) {
+		ApplyT(func(v interface{}) (LookupSecurityGroupAclResultOutput, error) {
 			args := v.(LookupSecurityGroupAclArgs)
-			r, err := LookupSecurityGroupAcl(ctx, &args, opts...)
-			var s LookupSecurityGroupAclResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSecurityGroupAclResult
+			secret, err := ctx.InvokePackageRaw("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSecurityGroupAclResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSecurityGroupAclResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSecurityGroupAclResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSecurityGroupAclResultOutput)
 }
 

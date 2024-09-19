@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getTacacsProfile(args?: GetTacacsProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTacacsProfileResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:deviceadmin/getTacacsProfile:getTacacsProfile", {
         "id": args.id,
@@ -77,7 +76,12 @@ export interface GetTacacsProfileResult {
  * ```
  */
 export function getTacacsProfileOutput(args?: GetTacacsProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsProfileResult> {
-    return pulumi.output(args).apply((a: any) => getTacacsProfile(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:deviceadmin/getTacacsProfile:getTacacsProfile", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

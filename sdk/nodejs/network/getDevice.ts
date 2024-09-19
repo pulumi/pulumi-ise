@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getDevice(args?: GetDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetDeviceResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:network/getDevice:getDevice", {
         "id": args.id,
@@ -236,7 +235,12 @@ export interface GetDeviceResult {
  * ```
  */
 export function getDeviceOutput(args?: GetDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getDevice(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:network/getDevice:getDevice", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

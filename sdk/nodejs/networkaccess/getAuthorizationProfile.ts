@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getAuthorizationProfile(args?: GetAuthorizationProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthorizationProfileResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", {
         "id": args.id,
@@ -200,7 +199,12 @@ export interface GetAuthorizationProfileResult {
  * ```
  */
 export function getAuthorizationProfileOutput(args?: GetAuthorizationProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthorizationProfileResult> {
-    return pulumi.output(args).apply((a: any) => getAuthorizationProfile(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

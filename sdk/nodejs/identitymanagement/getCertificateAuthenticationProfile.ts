@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getCertificateAuthenticationProfile(args?: GetCertificateAuthenticationProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateAuthenticationProfileResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", {
         "id": args.id,
@@ -94,7 +93,12 @@ export interface GetCertificateAuthenticationProfileResult {
  * ```
  */
 export function getCertificateAuthenticationProfileOutput(args?: GetCertificateAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCertificateAuthenticationProfileResult> {
-    return pulumi.output(args).apply((a: any) => getCertificateAuthenticationProfile(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

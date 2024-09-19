@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getTimeAndDateCondition(args?: GetTimeAndDateConditionArgs, opts?: pulumi.InvokeOptions): Promise<GetTimeAndDateConditionResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", {
         "id": args.id,
@@ -118,7 +117,12 @@ export interface GetTimeAndDateConditionResult {
  * ```
  */
 export function getTimeAndDateConditionOutput(args?: GetTimeAndDateConditionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTimeAndDateConditionResult> {
-    return pulumi.output(args).apply((a: any) => getTimeAndDateCondition(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

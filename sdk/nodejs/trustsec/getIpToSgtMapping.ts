@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getIpToSgtMapping(args?: GetIpToSgtMappingArgs, opts?: pulumi.InvokeOptions): Promise<GetIpToSgtMappingResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", {
         "id": args.id,
@@ -98,7 +97,12 @@ export interface GetIpToSgtMappingResult {
  * ```
  */
 export function getIpToSgtMappingOutput(args?: GetIpToSgtMappingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpToSgtMappingResult> {
-    return pulumi.output(args).apply((a: any) => getIpToSgtMapping(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

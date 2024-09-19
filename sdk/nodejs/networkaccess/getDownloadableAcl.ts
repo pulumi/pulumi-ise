@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getDownloadableAcl(args?: GetDownloadableAclArgs, opts?: pulumi.InvokeOptions): Promise<GetDownloadableAclResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", {
         "id": args.id,
@@ -82,7 +81,12 @@ export interface GetDownloadableAclResult {
  * ```
  */
 export function getDownloadableAclOutput(args?: GetDownloadableAclOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDownloadableAclResult> {
-    return pulumi.output(args).apply((a: any) => getDownloadableAcl(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

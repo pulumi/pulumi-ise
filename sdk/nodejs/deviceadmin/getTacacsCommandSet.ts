@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getTacacsCommandSet(args?: GetTacacsCommandSetArgs, opts?: pulumi.InvokeOptions): Promise<GetTacacsCommandSetResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", {
         "id": args.id,
@@ -81,7 +80,12 @@ export interface GetTacacsCommandSetResult {
  * ```
  */
 export function getTacacsCommandSetOutput(args?: GetTacacsCommandSetOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsCommandSetResult> {
-    return pulumi.output(args).apply((a: any) => getTacacsCommandSet(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

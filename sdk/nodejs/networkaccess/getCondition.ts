@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getCondition(args?: GetConditionArgs, opts?: pulumi.InvokeOptions): Promise<GetConditionResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getCondition:getCondition", {
         "id": args.id,
@@ -108,7 +107,12 @@ export interface GetConditionResult {
  * ```
  */
 export function getConditionOutput(args?: GetConditionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConditionResult> {
-    return pulumi.output(args).apply((a: any) => getCondition(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getCondition:getCondition", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -74,14 +74,20 @@ type LookupEgressMatrixCellResult struct {
 
 func LookupEgressMatrixCellOutput(ctx *pulumi.Context, args LookupEgressMatrixCellOutputArgs, opts ...pulumi.InvokeOption) LookupEgressMatrixCellResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupEgressMatrixCellResult, error) {
+		ApplyT(func(v interface{}) (LookupEgressMatrixCellResultOutput, error) {
 			args := v.(LookupEgressMatrixCellArgs)
-			r, err := LookupEgressMatrixCell(ctx, &args, opts...)
-			var s LookupEgressMatrixCellResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupEgressMatrixCellResult
+			secret, err := ctx.InvokePackageRaw("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", args, &rv, "", opts...)
+			if err != nil {
+				return LookupEgressMatrixCellResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupEgressMatrixCellResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupEgressMatrixCellResultOutput), nil
+			}
+			return output, nil
 		}).(LookupEgressMatrixCellResultOutput)
 }
 
