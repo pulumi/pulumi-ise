@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getDeviceGroup(args?: GetDeviceGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetDeviceGroupResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:network/getDeviceGroup:getDeviceGroup", {
         "id": args.id,
@@ -78,7 +77,12 @@ export interface GetDeviceGroupResult {
  * ```
  */
 export function getDeviceGroupOutput(args?: GetDeviceGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDeviceGroupResult> {
-    return pulumi.output(args).apply((a: any) => getDeviceGroup(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:network/getDeviceGroup:getDeviceGroup", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

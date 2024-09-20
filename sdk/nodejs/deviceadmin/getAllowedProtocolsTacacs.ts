@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getAllowedProtocolsTacacs(args?: GetAllowedProtocolsTacacsArgs, opts?: pulumi.InvokeOptions): Promise<GetAllowedProtocolsTacacsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", {
         "id": args.id,
@@ -86,7 +85,12 @@ export interface GetAllowedProtocolsTacacsResult {
  * ```
  */
 export function getAllowedProtocolsTacacsOutput(args?: GetAllowedProtocolsTacacsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAllowedProtocolsTacacsResult> {
-    return pulumi.output(args).apply((a: any) => getAllowedProtocolsTacacs(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLicenseTierState(args: GetLicenseTierStateArgs, opts?: pulumi.InvokeOptions): Promise<GetLicenseTierStateResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:system/getLicenseTierState:getLicenseTierState", {
         "id": args.id,
@@ -66,7 +65,10 @@ export interface GetLicenseTierStateResult {
  * ```
  */
 export function getLicenseTierStateOutput(args: GetLicenseTierStateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicenseTierStateResult> {
-    return pulumi.output(args).apply((a: any) => getLicenseTierState(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:system/getLicenseTierState:getLicenseTierState", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

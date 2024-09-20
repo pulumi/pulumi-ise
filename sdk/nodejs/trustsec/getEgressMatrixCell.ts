@@ -19,7 +19,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getEgressMatrixCell(args: GetEgressMatrixCellArgs, opts?: pulumi.InvokeOptions): Promise<GetEgressMatrixCellResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", {
         "id": args.id,
@@ -84,7 +83,10 @@ export interface GetEgressMatrixCellResult {
  * ```
  */
 export function getEgressMatrixCellOutput(args: GetEgressMatrixCellOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEgressMatrixCellResult> {
-    return pulumi.output(args).apply((a: any) => getEgressMatrixCell(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -71,14 +71,20 @@ type LookupTacacsCommandSetResult struct {
 
 func LookupTacacsCommandSetOutput(ctx *pulumi.Context, args LookupTacacsCommandSetOutputArgs, opts ...pulumi.InvokeOption) LookupTacacsCommandSetResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTacacsCommandSetResult, error) {
+		ApplyT(func(v interface{}) (LookupTacacsCommandSetResultOutput, error) {
 			args := v.(LookupTacacsCommandSetArgs)
-			r, err := LookupTacacsCommandSet(ctx, &args, opts...)
-			var s LookupTacacsCommandSetResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTacacsCommandSetResult
+			secret, err := ctx.InvokePackageRaw("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTacacsCommandSetResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTacacsCommandSetResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTacacsCommandSetResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTacacsCommandSetResultOutput)
 }
 

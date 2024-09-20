@@ -99,14 +99,20 @@ type LookupAuthorizationExceptionRuleResult struct {
 
 func LookupAuthorizationExceptionRuleOutput(ctx *pulumi.Context, args LookupAuthorizationExceptionRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationExceptionRuleResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAuthorizationExceptionRuleResult, error) {
+		ApplyT(func(v interface{}) (LookupAuthorizationExceptionRuleResultOutput, error) {
 			args := v.(LookupAuthorizationExceptionRuleArgs)
-			r, err := LookupAuthorizationExceptionRule(ctx, &args, opts...)
-			var s LookupAuthorizationExceptionRuleResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAuthorizationExceptionRuleResult
+			secret, err := ctx.InvokePackageRaw("ise:deviceadmin/getAuthorizationExceptionRule:getAuthorizationExceptionRule", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAuthorizationExceptionRuleResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAuthorizationExceptionRuleResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAuthorizationExceptionRuleResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAuthorizationExceptionRuleResultOutput)
 }
 

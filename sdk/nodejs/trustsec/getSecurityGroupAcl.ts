@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getSecurityGroupAcl(args?: GetSecurityGroupAclArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityGroupAclResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", {
         "id": args.id,
@@ -86,7 +85,12 @@ export interface GetSecurityGroupAclResult {
  * ```
  */
 export function getSecurityGroupAclOutput(args?: GetSecurityGroupAclOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityGroupAclResult> {
-    return pulumi.output(args).apply((a: any) => getSecurityGroupAcl(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

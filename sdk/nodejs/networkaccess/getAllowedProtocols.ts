@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getAllowedProtocols(args?: GetAllowedProtocolsArgs, opts?: pulumi.InvokeOptions): Promise<GetAllowedProtocolsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", {
         "id": args.id,
@@ -374,7 +373,12 @@ export interface GetAllowedProtocolsResult {
  * ```
  */
 export function getAllowedProtocolsOutput(args?: GetAllowedProtocolsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAllowedProtocolsResult> {
-    return pulumi.output(args).apply((a: any) => getAllowedProtocols(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

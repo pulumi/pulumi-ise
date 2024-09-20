@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getInternalUser(args?: GetInternalUserArgs, opts?: pulumi.InvokeOptions): Promise<GetInternalUserResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:identitymanagement/getInternalUser:getInternalUser", {
         "id": args.id,
@@ -122,7 +121,12 @@ export interface GetInternalUserResult {
  * ```
  */
 export function getInternalUserOutput(args?: GetInternalUserOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInternalUserResult> {
-    return pulumi.output(args).apply((a: any) => getInternalUser(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:identitymanagement/getInternalUser:getInternalUser", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

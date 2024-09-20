@@ -94,14 +94,20 @@ type LookupAuthorizationGlobalExceptionRuleResult struct {
 
 func LookupAuthorizationGlobalExceptionRuleOutput(ctx *pulumi.Context, args LookupAuthorizationGlobalExceptionRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationGlobalExceptionRuleResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAuthorizationGlobalExceptionRuleResult, error) {
+		ApplyT(func(v interface{}) (LookupAuthorizationGlobalExceptionRuleResultOutput, error) {
 			args := v.(LookupAuthorizationGlobalExceptionRuleArgs)
-			r, err := LookupAuthorizationGlobalExceptionRule(ctx, &args, opts...)
-			var s LookupAuthorizationGlobalExceptionRuleResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAuthorizationGlobalExceptionRuleResult
+			secret, err := ctx.InvokePackageRaw("ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAuthorizationGlobalExceptionRuleResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAuthorizationGlobalExceptionRuleResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAuthorizationGlobalExceptionRuleResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAuthorizationGlobalExceptionRuleResultOutput)
 }
 

@@ -90,14 +90,20 @@ type LookupTimeAndDateConditionResult struct {
 
 func LookupTimeAndDateConditionOutput(ctx *pulumi.Context, args LookupTimeAndDateConditionOutputArgs, opts ...pulumi.InvokeOption) LookupTimeAndDateConditionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTimeAndDateConditionResult, error) {
+		ApplyT(func(v interface{}) (LookupTimeAndDateConditionResultOutput, error) {
 			args := v.(LookupTimeAndDateConditionArgs)
-			r, err := LookupTimeAndDateCondition(ctx, &args, opts...)
-			var s LookupTimeAndDateConditionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTimeAndDateConditionResult
+			secret, err := ctx.InvokePackageRaw("ise:networkaccess/getTimeAndDateCondition:getTimeAndDateCondition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTimeAndDateConditionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTimeAndDateConditionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTimeAndDateConditionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTimeAndDateConditionResultOutput)
 }
 

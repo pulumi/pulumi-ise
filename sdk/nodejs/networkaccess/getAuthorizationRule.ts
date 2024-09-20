@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAuthorizationRule(args: GetAuthorizationRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthorizationRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:networkaccess/getAuthorizationRule:getAuthorizationRule", {
         "id": args.id,
@@ -138,7 +137,12 @@ export interface GetAuthorizationRuleResult {
  * ```
  */
 export function getAuthorizationRuleOutput(args: GetAuthorizationRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthorizationRuleResult> {
-    return pulumi.output(args).apply((a: any) => getAuthorizationRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:networkaccess/getAuthorizationRule:getAuthorizationRule", {
+        "id": args.id,
+        "name": args.name,
+        "policySetId": args.policySetId,
+    }, opts);
 }
 
 /**

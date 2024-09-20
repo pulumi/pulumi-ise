@@ -73,14 +73,20 @@ type LookupIdentitySourceSequenceResult struct {
 
 func LookupIdentitySourceSequenceOutput(ctx *pulumi.Context, args LookupIdentitySourceSequenceOutputArgs, opts ...pulumi.InvokeOption) LookupIdentitySourceSequenceResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIdentitySourceSequenceResult, error) {
+		ApplyT(func(v interface{}) (LookupIdentitySourceSequenceResultOutput, error) {
 			args := v.(LookupIdentitySourceSequenceArgs)
-			r, err := LookupIdentitySourceSequence(ctx, &args, opts...)
-			var s LookupIdentitySourceSequenceResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIdentitySourceSequenceResult
+			secret, err := ctx.InvokePackageRaw("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIdentitySourceSequenceResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIdentitySourceSequenceResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIdentitySourceSequenceResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIdentitySourceSequenceResultOutput)
 }
 

@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getIdentitySourceSequence(args?: GetIdentitySourceSequenceArgs, opts?: pulumi.InvokeOptions): Promise<GetIdentitySourceSequenceResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", {
         "id": args.id,
@@ -85,7 +84,12 @@ export interface GetIdentitySourceSequenceResult {
  * ```
  */
 export function getIdentitySourceSequenceOutput(args?: GetIdentitySourceSequenceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIdentitySourceSequenceResult> {
-    return pulumi.output(args).apply((a: any) => getIdentitySourceSequence(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**
