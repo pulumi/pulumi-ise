@@ -72,14 +72,20 @@ type LookupDownloadableAclResult struct {
 
 func LookupDownloadableAclOutput(ctx *pulumi.Context, args LookupDownloadableAclOutputArgs, opts ...pulumi.InvokeOption) LookupDownloadableAclResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupDownloadableAclResult, error) {
+		ApplyT(func(v interface{}) (LookupDownloadableAclResultOutput, error) {
 			args := v.(LookupDownloadableAclArgs)
-			r, err := LookupDownloadableAcl(ctx, &args, opts...)
-			var s LookupDownloadableAclResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupDownloadableAclResult
+			secret, err := ctx.InvokePackageRaw("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", args, &rv, "", opts...)
+			if err != nil {
+				return LookupDownloadableAclResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupDownloadableAclResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupDownloadableAclResultOutput), nil
+			}
+			return output, nil
 		}).(LookupDownloadableAclResultOutput)
 }
 

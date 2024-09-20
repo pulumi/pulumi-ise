@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getActiveDirectoryJoinPoint(args: GetActiveDirectoryJoinPointArgs, opts?: pulumi.InvokeOptions): Promise<GetActiveDirectoryJoinPointResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", {
         "id": args.id,
@@ -191,7 +190,10 @@ export interface GetActiveDirectoryJoinPointResult {
  * ```
  */
 export function getActiveDirectoryJoinPointOutput(args: GetActiveDirectoryJoinPointOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetActiveDirectoryJoinPointResult> {
-    return pulumi.output(args).apply((a: any) => getActiveDirectoryJoinPoint(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

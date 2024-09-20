@@ -74,14 +74,20 @@ type LookupIpToSgtMappingGroupResult struct {
 
 func LookupIpToSgtMappingGroupOutput(ctx *pulumi.Context, args LookupIpToSgtMappingGroupOutputArgs, opts ...pulumi.InvokeOption) LookupIpToSgtMappingGroupResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIpToSgtMappingGroupResult, error) {
+		ApplyT(func(v interface{}) (LookupIpToSgtMappingGroupResultOutput, error) {
 			args := v.(LookupIpToSgtMappingGroupArgs)
-			r, err := LookupIpToSgtMappingGroup(ctx, &args, opts...)
-			var s LookupIpToSgtMappingGroupResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIpToSgtMappingGroupResult
+			secret, err := ctx.InvokePackageRaw("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIpToSgtMappingGroupResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIpToSgtMappingGroupResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIpToSgtMappingGroupResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIpToSgtMappingGroupResultOutput)
 }
 

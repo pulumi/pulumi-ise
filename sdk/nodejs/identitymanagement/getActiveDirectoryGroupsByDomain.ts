@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getActiveDirectoryGroupsByDomain(args: GetActiveDirectoryGroupsByDomainArgs, opts?: pulumi.InvokeOptions): Promise<GetActiveDirectoryGroupsByDomainResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", {
         "domain": args.domain,
@@ -114,7 +113,14 @@ export interface GetActiveDirectoryGroupsByDomainResult {
  * ```
  */
 export function getActiveDirectoryGroupsByDomainOutput(args: GetActiveDirectoryGroupsByDomainOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetActiveDirectoryGroupsByDomainResult> {
-    return pulumi.output(args).apply((a: any) => getActiveDirectoryGroupsByDomain(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", {
+        "domain": args.domain,
+        "filter": args.filter,
+        "joinPointId": args.joinPointId,
+        "sidFilter": args.sidFilter,
+        "typeFilter": args.typeFilter,
+    }, opts);
 }
 
 /**

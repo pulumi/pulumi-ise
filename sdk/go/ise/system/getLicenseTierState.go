@@ -64,14 +64,20 @@ type LookupLicenseTierStateResult struct {
 
 func LookupLicenseTierStateOutput(ctx *pulumi.Context, args LookupLicenseTierStateOutputArgs, opts ...pulumi.InvokeOption) LookupLicenseTierStateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupLicenseTierStateResult, error) {
+		ApplyT(func(v interface{}) (LookupLicenseTierStateResultOutput, error) {
 			args := v.(LookupLicenseTierStateArgs)
-			r, err := LookupLicenseTierState(ctx, &args, opts...)
-			var s LookupLicenseTierStateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupLicenseTierStateResult
+			secret, err := ctx.InvokePackageRaw("ise:system/getLicenseTierState:getLicenseTierState", args, &rv, "", opts...)
+			if err != nil {
+				return LookupLicenseTierStateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupLicenseTierStateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupLicenseTierStateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupLicenseTierStateResultOutput)
 }
 

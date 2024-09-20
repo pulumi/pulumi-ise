@@ -92,14 +92,20 @@ type LookupInternalUserResult struct {
 
 func LookupInternalUserOutput(ctx *pulumi.Context, args LookupInternalUserOutputArgs, opts ...pulumi.InvokeOption) LookupInternalUserResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupInternalUserResult, error) {
+		ApplyT(func(v interface{}) (LookupInternalUserResultOutput, error) {
 			args := v.(LookupInternalUserArgs)
-			r, err := LookupInternalUser(ctx, &args, opts...)
-			var s LookupInternalUserResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupInternalUserResult
+			secret, err := ctx.InvokePackageRaw("ise:identitymanagement/getInternalUser:getInternalUser", args, &rv, "", opts...)
+			if err != nil {
+				return LookupInternalUserResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupInternalUserResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupInternalUserResultOutput), nil
+			}
+			return output, nil
 		}).(LookupInternalUserResultOutput)
 }
 

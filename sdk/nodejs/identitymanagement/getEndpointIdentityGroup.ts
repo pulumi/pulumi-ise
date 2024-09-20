@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  */
 export function getEndpointIdentityGroup(args?: GetEndpointIdentityGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetEndpointIdentityGroupResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", {
         "id": args.id,
@@ -82,7 +81,12 @@ export interface GetEndpointIdentityGroupResult {
  * ```
  */
 export function getEndpointIdentityGroupOutput(args?: GetEndpointIdentityGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEndpointIdentityGroupResult> {
-    return pulumi.output(args).apply((a: any) => getEndpointIdentityGroup(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**
