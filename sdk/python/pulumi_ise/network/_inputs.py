@@ -4,14 +4,39 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
     'DeviceIpArgs',
+    'DeviceIpArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class DeviceIpArgsDict(TypedDict):
+        ipaddress: pulumi.Input[str]
+        """
+        It can be either single ip address or ip range address
+        """
+        ipaddress_exclude: NotRequired[pulumi.Input[str]]
+        """
+        It can be either single ip address or ip range address
+        """
+        mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet mask length
+        """
+elif False:
+    DeviceIpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DeviceIpArgs:

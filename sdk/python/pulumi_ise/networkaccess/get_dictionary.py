@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -123,9 +128,6 @@ def get_dictionary(id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_dictionary)
 def get_dictionary_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                           name: Optional[pulumi.Input[Optional[str]]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDictionaryResult]:
@@ -145,4 +147,14 @@ def get_dictionary_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: The dictionary name
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getDictionary:getDictionary', __args__, opts=opts, typ=GetDictionaryResult)
+    return __ret__.apply(lambda __response__: GetDictionaryResult(
+        description=pulumi.get(__response__, 'description'),
+        dictionary_attr_type=pulumi.get(__response__, 'dictionary_attr_type'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -240,9 +245,6 @@ def get_time_and_date_condition(id: Optional[str] = None,
         start_time=pulumi.get(__ret__, 'start_time'),
         week_days=pulumi.get(__ret__, 'week_days'),
         week_days_exceptions=pulumi.get(__ret__, 'week_days_exceptions'))
-
-
-@_utilities.lift_output_func(get_time_and_date_condition)
 def get_time_and_date_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                        name: Optional[pulumi.Input[Optional[str]]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTimeAndDateConditionResult]:
@@ -262,4 +264,23 @@ def get_time_and_date_condition_output(id: Optional[pulumi.Input[Optional[str]]]
     :param str id: The id of the object
     :param str name: Condition name
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition', __args__, opts=opts, typ=GetTimeAndDateConditionResult)
+    return __ret__.apply(lambda __response__: GetTimeAndDateConditionResult(
+        description=pulumi.get(__response__, 'description'),
+        end_date=pulumi.get(__response__, 'end_date'),
+        end_time=pulumi.get(__response__, 'end_time'),
+        exception_end_date=pulumi.get(__response__, 'exception_end_date'),
+        exception_end_time=pulumi.get(__response__, 'exception_end_time'),
+        exception_start_date=pulumi.get(__response__, 'exception_start_date'),
+        exception_start_time=pulumi.get(__response__, 'exception_start_time'),
+        id=pulumi.get(__response__, 'id'),
+        is_negate=pulumi.get(__response__, 'is_negate'),
+        name=pulumi.get(__response__, 'name'),
+        start_date=pulumi.get(__response__, 'start_date'),
+        start_time=pulumi.get(__response__, 'start_time'),
+        week_days=pulumi.get(__response__, 'week_days'),
+        week_days_exceptions=pulumi.get(__response__, 'week_days_exceptions')))

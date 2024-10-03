@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -175,9 +180,6 @@ def get_ip_to_sgt_mapping(id: Optional[str] = None,
         mapping_group=pulumi.get(__ret__, 'mapping_group'),
         name=pulumi.get(__ret__, 'name'),
         sgt=pulumi.get(__ret__, 'sgt'))
-
-
-@_utilities.lift_output_func(get_ip_to_sgt_mapping)
 def get_ip_to_sgt_mapping_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                  name: Optional[pulumi.Input[Optional[str]]] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIpToSgtMappingResult]:
@@ -197,4 +199,18 @@ def get_ip_to_sgt_mapping_output(id: Optional[pulumi.Input[Optional[str]]] = Non
     :param str id: The id of the object
     :param str name: The name of the IP to SGT mapping
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getIpToSgtMapping:getIpToSgtMapping', __args__, opts=opts, typ=GetIpToSgtMappingResult)
+    return __ret__.apply(lambda __response__: GetIpToSgtMappingResult(
+        deploy_to=pulumi.get(__response__, 'deploy_to'),
+        deploy_type=pulumi.get(__response__, 'deploy_type'),
+        description=pulumi.get(__response__, 'description'),
+        host_ip=pulumi.get(__response__, 'host_ip'),
+        host_name=pulumi.get(__response__, 'host_name'),
+        id=pulumi.get(__response__, 'id'),
+        mapping_group=pulumi.get(__response__, 'mapping_group'),
+        name=pulumi.get(__response__, 'name'),
+        sgt=pulumi.get(__response__, 'sgt')))
