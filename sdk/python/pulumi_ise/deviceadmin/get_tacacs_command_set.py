@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -121,9 +126,6 @@ def get_tacacs_command_set(id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         permit_unmatched=pulumi.get(__ret__, 'permit_unmatched'))
-
-
-@_utilities.lift_output_func(get_tacacs_command_set)
 def get_tacacs_command_set_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                   name: Optional[pulumi.Input[Optional[str]]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTacacsCommandSetResult]:
@@ -143,4 +145,14 @@ def get_tacacs_command_set_output(id: Optional[pulumi.Input[Optional[str]]] = No
     :param str id: The id of the object
     :param str name: The name of the TACACS command set
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet', __args__, opts=opts, typ=GetTacacsCommandSetResult)
+    return __ret__.apply(lambda __response__: GetTacacsCommandSetResult(
+        commands=pulumi.get(__response__, 'commands'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        permit_unmatched=pulumi.get(__response__, 'permit_unmatched')))

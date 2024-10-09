@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -136,9 +141,6 @@ def get_security_group(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         propogate_to_apic=pulumi.get(__ret__, 'propogate_to_apic'),
         value=pulumi.get(__ret__, 'value'))
-
-
-@_utilities.lift_output_func(get_security_group)
 def get_security_group_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                               name: Optional[pulumi.Input[Optional[str]]] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityGroupResult]:
@@ -158,4 +160,15 @@ def get_security_group_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: The name of the security group
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getSecurityGroup:getSecurityGroup', __args__, opts=opts, typ=GetSecurityGroupResult)
+    return __ret__.apply(lambda __response__: GetSecurityGroupResult(
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        is_read_only=pulumi.get(__response__, 'is_read_only'),
+        name=pulumi.get(__response__, 'name'),
+        propogate_to_apic=pulumi.get(__response__, 'propogate_to_apic'),
+        value=pulumi.get(__response__, 'value')))

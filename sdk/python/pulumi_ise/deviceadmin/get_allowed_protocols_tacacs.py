@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -136,9 +141,6 @@ def get_allowed_protocols_tacacs(id: Optional[str] = None,
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
-
-
-@_utilities.lift_output_func(get_allowed_protocols_tacacs)
 def get_allowed_protocols_tacacs_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                         name: Optional[pulumi.Input[Optional[str]]] = None,
                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAllowedProtocolsTacacsResult]:
@@ -158,4 +160,15 @@ def get_allowed_protocols_tacacs_output(id: Optional[pulumi.Input[Optional[str]]
     :param str id: The id of the object
     :param str name: The name of the allowed protocols
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs', __args__, opts=opts, typ=GetAllowedProtocolsTacacsResult)
+    return __ret__.apply(lambda __response__: GetAllowedProtocolsTacacsResult(
+        allow_chap=pulumi.get(__response__, 'allow_chap'),
+        allow_ms_chap_v1=pulumi.get(__response__, 'allow_ms_chap_v1'),
+        allow_pap_ascii=pulumi.get(__response__, 'allow_pap_ascii'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name')))

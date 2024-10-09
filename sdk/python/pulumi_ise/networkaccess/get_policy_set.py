@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -280,9 +285,6 @@ def get_policy_set(id: Optional[str] = None,
         rank=pulumi.get(__ret__, 'rank'),
         service_name=pulumi.get(__ret__, 'service_name'),
         state=pulumi.get(__ret__, 'state'))
-
-
-@_utilities.lift_output_func(get_policy_set)
 def get_policy_set_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                           name: Optional[pulumi.Input[Optional[str]]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicySetResult]:
@@ -302,4 +304,26 @@ def get_policy_set_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getPolicySet:getPolicySet', __args__, opts=opts, typ=GetPolicySetResult)
+    return __ret__.apply(lambda __response__: GetPolicySetResult(
+        childrens=pulumi.get(__response__, 'childrens'),
+        condition_attribute_name=pulumi.get(__response__, 'condition_attribute_name'),
+        condition_attribute_value=pulumi.get(__response__, 'condition_attribute_value'),
+        condition_dictionary_name=pulumi.get(__response__, 'condition_dictionary_name'),
+        condition_dictionary_value=pulumi.get(__response__, 'condition_dictionary_value'),
+        condition_id=pulumi.get(__response__, 'condition_id'),
+        condition_is_negate=pulumi.get(__response__, 'condition_is_negate'),
+        condition_operator=pulumi.get(__response__, 'condition_operator'),
+        condition_type=pulumi.get(__response__, 'condition_type'),
+        default=pulumi.get(__response__, 'default'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        is_proxy=pulumi.get(__response__, 'is_proxy'),
+        name=pulumi.get(__response__, 'name'),
+        rank=pulumi.get(__response__, 'rank'),
+        service_name=pulumi.get(__response__, 'service_name'),
+        state=pulumi.get(__response__, 'state')))

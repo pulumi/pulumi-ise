@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -163,9 +168,6 @@ def get_active_directory_groups_by_domain(domain: Optional[str] = None,
         join_point_id=pulumi.get(__ret__, 'join_point_id'),
         sid_filter=pulumi.get(__ret__, 'sid_filter'),
         type_filter=pulumi.get(__ret__, 'type_filter'))
-
-
-@_utilities.lift_output_func(get_active_directory_groups_by_domain)
 def get_active_directory_groups_by_domain_output(domain: Optional[pulumi.Input[str]] = None,
                                                  filter: Optional[pulumi.Input[Optional[str]]] = None,
                                                  join_point_id: Optional[pulumi.Input[str]] = None,
@@ -195,4 +197,19 @@ def get_active_directory_groups_by_domain_output(domain: Optional[pulumi.Input[s
     :param str sid_filter: Exact match filter on group's SID, optionally specifying the domain as prefix. e.g. S-1-5-33-544 and R1.dom/S-1-5-33-544 are legal.
     :param str type_filter: Can be exactly one of: BUILTIN, DOMAIN LOCAL, GLOBAL, UNIVERSAL.
     """
-    ...
+    __args__ = dict()
+    __args__['domain'] = domain
+    __args__['filter'] = filter
+    __args__['joinPointId'] = join_point_id
+    __args__['sidFilter'] = sid_filter
+    __args__['typeFilter'] = type_filter
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain', __args__, opts=opts, typ=GetActiveDirectoryGroupsByDomainResult)
+    return __ret__.apply(lambda __response__: GetActiveDirectoryGroupsByDomainResult(
+        domain=pulumi.get(__response__, 'domain'),
+        filter=pulumi.get(__response__, 'filter'),
+        groups=pulumi.get(__response__, 'groups'),
+        id=pulumi.get(__response__, 'id'),
+        join_point_id=pulumi.get(__response__, 'join_point_id'),
+        sid_filter=pulumi.get(__response__, 'sid_filter'),
+        type_filter=pulumi.get(__response__, 'type_filter')))
