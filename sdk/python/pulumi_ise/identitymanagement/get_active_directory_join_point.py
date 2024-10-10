@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -495,9 +500,6 @@ def get_active_directory_join_point(id: Optional[str] = None,
         street_address=pulumi.get(__ret__, 'street_address'),
         telephone=pulumi.get(__ret__, 'telephone'),
         unreachable_domains_behaviour=pulumi.get(__ret__, 'unreachable_domains_behaviour'))
-
-
-@_utilities.lift_output_func(get_active_directory_join_point)
 def get_active_directory_join_point_output(id: Optional[pulumi.Input[str]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetActiveDirectoryJoinPointResult]:
     """
@@ -515,4 +517,42 @@ def get_active_directory_join_point_output(id: Optional[pulumi.Input[str]] = Non
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint', __args__, opts=opts, typ=GetActiveDirectoryJoinPointResult)
+    return __ret__.apply(lambda __response__: GetActiveDirectoryJoinPointResult(
+        ad_scopes_names=pulumi.get(__response__, 'ad_scopes_names'),
+        aging_time=pulumi.get(__response__, 'aging_time'),
+        attributes=pulumi.get(__response__, 'attributes'),
+        auth_protection_type=pulumi.get(__response__, 'auth_protection_type'),
+        country=pulumi.get(__response__, 'country'),
+        department=pulumi.get(__response__, 'department'),
+        description=pulumi.get(__response__, 'description'),
+        domain=pulumi.get(__response__, 'domain'),
+        email=pulumi.get(__response__, 'email'),
+        enable_callback_for_dialin_client=pulumi.get(__response__, 'enable_callback_for_dialin_client'),
+        enable_dialin_permission_check=pulumi.get(__response__, 'enable_dialin_permission_check'),
+        enable_domain_allowed_list=pulumi.get(__response__, 'enable_domain_allowed_list'),
+        enable_failed_auth_protection=pulumi.get(__response__, 'enable_failed_auth_protection'),
+        enable_machine_access=pulumi.get(__response__, 'enable_machine_access'),
+        enable_machine_auth=pulumi.get(__response__, 'enable_machine_auth'),
+        enable_pass_change=pulumi.get(__response__, 'enable_pass_change'),
+        enable_rewrites=pulumi.get(__response__, 'enable_rewrites'),
+        failed_auth_threshold=pulumi.get(__response__, 'failed_auth_threshold'),
+        first_name=pulumi.get(__response__, 'first_name'),
+        groups=pulumi.get(__response__, 'groups'),
+        id=pulumi.get(__response__, 'id'),
+        identity_not_in_ad_behaviour=pulumi.get(__response__, 'identity_not_in_ad_behaviour'),
+        job_title=pulumi.get(__response__, 'job_title'),
+        last_name=pulumi.get(__response__, 'last_name'),
+        locality=pulumi.get(__response__, 'locality'),
+        name=pulumi.get(__response__, 'name'),
+        organizational_unit=pulumi.get(__response__, 'organizational_unit'),
+        plaintext_auth=pulumi.get(__response__, 'plaintext_auth'),
+        rewrite_rules=pulumi.get(__response__, 'rewrite_rules'),
+        schema=pulumi.get(__response__, 'schema'),
+        state_or_province=pulumi.get(__response__, 'state_or_province'),
+        street_address=pulumi.get(__response__, 'street_address'),
+        telephone=pulumi.get(__response__, 'telephone'),
+        unreachable_domains_behaviour=pulumi.get(__response__, 'unreachable_domains_behaviour')))

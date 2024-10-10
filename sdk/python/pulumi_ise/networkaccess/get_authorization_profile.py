@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -501,9 +506,6 @@ def get_authorization_profile(id: Optional[str] = None,
         web_redirection_portal_name=pulumi.get(__ret__, 'web_redirection_portal_name'),
         web_redirection_static_ip_host_name_fqdn=pulumi.get(__ret__, 'web_redirection_static_ip_host_name_fqdn'),
         web_redirection_type=pulumi.get(__ret__, 'web_redirection_type'))
-
-
-@_utilities.lift_output_func(get_authorization_profile)
 def get_authorization_profile_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                      name: Optional[pulumi.Input[Optional[str]]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthorizationProfileResult]:
@@ -523,4 +525,43 @@ def get_authorization_profile_output(id: Optional[pulumi.Input[Optional[str]]] =
     :param str id: The id of the object
     :param str name: The name of the authorization profile
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile', __args__, opts=opts, typ=GetAuthorizationProfileResult)
+    return __ret__.apply(lambda __response__: GetAuthorizationProfileResult(
+        access_type=pulumi.get(__response__, 'access_type'),
+        acl=pulumi.get(__response__, 'acl'),
+        advanced_attributes=pulumi.get(__response__, 'advanced_attributes'),
+        agentless_posture=pulumi.get(__response__, 'agentless_posture'),
+        airespace_acl=pulumi.get(__response__, 'airespace_acl'),
+        airespace_ipv6_acl=pulumi.get(__response__, 'airespace_ipv6_acl'),
+        asa_vpn=pulumi.get(__response__, 'asa_vpn'),
+        auto_smart_port=pulumi.get(__response__, 'auto_smart_port'),
+        avc_profile=pulumi.get(__response__, 'avc_profile'),
+        dacl_name=pulumi.get(__response__, 'dacl_name'),
+        description=pulumi.get(__response__, 'description'),
+        easywired_session_candidate=pulumi.get(__response__, 'easywired_session_candidate'),
+        id=pulumi.get(__response__, 'id'),
+        interface_template=pulumi.get(__response__, 'interface_template'),
+        ipv6_acl_filter=pulumi.get(__response__, 'ipv6_acl_filter'),
+        ipv6_dacl_name=pulumi.get(__response__, 'ipv6_dacl_name'),
+        mac_sec_policy=pulumi.get(__response__, 'mac_sec_policy'),
+        name=pulumi.get(__response__, 'name'),
+        neat=pulumi.get(__response__, 'neat'),
+        profile_name=pulumi.get(__response__, 'profile_name'),
+        reauthentication_connectivity=pulumi.get(__response__, 'reauthentication_connectivity'),
+        reauthentication_timer=pulumi.get(__response__, 'reauthentication_timer'),
+        service_template=pulumi.get(__response__, 'service_template'),
+        track_movement=pulumi.get(__response__, 'track_movement'),
+        unique_identifier=pulumi.get(__response__, 'unique_identifier'),
+        vlan_name_id=pulumi.get(__response__, 'vlan_name_id'),
+        vlan_tag_id=pulumi.get(__response__, 'vlan_tag_id'),
+        voice_domain_permission=pulumi.get(__response__, 'voice_domain_permission'),
+        web_auth=pulumi.get(__response__, 'web_auth'),
+        web_redirection_acl=pulumi.get(__response__, 'web_redirection_acl'),
+        web_redirection_display_certificates_renewal_messages=pulumi.get(__response__, 'web_redirection_display_certificates_renewal_messages'),
+        web_redirection_portal_name=pulumi.get(__response__, 'web_redirection_portal_name'),
+        web_redirection_static_ip_host_name_fqdn=pulumi.get(__response__, 'web_redirection_static_ip_host_name_fqdn'),
+        web_redirection_type=pulumi.get(__response__, 'web_redirection_type')))

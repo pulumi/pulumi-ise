@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -1072,9 +1077,6 @@ def get_allowed_protocols(id: Optional[str] = None,
         teap_eap_tls=pulumi.get(__ret__, 'teap_eap_tls'),
         teap_eap_tls_auth_of_expired_certs=pulumi.get(__ret__, 'teap_eap_tls_auth_of_expired_certs'),
         teap_request_basic_pwd_auth=pulumi.get(__ret__, 'teap_request_basic_pwd_auth'))
-
-
-@_utilities.lift_output_func(get_allowed_protocols)
 def get_allowed_protocols_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                  name: Optional[pulumi.Input[Optional[str]]] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAllowedProtocolsResult]:
@@ -1094,4 +1096,87 @@ def get_allowed_protocols_output(id: Optional[pulumi.Input[Optional[str]]] = Non
     :param str id: The id of the object
     :param str name: The name of the allowed protocols
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getAllowedProtocols:getAllowedProtocols', __args__, opts=opts, typ=GetAllowedProtocolsResult)
+    return __ret__.apply(lambda __response__: GetAllowedProtocolsResult(
+        allow5g=pulumi.get(__response__, 'allow5g'),
+        allow_chap=pulumi.get(__response__, 'allow_chap'),
+        allow_eap_fast=pulumi.get(__response__, 'allow_eap_fast'),
+        allow_eap_md5=pulumi.get(__response__, 'allow_eap_md5'),
+        allow_eap_tls=pulumi.get(__response__, 'allow_eap_tls'),
+        allow_eap_ttls=pulumi.get(__response__, 'allow_eap_ttls'),
+        allow_leap=pulumi.get(__response__, 'allow_leap'),
+        allow_ms_chap_v1=pulumi.get(__response__, 'allow_ms_chap_v1'),
+        allow_ms_chap_v2=pulumi.get(__response__, 'allow_ms_chap_v2'),
+        allow_pap_ascii=pulumi.get(__response__, 'allow_pap_ascii'),
+        allow_peap=pulumi.get(__response__, 'allow_peap'),
+        allow_preferred_eap_protocol=pulumi.get(__response__, 'allow_preferred_eap_protocol'),
+        allow_teap=pulumi.get(__response__, 'allow_teap'),
+        allow_weak_ciphers_for_eap=pulumi.get(__response__, 'allow_weak_ciphers_for_eap'),
+        description=pulumi.get(__response__, 'description'),
+        eap_fast_accept_client_cert=pulumi.get(__response__, 'eap_fast_accept_client_cert'),
+        eap_fast_allow_machine_authentication=pulumi.get(__response__, 'eap_fast_allow_machine_authentication'),
+        eap_fast_eap_gtc=pulumi.get(__response__, 'eap_fast_eap_gtc'),
+        eap_fast_eap_gtc_pwd_change=pulumi.get(__response__, 'eap_fast_eap_gtc_pwd_change'),
+        eap_fast_eap_gtc_pwd_change_retries=pulumi.get(__response__, 'eap_fast_eap_gtc_pwd_change_retries'),
+        eap_fast_eap_ms_chap_v2=pulumi.get(__response__, 'eap_fast_eap_ms_chap_v2'),
+        eap_fast_eap_ms_chap_v2_pwd_change=pulumi.get(__response__, 'eap_fast_eap_ms_chap_v2_pwd_change'),
+        eap_fast_eap_ms_chap_v2_pwd_change_retries=pulumi.get(__response__, 'eap_fast_eap_ms_chap_v2_pwd_change_retries'),
+        eap_fast_eap_tls=pulumi.get(__response__, 'eap_fast_eap_tls'),
+        eap_fast_eap_tls_auth_of_expired_certs=pulumi.get(__response__, 'eap_fast_eap_tls_auth_of_expired_certs'),
+        eap_fast_enable_eap_chaining=pulumi.get(__response__, 'eap_fast_enable_eap_chaining'),
+        eap_fast_pacs_allow_anonymous_provisioning=pulumi.get(__response__, 'eap_fast_pacs_allow_anonymous_provisioning'),
+        eap_fast_pacs_allow_authenticated_provisioning=pulumi.get(__response__, 'eap_fast_pacs_allow_authenticated_provisioning'),
+        eap_fast_pacs_allow_client_cert=pulumi.get(__response__, 'eap_fast_pacs_allow_client_cert'),
+        eap_fast_pacs_allow_machine_authentication=pulumi.get(__response__, 'eap_fast_pacs_allow_machine_authentication'),
+        eap_fast_pacs_authorization_pac_ttl=pulumi.get(__response__, 'eap_fast_pacs_authorization_pac_ttl'),
+        eap_fast_pacs_authorization_pac_ttl_unit=pulumi.get(__response__, 'eap_fast_pacs_authorization_pac_ttl_unit'),
+        eap_fast_pacs_machine_pac_ttl=pulumi.get(__response__, 'eap_fast_pacs_machine_pac_ttl'),
+        eap_fast_pacs_machine_pac_ttl_unit=pulumi.get(__response__, 'eap_fast_pacs_machine_pac_ttl_unit'),
+        eap_fast_pacs_server_returns=pulumi.get(__response__, 'eap_fast_pacs_server_returns'),
+        eap_fast_pacs_stateless_session_resume=pulumi.get(__response__, 'eap_fast_pacs_stateless_session_resume'),
+        eap_fast_pacs_tunnel_pac_ttl=pulumi.get(__response__, 'eap_fast_pacs_tunnel_pac_ttl'),
+        eap_fast_pacs_tunnel_pac_ttl_unit=pulumi.get(__response__, 'eap_fast_pacs_tunnel_pac_ttl_unit'),
+        eap_fast_pacs_use_proactive_pac_update_percentage=pulumi.get(__response__, 'eap_fast_pacs_use_proactive_pac_update_percentage'),
+        eap_fast_use_pacs=pulumi.get(__response__, 'eap_fast_use_pacs'),
+        eap_tls_allow_auth_of_expired_certs=pulumi.get(__response__, 'eap_tls_allow_auth_of_expired_certs'),
+        eap_tls_enable_stateless_session_resume=pulumi.get(__response__, 'eap_tls_enable_stateless_session_resume'),
+        eap_tls_l_bit=pulumi.get(__response__, 'eap_tls_l_bit'),
+        eap_tls_session_ticket_percentage=pulumi.get(__response__, 'eap_tls_session_ticket_percentage'),
+        eap_tls_session_ticket_ttl=pulumi.get(__response__, 'eap_tls_session_ticket_ttl'),
+        eap_tls_session_ticket_ttl_unit=pulumi.get(__response__, 'eap_tls_session_ticket_ttl_unit'),
+        eap_ttls_chap=pulumi.get(__response__, 'eap_ttls_chap'),
+        eap_ttls_eap_md5=pulumi.get(__response__, 'eap_ttls_eap_md5'),
+        eap_ttls_eap_ms_chap_v2=pulumi.get(__response__, 'eap_ttls_eap_ms_chap_v2'),
+        eap_ttls_eap_ms_chap_v2_pwd_change=pulumi.get(__response__, 'eap_ttls_eap_ms_chap_v2_pwd_change'),
+        eap_ttls_eap_ms_chap_v2_pwd_change_retries=pulumi.get(__response__, 'eap_ttls_eap_ms_chap_v2_pwd_change_retries'),
+        eap_ttls_ms_chap_v1=pulumi.get(__response__, 'eap_ttls_ms_chap_v1'),
+        eap_ttls_ms_chap_v2=pulumi.get(__response__, 'eap_ttls_ms_chap_v2'),
+        eap_ttls_pap_ascii=pulumi.get(__response__, 'eap_ttls_pap_ascii'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        peap_allow_peap_eap_gtc=pulumi.get(__response__, 'peap_allow_peap_eap_gtc'),
+        peap_allow_peap_eap_gtc_pwd_change=pulumi.get(__response__, 'peap_allow_peap_eap_gtc_pwd_change'),
+        peap_allow_peap_eap_gtc_pwd_change_retries=pulumi.get(__response__, 'peap_allow_peap_eap_gtc_pwd_change_retries'),
+        peap_allow_peap_eap_ms_chap_v2=pulumi.get(__response__, 'peap_allow_peap_eap_ms_chap_v2'),
+        peap_allow_peap_eap_ms_chap_v2_pwd_change=pulumi.get(__response__, 'peap_allow_peap_eap_ms_chap_v2_pwd_change'),
+        peap_allow_peap_eap_ms_chap_v2_pwd_change_retries=pulumi.get(__response__, 'peap_allow_peap_eap_ms_chap_v2_pwd_change_retries'),
+        peap_allow_peap_eap_tls=pulumi.get(__response__, 'peap_allow_peap_eap_tls'),
+        peap_allow_peap_eap_tls_auth_of_expired_certs=pulumi.get(__response__, 'peap_allow_peap_eap_tls_auth_of_expired_certs'),
+        peap_peap_v0=pulumi.get(__response__, 'peap_peap_v0'),
+        preferred_eap_protocol=pulumi.get(__response__, 'preferred_eap_protocol'),
+        process_host_lookup=pulumi.get(__response__, 'process_host_lookup'),
+        require_cryptobinding=pulumi.get(__response__, 'require_cryptobinding'),
+        require_message_auth=pulumi.get(__response__, 'require_message_auth'),
+        teap_downgrade_msk=pulumi.get(__response__, 'teap_downgrade_msk'),
+        teap_eap_accept_client_cert_during_tunnel_est=pulumi.get(__response__, 'teap_eap_accept_client_cert_during_tunnel_est'),
+        teap_eap_chaining=pulumi.get(__response__, 'teap_eap_chaining'),
+        teap_eap_ms_chap_v2=pulumi.get(__response__, 'teap_eap_ms_chap_v2'),
+        teap_eap_ms_chap_v2_pwd_change=pulumi.get(__response__, 'teap_eap_ms_chap_v2_pwd_change'),
+        teap_eap_ms_chap_v2_pwd_change_retries=pulumi.get(__response__, 'teap_eap_ms_chap_v2_pwd_change_retries'),
+        teap_eap_tls=pulumi.get(__response__, 'teap_eap_tls'),
+        teap_eap_tls_auth_of_expired_certs=pulumi.get(__response__, 'teap_eap_tls_auth_of_expired_certs'),
+        teap_request_basic_pwd_auth=pulumi.get(__response__, 'teap_request_basic_pwd_auth')))

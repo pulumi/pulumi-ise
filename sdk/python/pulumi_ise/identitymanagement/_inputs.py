@@ -4,19 +4,46 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
     'ActiveDirectoryAddGroupsGroupArgs',
+    'ActiveDirectoryAddGroupsGroupArgsDict',
     'ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs',
+    'ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict',
     'ActiveDirectoryJoinPointAttributeArgs',
+    'ActiveDirectoryJoinPointAttributeArgsDict',
     'ActiveDirectoryJoinPointGroupArgs',
+    'ActiveDirectoryJoinPointGroupArgsDict',
     'ActiveDirectoryJoinPointRewriteRuleArgs',
+    'ActiveDirectoryJoinPointRewriteRuleArgsDict',
     'IdentitySourceSequenceIdentitySourceArgs',
+    'IdentitySourceSequenceIdentitySourceArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class ActiveDirectoryAddGroupsGroupArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Required for each group in the group list with no duplication between groups
+        """
+        sid: pulumi.Input[str]
+        """
+        Required for each group in the group list with no duplication between groups
+        """
+        type: NotRequired[pulumi.Input[str]]
+elif False:
+    ActiveDirectoryAddGroupsGroupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ActiveDirectoryAddGroupsGroupArgs:
@@ -67,6 +94,19 @@ class ActiveDirectoryAddGroupsGroupArgs:
         pulumi.set(self, "type", value)
 
 
+if not MYPY:
+    class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Additional attribute name
+        """
+        value: pulumi.Input[str]
+        """
+        Additional attribute value
+        """
+elif False:
+    ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs:
     def __init__(__self__, *,
@@ -103,6 +143,28 @@ class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs:
     def value(self, value: pulumi.Input[str]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class ActiveDirectoryJoinPointAttributeArgsDict(TypedDict):
+        default_value: pulumi.Input[str]
+        """
+        Required for each attribute in the attribute list. Can contain an empty string.
+        """
+        internal_name: pulumi.Input[str]
+        """
+        Required for each attribute in the attribute list
+        """
+        name: pulumi.Input[str]
+        """
+        Required for each attribute in the attribute list with no duplication between attributes
+        """
+        type: pulumi.Input[str]
+        """
+        Required for each group in the group list
+          - Choices: `STRING`, `IP`, `BOOLEAN`, `INT`, `OCTET_STRING`
+        """
+elif False:
+    ActiveDirectoryJoinPointAttributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ActiveDirectoryJoinPointAttributeArgs:
@@ -173,6 +235,20 @@ class ActiveDirectoryJoinPointAttributeArgs:
         pulumi.set(self, "type", value)
 
 
+if not MYPY:
+    class ActiveDirectoryJoinPointGroupArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Required for each group in the group list with no duplication between groups
+        """
+        sid: pulumi.Input[str]
+        """
+        Required for each group in the group list with no duplication between groups
+        """
+        type: NotRequired[pulumi.Input[str]]
+elif False:
+    ActiveDirectoryJoinPointGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ActiveDirectoryJoinPointGroupArgs:
     def __init__(__self__, *,
@@ -221,6 +297,23 @@ class ActiveDirectoryJoinPointGroupArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class ActiveDirectoryJoinPointRewriteRuleArgsDict(TypedDict):
+        rewrite_match: pulumi.Input[str]
+        """
+        Required for each rule in the list with no duplication between rules
+        """
+        rewrite_result: pulumi.Input[str]
+        """
+        Required for each rule in the list
+        """
+        row_id: pulumi.Input[str]
+        """
+        Required for each rule in the list in serial order
+        """
+elif False:
+    ActiveDirectoryJoinPointRewriteRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ActiveDirectoryJoinPointRewriteRuleArgs:
@@ -273,6 +366,19 @@ class ActiveDirectoryJoinPointRewriteRuleArgs:
     def row_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "row_id", value)
 
+
+if not MYPY:
+    class IdentitySourceSequenceIdentitySourceArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Name of the identity source
+        """
+        order: pulumi.Input[int]
+        """
+        Order of the identity source in the sequence
+        """
+elif False:
+    IdentitySourceSequenceIdentitySourceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IdentitySourceSequenceIdentitySourceArgs:

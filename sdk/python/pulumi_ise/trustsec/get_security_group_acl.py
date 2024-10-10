@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -136,9 +141,6 @@ def get_security_group_acl(id: Optional[str] = None,
         ip_version=pulumi.get(__ret__, 'ip_version'),
         name=pulumi.get(__ret__, 'name'),
         read_only=pulumi.get(__ret__, 'read_only'))
-
-
-@_utilities.lift_output_func(get_security_group_acl)
 def get_security_group_acl_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                   name: Optional[pulumi.Input[Optional[str]]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityGroupAclResult]:
@@ -158,4 +160,15 @@ def get_security_group_acl_output(id: Optional[pulumi.Input[Optional[str]]] = No
     :param str id: The id of the object
     :param str name: The name of the security group ACL
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl', __args__, opts=opts, typ=GetSecurityGroupAclResult)
+    return __ret__.apply(lambda __response__: GetSecurityGroupAclResult(
+        acl_content=pulumi.get(__response__, 'acl_content'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        ip_version=pulumi.get(__response__, 'ip_version'),
+        name=pulumi.get(__response__, 'name'),
+        read_only=pulumi.get(__response__, 'read_only')))
