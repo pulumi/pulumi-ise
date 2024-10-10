@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -162,9 +167,6 @@ def get_certificate_authentication_profile(id: Optional[str] = None,
         match_mode=pulumi.get(__ret__, 'match_mode'),
         name=pulumi.get(__ret__, 'name'),
         username_from=pulumi.get(__ret__, 'username_from'))
-
-
-@_utilities.lift_output_func(get_certificate_authentication_profile)
 def get_certificate_authentication_profile_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                   name: Optional[pulumi.Input[Optional[str]]] = None,
                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCertificateAuthenticationProfileResult]:
@@ -184,4 +186,17 @@ def get_certificate_authentication_profile_output(id: Optional[pulumi.Input[Opti
     :param str id: The id of the object
     :param str name: The name of the certificate profile
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile', __args__, opts=opts, typ=GetCertificateAuthenticationProfileResult)
+    return __ret__.apply(lambda __response__: GetCertificateAuthenticationProfileResult(
+        allowed_as_user_name=pulumi.get(__response__, 'allowed_as_user_name'),
+        certificate_attribute_name=pulumi.get(__response__, 'certificate_attribute_name'),
+        description=pulumi.get(__response__, 'description'),
+        external_identity_store_name=pulumi.get(__response__, 'external_identity_store_name'),
+        id=pulumi.get(__response__, 'id'),
+        match_mode=pulumi.get(__response__, 'match_mode'),
+        name=pulumi.get(__response__, 'name'),
+        username_from=pulumi.get(__response__, 'username_from')))

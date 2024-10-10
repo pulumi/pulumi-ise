@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -267,9 +272,6 @@ def get_authorization_global_exception_rule(id: Optional[str] = None,
         profile=pulumi.get(__ret__, 'profile'),
         rank=pulumi.get(__ret__, 'rank'),
         state=pulumi.get(__ret__, 'state'))
-
-
-@_utilities.lift_output_func(get_authorization_global_exception_rule)
 def get_authorization_global_exception_rule_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    name: Optional[pulumi.Input[Optional[str]]] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthorizationGlobalExceptionRuleResult]:
@@ -289,4 +291,25 @@ def get_authorization_global_exception_rule_output(id: Optional[pulumi.Input[Opt
     :param str id: The id of the object
     :param str name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule', __args__, opts=opts, typ=GetAuthorizationGlobalExceptionRuleResult)
+    return __ret__.apply(lambda __response__: GetAuthorizationGlobalExceptionRuleResult(
+        childrens=pulumi.get(__response__, 'childrens'),
+        command_sets=pulumi.get(__response__, 'command_sets'),
+        condition_attribute_name=pulumi.get(__response__, 'condition_attribute_name'),
+        condition_attribute_value=pulumi.get(__response__, 'condition_attribute_value'),
+        condition_dictionary_name=pulumi.get(__response__, 'condition_dictionary_name'),
+        condition_dictionary_value=pulumi.get(__response__, 'condition_dictionary_value'),
+        condition_id=pulumi.get(__response__, 'condition_id'),
+        condition_is_negate=pulumi.get(__response__, 'condition_is_negate'),
+        condition_operator=pulumi.get(__response__, 'condition_operator'),
+        condition_type=pulumi.get(__response__, 'condition_type'),
+        default=pulumi.get(__response__, 'default'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        profile=pulumi.get(__response__, 'profile'),
+        rank=pulumi.get(__response__, 'rank'),
+        state=pulumi.get(__response__, 'state')))

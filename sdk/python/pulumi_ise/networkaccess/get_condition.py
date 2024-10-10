@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -202,9 +207,6 @@ def get_condition(id: Optional[str] = None,
         is_negate=pulumi.get(__ret__, 'is_negate'),
         name=pulumi.get(__ret__, 'name'),
         operator=pulumi.get(__ret__, 'operator'))
-
-
-@_utilities.lift_output_func(get_condition)
 def get_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                          name: Optional[pulumi.Input[Optional[str]]] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetConditionResult]:
@@ -224,4 +226,20 @@ def get_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: Condition name
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getCondition:getCondition', __args__, opts=opts, typ=GetConditionResult)
+    return __ret__.apply(lambda __response__: GetConditionResult(
+        attribute_name=pulumi.get(__response__, 'attribute_name'),
+        attribute_value=pulumi.get(__response__, 'attribute_value'),
+        childrens=pulumi.get(__response__, 'childrens'),
+        condition_type=pulumi.get(__response__, 'condition_type'),
+        description=pulumi.get(__response__, 'description'),
+        dictionary_name=pulumi.get(__response__, 'dictionary_name'),
+        dictionary_value=pulumi.get(__response__, 'dictionary_value'),
+        id=pulumi.get(__response__, 'id'),
+        is_negate=pulumi.get(__response__, 'is_negate'),
+        name=pulumi.get(__response__, 'name'),
+        operator=pulumi.get(__response__, 'operator')))

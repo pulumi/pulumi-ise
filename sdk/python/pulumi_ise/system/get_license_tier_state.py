@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -82,9 +87,6 @@ def get_license_tier_state(id: Optional[str] = None,
     return AwaitableGetLicenseTierStateResult(
         id=pulumi.get(__ret__, 'id'),
         licenses=pulumi.get(__ret__, 'licenses'))
-
-
-@_utilities.lift_output_func(get_license_tier_state)
 def get_license_tier_state_output(id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLicenseTierStateResult]:
     """
@@ -102,4 +104,10 @@ def get_license_tier_state_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:system/getLicenseTierState:getLicenseTierState', __args__, opts=opts, typ=GetLicenseTierStateResult)
+    return __ret__.apply(lambda __response__: GetLicenseTierStateResult(
+        id=pulumi.get(__response__, 'id'),
+        licenses=pulumi.get(__response__, 'licenses')))

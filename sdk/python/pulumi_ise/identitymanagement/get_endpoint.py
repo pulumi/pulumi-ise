@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -409,9 +414,6 @@ def get_endpoint(id: Optional[str] = None,
         static_group_assignment_defined=pulumi.get(__ret__, 'static_group_assignment_defined'),
         static_profile_assignment=pulumi.get(__ret__, 'static_profile_assignment'),
         static_profile_assignment_defined=pulumi.get(__ret__, 'static_profile_assignment_defined'))
-
-
-@_utilities.lift_output_func(get_endpoint)
 def get_endpoint_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                         name: Optional[pulumi.Input[Optional[str]]] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEndpointResult]:
@@ -431,4 +433,36 @@ def get_endpoint_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: The name of the endpoint
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getEndpoint:getEndpoint', __args__, opts=opts, typ=GetEndpointResult)
+    return __ret__.apply(lambda __response__: GetEndpointResult(
+        custom_attributes=pulumi.get(__response__, 'custom_attributes'),
+        description=pulumi.get(__response__, 'description'),
+        group_id=pulumi.get(__response__, 'group_id'),
+        id=pulumi.get(__response__, 'id'),
+        identity_store=pulumi.get(__response__, 'identity_store'),
+        identity_store_id=pulumi.get(__response__, 'identity_store_id'),
+        mac=pulumi.get(__response__, 'mac'),
+        mdm_compliance_status=pulumi.get(__response__, 'mdm_compliance_status'),
+        mdm_encrypted=pulumi.get(__response__, 'mdm_encrypted'),
+        mdm_enrolled=pulumi.get(__response__, 'mdm_enrolled'),
+        mdm_imei=pulumi.get(__response__, 'mdm_imei'),
+        mdm_jail_broken=pulumi.get(__response__, 'mdm_jail_broken'),
+        mdm_manufacturer=pulumi.get(__response__, 'mdm_manufacturer'),
+        mdm_model=pulumi.get(__response__, 'mdm_model'),
+        mdm_os=pulumi.get(__response__, 'mdm_os'),
+        mdm_phone_number=pulumi.get(__response__, 'mdm_phone_number'),
+        mdm_pinlock=pulumi.get(__response__, 'mdm_pinlock'),
+        mdm_reachable=pulumi.get(__response__, 'mdm_reachable'),
+        mdm_serial=pulumi.get(__response__, 'mdm_serial'),
+        mdm_server_name=pulumi.get(__response__, 'mdm_server_name'),
+        name=pulumi.get(__response__, 'name'),
+        portal_user=pulumi.get(__response__, 'portal_user'),
+        profile_id=pulumi.get(__response__, 'profile_id'),
+        static_group_assignment=pulumi.get(__response__, 'static_group_assignment'),
+        static_group_assignment_defined=pulumi.get(__response__, 'static_group_assignment_defined'),
+        static_profile_assignment=pulumi.get(__response__, 'static_profile_assignment'),
+        static_profile_assignment_defined=pulumi.get(__response__, 'static_profile_assignment_defined')))

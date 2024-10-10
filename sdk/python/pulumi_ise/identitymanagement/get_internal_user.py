@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -253,9 +258,6 @@ def get_internal_user(id: Optional[str] = None,
         password=pulumi.get(__ret__, 'password'),
         password_id_store=pulumi.get(__ret__, 'password_id_store'),
         password_never_expires=pulumi.get(__ret__, 'password_never_expires'))
-
-
-@_utilities.lift_output_func(get_internal_user)
 def get_internal_user_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                              name: Optional[pulumi.Input[Optional[str]]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInternalUserResult]:
@@ -275,4 +277,24 @@ def get_internal_user_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: The name of the internal user
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getInternalUser:getInternalUser', __args__, opts=opts, typ=GetInternalUserResult)
+    return __ret__.apply(lambda __response__: GetInternalUserResult(
+        account_name_alias=pulumi.get(__response__, 'account_name_alias'),
+        change_password=pulumi.get(__response__, 'change_password'),
+        custom_attributes=pulumi.get(__response__, 'custom_attributes'),
+        description=pulumi.get(__response__, 'description'),
+        email=pulumi.get(__response__, 'email'),
+        enable_password=pulumi.get(__response__, 'enable_password'),
+        enabled=pulumi.get(__response__, 'enabled'),
+        first_name=pulumi.get(__response__, 'first_name'),
+        id=pulumi.get(__response__, 'id'),
+        identity_groups=pulumi.get(__response__, 'identity_groups'),
+        last_name=pulumi.get(__response__, 'last_name'),
+        name=pulumi.get(__response__, 'name'),
+        password=pulumi.get(__response__, 'password'),
+        password_id_store=pulumi.get(__response__, 'password_id_store'),
+        password_never_expires=pulumi.get(__response__, 'password_never_expires')))

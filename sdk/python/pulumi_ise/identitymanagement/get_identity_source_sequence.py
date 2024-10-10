@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -134,9 +139,6 @@ def get_identity_source_sequence(id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         identity_sources=pulumi.get(__ret__, 'identity_sources'),
         name=pulumi.get(__ret__, 'name'))
-
-
-@_utilities.lift_output_func(get_identity_source_sequence)
 def get_identity_source_sequence_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                         name: Optional[pulumi.Input[Optional[str]]] = None,
                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIdentitySourceSequenceResult]:
@@ -156,4 +158,15 @@ def get_identity_source_sequence_output(id: Optional[pulumi.Input[Optional[str]]
     :param str id: The id of the object
     :param str name: The name of the identity source sequence
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence', __args__, opts=opts, typ=GetIdentitySourceSequenceResult)
+    return __ret__.apply(lambda __response__: GetIdentitySourceSequenceResult(
+        break_on_store_fail=pulumi.get(__response__, 'break_on_store_fail'),
+        certificate_authentication_profile=pulumi.get(__response__, 'certificate_authentication_profile'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        identity_sources=pulumi.get(__response__, 'identity_sources'),
+        name=pulumi.get(__response__, 'name')))

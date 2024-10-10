@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -618,9 +623,6 @@ def get_device(id: Optional[str] = None,
         trustsec_rest_api_username=pulumi.get(__ret__, 'trustsec_rest_api_username'),
         trustsec_send_configuration_to_device=pulumi.get(__ret__, 'trustsec_send_configuration_to_device'),
         trustsec_send_configuration_to_device_using=pulumi.get(__ret__, 'trustsec_send_configuration_to_device_using'))
-
-
-@_utilities.lift_output_func(get_device)
 def get_device_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                       name: Optional[pulumi.Input[Optional[str]]] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDeviceResult]:
@@ -640,4 +642,52 @@ def get_device_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The id of the object
     :param str name: The name of the network device
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:network/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult)
+    return __ret__.apply(lambda __response__: GetDeviceResult(
+        authentication_dtls_required=pulumi.get(__response__, 'authentication_dtls_required'),
+        authentication_enable_key_wrap=pulumi.get(__response__, 'authentication_enable_key_wrap'),
+        authentication_enable_multi_secret=pulumi.get(__response__, 'authentication_enable_multi_secret'),
+        authentication_encryption_key=pulumi.get(__response__, 'authentication_encryption_key'),
+        authentication_encryption_key_format=pulumi.get(__response__, 'authentication_encryption_key_format'),
+        authentication_message_authenticator_code_key=pulumi.get(__response__, 'authentication_message_authenticator_code_key'),
+        authentication_network_protocol=pulumi.get(__response__, 'authentication_network_protocol'),
+        authentication_radius_shared_secret=pulumi.get(__response__, 'authentication_radius_shared_secret'),
+        authentication_second_radius_shared_secret=pulumi.get(__response__, 'authentication_second_radius_shared_secret'),
+        coa_port=pulumi.get(__response__, 'coa_port'),
+        description=pulumi.get(__response__, 'description'),
+        dtls_dns_name=pulumi.get(__response__, 'dtls_dns_name'),
+        id=pulumi.get(__response__, 'id'),
+        ips=pulumi.get(__response__, 'ips'),
+        model_name=pulumi.get(__response__, 'model_name'),
+        name=pulumi.get(__response__, 'name'),
+        network_device_groups=pulumi.get(__response__, 'network_device_groups'),
+        profile_name=pulumi.get(__response__, 'profile_name'),
+        snmp_link_trap_query=pulumi.get(__response__, 'snmp_link_trap_query'),
+        snmp_mac_trap_query=pulumi.get(__response__, 'snmp_mac_trap_query'),
+        snmp_originating_policy_service_node=pulumi.get(__response__, 'snmp_originating_policy_service_node'),
+        snmp_polling_interval=pulumi.get(__response__, 'snmp_polling_interval'),
+        snmp_ro_community=pulumi.get(__response__, 'snmp_ro_community'),
+        snmp_version=pulumi.get(__response__, 'snmp_version'),
+        software_version=pulumi.get(__response__, 'software_version'),
+        tacacs_connect_mode_options=pulumi.get(__response__, 'tacacs_connect_mode_options'),
+        tacacs_shared_secret=pulumi.get(__response__, 'tacacs_shared_secret'),
+        trustsec_coa_source_host=pulumi.get(__response__, 'trustsec_coa_source_host'),
+        trustsec_device_id=pulumi.get(__response__, 'trustsec_device_id'),
+        trustsec_device_password=pulumi.get(__response__, 'trustsec_device_password'),
+        trustsec_download_enviroment_data_every_x_seconds=pulumi.get(__response__, 'trustsec_download_enviroment_data_every_x_seconds'),
+        trustsec_download_peer_authorization_policy_every_x_seconds=pulumi.get(__response__, 'trustsec_download_peer_authorization_policy_every_x_seconds'),
+        trustsec_download_sgacl_lists_every_x_seconds=pulumi.get(__response__, 'trustsec_download_sgacl_lists_every_x_seconds'),
+        trustsec_enable_mode_password=pulumi.get(__response__, 'trustsec_enable_mode_password'),
+        trustsec_exec_mode_password=pulumi.get(__response__, 'trustsec_exec_mode_password'),
+        trustsec_exec_mode_username=pulumi.get(__response__, 'trustsec_exec_mode_username'),
+        trustsec_include_when_deploying_sgt_updates=pulumi.get(__response__, 'trustsec_include_when_deploying_sgt_updates'),
+        trustsec_other_sga_devices_to_trust_this_device=pulumi.get(__response__, 'trustsec_other_sga_devices_to_trust_this_device'),
+        trustsec_re_authentication_every_x_seconds=pulumi.get(__response__, 'trustsec_re_authentication_every_x_seconds'),
+        trustsec_rest_api_password=pulumi.get(__response__, 'trustsec_rest_api_password'),
+        trustsec_rest_api_username=pulumi.get(__response__, 'trustsec_rest_api_username'),
+        trustsec_send_configuration_to_device=pulumi.get(__response__, 'trustsec_send_configuration_to_device'),
+        trustsec_send_configuration_to_device_using=pulumi.get(__response__, 'trustsec_send_configuration_to_device_using')))

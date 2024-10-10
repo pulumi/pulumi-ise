@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
@@ -146,9 +151,6 @@ def get_egress_matrix_cell(id: Optional[str] = None,
         matrix_cell_status=pulumi.get(__ret__, 'matrix_cell_status'),
         sgacls=pulumi.get(__ret__, 'sgacls'),
         source_sgt_id=pulumi.get(__ret__, 'source_sgt_id'))
-
-
-@_utilities.lift_output_func(get_egress_matrix_cell)
 def get_egress_matrix_cell_output(id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEgressMatrixCellResult]:
     """
@@ -166,4 +168,15 @@ def get_egress_matrix_cell_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getEgressMatrixCell:getEgressMatrixCell', __args__, opts=opts, typ=GetEgressMatrixCellResult)
+    return __ret__.apply(lambda __response__: GetEgressMatrixCellResult(
+        default_rule=pulumi.get(__response__, 'default_rule'),
+        description=pulumi.get(__response__, 'description'),
+        destination_sgt_id=pulumi.get(__response__, 'destination_sgt_id'),
+        id=pulumi.get(__response__, 'id'),
+        matrix_cell_status=pulumi.get(__response__, 'matrix_cell_status'),
+        sgacls=pulumi.get(__response__, 'sgacls'),
+        source_sgt_id=pulumi.get(__response__, 'source_sgt_id')))
