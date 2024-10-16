@@ -1,0 +1,7 @@
+name: cisco-ise-instance-for-testing
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: ""
