@@ -271,14 +271,14 @@ public class PolicySet extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="rank", refs={Integer.class}, tree="[0]")
-    private Output<Integer> rank;
+    private Output</* @Nullable */ Integer> rank;
 
     /**
      * @return The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      * 
      */
-    public Output<Integer> rank() {
-        return this.rank;
+    public Output<Optional<Integer>> rank() {
+        return Codegen.optional(this.rank);
     }
     /**
      * Policy set service identifier. &#39;Allowed Protocols&#39; or &#39;Server Sequence&#39;.

@@ -922,7 +922,7 @@ class PolicySet(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def rank(self) -> pulumi.Output[int]:
+    def rank(self) -> pulumi.Output[Optional[int]]:
         """
         The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         """

@@ -90,7 +90,7 @@ type PolicySet struct {
 	// Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The rank (priority) in relation to other policy sets. Lower rank is higher priority.
-	Rank pulumi.IntOutput `pulumi:"rank"`
+	Rank pulumi.IntPtrOutput `pulumi:"rank"`
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName pulumi.StringOutput `pulumi:"serviceName"`
 	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
@@ -452,8 +452,8 @@ func (o PolicySetOutput) Name() pulumi.StringOutput {
 }
 
 // The rank (priority) in relation to other policy sets. Lower rank is higher priority.
-func (o PolicySetOutput) Rank() pulumi.IntOutput {
-	return o.ApplyT(func(v *PolicySet) pulumi.IntOutput { return v.Rank }).(pulumi.IntOutput)
+func (o PolicySetOutput) Rank() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *PolicySet) pulumi.IntPtrOutput { return v.Rank }).(pulumi.IntPtrOutput)
 }
 
 // Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.

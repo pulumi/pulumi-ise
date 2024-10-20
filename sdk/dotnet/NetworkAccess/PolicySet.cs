@@ -136,7 +136,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         /// </summary>
         [Output("rank")]
-        public Output<int> Rank { get; private set; } = null!;
+        public Output<int?> Rank { get; private set; } = null!;
 
         /// <summary>
         /// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.

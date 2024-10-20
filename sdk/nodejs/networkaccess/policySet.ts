@@ -124,7 +124,7 @@ export class PolicySet extends pulumi.CustomResource {
     /**
      * The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number>;
+    public readonly rank!: pulumi.Output<number | undefined>;
     /**
      * Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
      */
