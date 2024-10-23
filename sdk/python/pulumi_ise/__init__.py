@@ -53,10 +53,26 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "deviceadmin/authenticationRuleUpdateRank",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authenticationRuleUpdateRank:AuthenticationRuleUpdateRank": "AuthenticationRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "deviceadmin/authorizationExceptionRule",
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
    "ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule": "AuthorizationExceptionRule"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "deviceadmin/authorizationExceptionRuleUpdateRank",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank": "AuthorizationExceptionRuleUpdateRank"
   }
  },
  {
@@ -69,10 +85,26 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "deviceadmin/authorizationGlobalExceptionRuleUpdateRank",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank": "AuthorizationGlobalExceptionRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "deviceadmin/authorizationRule",
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
    "ise:deviceadmin/authorizationRule:AuthorizationRule": "AuthorizationRule"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "deviceadmin/authorizationRuleUpdateRank",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank": "AuthorizationRuleUpdateRank"
   }
  },
  {
@@ -89,6 +121,14 @@ _utilities.register(
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
    "ise:deviceadmin/policySet:PolicySet": "PolicySet"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "deviceadmin/policySetUpdateRank",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/policySetUpdateRank:PolicySetUpdateRank": "PolicySetUpdateRank"
   }
  },
  {
@@ -221,6 +261,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "networkaccess/authenticationRuleUpdateRank",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authenticationRuleUpdateRank:AuthenticationRuleUpdateRank": "AuthenticationRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "networkaccess/authorizationExceptionRule",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
@@ -229,10 +277,26 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "networkaccess/authorizationExceptionRuleUpdateRank",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank": "AuthorizationExceptionRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "networkaccess/authorizationGlobalExceptionRule",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
    "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": "AuthorizationGlobalExceptionRule"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/authorizationGlobalExceptionRuleUpdateRank",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank": "AuthorizationGlobalExceptionRuleUpdateRank"
   }
  },
  {
@@ -249,6 +313,14 @@ _utilities.register(
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
    "ise:networkaccess/authorizationRule:AuthorizationRule": "AuthorizationRule"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/authorizationRuleUpdateRank",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank": "AuthorizationRuleUpdateRank"
   }
  },
  {
@@ -281,6 +353,14 @@ _utilities.register(
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
    "ise:networkaccess/policySet:PolicySet": "PolicySet"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/policySetUpdateRank",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank": "PolicySetUpdateRank"
   }
  },
  {

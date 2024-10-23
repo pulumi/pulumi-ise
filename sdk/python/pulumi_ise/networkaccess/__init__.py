@@ -7,10 +7,14 @@ import typing
 # Export this package's modules as members:
 from .allowed_protocols import *
 from .authentication_rule import *
+from .authentication_rule_update_rank import *
 from .authorization_exception_rule import *
+from .authorization_exception_rule_update_rank import *
 from .authorization_global_exception_rule import *
+from .authorization_global_exception_rule_update_rank import *
 from .authorization_profile import *
 from .authorization_rule import *
+from .authorization_rule_update_rank import *
 from .condition import *
 from .dictionary import *
 from .downloadable_acl import *
@@ -26,6 +30,7 @@ from .get_downloadable_acl import *
 from .get_policy_set import *
 from .get_time_and_date_condition import *
 from .policy_set import *
+from .policy_set_update_rank import *
 from .time_and_date_condition import *
 from ._inputs import *
 from . import outputs

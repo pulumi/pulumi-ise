@@ -118,7 +118,7 @@ namespace Pulumi.Ise.DeviceAdmin
         /// The description of the policy set
         /// </summary>
         [Output("description")]
-        public Output<string> Description { get; private set; } = null!;
+        public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
         /// Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
@@ -136,7 +136,7 @@ namespace Pulumi.Ise.DeviceAdmin
         /// The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         /// </summary>
         [Output("rank")]
-        public Output<int> Rank { get; private set; } = null!;
+        public Output<int?> Rank { get; private set; } = null!;
 
         /// <summary>
         /// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.

@@ -84,13 +84,13 @@ type PolicySet struct {
 	// Indicates if this policy set is the default one
 	Default pulumi.BoolPtrOutput `pulumi:"default"`
 	// The description of the policy set
-	Description pulumi.StringOutput `pulumi:"description"`
+	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
 	IsProxy pulumi.BoolPtrOutput `pulumi:"isProxy"`
 	// Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The rank (priority) in relation to other policy sets. Lower rank is higher priority.
-	Rank pulumi.IntOutput `pulumi:"rank"`
+	Rank pulumi.IntPtrOutput `pulumi:"rank"`
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName pulumi.StringOutput `pulumi:"serviceName"`
 	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
@@ -437,8 +437,8 @@ func (o PolicySetOutput) Default() pulumi.BoolPtrOutput {
 }
 
 // The description of the policy set
-func (o PolicySetOutput) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v *PolicySet) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
+func (o PolicySetOutput) Description() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *PolicySet) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
 // Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
@@ -452,8 +452,8 @@ func (o PolicySetOutput) Name() pulumi.StringOutput {
 }
 
 // The rank (priority) in relation to other policy sets. Lower rank is higher priority.
-func (o PolicySetOutput) Rank() pulumi.IntOutput {
-	return o.ApplyT(func(v *PolicySet) pulumi.IntOutput { return v.Rank }).(pulumi.IntOutput)
+func (o PolicySetOutput) Rank() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *PolicySet) pulumi.IntPtrOutput { return v.Rank }).(pulumi.IntPtrOutput)
 }
 
 // Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
