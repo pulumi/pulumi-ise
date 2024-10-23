@@ -229,14 +229,14 @@ public class PolicySet extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
-    private Output<String> description;
+    private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the policy set
      * 
      */
-    public Output<String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Flag which indicates if the policy set service is of type &#39;Proxy Sequence&#39; or &#39;Allowed Protocols&#39;
@@ -271,14 +271,14 @@ public class PolicySet extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="rank", refs={Integer.class}, tree="[0]")
-    private Output<Integer> rank;
+    private Output</* @Nullable */ Integer> rank;
 
     /**
      * @return The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      * 
      */
-    public Output<Integer> rank() {
-        return this.rank;
+    public Output<Optional<Integer>> rank() {
+        return Codegen.optional(this.rank);
     }
     /**
      * Policy set service identifier. &#39;Allowed Protocols&#39; or &#39;Server Sequence&#39;.

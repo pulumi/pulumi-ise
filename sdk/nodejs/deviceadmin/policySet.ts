@@ -112,7 +112,7 @@ export class PolicySet extends pulumi.CustomResource {
     /**
      * The description of the policy set
      */
-    public readonly description!: pulumi.Output<string>;
+    public readonly description!: pulumi.Output<string | undefined>;
     /**
      * Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
      */
@@ -124,7 +124,7 @@ export class PolicySet extends pulumi.CustomResource {
     /**
      * The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number>;
+    public readonly rank!: pulumi.Output<number | undefined>;
     /**
      * Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
      */
