@@ -7,7 +7,6 @@ toolchain go1.22.7
 require (
 	github.com/CiscoDevNet/terraform-provider-ise v0.0.0
 	github.com/ettle/strcase v0.1.1
-	github.com/pulumi/pulumi-terraform-bridge/pf v0.47.0
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.94.0
 	github.com/pulumi/pulumi/sdk/v3 v3.137.0
 )
