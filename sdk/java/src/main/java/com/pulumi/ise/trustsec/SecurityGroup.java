@@ -82,18 +82,18 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      * 
      */
     @Export(name="isReadOnly", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> isReadOnly;
+    private Output</* @Nullable */ Boolean> isReadOnly;
 
     /**
-     * @return Read-only - Default value: `false`
+     * @return Read-only
      * 
      */
-    public Output<Boolean> isReadOnly() {
-        return this.isReadOnly;
+    public Output<Optional<Boolean>> isReadOnly() {
+        return Codegen.optional(this.isReadOnly);
     }
     /**
      * The name of the security group

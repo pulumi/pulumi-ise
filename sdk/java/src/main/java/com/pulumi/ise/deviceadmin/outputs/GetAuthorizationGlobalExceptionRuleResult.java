@@ -65,11 +65,6 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
      */
     private String conditionType;
     /**
-     * @return Indicates if this rule is the default one
-     * 
-     */
-    private Boolean default_;
-    /**
      * @return The id of the object
      * 
      */
@@ -167,13 +162,6 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
         return this.conditionType;
     }
     /**
-     * @return Indicates if this rule is the default one
-     * 
-     */
-    public Boolean default_() {
-        return this.default_;
-    }
-    /**
      * @return The id of the object
      * 
      */
@@ -228,7 +216,6 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
         private Boolean conditionIsNegate;
         private String conditionOperator;
         private String conditionType;
-        private Boolean default_;
         private String id;
         private String name;
         private String profile;
@@ -247,7 +234,6 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
     	      this.conditionIsNegate = defaults.conditionIsNegate;
     	      this.conditionOperator = defaults.conditionOperator;
     	      this.conditionType = defaults.conditionType;
-    	      this.default_ = defaults.default_;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.profile = defaults.profile;
@@ -341,14 +327,6 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
             this.conditionType = conditionType;
             return this;
         }
-        @CustomType.Setter("default")
-        public Builder default_(Boolean default_) {
-            if (default_ == null) {
-              throw new MissingRequiredPropertyException("GetAuthorizationGlobalExceptionRuleResult", "default_");
-            }
-            this.default_ = default_;
-            return this;
-        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
@@ -401,7 +379,6 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
             _resultValue.conditionIsNegate = conditionIsNegate;
             _resultValue.conditionOperator = conditionOperator;
             _resultValue.conditionType = conditionType;
-            _resultValue.default_ = default_;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.profile = profile;

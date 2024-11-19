@@ -60,10 +60,10 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string?> ParentEndpointIdentityGroupId { get; private set; } = null!;
 
         /// <summary>
-        /// System defined endpoint identity group - Default value: `false`
+        /// System defined endpoint identity group
         /// </summary>
         [Output("systemDefined")]
-        public Output<bool> SystemDefined { get; private set; } = null!;
+        public Output<bool?> SystemDefined { get; private set; } = null!;
 
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? ParentEndpointIdentityGroupId { get; set; }
 
         /// <summary>
-        /// System defined endpoint identity group - Default value: `false`
+        /// System defined endpoint identity group
         /// </summary>
         [Input("systemDefined")]
         public Input<bool>? SystemDefined { get; set; }
@@ -162,7 +162,7 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? ParentEndpointIdentityGroupId { get; set; }
 
         /// <summary>
-        /// System defined endpoint identity group - Default value: `false`
+        /// System defined endpoint identity group
         /// </summary>
         [Input("systemDefined")]
         public Input<bool>? SystemDefined { get; set; }

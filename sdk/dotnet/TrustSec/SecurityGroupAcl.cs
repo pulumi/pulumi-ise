@@ -68,10 +68,10 @@ namespace Pulumi.Ise.TrustSec
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Read-only - Default value: `false`
+        /// Read-only
         /// </summary>
         [Output("readOnly")]
-        public Output<bool> ReadOnly { get; private set; } = null!;
+        public Output<bool?> ReadOnly { get; private set; } = null!;
 
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Read-only - Default value: `false`
+        /// Read-only
         /// </summary>
         [Input("readOnly")]
         public Input<bool>? ReadOnly { get; set; }
@@ -182,7 +182,7 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Read-only - Default value: `false`
+        /// Read-only
         /// </summary>
         [Input("readOnly")]
         public Input<bool>? ReadOnly { get; set; }

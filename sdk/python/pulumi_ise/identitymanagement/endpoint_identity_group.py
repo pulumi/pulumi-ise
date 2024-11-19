@@ -28,7 +28,7 @@ class EndpointIdentityGroupArgs:
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] name: The name of the endpoint identity group
         :param pulumi.Input[str] parent_endpoint_identity_group_id: Parent endpoint identity group ID
-        :param pulumi.Input[bool] system_defined: System defined endpoint identity group - Default value: `false`
+        :param pulumi.Input[bool] system_defined: System defined endpoint identity group
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -79,7 +79,7 @@ class EndpointIdentityGroupArgs:
     @pulumi.getter(name="systemDefined")
     def system_defined(self) -> Optional[pulumi.Input[bool]]:
         """
-        System defined endpoint identity group - Default value: `false`
+        System defined endpoint identity group
         """
         return pulumi.get(self, "system_defined")
 
@@ -100,7 +100,7 @@ class _EndpointIdentityGroupState:
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] name: The name of the endpoint identity group
         :param pulumi.Input[str] parent_endpoint_identity_group_id: Parent endpoint identity group ID
-        :param pulumi.Input[bool] system_defined: System defined endpoint identity group - Default value: `false`
+        :param pulumi.Input[bool] system_defined: System defined endpoint identity group
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -151,7 +151,7 @@ class _EndpointIdentityGroupState:
     @pulumi.getter(name="systemDefined")
     def system_defined(self) -> Optional[pulumi.Input[bool]]:
         """
-        System defined endpoint identity group - Default value: `false`
+        System defined endpoint identity group
         """
         return pulumi.get(self, "system_defined")
 
@@ -196,7 +196,7 @@ class EndpointIdentityGroup(pulumi.CustomResource):
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] name: The name of the endpoint identity group
         :param pulumi.Input[str] parent_endpoint_identity_group_id: Parent endpoint identity group ID
-        :param pulumi.Input[bool] system_defined: System defined endpoint identity group - Default value: `false`
+        :param pulumi.Input[bool] system_defined: System defined endpoint identity group
         """
         ...
     @overload
@@ -281,7 +281,7 @@ class EndpointIdentityGroup(pulumi.CustomResource):
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] name: The name of the endpoint identity group
         :param pulumi.Input[str] parent_endpoint_identity_group_id: Parent endpoint identity group ID
-        :param pulumi.Input[bool] system_defined: System defined endpoint identity group - Default value: `false`
+        :param pulumi.Input[bool] system_defined: System defined endpoint identity group
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -319,9 +319,9 @@ class EndpointIdentityGroup(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="systemDefined")
-    def system_defined(self) -> pulumi.Output[bool]:
+    def system_defined(self) -> pulumi.Output[Optional[bool]]:
         """
-        System defined endpoint identity group - Default value: `false`
+        System defined endpoint identity group
         """
         return pulumi.get(self, "system_defined")
 

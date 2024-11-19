@@ -17,7 +17,6 @@ import * as utilities from "../utilities";
  *
  * const example = new ise.networkaccess.AuthorizationGlobalExceptionRule("example", {
  *     name: "Rule1",
- *     "default": false,
  *     rank: 0,
  *     state: "enabled",
  *     conditionType: "ConditionAttributes",
@@ -106,10 +105,6 @@ export class AuthorizationGlobalExceptionRule extends pulumi.CustomResource {
      */
     public readonly conditionType!: pulumi.Output<string | undefined>;
     /**
-     * Indicates if this rule is the default one
-     */
-    public readonly default!: pulumi.Output<boolean | undefined>;
-    /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
     public readonly name!: pulumi.Output<string>;
@@ -152,7 +147,6 @@ export class AuthorizationGlobalExceptionRule extends pulumi.CustomResource {
             resourceInputs["conditionIsNegate"] = state ? state.conditionIsNegate : undefined;
             resourceInputs["conditionOperator"] = state ? state.conditionOperator : undefined;
             resourceInputs["conditionType"] = state ? state.conditionType : undefined;
-            resourceInputs["default"] = state ? state.default : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
             resourceInputs["profiles"] = state ? state.profiles : undefined;
             resourceInputs["rank"] = state ? state.rank : undefined;
@@ -169,7 +163,6 @@ export class AuthorizationGlobalExceptionRule extends pulumi.CustomResource {
             resourceInputs["conditionIsNegate"] = args ? args.conditionIsNegate : undefined;
             resourceInputs["conditionOperator"] = args ? args.conditionOperator : undefined;
             resourceInputs["conditionType"] = args ? args.conditionType : undefined;
-            resourceInputs["default"] = args ? args.default : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
             resourceInputs["profiles"] = args ? args.profiles : undefined;
             resourceInputs["rank"] = args ? args.rank : undefined;
@@ -225,10 +218,6 @@ export interface AuthorizationGlobalExceptionRuleState {
      * `ConditionOrBlock`, `ConditionReference`
      */
     conditionType?: pulumi.Input<string>;
-    /**
-     * Indicates if this rule is the default one
-     */
-    default?: pulumi.Input<boolean>;
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
@@ -295,10 +284,6 @@ export interface AuthorizationGlobalExceptionRuleArgs {
      * `ConditionOrBlock`, `ConditionReference`
      */
     conditionType?: pulumi.Input<string>;
-    /**
-     * Indicates if this rule is the default one
-     */
-    default?: pulumi.Input<boolean>;
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */

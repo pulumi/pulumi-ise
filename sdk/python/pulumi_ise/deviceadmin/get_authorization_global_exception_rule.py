@@ -27,7 +27,7 @@ class GetAuthorizationGlobalExceptionRuleResult:
     """
     A collection of values returned by getAuthorizationGlobalExceptionRule.
     """
-    def __init__(__self__, childrens=None, command_sets=None, condition_attribute_name=None, condition_attribute_value=None, condition_dictionary_name=None, condition_dictionary_value=None, condition_id=None, condition_is_negate=None, condition_operator=None, condition_type=None, default=None, id=None, name=None, profile=None, rank=None, state=None):
+    def __init__(__self__, childrens=None, command_sets=None, condition_attribute_name=None, condition_attribute_value=None, condition_dictionary_name=None, condition_dictionary_value=None, condition_id=None, condition_is_negate=None, condition_operator=None, condition_type=None, id=None, name=None, profile=None, rank=None, state=None):
         if childrens and not isinstance(childrens, list):
             raise TypeError("Expected argument 'childrens' to be a list")
         pulumi.set(__self__, "childrens", childrens)
@@ -58,9 +58,6 @@ class GetAuthorizationGlobalExceptionRuleResult:
         if condition_type and not isinstance(condition_type, str):
             raise TypeError("Expected argument 'condition_type' to be a str")
         pulumi.set(__self__, "condition_type", condition_type)
-        if default and not isinstance(default, bool):
-            raise TypeError("Expected argument 'default' to be a bool")
-        pulumi.set(__self__, "default", default)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -159,14 +156,6 @@ class GetAuthorizationGlobalExceptionRuleResult:
 
     @property
     @pulumi.getter
-    def default(self) -> bool:
-        """
-        Indicates if this rule is the default one
-        """
-        return pulumi.get(self, "default")
-
-    @property
-    @pulumi.getter
     def id(self) -> str:
         """
         The id of the object
@@ -222,7 +211,6 @@ class AwaitableGetAuthorizationGlobalExceptionRuleResult(GetAuthorizationGlobalE
             condition_is_negate=self.condition_is_negate,
             condition_operator=self.condition_operator,
             condition_type=self.condition_type,
-            default=self.default,
             id=self.id,
             name=self.name,
             profile=self.profile,
@@ -266,7 +254,6 @@ def get_authorization_global_exception_rule(id: Optional[str] = None,
         condition_is_negate=pulumi.get(__ret__, 'condition_is_negate'),
         condition_operator=pulumi.get(__ret__, 'condition_operator'),
         condition_type=pulumi.get(__ret__, 'condition_type'),
-        default=pulumi.get(__ret__, 'default'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         profile=pulumi.get(__ret__, 'profile'),
@@ -307,7 +294,6 @@ def get_authorization_global_exception_rule_output(id: Optional[pulumi.Input[Opt
         condition_is_negate=pulumi.get(__response__, 'condition_is_negate'),
         condition_operator=pulumi.get(__response__, 'condition_operator'),
         condition_type=pulumi.get(__response__, 'condition_type'),
-        default=pulumi.get(__response__, 'default'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         profile=pulumi.get(__response__, 'profile'),

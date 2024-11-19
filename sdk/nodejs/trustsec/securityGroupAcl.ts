@@ -73,9 +73,9 @@ export class SecurityGroupAcl extends pulumi.CustomResource {
      */
     public readonly name!: pulumi.Output<string>;
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      */
-    public readonly readOnly!: pulumi.Output<boolean>;
+    public readonly readOnly!: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a SecurityGroupAcl resource with the given unique name, arguments, and options.
@@ -132,7 +132,7 @@ export interface SecurityGroupAclState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      */
     readOnly?: pulumi.Input<boolean>;
 }
@@ -158,7 +158,7 @@ export interface SecurityGroupAclArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      */
     readOnly?: pulumi.Input<boolean>;
 }

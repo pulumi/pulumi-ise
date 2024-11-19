@@ -33,14 +33,14 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      * 
      */
     @Import(name="isReadOnly")
     private @Nullable Output<Boolean> isReadOnly;
 
     /**
-     * @return Read-only - Default value: `false`
+     * @return Read-only
      * 
      */
     public Optional<Output<Boolean>> isReadOnly() {
@@ -142,7 +142,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param isReadOnly Read-only - Default value: `false`
+         * @param isReadOnly Read-only
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param isReadOnly Read-only - Default value: `false`
+         * @param isReadOnly Read-only
          * 
          * @return builder
          * 

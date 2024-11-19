@@ -84,10 +84,6 @@ export interface GetAuthorizationGlobalExceptionRuleResult {
      */
     readonly conditionType: string;
     /**
-     * Indicates if this rule is the default one
-     */
-    readonly default: boolean;
-    /**
      * The id of the object
      */
     readonly id: string;

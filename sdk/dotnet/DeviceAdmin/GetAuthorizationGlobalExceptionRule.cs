@@ -146,10 +146,6 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public readonly string ConditionType;
         /// <summary>
-        /// Indicates if this rule is the default one
-        /// </summary>
-        public readonly bool Default;
-        /// <summary>
         /// The id of the object
         /// </summary>
         public readonly string Id;
@@ -192,8 +188,6 @@ namespace Pulumi.Ise.DeviceAdmin
 
             string conditionType,
 
-            bool @default,
-
             string id,
 
             string name,
@@ -214,7 +208,6 @@ namespace Pulumi.Ise.DeviceAdmin
             ConditionIsNegate = conditionIsNegate;
             ConditionOperator = conditionOperator;
             ConditionType = conditionType;
-            Default = @default;
             Id = id;
             Name = name;
             Profile = profile;

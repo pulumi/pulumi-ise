@@ -55,8 +55,8 @@ type EndpointIdentityGroup struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Parent endpoint identity group ID
 	ParentEndpointIdentityGroupId pulumi.StringPtrOutput `pulumi:"parentEndpointIdentityGroupId"`
-	// System defined endpoint identity group - Default value: `false`
-	SystemDefined pulumi.BoolOutput `pulumi:"systemDefined"`
+	// System defined endpoint identity group
+	SystemDefined pulumi.BoolPtrOutput `pulumi:"systemDefined"`
 }
 
 // NewEndpointIdentityGroup registers a new resource with the given unique name, arguments, and options.
@@ -95,7 +95,7 @@ type endpointIdentityGroupState struct {
 	Name *string `pulumi:"name"`
 	// Parent endpoint identity group ID
 	ParentEndpointIdentityGroupId *string `pulumi:"parentEndpointIdentityGroupId"`
-	// System defined endpoint identity group - Default value: `false`
+	// System defined endpoint identity group
 	SystemDefined *bool `pulumi:"systemDefined"`
 }
 
@@ -106,7 +106,7 @@ type EndpointIdentityGroupState struct {
 	Name pulumi.StringPtrInput
 	// Parent endpoint identity group ID
 	ParentEndpointIdentityGroupId pulumi.StringPtrInput
-	// System defined endpoint identity group - Default value: `false`
+	// System defined endpoint identity group
 	SystemDefined pulumi.BoolPtrInput
 }
 
@@ -121,7 +121,7 @@ type endpointIdentityGroupArgs struct {
 	Name *string `pulumi:"name"`
 	// Parent endpoint identity group ID
 	ParentEndpointIdentityGroupId *string `pulumi:"parentEndpointIdentityGroupId"`
-	// System defined endpoint identity group - Default value: `false`
+	// System defined endpoint identity group
 	SystemDefined *bool `pulumi:"systemDefined"`
 }
 
@@ -133,7 +133,7 @@ type EndpointIdentityGroupArgs struct {
 	Name pulumi.StringPtrInput
 	// Parent endpoint identity group ID
 	ParentEndpointIdentityGroupId pulumi.StringPtrInput
-	// System defined endpoint identity group - Default value: `false`
+	// System defined endpoint identity group
 	SystemDefined pulumi.BoolPtrInput
 }
 
@@ -239,9 +239,9 @@ func (o EndpointIdentityGroupOutput) ParentEndpointIdentityGroupId() pulumi.Stri
 	return o.ApplyT(func(v *EndpointIdentityGroup) pulumi.StringPtrOutput { return v.ParentEndpointIdentityGroupId }).(pulumi.StringPtrOutput)
 }
 
-// System defined endpoint identity group - Default value: `false`
-func (o EndpointIdentityGroupOutput) SystemDefined() pulumi.BoolOutput {
-	return o.ApplyT(func(v *EndpointIdentityGroup) pulumi.BoolOutput { return v.SystemDefined }).(pulumi.BoolOutput)
+// System defined endpoint identity group
+func (o EndpointIdentityGroupOutput) SystemDefined() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EndpointIdentityGroup) pulumi.BoolPtrOutput { return v.SystemDefined }).(pulumi.BoolPtrOutput)
 }
 
 type EndpointIdentityGroupArrayOutput struct{ *pulumi.OutputState }

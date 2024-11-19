@@ -62,14 +62,14 @@ public final class EndpointIdentityGroupArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * System defined endpoint identity group - Default value: `false`
+     * System defined endpoint identity group
      * 
      */
     @Import(name="systemDefined")
     private @Nullable Output<Boolean> systemDefined;
 
     /**
-     * @return System defined endpoint identity group - Default value: `false`
+     * @return System defined endpoint identity group
      * 
      */
     public Optional<Output<Boolean>> systemDefined() {
@@ -167,7 +167,7 @@ public final class EndpointIdentityGroupArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param systemDefined System defined endpoint identity group - Default value: `false`
+         * @param systemDefined System defined endpoint identity group
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class EndpointIdentityGroupArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param systemDefined System defined endpoint identity group - Default value: `false`
+         * @param systemDefined System defined endpoint identity group
          * 
          * @return builder
          * 

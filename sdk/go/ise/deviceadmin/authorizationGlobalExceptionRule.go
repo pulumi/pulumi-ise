@@ -29,7 +29,6 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := deviceadmin.NewAuthorizationGlobalExceptionRule(ctx, "example", &deviceadmin.AuthorizationGlobalExceptionRuleArgs{
 //				Name:                    pulumi.String("Rule1"),
-//				Default:                 pulumi.Bool(false),
 //				Rank:                    pulumi.Int(0),
 //				State:                   pulumi.String("enabled"),
 //				ConditionType:           pulumi.String("ConditionAttributes"),
@@ -84,8 +83,6 @@ type AuthorizationGlobalExceptionRule struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrOutput `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default pulumi.BoolPtrOutput `pulumi:"default"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Device admin profiles control the initial login session of the device administrator
@@ -150,8 +147,6 @@ type authorizationGlobalExceptionRuleState struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default *bool `pulumi:"default"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
 	// Device admin profiles control the initial login session of the device administrator
@@ -187,8 +182,6 @@ type AuthorizationGlobalExceptionRuleState struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
-	// Indicates if this rule is the default one
-	Default pulumi.BoolPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
 	// Device admin profiles control the initial login session of the device administrator
@@ -228,8 +221,6 @@ type authorizationGlobalExceptionRuleArgs struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default *bool `pulumi:"default"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
 	// Device admin profiles control the initial login session of the device administrator
@@ -266,8 +257,6 @@ type AuthorizationGlobalExceptionRuleArgs struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
-	// Indicates if this rule is the default one
-	Default pulumi.BoolPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
 	// Device admin profiles control the initial login session of the device administrator
@@ -419,11 +408,6 @@ func (o AuthorizationGlobalExceptionRuleOutput) ConditionOperator() pulumi.Strin
 // `ConditionOrBlock`, `ConditionReference`
 func (o AuthorizationGlobalExceptionRuleOutput) ConditionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.StringPtrOutput { return v.ConditionType }).(pulumi.StringPtrOutput)
-}
-
-// Indicates if this rule is the default one
-func (o AuthorizationGlobalExceptionRuleOutput) Default() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.BoolPtrOutput { return v.Default }).(pulumi.BoolPtrOutput)
 }
 
 // Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]

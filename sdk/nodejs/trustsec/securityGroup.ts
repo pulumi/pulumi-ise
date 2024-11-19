@@ -61,9 +61,9 @@ export class SecurityGroup extends pulumi.CustomResource {
      */
     public readonly description!: pulumi.Output<string | undefined>;
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      */
-    public readonly isReadOnly!: pulumi.Output<boolean>;
+    public readonly isReadOnly!: pulumi.Output<boolean | undefined>;
     /**
      * The name of the security group
      */
@@ -120,7 +120,7 @@ export interface SecurityGroupState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      */
     isReadOnly?: pulumi.Input<boolean>;
     /**
@@ -146,7 +146,7 @@ export interface SecurityGroupArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      */
     isReadOnly?: pulumi.Input<boolean>;
     /**

@@ -31,7 +31,6 @@ class AuthorizationGlobalExceptionRuleArgs:
                  condition_is_negate: Optional[pulumi.Input[bool]] = None,
                  condition_operator: Optional[pulumi.Input[str]] = None,
                  condition_type: Optional[pulumi.Input[str]] = None,
-                 default: Optional[pulumi.Input[bool]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  profile: Optional[pulumi.Input[str]] = None,
                  rank: Optional[pulumi.Input[int]] = None,
@@ -52,7 +51,6 @@ class AuthorizationGlobalExceptionRuleArgs:
         :param pulumi.Input[str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
                additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
                `ConditionOrBlock`, `ConditionReference`
-        :param pulumi.Input[bool] default: Indicates if this rule is the default one
         :param pulumi.Input[str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
@@ -78,8 +76,6 @@ class AuthorizationGlobalExceptionRuleArgs:
             pulumi.set(__self__, "condition_operator", condition_operator)
         if condition_type is not None:
             pulumi.set(__self__, "condition_type", condition_type)
-        if default is not None:
-            pulumi.set(__self__, "default", default)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if profile is not None:
@@ -212,18 +208,6 @@ class AuthorizationGlobalExceptionRuleArgs:
     @condition_type.setter
     def condition_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "condition_type", value)
-
-    @property
-    @pulumi.getter
-    def default(self) -> Optional[pulumi.Input[bool]]:
-        """
-        Indicates if this rule is the default one
-        """
-        return pulumi.get(self, "default")
-
-    @default.setter
-    def default(self, value: Optional[pulumi.Input[bool]]):
-        pulumi.set(self, "default", value)
 
     @property
     @pulumi.getter
@@ -287,7 +271,6 @@ class _AuthorizationGlobalExceptionRuleState:
                  condition_is_negate: Optional[pulumi.Input[bool]] = None,
                  condition_operator: Optional[pulumi.Input[str]] = None,
                  condition_type: Optional[pulumi.Input[str]] = None,
-                 default: Optional[pulumi.Input[bool]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  profile: Optional[pulumi.Input[str]] = None,
                  rank: Optional[pulumi.Input[int]] = None,
@@ -308,7 +291,6 @@ class _AuthorizationGlobalExceptionRuleState:
         :param pulumi.Input[str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
                additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
                `ConditionOrBlock`, `ConditionReference`
-        :param pulumi.Input[bool] default: Indicates if this rule is the default one
         :param pulumi.Input[str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
@@ -334,8 +316,6 @@ class _AuthorizationGlobalExceptionRuleState:
             pulumi.set(__self__, "condition_operator", condition_operator)
         if condition_type is not None:
             pulumi.set(__self__, "condition_type", condition_type)
-        if default is not None:
-            pulumi.set(__self__, "default", default)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if profile is not None:
@@ -468,18 +448,6 @@ class _AuthorizationGlobalExceptionRuleState:
     @condition_type.setter
     def condition_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "condition_type", value)
-
-    @property
-    @pulumi.getter
-    def default(self) -> Optional[pulumi.Input[bool]]:
-        """
-        Indicates if this rule is the default one
-        """
-        return pulumi.get(self, "default")
-
-    @default.setter
-    def default(self, value: Optional[pulumi.Input[bool]]):
-        pulumi.set(self, "default", value)
 
     @property
     @pulumi.getter
@@ -545,7 +513,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
                  condition_is_negate: Optional[pulumi.Input[bool]] = None,
                  condition_operator: Optional[pulumi.Input[str]] = None,
                  condition_type: Optional[pulumi.Input[str]] = None,
-                 default: Optional[pulumi.Input[bool]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  profile: Optional[pulumi.Input[str]] = None,
                  rank: Optional[pulumi.Input[int]] = None,
@@ -562,7 +529,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
 
         example = ise.deviceadmin.AuthorizationGlobalExceptionRule("example",
             name="Rule1",
-            default=False,
             rank=0,
             state="enabled",
             condition_type="ConditionAttributes",
@@ -597,7 +563,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         :param pulumi.Input[str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
                additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
                `ConditionOrBlock`, `ConditionReference`
-        :param pulumi.Input[bool] default: Indicates if this rule is the default one
         :param pulumi.Input[str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
@@ -620,7 +585,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
 
         example = ise.deviceadmin.AuthorizationGlobalExceptionRule("example",
             name="Rule1",
-            default=False,
             rank=0,
             state="enabled",
             condition_type="ConditionAttributes",
@@ -664,7 +628,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
                  condition_is_negate: Optional[pulumi.Input[bool]] = None,
                  condition_operator: Optional[pulumi.Input[str]] = None,
                  condition_type: Optional[pulumi.Input[str]] = None,
-                 default: Optional[pulumi.Input[bool]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  profile: Optional[pulumi.Input[str]] = None,
                  rank: Optional[pulumi.Input[int]] = None,
@@ -688,7 +651,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
             __props__.__dict__["condition_is_negate"] = condition_is_negate
             __props__.__dict__["condition_operator"] = condition_operator
             __props__.__dict__["condition_type"] = condition_type
-            __props__.__dict__["default"] = default
             __props__.__dict__["name"] = name
             __props__.__dict__["profile"] = profile
             __props__.__dict__["rank"] = rank
@@ -713,7 +675,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
             condition_is_negate: Optional[pulumi.Input[bool]] = None,
             condition_operator: Optional[pulumi.Input[str]] = None,
             condition_type: Optional[pulumi.Input[str]] = None,
-            default: Optional[pulumi.Input[bool]] = None,
             name: Optional[pulumi.Input[str]] = None,
             profile: Optional[pulumi.Input[str]] = None,
             rank: Optional[pulumi.Input[int]] = None,
@@ -739,7 +700,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         :param pulumi.Input[str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
                additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
                `ConditionOrBlock`, `ConditionReference`
-        :param pulumi.Input[bool] default: Indicates if this rule is the default one
         :param pulumi.Input[str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
@@ -759,7 +719,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         __props__.__dict__["condition_is_negate"] = condition_is_negate
         __props__.__dict__["condition_operator"] = condition_operator
         __props__.__dict__["condition_type"] = condition_type
-        __props__.__dict__["default"] = default
         __props__.__dict__["name"] = name
         __props__.__dict__["profile"] = profile
         __props__.__dict__["rank"] = rank
@@ -849,14 +808,6 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
-
-    @property
-    @pulumi.getter
-    def default(self) -> pulumi.Output[Optional[bool]]:
-        """
-        Indicates if this rule is the default one
-        """
-        return pulumi.get(self, "default")
 
     @property
     @pulumi.getter

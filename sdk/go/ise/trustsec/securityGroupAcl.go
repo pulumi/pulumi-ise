@@ -60,8 +60,8 @@ type SecurityGroupAcl struct {
 	IpVersion pulumi.StringOutput `pulumi:"ipVersion"`
 	// The name of the security group ACL
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Read-only - Default value: `false`
-	ReadOnly pulumi.BoolOutput `pulumi:"readOnly"`
+	// Read-only
+	ReadOnly pulumi.BoolPtrOutput `pulumi:"readOnly"`
 }
 
 // NewSecurityGroupAcl registers a new resource with the given unique name, arguments, and options.
@@ -105,7 +105,7 @@ type securityGroupAclState struct {
 	IpVersion *string `pulumi:"ipVersion"`
 	// The name of the security group ACL
 	Name *string `pulumi:"name"`
-	// Read-only - Default value: `false`
+	// Read-only
 	ReadOnly *bool `pulumi:"readOnly"`
 }
 
@@ -118,7 +118,7 @@ type SecurityGroupAclState struct {
 	IpVersion pulumi.StringPtrInput
 	// The name of the security group ACL
 	Name pulumi.StringPtrInput
-	// Read-only - Default value: `false`
+	// Read-only
 	ReadOnly pulumi.BoolPtrInput
 }
 
@@ -135,7 +135,7 @@ type securityGroupAclArgs struct {
 	IpVersion *string `pulumi:"ipVersion"`
 	// The name of the security group ACL
 	Name *string `pulumi:"name"`
-	// Read-only - Default value: `false`
+	// Read-only
 	ReadOnly *bool `pulumi:"readOnly"`
 }
 
@@ -149,7 +149,7 @@ type SecurityGroupAclArgs struct {
 	IpVersion pulumi.StringPtrInput
 	// The name of the security group ACL
 	Name pulumi.StringPtrInput
-	// Read-only - Default value: `false`
+	// Read-only
 	ReadOnly pulumi.BoolPtrInput
 }
 
@@ -260,9 +260,9 @@ func (o SecurityGroupAclOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityGroupAcl) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Read-only - Default value: `false`
-func (o SecurityGroupAclOutput) ReadOnly() pulumi.BoolOutput {
-	return o.ApplyT(func(v *SecurityGroupAcl) pulumi.BoolOutput { return v.ReadOnly }).(pulumi.BoolOutput)
+// Read-only
+func (o SecurityGroupAclOutput) ReadOnly() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SecurityGroupAcl) pulumi.BoolPtrOutput { return v.ReadOnly }).(pulumi.BoolPtrOutput)
 }
 
 type SecurityGroupAclArrayOutput struct{ *pulumi.OutputState }

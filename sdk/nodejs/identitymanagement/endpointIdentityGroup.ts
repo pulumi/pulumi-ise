@@ -67,9 +67,9 @@ export class EndpointIdentityGroup extends pulumi.CustomResource {
      */
     public readonly parentEndpointIdentityGroupId!: pulumi.Output<string | undefined>;
     /**
-     * System defined endpoint identity group - Default value: `false`
+     * System defined endpoint identity group
      */
-    public readonly systemDefined!: pulumi.Output<boolean>;
+    public readonly systemDefined!: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a EndpointIdentityGroup resource with the given unique name, arguments, and options.
@@ -117,7 +117,7 @@ export interface EndpointIdentityGroupState {
      */
     parentEndpointIdentityGroupId?: pulumi.Input<string>;
     /**
-     * System defined endpoint identity group - Default value: `false`
+     * System defined endpoint identity group
      */
     systemDefined?: pulumi.Input<boolean>;
 }
@@ -139,7 +139,7 @@ export interface EndpointIdentityGroupArgs {
      */
     parentEndpointIdentityGroupId?: pulumi.Input<string>;
     /**
-     * System defined endpoint identity group - Default value: `false`
+     * System defined endpoint identity group
      */
     systemDefined?: pulumi.Input<boolean>;
 }

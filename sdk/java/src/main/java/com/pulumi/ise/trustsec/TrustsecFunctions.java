@@ -18,11 +18,14 @@ import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupPlainArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterPlainArgs;
 import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingGroupResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingResult;
 import com.pulumi.ise.trustsec.outputs.GetSecurityGroupAclResult;
 import com.pulumi.ise.trustsec.outputs.GetSecurityGroupResult;
+import com.pulumi.ise.trustsec.outputs.GetSxpDomainFilterResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class TrustsecFunctions {
@@ -1201,5 +1204,257 @@ public final class TrustsecFunctions {
      */
     public static CompletableFuture<GetSecurityGroupAclResult> getSecurityGroupAclPlain(GetSecurityGroupAclPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", TypeShape.of(GetSecurityGroupAclResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSxpDomainFilterResult> getSxpDomainFilter() {
+        return getSxpDomainFilter(GetSxpDomainFilterArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetSxpDomainFilterResult> getSxpDomainFilterPlain() {
+        return getSxpDomainFilterPlain(GetSxpDomainFilterPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSxpDomainFilterResult> getSxpDomainFilter(GetSxpDomainFilterArgs args) {
+        return getSxpDomainFilter(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetSxpDomainFilterResult> getSxpDomainFilterPlain(GetSxpDomainFilterPlainArgs args) {
+        return getSxpDomainFilterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSxpDomainFilterResult> getSxpDomainFilter(GetSxpDomainFilterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", TypeShape.of(GetSxpDomainFilterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetSxpDomainFilterResult> getSxpDomainFilterPlain(GetSxpDomainFilterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", TypeShape.of(GetSxpDomainFilterResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -48,7 +48,6 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         var example = new AuthorizationGlobalExceptionRule("example", AuthorizationGlobalExceptionRuleArgs.builder()
  *             .name("Rule1")
- *             .default_(false)
  *             .rank(0)
  *             .state("enabled")
  *             .conditionType("ConditionAttributes")
@@ -223,20 +222,6 @@ public class AuthorizationGlobalExceptionRule extends com.pulumi.resources.Custo
      */
     public Output<Optional<String>> conditionType() {
         return Codegen.optional(this.conditionType);
-    }
-    /**
-     * Indicates if this rule is the default one
-     * 
-     */
-    @Export(name="default", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> default_;
-
-    /**
-     * @return Indicates if this rule is the default one
-     * 
-     */
-    public Output<Optional<Boolean>> default_() {
-        return Codegen.optional(this.default_);
     }
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
