@@ -53,8 +53,11 @@ var moduleNames = map[string]string{
 	"endpoint":         modIdentityManagement,
 	"identity":         modIdentityManagement,
 	"network_access":   modNetworkAccess,
-	"tacacs":           modDeviceAdmin,
-	"trustsec":         modTrustSec,
+	// At time of adding, both sxp objects (resource:ise_sxp_domain_filter,
+	// function:ise_sxp_domain_filter) are in the TrustSec group upstream.
+	"sxp":      modTrustSec,
+	"tacacs":   modDeviceAdmin,
+	"trustsec": modTrustSec,
 }
 
 var resourceModules = map[string]string{

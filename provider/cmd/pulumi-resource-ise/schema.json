@@ -3797,7 +3797,7 @@
             }
         },
         "ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": {
-            "description": "This resource can manage a Device Admin Authorization Global Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationGlobalExceptionRule(\"example\", {\n    name: \"Rule1\",\n    \"default\": false,\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    commandSets: [\"DenyAllCommands\"],\n    profile: \"Default Shell Profile\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationGlobalExceptionRule(\"example\",\n    name=\"Rule1\",\n    default=False,\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    command_sets=[\"DenyAllCommands\"],\n    profile=\"Default Shell Profile\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationGlobalExceptionRule(\"example\", new()\n    {\n        Name = \"Rule1\",\n        Default = false,\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        CommandSets = new[]\n        {\n            \"DenyAllCommands\",\n        },\n        Profile = \"Default Shell Profile\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationGlobalExceptionRule(ctx, \"example\", \u0026deviceadmin.AuthorizationGlobalExceptionRuleArgs{\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tDefault:                 pulumi.Bool(false),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tCommandSets: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"DenyAllCommands\"),\n\t\t\t},\n\t\t\tProfile: pulumi.String(\"Default Shell Profile\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRule;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRule(\"example\", AuthorizationGlobalExceptionRuleArgs.builder()\n            .name(\"Rule1\")\n            .default_(false)\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .commandSets(\"DenyAllCommands\")\n            .profile(\"Default Shell Profile\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationGlobalExceptionRule\n    properties:\n      name: Rule1\n      default: false\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      commandSets:\n        - DenyAllCommands\n      profile: Default Shell Profile\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "description": "This resource can manage a Device Admin Authorization Global Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationGlobalExceptionRule(\"example\", {\n    name: \"Rule1\",\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    commandSets: [\"DenyAllCommands\"],\n    profile: \"Default Shell Profile\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationGlobalExceptionRule(\"example\",\n    name=\"Rule1\",\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    command_sets=[\"DenyAllCommands\"],\n    profile=\"Default Shell Profile\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationGlobalExceptionRule(\"example\", new()\n    {\n        Name = \"Rule1\",\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        CommandSets = new[]\n        {\n            \"DenyAllCommands\",\n        },\n        Profile = \"Default Shell Profile\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationGlobalExceptionRule(ctx, \"example\", \u0026deviceadmin.AuthorizationGlobalExceptionRuleArgs{\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tCommandSets: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"DenyAllCommands\"),\n\t\t\t},\n\t\t\tProfile: pulumi.String(\"Default Shell Profile\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRule;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRule(\"example\", AuthorizationGlobalExceptionRuleArgs.builder()\n            .name(\"Rule1\")\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .commandSets(\"DenyAllCommands\")\n            .profile(\"Default Shell Profile\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationGlobalExceptionRule\n    properties:\n      name: Rule1\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      commandSets:\n        - DenyAllCommands\n      profile: Default Shell Profile\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
                 "childrens": {
                     "type": "array",
@@ -3844,10 +3844,6 @@
                 "conditionType": {
                     "type": "string",
                     "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that\nadditional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,\n`ConditionOrBlock`, `ConditionReference`\n"
-                },
-                "default": {
-                    "type": "boolean",
-                    "description": "Indicates if this rule is the default one\n"
                 },
                 "name": {
                     "type": "string",
@@ -3916,10 +3912,6 @@
                     "type": "string",
                     "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that\nadditional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,\n`ConditionOrBlock`, `ConditionReference`\n"
                 },
-                "default": {
-                    "type": "boolean",
-                    "description": "Indicates if this rule is the default one\n"
-                },
                 "name": {
                     "type": "string",
                     "description": "Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]\n"
@@ -3985,10 +3977,6 @@
                     "conditionType": {
                         "type": "string",
                         "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that\nadditional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,\n`ConditionOrBlock`, `ConditionReference`\n"
-                    },
-                    "default": {
-                        "type": "boolean",
-                        "description": "Indicates if this rule is the default one\n"
                     },
                     "name": {
                         "type": "string",
@@ -6185,12 +6173,11 @@
                 },
                 "systemDefined": {
                     "type": "boolean",
-                    "description": "System defined endpoint identity group - Default value: `false`\n"
+                    "description": "System defined endpoint identity group\n"
                 }
             },
             "required": [
-                "name",
-                "systemDefined"
+                "name"
             ],
             "inputProperties": {
                 "description": {
@@ -6207,7 +6194,7 @@
                 },
                 "systemDefined": {
                     "type": "boolean",
-                    "description": "System defined endpoint identity group - Default value: `false`\n"
+                    "description": "System defined endpoint identity group\n"
                 }
             },
             "stateInputs": {
@@ -6227,7 +6214,7 @@
                     },
                     "systemDefined": {
                         "type": "boolean",
-                        "description": "System defined endpoint identity group - Default value: `false`\n"
+                        "description": "System defined endpoint identity group\n"
                     }
                 },
                 "type": "object"
@@ -8740,7 +8727,7 @@
             }
         },
         "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": {
-            "description": "This resource can manage a Network Access Authorization Global Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationGlobalExceptionRule(\"example\", {\n    name: \"Rule1\",\n    \"default\": false,\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    profiles: [\"PermitAccess\"],\n    securityGroup: \"BYOD\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationGlobalExceptionRule(\"example\",\n    name=\"Rule1\",\n    default=False,\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    profiles=[\"PermitAccess\"],\n    security_group=\"BYOD\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationGlobalExceptionRule(\"example\", new()\n    {\n        Name = \"Rule1\",\n        Default = false,\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        Profiles = new[]\n        {\n            \"PermitAccess\",\n        },\n        SecurityGroup = \"BYOD\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationGlobalExceptionRule(ctx, \"example\", \u0026networkaccess.AuthorizationGlobalExceptionRuleArgs{\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tDefault:                 pulumi.Bool(false),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tProfiles: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"PermitAccess\"),\n\t\t\t},\n\t\t\tSecurityGroup: pulumi.String(\"BYOD\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRule;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRule(\"example\", AuthorizationGlobalExceptionRuleArgs.builder()\n            .name(\"Rule1\")\n            .default_(false)\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .profiles(\"PermitAccess\")\n            .securityGroup(\"BYOD\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationGlobalExceptionRule\n    properties:\n      name: Rule1\n      default: false\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      profiles:\n        - PermitAccess\n      securityGroup: BYOD\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "description": "This resource can manage a Network Access Authorization Global Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationGlobalExceptionRule(\"example\", {\n    name: \"Rule1\",\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    profiles: [\"PermitAccess\"],\n    securityGroup: \"BYOD\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationGlobalExceptionRule(\"example\",\n    name=\"Rule1\",\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    profiles=[\"PermitAccess\"],\n    security_group=\"BYOD\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationGlobalExceptionRule(\"example\", new()\n    {\n        Name = \"Rule1\",\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        Profiles = new[]\n        {\n            \"PermitAccess\",\n        },\n        SecurityGroup = \"BYOD\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationGlobalExceptionRule(ctx, \"example\", \u0026networkaccess.AuthorizationGlobalExceptionRuleArgs{\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tProfiles: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"PermitAccess\"),\n\t\t\t},\n\t\t\tSecurityGroup: pulumi.String(\"BYOD\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRule;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRule(\"example\", AuthorizationGlobalExceptionRuleArgs.builder()\n            .name(\"Rule1\")\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .profiles(\"PermitAccess\")\n            .securityGroup(\"BYOD\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationGlobalExceptionRule\n    properties:\n      name: Rule1\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      profiles:\n        - PermitAccess\n      securityGroup: BYOD\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
                 "childrens": {
                     "type": "array",
@@ -8780,10 +8767,6 @@
                 "conditionType": {
                     "type": "string",
                     "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that\nadditional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,\n`ConditionOrBlock`, `ConditionReference`\n"
-                },
-                "default": {
-                    "type": "boolean",
-                    "description": "Indicates if this rule is the default one\n"
                 },
                 "name": {
                     "type": "string",
@@ -8852,10 +8835,6 @@
                     "type": "string",
                     "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that\nadditional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,\n`ConditionOrBlock`, `ConditionReference`\n"
                 },
-                "default": {
-                    "type": "boolean",
-                    "description": "Indicates if this rule is the default one\n"
-                },
                 "name": {
                     "type": "string",
                     "description": "Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]\n"
@@ -8921,10 +8900,6 @@
                     "conditionType": {
                         "type": "string",
                         "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that\nadditional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,\n`ConditionOrBlock`, `ConditionReference`\n"
-                    },
-                    "default": {
-                        "type": "boolean",
-                        "description": "Indicates if this rule is the default one\n"
                     },
                     "name": {
                         "type": "string",
@@ -10913,7 +10888,7 @@
                 },
                 "isReadOnly": {
                     "type": "boolean",
-                    "description": "Read-only - Default value: `false`\n"
+                    "description": "Read-only\n"
                 },
                 "name": {
                     "type": "string",
@@ -10929,7 +10904,6 @@
                 }
             },
             "required": [
-                "isReadOnly",
                 "name",
                 "value"
             ],
@@ -10940,7 +10914,7 @@
                 },
                 "isReadOnly": {
                     "type": "boolean",
-                    "description": "Read-only - Default value: `false`\n"
+                    "description": "Read-only\n"
                 },
                 "name": {
                     "type": "string",
@@ -10967,7 +10941,7 @@
                     },
                     "isReadOnly": {
                         "type": "boolean",
-                        "description": "Read-only - Default value: `false`\n"
+                        "description": "Read-only\n"
                     },
                     "name": {
                         "type": "string",
@@ -11006,14 +10980,13 @@
                 },
                 "readOnly": {
                     "type": "boolean",
-                    "description": "Read-only - Default value: `false`\n"
+                    "description": "Read-only\n"
                 }
             },
             "required": [
                 "aclContent",
                 "ipVersion",
-                "name",
-                "readOnly"
+                "name"
             ],
             "inputProperties": {
                 "aclContent": {
@@ -11034,7 +11007,7 @@
                 },
                 "readOnly": {
                     "type": "boolean",
-                    "description": "Read-only - Default value: `false`\n"
+                    "description": "Read-only\n"
                 }
             },
             "requiredInputs": [
@@ -11061,7 +11034,99 @@
                     },
                     "readOnly": {
                         "type": "boolean",
-                        "description": "Read-only - Default value: `false`\n"
+                        "description": "Read-only\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:trustsec/sxpDomainFilter:SxpDomainFilter": {
+            "description": "This resource can manage a SXP Domain Filter.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.SxpDomainFilter(\"example\", {\n    subnet: \"1.0.0.0/24\",\n    vn: \"VN1\",\n    domains: \"default\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.SxpDomainFilter(\"example\",\n    subnet=\"1.0.0.0/24\",\n    vn=\"VN1\",\n    domains=\"default\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.SxpDomainFilter(\"example\", new()\n    {\n        Subnet = \"1.0.0.0/24\",\n        Vn = \"VN1\",\n        Domains = \"default\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewSxpDomainFilter(ctx, \"example\", \u0026trustsec.SxpDomainFilterArgs{\n\t\t\tSubnet:  pulumi.String(\"1.0.0.0/24\"),\n\t\t\tVn:      pulumi.String(\"VN1\"),\n\t\t\tDomains: pulumi.String(\"default\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.SxpDomainFilter;\nimport com.pulumi.ise.trustsec.SxpDomainFilterArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SxpDomainFilter(\"example\", SxpDomainFilterArgs.builder()\n            .subnet(\"1.0.0.0/24\")\n            .vn(\"VN1\")\n            .domains(\"default\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:SxpDomainFilter\n    properties:\n      subnet: 1.0.0.0/24\n      vn: VN1\n      domains: default\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:trustsec/sxpDomainFilter:SxpDomainFilter example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description\n"
+                },
+                "domains": {
+                    "type": "string",
+                    "description": "List of SXP Domains, separated with comma\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Resource name\n"
+                },
+                "sgt": {
+                    "type": "string",
+                    "description": "SGT name or ID. At least one of subnet or sgt or vn should be defined\n"
+                },
+                "subnet": {
+                    "type": "string",
+                    "description": "Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined\n"
+                },
+                "vn": {
+                    "type": "string",
+                    "description": "Virtual Network. At least one of subnet or sgt or vn should be defined\n"
+                }
+            },
+            "required": [
+                "domains",
+                "name"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "Description\n"
+                },
+                "domains": {
+                    "type": "string",
+                    "description": "List of SXP Domains, separated with comma\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Resource name\n"
+                },
+                "sgt": {
+                    "type": "string",
+                    "description": "SGT name or ID. At least one of subnet or sgt or vn should be defined\n"
+                },
+                "subnet": {
+                    "type": "string",
+                    "description": "Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined\n"
+                },
+                "vn": {
+                    "type": "string",
+                    "description": "Virtual Network. At least one of subnet or sgt or vn should be defined\n"
+                }
+            },
+            "requiredInputs": [
+                "domains"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering SxpDomainFilter resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Description\n"
+                    },
+                    "domains": {
+                        "type": "string",
+                        "description": "List of SXP Domains, separated with comma\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Resource name\n"
+                    },
+                    "sgt": {
+                        "type": "string",
+                        "description": "SGT name or ID. At least one of subnet or sgt or vn should be defined\n"
+                    },
+                    "subnet": {
+                        "type": "string",
+                        "description": "Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined\n"
+                    },
+                    "vn": {
+                        "type": "string",
+                        "description": "Virtual Network. At least one of subnet or sgt or vn should be defined\n"
                     }
                 },
                 "type": "object"
@@ -11442,10 +11507,6 @@
                         "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.\n",
                         "type": "string"
                     },
-                    "default": {
-                        "description": "Indicates if this rule is the default one\n",
-                        "type": "boolean"
-                    },
                     "id": {
                         "description": "The id of the object\n",
                         "type": "string"
@@ -11478,7 +11539,6 @@
                     "conditionIsNegate",
                     "conditionOperator",
                     "conditionType",
-                    "default",
                     "id",
                     "name",
                     "profile",
@@ -13782,10 +13842,6 @@
                         "description": "Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.\n",
                         "type": "string"
                     },
-                    "default": {
-                        "description": "Indicates if this rule is the default one\n",
-                        "type": "boolean"
-                    },
                     "id": {
                         "description": "The id of the object\n",
                         "type": "string"
@@ -13824,7 +13880,6 @@
                     "conditionIsNegate",
                     "conditionOperator",
                     "conditionType",
-                    "default",
                     "id",
                     "name",
                     "profiles",
@@ -14948,6 +15003,66 @@
                     "ipVersion",
                     "name",
                     "readOnly"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:trustsec/getSxpDomainFilter:getSxpDomainFilter": {
+            "description": "This data source can read the SXP Domain Filter.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getSxpDomainFilter({\n    id: \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_sxp_domain_filter(id=\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetSxpDomainFilter.Invoke(new()\n    {\n        Id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupSxpDomainFilter(ctx, \u0026trustsec.LookupSxpDomainFilterArgs{\n\t\t\tId: pulumi.StringRef(\"76d24097-41c4-4558-a4d0-a8c07ac08470\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()\n            .id(\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      Function: ise:trustsec:getSxpDomainFilter\n      Arguments:\n        id: 76d24097-41c4-4558-a4d0-a8c07ac08470\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getSxpDomainFilter.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Resource name\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getSxpDomainFilter.\n",
+                "properties": {
+                    "description": {
+                        "description": "Description\n",
+                        "type": "string"
+                    },
+                    "domains": {
+                        "description": "List of SXP Domains, separated with comma\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Resource name\n",
+                        "type": "string"
+                    },
+                    "sgt": {
+                        "description": "SGT name or ID. At least one of subnet or sgt or vn should be defined\n",
+                        "type": "string"
+                    },
+                    "subnet": {
+                        "description": "Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined\n",
+                        "type": "string"
+                    },
+                    "vn": {
+                        "description": "Virtual Network. At least one of subnet or sgt or vn should be defined\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "domains",
+                    "id",
+                    "name",
+                    "sgt",
+                    "subnet",
+                    "vn"
                 ],
                 "type": "object"
             }
