@@ -25,7 +25,6 @@ namespace Pulumi.Ise.DeviceAdmin
     ///     var example = new Ise.DeviceAdmin.AuthorizationGlobalExceptionRule("example", new()
     ///     {
     ///         Name = "Rule1",
-    ///         Default = false,
     ///         Rank = 0,
     ///         State = "enabled",
     ///         ConditionType = "ConditionAttributes",
@@ -116,12 +115,6 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         [Output("conditionType")]
         public Output<string?> ConditionType { get; private set; } = null!;
-
-        /// <summary>
-        /// Indicates if this rule is the default one
-        /// </summary>
-        [Output("default")]
-        public Output<bool?> Default { get; private set; } = null!;
 
         /// <summary>
         /// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
@@ -270,12 +263,6 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string>? ConditionType { get; set; }
 
         /// <summary>
-        /// Indicates if this rule is the default one
-        /// </summary>
-        [Input("default")]
-        public Input<bool>? Default { get; set; }
-
-        /// <summary>
         /// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         /// </summary>
         [Input("name")]
@@ -382,12 +369,6 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         [Input("conditionType")]
         public Input<string>? ConditionType { get; set; }
-
-        /// <summary>
-        /// Indicates if this rule is the default one
-        /// </summary>
-        [Input("default")]
-        public Input<bool>? Default { get; set; }
 
         /// <summary>
         /// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]

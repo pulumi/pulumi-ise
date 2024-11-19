@@ -29,7 +29,6 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := networkaccess.NewAuthorizationGlobalExceptionRule(ctx, "example", &networkaccess.AuthorizationGlobalExceptionRuleArgs{
 //				Name:                    pulumi.String("Rule1"),
-//				Default:                 pulumi.Bool(false),
 //				Rank:                    pulumi.Int(0),
 //				State:                   pulumi.String("enabled"),
 //				ConditionType:           pulumi.String("ConditionAttributes"),
@@ -82,8 +81,6 @@ type AuthorizationGlobalExceptionRule struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrOutput `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default pulumi.BoolPtrOutput `pulumi:"default"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The authorization profile(s)
@@ -148,8 +145,6 @@ type authorizationGlobalExceptionRuleState struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default *bool `pulumi:"default"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
 	// The authorization profile(s)
@@ -185,8 +180,6 @@ type AuthorizationGlobalExceptionRuleState struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
-	// Indicates if this rule is the default one
-	Default pulumi.BoolPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
 	// The authorization profile(s)
@@ -226,8 +219,6 @@ type authorizationGlobalExceptionRuleArgs struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default *bool `pulumi:"default"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
 	// The authorization profile(s)
@@ -264,8 +255,6 @@ type AuthorizationGlobalExceptionRuleArgs struct {
 	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
 	// `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
-	// Indicates if this rule is the default one
-	Default pulumi.BoolPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
 	// The authorization profile(s)
@@ -414,11 +403,6 @@ func (o AuthorizationGlobalExceptionRuleOutput) ConditionOperator() pulumi.Strin
 // `ConditionOrBlock`, `ConditionReference`
 func (o AuthorizationGlobalExceptionRuleOutput) ConditionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.StringPtrOutput { return v.ConditionType }).(pulumi.StringPtrOutput)
-}
-
-// Indicates if this rule is the default one
-func (o AuthorizationGlobalExceptionRuleOutput) Default() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.BoolPtrOutput { return v.Default }).(pulumi.BoolPtrOutput)
 }
 
 // Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]

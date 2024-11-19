@@ -163,21 +163,6 @@ public final class AuthorizationGlobalExceptionRuleArgs extends com.pulumi.resou
     }
 
     /**
-     * Indicates if this rule is the default one
-     * 
-     */
-    @Import(name="default")
-    private @Nullable Output<Boolean> default_;
-
-    /**
-     * @return Indicates if this rule is the default one
-     * 
-     */
-    public Optional<Output<Boolean>> default_() {
-        return Optional.ofNullable(this.default_);
-    }
-
-    /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      * 
      */
@@ -264,7 +249,6 @@ public final class AuthorizationGlobalExceptionRuleArgs extends com.pulumi.resou
         this.conditionIsNegate = $.conditionIsNegate;
         this.conditionOperator = $.conditionOperator;
         this.conditionType = $.conditionType;
-        this.default_ = $.default_;
         this.name = $.name;
         this.profiles = $.profiles;
         this.rank = $.rank;
@@ -495,27 +479,6 @@ public final class AuthorizationGlobalExceptionRuleArgs extends com.pulumi.resou
          */
         public Builder conditionType(String conditionType) {
             return conditionType(Output.of(conditionType));
-        }
-
-        /**
-         * @param default_ Indicates if this rule is the default one
-         * 
-         * @return builder
-         * 
-         */
-        public Builder default_(@Nullable Output<Boolean> default_) {
-            $.default_ = default_;
-            return this;
-        }
-
-        /**
-         * @param default_ Indicates if this rule is the default one
-         * 
-         * @return builder
-         * 
-         */
-        public Builder default_(Boolean default_) {
-            return default_(Output.of(default_));
         }
 
         /**

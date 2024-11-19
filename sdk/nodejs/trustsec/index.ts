@@ -35,6 +35,11 @@ export const getSecurityGroupAcl: typeof import("./getSecurityGroupAcl").getSecu
 export const getSecurityGroupAclOutput: typeof import("./getSecurityGroupAcl").getSecurityGroupAclOutput = null as any;
 utilities.lazyLoad(exports, ["getSecurityGroupAcl","getSecurityGroupAclOutput"], () => require("./getSecurityGroupAcl"));
 
+export { GetSxpDomainFilterArgs, GetSxpDomainFilterResult, GetSxpDomainFilterOutputArgs } from "./getSxpDomainFilter";
+export const getSxpDomainFilter: typeof import("./getSxpDomainFilter").getSxpDomainFilter = null as any;
+export const getSxpDomainFilterOutput: typeof import("./getSxpDomainFilter").getSxpDomainFilterOutput = null as any;
+utilities.lazyLoad(exports, ["getSxpDomainFilter","getSxpDomainFilterOutput"], () => require("./getSxpDomainFilter"));
+
 export { IpToSgtMappingArgs, IpToSgtMappingState } from "./ipToSgtMapping";
 export type IpToSgtMapping = import("./ipToSgtMapping").IpToSgtMapping;
 export const IpToSgtMapping: typeof import("./ipToSgtMapping").IpToSgtMapping = null as any;
@@ -55,6 +60,11 @@ export type SecurityGroupAcl = import("./securityGroupAcl").SecurityGroupAcl;
 export const SecurityGroupAcl: typeof import("./securityGroupAcl").SecurityGroupAcl = null as any;
 utilities.lazyLoad(exports, ["SecurityGroupAcl"], () => require("./securityGroupAcl"));
 
+export { SxpDomainFilterArgs, SxpDomainFilterState } from "./sxpDomainFilter";
+export type SxpDomainFilter = import("./sxpDomainFilter").SxpDomainFilter;
+export const SxpDomainFilter: typeof import("./sxpDomainFilter").SxpDomainFilter = null as any;
+utilities.lazyLoad(exports, ["SxpDomainFilter"], () => require("./sxpDomainFilter"));
+
 
 const _module = {
     version: utilities.getVersion(),
@@ -70,6 +80,8 @@ const _module = {
                 return new SecurityGroup(name, <any>undefined, { urn })
             case "ise:trustsec/securityGroupAcl:SecurityGroupAcl":
                 return new SecurityGroupAcl(name, <any>undefined, { urn })
+            case "ise:trustsec/sxpDomainFilter:SxpDomainFilter":
+                return new SxpDomainFilter(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
@@ -80,3 +92,4 @@ pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMapping", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMappingGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroupAcl", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/sxpDomainFilter", _module)

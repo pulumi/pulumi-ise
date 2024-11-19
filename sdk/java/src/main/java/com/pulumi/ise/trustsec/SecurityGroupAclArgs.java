@@ -78,14 +78,14 @@ public final class SecurityGroupAclArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Read-only - Default value: `false`
+     * @return Read-only
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -205,7 +205,7 @@ public final class SecurityGroupAclArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param readOnly Read-only - Default value: `false`
+         * @param readOnly Read-only
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class SecurityGroupAclArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param readOnly Read-only - Default value: `false`
+         * @param readOnly Read-only
          * 
          * @return builder
          * 

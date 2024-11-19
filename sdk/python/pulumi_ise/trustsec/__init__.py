@@ -11,7 +11,9 @@ from .get_ip_to_sgt_mapping import *
 from .get_ip_to_sgt_mapping_group import *
 from .get_security_group import *
 from .get_security_group_acl import *
+from .get_sxp_domain_filter import *
 from .ip_to_sgt_mapping import *
 from .ip_to_sgt_mapping_group import *
 from .security_group import *
 from .security_group_acl import *
+from .sxp_domain_filter import *

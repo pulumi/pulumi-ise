@@ -54,8 +54,8 @@ type SecurityGroup struct {
 
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Read-only - Default value: `false`
-	IsReadOnly pulumi.BoolOutput `pulumi:"isReadOnly"`
+	// Read-only
+	IsReadOnly pulumi.BoolPtrOutput `pulumi:"isReadOnly"`
 	// The name of the security group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Propagate to APIC (ACI)
@@ -99,7 +99,7 @@ func GetSecurityGroup(ctx *pulumi.Context,
 type securityGroupState struct {
 	// Description
 	Description *string `pulumi:"description"`
-	// Read-only - Default value: `false`
+	// Read-only
 	IsReadOnly *bool `pulumi:"isReadOnly"`
 	// The name of the security group
 	Name *string `pulumi:"name"`
@@ -112,7 +112,7 @@ type securityGroupState struct {
 type SecurityGroupState struct {
 	// Description
 	Description pulumi.StringPtrInput
-	// Read-only - Default value: `false`
+	// Read-only
 	IsReadOnly pulumi.BoolPtrInput
 	// The name of the security group
 	Name pulumi.StringPtrInput
@@ -129,7 +129,7 @@ func (SecurityGroupState) ElementType() reflect.Type {
 type securityGroupArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
-	// Read-only - Default value: `false`
+	// Read-only
 	IsReadOnly *bool `pulumi:"isReadOnly"`
 	// The name of the security group
 	Name *string `pulumi:"name"`
@@ -143,7 +143,7 @@ type securityGroupArgs struct {
 type SecurityGroupArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
-	// Read-only - Default value: `false`
+	// Read-only
 	IsReadOnly pulumi.BoolPtrInput
 	// The name of the security group
 	Name pulumi.StringPtrInput
@@ -245,9 +245,9 @@ func (o SecurityGroupOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityGroup) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Read-only - Default value: `false`
-func (o SecurityGroupOutput) IsReadOnly() pulumi.BoolOutput {
-	return o.ApplyT(func(v *SecurityGroup) pulumi.BoolOutput { return v.IsReadOnly }).(pulumi.BoolOutput)
+// Read-only
+func (o SecurityGroupOutput) IsReadOnly() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SecurityGroup) pulumi.BoolPtrOutput { return v.IsReadOnly }).(pulumi.BoolPtrOutput)
 }
 
 // The name of the security group

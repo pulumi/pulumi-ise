@@ -31,6 +31,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityGroup{}
 	case "ise:trustsec/securityGroupAcl:SecurityGroupAcl":
 		r = &SecurityGroupAcl{}
+	case "ise:trustsec/sxpDomainFilter:SxpDomainFilter":
+		r = &SxpDomainFilter{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -67,6 +69,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"trustsec/securityGroupAcl",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"trustsec/sxpDomainFilter",
 		&module{version},
 	)
 }

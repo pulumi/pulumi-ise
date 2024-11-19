@@ -30,7 +30,7 @@ class SecurityGroupAclArgs:
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[str] name: The name of the security group ACL
-        :param pulumi.Input[bool] read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] read_only: Read-only
         """
         pulumi.set(__self__, "acl_content", acl_content)
         if description is not None:
@@ -94,7 +94,7 @@ class SecurityGroupAclArgs:
     @pulumi.getter(name="readOnly")
     def read_only(self) -> Optional[pulumi.Input[bool]]:
         """
-        Read-only - Default value: `false`
+        Read-only
         """
         return pulumi.get(self, "read_only")
 
@@ -117,7 +117,7 @@ class _SecurityGroupAclState:
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[str] name: The name of the security group ACL
-        :param pulumi.Input[bool] read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] read_only: Read-only
         """
         if acl_content is not None:
             pulumi.set(__self__, "acl_content", acl_content)
@@ -182,7 +182,7 @@ class _SecurityGroupAclState:
     @pulumi.getter(name="readOnly")
     def read_only(self) -> Optional[pulumi.Input[bool]]:
         """
-        Read-only - Default value: `false`
+        Read-only
         """
         return pulumi.get(self, "read_only")
 
@@ -231,7 +231,7 @@ class SecurityGroupAcl(pulumi.CustomResource):
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[str] name: The name of the security group ACL
-        :param pulumi.Input[bool] read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] read_only: Read-only
         """
         ...
     @overload
@@ -324,7 +324,7 @@ class SecurityGroupAcl(pulumi.CustomResource):
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[str] name: The name of the security group ACL
-        :param pulumi.Input[bool] read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] read_only: Read-only
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -371,9 +371,9 @@ class SecurityGroupAcl(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="readOnly")
-    def read_only(self) -> pulumi.Output[bool]:
+    def read_only(self) -> pulumi.Output[Optional[bool]]:
         """
-        Read-only - Default value: `false`
+        Read-only
         """
         return pulumi.get(self, "read_only")
 

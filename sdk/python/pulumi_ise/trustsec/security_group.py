@@ -28,7 +28,7 @@ class SecurityGroupArgs:
         The set of arguments for constructing a SecurityGroup resource.
         :param pulumi.Input[int] value: `-1` to auto-generate - Range: `-1`-`65519`
         :param pulumi.Input[str] description: Description
-        :param pulumi.Input[bool] is_read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] is_read_only: Read-only
         :param pulumi.Input[str] name: The name of the security group
         :param pulumi.Input[bool] propogate_to_apic: Propagate to APIC (ACI)
         """
@@ -70,7 +70,7 @@ class SecurityGroupArgs:
     @pulumi.getter(name="isReadOnly")
     def is_read_only(self) -> Optional[pulumi.Input[bool]]:
         """
-        Read-only - Default value: `false`
+        Read-only
         """
         return pulumi.get(self, "is_read_only")
 
@@ -114,7 +114,7 @@ class _SecurityGroupState:
         """
         Input properties used for looking up and filtering SecurityGroup resources.
         :param pulumi.Input[str] description: Description
-        :param pulumi.Input[bool] is_read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] is_read_only: Read-only
         :param pulumi.Input[str] name: The name of the security group
         :param pulumi.Input[bool] propogate_to_apic: Propagate to APIC (ACI)
         :param pulumi.Input[int] value: `-1` to auto-generate - Range: `-1`-`65519`
@@ -146,7 +146,7 @@ class _SecurityGroupState:
     @pulumi.getter(name="isReadOnly")
     def is_read_only(self) -> Optional[pulumi.Input[bool]]:
         """
-        Read-only - Default value: `false`
+        Read-only
         """
         return pulumi.get(self, "is_read_only")
 
@@ -228,7 +228,7 @@ class SecurityGroup(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Description
-        :param pulumi.Input[bool] is_read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] is_read_only: Read-only
         :param pulumi.Input[str] name: The name of the security group
         :param pulumi.Input[bool] propogate_to_apic: Propagate to APIC (ACI)
         :param pulumi.Input[int] value: `-1` to auto-generate - Range: `-1`-`65519`
@@ -321,7 +321,7 @@ class SecurityGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Description
-        :param pulumi.Input[bool] is_read_only: Read-only - Default value: `false`
+        :param pulumi.Input[bool] is_read_only: Read-only
         :param pulumi.Input[str] name: The name of the security group
         :param pulumi.Input[bool] propogate_to_apic: Propagate to APIC (ACI)
         :param pulumi.Input[int] value: `-1` to auto-generate - Range: `-1`-`65519`
@@ -347,9 +347,9 @@ class SecurityGroup(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="isReadOnly")
-    def is_read_only(self) -> pulumi.Output[bool]:
+    def is_read_only(self) -> pulumi.Output[Optional[bool]]:
         """
-        Read-only - Default value: `false`
+        Read-only
         """
         return pulumi.get(self, "is_read_only")
 

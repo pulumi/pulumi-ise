@@ -107,18 +107,18 @@ public class EndpointIdentityGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.parentEndpointIdentityGroupId);
     }
     /**
-     * System defined endpoint identity group - Default value: `false`
+     * System defined endpoint identity group
      * 
      */
     @Export(name="systemDefined", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> systemDefined;
+    private Output</* @Nullable */ Boolean> systemDefined;
 
     /**
-     * @return System defined endpoint identity group - Default value: `false`
+     * @return System defined endpoint identity group
      * 
      */
-    public Output<Boolean> systemDefined() {
-        return this.systemDefined;
+    public Output<Optional<Boolean>> systemDefined() {
+        return Codegen.optional(this.systemDefined);
     }
 
     /**

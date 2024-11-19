@@ -426,6 +426,14 @@ _utilities.register(
   "classes": {
    "ise:trustsec/securityGroupAcl:SecurityGroupAcl": "SecurityGroupAcl"
   }
+ },
+ {
+  "pkg": "ise",
+  "mod": "trustsec/sxpDomainFilter",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/sxpDomainFilter:SxpDomainFilter": "SxpDomainFilter"
+  }
  }
 ]
 """,

@@ -123,18 +123,18 @@ public class SecurityGroupAcl extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Read-only - Default value: `false`
+     * Read-only
      * 
      */
     @Export(name="readOnly", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> readOnly;
+    private Output</* @Nullable */ Boolean> readOnly;
 
     /**
-     * @return Read-only - Default value: `false`
+     * @return Read-only
      * 
      */
-    public Output<Boolean> readOnly() {
-        return this.readOnly;
+    public Output<Optional<Boolean>> readOnly() {
+        return Codegen.optional(this.readOnly);
     }
 
     /**

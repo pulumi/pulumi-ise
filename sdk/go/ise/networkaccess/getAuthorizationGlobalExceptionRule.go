@@ -76,8 +76,6 @@ type LookupAuthorizationGlobalExceptionRuleResult struct {
 	ConditionOperator string `pulumi:"conditionOperator"`
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
 	ConditionType string `pulumi:"conditionType"`
-	// Indicates if this rule is the default one
-	Default bool `pulumi:"default"`
 	// The id of the object
 	Id string `pulumi:"id"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
@@ -183,11 +181,6 @@ func (o LookupAuthorizationGlobalExceptionRuleResultOutput) ConditionOperator() 
 // Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
 func (o LookupAuthorizationGlobalExceptionRuleResultOutput) ConditionType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthorizationGlobalExceptionRuleResult) string { return v.ConditionType }).(pulumi.StringOutput)
-}
-
-// Indicates if this rule is the default one
-func (o LookupAuthorizationGlobalExceptionRuleResultOutput) Default() pulumi.BoolOutput {
-	return o.ApplyT(func(v LookupAuthorizationGlobalExceptionRuleResult) bool { return v.Default }).(pulumi.BoolOutput)
 }
 
 // The id of the object
