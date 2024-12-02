@@ -1,7 +1,7 @@
 ---
 # *** WARNING: This file was auto-generated. Do not edit by hand unless you're certain you know what you are doing! ***
-title: Cisco Ise Provider
-meta_desc: Provides an overview on how to configure the Pulumi Cisco Ise provider.
+title: Cisco ISE Provider
+meta_desc: Provides an overview on how to configure the Pulumi Cisco ISE provider.
 layout: package
 ---
 ## Installation

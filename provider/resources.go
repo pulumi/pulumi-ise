@@ -28,13 +28,12 @@ import (
 	"github.com/CiscoDevNet/terraform-provider-ise/ise"
 	"github.com/ettle/strcase"
 
+	"github.com/pulumi/pulumi-ise/provider/pkg/version"
 	pf "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-
-	"github.com/pulumi/pulumi-ise/provider/pkg/version"
 )
 
 //go:embed cmd/pulumi-resource-ise/bridge-metadata.json
