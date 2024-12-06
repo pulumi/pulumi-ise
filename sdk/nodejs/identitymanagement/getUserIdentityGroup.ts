@@ -76,7 +76,7 @@ export interface GetUserIdentityGroupResult {
  * });
  * ```
  */
-export function getUserIdentityGroupOutput(args?: GetUserIdentityGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUserIdentityGroupResult> {
+export function getUserIdentityGroupOutput(args?: GetUserIdentityGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUserIdentityGroupResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", {

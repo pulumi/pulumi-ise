@@ -116,7 +116,7 @@ export interface GetTimeAndDateConditionResult {
  * });
  * ```
  */
-export function getTimeAndDateConditionOutput(args?: GetTimeAndDateConditionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTimeAndDateConditionResult> {
+export function getTimeAndDateConditionOutput(args?: GetTimeAndDateConditionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTimeAndDateConditionResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", {

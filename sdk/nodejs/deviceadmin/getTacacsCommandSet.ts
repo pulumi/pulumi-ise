@@ -79,7 +79,7 @@ export interface GetTacacsCommandSetResult {
  * });
  * ```
  */
-export function getTacacsCommandSetOutput(args?: GetTacacsCommandSetOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsCommandSetResult> {
+export function getTacacsCommandSetOutput(args?: GetTacacsCommandSetOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsCommandSetResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", {

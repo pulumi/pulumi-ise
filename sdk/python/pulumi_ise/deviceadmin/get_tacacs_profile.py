@@ -115,7 +115,7 @@ def get_tacacs_profile(id: Optional[str] = None,
         session_attributes=pulumi.get(__ret__, 'session_attributes'))
 def get_tacacs_profile_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                               name: Optional[pulumi.Input[Optional[str]]] = None,
-                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTacacsProfileResult]:
+                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTacacsProfileResult]:
     """
     This data source can read the TACACS Profile.
 
@@ -135,7 +135,7 @@ def get_tacacs_profile_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:deviceadmin/getTacacsProfile:getTacacsProfile', __args__, opts=opts, typ=GetTacacsProfileResult)
     return __ret__.apply(lambda __response__: GetTacacsProfileResult(
         description=pulumi.get(__response__, 'description'),

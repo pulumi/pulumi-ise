@@ -84,7 +84,7 @@ export interface GetIpToSgtMappingGroupResult {
  * });
  * ```
  */
-export function getIpToSgtMappingGroupOutput(args?: GetIpToSgtMappingGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpToSgtMappingGroupResult> {
+export function getIpToSgtMappingGroupOutput(args?: GetIpToSgtMappingGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpToSgtMappingGroupResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", {

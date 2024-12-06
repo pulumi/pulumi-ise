@@ -130,7 +130,7 @@ export interface GetPolicySetResult {
  * });
  * ```
  */
-export function getPolicySetOutput(args?: GetPolicySetOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicySetResult> {
+export function getPolicySetOutput(args?: GetPolicySetOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicySetResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:networkaccess/getPolicySet:getPolicySet", {

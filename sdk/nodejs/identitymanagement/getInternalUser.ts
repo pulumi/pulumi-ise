@@ -120,7 +120,7 @@ export interface GetInternalUserResult {
  * });
  * ```
  */
-export function getInternalUserOutput(args?: GetInternalUserOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInternalUserResult> {
+export function getInternalUserOutput(args?: GetInternalUserOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInternalUserResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getInternalUser:getInternalUser", {

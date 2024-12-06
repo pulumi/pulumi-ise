@@ -130,7 +130,7 @@ def get_dictionary(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_dictionary_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                           name: Optional[pulumi.Input[Optional[str]]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDictionaryResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDictionaryResult]:
     """
     This data source can read the Network Access Dictionary.
 
@@ -150,7 +150,7 @@ def get_dictionary_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getDictionary:getDictionary', __args__, opts=opts, typ=GetDictionaryResult)
     return __ret__.apply(lambda __response__: GetDictionaryResult(
         description=pulumi.get(__response__, 'description'),

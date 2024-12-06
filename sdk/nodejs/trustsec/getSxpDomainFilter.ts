@@ -88,7 +88,7 @@ export interface GetSxpDomainFilterResult {
  * });
  * ```
  */
-export function getSxpDomainFilterOutput(args?: GetSxpDomainFilterOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSxpDomainFilterResult> {
+export function getSxpDomainFilterOutput(args?: GetSxpDomainFilterOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSxpDomainFilterResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", {
