@@ -260,7 +260,7 @@ def get_internal_user(id: Optional[str] = None,
         password_never_expires=pulumi.get(__ret__, 'password_never_expires'))
 def get_internal_user_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                              name: Optional[pulumi.Input[Optional[str]]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInternalUserResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInternalUserResult]:
     """
     This data source can read the Internal User.
 
@@ -280,7 +280,7 @@ def get_internal_user_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getInternalUser:getInternalUser', __args__, opts=opts, typ=GetInternalUserResult)
     return __ret__.apply(lambda __response__: GetInternalUserResult(
         account_name_alias=pulumi.get(__response__, 'account_name_alias'),

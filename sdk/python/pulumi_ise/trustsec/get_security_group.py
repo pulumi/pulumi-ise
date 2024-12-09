@@ -143,7 +143,7 @@ def get_security_group(id: Optional[str] = None,
         value=pulumi.get(__ret__, 'value'))
 def get_security_group_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                               name: Optional[pulumi.Input[Optional[str]]] = None,
-                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityGroupResult]:
+                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityGroupResult]:
     """
     This data source can read the TrustSec Security Group.
 
@@ -163,7 +163,7 @@ def get_security_group_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getSecurityGroup:getSecurityGroup', __args__, opts=opts, typ=GetSecurityGroupResult)
     return __ret__.apply(lambda __response__: GetSecurityGroupResult(
         description=pulumi.get(__response__, 'description'),

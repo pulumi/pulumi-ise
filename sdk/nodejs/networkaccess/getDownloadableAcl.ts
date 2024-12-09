@@ -80,7 +80,7 @@ export interface GetDownloadableAclResult {
  * });
  * ```
  */
-export function getDownloadableAclOutput(args?: GetDownloadableAclOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDownloadableAclResult> {
+export function getDownloadableAclOutput(args?: GetDownloadableAclOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDownloadableAclResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", {

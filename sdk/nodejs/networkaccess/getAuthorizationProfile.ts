@@ -198,7 +198,7 @@ export interface GetAuthorizationProfileResult {
  * });
  * ```
  */
-export function getAuthorizationProfileOutput(args?: GetAuthorizationProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthorizationProfileResult> {
+export function getAuthorizationProfileOutput(args?: GetAuthorizationProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthorizationProfileResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", {

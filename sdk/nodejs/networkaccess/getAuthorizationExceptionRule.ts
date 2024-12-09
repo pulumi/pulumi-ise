@@ -136,7 +136,7 @@ export interface GetAuthorizationExceptionRuleResult {
  * });
  * ```
  */
-export function getAuthorizationExceptionRuleOutput(args: GetAuthorizationExceptionRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthorizationExceptionRuleResult> {
+export function getAuthorizationExceptionRuleOutput(args: GetAuthorizationExceptionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthorizationExceptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:networkaccess/getAuthorizationExceptionRule:getAuthorizationExceptionRule", {
         "id": args.id,
