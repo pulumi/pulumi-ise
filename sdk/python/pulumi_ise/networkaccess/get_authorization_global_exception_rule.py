@@ -261,7 +261,7 @@ def get_authorization_global_exception_rule(id: Optional[str] = None,
         state=pulumi.get(__ret__, 'state'))
 def get_authorization_global_exception_rule_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    name: Optional[pulumi.Input[Optional[str]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthorizationGlobalExceptionRuleResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthorizationGlobalExceptionRuleResult]:
     """
     This data source can read the Network Access Authorization Global Exception Rule.
 
@@ -281,7 +281,7 @@ def get_authorization_global_exception_rule_output(id: Optional[pulumi.Input[Opt
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule', __args__, opts=opts, typ=GetAuthorizationGlobalExceptionRuleResult)
     return __ret__.apply(lambda __response__: GetAuthorizationGlobalExceptionRuleResult(
         childrens=pulumi.get(__response__, 'childrens'),

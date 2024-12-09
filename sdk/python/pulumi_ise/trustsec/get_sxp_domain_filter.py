@@ -156,7 +156,7 @@ def get_sxp_domain_filter(id: Optional[str] = None,
         vn=pulumi.get(__ret__, 'vn'))
 def get_sxp_domain_filter_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                  name: Optional[pulumi.Input[Optional[str]]] = None,
-                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSxpDomainFilterResult]:
+                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSxpDomainFilterResult]:
     """
     This data source can read the SXP Domain Filter.
 
@@ -176,7 +176,7 @@ def get_sxp_domain_filter_output(id: Optional[pulumi.Input[Optional[str]]] = Non
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getSxpDomainFilter:getSxpDomainFilter', __args__, opts=opts, typ=GetSxpDomainFilterResult)
     return __ret__.apply(lambda __response__: GetSxpDomainFilterResult(
         description=pulumi.get(__response__, 'description'),

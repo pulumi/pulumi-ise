@@ -1079,7 +1079,7 @@ def get_allowed_protocols(id: Optional[str] = None,
         teap_request_basic_pwd_auth=pulumi.get(__ret__, 'teap_request_basic_pwd_auth'))
 def get_allowed_protocols_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                  name: Optional[pulumi.Input[Optional[str]]] = None,
-                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAllowedProtocolsResult]:
+                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAllowedProtocolsResult]:
     """
     This data source can read an allowed protocols policy element.
 
@@ -1099,7 +1099,7 @@ def get_allowed_protocols_output(id: Optional[pulumi.Input[Optional[str]]] = Non
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getAllowedProtocols:getAllowedProtocols', __args__, opts=opts, typ=GetAllowedProtocolsResult)
     return __ret__.apply(lambda __response__: GetAllowedProtocolsResult(
         allow5g=pulumi.get(__response__, 'allow5g'),

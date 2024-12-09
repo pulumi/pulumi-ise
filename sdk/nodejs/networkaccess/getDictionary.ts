@@ -80,7 +80,7 @@ export interface GetDictionaryResult {
  * });
  * ```
  */
-export function getDictionaryOutput(args?: GetDictionaryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDictionaryResult> {
+export function getDictionaryOutput(args?: GetDictionaryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDictionaryResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:networkaccess/getDictionary:getDictionary", {

@@ -247,7 +247,7 @@ def get_time_and_date_condition(id: Optional[str] = None,
         week_days_exceptions=pulumi.get(__ret__, 'week_days_exceptions'))
 def get_time_and_date_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                        name: Optional[pulumi.Input[Optional[str]]] = None,
-                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTimeAndDateConditionResult]:
+                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTimeAndDateConditionResult]:
     """
     This data source can read the Network Access Time And Date Condition.
 
@@ -267,7 +267,7 @@ def get_time_and_date_condition_output(id: Optional[pulumi.Input[Optional[str]]]
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getTimeAndDateCondition:getTimeAndDateCondition', __args__, opts=opts, typ=GetTimeAndDateConditionResult)
     return __ret__.apply(lambda __response__: GetTimeAndDateConditionResult(
         description=pulumi.get(__response__, 'description'),

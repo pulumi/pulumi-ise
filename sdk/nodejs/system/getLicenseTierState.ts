@@ -64,7 +64,7 @@ export interface GetLicenseTierStateResult {
  * });
  * ```
  */
-export function getLicenseTierStateOutput(args: GetLicenseTierStateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicenseTierStateResult> {
+export function getLicenseTierStateOutput(args: GetLicenseTierStateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLicenseTierStateResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:system/getLicenseTierState:getLicenseTierState", {
         "id": args.id,

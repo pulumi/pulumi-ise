@@ -112,7 +112,7 @@ export interface GetActiveDirectoryGroupsByDomainResult {
  * });
  * ```
  */
-export function getActiveDirectoryGroupsByDomainOutput(args: GetActiveDirectoryGroupsByDomainOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetActiveDirectoryGroupsByDomainResult> {
+export function getActiveDirectoryGroupsByDomainOutput(args: GetActiveDirectoryGroupsByDomainOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetActiveDirectoryGroupsByDomainResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", {
         "domain": args.domain,
