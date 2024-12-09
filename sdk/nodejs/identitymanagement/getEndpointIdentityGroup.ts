@@ -80,7 +80,7 @@ export interface GetEndpointIdentityGroupResult {
  * });
  * ```
  */
-export function getEndpointIdentityGroupOutput(args?: GetEndpointIdentityGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEndpointIdentityGroupResult> {
+export function getEndpointIdentityGroupOutput(args?: GetEndpointIdentityGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEndpointIdentityGroupResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", {

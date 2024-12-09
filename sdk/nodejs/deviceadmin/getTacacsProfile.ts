@@ -75,7 +75,7 @@ export interface GetTacacsProfileResult {
  * });
  * ```
  */
-export function getTacacsProfileOutput(args?: GetTacacsProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsProfileResult> {
+export function getTacacsProfileOutput(args?: GetTacacsProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsProfileResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getTacacsProfile:getTacacsProfile", {

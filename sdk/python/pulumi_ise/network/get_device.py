@@ -625,7 +625,7 @@ def get_device(id: Optional[str] = None,
         trustsec_send_configuration_to_device_using=pulumi.get(__ret__, 'trustsec_send_configuration_to_device_using'))
 def get_device_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                       name: Optional[pulumi.Input[Optional[str]]] = None,
-                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDeviceResult]:
+                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDeviceResult]:
     """
     This data source can read the Network Device.
 
@@ -645,7 +645,7 @@ def get_device_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:network/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult)
     return __ret__.apply(lambda __response__: GetDeviceResult(
         authentication_dtls_required=pulumi.get(__response__, 'authentication_dtls_required'),

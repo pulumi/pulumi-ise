@@ -122,7 +122,7 @@ export interface GetAuthorizationGlobalExceptionRuleResult {
  * });
  * ```
  */
-export function getAuthorizationGlobalExceptionRuleOutput(args?: GetAuthorizationGlobalExceptionRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthorizationGlobalExceptionRuleResult> {
+export function getAuthorizationGlobalExceptionRuleOutput(args?: GetAuthorizationGlobalExceptionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthorizationGlobalExceptionRuleResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", {
