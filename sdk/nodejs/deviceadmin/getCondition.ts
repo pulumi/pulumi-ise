@@ -106,7 +106,7 @@ export interface GetConditionResult {
  * });
  * ```
  */
-export function getConditionOutput(args?: GetConditionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConditionResult> {
+export function getConditionOutput(args?: GetConditionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConditionResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getCondition:getCondition", {

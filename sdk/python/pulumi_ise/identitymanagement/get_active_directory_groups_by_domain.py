@@ -173,7 +173,7 @@ def get_active_directory_groups_by_domain_output(domain: Optional[pulumi.Input[s
                                                  join_point_id: Optional[pulumi.Input[str]] = None,
                                                  sid_filter: Optional[pulumi.Input[Optional[str]]] = None,
                                                  type_filter: Optional[pulumi.Input[Optional[str]]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetActiveDirectoryGroupsByDomainResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetActiveDirectoryGroupsByDomainResult]:
     """
     This data source can read the Active Directory Groups By Domain.
 
@@ -203,7 +203,7 @@ def get_active_directory_groups_by_domain_output(domain: Optional[pulumi.Input[s
     __args__['joinPointId'] = join_point_id
     __args__['sidFilter'] = sid_filter
     __args__['typeFilter'] = type_filter
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain', __args__, opts=opts, typ=GetActiveDirectoryGroupsByDomainResult)
     return __ret__.apply(lambda __response__: GetActiveDirectoryGroupsByDomainResult(
         domain=pulumi.get(__response__, 'domain'),

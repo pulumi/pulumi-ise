@@ -84,7 +84,7 @@ export interface GetAllowedProtocolsTacacsResult {
  * });
  * ```
  */
-export function getAllowedProtocolsTacacsOutput(args?: GetAllowedProtocolsTacacsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAllowedProtocolsTacacsResult> {
+export function getAllowedProtocolsTacacsOutput(args?: GetAllowedProtocolsTacacsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAllowedProtocolsTacacsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", {

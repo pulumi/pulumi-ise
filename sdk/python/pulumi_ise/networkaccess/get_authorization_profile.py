@@ -508,7 +508,7 @@ def get_authorization_profile(id: Optional[str] = None,
         web_redirection_type=pulumi.get(__ret__, 'web_redirection_type'))
 def get_authorization_profile_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                      name: Optional[pulumi.Input[Optional[str]]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthorizationProfileResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthorizationProfileResult]:
     """
     This data source can read an authorization profiles policy element.
 
@@ -528,7 +528,7 @@ def get_authorization_profile_output(id: Optional[pulumi.Input[Optional[str]]] =
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile', __args__, opts=opts, typ=GetAuthorizationProfileResult)
     return __ret__.apply(lambda __response__: GetAuthorizationProfileResult(
         access_type=pulumi.get(__response__, 'access_type'),

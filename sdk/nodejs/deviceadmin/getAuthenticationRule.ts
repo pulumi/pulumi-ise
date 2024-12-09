@@ -144,7 +144,7 @@ export interface GetAuthenticationRuleResult {
  * });
  * ```
  */
-export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationRuleResult> {
+export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:deviceadmin/getAuthenticationRule:getAuthenticationRule", {
         "id": args.id,

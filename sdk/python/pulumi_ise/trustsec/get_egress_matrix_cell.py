@@ -152,7 +152,7 @@ def get_egress_matrix_cell(id: Optional[str] = None,
         sgacls=pulumi.get(__ret__, 'sgacls'),
         source_sgt_id=pulumi.get(__ret__, 'source_sgt_id'))
 def get_egress_matrix_cell_output(id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEgressMatrixCellResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEgressMatrixCellResult]:
     """
     This data source can read the TrustSec Egress Matrix Cell.
 
@@ -170,7 +170,7 @@ def get_egress_matrix_cell_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getEgressMatrixCell:getEgressMatrixCell', __args__, opts=opts, typ=GetEgressMatrixCellResult)
     return __ret__.apply(lambda __response__: GetEgressMatrixCellResult(
         default_rule=pulumi.get(__response__, 'default_rule'),

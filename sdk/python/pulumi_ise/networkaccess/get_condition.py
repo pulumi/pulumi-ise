@@ -209,7 +209,7 @@ def get_condition(id: Optional[str] = None,
         operator=pulumi.get(__ret__, 'operator'))
 def get_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                          name: Optional[pulumi.Input[Optional[str]]] = None,
-                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetConditionResult]:
+                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConditionResult]:
     """
     This data source can read the Network Access Condition.
 
@@ -229,7 +229,7 @@ def get_condition_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getCondition:getCondition', __args__, opts=opts, typ=GetConditionResult)
     return __ret__.apply(lambda __response__: GetConditionResult(
         attribute_name=pulumi.get(__response__, 'attribute_name'),

@@ -83,7 +83,7 @@ export interface GetIdentitySourceSequenceResult {
  * });
  * ```
  */
-export function getIdentitySourceSequenceOutput(args?: GetIdentitySourceSequenceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIdentitySourceSequenceResult> {
+export function getIdentitySourceSequenceOutput(args?: GetIdentitySourceSequenceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIdentitySourceSequenceResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", {

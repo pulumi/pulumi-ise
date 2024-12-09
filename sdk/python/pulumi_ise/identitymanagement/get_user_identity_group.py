@@ -117,7 +117,7 @@ def get_user_identity_group(id: Optional[str] = None,
         parent=pulumi.get(__ret__, 'parent'))
 def get_user_identity_group_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                    name: Optional[pulumi.Input[Optional[str]]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUserIdentityGroupResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetUserIdentityGroupResult]:
     """
     This data source can read the User Identity Group.
 
@@ -137,7 +137,7 @@ def get_user_identity_group_output(id: Optional[pulumi.Input[Optional[str]]] = N
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup', __args__, opts=opts, typ=GetUserIdentityGroupResult)
     return __ret__.apply(lambda __response__: GetUserIdentityGroupResult(
         description=pulumi.get(__response__, 'description'),
