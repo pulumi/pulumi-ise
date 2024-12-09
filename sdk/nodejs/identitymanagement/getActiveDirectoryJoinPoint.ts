@@ -189,7 +189,7 @@ export interface GetActiveDirectoryJoinPointResult {
  * });
  * ```
  */
-export function getActiveDirectoryJoinPointOutput(args: GetActiveDirectoryJoinPointOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetActiveDirectoryJoinPointResult> {
+export function getActiveDirectoryJoinPointOutput(args: GetActiveDirectoryJoinPointOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetActiveDirectoryJoinPointResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", {
         "id": args.id,

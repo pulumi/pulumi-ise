@@ -143,7 +143,7 @@ def get_allowed_protocols_tacacs(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'))
 def get_allowed_protocols_tacacs_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                         name: Optional[pulumi.Input[Optional[str]]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAllowedProtocolsTacacsResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAllowedProtocolsTacacsResult]:
     """
     This data source can read a TACACS allowed protocols policy element.
 
@@ -163,7 +163,7 @@ def get_allowed_protocols_tacacs_output(id: Optional[pulumi.Input[Optional[str]]
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs', __args__, opts=opts, typ=GetAllowedProtocolsTacacsResult)
     return __ret__.apply(lambda __response__: GetAllowedProtocolsTacacsResult(
         allow_chap=pulumi.get(__response__, 'allow_chap'),

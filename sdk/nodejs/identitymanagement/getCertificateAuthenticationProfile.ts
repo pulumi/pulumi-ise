@@ -92,7 +92,7 @@ export interface GetCertificateAuthenticationProfileResult {
  * });
  * ```
  */
-export function getCertificateAuthenticationProfileOutput(args?: GetCertificateAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCertificateAuthenticationProfileResult> {
+export function getCertificateAuthenticationProfileOutput(args?: GetCertificateAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCertificateAuthenticationProfileResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", {

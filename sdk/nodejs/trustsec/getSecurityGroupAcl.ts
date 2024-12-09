@@ -84,7 +84,7 @@ export interface GetSecurityGroupAclResult {
  * });
  * ```
  */
-export function getSecurityGroupAclOutput(args?: GetSecurityGroupAclOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityGroupAclResult> {
+export function getSecurityGroupAclOutput(args?: GetSecurityGroupAclOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityGroupAclResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", {

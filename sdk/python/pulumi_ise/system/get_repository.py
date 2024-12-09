@@ -169,7 +169,7 @@ def get_repository(id: Optional[str] = None,
         user_name=pulumi.get(__ret__, 'user_name'))
 def get_repository_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                           name: Optional[pulumi.Input[Optional[str]]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRepositoryResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRepositoryResult]:
     """
     This data source can read the Repository.
 
@@ -189,7 +189,7 @@ def get_repository_output(id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:system/getRepository:getRepository', __args__, opts=opts, typ=GetRepositoryResult)
     return __ret__.apply(lambda __response__: GetRepositoryResult(
         enable_pki=pulumi.get(__response__, 'enable_pki'),

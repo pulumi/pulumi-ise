@@ -143,7 +143,7 @@ def get_security_group_acl(id: Optional[str] = None,
         read_only=pulumi.get(__ret__, 'read_only'))
 def get_security_group_acl_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                   name: Optional[pulumi.Input[Optional[str]]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityGroupAclResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityGroupAclResult]:
     """
     This data source can read the TrustSec Security Group ACL.
 
@@ -163,7 +163,7 @@ def get_security_group_acl_output(id: Optional[pulumi.Input[Optional[str]]] = No
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl', __args__, opts=opts, typ=GetSecurityGroupAclResult)
     return __ret__.apply(lambda __response__: GetSecurityGroupAclResult(
         acl_content=pulumi.get(__response__, 'acl_content'),

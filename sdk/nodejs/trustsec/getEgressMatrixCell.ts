@@ -82,7 +82,7 @@ export interface GetEgressMatrixCellResult {
  * });
  * ```
  */
-export function getEgressMatrixCellOutput(args: GetEgressMatrixCellOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEgressMatrixCellResult> {
+export function getEgressMatrixCellOutput(args: GetEgressMatrixCellOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEgressMatrixCellResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", {
         "id": args.id,

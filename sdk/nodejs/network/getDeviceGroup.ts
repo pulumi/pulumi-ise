@@ -76,7 +76,7 @@ export interface GetDeviceGroupResult {
  * });
  * ```
  */
-export function getDeviceGroupOutput(args?: GetDeviceGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDeviceGroupResult> {
+export function getDeviceGroupOutput(args?: GetDeviceGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDeviceGroupResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:network/getDeviceGroup:getDeviceGroup", {

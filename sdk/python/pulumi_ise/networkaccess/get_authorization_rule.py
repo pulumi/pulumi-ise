@@ -292,7 +292,7 @@ def get_authorization_rule(id: Optional[str] = None,
 def get_authorization_rule_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                   name: Optional[pulumi.Input[Optional[str]]] = None,
                                   policy_set_id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthorizationRuleResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthorizationRuleResult]:
     """
     This data source can read the Network Access Authorization Rule.
 
@@ -315,7 +315,7 @@ def get_authorization_rule_output(id: Optional[pulumi.Input[Optional[str]]] = No
     __args__['id'] = id
     __args__['name'] = name
     __args__['policySetId'] = policy_set_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('ise:networkaccess/getAuthorizationRule:getAuthorizationRule', __args__, opts=opts, typ=GetAuthorizationRuleResult)
     return __ret__.apply(lambda __response__: GetAuthorizationRuleResult(
         childrens=pulumi.get(__response__, 'childrens'),

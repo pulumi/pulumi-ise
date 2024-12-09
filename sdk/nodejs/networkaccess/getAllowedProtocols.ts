@@ -372,7 +372,7 @@ export interface GetAllowedProtocolsResult {
  * });
  * ```
  */
-export function getAllowedProtocolsOutput(args?: GetAllowedProtocolsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAllowedProtocolsResult> {
+export function getAllowedProtocolsOutput(args?: GetAllowedProtocolsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAllowedProtocolsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", {
