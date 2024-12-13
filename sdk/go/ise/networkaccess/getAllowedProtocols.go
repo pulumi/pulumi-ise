@@ -217,21 +217,11 @@ type LookupAllowedProtocolsResult struct {
 }
 
 func LookupAllowedProtocolsOutput(ctx *pulumi.Context, args LookupAllowedProtocolsOutputArgs, opts ...pulumi.InvokeOption) LookupAllowedProtocolsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAllowedProtocolsResultOutput, error) {
 			args := v.(LookupAllowedProtocolsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAllowedProtocolsResult
-			secret, err := ctx.InvokePackageRaw("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAllowedProtocolsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAllowedProtocolsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAllowedProtocolsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", args, LookupAllowedProtocolsResultOutput{}, options).(LookupAllowedProtocolsResultOutput), nil
 		}).(LookupAllowedProtocolsResultOutput)
 }
 

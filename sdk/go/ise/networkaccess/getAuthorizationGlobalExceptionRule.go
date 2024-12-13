@@ -91,21 +91,11 @@ type LookupAuthorizationGlobalExceptionRuleResult struct {
 }
 
 func LookupAuthorizationGlobalExceptionRuleOutput(ctx *pulumi.Context, args LookupAuthorizationGlobalExceptionRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationGlobalExceptionRuleResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAuthorizationGlobalExceptionRuleResultOutput, error) {
 			args := v.(LookupAuthorizationGlobalExceptionRuleArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAuthorizationGlobalExceptionRuleResult
-			secret, err := ctx.InvokePackageRaw("ise:networkaccess/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAuthorizationGlobalExceptionRuleResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAuthorizationGlobalExceptionRuleResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAuthorizationGlobalExceptionRuleResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:networkaccess/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", args, LookupAuthorizationGlobalExceptionRuleResultOutput{}, options).(LookupAuthorizationGlobalExceptionRuleResultOutput), nil
 		}).(LookupAuthorizationGlobalExceptionRuleResultOutput)
 }
 

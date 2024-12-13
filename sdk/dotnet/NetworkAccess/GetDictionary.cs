@@ -58,6 +58,30 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public static Output<GetDictionaryResult> Invoke(GetDictionaryInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDictionaryResult>("ise:networkaccess/getDictionary:getDictionary", args ?? new GetDictionaryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Network Access Dictionary.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.NetworkAccess.GetDictionary.Invoke(new()
+        ///     {
+        ///         Id = "Dict1",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDictionaryResult> Invoke(GetDictionaryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDictionaryResult>("ise:networkaccess/getDictionary:getDictionary", args ?? new GetDictionaryInvokeArgs(), options.WithDefaults());
     }
 
 

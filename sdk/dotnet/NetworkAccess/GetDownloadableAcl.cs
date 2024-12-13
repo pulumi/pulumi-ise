@@ -58,6 +58,30 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public static Output<GetDownloadableAclResult> Invoke(GetDownloadableAclInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDownloadableAclResult>("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", args ?? new GetDownloadableAclInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Downloadable ACL.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.NetworkAccess.GetDownloadableAcl.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDownloadableAclResult> Invoke(GetDownloadableAclInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDownloadableAclResult>("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", args ?? new GetDownloadableAclInvokeArgs(), options.WithDefaults());
     }
 
 

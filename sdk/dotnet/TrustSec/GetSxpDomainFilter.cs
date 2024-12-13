@@ -58,6 +58,30 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public static Output<GetSxpDomainFilterResult> Invoke(GetSxpDomainFilterInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSxpDomainFilterResult>("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", args ?? new GetSxpDomainFilterInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the SXP Domain Filter.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.TrustSec.GetSxpDomainFilter.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSxpDomainFilterResult> Invoke(GetSxpDomainFilterInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSxpDomainFilterResult>("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", args ?? new GetSxpDomainFilterInvokeArgs(), options.WithDefaults());
     }
 
 

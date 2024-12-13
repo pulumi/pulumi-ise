@@ -75,21 +75,11 @@ type LookupSxpDomainFilterResult struct {
 }
 
 func LookupSxpDomainFilterOutput(ctx *pulumi.Context, args LookupSxpDomainFilterOutputArgs, opts ...pulumi.InvokeOption) LookupSxpDomainFilterResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSxpDomainFilterResultOutput, error) {
 			args := v.(LookupSxpDomainFilterArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSxpDomainFilterResult
-			secret, err := ctx.InvokePackageRaw("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSxpDomainFilterResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSxpDomainFilterResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSxpDomainFilterResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", args, LookupSxpDomainFilterResultOutput{}, options).(LookupSxpDomainFilterResultOutput), nil
 		}).(LookupSxpDomainFilterResultOutput)
 }
 

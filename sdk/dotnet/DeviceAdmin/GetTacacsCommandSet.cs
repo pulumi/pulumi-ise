@@ -58,6 +58,30 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public static Output<GetTacacsCommandSetResult> Invoke(GetTacacsCommandSetInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsCommandSetResult>("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", args ?? new GetTacacsCommandSetInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the TACACS Command Set.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.DeviceAdmin.GetTacacsCommandSet.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTacacsCommandSetResult> Invoke(GetTacacsCommandSetInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTacacsCommandSetResult>("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", args ?? new GetTacacsCommandSetInvokeArgs(), options.WithDefaults());
     }
 
 

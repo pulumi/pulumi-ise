@@ -58,6 +58,30 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public static Output<GetIdentitySourceSequenceResult> Invoke(GetIdentitySourceSequenceInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIdentitySourceSequenceResult>("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", args ?? new GetIdentitySourceSequenceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Identity Source Sequence.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.IdentityManagement.GetIdentitySourceSequence.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIdentitySourceSequenceResult> Invoke(GetIdentitySourceSequenceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIdentitySourceSequenceResult>("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", args ?? new GetIdentitySourceSequenceInvokeArgs(), options.WithDefaults());
     }
 
 

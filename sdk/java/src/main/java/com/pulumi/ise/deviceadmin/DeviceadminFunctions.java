@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.ise.Utilities;
 import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
 import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsPlainArgs;
@@ -290,6 +291,48 @@ public final class DeviceadminFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAllowedProtocolsTacacsResult> getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", TypeShape.of(GetAllowedProtocolsTacacsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read a TACACS allowed protocols policy element.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getAllowedProtocolsTacacs(GetAllowedProtocolsTacacsArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAllowedProtocolsTacacsResult> getAllowedProtocolsTacacsPlain(GetAllowedProtocolsTacacsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", TypeShape.of(GetAllowedProtocolsTacacsResult.class), args, Utilities.withVersion(options));
     }
@@ -462,6 +505,49 @@ public final class DeviceadminFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAuthenticationRuleResult> getAuthenticationRule(GetAuthenticationRuleArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getAuthenticationRule:getAuthenticationRule", TypeShape.of(GetAuthenticationRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Authentication Rule.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetAuthenticationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAuthenticationRuleResult> getAuthenticationRulePlain(GetAuthenticationRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:deviceadmin/getAuthenticationRule:getAuthenticationRule", TypeShape.of(GetAuthenticationRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -592,6 +678,49 @@ public final class DeviceadminFunctions {
      * 
      */
     public static Output<GetAuthorizationExceptionRuleResult> getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getAuthorizationExceptionRule:getAuthorizationExceptionRule", TypeShape.of(GetAuthorizationExceptionRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Authorization Exception Rule.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationExceptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetAuthorizationExceptionRuleResult> getAuthorizationExceptionRule(GetAuthorizationExceptionRuleArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:deviceadmin/getAuthorizationExceptionRule:getAuthorizationExceptionRule", TypeShape.of(GetAuthorizationExceptionRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -886,6 +1015,48 @@ public final class DeviceadminFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAuthorizationGlobalExceptionRuleResult> getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", TypeShape.of(GetAuthorizationGlobalExceptionRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Authorization Global Exception Rule.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getAuthorizationGlobalExceptionRule(GetAuthorizationGlobalExceptionRuleArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAuthorizationGlobalExceptionRuleResult> getAuthorizationGlobalExceptionRulePlain(GetAuthorizationGlobalExceptionRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", TypeShape.of(GetAuthorizationGlobalExceptionRuleResult.class), args, Utilities.withVersion(options));
     }
@@ -1016,6 +1187,49 @@ public final class DeviceadminFunctions {
      * 
      */
     public static Output<GetAuthorizationRuleResult> getAuthorizationRule(GetAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getAuthorizationRule:getAuthorizationRule", TypeShape.of(GetAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Authorization Rule.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getAuthorizationRule(GetAuthorizationRuleArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .policySetId("d82952cb-b901-4b09-b363-5ebf39bdbaf9")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetAuthorizationRuleResult> getAuthorizationRule(GetAuthorizationRuleArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:deviceadmin/getAuthorizationRule:getAuthorizationRule", TypeShape.of(GetAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1310,6 +1524,48 @@ public final class DeviceadminFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetConditionResult> getCondition(GetConditionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getCondition:getCondition", TypeShape.of(GetConditionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Condition.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getCondition(GetConditionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetConditionResult> getConditionPlain(GetConditionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:deviceadmin/getCondition:getCondition", TypeShape.of(GetConditionResult.class), args, Utilities.withVersion(options));
     }
@@ -1521,6 +1777,48 @@ public final class DeviceadminFunctions {
      * 
      */
     public static Output<GetPolicySetResult> getPolicySet(GetPolicySetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getPolicySet:getPolicySet", TypeShape.of(GetPolicySetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Policy Set.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getPolicySet(GetPolicySetArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetPolicySetResult> getPolicySet(GetPolicySetArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:deviceadmin/getPolicySet:getPolicySet", TypeShape.of(GetPolicySetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1814,6 +2112,48 @@ public final class DeviceadminFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetTacacsCommandSetResult> getTacacsCommandSet(GetTacacsCommandSetArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", TypeShape.of(GetTacacsCommandSetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TACACS Command Set.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getTacacsCommandSet(GetTacacsCommandSetArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetTacacsCommandSetResult> getTacacsCommandSetPlain(GetTacacsCommandSetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", TypeShape.of(GetTacacsCommandSetResult.class), args, Utilities.withVersion(options));
     }
@@ -2066,6 +2406,48 @@ public final class DeviceadminFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetTacacsProfileResult> getTacacsProfile(GetTacacsProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getTacacsProfile:getTacacsProfile", TypeShape.of(GetTacacsProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TACACS Profile.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getTacacsProfile(GetTacacsProfileArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetTacacsProfileResult> getTacacsProfilePlain(GetTacacsProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:deviceadmin/getTacacsProfile:getTacacsProfile", TypeShape.of(GetTacacsProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -2277,6 +2659,48 @@ public final class DeviceadminFunctions {
      * 
      */
     public static Output<GetTimeAndDateConditionResult> getTimeAndDateCondition(GetTimeAndDateConditionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", TypeShape.of(GetTimeAndDateConditionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Device Admin Time And Date Condition.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
+     * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DeviceadminFunctions.getTimeAndDateCondition(GetTimeAndDateConditionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTimeAndDateConditionResult> getTimeAndDateCondition(GetTimeAndDateConditionArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", TypeShape.of(GetTimeAndDateConditionResult.class), args, Utilities.withVersion(options));
     }
     /**

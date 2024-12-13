@@ -58,6 +58,30 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public static Output<GetAuthorizationGlobalExceptionRuleResult> Invoke(GetAuthorizationGlobalExceptionRuleInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthorizationGlobalExceptionRuleResult>("ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", args ?? new GetAuthorizationGlobalExceptionRuleInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Device Admin Authorization Global Exception Rule.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.DeviceAdmin.GetAuthorizationGlobalExceptionRule.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAuthorizationGlobalExceptionRuleResult> Invoke(GetAuthorizationGlobalExceptionRuleInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAuthorizationGlobalExceptionRuleResult>("ise:deviceadmin/getAuthorizationGlobalExceptionRule:getAuthorizationGlobalExceptionRule", args ?? new GetAuthorizationGlobalExceptionRuleInvokeArgs(), options.WithDefaults());
     }
 
 

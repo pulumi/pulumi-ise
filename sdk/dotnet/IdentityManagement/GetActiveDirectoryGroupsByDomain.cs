@@ -66,6 +66,34 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public static Output<GetActiveDirectoryGroupsByDomainResult> Invoke(GetActiveDirectoryGroupsByDomainInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetActiveDirectoryGroupsByDomainResult>("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", args ?? new GetActiveDirectoryGroupsByDomainInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Active Directory Groups By Domain.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.IdentityManagement.GetActiveDirectoryGroupsByDomain.Invoke(new()
+        ///     {
+        ///         JoinPointId = "73808580-b6e6-11ee-8960-de6d7692bc40",
+        ///         Domain = "cisco.com",
+        ///         Filter = "CN=ISE Admins",
+        ///         SidFilter = "cisco.com/S-1-5-33-544",
+        ///         TypeFilter = "UNIVERSAL",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetActiveDirectoryGroupsByDomainResult> Invoke(GetActiveDirectoryGroupsByDomainInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetActiveDirectoryGroupsByDomainResult>("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", args ?? new GetActiveDirectoryGroupsByDomainInvokeArgs(), options.WithDefaults());
     }
 
 

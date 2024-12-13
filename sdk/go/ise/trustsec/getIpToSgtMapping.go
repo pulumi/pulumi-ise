@@ -79,21 +79,11 @@ type LookupIpToSgtMappingResult struct {
 }
 
 func LookupIpToSgtMappingOutput(ctx *pulumi.Context, args LookupIpToSgtMappingOutputArgs, opts ...pulumi.InvokeOption) LookupIpToSgtMappingResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupIpToSgtMappingResultOutput, error) {
 			args := v.(LookupIpToSgtMappingArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupIpToSgtMappingResult
-			secret, err := ctx.InvokePackageRaw("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", args, &rv, "", opts...)
-			if err != nil {
-				return LookupIpToSgtMappingResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupIpToSgtMappingResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupIpToSgtMappingResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", args, LookupIpToSgtMappingResultOutput{}, options).(LookupIpToSgtMappingResultOutput), nil
 		}).(LookupIpToSgtMappingResultOutput)
 }
 
