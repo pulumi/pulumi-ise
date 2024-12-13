@@ -73,21 +73,11 @@ type LookupAllowedProtocolsTacacsResult struct {
 }
 
 func LookupAllowedProtocolsTacacsOutput(ctx *pulumi.Context, args LookupAllowedProtocolsTacacsOutputArgs, opts ...pulumi.InvokeOption) LookupAllowedProtocolsTacacsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAllowedProtocolsTacacsResultOutput, error) {
 			args := v.(LookupAllowedProtocolsTacacsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAllowedProtocolsTacacsResult
-			secret, err := ctx.InvokePackageRaw("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAllowedProtocolsTacacsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAllowedProtocolsTacacsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAllowedProtocolsTacacsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", args, LookupAllowedProtocolsTacacsResultOutput{}, options).(LookupAllowedProtocolsTacacsResultOutput), nil
 		}).(LookupAllowedProtocolsTacacsResultOutput)
 }
 

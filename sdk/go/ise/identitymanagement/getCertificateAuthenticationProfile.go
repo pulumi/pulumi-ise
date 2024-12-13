@@ -77,21 +77,11 @@ type LookupCertificateAuthenticationProfileResult struct {
 }
 
 func LookupCertificateAuthenticationProfileOutput(ctx *pulumi.Context, args LookupCertificateAuthenticationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupCertificateAuthenticationProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCertificateAuthenticationProfileResultOutput, error) {
 			args := v.(LookupCertificateAuthenticationProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCertificateAuthenticationProfileResult
-			secret, err := ctx.InvokePackageRaw("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCertificateAuthenticationProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCertificateAuthenticationProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCertificateAuthenticationProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", args, LookupCertificateAuthenticationProfileResultOutput{}, options).(LookupCertificateAuthenticationProfileResultOutput), nil
 		}).(LookupCertificateAuthenticationProfileResultOutput)
 }
 

@@ -58,6 +58,30 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public static Output<GetSecurityGroupAclResult> Invoke(GetSecurityGroupAclInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSecurityGroupAclResult>("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", args ?? new GetSecurityGroupAclInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the TrustSec Security Group ACL.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.TrustSec.GetSecurityGroupAcl.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSecurityGroupAclResult> Invoke(GetSecurityGroupAclInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSecurityGroupAclResult>("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", args ?? new GetSecurityGroupAclInvokeArgs(), options.WithDefaults());
     }
 
 

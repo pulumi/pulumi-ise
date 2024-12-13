@@ -58,6 +58,30 @@ namespace Pulumi.Ise.System
         /// </summary>
         public static Output<GetLicenseTierStateResult> Invoke(GetLicenseTierStateInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLicenseTierStateResult>("ise:system/getLicenseTierState:getLicenseTierState", args ?? new GetLicenseTierStateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the License Tier State.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.System.GetLicenseTierState.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLicenseTierStateResult> Invoke(GetLicenseTierStateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLicenseTierStateResult>("ise:system/getLicenseTierState:getLicenseTierState", args ?? new GetLicenseTierStateInvokeArgs(), options.WithDefaults());
     }
 
 

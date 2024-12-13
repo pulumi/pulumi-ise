@@ -58,6 +58,30 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public static Output<GetEndpointIdentityGroupResult> Invoke(GetEndpointIdentityGroupInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEndpointIdentityGroupResult>("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", args ?? new GetEndpointIdentityGroupInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Endpoint Identity Group.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.IdentityManagement.GetEndpointIdentityGroup.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetEndpointIdentityGroupResult> Invoke(GetEndpointIdentityGroupInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetEndpointIdentityGroupResult>("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", args ?? new GetEndpointIdentityGroupInvokeArgs(), options.WithDefaults());
     }
 
 

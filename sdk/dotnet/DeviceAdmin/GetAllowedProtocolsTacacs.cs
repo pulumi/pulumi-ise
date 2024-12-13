@@ -58,6 +58,30 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public static Output<GetAllowedProtocolsTacacsResult> Invoke(GetAllowedProtocolsTacacsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAllowedProtocolsTacacsResult>("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", args ?? new GetAllowedProtocolsTacacsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read a TACACS allowed protocols policy element.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.DeviceAdmin.GetAllowedProtocolsTacacs.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAllowedProtocolsTacacsResult> Invoke(GetAllowedProtocolsTacacsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAllowedProtocolsTacacsResult>("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", args ?? new GetAllowedProtocolsTacacsInvokeArgs(), options.WithDefaults());
     }
 
 

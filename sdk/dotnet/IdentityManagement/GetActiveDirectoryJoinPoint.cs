@@ -58,6 +58,30 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public static Output<GetActiveDirectoryJoinPointResult> Invoke(GetActiveDirectoryJoinPointInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetActiveDirectoryJoinPointResult>("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", args ?? new GetActiveDirectoryJoinPointInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Active Directory Join Point.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.IdentityManagement.GetActiveDirectoryJoinPoint.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetActiveDirectoryJoinPointResult> Invoke(GetActiveDirectoryJoinPointInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetActiveDirectoryJoinPointResult>("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", args ?? new GetActiveDirectoryJoinPointInvokeArgs(), options.WithDefaults());
     }
 
 

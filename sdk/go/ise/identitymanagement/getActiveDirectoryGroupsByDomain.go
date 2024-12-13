@@ -85,21 +85,11 @@ type GetActiveDirectoryGroupsByDomainResult struct {
 }
 
 func GetActiveDirectoryGroupsByDomainOutput(ctx *pulumi.Context, args GetActiveDirectoryGroupsByDomainOutputArgs, opts ...pulumi.InvokeOption) GetActiveDirectoryGroupsByDomainResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetActiveDirectoryGroupsByDomainResultOutput, error) {
 			args := v.(GetActiveDirectoryGroupsByDomainArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetActiveDirectoryGroupsByDomainResult
-			secret, err := ctx.InvokePackageRaw("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", args, &rv, "", opts...)
-			if err != nil {
-				return GetActiveDirectoryGroupsByDomainResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetActiveDirectoryGroupsByDomainResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetActiveDirectoryGroupsByDomainResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", args, GetActiveDirectoryGroupsByDomainResultOutput{}, options).(GetActiveDirectoryGroupsByDomainResultOutput), nil
 		}).(GetActiveDirectoryGroupsByDomainResultOutput)
 }
 
