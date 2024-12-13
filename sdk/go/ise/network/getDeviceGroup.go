@@ -69,21 +69,11 @@ type LookupDeviceGroupResult struct {
 }
 
 func LookupDeviceGroupOutput(ctx *pulumi.Context, args LookupDeviceGroupOutputArgs, opts ...pulumi.InvokeOption) LookupDeviceGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupDeviceGroupResultOutput, error) {
 			args := v.(LookupDeviceGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupDeviceGroupResult
-			secret, err := ctx.InvokePackageRaw("ise:network/getDeviceGroup:getDeviceGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupDeviceGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupDeviceGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupDeviceGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:network/getDeviceGroup:getDeviceGroup", args, LookupDeviceGroupResultOutput{}, options).(LookupDeviceGroupResultOutput), nil
 		}).(LookupDeviceGroupResultOutput)
 }
 

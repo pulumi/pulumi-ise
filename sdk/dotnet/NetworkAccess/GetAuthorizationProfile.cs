@@ -58,6 +58,30 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public static Output<GetAuthorizationProfileResult> Invoke(GetAuthorizationProfileInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthorizationProfileResult>("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", args ?? new GetAuthorizationProfileInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read an authorization profiles policy element.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.NetworkAccess.GetAuthorizationProfile.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAuthorizationProfileResult> Invoke(GetAuthorizationProfileInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAuthorizationProfileResult>("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", args ?? new GetAuthorizationProfileInvokeArgs(), options.WithDefaults());
     }
 
 

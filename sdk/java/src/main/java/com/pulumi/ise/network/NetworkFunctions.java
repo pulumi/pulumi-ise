@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.ise.Utilities;
 import com.pulumi.ise.network.inputs.GetDeviceArgs;
 import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
@@ -266,6 +267,48 @@ public final class NetworkFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:network/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Network Device.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.network.NetworkFunctions;
+     * import com.pulumi.ise.network.inputs.GetDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkFunctions.getDevice(GetDeviceArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:network/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -477,6 +520,48 @@ public final class NetworkFunctions {
      * 
      */
     public static Output<GetDeviceGroupResult> getDeviceGroup(GetDeviceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:network/getDeviceGroup:getDeviceGroup", TypeShape.of(GetDeviceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Network Device Group.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.network.NetworkFunctions;
+     * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkFunctions.getDeviceGroup(GetDeviceGroupArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDeviceGroupResult> getDeviceGroup(GetDeviceGroupArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:network/getDeviceGroup:getDeviceGroup", TypeShape.of(GetDeviceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**

@@ -73,21 +73,11 @@ type LookupIpToSgtMappingGroupResult struct {
 }
 
 func LookupIpToSgtMappingGroupOutput(ctx *pulumi.Context, args LookupIpToSgtMappingGroupOutputArgs, opts ...pulumi.InvokeOption) LookupIpToSgtMappingGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupIpToSgtMappingGroupResultOutput, error) {
 			args := v.(LookupIpToSgtMappingGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupIpToSgtMappingGroupResult
-			secret, err := ctx.InvokePackageRaw("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupIpToSgtMappingGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupIpToSgtMappingGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupIpToSgtMappingGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", args, LookupIpToSgtMappingGroupResultOutput{}, options).(LookupIpToSgtMappingGroupResultOutput), nil
 		}).(LookupIpToSgtMappingGroupResultOutput)
 }
 

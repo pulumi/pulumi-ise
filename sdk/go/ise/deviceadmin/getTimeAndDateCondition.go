@@ -89,21 +89,11 @@ type LookupTimeAndDateConditionResult struct {
 }
 
 func LookupTimeAndDateConditionOutput(ctx *pulumi.Context, args LookupTimeAndDateConditionOutputArgs, opts ...pulumi.InvokeOption) LookupTimeAndDateConditionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTimeAndDateConditionResultOutput, error) {
 			args := v.(LookupTimeAndDateConditionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTimeAndDateConditionResult
-			secret, err := ctx.InvokePackageRaw("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTimeAndDateConditionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTimeAndDateConditionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTimeAndDateConditionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:deviceadmin/getTimeAndDateCondition:getTimeAndDateCondition", args, LookupTimeAndDateConditionResultOutput{}, options).(LookupTimeAndDateConditionResultOutput), nil
 		}).(LookupTimeAndDateConditionResultOutput)
 }
 

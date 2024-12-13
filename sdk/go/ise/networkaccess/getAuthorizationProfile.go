@@ -129,21 +129,11 @@ type LookupAuthorizationProfileResult struct {
 }
 
 func LookupAuthorizationProfileOutput(ctx *pulumi.Context, args LookupAuthorizationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAuthorizationProfileResultOutput, error) {
 			args := v.(LookupAuthorizationProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAuthorizationProfileResult
-			secret, err := ctx.InvokePackageRaw("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAuthorizationProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAuthorizationProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAuthorizationProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", args, LookupAuthorizationProfileResultOutput{}, options).(LookupAuthorizationProfileResultOutput), nil
 		}).(LookupAuthorizationProfileResultOutput)
 }
 

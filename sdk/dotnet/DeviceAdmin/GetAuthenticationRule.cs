@@ -60,6 +60,31 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public static Output<GetAuthenticationRuleResult> Invoke(GetAuthenticationRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleResult>("ise:deviceadmin/getAuthenticationRule:getAuthenticationRule", args ?? new GetAuthenticationRuleInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Device Admin Authentication Rule.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.DeviceAdmin.GetAuthenticationRule.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///         PolicySetId = "d82952cb-b901-4b09-b363-5ebf39bdbaf9",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAuthenticationRuleResult> Invoke(GetAuthenticationRuleInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleResult>("ise:deviceadmin/getAuthenticationRule:getAuthenticationRule", args ?? new GetAuthenticationRuleInvokeArgs(), options.WithDefaults());
     }
 
 

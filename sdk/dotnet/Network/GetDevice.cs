@@ -58,6 +58,30 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public static Output<GetDeviceResult> Invoke(GetDeviceInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDeviceResult>("ise:network/getDevice:getDevice", args ?? new GetDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Network Device.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.Network.GetDevice.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDeviceResult> Invoke(GetDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDeviceResult>("ise:network/getDevice:getDevice", args ?? new GetDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

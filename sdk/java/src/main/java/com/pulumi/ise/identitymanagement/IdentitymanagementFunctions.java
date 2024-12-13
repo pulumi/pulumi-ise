@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.ise.Utilities;
 import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
 import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainPlainArgs;
@@ -216,6 +217,52 @@ public final class IdentitymanagementFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetActiveDirectoryGroupsByDomainResult> getActiveDirectoryGroupsByDomain(GetActiveDirectoryGroupsByDomainArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", TypeShape.of(GetActiveDirectoryGroupsByDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Active Directory Groups By Domain.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getActiveDirectoryGroupsByDomain(GetActiveDirectoryGroupsByDomainArgs.builder()
+     *             .joinPointId("73808580-b6e6-11ee-8960-de6d7692bc40")
+     *             .domain("cisco.com")
+     *             .filter("CN=ISE Admins")
+     *             .sidFilter("cisco.com/S-1-5-33-544")
+     *             .typeFilter("UNIVERSAL")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetActiveDirectoryGroupsByDomainResult> getActiveDirectoryGroupsByDomainPlain(GetActiveDirectoryGroupsByDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", TypeShape.of(GetActiveDirectoryGroupsByDomainResult.class), args, Utilities.withVersion(options));
     }
@@ -343,6 +390,48 @@ public final class IdentitymanagementFunctions {
      * 
      */
     public static Output<GetActiveDirectoryJoinPointResult> getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", TypeShape.of(GetActiveDirectoryJoinPointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Active Directory Join Point.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetActiveDirectoryJoinPointResult> getActiveDirectoryJoinPoint(GetActiveDirectoryJoinPointArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", TypeShape.of(GetActiveDirectoryJoinPointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -636,6 +725,48 @@ public final class IdentitymanagementFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCertificateAuthenticationProfileResult> getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", TypeShape.of(GetCertificateAuthenticationProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Certificate Authentication Profile.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getCertificateAuthenticationProfile(GetCertificateAuthenticationProfileArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCertificateAuthenticationProfileResult> getCertificateAuthenticationProfilePlain(GetCertificateAuthenticationProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", TypeShape.of(GetCertificateAuthenticationProfileResult.class), args, Utilities.withVersion(options));
     }
@@ -847,6 +978,48 @@ public final class IdentitymanagementFunctions {
      * 
      */
     public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Endpoint.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpoint(GetEndpointArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:identitymanagement/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1140,6 +1313,48 @@ public final class IdentitymanagementFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetEndpointIdentityGroupResult> getEndpointIdentityGroup(GetEndpointIdentityGroupArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", TypeShape.of(GetEndpointIdentityGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Endpoint Identity Group.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpointIdentityGroup(GetEndpointIdentityGroupArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetEndpointIdentityGroupResult> getEndpointIdentityGroupPlain(GetEndpointIdentityGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", TypeShape.of(GetEndpointIdentityGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -1351,6 +1566,48 @@ public final class IdentitymanagementFunctions {
      * 
      */
     public static Output<GetIdentitySourceSequenceResult> getIdentitySourceSequence(GetIdentitySourceSequenceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", TypeShape.of(GetIdentitySourceSequenceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Identity Source Sequence.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getIdentitySourceSequence(GetIdentitySourceSequenceArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetIdentitySourceSequenceResult> getIdentitySourceSequence(GetIdentitySourceSequenceArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", TypeShape.of(GetIdentitySourceSequenceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1644,6 +1901,48 @@ public final class IdentitymanagementFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetInternalUserResult> getInternalUser(GetInternalUserArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getInternalUser:getInternalUser", TypeShape.of(GetInternalUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Internal User.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getInternalUser(GetInternalUserArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetInternalUserResult> getInternalUserPlain(GetInternalUserPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:identitymanagement/getInternalUser:getInternalUser", TypeShape.of(GetInternalUserResult.class), args, Utilities.withVersion(options));
     }
@@ -1855,6 +2154,48 @@ public final class IdentitymanagementFunctions {
      * 
      */
     public static Output<GetUserIdentityGroupResult> getUserIdentityGroup(GetUserIdentityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", TypeShape.of(GetUserIdentityGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the User Identity Group.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getUserIdentityGroup(GetUserIdentityGroupArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetUserIdentityGroupResult> getUserIdentityGroup(GetUserIdentityGroupArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", TypeShape.of(GetUserIdentityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.ise.Utilities;
 import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
 import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellPlainArgs;
@@ -153,6 +154,48 @@ public final class TrustsecFunctions {
      * 
      */
     public static Output<GetEgressMatrixCellResult> getEgressMatrixCell(GetEgressMatrixCellArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", TypeShape.of(GetEgressMatrixCellResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Egress Matrix Cell.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getEgressMatrixCell(GetEgressMatrixCellArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEgressMatrixCellResult> getEgressMatrixCell(GetEgressMatrixCellArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", TypeShape.of(GetEgressMatrixCellResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -446,6 +489,48 @@ public final class TrustsecFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetIpToSgtMappingResult> getIpToSgtMapping(GetIpToSgtMappingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", TypeShape.of(GetIpToSgtMappingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec IP to SGT Mapping.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getIpToSgtMapping(GetIpToSgtMappingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetIpToSgtMappingResult> getIpToSgtMappingPlain(GetIpToSgtMappingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", TypeShape.of(GetIpToSgtMappingResult.class), args, Utilities.withVersion(options));
     }
@@ -657,6 +742,48 @@ public final class TrustsecFunctions {
      * 
      */
     public static Output<GetIpToSgtMappingGroupResult> getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", TypeShape.of(GetIpToSgtMappingGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec IP to SGT Mapping Group.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetIpToSgtMappingGroupResult> getIpToSgtMappingGroup(GetIpToSgtMappingGroupArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", TypeShape.of(GetIpToSgtMappingGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -950,6 +1077,48 @@ public final class TrustsecFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSecurityGroupResult> getSecurityGroup(GetSecurityGroupArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSecurityGroup:getSecurityGroup", TypeShape.of(GetSecurityGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Security Group.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSecurityGroup(GetSecurityGroupArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSecurityGroupResult> getSecurityGroupPlain(GetSecurityGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getSecurityGroup:getSecurityGroup", TypeShape.of(GetSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -1202,6 +1371,48 @@ public final class TrustsecFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSecurityGroupAclResult> getSecurityGroupAcl(GetSecurityGroupAclArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", TypeShape.of(GetSecurityGroupAclResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Security Group ACL.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSecurityGroupAcl(GetSecurityGroupAclArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSecurityGroupAclResult> getSecurityGroupAclPlain(GetSecurityGroupAclPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", TypeShape.of(GetSecurityGroupAclResult.class), args, Utilities.withVersion(options));
     }
@@ -1413,6 +1624,48 @@ public final class TrustsecFunctions {
      * 
      */
     public static Output<GetSxpDomainFilterResult> getSxpDomainFilter(GetSxpDomainFilterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", TypeShape.of(GetSxpDomainFilterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Domain Filter.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSxpDomainFilterResult> getSxpDomainFilter(GetSxpDomainFilterArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", TypeShape.of(GetSxpDomainFilterResult.class), args, Utilities.withVersion(options));
     }
     /**

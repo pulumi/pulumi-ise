@@ -58,6 +58,30 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public static Output<GetPolicySetResult> Invoke(GetPolicySetInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicySetResult>("ise:deviceadmin/getPolicySet:getPolicySet", args ?? new GetPolicySetInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Device Admin Policy Set.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.DeviceAdmin.GetPolicySet.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPolicySetResult> Invoke(GetPolicySetInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicySetResult>("ise:deviceadmin/getPolicySet:getPolicySet", args ?? new GetPolicySetInvokeArgs(), options.WithDefaults());
     }
 
 

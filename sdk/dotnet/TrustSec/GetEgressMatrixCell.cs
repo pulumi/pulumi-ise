@@ -58,6 +58,30 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public static Output<GetEgressMatrixCellResult> Invoke(GetEgressMatrixCellInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEgressMatrixCellResult>("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", args ?? new GetEgressMatrixCellInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the TrustSec Egress Matrix Cell.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.TrustSec.GetEgressMatrixCell.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetEgressMatrixCellResult> Invoke(GetEgressMatrixCellInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetEgressMatrixCellResult>("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", args ?? new GetEgressMatrixCellInvokeArgs(), options.WithDefaults());
     }
 
 

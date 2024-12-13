@@ -58,6 +58,30 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public static Output<GetAllowedProtocolsResult> Invoke(GetAllowedProtocolsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAllowedProtocolsResult>("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", args ?? new GetAllowedProtocolsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read an allowed protocols policy element.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.NetworkAccess.GetAllowedProtocols.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAllowedProtocolsResult> Invoke(GetAllowedProtocolsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAllowedProtocolsResult>("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", args ?? new GetAllowedProtocolsInvokeArgs(), options.WithDefaults());
     }
 
 

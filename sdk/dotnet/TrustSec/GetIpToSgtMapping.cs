@@ -58,6 +58,30 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public static Output<GetIpToSgtMappingResult> Invoke(GetIpToSgtMappingInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIpToSgtMappingResult>("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", args ?? new GetIpToSgtMappingInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the TrustSec IP to SGT Mapping.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.TrustSec.GetIpToSgtMapping.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIpToSgtMappingResult> Invoke(GetIpToSgtMappingInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIpToSgtMappingResult>("ise:trustsec/getIpToSgtMapping:getIpToSgtMapping", args ?? new GetIpToSgtMappingInvokeArgs(), options.WithDefaults());
     }
 
 

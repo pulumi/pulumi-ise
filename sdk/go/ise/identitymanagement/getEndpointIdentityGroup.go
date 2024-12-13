@@ -71,21 +71,11 @@ type LookupEndpointIdentityGroupResult struct {
 }
 
 func LookupEndpointIdentityGroupOutput(ctx *pulumi.Context, args LookupEndpointIdentityGroupOutputArgs, opts ...pulumi.InvokeOption) LookupEndpointIdentityGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupEndpointIdentityGroupResultOutput, error) {
 			args := v.(LookupEndpointIdentityGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupEndpointIdentityGroupResult
-			secret, err := ctx.InvokePackageRaw("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupEndpointIdentityGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupEndpointIdentityGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupEndpointIdentityGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", args, LookupEndpointIdentityGroupResultOutput{}, options).(LookupEndpointIdentityGroupResultOutput), nil
 		}).(LookupEndpointIdentityGroupResultOutput)
 }
 

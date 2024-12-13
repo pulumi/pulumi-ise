@@ -58,6 +58,30 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public static Output<GetConditionResult> Invoke(GetConditionInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetConditionResult>("ise:networkaccess/getCondition:getCondition", args ?? new GetConditionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Network Access Condition.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.NetworkAccess.GetCondition.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetConditionResult> Invoke(GetConditionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetConditionResult>("ise:networkaccess/getCondition:getCondition", args ?? new GetConditionInvokeArgs(), options.WithDefaults());
     }
 
 

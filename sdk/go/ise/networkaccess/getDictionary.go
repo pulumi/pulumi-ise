@@ -71,21 +71,11 @@ type LookupDictionaryResult struct {
 }
 
 func LookupDictionaryOutput(ctx *pulumi.Context, args LookupDictionaryOutputArgs, opts ...pulumi.InvokeOption) LookupDictionaryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupDictionaryResultOutput, error) {
 			args := v.(LookupDictionaryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupDictionaryResult
-			secret, err := ctx.InvokePackageRaw("ise:networkaccess/getDictionary:getDictionary", args, &rv, "", opts...)
-			if err != nil {
-				return LookupDictionaryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupDictionaryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupDictionaryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:networkaccess/getDictionary:getDictionary", args, LookupDictionaryResultOutput{}, options).(LookupDictionaryResultOutput), nil
 		}).(LookupDictionaryResultOutput)
 }
 

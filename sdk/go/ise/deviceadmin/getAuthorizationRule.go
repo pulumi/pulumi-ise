@@ -98,21 +98,11 @@ type LookupAuthorizationRuleResult struct {
 }
 
 func LookupAuthorizationRuleOutput(ctx *pulumi.Context, args LookupAuthorizationRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationRuleResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAuthorizationRuleResultOutput, error) {
 			args := v.(LookupAuthorizationRuleArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAuthorizationRuleResult
-			secret, err := ctx.InvokePackageRaw("ise:deviceadmin/getAuthorizationRule:getAuthorizationRule", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAuthorizationRuleResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAuthorizationRuleResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAuthorizationRuleResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("ise:deviceadmin/getAuthorizationRule:getAuthorizationRule", args, LookupAuthorizationRuleResultOutput{}, options).(LookupAuthorizationRuleResultOutput), nil
 		}).(LookupAuthorizationRuleResultOutput)
 }
 

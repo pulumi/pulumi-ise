@@ -58,6 +58,30 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public static Output<GetUserIdentityGroupResult> Invoke(GetUserIdentityGroupInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUserIdentityGroupResult>("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", args ?? new GetUserIdentityGroupInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the User Identity Group.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Ise = Pulumi.Ise;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Ise.IdentityManagement.GetUserIdentityGroup.Invoke(new()
+        ///     {
+        ///         Id = "76d24097-41c4-4558-a4d0-a8c07ac08470",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetUserIdentityGroupResult> Invoke(GetUserIdentityGroupInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetUserIdentityGroupResult>("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", args ?? new GetUserIdentityGroupInvokeArgs(), options.WithDefaults());
     }
 
 
