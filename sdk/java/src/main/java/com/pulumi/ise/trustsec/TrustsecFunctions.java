@@ -10,6 +10,8 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.ise.Utilities;
 import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
+import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
+import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
 import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
@@ -21,6 +23,7 @@ import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
 import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterPlainArgs;
+import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellDefaultResult;
 import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingGroupResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingResult;
@@ -239,6 +242,216 @@ public final class TrustsecFunctions {
      */
     public static CompletableFuture<GetEgressMatrixCellResult> getEgressMatrixCellPlain(GetEgressMatrixCellPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getEgressMatrixCell:getEgressMatrixCell", TypeShape.of(GetEgressMatrixCellResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Egress Matrix Cell Default.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs.builder()
+     *             .id("92c1a900-8c01-11e6-996c-525400b48521")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEgressMatrixCellDefaultResult> getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs args) {
+        return getEgressMatrixCellDefault(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the TrustSec Egress Matrix Cell Default.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs.builder()
+     *             .id("92c1a900-8c01-11e6-996c-525400b48521")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetEgressMatrixCellDefaultResult> getEgressMatrixCellDefaultPlain(GetEgressMatrixCellDefaultPlainArgs args) {
+        return getEgressMatrixCellDefaultPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the TrustSec Egress Matrix Cell Default.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs.builder()
+     *             .id("92c1a900-8c01-11e6-996c-525400b48521")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEgressMatrixCellDefaultResult> getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getEgressMatrixCellDefault:getEgressMatrixCellDefault", TypeShape.of(GetEgressMatrixCellDefaultResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Egress Matrix Cell Default.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs.builder()
+     *             .id("92c1a900-8c01-11e6-996c-525400b48521")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEgressMatrixCellDefaultResult> getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getEgressMatrixCellDefault:getEgressMatrixCellDefault", TypeShape.of(GetEgressMatrixCellDefaultResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Egress Matrix Cell Default.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs.builder()
+     *             .id("92c1a900-8c01-11e6-996c-525400b48521")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetEgressMatrixCellDefaultResult> getEgressMatrixCellDefaultPlain(GetEgressMatrixCellDefaultPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:trustsec/getEgressMatrixCellDefault:getEgressMatrixCellDefault", TypeShape.of(GetEgressMatrixCellDefaultResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the TrustSec IP to SGT Mapping.
