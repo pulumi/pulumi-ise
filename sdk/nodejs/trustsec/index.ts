@@ -10,10 +10,20 @@ export type EgressMatrixCell = import("./egressMatrixCell").EgressMatrixCell;
 export const EgressMatrixCell: typeof import("./egressMatrixCell").EgressMatrixCell = null as any;
 utilities.lazyLoad(exports, ["EgressMatrixCell"], () => require("./egressMatrixCell"));
 
+export { EgressMatrixCellDefaultArgs, EgressMatrixCellDefaultState } from "./egressMatrixCellDefault";
+export type EgressMatrixCellDefault = import("./egressMatrixCellDefault").EgressMatrixCellDefault;
+export const EgressMatrixCellDefault: typeof import("./egressMatrixCellDefault").EgressMatrixCellDefault = null as any;
+utilities.lazyLoad(exports, ["EgressMatrixCellDefault"], () => require("./egressMatrixCellDefault"));
+
 export { GetEgressMatrixCellArgs, GetEgressMatrixCellResult, GetEgressMatrixCellOutputArgs } from "./getEgressMatrixCell";
 export const getEgressMatrixCell: typeof import("./getEgressMatrixCell").getEgressMatrixCell = null as any;
 export const getEgressMatrixCellOutput: typeof import("./getEgressMatrixCell").getEgressMatrixCellOutput = null as any;
 utilities.lazyLoad(exports, ["getEgressMatrixCell","getEgressMatrixCellOutput"], () => require("./getEgressMatrixCell"));
+
+export { GetEgressMatrixCellDefaultArgs, GetEgressMatrixCellDefaultResult, GetEgressMatrixCellDefaultOutputArgs } from "./getEgressMatrixCellDefault";
+export const getEgressMatrixCellDefault: typeof import("./getEgressMatrixCellDefault").getEgressMatrixCellDefault = null as any;
+export const getEgressMatrixCellDefaultOutput: typeof import("./getEgressMatrixCellDefault").getEgressMatrixCellDefaultOutput = null as any;
+utilities.lazyLoad(exports, ["getEgressMatrixCellDefault","getEgressMatrixCellDefaultOutput"], () => require("./getEgressMatrixCellDefault"));
 
 export { GetIpToSgtMappingArgs, GetIpToSgtMappingResult, GetIpToSgtMappingOutputArgs } from "./getIpToSgtMapping";
 export const getIpToSgtMapping: typeof import("./getIpToSgtMapping").getIpToSgtMapping = null as any;
@@ -72,6 +82,8 @@ const _module = {
         switch (type) {
             case "ise:trustsec/egressMatrixCell:EgressMatrixCell":
                 return new EgressMatrixCell(name, <any>undefined, { urn })
+            case "ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault":
+                return new EgressMatrixCellDefault(name, <any>undefined, { urn })
             case "ise:trustsec/ipToSgtMapping:IpToSgtMapping":
                 return new IpToSgtMapping(name, <any>undefined, { urn })
             case "ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup":
@@ -88,6 +100,7 @@ const _module = {
     },
 };
 pulumi.runtime.registerResourceModule("ise", "trustsec/egressMatrixCell", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/egressMatrixCellDefault", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMapping", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMappingGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroup", _module)

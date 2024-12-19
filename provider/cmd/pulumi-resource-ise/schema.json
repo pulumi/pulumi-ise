@@ -10685,6 +10685,79 @@
                 "type": "object"
             }
         },
+        "ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault": {
+            "description": "Allows modifications to the default egress policy matrix rule\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.EgressMatrixCellDefault(\"example\", {\n    description: \"Default egress rule\",\n    defaultRule: \"PERMIT_IP\",\n    matrixCellStatus: \"ENABLED\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.EgressMatrixCellDefault(\"example\",\n    description=\"Default egress rule\",\n    default_rule=\"PERMIT_IP\",\n    matrix_cell_status=\"ENABLED\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.EgressMatrixCellDefault(\"example\", new()\n    {\n        Description = \"Default egress rule\",\n        DefaultRule = \"PERMIT_IP\",\n        MatrixCellStatus = \"ENABLED\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewEgressMatrixCellDefault(ctx, \"example\", \u0026trustsec.EgressMatrixCellDefaultArgs{\n\t\t\tDescription:      pulumi.String(\"Default egress rule\"),\n\t\t\tDefaultRule:      pulumi.String(\"PERMIT_IP\"),\n\t\t\tMatrixCellStatus: pulumi.String(\"ENABLED\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.EgressMatrixCellDefault;\nimport com.pulumi.ise.trustsec.EgressMatrixCellDefaultArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new EgressMatrixCellDefault(\"example\", EgressMatrixCellDefaultArgs.builder()\n            .description(\"Default egress rule\")\n            .defaultRule(\"PERMIT_IP\")\n            .matrixCellStatus(\"ENABLED\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:EgressMatrixCellDefault\n    properties:\n      description: Default egress rule\n      defaultRule: PERMIT_IP\n      matrixCellStatus: ENABLED\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault example \"92c1a900-8c01-11e6-996c-525400b48521\"\n```\n\n",
+            "properties": {
+                "defaultRule": {
+                    "type": "string",
+                    "description": "Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`\n"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description\n"
+                },
+                "matrixCellStatus": {
+                    "type": "string",
+                    "description": "Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`\n"
+                },
+                "sgacls": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of TrustSec Security Groups ACLs\n"
+                }
+            },
+            "required": [
+                "matrixCellStatus"
+            ],
+            "inputProperties": {
+                "defaultRule": {
+                    "type": "string",
+                    "description": "Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`\n"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description\n"
+                },
+                "matrixCellStatus": {
+                    "type": "string",
+                    "description": "Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`\n"
+                },
+                "sgacls": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of TrustSec Security Groups ACLs\n"
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering EgressMatrixCellDefault resources.\n",
+                "properties": {
+                    "defaultRule": {
+                        "type": "string",
+                        "description": "Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`\n"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description\n"
+                    },
+                    "matrixCellStatus": {
+                        "type": "string",
+                        "description": "Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`\n"
+                    },
+                    "sgacls": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "List of TrustSec Security Groups ACLs\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:trustsec/ipToSgtMapping:IpToSgtMapping": {
             "description": "This resource can manage a TrustSec IP to SGT Mapping.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.IpToSgtMapping(\"example\", {\n    name: \"10.0.0.1/32\",\n    deployType: \"ALL\",\n    hostIp: \"10.0.0.1/32\",\n    sgt: \"93e1bf00-8c01-11e6-996c-525400b48521\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.IpToSgtMapping(\"example\",\n    name=\"10.0.0.1/32\",\n    deploy_type=\"ALL\",\n    host_ip=\"10.0.0.1/32\",\n    sgt=\"93e1bf00-8c01-11e6-996c-525400b48521\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.IpToSgtMapping(\"example\", new()\n    {\n        Name = \"10.0.0.1/32\",\n        DeployType = \"ALL\",\n        HostIp = \"10.0.0.1/32\",\n        Sgt = \"93e1bf00-8c01-11e6-996c-525400b48521\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewIpToSgtMapping(ctx, \"example\", \u0026trustsec.IpToSgtMappingArgs{\n\t\t\tName:       pulumi.String(\"10.0.0.1/32\"),\n\t\t\tDeployType: pulumi.String(\"ALL\"),\n\t\t\tHostIp:     pulumi.String(\"10.0.0.1/32\"),\n\t\t\tSgt:        pulumi.String(\"93e1bf00-8c01-11e6-996c-525400b48521\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.IpToSgtMapping;\nimport com.pulumi.ise.trustsec.IpToSgtMappingArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new IpToSgtMapping(\"example\", IpToSgtMappingArgs.builder()\n            .name(\"10.0.0.1/32\")\n            .deployType(\"ALL\")\n            .hostIp(\"10.0.0.1/32\")\n            .sgt(\"93e1bf00-8c01-11e6-996c-525400b48521\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:IpToSgtMapping\n    properties:\n      name: 10.0.0.1/32\n      deployType: ALL\n      hostIp: 10.0.0.1/32\n      sgt: 93e1bf00-8c01-11e6-996c-525400b48521\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:trustsec/ipToSgtMapping:IpToSgtMapping example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -14768,6 +14841,58 @@
                     "matrixCellStatus",
                     "sgacls",
                     "sourceSgtId"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:trustsec/getEgressMatrixCellDefault:getEgressMatrixCellDefault": {
+            "description": "This data source can read the TrustSec Egress Matrix Cell Default.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getEgressMatrixCellDefault({\n    id: \"92c1a900-8c01-11e6-996c-525400b48521\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_egress_matrix_cell_default(id=\"92c1a900-8c01-11e6-996c-525400b48521\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetEgressMatrixCellDefault.Invoke(new()\n    {\n        Id = \"92c1a900-8c01-11e6-996c-525400b48521\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupEgressMatrixCellDefault(ctx, \u0026trustsec.LookupEgressMatrixCellDefaultArgs{\n\t\t\tId: \"92c1a900-8c01-11e6-996c-525400b48521\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getEgressMatrixCellDefault(GetEgressMatrixCellDefaultArgs.builder()\n            .id(\"92c1a900-8c01-11e6-996c-525400b48521\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:trustsec:getEgressMatrixCellDefault\n      arguments:\n        id: 92c1a900-8c01-11e6-996c-525400b48521\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getEgressMatrixCellDefault.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getEgressMatrixCellDefault.\n",
+                "properties": {
+                    "defaultRule": {
+                        "description": "Can be used only if sgacls not specified. Final Catch All Rule\n",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Description\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "matrixCellStatus": {
+                        "description": "Matrix Cell Status\n",
+                        "type": "string"
+                    },
+                    "sgacls": {
+                        "description": "List of TrustSec Security Groups ACLs\n",
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "defaultRule",
+                    "description",
+                    "id",
+                    "matrixCellStatus",
+                    "sgacls"
                 ],
                 "type": "object"
             }

@@ -397,6 +397,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "trustsec/egressMatrixCellDefault",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault": "EgressMatrixCellDefault"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "trustsec/ipToSgtMapping",
   "fqn": "pulumi_ise.trustsec",
   "classes": {

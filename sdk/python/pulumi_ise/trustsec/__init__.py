@@ -6,7 +6,9 @@ from .. import _utilities
 import typing
 # Export this package's modules as members:
 from .egress_matrix_cell import *
+from .egress_matrix_cell_default import *
 from .get_egress_matrix_cell import *
+from .get_egress_matrix_cell_default import *
 from .get_ip_to_sgt_mapping import *
 from .get_ip_to_sgt_mapping_group import *
 from .get_security_group import *
