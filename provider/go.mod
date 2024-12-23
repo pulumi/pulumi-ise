@@ -7,7 +7,7 @@ toolchain go1.23.2
 require (
 	github.com/CiscoDevNet/terraform-provider-ise v0.0.0
 	github.com/ettle/strcase v0.1.1
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.98.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.98.1-0.20241223162608-daafe0d49c40
 	github.com/pulumi/pulumi/sdk/v3 v3.143.0
 )
 
@@ -116,6 +116,7 @@ require (
 	github.com/netascode/go-ise v0.1.1 // indirect
 	github.com/oklog/run v1.1.0 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
+	github.com/opentofu/registry-address v0.0.0-20230922120653-901b9ae4061a // indirect
 	github.com/opentracing/basictracer-go v1.1.0 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/pgavlin/fx v0.1.6 // indirect
