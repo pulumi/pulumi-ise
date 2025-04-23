@@ -567,6 +567,9 @@ class _PolicySetState:
 
 
 class PolicySet(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/policySet:PolicySet"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

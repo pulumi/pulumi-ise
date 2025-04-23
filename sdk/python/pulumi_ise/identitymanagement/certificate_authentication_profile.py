@@ -286,6 +286,9 @@ class _CertificateAuthenticationProfileState:
 
 
 class CertificateAuthenticationProfile(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

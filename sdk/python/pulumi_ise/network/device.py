@@ -1379,6 +1379,9 @@ class _DeviceState:
 
 
 class Device(pulumi.CustomResource):
+
+    pulumi_type = "ise:network/device:Device"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

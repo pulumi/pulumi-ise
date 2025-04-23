@@ -127,6 +127,9 @@ class _AuthorizationExceptionRuleUpdateRankState:
 
 
 class AuthorizationExceptionRuleUpdateRank(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
