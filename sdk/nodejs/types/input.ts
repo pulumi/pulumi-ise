@@ -84,6 +84,17 @@ export namespace deviceadmin {
         operator?: pulumi.Input<string>;
     }
 
+    export interface AuthenticationRuleUpdateRanksRule {
+        /**
+         * Authentication rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
+    }
+
     export interface AuthorizationExceptionRuleChildren {
         /**
          * Dictionary attribute name
@@ -160,6 +171,17 @@ export namespace deviceadmin {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
     }
 
     export interface AuthorizationGlobalExceptionRuleChildren {
@@ -240,6 +262,17 @@ export namespace deviceadmin {
         operator?: pulumi.Input<string>;
     }
 
+    export interface AuthorizationGlobalExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
+    }
+
     export interface AuthorizationRuleChildren {
         /**
          * Dictionary attribute name
@@ -316,6 +349,17 @@ export namespace deviceadmin {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
     }
 
     export interface ConditionChildren {
@@ -488,6 +532,17 @@ export namespace deviceadmin {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: pulumi.Input<string>;
+    }
+
+    export interface PolicySetUpdateRanksPolicy {
+        /**
+         * Policy set ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank: pulumi.Input<number>;
     }
 
     export interface TacacsCommandSetCommand {
@@ -703,6 +758,17 @@ export namespace networkaccess {
         operator?: pulumi.Input<string>;
     }
 
+    export interface AuthenticationRuleUpdateRanksRule {
+        /**
+         * Authentication rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
+    }
+
     export interface AuthorizationExceptionRuleChildren {
         /**
          * Dictionary attribute name
@@ -781,6 +847,17 @@ export namespace networkaccess {
         operator?: pulumi.Input<string>;
     }
 
+    export interface AuthorizationExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
+    }
+
     export interface AuthorizationGlobalExceptionRuleChildren {
         /**
          * Dictionary attribute name
@@ -857,6 +934,17 @@ export namespace networkaccess {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: pulumi.Input<string>;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
     }
 
     export interface AuthorizationProfileAdvancedAttribute {
@@ -965,6 +1053,17 @@ export namespace networkaccess {
         operator?: pulumi.Input<string>;
     }
 
+    export interface AuthorizationRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: pulumi.Input<number>;
+    }
+
     export interface ConditionChildren {
         /**
          * Dictionary attribute name
@@ -1004,7 +1103,7 @@ export namespace networkaccess {
          */
         isNegate?: pulumi.Input<boolean>;
         /**
-         * Condition name
+         * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          */
         name?: pulumi.Input<string>;
         /**
@@ -1049,7 +1148,7 @@ export namespace networkaccess {
          */
         isNegate?: pulumi.Input<boolean>;
         /**
-         * Condition name
+         * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          */
         name?: pulumi.Input<string>;
         /**
@@ -1135,6 +1234,17 @@ export namespace networkaccess {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: pulumi.Input<string>;
+    }
+
+    export interface PolicySetUpdateRanksPolicy {
+        /**
+         * Policy set ID
+         */
+        id?: pulumi.Input<string>;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank: pulumi.Input<number>;
     }
 }
 

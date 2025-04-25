@@ -27,24 +27,34 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &AuthenticationRule{}
 	case "ise:deviceadmin/authenticationRuleUpdateRank:AuthenticationRuleUpdateRank":
 		r = &AuthenticationRuleUpdateRank{}
+	case "ise:deviceadmin/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks":
+		r = &AuthenticationRuleUpdateRanks{}
 	case "ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule":
 		r = &AuthorizationExceptionRule{}
 	case "ise:deviceadmin/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank":
 		r = &AuthorizationExceptionRuleUpdateRank{}
+	case "ise:deviceadmin/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks":
+		r = &AuthorizationExceptionRuleUpdateRanks{}
 	case "ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule":
 		r = &AuthorizationGlobalExceptionRule{}
 	case "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank":
 		r = &AuthorizationGlobalExceptionRuleUpdateRank{}
+	case "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks":
+		r = &AuthorizationGlobalExceptionRuleUpdateRanks{}
 	case "ise:deviceadmin/authorizationRule:AuthorizationRule":
 		r = &AuthorizationRule{}
 	case "ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank":
 		r = &AuthorizationRuleUpdateRank{}
+	case "ise:deviceadmin/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks":
+		r = &AuthorizationRuleUpdateRanks{}
 	case "ise:deviceadmin/condition:Condition":
 		r = &Condition{}
 	case "ise:deviceadmin/policySet:PolicySet":
 		r = &PolicySet{}
 	case "ise:deviceadmin/policySetUpdateRank:PolicySetUpdateRank":
 		r = &PolicySetUpdateRank{}
+	case "ise:deviceadmin/policySetUpdateRanks:PolicySetUpdateRanks":
+		r = &PolicySetUpdateRanks{}
 	case "ise:deviceadmin/tacacsCommandSet:TacacsCommandSet":
 		r = &TacacsCommandSet{}
 	case "ise:deviceadmin/tacacsProfile:TacacsProfile":
@@ -81,12 +91,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
+		"deviceadmin/authenticationRuleUpdateRanks",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
 		"deviceadmin/authorizationExceptionRule",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
 		"deviceadmin/authorizationExceptionRuleUpdateRank",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceadmin/authorizationExceptionRuleUpdateRanks",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -101,12 +121,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
+		"deviceadmin/authorizationGlobalExceptionRuleUpdateRanks",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
 		"deviceadmin/authorizationRule",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
 		"deviceadmin/authorizationRuleUpdateRank",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceadmin/authorizationRuleUpdateRanks",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -122,6 +152,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"deviceadmin/policySetUpdateRank",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"deviceadmin/policySetUpdateRanks",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

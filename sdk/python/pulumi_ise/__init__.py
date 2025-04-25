@@ -62,6 +62,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "deviceadmin/authenticationRuleUpdateRanks",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks": "AuthenticationRuleUpdateRanks"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "deviceadmin/authorizationExceptionRule",
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
@@ -74,6 +82,14 @@ _utilities.register(
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
    "ise:deviceadmin/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank": "AuthorizationExceptionRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "deviceadmin/authorizationExceptionRuleUpdateRanks",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks": "AuthorizationExceptionRuleUpdateRanks"
   }
  },
  {
@@ -94,6 +110,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "deviceadmin/authorizationGlobalExceptionRuleUpdateRanks",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks": "AuthorizationGlobalExceptionRuleUpdateRanks"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "deviceadmin/authorizationRule",
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
@@ -106,6 +130,14 @@ _utilities.register(
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
    "ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank": "AuthorizationRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "deviceadmin/authorizationRuleUpdateRanks",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks": "AuthorizationRuleUpdateRanks"
   }
  },
  {
@@ -130,6 +162,14 @@ _utilities.register(
   "fqn": "pulumi_ise.deviceadmin",
   "classes": {
    "ise:deviceadmin/policySetUpdateRank:PolicySetUpdateRank": "PolicySetUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "deviceadmin/policySetUpdateRanks",
+  "fqn": "pulumi_ise.deviceadmin",
+  "classes": {
+   "ise:deviceadmin/policySetUpdateRanks:PolicySetUpdateRanks": "PolicySetUpdateRanks"
   }
  },
  {
@@ -270,6 +310,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "networkaccess/authenticationRuleUpdateRanks",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks": "AuthenticationRuleUpdateRanks"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "networkaccess/authorizationExceptionRule",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
@@ -286,6 +334,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "networkaccess/authorizationExceptionRuleUpdateRanks",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks": "AuthorizationExceptionRuleUpdateRanks"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "networkaccess/authorizationGlobalExceptionRule",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
@@ -298,6 +354,14 @@ _utilities.register(
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
    "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank": "AuthorizationGlobalExceptionRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/authorizationGlobalExceptionRuleUpdateRanks",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks": "AuthorizationGlobalExceptionRuleUpdateRanks"
   }
  },
  {
@@ -322,6 +386,14 @@ _utilities.register(
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
    "ise:networkaccess/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank": "AuthorizationRuleUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/authorizationRuleUpdateRanks",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks": "AuthorizationRuleUpdateRanks"
   }
  },
  {
@@ -362,6 +434,14 @@ _utilities.register(
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
    "ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank": "PolicySetUpdateRank"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "networkaccess/policySetUpdateRanks",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/policySetUpdateRanks:PolicySetUpdateRanks": "PolicySetUpdateRanks"
   }
  },
  {

@@ -170,7 +170,7 @@ export interface GetDeviceResult {
     /**
      * Download environment data every X seconds
      */
-    readonly trustsecDownloadEnviromentDataEveryXSeconds: number;
+    readonly trustsecDownloadEnvironmentDataEveryXSeconds: number;
     /**
      * Download peer authorization policy every X seconds
      */

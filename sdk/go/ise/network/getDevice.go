@@ -119,7 +119,7 @@ type LookupDeviceResult struct {
 	// TrustSec device password
 	TrustsecDevicePassword string `pulumi:"trustsecDevicePassword"`
 	// Download environment data every X seconds
-	TrustsecDownloadEnviromentDataEveryXSeconds int `pulumi:"trustsecDownloadEnviromentDataEveryXSeconds"`
+	TrustsecDownloadEnvironmentDataEveryXSeconds int `pulumi:"trustsecDownloadEnvironmentDataEveryXSeconds"`
 	// Download peer authorization policy every X seconds
 	TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds int `pulumi:"trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"`
 	// Download SGACL lists every X seconds
@@ -333,8 +333,8 @@ func (o LookupDeviceResultOutput) TrustsecDevicePassword() pulumi.StringOutput {
 }
 
 // Download environment data every X seconds
-func (o LookupDeviceResultOutput) TrustsecDownloadEnviromentDataEveryXSeconds() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupDeviceResult) int { return v.TrustsecDownloadEnviromentDataEveryXSeconds }).(pulumi.IntOutput)
+func (o LookupDeviceResultOutput) TrustsecDownloadEnvironmentDataEveryXSeconds() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.TrustsecDownloadEnvironmentDataEveryXSeconds }).(pulumi.IntOutput)
 }
 
 // Download peer authorization policy every X seconds

@@ -459,15 +459,15 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * Download environment data every X seconds
      * 
      */
-    @Import(name="trustsecDownloadEnviromentDataEveryXSeconds")
-    private @Nullable Output<Integer> trustsecDownloadEnviromentDataEveryXSeconds;
+    @Import(name="trustsecDownloadEnvironmentDataEveryXSeconds")
+    private @Nullable Output<Integer> trustsecDownloadEnvironmentDataEveryXSeconds;
 
     /**
      * @return Download environment data every X seconds
      * 
      */
-    public Optional<Output<Integer>> trustsecDownloadEnviromentDataEveryXSeconds() {
-        return Optional.ofNullable(this.trustsecDownloadEnviromentDataEveryXSeconds);
+    public Optional<Output<Integer>> trustsecDownloadEnvironmentDataEveryXSeconds() {
+        return Optional.ofNullable(this.trustsecDownloadEnvironmentDataEveryXSeconds);
     }
 
     /**
@@ -682,7 +682,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         this.trustsecCoaSourceHost = $.trustsecCoaSourceHost;
         this.trustsecDeviceId = $.trustsecDeviceId;
         this.trustsecDevicePassword = $.trustsecDevicePassword;
-        this.trustsecDownloadEnviromentDataEveryXSeconds = $.trustsecDownloadEnviromentDataEveryXSeconds;
+        this.trustsecDownloadEnvironmentDataEveryXSeconds = $.trustsecDownloadEnvironmentDataEveryXSeconds;
         this.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds = $.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
         this.trustsecDownloadSgaclListsEveryXSeconds = $.trustsecDownloadSgaclListsEveryXSeconds;
         this.trustsecEnableModePassword = $.trustsecEnableModePassword;
@@ -1345,24 +1345,24 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param trustsecDownloadEnviromentDataEveryXSeconds Download environment data every X seconds
+         * @param trustsecDownloadEnvironmentDataEveryXSeconds Download environment data every X seconds
          * 
          * @return builder
          * 
          */
-        public Builder trustsecDownloadEnviromentDataEveryXSeconds(@Nullable Output<Integer> trustsecDownloadEnviromentDataEveryXSeconds) {
-            $.trustsecDownloadEnviromentDataEveryXSeconds = trustsecDownloadEnviromentDataEveryXSeconds;
+        public Builder trustsecDownloadEnvironmentDataEveryXSeconds(@Nullable Output<Integer> trustsecDownloadEnvironmentDataEveryXSeconds) {
+            $.trustsecDownloadEnvironmentDataEveryXSeconds = trustsecDownloadEnvironmentDataEveryXSeconds;
             return this;
         }
 
         /**
-         * @param trustsecDownloadEnviromentDataEveryXSeconds Download environment data every X seconds
+         * @param trustsecDownloadEnvironmentDataEveryXSeconds Download environment data every X seconds
          * 
          * @return builder
          * 
          */
-        public Builder trustsecDownloadEnviromentDataEveryXSeconds(Integer trustsecDownloadEnviromentDataEveryXSeconds) {
-            return trustsecDownloadEnviromentDataEveryXSeconds(Output.of(trustsecDownloadEnviromentDataEveryXSeconds));
+        public Builder trustsecDownloadEnvironmentDataEveryXSeconds(Integer trustsecDownloadEnvironmentDataEveryXSeconds) {
+            return trustsecDownloadEnvironmentDataEveryXSeconds(Output.of(trustsecDownloadEnvironmentDataEveryXSeconds));
         }
 
         /**

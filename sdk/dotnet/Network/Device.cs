@@ -63,7 +63,7 @@ namespace Pulumi.Ise.Network
     ///         TrustsecExecModePassword = "cisco123",
     ///         TrustsecExecModeUsername = "user456",
     ///         TrustsecIncludeWhenDeployingSgtUpdates = true,
-    ///         TrustsecDownloadEnviromentDataEveryXSeconds = 1000,
+    ///         TrustsecDownloadEnvironmentDataEveryXSeconds = 1000,
     ///         TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds = 1000,
     ///         TrustsecDownloadSgaclListsEveryXSeconds = 1000,
     ///         TrustsecOtherSgaDevicesToTrustThisDevice = true,
@@ -261,8 +261,8 @@ namespace Pulumi.Ise.Network
         /// <summary>
         /// Download environment data every X seconds
         /// </summary>
-        [Output("trustsecDownloadEnviromentDataEveryXSeconds")]
-        public Output<int?> TrustsecDownloadEnviromentDataEveryXSeconds { get; private set; } = null!;
+        [Output("trustsecDownloadEnvironmentDataEveryXSeconds")]
+        public Output<int?> TrustsecDownloadEnvironmentDataEveryXSeconds { get; private set; } = null!;
 
         /// <summary>
         /// Download peer authorization policy every X seconds
@@ -571,8 +571,8 @@ namespace Pulumi.Ise.Network
         /// <summary>
         /// Download environment data every X seconds
         /// </summary>
-        [Input("trustsecDownloadEnviromentDataEveryXSeconds")]
-        public Input<int>? TrustsecDownloadEnviromentDataEveryXSeconds { get; set; }
+        [Input("trustsecDownloadEnvironmentDataEveryXSeconds")]
+        public Input<int>? TrustsecDownloadEnvironmentDataEveryXSeconds { get; set; }
 
         /// <summary>
         /// Download peer authorization policy every X seconds
@@ -843,8 +843,8 @@ namespace Pulumi.Ise.Network
         /// <summary>
         /// Download environment data every X seconds
         /// </summary>
-        [Input("trustsecDownloadEnviromentDataEveryXSeconds")]
-        public Input<int>? TrustsecDownloadEnviromentDataEveryXSeconds { get; set; }
+        [Input("trustsecDownloadEnvironmentDataEveryXSeconds")]
+        public Input<int>? TrustsecDownloadEnvironmentDataEveryXSeconds { get; set; }
 
         /// <summary>
         /// Download peer authorization policy every X seconds

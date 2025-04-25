@@ -20,6 +20,11 @@ export type AuthenticationRuleUpdateRank = import("./authenticationRuleUpdateRan
 export const AuthenticationRuleUpdateRank: typeof import("./authenticationRuleUpdateRank").AuthenticationRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthenticationRuleUpdateRank"], () => require("./authenticationRuleUpdateRank"));
 
+export { AuthenticationRuleUpdateRanksArgs, AuthenticationRuleUpdateRanksState } from "./authenticationRuleUpdateRanks";
+export type AuthenticationRuleUpdateRanks = import("./authenticationRuleUpdateRanks").AuthenticationRuleUpdateRanks;
+export const AuthenticationRuleUpdateRanks: typeof import("./authenticationRuleUpdateRanks").AuthenticationRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthenticationRuleUpdateRanks"], () => require("./authenticationRuleUpdateRanks"));
+
 export { AuthorizationExceptionRuleArgs, AuthorizationExceptionRuleState } from "./authorizationExceptionRule";
 export type AuthorizationExceptionRule = import("./authorizationExceptionRule").AuthorizationExceptionRule;
 export const AuthorizationExceptionRule: typeof import("./authorizationExceptionRule").AuthorizationExceptionRule = null as any;
@@ -30,6 +35,11 @@ export type AuthorizationExceptionRuleUpdateRank = import("./authorizationExcept
 export const AuthorizationExceptionRuleUpdateRank: typeof import("./authorizationExceptionRuleUpdateRank").AuthorizationExceptionRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthorizationExceptionRuleUpdateRank"], () => require("./authorizationExceptionRuleUpdateRank"));
 
+export { AuthorizationExceptionRuleUpdateRanksArgs, AuthorizationExceptionRuleUpdateRanksState } from "./authorizationExceptionRuleUpdateRanks";
+export type AuthorizationExceptionRuleUpdateRanks = import("./authorizationExceptionRuleUpdateRanks").AuthorizationExceptionRuleUpdateRanks;
+export const AuthorizationExceptionRuleUpdateRanks: typeof import("./authorizationExceptionRuleUpdateRanks").AuthorizationExceptionRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthorizationExceptionRuleUpdateRanks"], () => require("./authorizationExceptionRuleUpdateRanks"));
+
 export { AuthorizationGlobalExceptionRuleArgs, AuthorizationGlobalExceptionRuleState } from "./authorizationGlobalExceptionRule";
 export type AuthorizationGlobalExceptionRule = import("./authorizationGlobalExceptionRule").AuthorizationGlobalExceptionRule;
 export const AuthorizationGlobalExceptionRule: typeof import("./authorizationGlobalExceptionRule").AuthorizationGlobalExceptionRule = null as any;
@@ -39,6 +49,11 @@ export { AuthorizationGlobalExceptionRuleUpdateRankArgs, AuthorizationGlobalExce
 export type AuthorizationGlobalExceptionRuleUpdateRank = import("./authorizationGlobalExceptionRuleUpdateRank").AuthorizationGlobalExceptionRuleUpdateRank;
 export const AuthorizationGlobalExceptionRuleUpdateRank: typeof import("./authorizationGlobalExceptionRuleUpdateRank").AuthorizationGlobalExceptionRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthorizationGlobalExceptionRuleUpdateRank"], () => require("./authorizationGlobalExceptionRuleUpdateRank"));
+
+export { AuthorizationGlobalExceptionRuleUpdateRanksArgs, AuthorizationGlobalExceptionRuleUpdateRanksState } from "./authorizationGlobalExceptionRuleUpdateRanks";
+export type AuthorizationGlobalExceptionRuleUpdateRanks = import("./authorizationGlobalExceptionRuleUpdateRanks").AuthorizationGlobalExceptionRuleUpdateRanks;
+export const AuthorizationGlobalExceptionRuleUpdateRanks: typeof import("./authorizationGlobalExceptionRuleUpdateRanks").AuthorizationGlobalExceptionRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthorizationGlobalExceptionRuleUpdateRanks"], () => require("./authorizationGlobalExceptionRuleUpdateRanks"));
 
 export { AuthorizationProfileArgs, AuthorizationProfileState } from "./authorizationProfile";
 export type AuthorizationProfile = import("./authorizationProfile").AuthorizationProfile;
@@ -54,6 +69,11 @@ export { AuthorizationRuleUpdateRankArgs, AuthorizationRuleUpdateRankState } fro
 export type AuthorizationRuleUpdateRank = import("./authorizationRuleUpdateRank").AuthorizationRuleUpdateRank;
 export const AuthorizationRuleUpdateRank: typeof import("./authorizationRuleUpdateRank").AuthorizationRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthorizationRuleUpdateRank"], () => require("./authorizationRuleUpdateRank"));
+
+export { AuthorizationRuleUpdateRanksArgs, AuthorizationRuleUpdateRanksState } from "./authorizationRuleUpdateRanks";
+export type AuthorizationRuleUpdateRanks = import("./authorizationRuleUpdateRanks").AuthorizationRuleUpdateRanks;
+export const AuthorizationRuleUpdateRanks: typeof import("./authorizationRuleUpdateRanks").AuthorizationRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthorizationRuleUpdateRanks"], () => require("./authorizationRuleUpdateRanks"));
 
 export { ConditionArgs, ConditionState } from "./condition";
 export type Condition = import("./condition").Condition;
@@ -135,6 +155,11 @@ export type PolicySetUpdateRank = import("./policySetUpdateRank").PolicySetUpdat
 export const PolicySetUpdateRank: typeof import("./policySetUpdateRank").PolicySetUpdateRank = null as any;
 utilities.lazyLoad(exports, ["PolicySetUpdateRank"], () => require("./policySetUpdateRank"));
 
+export { PolicySetUpdateRanksArgs, PolicySetUpdateRanksState } from "./policySetUpdateRanks";
+export type PolicySetUpdateRanks = import("./policySetUpdateRanks").PolicySetUpdateRanks;
+export const PolicySetUpdateRanks: typeof import("./policySetUpdateRanks").PolicySetUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["PolicySetUpdateRanks"], () => require("./policySetUpdateRanks"));
+
 export { TimeAndDateConditionArgs, TimeAndDateConditionState } from "./timeAndDateCondition";
 export type TimeAndDateCondition = import("./timeAndDateCondition").TimeAndDateCondition;
 export const TimeAndDateCondition: typeof import("./timeAndDateCondition").TimeAndDateCondition = null as any;
@@ -151,20 +176,28 @@ const _module = {
                 return new AuthenticationRule(name, <any>undefined, { urn })
             case "ise:networkaccess/authenticationRuleUpdateRank:AuthenticationRuleUpdateRank":
                 return new AuthenticationRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:networkaccess/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks":
+                return new AuthenticationRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationExceptionRule:AuthorizationExceptionRule":
                 return new AuthorizationExceptionRule(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank":
                 return new AuthorizationExceptionRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:networkaccess/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks":
+                return new AuthorizationExceptionRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule":
                 return new AuthorizationGlobalExceptionRule(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank":
                 return new AuthorizationGlobalExceptionRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks":
+                return new AuthorizationGlobalExceptionRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationProfile:AuthorizationProfile":
                 return new AuthorizationProfile(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationRule:AuthorizationRule":
                 return new AuthorizationRule(name, <any>undefined, { urn })
             case "ise:networkaccess/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank":
                 return new AuthorizationRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:networkaccess/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks":
+                return new AuthorizationRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:networkaccess/condition:Condition":
                 return new Condition(name, <any>undefined, { urn })
             case "ise:networkaccess/dictionary:Dictionary":
@@ -175,6 +208,8 @@ const _module = {
                 return new PolicySet(name, <any>undefined, { urn })
             case "ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank":
                 return new PolicySetUpdateRank(name, <any>undefined, { urn })
+            case "ise:networkaccess/policySetUpdateRanks:PolicySetUpdateRanks":
+                return new PolicySetUpdateRanks(name, <any>undefined, { urn })
             case "ise:networkaccess/timeAndDateCondition:TimeAndDateCondition":
                 return new TimeAndDateCondition(name, <any>undefined, { urn })
             default:
@@ -185,16 +220,21 @@ const _module = {
 pulumi.runtime.registerResourceModule("ise", "networkaccess/allowedProtocols", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authenticationRule", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authenticationRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "networkaccess/authenticationRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationExceptionRule", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationExceptionRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationExceptionRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationGlobalExceptionRule", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationGlobalExceptionRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationGlobalExceptionRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationProfile", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationRule", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/condition", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/dictionary", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/downloadableAcl", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/policySet", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/policySetUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "networkaccess/policySetUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/timeAndDateCondition", _module)

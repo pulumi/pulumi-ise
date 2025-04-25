@@ -252,7 +252,7 @@ namespace Pulumi.Ise.Network
         /// <summary>
         /// Download environment data every X seconds
         /// </summary>
-        public readonly int TrustsecDownloadEnviromentDataEveryXSeconds;
+        public readonly int TrustsecDownloadEnvironmentDataEveryXSeconds;
         /// <summary>
         /// Download peer authorization policy every X seconds
         /// </summary>
@@ -364,7 +364,7 @@ namespace Pulumi.Ise.Network
 
             string trustsecDevicePassword,
 
-            int trustsecDownloadEnviromentDataEveryXSeconds,
+            int trustsecDownloadEnvironmentDataEveryXSeconds,
 
             int trustsecDownloadPeerAuthorizationPolicyEveryXSeconds,
 
@@ -420,7 +420,7 @@ namespace Pulumi.Ise.Network
             TrustsecCoaSourceHost = trustsecCoaSourceHost;
             TrustsecDeviceId = trustsecDeviceId;
             TrustsecDevicePassword = trustsecDevicePassword;
-            TrustsecDownloadEnviromentDataEveryXSeconds = trustsecDownloadEnviromentDataEveryXSeconds;
+            TrustsecDownloadEnvironmentDataEveryXSeconds = trustsecDownloadEnvironmentDataEveryXSeconds;
             TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds = trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
             TrustsecDownloadSgaclListsEveryXSeconds = trustsecDownloadSgaclListsEveryXSeconds;
             TrustsecEnableModePassword = trustsecEnableModePassword;

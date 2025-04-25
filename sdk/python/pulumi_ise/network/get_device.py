@@ -28,7 +28,7 @@ class GetDeviceResult:
     """
     A collection of values returned by getDevice.
     """
-    def __init__(__self__, authentication_dtls_required=None, authentication_enable_key_wrap=None, authentication_enable_multi_secret=None, authentication_encryption_key=None, authentication_encryption_key_format=None, authentication_message_authenticator_code_key=None, authentication_network_protocol=None, authentication_radius_shared_secret=None, authentication_second_radius_shared_secret=None, coa_port=None, description=None, dtls_dns_name=None, id=None, ips=None, model_name=None, name=None, network_device_groups=None, profile_name=None, snmp_link_trap_query=None, snmp_mac_trap_query=None, snmp_originating_policy_service_node=None, snmp_polling_interval=None, snmp_ro_community=None, snmp_version=None, software_version=None, tacacs_connect_mode_options=None, tacacs_shared_secret=None, trustsec_coa_source_host=None, trustsec_device_id=None, trustsec_device_password=None, trustsec_download_enviroment_data_every_x_seconds=None, trustsec_download_peer_authorization_policy_every_x_seconds=None, trustsec_download_sgacl_lists_every_x_seconds=None, trustsec_enable_mode_password=None, trustsec_exec_mode_password=None, trustsec_exec_mode_username=None, trustsec_include_when_deploying_sgt_updates=None, trustsec_other_sga_devices_to_trust_this_device=None, trustsec_re_authentication_every_x_seconds=None, trustsec_rest_api_password=None, trustsec_rest_api_username=None, trustsec_send_configuration_to_device=None, trustsec_send_configuration_to_device_using=None):
+    def __init__(__self__, authentication_dtls_required=None, authentication_enable_key_wrap=None, authentication_enable_multi_secret=None, authentication_encryption_key=None, authentication_encryption_key_format=None, authentication_message_authenticator_code_key=None, authentication_network_protocol=None, authentication_radius_shared_secret=None, authentication_second_radius_shared_secret=None, coa_port=None, description=None, dtls_dns_name=None, id=None, ips=None, model_name=None, name=None, network_device_groups=None, profile_name=None, snmp_link_trap_query=None, snmp_mac_trap_query=None, snmp_originating_policy_service_node=None, snmp_polling_interval=None, snmp_ro_community=None, snmp_version=None, software_version=None, tacacs_connect_mode_options=None, tacacs_shared_secret=None, trustsec_coa_source_host=None, trustsec_device_id=None, trustsec_device_password=None, trustsec_download_environment_data_every_x_seconds=None, trustsec_download_peer_authorization_policy_every_x_seconds=None, trustsec_download_sgacl_lists_every_x_seconds=None, trustsec_enable_mode_password=None, trustsec_exec_mode_password=None, trustsec_exec_mode_username=None, trustsec_include_when_deploying_sgt_updates=None, trustsec_other_sga_devices_to_trust_this_device=None, trustsec_re_authentication_every_x_seconds=None, trustsec_rest_api_password=None, trustsec_rest_api_username=None, trustsec_send_configuration_to_device=None, trustsec_send_configuration_to_device_using=None):
         if authentication_dtls_required and not isinstance(authentication_dtls_required, bool):
             raise TypeError("Expected argument 'authentication_dtls_required' to be a bool")
         pulumi.set(__self__, "authentication_dtls_required", authentication_dtls_required)
@@ -119,9 +119,9 @@ class GetDeviceResult:
         if trustsec_device_password and not isinstance(trustsec_device_password, str):
             raise TypeError("Expected argument 'trustsec_device_password' to be a str")
         pulumi.set(__self__, "trustsec_device_password", trustsec_device_password)
-        if trustsec_download_enviroment_data_every_x_seconds and not isinstance(trustsec_download_enviroment_data_every_x_seconds, int):
-            raise TypeError("Expected argument 'trustsec_download_enviroment_data_every_x_seconds' to be a int")
-        pulumi.set(__self__, "trustsec_download_enviroment_data_every_x_seconds", trustsec_download_enviroment_data_every_x_seconds)
+        if trustsec_download_environment_data_every_x_seconds and not isinstance(trustsec_download_environment_data_every_x_seconds, int):
+            raise TypeError("Expected argument 'trustsec_download_environment_data_every_x_seconds' to be a int")
+        pulumi.set(__self__, "trustsec_download_environment_data_every_x_seconds", trustsec_download_environment_data_every_x_seconds)
         if trustsec_download_peer_authorization_policy_every_x_seconds and not isinstance(trustsec_download_peer_authorization_policy_every_x_seconds, int):
             raise TypeError("Expected argument 'trustsec_download_peer_authorization_policy_every_x_seconds' to be a int")
         pulumi.set(__self__, "trustsec_download_peer_authorization_policy_every_x_seconds", trustsec_download_peer_authorization_policy_every_x_seconds)
@@ -400,12 +400,12 @@ class GetDeviceResult:
         return pulumi.get(self, "trustsec_device_password")
 
     @property
-    @pulumi.getter(name="trustsecDownloadEnviromentDataEveryXSeconds")
-    def trustsec_download_enviroment_data_every_x_seconds(self) -> builtins.int:
+    @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
+    def trustsec_download_environment_data_every_x_seconds(self) -> builtins.int:
         """
         Download environment data every X seconds
         """
-        return pulumi.get(self, "trustsec_download_enviroment_data_every_x_seconds")
+        return pulumi.get(self, "trustsec_download_environment_data_every_x_seconds")
 
     @property
     @pulumi.getter(name="trustsecDownloadPeerAuthorizationPolicyEveryXSeconds")
@@ -540,7 +540,7 @@ class AwaitableGetDeviceResult(GetDeviceResult):
             trustsec_coa_source_host=self.trustsec_coa_source_host,
             trustsec_device_id=self.trustsec_device_id,
             trustsec_device_password=self.trustsec_device_password,
-            trustsec_download_enviroment_data_every_x_seconds=self.trustsec_download_enviroment_data_every_x_seconds,
+            trustsec_download_environment_data_every_x_seconds=self.trustsec_download_environment_data_every_x_seconds,
             trustsec_download_peer_authorization_policy_every_x_seconds=self.trustsec_download_peer_authorization_policy_every_x_seconds,
             trustsec_download_sgacl_lists_every_x_seconds=self.trustsec_download_sgacl_lists_every_x_seconds,
             trustsec_enable_mode_password=self.trustsec_enable_mode_password,
@@ -611,7 +611,7 @@ def get_device(id: Optional[builtins.str] = None,
         trustsec_coa_source_host=pulumi.get(__ret__, 'trustsec_coa_source_host'),
         trustsec_device_id=pulumi.get(__ret__, 'trustsec_device_id'),
         trustsec_device_password=pulumi.get(__ret__, 'trustsec_device_password'),
-        trustsec_download_enviroment_data_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_enviroment_data_every_x_seconds'),
+        trustsec_download_environment_data_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_environment_data_every_x_seconds'),
         trustsec_download_peer_authorization_policy_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_peer_authorization_policy_every_x_seconds'),
         trustsec_download_sgacl_lists_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_sgacl_lists_every_x_seconds'),
         trustsec_enable_mode_password=pulumi.get(__ret__, 'trustsec_enable_mode_password'),
@@ -679,7 +679,7 @@ def get_device_output(id: Optional[pulumi.Input[Optional[builtins.str]]] = None,
         trustsec_coa_source_host=pulumi.get(__response__, 'trustsec_coa_source_host'),
         trustsec_device_id=pulumi.get(__response__, 'trustsec_device_id'),
         trustsec_device_password=pulumi.get(__response__, 'trustsec_device_password'),
-        trustsec_download_enviroment_data_every_x_seconds=pulumi.get(__response__, 'trustsec_download_enviroment_data_every_x_seconds'),
+        trustsec_download_environment_data_every_x_seconds=pulumi.get(__response__, 'trustsec_download_environment_data_every_x_seconds'),
         trustsec_download_peer_authorization_policy_every_x_seconds=pulumi.get(__response__, 'trustsec_download_peer_authorization_policy_every_x_seconds'),
         trustsec_download_sgacl_lists_every_x_seconds=pulumi.get(__response__, 'trustsec_download_sgacl_lists_every_x_seconds'),
         trustsec_enable_mode_password=pulumi.get(__response__, 'trustsec_enable_mode_password'),

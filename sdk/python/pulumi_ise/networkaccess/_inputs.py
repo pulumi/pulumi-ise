@@ -20,20 +20,28 @@ __all__ = [
     'AuthenticationRuleChildrenArgsDict',
     'AuthenticationRuleChildrenChildrenArgs',
     'AuthenticationRuleChildrenChildrenArgsDict',
+    'AuthenticationRuleUpdateRanksRuleArgs',
+    'AuthenticationRuleUpdateRanksRuleArgsDict',
     'AuthorizationExceptionRuleChildrenArgs',
     'AuthorizationExceptionRuleChildrenArgsDict',
     'AuthorizationExceptionRuleChildrenChildrenArgs',
     'AuthorizationExceptionRuleChildrenChildrenArgsDict',
+    'AuthorizationExceptionRuleUpdateRanksRuleArgs',
+    'AuthorizationExceptionRuleUpdateRanksRuleArgsDict',
     'AuthorizationGlobalExceptionRuleChildrenArgs',
     'AuthorizationGlobalExceptionRuleChildrenArgsDict',
     'AuthorizationGlobalExceptionRuleChildrenChildrenArgs',
     'AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict',
+    'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs',
+    'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict',
     'AuthorizationProfileAdvancedAttributeArgs',
     'AuthorizationProfileAdvancedAttributeArgsDict',
     'AuthorizationRuleChildrenArgs',
     'AuthorizationRuleChildrenArgsDict',
     'AuthorizationRuleChildrenChildrenArgs',
     'AuthorizationRuleChildrenChildrenArgsDict',
+    'AuthorizationRuleUpdateRanksRuleArgs',
+    'AuthorizationRuleUpdateRanksRuleArgsDict',
     'ConditionChildrenArgs',
     'ConditionChildrenArgsDict',
     'ConditionChildrenChildrenArgs',
@@ -42,6 +50,8 @@ __all__ = [
     'PolicySetChildrenArgsDict',
     'PolicySetChildrenChildrenArgs',
     'PolicySetChildrenChildrenArgsDict',
+    'PolicySetUpdateRanksPolicyArgs',
+    'PolicySetUpdateRanksPolicyArgsDict',
 ]
 
 MYPY = False
@@ -421,6 +431,58 @@ class AuthenticationRuleChildrenChildrenArgs:
 
 
 if not MYPY:
+    class AuthenticationRuleUpdateRanksRuleArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Authentication rule ID
+        """
+        rank: NotRequired[pulumi.Input[builtins.int]]
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+elif False:
+    AuthenticationRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class AuthenticationRuleUpdateRanksRuleArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[builtins.str]] = None,
+                 rank: Optional[pulumi.Input[builtins.int]] = None):
+        """
+        :param pulumi.Input[builtins.str] id: Authentication rule ID
+        :param pulumi.Input[builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Authentication rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @rank.setter
+    def rank(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "rank", value)
+
+
+if not MYPY:
     class AuthorizationExceptionRuleChildrenArgsDict(TypedDict):
         condition_type: pulumi.Input[builtins.str]
         """
@@ -795,6 +857,58 @@ class AuthorizationExceptionRuleChildrenChildrenArgs:
 
 
 if not MYPY:
+    class AuthorizationExceptionRuleUpdateRanksRuleArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Authorization rule ID
+        """
+        rank: NotRequired[pulumi.Input[builtins.int]]
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+elif False:
+    AuthorizationExceptionRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class AuthorizationExceptionRuleUpdateRanksRuleArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[builtins.str]] = None,
+                 rank: Optional[pulumi.Input[builtins.int]] = None):
+        """
+        :param pulumi.Input[builtins.str] id: Authorization rule ID
+        :param pulumi.Input[builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @rank.setter
+    def rank(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "rank", value)
+
+
+if not MYPY:
     class AuthorizationGlobalExceptionRuleChildrenArgsDict(TypedDict):
         condition_type: pulumi.Input[builtins.str]
         """
@@ -1166,6 +1280,58 @@ class AuthorizationGlobalExceptionRuleChildrenChildrenArgs:
     @operator.setter
     def operator(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "operator", value)
+
+
+if not MYPY:
+    class AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Authorization rule ID
+        """
+        rank: NotRequired[pulumi.Input[builtins.int]]
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+elif False:
+    AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[builtins.str]] = None,
+                 rank: Optional[pulumi.Input[builtins.int]] = None):
+        """
+        :param pulumi.Input[builtins.str] id: Authorization rule ID
+        :param pulumi.Input[builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @rank.setter
+    def rank(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "rank", value)
 
 
 if not MYPY:
@@ -1678,6 +1844,58 @@ class AuthorizationRuleChildrenChildrenArgs:
 
 
 if not MYPY:
+    class AuthorizationRuleUpdateRanksRuleArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Authorization rule ID
+        """
+        rank: NotRequired[pulumi.Input[builtins.int]]
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+elif False:
+    AuthorizationRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class AuthorizationRuleUpdateRanksRuleArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[builtins.str]] = None,
+                 rank: Optional[pulumi.Input[builtins.int]] = None):
+        """
+        :param pulumi.Input[builtins.str] id: Authorization rule ID
+        :param pulumi.Input[builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @rank.setter
+    def rank(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "rank", value)
+
+
+if not MYPY:
     class ConditionChildrenArgsDict(TypedDict):
         condition_type: pulumi.Input[builtins.str]
         """
@@ -1718,7 +1936,7 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[builtins.str]]
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         operator: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -1753,7 +1971,7 @@ class ConditionChildrenArgs:
         :param pulumi.Input[builtins.str] dictionary_value: Dictionary value
         :param pulumi.Input[builtins.str] id: UUID for condition
         :param pulumi.Input[builtins.bool] is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[builtins.str] name: Condition name
+        :param pulumi.Input[builtins.str] name: Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         :param pulumi.Input[builtins.str] operator: Equality operator
                  - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
@@ -1892,7 +2110,7 @@ class ConditionChildrenArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         return pulumi.get(self, "name")
 
@@ -1951,7 +2169,7 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[builtins.str]]
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         operator: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -1984,7 +2202,7 @@ class ConditionChildrenChildrenArgs:
         :param pulumi.Input[builtins.str] dictionary_value: Dictionary value
         :param pulumi.Input[builtins.str] id: UUID for condition
         :param pulumi.Input[builtins.bool] is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[builtins.str] name: Condition name
+        :param pulumi.Input[builtins.str] name: Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         :param pulumi.Input[builtins.str] operator: Equality operator
                  - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
@@ -2109,7 +2327,7 @@ class ConditionChildrenChildrenArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         return pulumi.get(self, "name")
 
@@ -2503,5 +2721,56 @@ class PolicySetChildrenChildrenArgs:
     @operator.setter
     def operator(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "operator", value)
+
+
+if not MYPY:
+    class PolicySetUpdateRanksPolicyArgsDict(TypedDict):
+        rank: pulumi.Input[builtins.int]
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        id: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Policy set ID
+        """
+elif False:
+    PolicySetUpdateRanksPolicyArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicySetUpdateRanksPolicyArgs:
+    def __init__(__self__, *,
+                 rank: pulumi.Input[builtins.int],
+                 id: Optional[pulumi.Input[builtins.str]] = None):
+        """
+        :param pulumi.Input[builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        :param pulumi.Input[builtins.str] id: Policy set ID
+        """
+        pulumi.set(__self__, "rank", rank)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> pulumi.Input[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @rank.setter
+    def rank(self, value: pulumi.Input[builtins.int]):
+        pulumi.set(self, "rank", value)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Policy set ID
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "id", value)
 
 
