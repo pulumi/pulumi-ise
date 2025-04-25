@@ -177,6 +177,19 @@
                 "conditionType"
             ]
         },
+        "ise:deviceadmin/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authentication rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
+        },
         "ise:deviceadmin/AuthorizationExceptionRuleChildren:AuthorizationExceptionRuleChildren": {
             "properties": {
                 "attributeName": {
@@ -263,6 +276,19 @@
             "required": [
                 "conditionType"
             ]
+        },
+        "ise:deviceadmin/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authorization rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
         },
         "ise:deviceadmin/AuthorizationGlobalExceptionRuleChildren:AuthorizationGlobalExceptionRuleChildren": {
             "properties": {
@@ -351,6 +377,19 @@
                 "conditionType"
             ]
         },
+        "ise:deviceadmin/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authorization rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
+        },
         "ise:deviceadmin/AuthorizationRuleChildren:AuthorizationRuleChildren": {
             "properties": {
                 "attributeName": {
@@ -437,6 +476,19 @@
             "required": [
                 "conditionType"
             ]
+        },
+        "ise:deviceadmin/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authorization rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
         },
         "ise:deviceadmin/ConditionChildren:ConditionChildren": {
             "properties": {
@@ -626,6 +678,22 @@
             "type": "object",
             "required": [
                 "conditionType"
+            ]
+        },
+        "ise:deviceadmin/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "rank"
             ]
         },
         "ise:deviceadmin/TacacsCommandSetCommand:TacacsCommandSetCommand": {
@@ -1809,6 +1877,19 @@
                 "conditionType"
             ]
         },
+        "ise:networkaccess/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authentication rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
+        },
         "ise:networkaccess/AuthorizationExceptionRuleChildren:AuthorizationExceptionRuleChildren": {
             "properties": {
                 "attributeName": {
@@ -1896,6 +1977,19 @@
                 "conditionType"
             ]
         },
+        "ise:networkaccess/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authorization rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
+        },
         "ise:networkaccess/AuthorizationGlobalExceptionRuleChildren:AuthorizationGlobalExceptionRuleChildren": {
             "properties": {
                 "attributeName": {
@@ -1982,6 +2076,19 @@
             "required": [
                 "conditionType"
             ]
+        },
+        "ise:networkaccess/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authorization rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
         },
         "ise:networkaccess/AuthorizationProfileAdvancedAttribute:AuthorizationProfileAdvancedAttribute": {
             "properties": {
@@ -2099,6 +2206,19 @@
                 "conditionType"
             ]
         },
+        "ise:networkaccess/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Authorization rule ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object"
+        },
         "ise:networkaccess/ConditionChildren:ConditionChildren": {
             "properties": {
                 "attributeName": {
@@ -2142,7 +2262,7 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "Condition name\n"
+                    "description": "Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.\n"
                 },
                 "operator": {
                     "type": "string",
@@ -2190,7 +2310,7 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "Condition name\n"
+                    "description": "Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.\n"
                 },
                 "operator": {
                     "type": "string",
@@ -2287,6 +2407,22 @@
             "type": "object",
             "required": [
                 "conditionType"
+            ]
+        },
+        "ise:networkaccess/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy": {
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rank": {
+                    "type": "integer",
+                    "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "rank"
             ]
         },
         "ise:networkaccess/getAuthenticationRuleChildren:getAuthenticationRuleChildren": {
@@ -2822,7 +2958,7 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "Condition name\n"
+                    "description": "Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.\n"
                 },
                 "operator": {
                     "type": "string",
@@ -2885,7 +3021,7 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "Condition name\n"
+                    "description": "Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.\n"
                 },
                 "operator": {
                     "type": "string",
@@ -3507,6 +3643,55 @@
                 "type": "object"
             }
         },
+        "ise:deviceadmin/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in device admin authentication rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authentication_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthenticationRuleUpdateRanks(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules: [{\n        id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        rank: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthenticationRuleUpdateRanks(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules=[{\n        \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        \"rank\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthenticationRuleUpdateRanks(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Rules = new[]\n        {\n            new Ise.DeviceAdmin.Inputs.AuthenticationRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthenticationRuleUpdateRanks(ctx, \"example\", \u0026deviceadmin.AuthenticationRuleUpdateRanksArgs{\n\t\t\tPolicySetId: pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tRules: deviceadmin.AuthenticationRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026deviceadmin.AuthenticationRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthenticationRuleUpdateRanks;\nimport com.pulumi.ise.deviceadmin.AuthenticationRuleUpdateRanksArgs;\nimport com.pulumi.ise.deviceadmin.inputs.AuthenticationRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthenticationRuleUpdateRanks(\"example\", AuthenticationRuleUpdateRanksArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .rules(AuthenticationRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthenticationRuleUpdateRanks\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "required": [
+                "policySetId"
+            ],
+            "inputProperties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "policySetId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthenticationRuleUpdateRanks resources.\n",
+                "properties": {
+                    "policySetId": {
+                        "type": "string",
+                        "description": "Policy set ID\n"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:deviceadmin/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule": {
             "description": "This resource can manage a Device Admin Authorization Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationExceptionRule(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    name: \"Rule1\",\n    \"default\": false,\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    commandSets: [\"DenyAllCommands\"],\n    profile: \"Default Shell Profile\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationExceptionRule(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    name=\"Rule1\",\n    default=False,\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    command_sets=[\"DenyAllCommands\"],\n    profile=\"Default Shell Profile\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationExceptionRule(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Name = \"Rule1\",\n        Default = false,\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        CommandSets = new[]\n        {\n            \"DenyAllCommands\",\n        },\n        Profile = \"Default Shell Profile\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationExceptionRule(ctx, \"example\", \u0026deviceadmin.AuthorizationExceptionRuleArgs{\n\t\t\tPolicySetId:             pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tDefault:                 pulumi.Bool(false),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tCommandSets: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"DenyAllCommands\"),\n\t\t\t},\n\t\t\tProfile: pulumi.String(\"Default Shell Profile\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationExceptionRule;\nimport com.pulumi.ise.deviceadmin.AuthorizationExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationExceptionRule(\"example\", AuthorizationExceptionRuleArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .name(\"Rule1\")\n            .default_(false)\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .commandSets(\"DenyAllCommands\")\n            .profile(\"Default Shell Profile\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationExceptionRule\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      name: Rule1\n      default: false\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      commandSets:\n        - DenyAllCommands\n      profile: Default Shell Profile\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470,76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -3796,6 +3981,55 @@
                 "type": "object"
             }
         },
+        "ise:deviceadmin/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in device admin Authorization exception rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authorization_exception_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationExceptionRuleUpdateRanks(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules: [{\n        id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        rank: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationExceptionRuleUpdateRanks(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules=[{\n        \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        \"rank\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationExceptionRuleUpdateRanks(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Rules = new[]\n        {\n            new Ise.DeviceAdmin.Inputs.AuthorizationExceptionRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationExceptionRuleUpdateRanks(ctx, \"example\", \u0026deviceadmin.AuthorizationExceptionRuleUpdateRanksArgs{\n\t\t\tPolicySetId: pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tRules: deviceadmin.AuthorizationExceptionRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026deviceadmin.AuthorizationExceptionRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationExceptionRuleUpdateRanks;\nimport com.pulumi.ise.deviceadmin.AuthorizationExceptionRuleUpdateRanksArgs;\nimport com.pulumi.ise.deviceadmin.inputs.AuthorizationExceptionRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationExceptionRuleUpdateRanks(\"example\", AuthorizationExceptionRuleUpdateRanksArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .rules(AuthorizationExceptionRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationExceptionRuleUpdateRanks\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "required": [
+                "policySetId"
+            ],
+            "inputProperties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "policySetId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthorizationExceptionRuleUpdateRanks resources.\n",
+                "properties": {
+                    "policySetId": {
+                        "type": "string",
+                        "description": "Policy set ID\n"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:deviceadmin/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": {
             "description": "This resource can manage a Device Admin Authorization Global Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationGlobalExceptionRule(\"example\", {\n    name: \"Rule1\",\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    commandSets: [\"DenyAllCommands\"],\n    profile: \"Default Shell Profile\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationGlobalExceptionRule(\"example\",\n    name=\"Rule1\",\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    command_sets=[\"DenyAllCommands\"],\n    profile=\"Default Shell Profile\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationGlobalExceptionRule(\"example\", new()\n    {\n        Name = \"Rule1\",\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        CommandSets = new[]\n        {\n            \"DenyAllCommands\",\n        },\n        Profile = \"Default Shell Profile\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationGlobalExceptionRule(ctx, \"example\", \u0026deviceadmin.AuthorizationGlobalExceptionRuleArgs{\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tCommandSets: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"DenyAllCommands\"),\n\t\t\t},\n\t\t\tProfile: pulumi.String(\"Default Shell Profile\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRule;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRule(\"example\", AuthorizationGlobalExceptionRuleArgs.builder()\n            .name(\"Rule1\")\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .commandSets(\"DenyAllCommands\")\n            .profile(\"Default Shell Profile\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationGlobalExceptionRule\n    properties:\n      name: Rule1\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      commandSets:\n        - DenyAllCommands\n      profile: Default Shell Profile\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -4038,6 +4272,37 @@
                     "ruleId": {
                         "type": "string",
                         "description": "Authorization global exception rule ID\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in device admin authorization global exception rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authorization_global_exception_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", {rules: [{\n    id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n    rank: 0,\n}]});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", rules=[{\n    \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n    \"rank\": 0,\n}])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", new()\n    {\n        Rules = new[]\n        {\n            new Ise.DeviceAdmin.Inputs.AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationGlobalExceptionRuleUpdateRanks(ctx, \"example\", \u0026deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanksArgs{\n\t\t\tRules: deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanks;\nimport com.pulumi.ise.deviceadmin.AuthorizationGlobalExceptionRuleUpdateRanksArgs;\nimport com.pulumi.ise.deviceadmin.inputs.AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", AuthorizationGlobalExceptionRuleUpdateRanksArgs.builder()\n            .rules(AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationGlobalExceptionRuleUpdateRanks\n    properties:\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "inputProperties": {
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthorizationGlobalExceptionRuleUpdateRanks resources.\n",
+                "properties": {
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:deviceadmin/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule"
+                        }
                     }
                 },
                 "type": "object"
@@ -4327,6 +4592,55 @@
                     "ruleId": {
                         "type": "string",
                         "description": "Authorization rule ID\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:deviceadmin/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in device admin authorization rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authorization_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.AuthorizationRuleUpdateRanks(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules: [{\n        id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        rank: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.AuthorizationRuleUpdateRanks(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules=[{\n        \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        \"rank\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.AuthorizationRuleUpdateRanks(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Rules = new[]\n        {\n            new Ise.DeviceAdmin.Inputs.AuthorizationRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewAuthorizationRuleUpdateRanks(ctx, \"example\", \u0026deviceadmin.AuthorizationRuleUpdateRanksArgs{\n\t\t\tPolicySetId: pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tRules: deviceadmin.AuthorizationRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026deviceadmin.AuthorizationRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.AuthorizationRuleUpdateRanks;\nimport com.pulumi.ise.deviceadmin.AuthorizationRuleUpdateRanksArgs;\nimport com.pulumi.ise.deviceadmin.inputs.AuthorizationRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationRuleUpdateRanks(\"example\", AuthorizationRuleUpdateRanksArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .rules(AuthorizationRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:AuthorizationRuleUpdateRanks\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "required": [
+                "policySetId"
+            ],
+            "inputProperties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "policySetId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthorizationRuleUpdateRanks resources.\n",
+                "properties": {
+                    "policySetId": {
+                        "type": "string",
+                        "description": "Policy set ID\n"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:deviceadmin/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule"
+                        }
                     }
                 },
                 "type": "object"
@@ -4742,6 +5056,37 @@
                     "rank": {
                         "type": "integer",
                         "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:deviceadmin/policySetUpdateRanks:PolicySetUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in device admin policy set. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_policy_set resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.deviceadmin.PolicySetUpdateRanks(\"example\", {policies: [{\n    id: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rank: 0,\n}]});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.deviceadmin.PolicySetUpdateRanks(\"example\", policies=[{\n    \"id\": \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    \"rank\": 0,\n}])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.DeviceAdmin.PolicySetUpdateRanks(\"example\", new()\n    {\n        Policies = new[]\n        {\n            new Ise.DeviceAdmin.Inputs.PolicySetUpdateRanksPolicyArgs\n            {\n                Id = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/deviceadmin\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := deviceadmin.NewPolicySetUpdateRanks(ctx, \"example\", \u0026deviceadmin.PolicySetUpdateRanksArgs{\n\t\t\tPolicies: deviceadmin.PolicySetUpdateRanksPolicyArray{\n\t\t\t\t\u0026deviceadmin.PolicySetUpdateRanksPolicyArgs{\n\t\t\t\t\tId:   pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.deviceadmin.PolicySetUpdateRanks;\nimport com.pulumi.ise.deviceadmin.PolicySetUpdateRanksArgs;\nimport com.pulumi.ise.deviceadmin.inputs.PolicySetUpdateRanksPolicyArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new PolicySetUpdateRanks(\"example\", PolicySetUpdateRanksArgs.builder()\n            .policies(PolicySetUpdateRanksPolicyArgs.builder()\n                .id(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:deviceadmin:PolicySetUpdateRanks\n    properties:\n      policies:\n        - id: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy"
+                    }
+                }
+            },
+            "inputProperties": {
+                "policies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy"
+                    }
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering PolicySetUpdateRanks resources.\n",
+                "properties": {
+                    "policies": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:deviceadmin/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy"
+                        }
                     }
                 },
                 "type": "object"
@@ -6554,7 +6899,7 @@
             }
         },
         "ise:network/device:Device": {
-            "description": "This resource can manage a Network Device.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.network.Device(\"example\", {\n    name: \"Device1\",\n    description: \"My device\",\n    authenticationEnableKeyWrap: true,\n    authenticationEncryptionKey: \"cisco123cisco123\",\n    authenticationEncryptionKeyFormat: \"ASCII\",\n    authenticationMessageAuthenticatorCodeKey: \"cisco123cisco1235678\",\n    authenticationNetworkProtocol: \"RADIUS\",\n    authenticationRadiusSharedSecret: \"cisco123\",\n    authenticationEnableMultiSecret: true,\n    authenticationSecondRadiusSharedSecret: \"cisco12345\",\n    authenticationDtlsRequired: true,\n    coaPort: 12345,\n    dtlsDnsName: \"cisco.com\",\n    ips: [{\n        ipaddress: \"2.3.4.5\",\n        mask: \"32\",\n    }],\n    modelName: \"Unknown\",\n    softwareVersion: \"Unknown\",\n    profileName: \"Cisco\",\n    snmpLinkTrapQuery: true,\n    snmpMacTrapQuery: true,\n    snmpPollingInterval: 1200,\n    snmpRoCommunity: \"rocom\",\n    snmpVersion: \"TWO_C\",\n    tacacsConnectModeOptions: \"OFF\",\n    tacacsSharedSecret: \"cisco123\",\n    trustsecDeviceId: \"device123\",\n    trustsecDevicePassword: \"cisco123\",\n    trustsecRestApiUsername: \"user123\",\n    trustsecRestApiPassword: \"Cisco123\",\n    trustsecEnableModePassword: \"cisco123\",\n    trustsecExecModePassword: \"cisco123\",\n    trustsecExecModeUsername: \"user456\",\n    trustsecIncludeWhenDeployingSgtUpdates: true,\n    trustsecDownloadEnviromentDataEveryXSeconds: 1000,\n    trustsecDownloadPeerAuthorizationPolicyEveryXSeconds: 1000,\n    trustsecDownloadSgaclListsEveryXSeconds: 1000,\n    trustsecOtherSgaDevicesToTrustThisDevice: true,\n    trustsecReAuthenticationEveryXSeconds: 1000,\n    trustsecSendConfigurationToDevice: true,\n    trustsecSendConfigurationToDeviceUsing: \"ENABLE_USING_COA\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.network.Device(\"example\",\n    name=\"Device1\",\n    description=\"My device\",\n    authentication_enable_key_wrap=True,\n    authentication_encryption_key=\"cisco123cisco123\",\n    authentication_encryption_key_format=\"ASCII\",\n    authentication_message_authenticator_code_key=\"cisco123cisco1235678\",\n    authentication_network_protocol=\"RADIUS\",\n    authentication_radius_shared_secret=\"cisco123\",\n    authentication_enable_multi_secret=True,\n    authentication_second_radius_shared_secret=\"cisco12345\",\n    authentication_dtls_required=True,\n    coa_port=12345,\n    dtls_dns_name=\"cisco.com\",\n    ips=[{\n        \"ipaddress\": \"2.3.4.5\",\n        \"mask\": \"32\",\n    }],\n    model_name=\"Unknown\",\n    software_version=\"Unknown\",\n    profile_name=\"Cisco\",\n    snmp_link_trap_query=True,\n    snmp_mac_trap_query=True,\n    snmp_polling_interval=1200,\n    snmp_ro_community=\"rocom\",\n    snmp_version=\"TWO_C\",\n    tacacs_connect_mode_options=\"OFF\",\n    tacacs_shared_secret=\"cisco123\",\n    trustsec_device_id=\"device123\",\n    trustsec_device_password=\"cisco123\",\n    trustsec_rest_api_username=\"user123\",\n    trustsec_rest_api_password=\"Cisco123\",\n    trustsec_enable_mode_password=\"cisco123\",\n    trustsec_exec_mode_password=\"cisco123\",\n    trustsec_exec_mode_username=\"user456\",\n    trustsec_include_when_deploying_sgt_updates=True,\n    trustsec_download_enviroment_data_every_x_seconds=1000,\n    trustsec_download_peer_authorization_policy_every_x_seconds=1000,\n    trustsec_download_sgacl_lists_every_x_seconds=1000,\n    trustsec_other_sga_devices_to_trust_this_device=True,\n    trustsec_re_authentication_every_x_seconds=1000,\n    trustsec_send_configuration_to_device=True,\n    trustsec_send_configuration_to_device_using=\"ENABLE_USING_COA\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.Network.Device(\"example\", new()\n    {\n        Name = \"Device1\",\n        Description = \"My device\",\n        AuthenticationEnableKeyWrap = true,\n        AuthenticationEncryptionKey = \"cisco123cisco123\",\n        AuthenticationEncryptionKeyFormat = \"ASCII\",\n        AuthenticationMessageAuthenticatorCodeKey = \"cisco123cisco1235678\",\n        AuthenticationNetworkProtocol = \"RADIUS\",\n        AuthenticationRadiusSharedSecret = \"cisco123\",\n        AuthenticationEnableMultiSecret = true,\n        AuthenticationSecondRadiusSharedSecret = \"cisco12345\",\n        AuthenticationDtlsRequired = true,\n        CoaPort = 12345,\n        DtlsDnsName = \"cisco.com\",\n        Ips = new[]\n        {\n            new Ise.Network.Inputs.DeviceIpArgs\n            {\n                Ipaddress = \"2.3.4.5\",\n                Mask = \"32\",\n            },\n        },\n        ModelName = \"Unknown\",\n        SoftwareVersion = \"Unknown\",\n        ProfileName = \"Cisco\",\n        SnmpLinkTrapQuery = true,\n        SnmpMacTrapQuery = true,\n        SnmpPollingInterval = 1200,\n        SnmpRoCommunity = \"rocom\",\n        SnmpVersion = \"TWO_C\",\n        TacacsConnectModeOptions = \"OFF\",\n        TacacsSharedSecret = \"cisco123\",\n        TrustsecDeviceId = \"device123\",\n        TrustsecDevicePassword = \"cisco123\",\n        TrustsecRestApiUsername = \"user123\",\n        TrustsecRestApiPassword = \"Cisco123\",\n        TrustsecEnableModePassword = \"cisco123\",\n        TrustsecExecModePassword = \"cisco123\",\n        TrustsecExecModeUsername = \"user456\",\n        TrustsecIncludeWhenDeployingSgtUpdates = true,\n        TrustsecDownloadEnviromentDataEveryXSeconds = 1000,\n        TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds = 1000,\n        TrustsecDownloadSgaclListsEveryXSeconds = 1000,\n        TrustsecOtherSgaDevicesToTrustThisDevice = true,\n        TrustsecReAuthenticationEveryXSeconds = 1000,\n        TrustsecSendConfigurationToDevice = true,\n        TrustsecSendConfigurationToDeviceUsing = \"ENABLE_USING_COA\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/network\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := network.NewDevice(ctx, \"example\", \u0026network.DeviceArgs{\n\t\t\tName:                              pulumi.String(\"Device1\"),\n\t\t\tDescription:                       pulumi.String(\"My device\"),\n\t\t\tAuthenticationEnableKeyWrap:       pulumi.Bool(true),\n\t\t\tAuthenticationEncryptionKey:       pulumi.String(\"cisco123cisco123\"),\n\t\t\tAuthenticationEncryptionKeyFormat: pulumi.String(\"ASCII\"),\n\t\t\tAuthenticationMessageAuthenticatorCodeKey: pulumi.String(\"cisco123cisco1235678\"),\n\t\t\tAuthenticationNetworkProtocol:             pulumi.String(\"RADIUS\"),\n\t\t\tAuthenticationRadiusSharedSecret:          pulumi.String(\"cisco123\"),\n\t\t\tAuthenticationEnableMultiSecret:           pulumi.Bool(true),\n\t\t\tAuthenticationSecondRadiusSharedSecret:    pulumi.String(\"cisco12345\"),\n\t\t\tAuthenticationDtlsRequired:                pulumi.Bool(true),\n\t\t\tCoaPort:                                   pulumi.Int(12345),\n\t\t\tDtlsDnsName:                               pulumi.String(\"cisco.com\"),\n\t\t\tIps: network.DeviceIpArray{\n\t\t\t\t\u0026network.DeviceIpArgs{\n\t\t\t\t\tIpaddress: pulumi.String(\"2.3.4.5\"),\n\t\t\t\t\tMask:      pulumi.String(\"32\"),\n\t\t\t\t},\n\t\t\t},\n\t\t\tModelName:                                   pulumi.String(\"Unknown\"),\n\t\t\tSoftwareVersion:                             pulumi.String(\"Unknown\"),\n\t\t\tProfileName:                                 pulumi.String(\"Cisco\"),\n\t\t\tSnmpLinkTrapQuery:                           pulumi.Bool(true),\n\t\t\tSnmpMacTrapQuery:                            pulumi.Bool(true),\n\t\t\tSnmpPollingInterval:                         pulumi.Int(1200),\n\t\t\tSnmpRoCommunity:                             pulumi.String(\"rocom\"),\n\t\t\tSnmpVersion:                                 pulumi.String(\"TWO_C\"),\n\t\t\tTacacsConnectModeOptions:                    pulumi.String(\"OFF\"),\n\t\t\tTacacsSharedSecret:                          pulumi.String(\"cisco123\"),\n\t\t\tTrustsecDeviceId:                            pulumi.String(\"device123\"),\n\t\t\tTrustsecDevicePassword:                      pulumi.String(\"cisco123\"),\n\t\t\tTrustsecRestApiUsername:                     pulumi.String(\"user123\"),\n\t\t\tTrustsecRestApiPassword:                     pulumi.String(\"Cisco123\"),\n\t\t\tTrustsecEnableModePassword:                  pulumi.String(\"cisco123\"),\n\t\t\tTrustsecExecModePassword:                    pulumi.String(\"cisco123\"),\n\t\t\tTrustsecExecModeUsername:                    pulumi.String(\"user456\"),\n\t\t\tTrustsecIncludeWhenDeployingSgtUpdates:      pulumi.Bool(true),\n\t\t\tTrustsecDownloadEnviromentDataEveryXSeconds: pulumi.Int(1000),\n\t\t\tTrustsecDownloadPeerAuthorizationPolicyEveryXSeconds: pulumi.Int(1000),\n\t\t\tTrustsecDownloadSgaclListsEveryXSeconds:              pulumi.Int(1000),\n\t\t\tTrustsecOtherSgaDevicesToTrustThisDevice:             pulumi.Bool(true),\n\t\t\tTrustsecReAuthenticationEveryXSeconds:                pulumi.Int(1000),\n\t\t\tTrustsecSendConfigurationToDevice:                    pulumi.Bool(true),\n\t\t\tTrustsecSendConfigurationToDeviceUsing:               pulumi.String(\"ENABLE_USING_COA\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.network.Device;\nimport com.pulumi.ise.network.DeviceArgs;\nimport com.pulumi.ise.network.inputs.DeviceIpArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new Device(\"example\", DeviceArgs.builder()\n            .name(\"Device1\")\n            .description(\"My device\")\n            .authenticationEnableKeyWrap(true)\n            .authenticationEncryptionKey(\"cisco123cisco123\")\n            .authenticationEncryptionKeyFormat(\"ASCII\")\n            .authenticationMessageAuthenticatorCodeKey(\"cisco123cisco1235678\")\n            .authenticationNetworkProtocol(\"RADIUS\")\n            .authenticationRadiusSharedSecret(\"cisco123\")\n            .authenticationEnableMultiSecret(true)\n            .authenticationSecondRadiusSharedSecret(\"cisco12345\")\n            .authenticationDtlsRequired(true)\n            .coaPort(12345)\n            .dtlsDnsName(\"cisco.com\")\n            .ips(DeviceIpArgs.builder()\n                .ipaddress(\"2.3.4.5\")\n                .mask(\"32\")\n                .build())\n            .modelName(\"Unknown\")\n            .softwareVersion(\"Unknown\")\n            .profileName(\"Cisco\")\n            .snmpLinkTrapQuery(true)\n            .snmpMacTrapQuery(true)\n            .snmpPollingInterval(1200)\n            .snmpRoCommunity(\"rocom\")\n            .snmpVersion(\"TWO_C\")\n            .tacacsConnectModeOptions(\"OFF\")\n            .tacacsSharedSecret(\"cisco123\")\n            .trustsecDeviceId(\"device123\")\n            .trustsecDevicePassword(\"cisco123\")\n            .trustsecRestApiUsername(\"user123\")\n            .trustsecRestApiPassword(\"Cisco123\")\n            .trustsecEnableModePassword(\"cisco123\")\n            .trustsecExecModePassword(\"cisco123\")\n            .trustsecExecModeUsername(\"user456\")\n            .trustsecIncludeWhenDeployingSgtUpdates(true)\n            .trustsecDownloadEnviromentDataEveryXSeconds(1000)\n            .trustsecDownloadPeerAuthorizationPolicyEveryXSeconds(1000)\n            .trustsecDownloadSgaclListsEveryXSeconds(1000)\n            .trustsecOtherSgaDevicesToTrustThisDevice(true)\n            .trustsecReAuthenticationEveryXSeconds(1000)\n            .trustsecSendConfigurationToDevice(true)\n            .trustsecSendConfigurationToDeviceUsing(\"ENABLE_USING_COA\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:network:Device\n    properties:\n      name: Device1\n      description: My device\n      authenticationEnableKeyWrap: true\n      authenticationEncryptionKey: cisco123cisco123\n      authenticationEncryptionKeyFormat: ASCII\n      authenticationMessageAuthenticatorCodeKey: cisco123cisco1235678\n      authenticationNetworkProtocol: RADIUS\n      authenticationRadiusSharedSecret: cisco123\n      authenticationEnableMultiSecret: true\n      authenticationSecondRadiusSharedSecret: cisco12345\n      authenticationDtlsRequired: true\n      coaPort: 12345\n      dtlsDnsName: cisco.com\n      ips:\n        - ipaddress: 2.3.4.5\n          mask: '32'\n      modelName: Unknown\n      softwareVersion: Unknown\n      profileName: Cisco\n      snmpLinkTrapQuery: true\n      snmpMacTrapQuery: true\n      snmpPollingInterval: 1200\n      snmpRoCommunity: rocom\n      snmpVersion: TWO_C\n      tacacsConnectModeOptions: OFF\n      tacacsSharedSecret: cisco123\n      trustsecDeviceId: device123\n      trustsecDevicePassword: cisco123\n      trustsecRestApiUsername: user123\n      trustsecRestApiPassword: Cisco123\n      trustsecEnableModePassword: cisco123\n      trustsecExecModePassword: cisco123\n      trustsecExecModeUsername: user456\n      trustsecIncludeWhenDeployingSgtUpdates: true\n      trustsecDownloadEnviromentDataEveryXSeconds: 1000\n      trustsecDownloadPeerAuthorizationPolicyEveryXSeconds: 1000\n      trustsecDownloadSgaclListsEveryXSeconds: 1000\n      trustsecOtherSgaDevicesToTrustThisDevice: true\n      trustsecReAuthenticationEveryXSeconds: 1000\n      trustsecSendConfigurationToDevice: true\n      trustsecSendConfigurationToDeviceUsing: ENABLE_USING_COA\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:network/device:Device example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "description": "This resource can manage a Network Device.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.network.Device(\"example\", {\n    name: \"Device1\",\n    description: \"My device\",\n    authenticationEnableKeyWrap: true,\n    authenticationEncryptionKey: \"cisco123cisco123\",\n    authenticationEncryptionKeyFormat: \"ASCII\",\n    authenticationMessageAuthenticatorCodeKey: \"cisco123cisco1235678\",\n    authenticationNetworkProtocol: \"RADIUS\",\n    authenticationRadiusSharedSecret: \"cisco123\",\n    authenticationEnableMultiSecret: true,\n    authenticationSecondRadiusSharedSecret: \"cisco12345\",\n    authenticationDtlsRequired: true,\n    coaPort: 12345,\n    dtlsDnsName: \"cisco.com\",\n    ips: [{\n        ipaddress: \"2.3.4.5\",\n        mask: \"32\",\n    }],\n    modelName: \"Unknown\",\n    softwareVersion: \"Unknown\",\n    profileName: \"Cisco\",\n    snmpLinkTrapQuery: true,\n    snmpMacTrapQuery: true,\n    snmpPollingInterval: 1200,\n    snmpRoCommunity: \"rocom\",\n    snmpVersion: \"TWO_C\",\n    tacacsConnectModeOptions: \"OFF\",\n    tacacsSharedSecret: \"cisco123\",\n    trustsecDeviceId: \"device123\",\n    trustsecDevicePassword: \"cisco123\",\n    trustsecRestApiUsername: \"user123\",\n    trustsecRestApiPassword: \"Cisco123\",\n    trustsecEnableModePassword: \"cisco123\",\n    trustsecExecModePassword: \"cisco123\",\n    trustsecExecModeUsername: \"user456\",\n    trustsecIncludeWhenDeployingSgtUpdates: true,\n    trustsecDownloadEnvironmentDataEveryXSeconds: 1000,\n    trustsecDownloadPeerAuthorizationPolicyEveryXSeconds: 1000,\n    trustsecDownloadSgaclListsEveryXSeconds: 1000,\n    trustsecOtherSgaDevicesToTrustThisDevice: true,\n    trustsecReAuthenticationEveryXSeconds: 1000,\n    trustsecSendConfigurationToDevice: true,\n    trustsecSendConfigurationToDeviceUsing: \"ENABLE_USING_COA\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.network.Device(\"example\",\n    name=\"Device1\",\n    description=\"My device\",\n    authentication_enable_key_wrap=True,\n    authentication_encryption_key=\"cisco123cisco123\",\n    authentication_encryption_key_format=\"ASCII\",\n    authentication_message_authenticator_code_key=\"cisco123cisco1235678\",\n    authentication_network_protocol=\"RADIUS\",\n    authentication_radius_shared_secret=\"cisco123\",\n    authentication_enable_multi_secret=True,\n    authentication_second_radius_shared_secret=\"cisco12345\",\n    authentication_dtls_required=True,\n    coa_port=12345,\n    dtls_dns_name=\"cisco.com\",\n    ips=[{\n        \"ipaddress\": \"2.3.4.5\",\n        \"mask\": \"32\",\n    }],\n    model_name=\"Unknown\",\n    software_version=\"Unknown\",\n    profile_name=\"Cisco\",\n    snmp_link_trap_query=True,\n    snmp_mac_trap_query=True,\n    snmp_polling_interval=1200,\n    snmp_ro_community=\"rocom\",\n    snmp_version=\"TWO_C\",\n    tacacs_connect_mode_options=\"OFF\",\n    tacacs_shared_secret=\"cisco123\",\n    trustsec_device_id=\"device123\",\n    trustsec_device_password=\"cisco123\",\n    trustsec_rest_api_username=\"user123\",\n    trustsec_rest_api_password=\"Cisco123\",\n    trustsec_enable_mode_password=\"cisco123\",\n    trustsec_exec_mode_password=\"cisco123\",\n    trustsec_exec_mode_username=\"user456\",\n    trustsec_include_when_deploying_sgt_updates=True,\n    trustsec_download_environment_data_every_x_seconds=1000,\n    trustsec_download_peer_authorization_policy_every_x_seconds=1000,\n    trustsec_download_sgacl_lists_every_x_seconds=1000,\n    trustsec_other_sga_devices_to_trust_this_device=True,\n    trustsec_re_authentication_every_x_seconds=1000,\n    trustsec_send_configuration_to_device=True,\n    trustsec_send_configuration_to_device_using=\"ENABLE_USING_COA\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.Network.Device(\"example\", new()\n    {\n        Name = \"Device1\",\n        Description = \"My device\",\n        AuthenticationEnableKeyWrap = true,\n        AuthenticationEncryptionKey = \"cisco123cisco123\",\n        AuthenticationEncryptionKeyFormat = \"ASCII\",\n        AuthenticationMessageAuthenticatorCodeKey = \"cisco123cisco1235678\",\n        AuthenticationNetworkProtocol = \"RADIUS\",\n        AuthenticationRadiusSharedSecret = \"cisco123\",\n        AuthenticationEnableMultiSecret = true,\n        AuthenticationSecondRadiusSharedSecret = \"cisco12345\",\n        AuthenticationDtlsRequired = true,\n        CoaPort = 12345,\n        DtlsDnsName = \"cisco.com\",\n        Ips = new[]\n        {\n            new Ise.Network.Inputs.DeviceIpArgs\n            {\n                Ipaddress = \"2.3.4.5\",\n                Mask = \"32\",\n            },\n        },\n        ModelName = \"Unknown\",\n        SoftwareVersion = \"Unknown\",\n        ProfileName = \"Cisco\",\n        SnmpLinkTrapQuery = true,\n        SnmpMacTrapQuery = true,\n        SnmpPollingInterval = 1200,\n        SnmpRoCommunity = \"rocom\",\n        SnmpVersion = \"TWO_C\",\n        TacacsConnectModeOptions = \"OFF\",\n        TacacsSharedSecret = \"cisco123\",\n        TrustsecDeviceId = \"device123\",\n        TrustsecDevicePassword = \"cisco123\",\n        TrustsecRestApiUsername = \"user123\",\n        TrustsecRestApiPassword = \"Cisco123\",\n        TrustsecEnableModePassword = \"cisco123\",\n        TrustsecExecModePassword = \"cisco123\",\n        TrustsecExecModeUsername = \"user456\",\n        TrustsecIncludeWhenDeployingSgtUpdates = true,\n        TrustsecDownloadEnvironmentDataEveryXSeconds = 1000,\n        TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds = 1000,\n        TrustsecDownloadSgaclListsEveryXSeconds = 1000,\n        TrustsecOtherSgaDevicesToTrustThisDevice = true,\n        TrustsecReAuthenticationEveryXSeconds = 1000,\n        TrustsecSendConfigurationToDevice = true,\n        TrustsecSendConfigurationToDeviceUsing = \"ENABLE_USING_COA\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/network\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := network.NewDevice(ctx, \"example\", \u0026network.DeviceArgs{\n\t\t\tName:                              pulumi.String(\"Device1\"),\n\t\t\tDescription:                       pulumi.String(\"My device\"),\n\t\t\tAuthenticationEnableKeyWrap:       pulumi.Bool(true),\n\t\t\tAuthenticationEncryptionKey:       pulumi.String(\"cisco123cisco123\"),\n\t\t\tAuthenticationEncryptionKeyFormat: pulumi.String(\"ASCII\"),\n\t\t\tAuthenticationMessageAuthenticatorCodeKey: pulumi.String(\"cisco123cisco1235678\"),\n\t\t\tAuthenticationNetworkProtocol:             pulumi.String(\"RADIUS\"),\n\t\t\tAuthenticationRadiusSharedSecret:          pulumi.String(\"cisco123\"),\n\t\t\tAuthenticationEnableMultiSecret:           pulumi.Bool(true),\n\t\t\tAuthenticationSecondRadiusSharedSecret:    pulumi.String(\"cisco12345\"),\n\t\t\tAuthenticationDtlsRequired:                pulumi.Bool(true),\n\t\t\tCoaPort:                                   pulumi.Int(12345),\n\t\t\tDtlsDnsName:                               pulumi.String(\"cisco.com\"),\n\t\t\tIps: network.DeviceIpArray{\n\t\t\t\t\u0026network.DeviceIpArgs{\n\t\t\t\t\tIpaddress: pulumi.String(\"2.3.4.5\"),\n\t\t\t\t\tMask:      pulumi.String(\"32\"),\n\t\t\t\t},\n\t\t\t},\n\t\t\tModelName:                                    pulumi.String(\"Unknown\"),\n\t\t\tSoftwareVersion:                              pulumi.String(\"Unknown\"),\n\t\t\tProfileName:                                  pulumi.String(\"Cisco\"),\n\t\t\tSnmpLinkTrapQuery:                            pulumi.Bool(true),\n\t\t\tSnmpMacTrapQuery:                             pulumi.Bool(true),\n\t\t\tSnmpPollingInterval:                          pulumi.Int(1200),\n\t\t\tSnmpRoCommunity:                              pulumi.String(\"rocom\"),\n\t\t\tSnmpVersion:                                  pulumi.String(\"TWO_C\"),\n\t\t\tTacacsConnectModeOptions:                     pulumi.String(\"OFF\"),\n\t\t\tTacacsSharedSecret:                           pulumi.String(\"cisco123\"),\n\t\t\tTrustsecDeviceId:                             pulumi.String(\"device123\"),\n\t\t\tTrustsecDevicePassword:                       pulumi.String(\"cisco123\"),\n\t\t\tTrustsecRestApiUsername:                      pulumi.String(\"user123\"),\n\t\t\tTrustsecRestApiPassword:                      pulumi.String(\"Cisco123\"),\n\t\t\tTrustsecEnableModePassword:                   pulumi.String(\"cisco123\"),\n\t\t\tTrustsecExecModePassword:                     pulumi.String(\"cisco123\"),\n\t\t\tTrustsecExecModeUsername:                     pulumi.String(\"user456\"),\n\t\t\tTrustsecIncludeWhenDeployingSgtUpdates:       pulumi.Bool(true),\n\t\t\tTrustsecDownloadEnvironmentDataEveryXSeconds: pulumi.Int(1000),\n\t\t\tTrustsecDownloadPeerAuthorizationPolicyEveryXSeconds: pulumi.Int(1000),\n\t\t\tTrustsecDownloadSgaclListsEveryXSeconds:              pulumi.Int(1000),\n\t\t\tTrustsecOtherSgaDevicesToTrustThisDevice:             pulumi.Bool(true),\n\t\t\tTrustsecReAuthenticationEveryXSeconds:                pulumi.Int(1000),\n\t\t\tTrustsecSendConfigurationToDevice:                    pulumi.Bool(true),\n\t\t\tTrustsecSendConfigurationToDeviceUsing:               pulumi.String(\"ENABLE_USING_COA\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.network.Device;\nimport com.pulumi.ise.network.DeviceArgs;\nimport com.pulumi.ise.network.inputs.DeviceIpArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new Device(\"example\", DeviceArgs.builder()\n            .name(\"Device1\")\n            .description(\"My device\")\n            .authenticationEnableKeyWrap(true)\n            .authenticationEncryptionKey(\"cisco123cisco123\")\n            .authenticationEncryptionKeyFormat(\"ASCII\")\n            .authenticationMessageAuthenticatorCodeKey(\"cisco123cisco1235678\")\n            .authenticationNetworkProtocol(\"RADIUS\")\n            .authenticationRadiusSharedSecret(\"cisco123\")\n            .authenticationEnableMultiSecret(true)\n            .authenticationSecondRadiusSharedSecret(\"cisco12345\")\n            .authenticationDtlsRequired(true)\n            .coaPort(12345)\n            .dtlsDnsName(\"cisco.com\")\n            .ips(DeviceIpArgs.builder()\n                .ipaddress(\"2.3.4.5\")\n                .mask(\"32\")\n                .build())\n            .modelName(\"Unknown\")\n            .softwareVersion(\"Unknown\")\n            .profileName(\"Cisco\")\n            .snmpLinkTrapQuery(true)\n            .snmpMacTrapQuery(true)\n            .snmpPollingInterval(1200)\n            .snmpRoCommunity(\"rocom\")\n            .snmpVersion(\"TWO_C\")\n            .tacacsConnectModeOptions(\"OFF\")\n            .tacacsSharedSecret(\"cisco123\")\n            .trustsecDeviceId(\"device123\")\n            .trustsecDevicePassword(\"cisco123\")\n            .trustsecRestApiUsername(\"user123\")\n            .trustsecRestApiPassword(\"Cisco123\")\n            .trustsecEnableModePassword(\"cisco123\")\n            .trustsecExecModePassword(\"cisco123\")\n            .trustsecExecModeUsername(\"user456\")\n            .trustsecIncludeWhenDeployingSgtUpdates(true)\n            .trustsecDownloadEnvironmentDataEveryXSeconds(1000)\n            .trustsecDownloadPeerAuthorizationPolicyEveryXSeconds(1000)\n            .trustsecDownloadSgaclListsEveryXSeconds(1000)\n            .trustsecOtherSgaDevicesToTrustThisDevice(true)\n            .trustsecReAuthenticationEveryXSeconds(1000)\n            .trustsecSendConfigurationToDevice(true)\n            .trustsecSendConfigurationToDeviceUsing(\"ENABLE_USING_COA\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:network:Device\n    properties:\n      name: Device1\n      description: My device\n      authenticationEnableKeyWrap: true\n      authenticationEncryptionKey: cisco123cisco123\n      authenticationEncryptionKeyFormat: ASCII\n      authenticationMessageAuthenticatorCodeKey: cisco123cisco1235678\n      authenticationNetworkProtocol: RADIUS\n      authenticationRadiusSharedSecret: cisco123\n      authenticationEnableMultiSecret: true\n      authenticationSecondRadiusSharedSecret: cisco12345\n      authenticationDtlsRequired: true\n      coaPort: 12345\n      dtlsDnsName: cisco.com\n      ips:\n        - ipaddress: 2.3.4.5\n          mask: '32'\n      modelName: Unknown\n      softwareVersion: Unknown\n      profileName: Cisco\n      snmpLinkTrapQuery: true\n      snmpMacTrapQuery: true\n      snmpPollingInterval: 1200\n      snmpRoCommunity: rocom\n      snmpVersion: TWO_C\n      tacacsConnectModeOptions: OFF\n      tacacsSharedSecret: cisco123\n      trustsecDeviceId: device123\n      trustsecDevicePassword: cisco123\n      trustsecRestApiUsername: user123\n      trustsecRestApiPassword: Cisco123\n      trustsecEnableModePassword: cisco123\n      trustsecExecModePassword: cisco123\n      trustsecExecModeUsername: user456\n      trustsecIncludeWhenDeployingSgtUpdates: true\n      trustsecDownloadEnvironmentDataEveryXSeconds: 1000\n      trustsecDownloadPeerAuthorizationPolicyEveryXSeconds: 1000\n      trustsecDownloadSgaclListsEveryXSeconds: 1000\n      trustsecOtherSgaDevicesToTrustThisDevice: true\n      trustsecReAuthenticationEveryXSeconds: 1000\n      trustsecSendConfigurationToDevice: true\n      trustsecSendConfigurationToDeviceUsing: ENABLE_USING_COA\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:network/device:Device example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
                 "authenticationDtlsRequired": {
                     "type": "boolean",
@@ -6678,7 +7023,7 @@
                     "type": "string",
                     "description": "TrustSec device password\n"
                 },
-                "trustsecDownloadEnviromentDataEveryXSeconds": {
+                "trustsecDownloadEnvironmentDataEveryXSeconds": {
                     "type": "integer",
                     "description": "Download environment data every X seconds\n"
                 },
@@ -6860,7 +7205,7 @@
                     "type": "string",
                     "description": "TrustSec device password\n"
                 },
-                "trustsecDownloadEnviromentDataEveryXSeconds": {
+                "trustsecDownloadEnvironmentDataEveryXSeconds": {
                     "type": "integer",
                     "description": "Download environment data every X seconds\n"
                 },
@@ -7041,7 +7386,7 @@
                         "type": "string",
                         "description": "TrustSec device password\n"
                     },
-                    "trustsecDownloadEnviromentDataEveryXSeconds": {
+                    "trustsecDownloadEnvironmentDataEveryXSeconds": {
                         "type": "integer",
                         "description": "Download environment data every X seconds\n"
                     },
@@ -8437,6 +8782,55 @@
                 "type": "object"
             }
         },
+        "ise:networkaccess/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in network access authentication rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_authentication_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthenticationRuleUpdateRanks(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules: [{\n        id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        rank: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthenticationRuleUpdateRanks(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules=[{\n        \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        \"rank\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthenticationRuleUpdateRanks(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Rules = new[]\n        {\n            new Ise.NetworkAccess.Inputs.AuthenticationRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthenticationRuleUpdateRanks(ctx, \"example\", \u0026networkaccess.AuthenticationRuleUpdateRanksArgs{\n\t\t\tPolicySetId: pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tRules: networkaccess.AuthenticationRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026networkaccess.AuthenticationRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthenticationRuleUpdateRanks;\nimport com.pulumi.ise.networkaccess.AuthenticationRuleUpdateRanksArgs;\nimport com.pulumi.ise.networkaccess.inputs.AuthenticationRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthenticationRuleUpdateRanks(\"example\", AuthenticationRuleUpdateRanksArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .rules(AuthenticationRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthenticationRuleUpdateRanks\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "required": [
+                "policySetId"
+            ],
+            "inputProperties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "policySetId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthenticationRuleUpdateRanks resources.\n",
+                "properties": {
+                    "policySetId": {
+                        "type": "string",
+                        "description": "Policy set ID\n"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/AuthenticationRuleUpdateRanksRule:AuthenticationRuleUpdateRanksRule"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:networkaccess/authorizationExceptionRule:AuthorizationExceptionRule": {
             "description": "This resource can manage a Network Access Authorization Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationExceptionRule(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    name: \"Rule1\",\n    \"default\": false,\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    profiles: [\"PermitAccess\"],\n    securityGroup: \"BYOD\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationExceptionRule(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    name=\"Rule1\",\n    default=False,\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    profiles=[\"PermitAccess\"],\n    security_group=\"BYOD\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationExceptionRule(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Name = \"Rule1\",\n        Default = false,\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        Profiles = new[]\n        {\n            \"PermitAccess\",\n        },\n        SecurityGroup = \"BYOD\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationExceptionRule(ctx, \"example\", \u0026networkaccess.AuthorizationExceptionRuleArgs{\n\t\t\tPolicySetId:             pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tDefault:                 pulumi.Bool(false),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tProfiles: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"PermitAccess\"),\n\t\t\t},\n\t\t\tSecurityGroup: pulumi.String(\"BYOD\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationExceptionRule;\nimport com.pulumi.ise.networkaccess.AuthorizationExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationExceptionRule(\"example\", AuthorizationExceptionRuleArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .name(\"Rule1\")\n            .default_(false)\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .profiles(\"PermitAccess\")\n            .securityGroup(\"BYOD\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationExceptionRule\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      name: Rule1\n      default: false\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      profiles:\n        - PermitAccess\n      securityGroup: BYOD\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:networkaccess/authorizationExceptionRule:AuthorizationExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470,76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -8726,6 +9120,55 @@
                 "type": "object"
             }
         },
+        "ise:networkaccess/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in network access authorization exception rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_authorization_exception_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationExceptionRuleUpdateRanks(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules: [{\n        id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        rank: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationExceptionRuleUpdateRanks(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules=[{\n        \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        \"rank\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationExceptionRuleUpdateRanks(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Rules = new[]\n        {\n            new Ise.NetworkAccess.Inputs.AuthorizationExceptionRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationExceptionRuleUpdateRanks(ctx, \"example\", \u0026networkaccess.AuthorizationExceptionRuleUpdateRanksArgs{\n\t\t\tPolicySetId: pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tRules: networkaccess.AuthorizationExceptionRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026networkaccess.AuthorizationExceptionRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationExceptionRuleUpdateRanks;\nimport com.pulumi.ise.networkaccess.AuthorizationExceptionRuleUpdateRanksArgs;\nimport com.pulumi.ise.networkaccess.inputs.AuthorizationExceptionRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationExceptionRuleUpdateRanks(\"example\", AuthorizationExceptionRuleUpdateRanksArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .rules(AuthorizationExceptionRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationExceptionRuleUpdateRanks\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "required": [
+                "policySetId"
+            ],
+            "inputProperties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "policySetId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthorizationExceptionRuleUpdateRanks resources.\n",
+                "properties": {
+                    "policySetId": {
+                        "type": "string",
+                        "description": "Policy set ID\n"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/AuthorizationExceptionRuleUpdateRanksRule:AuthorizationExceptionRuleUpdateRanksRule"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule": {
             "description": "This resource can manage a Network Access Authorization Global Exception Rule.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationGlobalExceptionRule(\"example\", {\n    name: \"Rule1\",\n    rank: 0,\n    state: \"enabled\",\n    conditionType: \"ConditionAttributes\",\n    conditionIsNegate: false,\n    conditionAttributeName: \"Location\",\n    conditionAttributeValue: \"All Locations\",\n    conditionDictionaryName: \"DEVICE\",\n    conditionOperator: \"equals\",\n    profiles: [\"PermitAccess\"],\n    securityGroup: \"BYOD\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationGlobalExceptionRule(\"example\",\n    name=\"Rule1\",\n    rank=0,\n    state=\"enabled\",\n    condition_type=\"ConditionAttributes\",\n    condition_is_negate=False,\n    condition_attribute_name=\"Location\",\n    condition_attribute_value=\"All Locations\",\n    condition_dictionary_name=\"DEVICE\",\n    condition_operator=\"equals\",\n    profiles=[\"PermitAccess\"],\n    security_group=\"BYOD\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationGlobalExceptionRule(\"example\", new()\n    {\n        Name = \"Rule1\",\n        Rank = 0,\n        State = \"enabled\",\n        ConditionType = \"ConditionAttributes\",\n        ConditionIsNegate = false,\n        ConditionAttributeName = \"Location\",\n        ConditionAttributeValue = \"All Locations\",\n        ConditionDictionaryName = \"DEVICE\",\n        ConditionOperator = \"equals\",\n        Profiles = new[]\n        {\n            \"PermitAccess\",\n        },\n        SecurityGroup = \"BYOD\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationGlobalExceptionRule(ctx, \"example\", \u0026networkaccess.AuthorizationGlobalExceptionRuleArgs{\n\t\t\tName:                    pulumi.String(\"Rule1\"),\n\t\t\tRank:                    pulumi.Int(0),\n\t\t\tState:                   pulumi.String(\"enabled\"),\n\t\t\tConditionType:           pulumi.String(\"ConditionAttributes\"),\n\t\t\tConditionIsNegate:       pulumi.Bool(false),\n\t\t\tConditionAttributeName:  pulumi.String(\"Location\"),\n\t\t\tConditionAttributeValue: pulumi.String(\"All Locations\"),\n\t\t\tConditionDictionaryName: pulumi.String(\"DEVICE\"),\n\t\t\tConditionOperator:       pulumi.String(\"equals\"),\n\t\t\tProfiles: pulumi.StringArray{\n\t\t\t\tpulumi.String(\"PermitAccess\"),\n\t\t\t},\n\t\t\tSecurityGroup: pulumi.String(\"BYOD\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRule;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRule(\"example\", AuthorizationGlobalExceptionRuleArgs.builder()\n            .name(\"Rule1\")\n            .rank(0)\n            .state(\"enabled\")\n            .conditionType(\"ConditionAttributes\")\n            .conditionIsNegate(false)\n            .conditionAttributeName(\"Location\")\n            .conditionAttributeValue(\"All Locations\")\n            .conditionDictionaryName(\"DEVICE\")\n            .conditionOperator(\"equals\")\n            .profiles(\"PermitAccess\")\n            .securityGroup(\"BYOD\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationGlobalExceptionRule\n    properties:\n      name: Rule1\n      rank: 0\n      state: enabled\n      conditionType: ConditionAttributes\n      conditionIsNegate: false\n      conditionAttributeName: Location\n      conditionAttributeValue: All Locations\n      conditionDictionaryName: DEVICE\n      conditionOperator: equals\n      profiles:\n        - PermitAccess\n      securityGroup: BYOD\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -8968,6 +9411,37 @@
                     "ruleId": {
                         "type": "string",
                         "description": "Authorization global exception rule ID\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in authorization global exception rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_authorization_global_exception_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", {rules: [{\n    id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n    rank: 0,\n}]});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", rules=[{\n    \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n    \"rank\": 0,\n}])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", new()\n    {\n        Rules = new[]\n        {\n            new Ise.NetworkAccess.Inputs.AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationGlobalExceptionRuleUpdateRanks(ctx, \"example\", \u0026networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksArgs{\n\t\t\tRules: networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanks;\nimport com.pulumi.ise.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksArgs;\nimport com.pulumi.ise.networkaccess.inputs.AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationGlobalExceptionRuleUpdateRanks(\"example\", AuthorizationGlobalExceptionRuleUpdateRanksArgs.builder()\n            .rules(AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationGlobalExceptionRuleUpdateRanks\n    properties:\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "inputProperties": {
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthorizationGlobalExceptionRuleUpdateRanks resources.\n",
+                "properties": {
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/AuthorizationGlobalExceptionRuleUpdateRanksRule:AuthorizationGlobalExceptionRuleUpdateRanksRule"
+                        }
                     }
                 },
                 "type": "object"
@@ -9691,6 +10165,55 @@
                 "type": "object"
             }
         },
+        "ise:networkaccess/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in network access authorization rules. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_policy_set resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.AuthorizationRuleUpdateRanks(\"example\", {\n    policySetId: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules: [{\n        id: \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        rank: 0,\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.AuthorizationRuleUpdateRanks(\"example\",\n    policy_set_id=\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rules=[{\n        \"id\": \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n        \"rank\": 0,\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.AuthorizationRuleUpdateRanks(\"example\", new()\n    {\n        PolicySetId = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n        Rules = new[]\n        {\n            new Ise.NetworkAccess.Inputs.AuthorizationRuleUpdateRanksRuleArgs\n            {\n                Id = \"3741aca3-db08-4899-af73-2e3f65ec31e1\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewAuthorizationRuleUpdateRanks(ctx, \"example\", \u0026networkaccess.AuthorizationRuleUpdateRanksArgs{\n\t\t\tPolicySetId: pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\tRules: networkaccess.AuthorizationRuleUpdateRanksRuleArray{\n\t\t\t\t\u0026networkaccess.AuthorizationRuleUpdateRanksRuleArgs{\n\t\t\t\t\tId:   pulumi.String(\"3741aca3-db08-4899-af73-2e3f65ec31e1\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.AuthorizationRuleUpdateRanks;\nimport com.pulumi.ise.networkaccess.AuthorizationRuleUpdateRanksArgs;\nimport com.pulumi.ise.networkaccess.inputs.AuthorizationRuleUpdateRanksRuleArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new AuthorizationRuleUpdateRanks(\"example\", AuthorizationRuleUpdateRanksArgs.builder()\n            .policySetId(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n            .rules(AuthorizationRuleUpdateRanksRuleArgs.builder()\n                .id(\"3741aca3-db08-4899-af73-2e3f65ec31e1\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:AuthorizationRuleUpdateRanks\n    properties:\n      policySetId: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n      rules:\n        - id: 3741aca3-db08-4899-af73-2e3f65ec31e1\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "required": [
+                "policySetId"
+            ],
+            "inputProperties": {
+                "policySetId": {
+                    "type": "string",
+                    "description": "Policy set ID\n"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "policySetId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering AuthorizationRuleUpdateRanks resources.\n",
+                "properties": {
+                    "policySetId": {
+                        "type": "string",
+                        "description": "Policy set ID\n"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/AuthorizationRuleUpdateRanksRule:AuthorizationRuleUpdateRanksRule"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:networkaccess/condition:Condition": {
             "description": "This resource can manage a Network Access Condition.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.Condition(\"example\", {\n    name: \"Cond1\",\n    description: \"My description\",\n    conditionType: \"LibraryConditionAttributes\",\n    isNegate: false,\n    attributeName: \"EapAuthentication\",\n    attributeValue: \"EAP-TLS\",\n    dictionaryName: \"Network Access\",\n    operator: \"equals\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.Condition(\"example\",\n    name=\"Cond1\",\n    description=\"My description\",\n    condition_type=\"LibraryConditionAttributes\",\n    is_negate=False,\n    attribute_name=\"EapAuthentication\",\n    attribute_value=\"EAP-TLS\",\n    dictionary_name=\"Network Access\",\n    operator=\"equals\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.Condition(\"example\", new()\n    {\n        Name = \"Cond1\",\n        Description = \"My description\",\n        ConditionType = \"LibraryConditionAttributes\",\n        IsNegate = false,\n        AttributeName = \"EapAuthentication\",\n        AttributeValue = \"EAP-TLS\",\n        DictionaryName = \"Network Access\",\n        Operator = \"equals\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewCondition(ctx, \"example\", \u0026networkaccess.ConditionArgs{\n\t\t\tName:           pulumi.String(\"Cond1\"),\n\t\t\tDescription:    pulumi.String(\"My description\"),\n\t\t\tConditionType:  pulumi.String(\"LibraryConditionAttributes\"),\n\t\t\tIsNegate:       pulumi.Bool(false),\n\t\t\tAttributeName:  pulumi.String(\"EapAuthentication\"),\n\t\t\tAttributeValue: pulumi.String(\"EAP-TLS\"),\n\t\t\tDictionaryName: pulumi.String(\"Network Access\"),\n\t\t\tOperator:       pulumi.String(\"equals\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.Condition;\nimport com.pulumi.ise.networkaccess.ConditionArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new Condition(\"example\", ConditionArgs.builder()\n            .name(\"Cond1\")\n            .description(\"My description\")\n            .conditionType(\"LibraryConditionAttributes\")\n            .isNegate(false)\n            .attributeName(\"EapAuthentication\")\n            .attributeValue(\"EAP-TLS\")\n            .dictionaryName(\"Network Access\")\n            .operator(\"equals\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:Condition\n    properties:\n      name: Cond1\n      description: My description\n      conditionType: LibraryConditionAttributes\n      isNegate: false\n      attributeName: EapAuthentication\n      attributeValue: EAP-TLS\n      dictionaryName: Network Access\n      operator: equals\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:networkaccess/condition:Condition example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -10240,6 +10763,37 @@
                     "rank": {
                         "type": "integer",
                         "description": "The rank (priority) in relation to other rules. Lower rank is higher priority.\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:networkaccess/policySetUpdateRanks:PolicySetUpdateRanks": {
+            "description": "This resource is used to bulk update rank field in network access policy set. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_policy_set resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.PolicySetUpdateRanks(\"example\", {policies: [{\n    id: \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    rank: 0,\n}]});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.PolicySetUpdateRanks(\"example\", policies=[{\n    \"id\": \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n    \"rank\": 0,\n}])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.PolicySetUpdateRanks(\"example\", new()\n    {\n        Policies = new[]\n        {\n            new Ise.NetworkAccess.Inputs.PolicySetUpdateRanksPolicyArgs\n            {\n                Id = \"d82952cb-b901-4b09-b363-5ebf39bdbaf9\",\n                Rank = 0,\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewPolicySetUpdateRanks(ctx, \"example\", \u0026networkaccess.PolicySetUpdateRanksArgs{\n\t\t\tPolicies: networkaccess.PolicySetUpdateRanksPolicyArray{\n\t\t\t\t\u0026networkaccess.PolicySetUpdateRanksPolicyArgs{\n\t\t\t\t\tId:   pulumi.String(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\"),\n\t\t\t\t\tRank: pulumi.Int(0),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.PolicySetUpdateRanks;\nimport com.pulumi.ise.networkaccess.PolicySetUpdateRanksArgs;\nimport com.pulumi.ise.networkaccess.inputs.PolicySetUpdateRanksPolicyArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new PolicySetUpdateRanks(\"example\", PolicySetUpdateRanksArgs.builder()\n            .policies(PolicySetUpdateRanksPolicyArgs.builder()\n                .id(\"d82952cb-b901-4b09-b363-5ebf39bdbaf9\")\n                .rank(0)\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:PolicySetUpdateRanks\n    properties:\n      policies:\n        - id: d82952cb-b901-4b09-b363-5ebf39bdbaf9\n          rank: 0\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "policies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy"
+                    }
+                }
+            },
+            "inputProperties": {
+                "policies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy"
+                    }
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering PolicySetUpdateRanks resources.\n",
+                "properties": {
+                    "policies": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/PolicySetUpdateRanksPolicy:PolicySetUpdateRanksPolicy"
+                        }
                     }
                 },
                 "type": "object"
@@ -13043,7 +13597,7 @@
                         "description": "TrustSec device password\n",
                         "type": "string"
                     },
-                    "trustsecDownloadEnviromentDataEveryXSeconds": {
+                    "trustsecDownloadEnvironmentDataEveryXSeconds": {
                         "description": "Download environment data every X seconds\n",
                         "type": "integer"
                     },
@@ -13127,7 +13681,7 @@
                     "trustsecCoaSourceHost",
                     "trustsecDeviceId",
                     "trustsecDevicePassword",
-                    "trustsecDownloadEnviromentDataEveryXSeconds",
+                    "trustsecDownloadEnvironmentDataEveryXSeconds",
                     "trustsecDownloadPeerAuthorizationPolicyEveryXSeconds",
                     "trustsecDownloadSgaclListsEveryXSeconds",
                     "trustsecEnableModePassword",
