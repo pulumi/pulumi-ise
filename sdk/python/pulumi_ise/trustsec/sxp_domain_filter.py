@@ -225,6 +225,9 @@ class _SxpDomainFilterState:
 
 
 class SxpDomainFilter(pulumi.CustomResource):
+
+    pulumi_type = "ise:trustsec/sxpDomainFilter:SxpDomainFilter"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

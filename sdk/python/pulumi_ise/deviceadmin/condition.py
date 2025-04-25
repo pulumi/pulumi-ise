@@ -371,6 +371,9 @@ class _ConditionState:
 
 
 class Condition(pulumi.CustomResource):
+
+    pulumi_type = "ise:deviceadmin/condition:Condition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

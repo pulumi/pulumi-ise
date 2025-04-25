@@ -628,6 +628,9 @@ class _AuthenticationRuleState:
 
 
 class AuthenticationRule(pulumi.CustomResource):
+
+    pulumi_type = "ise:deviceadmin/authenticationRule:AuthenticationRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

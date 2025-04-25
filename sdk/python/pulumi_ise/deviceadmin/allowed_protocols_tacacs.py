@@ -191,6 +191,9 @@ class _AllowedProtocolsTacacsState:
 
 
 class AllowedProtocolsTacacs(pulumi.CustomResource):
+
+    pulumi_type = "ise:deviceadmin/allowedProtocolsTacacs:AllowedProtocolsTacacs"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

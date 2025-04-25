@@ -91,6 +91,9 @@ class _AuthenticationRuleUpdateRanksState:
 
 
 class AuthenticationRuleUpdateRanks(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

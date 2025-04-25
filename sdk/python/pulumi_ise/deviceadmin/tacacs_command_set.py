@@ -156,6 +156,9 @@ class _TacacsCommandSetState:
 
 
 class TacacsCommandSet(pulumi.CustomResource):
+
+    pulumi_type = "ise:deviceadmin/tacacsCommandSet:TacacsCommandSet"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
