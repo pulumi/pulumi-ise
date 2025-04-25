@@ -20,6 +20,11 @@ export type AuthenticationRuleUpdateRank = import("./authenticationRuleUpdateRan
 export const AuthenticationRuleUpdateRank: typeof import("./authenticationRuleUpdateRank").AuthenticationRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthenticationRuleUpdateRank"], () => require("./authenticationRuleUpdateRank"));
 
+export { AuthenticationRuleUpdateRanksArgs, AuthenticationRuleUpdateRanksState } from "./authenticationRuleUpdateRanks";
+export type AuthenticationRuleUpdateRanks = import("./authenticationRuleUpdateRanks").AuthenticationRuleUpdateRanks;
+export const AuthenticationRuleUpdateRanks: typeof import("./authenticationRuleUpdateRanks").AuthenticationRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthenticationRuleUpdateRanks"], () => require("./authenticationRuleUpdateRanks"));
+
 export { AuthorizationExceptionRuleArgs, AuthorizationExceptionRuleState } from "./authorizationExceptionRule";
 export type AuthorizationExceptionRule = import("./authorizationExceptionRule").AuthorizationExceptionRule;
 export const AuthorizationExceptionRule: typeof import("./authorizationExceptionRule").AuthorizationExceptionRule = null as any;
@@ -29,6 +34,11 @@ export { AuthorizationExceptionRuleUpdateRankArgs, AuthorizationExceptionRuleUpd
 export type AuthorizationExceptionRuleUpdateRank = import("./authorizationExceptionRuleUpdateRank").AuthorizationExceptionRuleUpdateRank;
 export const AuthorizationExceptionRuleUpdateRank: typeof import("./authorizationExceptionRuleUpdateRank").AuthorizationExceptionRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthorizationExceptionRuleUpdateRank"], () => require("./authorizationExceptionRuleUpdateRank"));
+
+export { AuthorizationExceptionRuleUpdateRanksArgs, AuthorizationExceptionRuleUpdateRanksState } from "./authorizationExceptionRuleUpdateRanks";
+export type AuthorizationExceptionRuleUpdateRanks = import("./authorizationExceptionRuleUpdateRanks").AuthorizationExceptionRuleUpdateRanks;
+export const AuthorizationExceptionRuleUpdateRanks: typeof import("./authorizationExceptionRuleUpdateRanks").AuthorizationExceptionRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthorizationExceptionRuleUpdateRanks"], () => require("./authorizationExceptionRuleUpdateRanks"));
 
 export { AuthorizationGlobalExceptionRuleArgs, AuthorizationGlobalExceptionRuleState } from "./authorizationGlobalExceptionRule";
 export type AuthorizationGlobalExceptionRule = import("./authorizationGlobalExceptionRule").AuthorizationGlobalExceptionRule;
@@ -40,6 +50,11 @@ export type AuthorizationGlobalExceptionRuleUpdateRank = import("./authorization
 export const AuthorizationGlobalExceptionRuleUpdateRank: typeof import("./authorizationGlobalExceptionRuleUpdateRank").AuthorizationGlobalExceptionRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthorizationGlobalExceptionRuleUpdateRank"], () => require("./authorizationGlobalExceptionRuleUpdateRank"));
 
+export { AuthorizationGlobalExceptionRuleUpdateRanksArgs, AuthorizationGlobalExceptionRuleUpdateRanksState } from "./authorizationGlobalExceptionRuleUpdateRanks";
+export type AuthorizationGlobalExceptionRuleUpdateRanks = import("./authorizationGlobalExceptionRuleUpdateRanks").AuthorizationGlobalExceptionRuleUpdateRanks;
+export const AuthorizationGlobalExceptionRuleUpdateRanks: typeof import("./authorizationGlobalExceptionRuleUpdateRanks").AuthorizationGlobalExceptionRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthorizationGlobalExceptionRuleUpdateRanks"], () => require("./authorizationGlobalExceptionRuleUpdateRanks"));
+
 export { AuthorizationRuleArgs, AuthorizationRuleState } from "./authorizationRule";
 export type AuthorizationRule = import("./authorizationRule").AuthorizationRule;
 export const AuthorizationRule: typeof import("./authorizationRule").AuthorizationRule = null as any;
@@ -49,6 +64,11 @@ export { AuthorizationRuleUpdateRankArgs, AuthorizationRuleUpdateRankState } fro
 export type AuthorizationRuleUpdateRank = import("./authorizationRuleUpdateRank").AuthorizationRuleUpdateRank;
 export const AuthorizationRuleUpdateRank: typeof import("./authorizationRuleUpdateRank").AuthorizationRuleUpdateRank = null as any;
 utilities.lazyLoad(exports, ["AuthorizationRuleUpdateRank"], () => require("./authorizationRuleUpdateRank"));
+
+export { AuthorizationRuleUpdateRanksArgs, AuthorizationRuleUpdateRanksState } from "./authorizationRuleUpdateRanks";
+export type AuthorizationRuleUpdateRanks = import("./authorizationRuleUpdateRanks").AuthorizationRuleUpdateRanks;
+export const AuthorizationRuleUpdateRanks: typeof import("./authorizationRuleUpdateRanks").AuthorizationRuleUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["AuthorizationRuleUpdateRanks"], () => require("./authorizationRuleUpdateRanks"));
 
 export { ConditionArgs, ConditionState } from "./condition";
 export type Condition = import("./condition").Condition;
@@ -115,6 +135,11 @@ export type PolicySetUpdateRank = import("./policySetUpdateRank").PolicySetUpdat
 export const PolicySetUpdateRank: typeof import("./policySetUpdateRank").PolicySetUpdateRank = null as any;
 utilities.lazyLoad(exports, ["PolicySetUpdateRank"], () => require("./policySetUpdateRank"));
 
+export { PolicySetUpdateRanksArgs, PolicySetUpdateRanksState } from "./policySetUpdateRanks";
+export type PolicySetUpdateRanks = import("./policySetUpdateRanks").PolicySetUpdateRanks;
+export const PolicySetUpdateRanks: typeof import("./policySetUpdateRanks").PolicySetUpdateRanks = null as any;
+utilities.lazyLoad(exports, ["PolicySetUpdateRanks"], () => require("./policySetUpdateRanks"));
+
 export { TacacsCommandSetArgs, TacacsCommandSetState } from "./tacacsCommandSet";
 export type TacacsCommandSet = import("./tacacsCommandSet").TacacsCommandSet;
 export const TacacsCommandSet: typeof import("./tacacsCommandSet").TacacsCommandSet = null as any;
@@ -141,24 +166,34 @@ const _module = {
                 return new AuthenticationRule(name, <any>undefined, { urn })
             case "ise:deviceadmin/authenticationRuleUpdateRank:AuthenticationRuleUpdateRank":
                 return new AuthenticationRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:deviceadmin/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks":
+                return new AuthenticationRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule":
                 return new AuthorizationExceptionRule(name, <any>undefined, { urn })
             case "ise:deviceadmin/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank":
                 return new AuthorizationExceptionRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:deviceadmin/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks":
+                return new AuthorizationExceptionRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule":
                 return new AuthorizationGlobalExceptionRule(name, <any>undefined, { urn })
             case "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank":
                 return new AuthorizationGlobalExceptionRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks":
+                return new AuthorizationGlobalExceptionRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:deviceadmin/authorizationRule:AuthorizationRule":
                 return new AuthorizationRule(name, <any>undefined, { urn })
             case "ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank":
                 return new AuthorizationRuleUpdateRank(name, <any>undefined, { urn })
+            case "ise:deviceadmin/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks":
+                return new AuthorizationRuleUpdateRanks(name, <any>undefined, { urn })
             case "ise:deviceadmin/condition:Condition":
                 return new Condition(name, <any>undefined, { urn })
             case "ise:deviceadmin/policySet:PolicySet":
                 return new PolicySet(name, <any>undefined, { urn })
             case "ise:deviceadmin/policySetUpdateRank:PolicySetUpdateRank":
                 return new PolicySetUpdateRank(name, <any>undefined, { urn })
+            case "ise:deviceadmin/policySetUpdateRanks:PolicySetUpdateRanks":
+                return new PolicySetUpdateRanks(name, <any>undefined, { urn })
             case "ise:deviceadmin/tacacsCommandSet:TacacsCommandSet":
                 return new TacacsCommandSet(name, <any>undefined, { urn })
             case "ise:deviceadmin/tacacsProfile:TacacsProfile":
@@ -173,15 +208,20 @@ const _module = {
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/allowedProtocolsTacacs", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authenticationRule", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authenticationRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "deviceadmin/authenticationRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationExceptionRule", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationExceptionRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationExceptionRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationGlobalExceptionRule", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationGlobalExceptionRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationGlobalExceptionRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationRule", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationRuleUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "deviceadmin/authorizationRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/condition", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/policySet", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/policySetUpdateRank", _module)
+pulumi.runtime.registerResourceModule("ise", "deviceadmin/policySetUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/tacacsCommandSet", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/tacacsProfile", _module)
 pulumi.runtime.registerResourceModule("ise", "deviceadmin/timeAndDateCondition", _module)

@@ -19,17 +19,22 @@ from . import outputs
 __all__ = [
     'AuthenticationRuleChildren',
     'AuthenticationRuleChildrenChildren',
+    'AuthenticationRuleUpdateRanksRule',
     'AuthorizationExceptionRuleChildren',
     'AuthorizationExceptionRuleChildrenChildren',
+    'AuthorizationExceptionRuleUpdateRanksRule',
     'AuthorizationGlobalExceptionRuleChildren',
     'AuthorizationGlobalExceptionRuleChildrenChildren',
+    'AuthorizationGlobalExceptionRuleUpdateRanksRule',
     'AuthorizationProfileAdvancedAttribute',
     'AuthorizationRuleChildren',
     'AuthorizationRuleChildrenChildren',
+    'AuthorizationRuleUpdateRanksRule',
     'ConditionChildren',
     'ConditionChildrenChildren',
     'PolicySetChildren',
     'PolicySetChildrenChildren',
+    'PolicySetUpdateRanksPolicy',
     'GetAuthenticationRuleChildrenResult',
     'GetAuthenticationRuleChildrenChildrenResult',
     'GetAuthorizationExceptionRuleChildrenResult',
@@ -324,6 +329,37 @@ class AuthenticationRuleChildrenChildren(dict):
 
 
 @pulumi.output_type
+class AuthenticationRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authentication rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authentication rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+
+@pulumi.output_type
 class AuthorizationExceptionRuleChildren(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -602,6 +638,37 @@ class AuthorizationExceptionRuleChildrenChildren(dict):
 
 
 @pulumi.output_type
+class AuthorizationExceptionRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authorization rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+
+@pulumi.output_type
 class AuthorizationGlobalExceptionRuleChildren(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -877,6 +944,37 @@ class AuthorizationGlobalExceptionRuleChildrenChildren(dict):
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AuthorizationGlobalExceptionRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authorization rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
 
 
 @pulumi.output_type
@@ -1266,6 +1364,37 @@ class AuthorizationRuleChildrenChildren(dict):
 
 
 @pulumi.output_type
+class AuthorizationRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authorization rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+
+@pulumi.output_type
 class ConditionChildren(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -1317,7 +1446,7 @@ class ConditionChildren(dict):
         :param builtins.str dictionary_value: Dictionary value
         :param builtins.str id: UUID for condition
         :param builtins.bool is_negate: Indicates whereas this condition is in negate mode
-        :param builtins.str name: Condition name
+        :param builtins.str name: Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         :param builtins.str operator: Equality operator
                  - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
@@ -1420,7 +1549,7 @@ class ConditionChildren(dict):
     @pulumi.getter
     def name(self) -> Optional[builtins.str]:
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         return pulumi.get(self, "name")
 
@@ -1484,7 +1613,7 @@ class ConditionChildrenChildren(dict):
         :param builtins.str dictionary_value: Dictionary value
         :param builtins.str id: UUID for condition
         :param builtins.bool is_negate: Indicates whereas this condition is in negate mode
-        :param builtins.str name: Condition name
+        :param builtins.str name: Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         :param builtins.str operator: Equality operator
                  - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
@@ -1577,7 +1706,7 @@ class ConditionChildrenChildren(dict):
     @pulumi.getter
     def name(self) -> Optional[builtins.str]:
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         return pulumi.get(self, "name")
 
@@ -1867,6 +1996,36 @@ class PolicySetChildrenChildren(dict):
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class PolicySetUpdateRanksPolicy(dict):
+    def __init__(__self__, *,
+                 rank: builtins.int,
+                 id: Optional[builtins.str] = None):
+        """
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        :param builtins.str id: Policy set ID
+        """
+        pulumi.set(__self__, "rank", rank)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> builtins.int:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Policy set ID
+        """
+        return pulumi.get(self, "id")
 
 
 @pulumi.output_type
@@ -2770,7 +2929,7 @@ class GetConditionChildrenResult(dict):
         :param builtins.str dictionary_value: Dictionary value
         :param builtins.str id: UUID for condition
         :param builtins.bool is_negate: Indicates whereas this condition is in negate mode
-        :param builtins.str name: Condition name
+        :param builtins.str name: Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         :param builtins.str operator: Equality operator
         """
         pulumi.set(__self__, "attribute_name", attribute_name)
@@ -2861,7 +3020,7 @@ class GetConditionChildrenResult(dict):
     @pulumi.getter
     def name(self) -> builtins.str:
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         return pulumi.get(self, "name")
 
@@ -2896,7 +3055,7 @@ class GetConditionChildrenChildrenResult(dict):
         :param builtins.str dictionary_value: Dictionary value
         :param builtins.str id: UUID for condition
         :param builtins.bool is_negate: Indicates whereas this condition is in negate mode
-        :param builtins.str name: Condition name
+        :param builtins.str name: Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         :param builtins.str operator: Equality operator
         """
         pulumi.set(__self__, "attribute_name", attribute_name)
@@ -2978,7 +3137,7 @@ class GetConditionChildrenChildrenResult(dict):
     @pulumi.getter
     def name(self) -> builtins.str:
         """
-        Condition name
+        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         """
         return pulumi.get(self, "name")
 

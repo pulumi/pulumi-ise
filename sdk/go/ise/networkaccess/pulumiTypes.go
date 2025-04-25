@@ -354,6 +354,112 @@ func (o AuthenticationRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) 
 	}).(AuthenticationRuleChildrenChildrenOutput)
 }
 
+type AuthenticationRuleUpdateRanksRule struct {
+	// Authentication rule ID
+	Id *string `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank *int `pulumi:"rank"`
+}
+
+// AuthenticationRuleUpdateRanksRuleInput is an input type that accepts AuthenticationRuleUpdateRanksRuleArgs and AuthenticationRuleUpdateRanksRuleOutput values.
+// You can construct a concrete instance of `AuthenticationRuleUpdateRanksRuleInput` via:
+//
+//	AuthenticationRuleUpdateRanksRuleArgs{...}
+type AuthenticationRuleUpdateRanksRuleInput interface {
+	pulumi.Input
+
+	ToAuthenticationRuleUpdateRanksRuleOutput() AuthenticationRuleUpdateRanksRuleOutput
+	ToAuthenticationRuleUpdateRanksRuleOutputWithContext(context.Context) AuthenticationRuleUpdateRanksRuleOutput
+}
+
+type AuthenticationRuleUpdateRanksRuleArgs struct {
+	// Authentication rule ID
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank pulumi.IntPtrInput `pulumi:"rank"`
+}
+
+func (AuthenticationRuleUpdateRanksRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthenticationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthenticationRuleUpdateRanksRuleArgs) ToAuthenticationRuleUpdateRanksRuleOutput() AuthenticationRuleUpdateRanksRuleOutput {
+	return i.ToAuthenticationRuleUpdateRanksRuleOutputWithContext(context.Background())
+}
+
+func (i AuthenticationRuleUpdateRanksRuleArgs) ToAuthenticationRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthenticationRuleUpdateRanksRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthenticationRuleUpdateRanksRuleOutput)
+}
+
+// AuthenticationRuleUpdateRanksRuleArrayInput is an input type that accepts AuthenticationRuleUpdateRanksRuleArray and AuthenticationRuleUpdateRanksRuleArrayOutput values.
+// You can construct a concrete instance of `AuthenticationRuleUpdateRanksRuleArrayInput` via:
+//
+//	AuthenticationRuleUpdateRanksRuleArray{ AuthenticationRuleUpdateRanksRuleArgs{...} }
+type AuthenticationRuleUpdateRanksRuleArrayInput interface {
+	pulumi.Input
+
+	ToAuthenticationRuleUpdateRanksRuleArrayOutput() AuthenticationRuleUpdateRanksRuleArrayOutput
+	ToAuthenticationRuleUpdateRanksRuleArrayOutputWithContext(context.Context) AuthenticationRuleUpdateRanksRuleArrayOutput
+}
+
+type AuthenticationRuleUpdateRanksRuleArray []AuthenticationRuleUpdateRanksRuleInput
+
+func (AuthenticationRuleUpdateRanksRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthenticationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthenticationRuleUpdateRanksRuleArray) ToAuthenticationRuleUpdateRanksRuleArrayOutput() AuthenticationRuleUpdateRanksRuleArrayOutput {
+	return i.ToAuthenticationRuleUpdateRanksRuleArrayOutputWithContext(context.Background())
+}
+
+func (i AuthenticationRuleUpdateRanksRuleArray) ToAuthenticationRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthenticationRuleUpdateRanksRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthenticationRuleUpdateRanksRuleArrayOutput)
+}
+
+type AuthenticationRuleUpdateRanksRuleOutput struct{ *pulumi.OutputState }
+
+func (AuthenticationRuleUpdateRanksRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthenticationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthenticationRuleUpdateRanksRuleOutput) ToAuthenticationRuleUpdateRanksRuleOutput() AuthenticationRuleUpdateRanksRuleOutput {
+	return o
+}
+
+func (o AuthenticationRuleUpdateRanksRuleOutput) ToAuthenticationRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthenticationRuleUpdateRanksRuleOutput {
+	return o
+}
+
+// Authentication rule ID
+func (o AuthenticationRuleUpdateRanksRuleOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleUpdateRanksRule) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// The rank (priority) in relation to other rules. Lower rank is higher priority.
+func (o AuthenticationRuleUpdateRanksRuleOutput) Rank() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AuthenticationRuleUpdateRanksRule) *int { return v.Rank }).(pulumi.IntPtrOutput)
+}
+
+type AuthenticationRuleUpdateRanksRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthenticationRuleUpdateRanksRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthenticationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthenticationRuleUpdateRanksRuleArrayOutput) ToAuthenticationRuleUpdateRanksRuleArrayOutput() AuthenticationRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthenticationRuleUpdateRanksRuleArrayOutput) ToAuthenticationRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthenticationRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthenticationRuleUpdateRanksRuleArrayOutput) Index(i pulumi.IntInput) AuthenticationRuleUpdateRanksRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthenticationRuleUpdateRanksRule {
+		return vs[0].([]AuthenticationRuleUpdateRanksRule)[vs[1].(int)]
+	}).(AuthenticationRuleUpdateRanksRuleOutput)
+}
+
 type AuthorizationExceptionRuleChildren struct {
 	// Dictionary attribute name
 	AttributeName *string `pulumi:"attributeName"`
@@ -697,6 +803,112 @@ func (o AuthorizationExceptionRuleChildrenChildrenArrayOutput) Index(i pulumi.In
 	}).(AuthorizationExceptionRuleChildrenChildrenOutput)
 }
 
+type AuthorizationExceptionRuleUpdateRanksRule struct {
+	// Authorization rule ID
+	Id *string `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank *int `pulumi:"rank"`
+}
+
+// AuthorizationExceptionRuleUpdateRanksRuleInput is an input type that accepts AuthorizationExceptionRuleUpdateRanksRuleArgs and AuthorizationExceptionRuleUpdateRanksRuleOutput values.
+// You can construct a concrete instance of `AuthorizationExceptionRuleUpdateRanksRuleInput` via:
+//
+//	AuthorizationExceptionRuleUpdateRanksRuleArgs{...}
+type AuthorizationExceptionRuleUpdateRanksRuleInput interface {
+	pulumi.Input
+
+	ToAuthorizationExceptionRuleUpdateRanksRuleOutput() AuthorizationExceptionRuleUpdateRanksRuleOutput
+	ToAuthorizationExceptionRuleUpdateRanksRuleOutputWithContext(context.Context) AuthorizationExceptionRuleUpdateRanksRuleOutput
+}
+
+type AuthorizationExceptionRuleUpdateRanksRuleArgs struct {
+	// Authorization rule ID
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank pulumi.IntPtrInput `pulumi:"rank"`
+}
+
+func (AuthorizationExceptionRuleUpdateRanksRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthorizationExceptionRuleUpdateRanksRuleArgs) ToAuthorizationExceptionRuleUpdateRanksRuleOutput() AuthorizationExceptionRuleUpdateRanksRuleOutput {
+	return i.ToAuthorizationExceptionRuleUpdateRanksRuleOutputWithContext(context.Background())
+}
+
+func (i AuthorizationExceptionRuleUpdateRanksRuleArgs) ToAuthorizationExceptionRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthorizationExceptionRuleUpdateRanksRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationExceptionRuleUpdateRanksRuleOutput)
+}
+
+// AuthorizationExceptionRuleUpdateRanksRuleArrayInput is an input type that accepts AuthorizationExceptionRuleUpdateRanksRuleArray and AuthorizationExceptionRuleUpdateRanksRuleArrayOutput values.
+// You can construct a concrete instance of `AuthorizationExceptionRuleUpdateRanksRuleArrayInput` via:
+//
+//	AuthorizationExceptionRuleUpdateRanksRuleArray{ AuthorizationExceptionRuleUpdateRanksRuleArgs{...} }
+type AuthorizationExceptionRuleUpdateRanksRuleArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutput() AuthorizationExceptionRuleUpdateRanksRuleArrayOutput
+	ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutputWithContext(context.Context) AuthorizationExceptionRuleUpdateRanksRuleArrayOutput
+}
+
+type AuthorizationExceptionRuleUpdateRanksRuleArray []AuthorizationExceptionRuleUpdateRanksRuleInput
+
+func (AuthorizationExceptionRuleUpdateRanksRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthorizationExceptionRuleUpdateRanksRuleArray) ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutput() AuthorizationExceptionRuleUpdateRanksRuleArrayOutput {
+	return i.ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationExceptionRuleUpdateRanksRuleArray) ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthorizationExceptionRuleUpdateRanksRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationExceptionRuleUpdateRanksRuleArrayOutput)
+}
+
+type AuthorizationExceptionRuleUpdateRanksRuleOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationExceptionRuleUpdateRanksRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthorizationExceptionRuleUpdateRanksRuleOutput) ToAuthorizationExceptionRuleUpdateRanksRuleOutput() AuthorizationExceptionRuleUpdateRanksRuleOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleUpdateRanksRuleOutput) ToAuthorizationExceptionRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthorizationExceptionRuleUpdateRanksRuleOutput {
+	return o
+}
+
+// Authorization rule ID
+func (o AuthorizationExceptionRuleUpdateRanksRuleOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleUpdateRanksRule) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// The rank (priority) in relation to other rules. Lower rank is higher priority.
+func (o AuthorizationExceptionRuleUpdateRanksRuleOutput) Rank() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AuthorizationExceptionRuleUpdateRanksRule) *int { return v.Rank }).(pulumi.IntPtrOutput)
+}
+
+type AuthorizationExceptionRuleUpdateRanksRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationExceptionRuleUpdateRanksRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthorizationExceptionRuleUpdateRanksRuleArrayOutput) ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutput() AuthorizationExceptionRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleUpdateRanksRuleArrayOutput) ToAuthorizationExceptionRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthorizationExceptionRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthorizationExceptionRuleUpdateRanksRuleArrayOutput) Index(i pulumi.IntInput) AuthorizationExceptionRuleUpdateRanksRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationExceptionRuleUpdateRanksRule {
+		return vs[0].([]AuthorizationExceptionRuleUpdateRanksRule)[vs[1].(int)]
+	}).(AuthorizationExceptionRuleUpdateRanksRuleOutput)
+}
+
 type AuthorizationGlobalExceptionRuleChildren struct {
 	// Dictionary attribute name
 	AttributeName *string `pulumi:"attributeName"`
@@ -1038,6 +1250,112 @@ func (o AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput) Index(i pul
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationGlobalExceptionRuleChildrenChildren {
 		return vs[0].([]AuthorizationGlobalExceptionRuleChildrenChildren)[vs[1].(int)]
 	}).(AuthorizationGlobalExceptionRuleChildrenChildrenOutput)
+}
+
+type AuthorizationGlobalExceptionRuleUpdateRanksRule struct {
+	// Authorization rule ID
+	Id *string `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank *int `pulumi:"rank"`
+}
+
+// AuthorizationGlobalExceptionRuleUpdateRanksRuleInput is an input type that accepts AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs and AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput values.
+// You can construct a concrete instance of `AuthorizationGlobalExceptionRuleUpdateRanksRuleInput` via:
+//
+//	AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs{...}
+type AuthorizationGlobalExceptionRuleUpdateRanksRuleInput interface {
+	pulumi.Input
+
+	ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutput() AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput
+	ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutputWithContext(context.Context) AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput
+}
+
+type AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs struct {
+	// Authorization rule ID
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank pulumi.IntPtrInput `pulumi:"rank"`
+}
+
+func (AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationGlobalExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutput() AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput {
+	return i.ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutputWithContext(context.Background())
+}
+
+func (i AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput)
+}
+
+// AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayInput is an input type that accepts AuthorizationGlobalExceptionRuleUpdateRanksRuleArray and AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput values.
+// You can construct a concrete instance of `AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayInput` via:
+//
+//	AuthorizationGlobalExceptionRuleUpdateRanksRuleArray{ AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs{...} }
+type AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput() AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput
+	ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutputWithContext(context.Context) AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput
+}
+
+type AuthorizationGlobalExceptionRuleUpdateRanksRuleArray []AuthorizationGlobalExceptionRuleUpdateRanksRuleInput
+
+func (AuthorizationGlobalExceptionRuleUpdateRanksRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationGlobalExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthorizationGlobalExceptionRuleUpdateRanksRuleArray) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput() AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput {
+	return i.ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationGlobalExceptionRuleUpdateRanksRuleArray) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput)
+}
+
+type AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationGlobalExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutput() AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput {
+	return o
+}
+
+// Authorization rule ID
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleUpdateRanksRule) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// The rank (priority) in relation to other rules. Lower rank is higher priority.
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput) Rank() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AuthorizationGlobalExceptionRuleUpdateRanksRule) *int { return v.Rank }).(pulumi.IntPtrOutput)
+}
+
+type AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationGlobalExceptionRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput() AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput) ToAuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput) Index(i pulumi.IntInput) AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationGlobalExceptionRuleUpdateRanksRule {
+		return vs[0].([]AuthorizationGlobalExceptionRuleUpdateRanksRule)[vs[1].(int)]
+	}).(AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput)
 }
 
 type AuthorizationProfileAdvancedAttribute struct {
@@ -1526,6 +1844,112 @@ func (o AuthorizationRuleChildrenChildrenArrayOutput) Index(i pulumi.IntInput) A
 	}).(AuthorizationRuleChildrenChildrenOutput)
 }
 
+type AuthorizationRuleUpdateRanksRule struct {
+	// Authorization rule ID
+	Id *string `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank *int `pulumi:"rank"`
+}
+
+// AuthorizationRuleUpdateRanksRuleInput is an input type that accepts AuthorizationRuleUpdateRanksRuleArgs and AuthorizationRuleUpdateRanksRuleOutput values.
+// You can construct a concrete instance of `AuthorizationRuleUpdateRanksRuleInput` via:
+//
+//	AuthorizationRuleUpdateRanksRuleArgs{...}
+type AuthorizationRuleUpdateRanksRuleInput interface {
+	pulumi.Input
+
+	ToAuthorizationRuleUpdateRanksRuleOutput() AuthorizationRuleUpdateRanksRuleOutput
+	ToAuthorizationRuleUpdateRanksRuleOutputWithContext(context.Context) AuthorizationRuleUpdateRanksRuleOutput
+}
+
+type AuthorizationRuleUpdateRanksRuleArgs struct {
+	// Authorization rule ID
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank pulumi.IntPtrInput `pulumi:"rank"`
+}
+
+func (AuthorizationRuleUpdateRanksRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthorizationRuleUpdateRanksRuleArgs) ToAuthorizationRuleUpdateRanksRuleOutput() AuthorizationRuleUpdateRanksRuleOutput {
+	return i.ToAuthorizationRuleUpdateRanksRuleOutputWithContext(context.Background())
+}
+
+func (i AuthorizationRuleUpdateRanksRuleArgs) ToAuthorizationRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthorizationRuleUpdateRanksRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationRuleUpdateRanksRuleOutput)
+}
+
+// AuthorizationRuleUpdateRanksRuleArrayInput is an input type that accepts AuthorizationRuleUpdateRanksRuleArray and AuthorizationRuleUpdateRanksRuleArrayOutput values.
+// You can construct a concrete instance of `AuthorizationRuleUpdateRanksRuleArrayInput` via:
+//
+//	AuthorizationRuleUpdateRanksRuleArray{ AuthorizationRuleUpdateRanksRuleArgs{...} }
+type AuthorizationRuleUpdateRanksRuleArrayInput interface {
+	pulumi.Input
+
+	ToAuthorizationRuleUpdateRanksRuleArrayOutput() AuthorizationRuleUpdateRanksRuleArrayOutput
+	ToAuthorizationRuleUpdateRanksRuleArrayOutputWithContext(context.Context) AuthorizationRuleUpdateRanksRuleArrayOutput
+}
+
+type AuthorizationRuleUpdateRanksRuleArray []AuthorizationRuleUpdateRanksRuleInput
+
+func (AuthorizationRuleUpdateRanksRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (i AuthorizationRuleUpdateRanksRuleArray) ToAuthorizationRuleUpdateRanksRuleArrayOutput() AuthorizationRuleUpdateRanksRuleArrayOutput {
+	return i.ToAuthorizationRuleUpdateRanksRuleArrayOutputWithContext(context.Background())
+}
+
+func (i AuthorizationRuleUpdateRanksRuleArray) ToAuthorizationRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthorizationRuleUpdateRanksRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AuthorizationRuleUpdateRanksRuleArrayOutput)
+}
+
+type AuthorizationRuleUpdateRanksRuleOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationRuleUpdateRanksRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AuthorizationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthorizationRuleUpdateRanksRuleOutput) ToAuthorizationRuleUpdateRanksRuleOutput() AuthorizationRuleUpdateRanksRuleOutput {
+	return o
+}
+
+func (o AuthorizationRuleUpdateRanksRuleOutput) ToAuthorizationRuleUpdateRanksRuleOutputWithContext(ctx context.Context) AuthorizationRuleUpdateRanksRuleOutput {
+	return o
+}
+
+// Authorization rule ID
+func (o AuthorizationRuleUpdateRanksRuleOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleUpdateRanksRule) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// The rank (priority) in relation to other rules. Lower rank is higher priority.
+func (o AuthorizationRuleUpdateRanksRuleOutput) Rank() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AuthorizationRuleUpdateRanksRule) *int { return v.Rank }).(pulumi.IntPtrOutput)
+}
+
+type AuthorizationRuleUpdateRanksRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (AuthorizationRuleUpdateRanksRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AuthorizationRuleUpdateRanksRule)(nil)).Elem()
+}
+
+func (o AuthorizationRuleUpdateRanksRuleArrayOutput) ToAuthorizationRuleUpdateRanksRuleArrayOutput() AuthorizationRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthorizationRuleUpdateRanksRuleArrayOutput) ToAuthorizationRuleUpdateRanksRuleArrayOutputWithContext(ctx context.Context) AuthorizationRuleUpdateRanksRuleArrayOutput {
+	return o
+}
+
+func (o AuthorizationRuleUpdateRanksRuleArrayOutput) Index(i pulumi.IntInput) AuthorizationRuleUpdateRanksRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AuthorizationRuleUpdateRanksRule {
+		return vs[0].([]AuthorizationRuleUpdateRanksRule)[vs[1].(int)]
+	}).(AuthorizationRuleUpdateRanksRuleOutput)
+}
+
 type ConditionChildren struct {
 	// Dictionary attribute name
 	AttributeName *string `pulumi:"attributeName"`
@@ -1546,7 +1970,7 @@ type ConditionChildren struct {
 	Id *string `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate *bool `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name *string `pulumi:"name"`
 	// Equality operator
 	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
@@ -1584,7 +2008,7 @@ type ConditionChildrenArgs struct {
 	Id pulumi.StringPtrInput `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Equality operator
 	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
@@ -1688,7 +2112,7 @@ func (o ConditionChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v ConditionChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
 }
 
-// Condition name
+// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 func (o ConditionChildrenOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ConditionChildren) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
@@ -1737,7 +2161,7 @@ type ConditionChildrenChildren struct {
 	Id *string `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate *bool `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name *string `pulumi:"name"`
 	// Equality operator
 	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
@@ -1773,7 +2197,7 @@ type ConditionChildrenChildrenArgs struct {
 	Id pulumi.StringPtrInput `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate pulumi.BoolPtrInput `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// Equality operator
 	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
@@ -1872,7 +2296,7 @@ func (o ConditionChildrenChildrenOutput) IsNegate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v ConditionChildrenChildren) *bool { return v.IsNegate }).(pulumi.BoolPtrOutput)
 }
 
-// Condition name
+// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 func (o ConditionChildrenChildrenOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ConditionChildrenChildren) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
@@ -2242,6 +2666,112 @@ func (o PolicySetChildrenChildrenArrayOutput) Index(i pulumi.IntInput) PolicySet
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicySetChildrenChildren {
 		return vs[0].([]PolicySetChildrenChildren)[vs[1].(int)]
 	}).(PolicySetChildrenChildrenOutput)
+}
+
+type PolicySetUpdateRanksPolicy struct {
+	// Policy set ID
+	Id *string `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank int `pulumi:"rank"`
+}
+
+// PolicySetUpdateRanksPolicyInput is an input type that accepts PolicySetUpdateRanksPolicyArgs and PolicySetUpdateRanksPolicyOutput values.
+// You can construct a concrete instance of `PolicySetUpdateRanksPolicyInput` via:
+//
+//	PolicySetUpdateRanksPolicyArgs{...}
+type PolicySetUpdateRanksPolicyInput interface {
+	pulumi.Input
+
+	ToPolicySetUpdateRanksPolicyOutput() PolicySetUpdateRanksPolicyOutput
+	ToPolicySetUpdateRanksPolicyOutputWithContext(context.Context) PolicySetUpdateRanksPolicyOutput
+}
+
+type PolicySetUpdateRanksPolicyArgs struct {
+	// Policy set ID
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The rank (priority) in relation to other rules. Lower rank is higher priority.
+	Rank pulumi.IntInput `pulumi:"rank"`
+}
+
+func (PolicySetUpdateRanksPolicyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicySetUpdateRanksPolicy)(nil)).Elem()
+}
+
+func (i PolicySetUpdateRanksPolicyArgs) ToPolicySetUpdateRanksPolicyOutput() PolicySetUpdateRanksPolicyOutput {
+	return i.ToPolicySetUpdateRanksPolicyOutputWithContext(context.Background())
+}
+
+func (i PolicySetUpdateRanksPolicyArgs) ToPolicySetUpdateRanksPolicyOutputWithContext(ctx context.Context) PolicySetUpdateRanksPolicyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicySetUpdateRanksPolicyOutput)
+}
+
+// PolicySetUpdateRanksPolicyArrayInput is an input type that accepts PolicySetUpdateRanksPolicyArray and PolicySetUpdateRanksPolicyArrayOutput values.
+// You can construct a concrete instance of `PolicySetUpdateRanksPolicyArrayInput` via:
+//
+//	PolicySetUpdateRanksPolicyArray{ PolicySetUpdateRanksPolicyArgs{...} }
+type PolicySetUpdateRanksPolicyArrayInput interface {
+	pulumi.Input
+
+	ToPolicySetUpdateRanksPolicyArrayOutput() PolicySetUpdateRanksPolicyArrayOutput
+	ToPolicySetUpdateRanksPolicyArrayOutputWithContext(context.Context) PolicySetUpdateRanksPolicyArrayOutput
+}
+
+type PolicySetUpdateRanksPolicyArray []PolicySetUpdateRanksPolicyInput
+
+func (PolicySetUpdateRanksPolicyArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicySetUpdateRanksPolicy)(nil)).Elem()
+}
+
+func (i PolicySetUpdateRanksPolicyArray) ToPolicySetUpdateRanksPolicyArrayOutput() PolicySetUpdateRanksPolicyArrayOutput {
+	return i.ToPolicySetUpdateRanksPolicyArrayOutputWithContext(context.Background())
+}
+
+func (i PolicySetUpdateRanksPolicyArray) ToPolicySetUpdateRanksPolicyArrayOutputWithContext(ctx context.Context) PolicySetUpdateRanksPolicyArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(PolicySetUpdateRanksPolicyArrayOutput)
+}
+
+type PolicySetUpdateRanksPolicyOutput struct{ *pulumi.OutputState }
+
+func (PolicySetUpdateRanksPolicyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*PolicySetUpdateRanksPolicy)(nil)).Elem()
+}
+
+func (o PolicySetUpdateRanksPolicyOutput) ToPolicySetUpdateRanksPolicyOutput() PolicySetUpdateRanksPolicyOutput {
+	return o
+}
+
+func (o PolicySetUpdateRanksPolicyOutput) ToPolicySetUpdateRanksPolicyOutputWithContext(ctx context.Context) PolicySetUpdateRanksPolicyOutput {
+	return o
+}
+
+// Policy set ID
+func (o PolicySetUpdateRanksPolicyOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v PolicySetUpdateRanksPolicy) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// The rank (priority) in relation to other rules. Lower rank is higher priority.
+func (o PolicySetUpdateRanksPolicyOutput) Rank() pulumi.IntOutput {
+	return o.ApplyT(func(v PolicySetUpdateRanksPolicy) int { return v.Rank }).(pulumi.IntOutput)
+}
+
+type PolicySetUpdateRanksPolicyArrayOutput struct{ *pulumi.OutputState }
+
+func (PolicySetUpdateRanksPolicyArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]PolicySetUpdateRanksPolicy)(nil)).Elem()
+}
+
+func (o PolicySetUpdateRanksPolicyArrayOutput) ToPolicySetUpdateRanksPolicyArrayOutput() PolicySetUpdateRanksPolicyArrayOutput {
+	return o
+}
+
+func (o PolicySetUpdateRanksPolicyArrayOutput) ToPolicySetUpdateRanksPolicyArrayOutputWithContext(ctx context.Context) PolicySetUpdateRanksPolicyArrayOutput {
+	return o
+}
+
+func (o PolicySetUpdateRanksPolicyArrayOutput) Index(i pulumi.IntInput) PolicySetUpdateRanksPolicyOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) PolicySetUpdateRanksPolicy {
+		return vs[0].([]PolicySetUpdateRanksPolicy)[vs[1].(int)]
+	}).(PolicySetUpdateRanksPolicyOutput)
 }
 
 type GetAuthenticationRuleChildren struct {
@@ -3725,7 +4255,7 @@ type GetConditionChildren struct {
 	Id string `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate bool `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name string `pulumi:"name"`
 	// Equality operator
 	Operator string `pulumi:"operator"`
@@ -3761,7 +4291,7 @@ type GetConditionChildrenArgs struct {
 	Id pulumi.StringInput `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Equality operator
 	Operator pulumi.StringInput `pulumi:"operator"`
@@ -3863,7 +4393,7 @@ func (o GetConditionChildrenOutput) IsNegate() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetConditionChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
 }
 
-// Condition name
+// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 func (o GetConditionChildrenOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetConditionChildren) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -3910,7 +4440,7 @@ type GetConditionChildrenChildren struct {
 	Id string `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate bool `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name string `pulumi:"name"`
 	// Equality operator
 	Operator string `pulumi:"operator"`
@@ -3944,7 +4474,7 @@ type GetConditionChildrenChildrenArgs struct {
 	Id pulumi.StringInput `pulumi:"id"`
 	// Indicates whereas this condition is in negate mode
 	IsNegate pulumi.BoolInput `pulumi:"isNegate"`
-	// Condition name
+	// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Equality operator
 	Operator pulumi.StringInput `pulumi:"operator"`
@@ -4041,7 +4571,7 @@ func (o GetConditionChildrenChildrenOutput) IsNegate() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetConditionChildrenChildren) bool { return v.IsNegate }).(pulumi.BoolOutput)
 }
 
-// Condition name
+// Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
 func (o GetConditionChildrenChildrenOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetConditionChildrenChildren) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -4405,20 +4935,28 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenArrayInput)(nil)).Elem(), AuthenticationRuleChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenChildrenInput)(nil)).Elem(), AuthenticationRuleChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthenticationRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleUpdateRanksRuleInput)(nil)).Elem(), AuthenticationRuleUpdateRanksRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthenticationRuleUpdateRanksRuleArrayInput)(nil)).Elem(), AuthenticationRuleUpdateRanksRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenArrayInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenChildrenInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthorizationExceptionRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleUpdateRanksRuleInput)(nil)).Elem(), AuthorizationExceptionRuleUpdateRanksRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationExceptionRuleUpdateRanksRuleArrayInput)(nil)).Elem(), AuthorizationExceptionRuleUpdateRanksRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenArrayInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenChildrenInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleUpdateRanksRuleInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayInput)(nil)).Elem(), AuthorizationGlobalExceptionRuleUpdateRanksRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationProfileAdvancedAttributeInput)(nil)).Elem(), AuthorizationProfileAdvancedAttributeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationProfileAdvancedAttributeArrayInput)(nil)).Elem(), AuthorizationProfileAdvancedAttributeArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenInput)(nil)).Elem(), AuthorizationRuleChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenArrayInput)(nil)).Elem(), AuthorizationRuleChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenChildrenInput)(nil)).Elem(), AuthorizationRuleChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleChildrenChildrenArrayInput)(nil)).Elem(), AuthorizationRuleChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleUpdateRanksRuleInput)(nil)).Elem(), AuthorizationRuleUpdateRanksRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AuthorizationRuleUpdateRanksRuleArrayInput)(nil)).Elem(), AuthorizationRuleUpdateRanksRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenInput)(nil)).Elem(), ConditionChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenArrayInput)(nil)).Elem(), ConditionChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ConditionChildrenChildrenInput)(nil)).Elem(), ConditionChildrenChildrenArgs{})
@@ -4427,6 +4965,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenArrayInput)(nil)).Elem(), PolicySetChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenChildrenInput)(nil)).Elem(), PolicySetChildrenChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetChildrenChildrenArrayInput)(nil)).Elem(), PolicySetChildrenChildrenArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetUpdateRanksPolicyInput)(nil)).Elem(), PolicySetUpdateRanksPolicyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*PolicySetUpdateRanksPolicyArrayInput)(nil)).Elem(), PolicySetUpdateRanksPolicyArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenInput)(nil)).Elem(), GetAuthenticationRuleChildrenArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenArrayInput)(nil)).Elem(), GetAuthenticationRuleChildrenArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetAuthenticationRuleChildrenChildrenInput)(nil)).Elem(), GetAuthenticationRuleChildrenChildrenArgs{})
@@ -4457,20 +4997,28 @@ func init() {
 	pulumi.RegisterOutputType(AuthenticationRuleChildrenArrayOutput{})
 	pulumi.RegisterOutputType(AuthenticationRuleChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(AuthenticationRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthenticationRuleUpdateRanksRuleOutput{})
+	pulumi.RegisterOutputType(AuthenticationRuleUpdateRanksRuleArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenOutput{})
 	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(AuthorizationExceptionRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationExceptionRuleUpdateRanksRuleOutput{})
+	pulumi.RegisterOutputType(AuthorizationExceptionRuleUpdateRanksRuleArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenOutput{})
 	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleUpdateRanksRuleOutput{})
+	pulumi.RegisterOutputType(AuthorizationGlobalExceptionRuleUpdateRanksRuleArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationProfileAdvancedAttributeOutput{})
 	pulumi.RegisterOutputType(AuthorizationProfileAdvancedAttributeArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationRuleChildrenOutput{})
 	pulumi.RegisterOutputType(AuthorizationRuleChildrenArrayOutput{})
 	pulumi.RegisterOutputType(AuthorizationRuleChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(AuthorizationRuleChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(AuthorizationRuleUpdateRanksRuleOutput{})
+	pulumi.RegisterOutputType(AuthorizationRuleUpdateRanksRuleArrayOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenArrayOutput{})
 	pulumi.RegisterOutputType(ConditionChildrenChildrenOutput{})
@@ -4479,6 +5027,8 @@ func init() {
 	pulumi.RegisterOutputType(PolicySetChildrenArrayOutput{})
 	pulumi.RegisterOutputType(PolicySetChildrenChildrenOutput{})
 	pulumi.RegisterOutputType(PolicySetChildrenChildrenArrayOutput{})
+	pulumi.RegisterOutputType(PolicySetUpdateRanksPolicyOutput{})
+	pulumi.RegisterOutputType(PolicySetUpdateRanksPolicyArrayOutput{})
 	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenOutput{})
 	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenArrayOutput{})
 	pulumi.RegisterOutputType(GetAuthenticationRuleChildrenChildrenOutput{})

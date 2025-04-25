@@ -48,25 +48,25 @@ import (
 //						Mask:      pulumi.String("32"),
 //					},
 //				},
-//				ModelName:                                   pulumi.String("Unknown"),
-//				SoftwareVersion:                             pulumi.String("Unknown"),
-//				ProfileName:                                 pulumi.String("Cisco"),
-//				SnmpLinkTrapQuery:                           pulumi.Bool(true),
-//				SnmpMacTrapQuery:                            pulumi.Bool(true),
-//				SnmpPollingInterval:                         pulumi.Int(1200),
-//				SnmpRoCommunity:                             pulumi.String("rocom"),
-//				SnmpVersion:                                 pulumi.String("TWO_C"),
-//				TacacsConnectModeOptions:                    pulumi.String("OFF"),
-//				TacacsSharedSecret:                          pulumi.String("cisco123"),
-//				TrustsecDeviceId:                            pulumi.String("device123"),
-//				TrustsecDevicePassword:                      pulumi.String("cisco123"),
-//				TrustsecRestApiUsername:                     pulumi.String("user123"),
-//				TrustsecRestApiPassword:                     pulumi.String("Cisco123"),
-//				TrustsecEnableModePassword:                  pulumi.String("cisco123"),
-//				TrustsecExecModePassword:                    pulumi.String("cisco123"),
-//				TrustsecExecModeUsername:                    pulumi.String("user456"),
-//				TrustsecIncludeWhenDeployingSgtUpdates:      pulumi.Bool(true),
-//				TrustsecDownloadEnviromentDataEveryXSeconds: pulumi.Int(1000),
+//				ModelName:                                    pulumi.String("Unknown"),
+//				SoftwareVersion:                              pulumi.String("Unknown"),
+//				ProfileName:                                  pulumi.String("Cisco"),
+//				SnmpLinkTrapQuery:                            pulumi.Bool(true),
+//				SnmpMacTrapQuery:                             pulumi.Bool(true),
+//				SnmpPollingInterval:                          pulumi.Int(1200),
+//				SnmpRoCommunity:                              pulumi.String("rocom"),
+//				SnmpVersion:                                  pulumi.String("TWO_C"),
+//				TacacsConnectModeOptions:                     pulumi.String("OFF"),
+//				TacacsSharedSecret:                           pulumi.String("cisco123"),
+//				TrustsecDeviceId:                             pulumi.String("device123"),
+//				TrustsecDevicePassword:                       pulumi.String("cisco123"),
+//				TrustsecRestApiUsername:                      pulumi.String("user123"),
+//				TrustsecRestApiPassword:                      pulumi.String("Cisco123"),
+//				TrustsecEnableModePassword:                   pulumi.String("cisco123"),
+//				TrustsecExecModePassword:                     pulumi.String("cisco123"),
+//				TrustsecExecModeUsername:                     pulumi.String("user456"),
+//				TrustsecIncludeWhenDeployingSgtUpdates:       pulumi.Bool(true),
+//				TrustsecDownloadEnvironmentDataEveryXSeconds: pulumi.Int(1000),
 //				TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds: pulumi.Int(1000),
 //				TrustsecDownloadSgaclListsEveryXSeconds:              pulumi.Int(1000),
 //				TrustsecOtherSgaDevicesToTrustThisDevice:             pulumi.Bool(true),
@@ -150,7 +150,7 @@ type Device struct {
 	// TrustSec device password
 	TrustsecDevicePassword pulumi.StringPtrOutput `pulumi:"trustsecDevicePassword"`
 	// Download environment data every X seconds
-	TrustsecDownloadEnviromentDataEveryXSeconds pulumi.IntPtrOutput `pulumi:"trustsecDownloadEnviromentDataEveryXSeconds"`
+	TrustsecDownloadEnvironmentDataEveryXSeconds pulumi.IntPtrOutput `pulumi:"trustsecDownloadEnvironmentDataEveryXSeconds"`
 	// Download peer authorization policy every X seconds
 	TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds pulumi.IntPtrOutput `pulumi:"trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"`
 	// Download SGACL lists every X seconds
@@ -269,7 +269,7 @@ type deviceState struct {
 	// TrustSec device password
 	TrustsecDevicePassword *string `pulumi:"trustsecDevicePassword"`
 	// Download environment data every X seconds
-	TrustsecDownloadEnviromentDataEveryXSeconds *int `pulumi:"trustsecDownloadEnviromentDataEveryXSeconds"`
+	TrustsecDownloadEnvironmentDataEveryXSeconds *int `pulumi:"trustsecDownloadEnvironmentDataEveryXSeconds"`
 	// Download peer authorization policy every X seconds
 	TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds *int `pulumi:"trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"`
 	// Download SGACL lists every X seconds
@@ -356,7 +356,7 @@ type DeviceState struct {
 	// TrustSec device password
 	TrustsecDevicePassword pulumi.StringPtrInput
 	// Download environment data every X seconds
-	TrustsecDownloadEnviromentDataEveryXSeconds pulumi.IntPtrInput
+	TrustsecDownloadEnvironmentDataEveryXSeconds pulumi.IntPtrInput
 	// Download peer authorization policy every X seconds
 	TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds pulumi.IntPtrInput
 	// Download SGACL lists every X seconds
@@ -447,7 +447,7 @@ type deviceArgs struct {
 	// TrustSec device password
 	TrustsecDevicePassword *string `pulumi:"trustsecDevicePassword"`
 	// Download environment data every X seconds
-	TrustsecDownloadEnviromentDataEveryXSeconds *int `pulumi:"trustsecDownloadEnviromentDataEveryXSeconds"`
+	TrustsecDownloadEnvironmentDataEveryXSeconds *int `pulumi:"trustsecDownloadEnvironmentDataEveryXSeconds"`
 	// Download peer authorization policy every X seconds
 	TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds *int `pulumi:"trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"`
 	// Download SGACL lists every X seconds
@@ -535,7 +535,7 @@ type DeviceArgs struct {
 	// TrustSec device password
 	TrustsecDevicePassword pulumi.StringPtrInput
 	// Download environment data every X seconds
-	TrustsecDownloadEnviromentDataEveryXSeconds pulumi.IntPtrInput
+	TrustsecDownloadEnvironmentDataEveryXSeconds pulumi.IntPtrInput
 	// Download peer authorization policy every X seconds
 	TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds pulumi.IntPtrInput
 	// Download SGACL lists every X seconds
@@ -795,8 +795,8 @@ func (o DeviceOutput) TrustsecDevicePassword() pulumi.StringPtrOutput {
 }
 
 // Download environment data every X seconds
-func (o DeviceOutput) TrustsecDownloadEnviromentDataEveryXSeconds() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *Device) pulumi.IntPtrOutput { return v.TrustsecDownloadEnviromentDataEveryXSeconds }).(pulumi.IntPtrOutput)
+func (o DeviceOutput) TrustsecDownloadEnvironmentDataEveryXSeconds() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.IntPtrOutput { return v.TrustsecDownloadEnvironmentDataEveryXSeconds }).(pulumi.IntPtrOutput)
 }
 
 // Download peer authorization policy every X seconds

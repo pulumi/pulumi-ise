@@ -51,7 +51,7 @@ class DeviceArgs:
                  trustsec_coa_source_host: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_id: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_password: Optional[pulumi.Input[builtins.str]] = None,
-                 trustsec_download_enviroment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
+                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_enable_mode_password: Optional[pulumi.Input[builtins.str]] = None,
@@ -95,7 +95,7 @@ class DeviceArgs:
         :param pulumi.Input[builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[builtins.str] trustsec_device_password: TrustSec device password
-        :param pulumi.Input[builtins.int] trustsec_download_enviroment_data_every_x_seconds: Download environment data every X seconds
+        :param pulumi.Input[builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[builtins.str] trustsec_enable_mode_password: Enable mode password
@@ -166,8 +166,8 @@ class DeviceArgs:
             pulumi.set(__self__, "trustsec_device_id", trustsec_device_id)
         if trustsec_device_password is not None:
             pulumi.set(__self__, "trustsec_device_password", trustsec_device_password)
-        if trustsec_download_enviroment_data_every_x_seconds is not None:
-            pulumi.set(__self__, "trustsec_download_enviroment_data_every_x_seconds", trustsec_download_enviroment_data_every_x_seconds)
+        if trustsec_download_environment_data_every_x_seconds is not None:
+            pulumi.set(__self__, "trustsec_download_environment_data_every_x_seconds", trustsec_download_environment_data_every_x_seconds)
         if trustsec_download_peer_authorization_policy_every_x_seconds is not None:
             pulumi.set(__self__, "trustsec_download_peer_authorization_policy_every_x_seconds", trustsec_download_peer_authorization_policy_every_x_seconds)
         if trustsec_download_sgacl_lists_every_x_seconds is not None:
@@ -542,16 +542,16 @@ class DeviceArgs:
         pulumi.set(self, "trustsec_device_password", value)
 
     @property
-    @pulumi.getter(name="trustsecDownloadEnviromentDataEveryXSeconds")
-    def trustsec_download_enviroment_data_every_x_seconds(self) -> Optional[pulumi.Input[builtins.int]]:
+    @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
+    def trustsec_download_environment_data_every_x_seconds(self) -> Optional[pulumi.Input[builtins.int]]:
         """
         Download environment data every X seconds
         """
-        return pulumi.get(self, "trustsec_download_enviroment_data_every_x_seconds")
+        return pulumi.get(self, "trustsec_download_environment_data_every_x_seconds")
 
-    @trustsec_download_enviroment_data_every_x_seconds.setter
-    def trustsec_download_enviroment_data_every_x_seconds(self, value: Optional[pulumi.Input[builtins.int]]):
-        pulumi.set(self, "trustsec_download_enviroment_data_every_x_seconds", value)
+    @trustsec_download_environment_data_every_x_seconds.setter
+    def trustsec_download_environment_data_every_x_seconds(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "trustsec_download_environment_data_every_x_seconds", value)
 
     @property
     @pulumi.getter(name="trustsecDownloadPeerAuthorizationPolicyEveryXSeconds")
@@ -730,7 +730,7 @@ class _DeviceState:
                  trustsec_coa_source_host: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_id: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_password: Optional[pulumi.Input[builtins.str]] = None,
-                 trustsec_download_enviroment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
+                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_enable_mode_password: Optional[pulumi.Input[builtins.str]] = None,
@@ -774,7 +774,7 @@ class _DeviceState:
         :param pulumi.Input[builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[builtins.str] trustsec_device_password: TrustSec device password
-        :param pulumi.Input[builtins.int] trustsec_download_enviroment_data_every_x_seconds: Download environment data every X seconds
+        :param pulumi.Input[builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[builtins.str] trustsec_enable_mode_password: Enable mode password
@@ -846,8 +846,8 @@ class _DeviceState:
             pulumi.set(__self__, "trustsec_device_id", trustsec_device_id)
         if trustsec_device_password is not None:
             pulumi.set(__self__, "trustsec_device_password", trustsec_device_password)
-        if trustsec_download_enviroment_data_every_x_seconds is not None:
-            pulumi.set(__self__, "trustsec_download_enviroment_data_every_x_seconds", trustsec_download_enviroment_data_every_x_seconds)
+        if trustsec_download_environment_data_every_x_seconds is not None:
+            pulumi.set(__self__, "trustsec_download_environment_data_every_x_seconds", trustsec_download_environment_data_every_x_seconds)
         if trustsec_download_peer_authorization_policy_every_x_seconds is not None:
             pulumi.set(__self__, "trustsec_download_peer_authorization_policy_every_x_seconds", trustsec_download_peer_authorization_policy_every_x_seconds)
         if trustsec_download_sgacl_lists_every_x_seconds is not None:
@@ -1222,16 +1222,16 @@ class _DeviceState:
         pulumi.set(self, "trustsec_device_password", value)
 
     @property
-    @pulumi.getter(name="trustsecDownloadEnviromentDataEveryXSeconds")
-    def trustsec_download_enviroment_data_every_x_seconds(self) -> Optional[pulumi.Input[builtins.int]]:
+    @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
+    def trustsec_download_environment_data_every_x_seconds(self) -> Optional[pulumi.Input[builtins.int]]:
         """
         Download environment data every X seconds
         """
-        return pulumi.get(self, "trustsec_download_enviroment_data_every_x_seconds")
+        return pulumi.get(self, "trustsec_download_environment_data_every_x_seconds")
 
-    @trustsec_download_enviroment_data_every_x_seconds.setter
-    def trustsec_download_enviroment_data_every_x_seconds(self, value: Optional[pulumi.Input[builtins.int]]):
-        pulumi.set(self, "trustsec_download_enviroment_data_every_x_seconds", value)
+    @trustsec_download_environment_data_every_x_seconds.setter
+    def trustsec_download_environment_data_every_x_seconds(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "trustsec_download_environment_data_every_x_seconds", value)
 
     @property
     @pulumi.getter(name="trustsecDownloadPeerAuthorizationPolicyEveryXSeconds")
@@ -1412,7 +1412,7 @@ class Device(pulumi.CustomResource):
                  trustsec_coa_source_host: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_id: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_password: Optional[pulumi.Input[builtins.str]] = None,
-                 trustsec_download_enviroment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
+                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_enable_mode_password: Optional[pulumi.Input[builtins.str]] = None,
@@ -1471,7 +1471,7 @@ class Device(pulumi.CustomResource):
             trustsec_exec_mode_password="cisco123",
             trustsec_exec_mode_username="user456",
             trustsec_include_when_deploying_sgt_updates=True,
-            trustsec_download_enviroment_data_every_x_seconds=1000,
+            trustsec_download_environment_data_every_x_seconds=1000,
             trustsec_download_peer_authorization_policy_every_x_seconds=1000,
             trustsec_download_sgacl_lists_every_x_seconds=1000,
             trustsec_other_sga_devices_to_trust_this_device=True,
@@ -1517,7 +1517,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[builtins.str] trustsec_device_password: TrustSec device password
-        :param pulumi.Input[builtins.int] trustsec_download_enviroment_data_every_x_seconds: Download environment data every X seconds
+        :param pulumi.Input[builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[builtins.str] trustsec_enable_mode_password: Enable mode password
@@ -1582,7 +1582,7 @@ class Device(pulumi.CustomResource):
             trustsec_exec_mode_password="cisco123",
             trustsec_exec_mode_username="user456",
             trustsec_include_when_deploying_sgt_updates=True,
-            trustsec_download_enviroment_data_every_x_seconds=1000,
+            trustsec_download_environment_data_every_x_seconds=1000,
             trustsec_download_peer_authorization_policy_every_x_seconds=1000,
             trustsec_download_sgacl_lists_every_x_seconds=1000,
             trustsec_other_sga_devices_to_trust_this_device=True,
@@ -1641,7 +1641,7 @@ class Device(pulumi.CustomResource):
                  trustsec_coa_source_host: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_id: Optional[pulumi.Input[builtins.str]] = None,
                  trustsec_device_password: Optional[pulumi.Input[builtins.str]] = None,
-                 trustsec_download_enviroment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
+                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
                  trustsec_enable_mode_password: Optional[pulumi.Input[builtins.str]] = None,
@@ -1694,7 +1694,7 @@ class Device(pulumi.CustomResource):
             __props__.__dict__["trustsec_coa_source_host"] = trustsec_coa_source_host
             __props__.__dict__["trustsec_device_id"] = trustsec_device_id
             __props__.__dict__["trustsec_device_password"] = trustsec_device_password
-            __props__.__dict__["trustsec_download_enviroment_data_every_x_seconds"] = trustsec_download_enviroment_data_every_x_seconds
+            __props__.__dict__["trustsec_download_environment_data_every_x_seconds"] = trustsec_download_environment_data_every_x_seconds
             __props__.__dict__["trustsec_download_peer_authorization_policy_every_x_seconds"] = trustsec_download_peer_authorization_policy_every_x_seconds
             __props__.__dict__["trustsec_download_sgacl_lists_every_x_seconds"] = trustsec_download_sgacl_lists_every_x_seconds
             __props__.__dict__["trustsec_enable_mode_password"] = trustsec_enable_mode_password
@@ -1746,7 +1746,7 @@ class Device(pulumi.CustomResource):
             trustsec_coa_source_host: Optional[pulumi.Input[builtins.str]] = None,
             trustsec_device_id: Optional[pulumi.Input[builtins.str]] = None,
             trustsec_device_password: Optional[pulumi.Input[builtins.str]] = None,
-            trustsec_download_enviroment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
+            trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
             trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
             trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[builtins.int]] = None,
             trustsec_enable_mode_password: Optional[pulumi.Input[builtins.str]] = None,
@@ -1795,7 +1795,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[builtins.str] trustsec_device_password: TrustSec device password
-        :param pulumi.Input[builtins.int] trustsec_download_enviroment_data_every_x_seconds: Download environment data every X seconds
+        :param pulumi.Input[builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[builtins.str] trustsec_enable_mode_password: Enable mode password
@@ -1842,7 +1842,7 @@ class Device(pulumi.CustomResource):
         __props__.__dict__["trustsec_coa_source_host"] = trustsec_coa_source_host
         __props__.__dict__["trustsec_device_id"] = trustsec_device_id
         __props__.__dict__["trustsec_device_password"] = trustsec_device_password
-        __props__.__dict__["trustsec_download_enviroment_data_every_x_seconds"] = trustsec_download_enviroment_data_every_x_seconds
+        __props__.__dict__["trustsec_download_environment_data_every_x_seconds"] = trustsec_download_environment_data_every_x_seconds
         __props__.__dict__["trustsec_download_peer_authorization_policy_every_x_seconds"] = trustsec_download_peer_authorization_policy_every_x_seconds
         __props__.__dict__["trustsec_download_sgacl_lists_every_x_seconds"] = trustsec_download_sgacl_lists_every_x_seconds
         __props__.__dict__["trustsec_enable_mode_password"] = trustsec_enable_mode_password
@@ -2090,12 +2090,12 @@ class Device(pulumi.CustomResource):
         return pulumi.get(self, "trustsec_device_password")
 
     @property
-    @pulumi.getter(name="trustsecDownloadEnviromentDataEveryXSeconds")
-    def trustsec_download_enviroment_data_every_x_seconds(self) -> pulumi.Output[Optional[builtins.int]]:
+    @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
+    def trustsec_download_environment_data_every_x_seconds(self) -> pulumi.Output[Optional[builtins.int]]:
         """
         Download environment data every X seconds
         """
-        return pulumi.get(self, "trustsec_download_enviroment_data_every_x_seconds")
+        return pulumi.get(self, "trustsec_download_environment_data_every_x_seconds")
 
     @property
     @pulumi.getter(name="trustsecDownloadPeerAuthorizationPolicyEveryXSeconds")

@@ -59,7 +59,7 @@ public final class GetConditionChildren {
      */
     private Boolean isNegate;
     /**
-     * @return Condition name
+     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     private String name;
@@ -134,7 +134,7 @@ public final class GetConditionChildren {
         return this.isNegate;
     }
     /**
-     * @return Condition name
+     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     public String name() {

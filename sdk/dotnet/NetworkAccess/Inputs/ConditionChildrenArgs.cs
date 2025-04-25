@@ -74,7 +74,7 @@ namespace Pulumi.Ise.NetworkAccess.Inputs
         public Input<bool>? IsNegate { get; set; }
 
         /// <summary>
-        /// Condition name
+        /// Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }

@@ -19,16 +19,21 @@ from . import outputs
 __all__ = [
     'AuthenticationRuleChildren',
     'AuthenticationRuleChildrenChildren',
+    'AuthenticationRuleUpdateRanksRule',
     'AuthorizationExceptionRuleChildren',
     'AuthorizationExceptionRuleChildrenChildren',
+    'AuthorizationExceptionRuleUpdateRanksRule',
     'AuthorizationGlobalExceptionRuleChildren',
     'AuthorizationGlobalExceptionRuleChildrenChildren',
+    'AuthorizationGlobalExceptionRuleUpdateRanksRule',
     'AuthorizationRuleChildren',
     'AuthorizationRuleChildrenChildren',
+    'AuthorizationRuleUpdateRanksRule',
     'ConditionChildren',
     'ConditionChildrenChildren',
     'PolicySetChildren',
     'PolicySetChildrenChildren',
+    'PolicySetUpdateRanksPolicy',
     'TacacsCommandSetCommand',
     'TacacsProfileSessionAttribute',
     'GetAuthenticationRuleChildrenResult',
@@ -326,6 +331,37 @@ class AuthenticationRuleChildrenChildren(dict):
 
 
 @pulumi.output_type
+class AuthenticationRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authentication rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authentication rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+
+@pulumi.output_type
 class AuthorizationExceptionRuleChildren(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -601,6 +637,37 @@ class AuthorizationExceptionRuleChildrenChildren(dict):
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AuthorizationExceptionRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authorization rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
 
 
 @pulumi.output_type
@@ -882,6 +949,37 @@ class AuthorizationGlobalExceptionRuleChildrenChildren(dict):
 
 
 @pulumi.output_type
+class AuthorizationGlobalExceptionRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authorization rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+
+@pulumi.output_type
 class AuthorizationRuleChildren(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -1157,6 +1255,37 @@ class AuthorizationRuleChildrenChildren(dict):
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class AuthorizationRuleUpdateRanksRule(dict):
+    def __init__(__self__, *,
+                 id: Optional[builtins.str] = None,
+                 rank: Optional[builtins.int] = None):
+        """
+        :param builtins.str id: Authorization rule ID
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if rank is not None:
+            pulumi.set(__self__, "rank", rank)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Authorization rule ID
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def rank(self) -> Optional[builtins.int]:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
 
 
 @pulumi.output_type
@@ -1761,6 +1890,36 @@ class PolicySetChildrenChildren(dict):
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class PolicySetUpdateRanksPolicy(dict):
+    def __init__(__self__, *,
+                 rank: builtins.int,
+                 id: Optional[builtins.str] = None):
+        """
+        :param builtins.int rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
+        :param builtins.str id: Policy set ID
+        """
+        pulumi.set(__self__, "rank", rank)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+
+    @property
+    @pulumi.getter
+    def rank(self) -> builtins.int:
+        """
+        The rank (priority) in relation to other rules. Lower rank is higher priority.
+        """
+        return pulumi.get(self, "rank")
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[builtins.str]:
+        """
+        Policy set ID
+        """
+        return pulumi.get(self, "id")
 
 
 @pulumi.output_type

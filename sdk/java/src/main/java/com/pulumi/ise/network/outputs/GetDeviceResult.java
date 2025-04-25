@@ -168,7 +168,7 @@ public final class GetDeviceResult {
      * @return Download environment data every X seconds
      * 
      */
-    private Integer trustsecDownloadEnviromentDataEveryXSeconds;
+    private Integer trustsecDownloadEnvironmentDataEveryXSeconds;
     /**
      * @return Download peer authorization policy every X seconds
      * 
@@ -445,8 +445,8 @@ public final class GetDeviceResult {
      * @return Download environment data every X seconds
      * 
      */
-    public Integer trustsecDownloadEnviromentDataEveryXSeconds() {
-        return this.trustsecDownloadEnviromentDataEveryXSeconds;
+    public Integer trustsecDownloadEnvironmentDataEveryXSeconds() {
+        return this.trustsecDownloadEnvironmentDataEveryXSeconds;
     }
     /**
      * @return Download peer authorization policy every X seconds
@@ -572,7 +572,7 @@ public final class GetDeviceResult {
         private String trustsecCoaSourceHost;
         private String trustsecDeviceId;
         private String trustsecDevicePassword;
-        private Integer trustsecDownloadEnviromentDataEveryXSeconds;
+        private Integer trustsecDownloadEnvironmentDataEveryXSeconds;
         private Integer trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
         private Integer trustsecDownloadSgaclListsEveryXSeconds;
         private String trustsecEnableModePassword;
@@ -618,7 +618,7 @@ public final class GetDeviceResult {
     	      this.trustsecCoaSourceHost = defaults.trustsecCoaSourceHost;
     	      this.trustsecDeviceId = defaults.trustsecDeviceId;
     	      this.trustsecDevicePassword = defaults.trustsecDevicePassword;
-    	      this.trustsecDownloadEnviromentDataEveryXSeconds = defaults.trustsecDownloadEnviromentDataEveryXSeconds;
+    	      this.trustsecDownloadEnvironmentDataEveryXSeconds = defaults.trustsecDownloadEnvironmentDataEveryXSeconds;
     	      this.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds = defaults.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
     	      this.trustsecDownloadSgaclListsEveryXSeconds = defaults.trustsecDownloadSgaclListsEveryXSeconds;
     	      this.trustsecEnableModePassword = defaults.trustsecEnableModePassword;
@@ -880,11 +880,11 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
-        public Builder trustsecDownloadEnviromentDataEveryXSeconds(Integer trustsecDownloadEnviromentDataEveryXSeconds) {
-            if (trustsecDownloadEnviromentDataEveryXSeconds == null) {
-              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecDownloadEnviromentDataEveryXSeconds");
+        public Builder trustsecDownloadEnvironmentDataEveryXSeconds(Integer trustsecDownloadEnvironmentDataEveryXSeconds) {
+            if (trustsecDownloadEnvironmentDataEveryXSeconds == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecDownloadEnvironmentDataEveryXSeconds");
             }
-            this.trustsecDownloadEnviromentDataEveryXSeconds = trustsecDownloadEnviromentDataEveryXSeconds;
+            this.trustsecDownloadEnvironmentDataEveryXSeconds = trustsecDownloadEnvironmentDataEveryXSeconds;
             return this;
         }
         @CustomType.Setter
@@ -1015,7 +1015,7 @@ public final class GetDeviceResult {
             _resultValue.trustsecCoaSourceHost = trustsecCoaSourceHost;
             _resultValue.trustsecDeviceId = trustsecDeviceId;
             _resultValue.trustsecDevicePassword = trustsecDevicePassword;
-            _resultValue.trustsecDownloadEnviromentDataEveryXSeconds = trustsecDownloadEnviromentDataEveryXSeconds;
+            _resultValue.trustsecDownloadEnvironmentDataEveryXSeconds = trustsecDownloadEnvironmentDataEveryXSeconds;
             _resultValue.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds = trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
             _resultValue.trustsecDownloadSgaclListsEveryXSeconds = trustsecDownloadSgaclListsEveryXSeconds;
             _resultValue.trustsecEnableModePassword = trustsecEnableModePassword;

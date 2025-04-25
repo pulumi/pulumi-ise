@@ -84,6 +84,17 @@ export namespace deviceadmin {
         operator?: string;
     }
 
+    export interface AuthenticationRuleUpdateRanksRule {
+        /**
+         * Authentication rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
+    }
+
     export interface AuthorizationExceptionRuleChildren {
         /**
          * Dictionary attribute name
@@ -160,6 +171,17 @@ export namespace deviceadmin {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: string;
+    }
+
+    export interface AuthorizationExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
     }
 
     export interface AuthorizationGlobalExceptionRuleChildren {
@@ -240,6 +262,17 @@ export namespace deviceadmin {
         operator?: string;
     }
 
+    export interface AuthorizationGlobalExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
+    }
+
     export interface AuthorizationRuleChildren {
         /**
          * Dictionary attribute name
@@ -316,6 +349,17 @@ export namespace deviceadmin {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: string;
+    }
+
+    export interface AuthorizationRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
     }
 
     export interface ConditionChildren {
@@ -980,6 +1024,17 @@ export namespace deviceadmin {
         operator?: string;
     }
 
+    export interface PolicySetUpdateRanksPolicy {
+        /**
+         * Policy set ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank: number;
+    }
+
     export interface TacacsCommandSetCommand {
         /**
          * Command arguments
@@ -1282,6 +1337,17 @@ export namespace networkaccess {
         operator?: string;
     }
 
+    export interface AuthenticationRuleUpdateRanksRule {
+        /**
+         * Authentication rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
+    }
+
     export interface AuthorizationExceptionRuleChildren {
         /**
          * Dictionary attribute name
@@ -1360,6 +1426,17 @@ export namespace networkaccess {
         operator?: string;
     }
 
+    export interface AuthorizationExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
+    }
+
     export interface AuthorizationGlobalExceptionRuleChildren {
         /**
          * Dictionary attribute name
@@ -1436,6 +1513,17 @@ export namespace networkaccess {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: string;
+    }
+
+    export interface AuthorizationGlobalExceptionRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
     }
 
     export interface AuthorizationProfileAdvancedAttribute {
@@ -1544,6 +1632,17 @@ export namespace networkaccess {
         operator?: string;
     }
 
+    export interface AuthorizationRuleUpdateRanksRule {
+        /**
+         * Authorization rule ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank?: number;
+    }
+
     export interface ConditionChildren {
         /**
          * Dictionary attribute name
@@ -1583,7 +1682,7 @@ export namespace networkaccess {
          */
         isNegate?: boolean;
         /**
-         * Condition name
+         * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          */
         name?: string;
         /**
@@ -1628,7 +1727,7 @@ export namespace networkaccess {
          */
         isNegate?: boolean;
         /**
-         * Condition name
+         * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          */
         name?: string;
         /**
@@ -1999,7 +2098,7 @@ export namespace networkaccess {
          */
         isNegate: boolean;
         /**
-         * Condition name
+         * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          */
         name: string;
         /**
@@ -2042,7 +2141,7 @@ export namespace networkaccess {
          */
         isNegate: boolean;
         /**
-         * Condition name
+         * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          */
         name: string;
         /**
@@ -2201,6 +2300,17 @@ export namespace networkaccess {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: string;
+    }
+
+    export interface PolicySetUpdateRanksPolicy {
+        /**
+         * Policy set ID
+         */
+        id?: string;
+        /**
+         * The rank (priority) in relation to other rules. Lower rank is higher priority.
+         */
+        rank: number;
     }
 
 }

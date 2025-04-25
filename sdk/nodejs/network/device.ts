@@ -51,7 +51,7 @@ import * as utilities from "../utilities";
  *     trustsecExecModePassword: "cisco123",
  *     trustsecExecModeUsername: "user456",
  *     trustsecIncludeWhenDeployingSgtUpdates: true,
- *     trustsecDownloadEnviromentDataEveryXSeconds: 1000,
+ *     trustsecDownloadEnvironmentDataEveryXSeconds: 1000,
  *     trustsecDownloadPeerAuthorizationPolicyEveryXSeconds: 1000,
  *     trustsecDownloadSgaclListsEveryXSeconds: 1000,
  *     trustsecOtherSgaDevicesToTrustThisDevice: true,
@@ -214,7 +214,7 @@ export class Device extends pulumi.CustomResource {
     /**
      * Download environment data every X seconds
      */
-    public readonly trustsecDownloadEnviromentDataEveryXSeconds!: pulumi.Output<number | undefined>;
+    public readonly trustsecDownloadEnvironmentDataEveryXSeconds!: pulumi.Output<number | undefined>;
     /**
      * Download peer authorization policy every X seconds
      */
@@ -306,7 +306,7 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["trustsecCoaSourceHost"] = state ? state.trustsecCoaSourceHost : undefined;
             resourceInputs["trustsecDeviceId"] = state ? state.trustsecDeviceId : undefined;
             resourceInputs["trustsecDevicePassword"] = state ? state.trustsecDevicePassword : undefined;
-            resourceInputs["trustsecDownloadEnviromentDataEveryXSeconds"] = state ? state.trustsecDownloadEnviromentDataEveryXSeconds : undefined;
+            resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = state ? state.trustsecDownloadEnvironmentDataEveryXSeconds : undefined;
             resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = state ? state.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds : undefined;
             resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = state ? state.trustsecDownloadSgaclListsEveryXSeconds : undefined;
             resourceInputs["trustsecEnableModePassword"] = state ? state.trustsecEnableModePassword : undefined;
@@ -353,7 +353,7 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["trustsecCoaSourceHost"] = args ? args.trustsecCoaSourceHost : undefined;
             resourceInputs["trustsecDeviceId"] = args ? args.trustsecDeviceId : undefined;
             resourceInputs["trustsecDevicePassword"] = args ? args.trustsecDevicePassword : undefined;
-            resourceInputs["trustsecDownloadEnviromentDataEveryXSeconds"] = args ? args.trustsecDownloadEnviromentDataEveryXSeconds : undefined;
+            resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = args ? args.trustsecDownloadEnvironmentDataEveryXSeconds : undefined;
             resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = args ? args.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds : undefined;
             resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = args ? args.trustsecDownloadSgaclListsEveryXSeconds : undefined;
             resourceInputs["trustsecEnableModePassword"] = args ? args.trustsecEnableModePassword : undefined;
@@ -495,7 +495,7 @@ export interface DeviceState {
     /**
      * Download environment data every X seconds
      */
-    trustsecDownloadEnviromentDataEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadEnvironmentDataEveryXSeconds?: pulumi.Input<number>;
     /**
      * Download peer authorization policy every X seconds
      */
@@ -669,7 +669,7 @@ export interface DeviceArgs {
     /**
      * Download environment data every X seconds
      */
-    trustsecDownloadEnviromentDataEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadEnvironmentDataEveryXSeconds?: pulumi.Input<number>;
     /**
      * Download peer authorization policy every X seconds
      */

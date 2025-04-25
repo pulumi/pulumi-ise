@@ -83,7 +83,7 @@ import javax.annotation.Nullable;
  *             .trustsecExecModePassword("cisco123")
  *             .trustsecExecModeUsername("user456")
  *             .trustsecIncludeWhenDeployingSgtUpdates(true)
- *             .trustsecDownloadEnviromentDataEveryXSeconds(1000)
+ *             .trustsecDownloadEnvironmentDataEveryXSeconds(1000)
  *             .trustsecDownloadPeerAuthorizationPolicyEveryXSeconds(1000)
  *             .trustsecDownloadSgaclListsEveryXSeconds(1000)
  *             .trustsecOtherSgaDevicesToTrustThisDevice(true)
@@ -517,15 +517,15 @@ public class Device extends com.pulumi.resources.CustomResource {
      * Download environment data every X seconds
      * 
      */
-    @Export(name="trustsecDownloadEnviromentDataEveryXSeconds", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> trustsecDownloadEnviromentDataEveryXSeconds;
+    @Export(name="trustsecDownloadEnvironmentDataEveryXSeconds", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> trustsecDownloadEnvironmentDataEveryXSeconds;
 
     /**
      * @return Download environment data every X seconds
      * 
      */
-    public Output<Optional<Integer>> trustsecDownloadEnviromentDataEveryXSeconds() {
-        return Codegen.optional(this.trustsecDownloadEnviromentDataEveryXSeconds);
+    public Output<Optional<Integer>> trustsecDownloadEnvironmentDataEveryXSeconds() {
+        return Codegen.optional(this.trustsecDownloadEnvironmentDataEveryXSeconds);
     }
     /**
      * Download peer authorization policy every X seconds

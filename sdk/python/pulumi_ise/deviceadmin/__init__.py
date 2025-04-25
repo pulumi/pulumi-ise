@@ -9,12 +9,16 @@ import typing
 from .allowed_protocols_tacacs import *
 from .authentication_rule import *
 from .authentication_rule_update_rank import *
+from .authentication_rule_update_ranks import *
 from .authorization_exception_rule import *
 from .authorization_exception_rule_update_rank import *
+from .authorization_exception_rule_update_ranks import *
 from .authorization_global_exception_rule import *
 from .authorization_global_exception_rule_update_rank import *
+from .authorization_global_exception_rule_update_ranks import *
 from .authorization_rule import *
 from .authorization_rule_update_rank import *
+from .authorization_rule_update_ranks import *
 from .condition import *
 from .get_allowed_protocols_tacacs import *
 from .get_authentication_rule import *
@@ -28,6 +32,7 @@ from .get_tacacs_profile import *
 from .get_time_and_date_condition import *
 from .policy_set import *
 from .policy_set_update_rank import *
+from .policy_set_update_ranks import *
 from .tacacs_command_set import *
 from .tacacs_profile import *
 from .time_and_date_condition import *

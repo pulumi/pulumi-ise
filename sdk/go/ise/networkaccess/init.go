@@ -27,20 +27,28 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &AuthenticationRule{}
 	case "ise:networkaccess/authenticationRuleUpdateRank:AuthenticationRuleUpdateRank":
 		r = &AuthenticationRuleUpdateRank{}
+	case "ise:networkaccess/authenticationRuleUpdateRanks:AuthenticationRuleUpdateRanks":
+		r = &AuthenticationRuleUpdateRanks{}
 	case "ise:networkaccess/authorizationExceptionRule:AuthorizationExceptionRule":
 		r = &AuthorizationExceptionRule{}
 	case "ise:networkaccess/authorizationExceptionRuleUpdateRank:AuthorizationExceptionRuleUpdateRank":
 		r = &AuthorizationExceptionRuleUpdateRank{}
+	case "ise:networkaccess/authorizationExceptionRuleUpdateRanks:AuthorizationExceptionRuleUpdateRanks":
+		r = &AuthorizationExceptionRuleUpdateRanks{}
 	case "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule":
 		r = &AuthorizationGlobalExceptionRule{}
 	case "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank":
 		r = &AuthorizationGlobalExceptionRuleUpdateRank{}
+	case "ise:networkaccess/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks":
+		r = &AuthorizationGlobalExceptionRuleUpdateRanks{}
 	case "ise:networkaccess/authorizationProfile:AuthorizationProfile":
 		r = &AuthorizationProfile{}
 	case "ise:networkaccess/authorizationRule:AuthorizationRule":
 		r = &AuthorizationRule{}
 	case "ise:networkaccess/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank":
 		r = &AuthorizationRuleUpdateRank{}
+	case "ise:networkaccess/authorizationRuleUpdateRanks:AuthorizationRuleUpdateRanks":
+		r = &AuthorizationRuleUpdateRanks{}
 	case "ise:networkaccess/condition:Condition":
 		r = &Condition{}
 	case "ise:networkaccess/dictionary:Dictionary":
@@ -51,6 +59,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicySet{}
 	case "ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank":
 		r = &PolicySetUpdateRank{}
+	case "ise:networkaccess/policySetUpdateRanks:PolicySetUpdateRanks":
+		r = &PolicySetUpdateRanks{}
 	case "ise:networkaccess/timeAndDateCondition:TimeAndDateCondition":
 		r = &TimeAndDateCondition{}
 	default:
@@ -83,6 +93,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
+		"networkaccess/authenticationRuleUpdateRanks",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
 		"networkaccess/authorizationExceptionRule",
 		&module{version},
 	)
@@ -93,12 +108,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
+		"networkaccess/authorizationExceptionRuleUpdateRanks",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
 		"networkaccess/authorizationGlobalExceptionRule",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
 		"networkaccess/authorizationGlobalExceptionRuleUpdateRank",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/authorizationGlobalExceptionRuleUpdateRanks",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -114,6 +139,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"networkaccess/authorizationRuleUpdateRank",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/authorizationRuleUpdateRanks",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -139,6 +169,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"networkaccess/policySetUpdateRank",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/policySetUpdateRanks",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
