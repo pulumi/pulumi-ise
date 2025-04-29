@@ -450,6 +450,9 @@ class _TimeAndDateConditionState:
 
 
 class TimeAndDateCondition(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/timeAndDateCondition:TimeAndDateCondition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

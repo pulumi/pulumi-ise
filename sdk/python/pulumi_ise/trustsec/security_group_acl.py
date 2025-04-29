@@ -193,6 +193,9 @@ class _SecurityGroupAclState:
 
 
 class SecurityGroupAcl(pulumi.CustomResource):
+
+    pulumi_type = "ise:trustsec/securityGroupAcl:SecurityGroupAcl"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

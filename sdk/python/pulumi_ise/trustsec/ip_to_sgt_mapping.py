@@ -290,6 +290,9 @@ class _IpToSgtMappingState:
 
 
 class IpToSgtMapping(pulumi.CustomResource):
+
+    pulumi_type = "ise:trustsec/ipToSgtMapping:IpToSgtMapping"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

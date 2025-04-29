@@ -90,6 +90,9 @@ class _ActiveDirectoryJoinDomainWithAllNodesState:
 
 
 class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

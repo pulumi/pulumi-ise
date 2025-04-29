@@ -2510,6 +2510,9 @@ class _AllowedProtocolsState:
 
 
 class AllowedProtocols(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/allowedProtocols:AllowedProtocols"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -67,6 +67,9 @@ class _LicenseTierStateState:
 
 
 class LicenseTierState(pulumi.CustomResource):
+
+    pulumi_type = "ise:system/licenseTierState:LicenseTierState"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

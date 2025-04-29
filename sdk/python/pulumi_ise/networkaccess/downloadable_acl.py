@@ -161,6 +161,9 @@ class _DownloadableAclState:
 
 
 class DownloadableAcl(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/downloadableAcl:DownloadableAcl"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

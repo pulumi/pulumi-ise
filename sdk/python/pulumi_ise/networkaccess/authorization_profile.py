@@ -1100,6 +1100,9 @@ class _AuthorizationProfileState:
 
 
 class AuthorizationProfile(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/authorizationProfile:AuthorizationProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -489,6 +489,9 @@ class _InternalUserState:
 
 
 class InternalUser(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/internalUser:InternalUser"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

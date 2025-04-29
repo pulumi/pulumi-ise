@@ -130,6 +130,9 @@ class _UserIdentityGroupState:
 
 
 class UserIdentityGroup(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/userIdentityGroup:UserIdentityGroup"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

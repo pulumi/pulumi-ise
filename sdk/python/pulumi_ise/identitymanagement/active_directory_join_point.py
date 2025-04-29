@@ -1095,6 +1095,9 @@ class _ActiveDirectoryJoinPointState:
 
 
 class ActiveDirectoryJoinPoint(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

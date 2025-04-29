@@ -500,6 +500,9 @@ class _AuthorizationGlobalExceptionRuleState:
 
 
 class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
+
+    pulumi_type = "ise:deviceadmin/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
