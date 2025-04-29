@@ -256,6 +256,9 @@ class _RepositoryState:
 
 
 class Repository(pulumi.CustomResource):
+
+    pulumi_type = "ise:system/repository:Repository"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

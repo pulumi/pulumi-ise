@@ -224,6 +224,9 @@ class _EgressMatrixCellState:
 
 
 class EgressMatrixCell(pulumi.CustomResource):
+
+    pulumi_type = "ise:trustsec/egressMatrixCell:EgressMatrixCell"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

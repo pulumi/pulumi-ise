@@ -262,6 +262,9 @@ class _ActiveDirectoryAddGroupsState:
 
 
 class ActiveDirectoryAddGroups(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/activeDirectoryAddGroups:ActiveDirectoryAddGroups"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

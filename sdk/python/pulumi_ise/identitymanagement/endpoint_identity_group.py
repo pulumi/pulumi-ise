@@ -162,6 +162,9 @@ class _EndpointIdentityGroupState:
 
 
 class EndpointIdentityGroup(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

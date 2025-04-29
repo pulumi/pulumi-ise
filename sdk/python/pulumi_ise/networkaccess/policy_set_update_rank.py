@@ -96,6 +96,9 @@ class _PolicySetUpdateRankState:
 
 
 class PolicySetUpdateRank(pulumi.CustomResource):
+
+    pulumi_type = "ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

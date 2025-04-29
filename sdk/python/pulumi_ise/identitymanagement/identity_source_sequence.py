@@ -185,6 +185,9 @@ class _IdentitySourceSequenceState:
 
 
 class IdentitySourceSequence(pulumi.CustomResource):
+
+    pulumi_type = "ise:identitymanagement/identitySourceSequence:IdentitySourceSequence"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

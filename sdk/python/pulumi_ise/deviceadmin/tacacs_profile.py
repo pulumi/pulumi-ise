@@ -124,6 +124,9 @@ class _TacacsProfileState:
 
 
 class TacacsProfile(pulumi.CustomResource):
+
+    pulumi_type = "ise:deviceadmin/tacacsProfile:TacacsProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
