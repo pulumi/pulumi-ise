@@ -562,10 +562,8 @@ class _AuthorizationRuleState:
         pulumi.set(self, "state", value)
 
 
+@pulumi.type_token("ise:networkaccess/authorizationRule:AuthorizationRule")
 class AuthorizationRule(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/authorizationRule:AuthorizationRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

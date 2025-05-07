@@ -285,10 +285,8 @@ class _CertificateAuthenticationProfileState:
         pulumi.set(self, "username_from", value)
 
 
+@pulumi.type_token("ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile")
 class CertificateAuthenticationProfile(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

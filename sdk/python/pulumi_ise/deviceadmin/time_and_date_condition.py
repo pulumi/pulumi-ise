@@ -449,10 +449,8 @@ class _TimeAndDateConditionState:
         pulumi.set(self, "week_days_exceptions", value)
 
 
+@pulumi.type_token("ise:deviceadmin/timeAndDateCondition:TimeAndDateCondition")
 class TimeAndDateCondition(pulumi.CustomResource):
-
-    pulumi_type = "ise:deviceadmin/timeAndDateCondition:TimeAndDateCondition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

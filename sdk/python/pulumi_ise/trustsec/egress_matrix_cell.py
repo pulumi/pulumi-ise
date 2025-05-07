@@ -223,10 +223,8 @@ class _EgressMatrixCellState:
         pulumi.set(self, "source_sgt_id", value)
 
 
+@pulumi.type_token("ise:trustsec/egressMatrixCell:EgressMatrixCell")
 class EgressMatrixCell(pulumi.CustomResource):
-
-    pulumi_type = "ise:trustsec/egressMatrixCell:EgressMatrixCell"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

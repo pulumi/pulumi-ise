@@ -1094,10 +1094,8 @@ class _ActiveDirectoryJoinPointState:
         pulumi.set(self, "unreachable_domains_behaviour", value)
 
 
+@pulumi.type_token("ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint")
 class ActiveDirectoryJoinPoint(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

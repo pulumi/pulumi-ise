@@ -488,10 +488,8 @@ class _InternalUserState:
         pulumi.set(self, "password_never_expires", value)
 
 
+@pulumi.type_token("ise:identitymanagement/internalUser:InternalUser")
 class InternalUser(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/internalUser:InternalUser"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

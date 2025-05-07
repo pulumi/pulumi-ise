@@ -123,10 +123,8 @@ class _TacacsProfileState:
         pulumi.set(self, "session_attributes", value)
 
 
+@pulumi.type_token("ise:deviceadmin/tacacsProfile:TacacsProfile")
 class TacacsProfile(pulumi.CustomResource):
-
-    pulumi_type = "ise:deviceadmin/tacacsProfile:TacacsProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

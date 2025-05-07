@@ -129,10 +129,8 @@ class _UserIdentityGroupState:
         pulumi.set(self, "parent", value)
 
 
+@pulumi.type_token("ise:identitymanagement/userIdentityGroup:UserIdentityGroup")
 class UserIdentityGroup(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/userIdentityGroup:UserIdentityGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

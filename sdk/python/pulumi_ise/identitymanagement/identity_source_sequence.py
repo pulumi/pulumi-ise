@@ -184,10 +184,8 @@ class _IdentitySourceSequenceState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("ise:identitymanagement/identitySourceSequence:IdentitySourceSequence")
 class IdentitySourceSequence(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/identitySourceSequence:IdentitySourceSequence"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

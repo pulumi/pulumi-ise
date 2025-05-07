@@ -627,10 +627,8 @@ class _AuthenticationRuleState:
         pulumi.set(self, "state", value)
 
 
+@pulumi.type_token("ise:networkaccess/authenticationRule:AuthenticationRule")
 class AuthenticationRule(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/authenticationRule:AuthenticationRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
