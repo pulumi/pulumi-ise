@@ -3246,6 +3246,9 @@
                 "type": "string",
                 "description": "Username for the ISE instance. This can also be set as the ISE_USERNAME environment variable.\n"
             }
+        },
+        "methods": {
+            "terraformConfig": "pulumi:providers:ise/terraformConfig"
         }
     },
     "resources": {
@@ -15742,6 +15745,35 @@
                     "sgt",
                     "subnet",
                     "vn"
+                ],
+                "type": "object"
+            }
+        },
+        "pulumi:providers:ise/terraformConfig": {
+            "description": "This function returns a Terraform config object with terraform-namecased keys,to be used with the Terraform Module Provider.",
+            "inputs": {
+                "properties": {
+                    "__self__": {
+                        "type": "ref",
+                        "$ref": "#/resources/pulumi:providers:ise"
+                    }
+                },
+                "type": "pulumi:providers:ise/terraformConfig",
+                "required": [
+                    "__self__"
+                ]
+            },
+            "outputs": {
+                "properties": {
+                    "result": {
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        },
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "result"
                 ],
                 "type": "object"
             }
