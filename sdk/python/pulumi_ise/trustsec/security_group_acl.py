@@ -192,10 +192,8 @@ class _SecurityGroupAclState:
         pulumi.set(self, "read_only", value)
 
 
+@pulumi.type_token("ise:trustsec/securityGroupAcl:SecurityGroupAcl")
 class SecurityGroupAcl(pulumi.CustomResource):
-
-    pulumi_type = "ise:trustsec/securityGroupAcl:SecurityGroupAcl"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

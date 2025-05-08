@@ -289,10 +289,8 @@ class _IpToSgtMappingState:
         pulumi.set(self, "sgt", value)
 
 
+@pulumi.type_token("ise:trustsec/ipToSgtMapping:IpToSgtMapping")
 class IpToSgtMapping(pulumi.CustomResource):
-
-    pulumi_type = "ise:trustsec/ipToSgtMapping:IpToSgtMapping"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

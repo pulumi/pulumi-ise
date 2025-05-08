@@ -128,10 +128,8 @@ class _DeviceGroupState:
         pulumi.set(self, "root_group", value)
 
 
+@pulumi.type_token("ise:network/deviceGroup:DeviceGroup")
 class DeviceGroup(pulumi.CustomResource):
-
-    pulumi_type = "ise:network/deviceGroup:DeviceGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

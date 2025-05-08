@@ -370,10 +370,8 @@ class _ConditionState:
         pulumi.set(self, "operator", value)
 
 
+@pulumi.type_token("ise:networkaccess/condition:Condition")
 class Condition(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/condition:Condition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

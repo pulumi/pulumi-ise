@@ -255,10 +255,8 @@ class _RepositoryState:
         pulumi.set(self, "user_name", value)
 
 
+@pulumi.type_token("ise:system/repository:Repository")
 class Repository(pulumi.CustomResource):
-
-    pulumi_type = "ise:system/repository:Repository"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

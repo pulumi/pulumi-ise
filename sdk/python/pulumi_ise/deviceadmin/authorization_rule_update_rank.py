@@ -126,10 +126,8 @@ class _AuthorizationRuleUpdateRankState:
         pulumi.set(self, "rule_id", value)
 
 
+@pulumi.type_token("ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank")
 class AuthorizationRuleUpdateRank(pulumi.CustomResource):
-
-    pulumi_type = "ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -95,10 +95,8 @@ class _PolicySetUpdateRankState:
         pulumi.set(self, "rank", value)
 
 
+@pulumi.type_token("ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank")
 class PolicySetUpdateRank(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/policySetUpdateRank:PolicySetUpdateRank"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -1099,10 +1099,8 @@ class _AuthorizationProfileState:
         pulumi.set(self, "web_redirection_type", value)
 
 
+@pulumi.type_token("ise:networkaccess/authorizationProfile:AuthorizationProfile")
 class AuthorizationProfile(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/authorizationProfile:AuthorizationProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
