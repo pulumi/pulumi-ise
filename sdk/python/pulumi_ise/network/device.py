@@ -1378,10 +1378,8 @@ class _DeviceState:
         pulumi.set(self, "trustsec_send_configuration_to_device_using", value)
 
 
+@pulumi.type_token("ise:network/device:Device")
 class Device(pulumi.CustomResource):
-
-    pulumi_type = "ise:network/device:Device"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

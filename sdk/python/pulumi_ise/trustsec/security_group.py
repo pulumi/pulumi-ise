@@ -192,10 +192,8 @@ class _SecurityGroupState:
         pulumi.set(self, "value", value)
 
 
+@pulumi.type_token("ise:trustsec/securityGroup:SecurityGroup")
 class SecurityGroup(pulumi.CustomResource):
-
-    pulumi_type = "ise:trustsec/securityGroup:SecurityGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

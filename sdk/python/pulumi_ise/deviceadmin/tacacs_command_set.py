@@ -155,10 +155,8 @@ class _TacacsCommandSetState:
         pulumi.set(self, "permit_unmatched", value)
 
 
+@pulumi.type_token("ise:deviceadmin/tacacsCommandSet:TacacsCommandSet")
 class TacacsCommandSet(pulumi.CustomResource):
-
-    pulumi_type = "ise:deviceadmin/tacacsCommandSet:TacacsCommandSet"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

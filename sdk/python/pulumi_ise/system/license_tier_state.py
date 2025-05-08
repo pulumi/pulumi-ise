@@ -66,10 +66,8 @@ class _LicenseTierStateState:
         pulumi.set(self, "licenses", value)
 
 
+@pulumi.type_token("ise:system/licenseTierState:LicenseTierState")
 class LicenseTierState(pulumi.CustomResource):
-
-    pulumi_type = "ise:system/licenseTierState:LicenseTierState"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

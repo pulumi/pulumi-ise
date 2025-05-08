@@ -562,10 +562,8 @@ class _AuthorizationExceptionRuleState:
         pulumi.set(self, "state", value)
 
 
+@pulumi.type_token("ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule")
 class AuthorizationExceptionRule(pulumi.CustomResource):
-
-    pulumi_type = "ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

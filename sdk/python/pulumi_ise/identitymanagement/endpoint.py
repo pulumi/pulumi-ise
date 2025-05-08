@@ -862,10 +862,8 @@ class _EndpointState:
         pulumi.set(self, "static_profile_assignment_defined", value)
 
 
+@pulumi.type_token("ise:identitymanagement/endpoint:Endpoint")
 class Endpoint(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/endpoint:Endpoint"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

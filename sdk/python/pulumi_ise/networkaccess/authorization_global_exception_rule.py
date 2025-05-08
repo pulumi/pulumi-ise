@@ -499,10 +499,8 @@ class _AuthorizationGlobalExceptionRuleState:
         pulumi.set(self, "state", value)
 
 
+@pulumi.type_token("ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule")
 class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

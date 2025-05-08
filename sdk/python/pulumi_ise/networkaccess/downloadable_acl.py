@@ -160,10 +160,8 @@ class _DownloadableAclState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("ise:networkaccess/downloadableAcl:DownloadableAcl")
 class DownloadableAcl(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/downloadableAcl:DownloadableAcl"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

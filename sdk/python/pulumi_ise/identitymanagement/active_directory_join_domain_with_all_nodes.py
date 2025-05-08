@@ -89,10 +89,8 @@ class _ActiveDirectoryJoinDomainWithAllNodesState:
         pulumi.set(self, "join_point_id", value)
 
 
+@pulumi.type_token("ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes")
 class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
-
-    pulumi_type = "ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

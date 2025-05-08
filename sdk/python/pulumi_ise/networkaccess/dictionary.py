@@ -159,10 +159,8 @@ class _DictionaryState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("ise:networkaccess/dictionary:Dictionary")
 class Dictionary(pulumi.CustomResource):
-
-    pulumi_type = "ise:networkaccess/dictionary:Dictionary"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
