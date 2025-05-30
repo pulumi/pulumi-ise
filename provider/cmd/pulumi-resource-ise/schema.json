@@ -6504,6 +6504,51 @@
                 "type": "object"
             }
         },
+        "ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute": {
+            "description": "This resource can manage an Endpoint Custom Attribute.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.identitymanagement.EndpointCustomAttribute(\"example\", {\n    attributeName: \"isMobile\",\n    attributeType: \"Boolean\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.identitymanagement.EndpointCustomAttribute(\"example\",\n    attribute_name=\"isMobile\",\n    attribute_type=\"Boolean\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.IdentityManagement.EndpointCustomAttribute(\"example\", new()\n    {\n        AttributeName = \"isMobile\",\n        AttributeType = \"Boolean\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/identitymanagement\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := identitymanagement.NewEndpointCustomAttribute(ctx, \"example\", \u0026identitymanagement.EndpointCustomAttributeArgs{\n\t\t\tAttributeName: pulumi.String(\"isMobile\"),\n\t\t\tAttributeType: pulumi.String(\"Boolean\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.identitymanagement.EndpointCustomAttribute;\nimport com.pulumi.ise.identitymanagement.EndpointCustomAttributeArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new EndpointCustomAttribute(\"example\", EndpointCustomAttributeArgs.builder()\n            .attributeName(\"isMobile\")\n            .attributeType(\"Boolean\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:identitymanagement:EndpointCustomAttribute\n    properties:\n      attributeName: isMobile\n      attributeType: Boolean\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute example \"isMobile\"\n```\n\n",
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "The name of the attribute\n"
+                },
+                "attributeType": {
+                    "type": "string",
+                    "description": "Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`\n"
+                }
+            },
+            "required": [
+                "attributeName",
+                "attributeType"
+            ],
+            "inputProperties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "The name of the attribute\n"
+                },
+                "attributeType": {
+                    "type": "string",
+                    "description": "Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`\n"
+                }
+            },
+            "requiredInputs": [
+                "attributeName",
+                "attributeType"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering EndpointCustomAttribute resources.\n",
+                "properties": {
+                    "attributeName": {
+                        "type": "string",
+                        "description": "The name of the attribute\n"
+                    },
+                    "attributeType": {
+                        "type": "string",
+                        "description": "Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup": {
             "description": "This resource can manage an Endpoint Identity Group.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.identitymanagement.EndpointIdentityGroup(\"example\", {\n    name: \"Group1\",\n    description: \"My endpoint identity group\",\n    systemDefined: false,\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.identitymanagement.EndpointIdentityGroup(\"example\",\n    name=\"Group1\",\n    description=\"My endpoint identity group\",\n    system_defined=False)\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.IdentityManagement.EndpointIdentityGroup(\"example\", new()\n    {\n        Name = \"Group1\",\n        Description = \"My endpoint identity group\",\n        SystemDefined = false,\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/identitymanagement\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := identitymanagement.NewEndpointIdentityGroup(ctx, \"example\", \u0026identitymanagement.EndpointIdentityGroupArgs{\n\t\t\tName:          pulumi.String(\"Group1\"),\n\t\t\tDescription:   pulumi.String(\"My endpoint identity group\"),\n\t\t\tSystemDefined: pulumi.Bool(false),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.identitymanagement.EndpointIdentityGroup;\nimport com.pulumi.ise.identitymanagement.EndpointIdentityGroupArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new EndpointIdentityGroup(\"example\", EndpointIdentityGroupArgs.builder()\n            .name(\"Group1\")\n            .description(\"My endpoint identity group\")\n            .systemDefined(false)\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:identitymanagement:EndpointIdentityGroup\n    properties:\n      name: Group1\n      description: My endpoint identity group\n      systemDefined: false\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\n```sh\n$ pulumi import ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -13199,6 +13244,45 @@
                     "staticGroupAssignmentDefined",
                     "staticProfileAssignment",
                     "staticProfileAssignmentDefined"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:identitymanagement/getEndpointCustomAttribute:getEndpointCustomAttribute": {
+            "description": "This data source can read the Endpoint Custom Attribute.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.identitymanagement.getEndpointCustomAttribute({\n    id: \"isMobile\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.identitymanagement.get_endpoint_custom_attribute(id=\"isMobile\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.IdentityManagement.GetEndpointCustomAttribute.Invoke(new()\n    {\n        Id = \"isMobile\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/identitymanagement\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := identitymanagement.LookupEndpointCustomAttribute(ctx, \u0026identitymanagement.LookupEndpointCustomAttributeArgs{\n\t\t\tId: \"isMobile\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;\nimport com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = IdentitymanagementFunctions.getEndpointCustomAttribute(GetEndpointCustomAttributeArgs.builder()\n            .id(\"isMobile\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:identitymanagement:getEndpointCustomAttribute\n      arguments:\n        id: isMobile\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getEndpointCustomAttribute.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getEndpointCustomAttribute.\n",
+                "properties": {
+                    "attributeName": {
+                        "description": "The name of the attribute\n",
+                        "type": "string"
+                    },
+                    "attributeType": {
+                        "description": "Attribute type\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "attributeName",
+                    "attributeType",
+                    "id"
                 ],
                 "type": "object"
             }
