@@ -30,6 +30,11 @@ export type Endpoint = import("./endpoint").Endpoint;
 export const Endpoint: typeof import("./endpoint").Endpoint = null as any;
 utilities.lazyLoad(exports, ["Endpoint"], () => require("./endpoint"));
 
+export { EndpointCustomAttributeArgs, EndpointCustomAttributeState } from "./endpointCustomAttribute";
+export type EndpointCustomAttribute = import("./endpointCustomAttribute").EndpointCustomAttribute;
+export const EndpointCustomAttribute: typeof import("./endpointCustomAttribute").EndpointCustomAttribute = null as any;
+utilities.lazyLoad(exports, ["EndpointCustomAttribute"], () => require("./endpointCustomAttribute"));
+
 export { EndpointIdentityGroupArgs, EndpointIdentityGroupState } from "./endpointIdentityGroup";
 export type EndpointIdentityGroup = import("./endpointIdentityGroup").EndpointIdentityGroup;
 export const EndpointIdentityGroup: typeof import("./endpointIdentityGroup").EndpointIdentityGroup = null as any;
@@ -54,6 +59,11 @@ export { GetEndpointArgs, GetEndpointResult, GetEndpointOutputArgs } from "./get
 export const getEndpoint: typeof import("./getEndpoint").getEndpoint = null as any;
 export const getEndpointOutput: typeof import("./getEndpoint").getEndpointOutput = null as any;
 utilities.lazyLoad(exports, ["getEndpoint","getEndpointOutput"], () => require("./getEndpoint"));
+
+export { GetEndpointCustomAttributeArgs, GetEndpointCustomAttributeResult, GetEndpointCustomAttributeOutputArgs } from "./getEndpointCustomAttribute";
+export const getEndpointCustomAttribute: typeof import("./getEndpointCustomAttribute").getEndpointCustomAttribute = null as any;
+export const getEndpointCustomAttributeOutput: typeof import("./getEndpointCustomAttribute").getEndpointCustomAttributeOutput = null as any;
+utilities.lazyLoad(exports, ["getEndpointCustomAttribute","getEndpointCustomAttributeOutput"], () => require("./getEndpointCustomAttribute"));
 
 export { GetEndpointIdentityGroupArgs, GetEndpointIdentityGroupResult, GetEndpointIdentityGroupOutputArgs } from "./getEndpointIdentityGroup";
 export const getEndpointIdentityGroup: typeof import("./getEndpointIdentityGroup").getEndpointIdentityGroup = null as any;
@@ -105,6 +115,8 @@ const _module = {
                 return new CertificateAuthenticationProfile(name, <any>undefined, { urn })
             case "ise:identitymanagement/endpoint:Endpoint":
                 return new Endpoint(name, <any>undefined, { urn })
+            case "ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute":
+                return new EndpointCustomAttribute(name, <any>undefined, { urn })
             case "ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup":
                 return new EndpointIdentityGroup(name, <any>undefined, { urn })
             case "ise:identitymanagement/identitySourceSequence:IdentitySourceSequence":
@@ -123,6 +135,7 @@ pulumi.runtime.registerResourceModule("ise", "identitymanagement/activeDirectory
 pulumi.runtime.registerResourceModule("ise", "identitymanagement/activeDirectoryJoinPoint", _module)
 pulumi.runtime.registerResourceModule("ise", "identitymanagement/certificateAuthenticationProfile", _module)
 pulumi.runtime.registerResourceModule("ise", "identitymanagement/endpoint", _module)
+pulumi.runtime.registerResourceModule("ise", "identitymanagement/endpointCustomAttribute", _module)
 pulumi.runtime.registerResourceModule("ise", "identitymanagement/endpointIdentityGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "identitymanagement/identitySourceSequence", _module)
 pulumi.runtime.registerResourceModule("ise", "identitymanagement/internalUser", _module)

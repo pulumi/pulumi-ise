@@ -16,6 +16,8 @@ import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointPlain
 import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
 import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfilePlainArgs;
 import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
+import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
+import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributePlainArgs;
 import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
 import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupPlainArgs;
 import com.pulumi.ise.identitymanagement.inputs.GetEndpointPlainArgs;
@@ -28,6 +30,7 @@ import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupPlainArgs;
 import com.pulumi.ise.identitymanagement.outputs.GetActiveDirectoryGroupsByDomainResult;
 import com.pulumi.ise.identitymanagement.outputs.GetActiveDirectoryJoinPointResult;
 import com.pulumi.ise.identitymanagement.outputs.GetCertificateAuthenticationProfileResult;
+import com.pulumi.ise.identitymanagement.outputs.GetEndpointCustomAttributeResult;
 import com.pulumi.ise.identitymanagement.outputs.GetEndpointIdentityGroupResult;
 import com.pulumi.ise.identitymanagement.outputs.GetEndpointResult;
 import com.pulumi.ise.identitymanagement.outputs.GetIdentitySourceSequenceResult;
@@ -1063,6 +1066,216 @@ public final class IdentitymanagementFunctions {
      */
     public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:identitymanagement/getEndpoint:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Endpoint Custom Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpointCustomAttribute(GetEndpointCustomAttributeArgs.builder()
+     *             .id("isMobile")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEndpointCustomAttributeResult> getEndpointCustomAttribute(GetEndpointCustomAttributeArgs args) {
+        return getEndpointCustomAttribute(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Endpoint Custom Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpointCustomAttribute(GetEndpointCustomAttributeArgs.builder()
+     *             .id("isMobile")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetEndpointCustomAttributeResult> getEndpointCustomAttributePlain(GetEndpointCustomAttributePlainArgs args) {
+        return getEndpointCustomAttributePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Endpoint Custom Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpointCustomAttribute(GetEndpointCustomAttributeArgs.builder()
+     *             .id("isMobile")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEndpointCustomAttributeResult> getEndpointCustomAttribute(GetEndpointCustomAttributeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getEndpointCustomAttribute:getEndpointCustomAttribute", TypeShape.of(GetEndpointCustomAttributeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Endpoint Custom Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpointCustomAttribute(GetEndpointCustomAttributeArgs.builder()
+     *             .id("isMobile")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEndpointCustomAttributeResult> getEndpointCustomAttribute(GetEndpointCustomAttributeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:identitymanagement/getEndpointCustomAttribute:getEndpointCustomAttribute", TypeShape.of(GetEndpointCustomAttributeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Endpoint Custom Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
+     * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IdentitymanagementFunctions.getEndpointCustomAttribute(GetEndpointCustomAttributeArgs.builder()
+     *             .id("isMobile")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetEndpointCustomAttributeResult> getEndpointCustomAttributePlain(GetEndpointCustomAttributePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:identitymanagement/getEndpointCustomAttribute:getEndpointCustomAttribute", TypeShape.of(GetEndpointCustomAttributeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Endpoint Identity Group.

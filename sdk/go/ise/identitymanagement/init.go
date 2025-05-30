@@ -31,6 +31,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &CertificateAuthenticationProfile{}
 	case "ise:identitymanagement/endpoint:Endpoint":
 		r = &Endpoint{}
+	case "ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute":
+		r = &EndpointCustomAttribute{}
 	case "ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup":
 		r = &EndpointIdentityGroup{}
 	case "ise:identitymanagement/identitySourceSequence:IdentitySourceSequence":
@@ -75,6 +77,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"identitymanagement/endpoint",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"identitymanagement/endpointCustomAttribute",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
