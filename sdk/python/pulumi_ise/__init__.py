@@ -238,6 +238,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "identitymanagement/endpointCustomAttribute",
+  "fqn": "pulumi_ise.identitymanagement",
+  "classes": {
+   "ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute": "EndpointCustomAttribute"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "identitymanagement/endpointIdentityGroup",
   "fqn": "pulumi_ise.identitymanagement",
   "classes": {

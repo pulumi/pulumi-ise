@@ -11,11 +11,13 @@ from .active_directory_join_domain_with_all_nodes import *
 from .active_directory_join_point import *
 from .certificate_authentication_profile import *
 from .endpoint import *
+from .endpoint_custom_attribute import *
 from .endpoint_identity_group import *
 from .get_active_directory_groups_by_domain import *
 from .get_active_directory_join_point import *
 from .get_certificate_authentication_profile import *
 from .get_endpoint import *
+from .get_endpoint_custom_attribute import *
 from .get_endpoint_identity_group import *
 from .get_identity_source_sequence import *
 from .get_internal_user import *
