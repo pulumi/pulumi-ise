@@ -57,6 +57,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * ```sh
  * $ pulumi import ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault example &#34;92c1a900-8c01-11e6-996c-525400b48521&#34;
  * ```

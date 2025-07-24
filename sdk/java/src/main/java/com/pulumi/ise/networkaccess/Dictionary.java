@@ -57,6 +57,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * ```sh
  * $ pulumi import ise:networkaccess/dictionary:Dictionary example &#34;Dict1&#34;
  * ```

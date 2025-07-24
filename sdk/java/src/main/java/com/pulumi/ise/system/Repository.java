@@ -61,6 +61,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * ```sh
  * $ pulumi import ise:system/repository:Repository example &#34;repo1&#34;
  * ```

@@ -22,6 +22,8 @@ import * as utilities from "../utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * ```sh
  * $ pulumi import ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault example "92c1a900-8c01-11e6-996c-525400b48521"
  * ```
