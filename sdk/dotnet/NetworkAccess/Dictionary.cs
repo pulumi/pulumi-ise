@@ -35,6 +35,8 @@ namespace Pulumi.Ise.NetworkAccess
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// ```sh
     /// $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
     /// ```

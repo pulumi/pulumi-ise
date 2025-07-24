@@ -254,6 +254,8 @@ class SxpDomainFilter(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import ise:trustsec/sxpDomainFilter:SxpDomainFilter example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
@@ -289,6 +291,8 @@ class SxpDomainFilter(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import ise:trustsec/sxpDomainFilter:SxpDomainFilter example "76d24097-41c4-4558-a4d0-a8c07ac08470"

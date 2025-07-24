@@ -290,6 +290,8 @@ class Repository(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import ise:system/repository:Repository example "repo1"
         ```
@@ -330,6 +332,8 @@ class Repository(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import ise:system/repository:Repository example "repo1"

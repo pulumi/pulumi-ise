@@ -54,6 +54,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * ```sh
  * $ pulumi import ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute example &#34;isMobile&#34;
  * ```

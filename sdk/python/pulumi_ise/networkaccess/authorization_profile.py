@@ -1144,6 +1144,8 @@ class AuthorizationProfile(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import ise:networkaccess/authorizationProfile:AuthorizationProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
@@ -1196,6 +1198,8 @@ class AuthorizationProfile(pulumi.CustomResource):
         This resource can manage an authorization profiles policy element.
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import ise:networkaccess/authorizationProfile:AuthorizationProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
