@@ -66,47 +66,45 @@ export class Condition extends pulumi.CustomResource {
     /**
      * Dictionary attribute name
      */
-    public readonly attributeName!: pulumi.Output<string | undefined>;
+    declare public readonly attributeName: pulumi.Output<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    public readonly attributeValue!: pulumi.Output<string | undefined>;
+    declare public readonly attributeValue: pulumi.Output<string | undefined>;
     /**
      * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      */
-    public readonly childrens!: pulumi.Output<outputs.deviceadmin.ConditionChildren[] | undefined>;
+    declare public readonly childrens: pulumi.Output<outputs.deviceadmin.ConditionChildren[] | undefined>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      */
-    public readonly conditionType!: pulumi.Output<string>;
+    declare public readonly conditionType: pulumi.Output<string>;
     /**
      * Condition description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Dictionary name
      */
-    public readonly dictionaryName!: pulumi.Output<string | undefined>;
+    declare public readonly dictionaryName: pulumi.Output<string | undefined>;
     /**
      * Dictionary value
      */
-    public readonly dictionaryValue!: pulumi.Output<string | undefined>;
+    declare public readonly dictionaryValue: pulumi.Output<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    public readonly isNegate!: pulumi.Output<boolean | undefined>;
+    declare public readonly isNegate: pulumi.Output<boolean | undefined>;
     /**
      * Condition name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
-    public readonly operator!: pulumi.Output<string | undefined>;
+    declare public readonly operator: pulumi.Output<string | undefined>;
 
     /**
      * Create a Condition resource with the given unique name, arguments, and options.
@@ -121,31 +119,31 @@ export class Condition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ConditionState | undefined;
-            resourceInputs["attributeName"] = state ? state.attributeName : undefined;
-            resourceInputs["attributeValue"] = state ? state.attributeValue : undefined;
-            resourceInputs["childrens"] = state ? state.childrens : undefined;
-            resourceInputs["conditionType"] = state ? state.conditionType : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dictionaryName"] = state ? state.dictionaryName : undefined;
-            resourceInputs["dictionaryValue"] = state ? state.dictionaryValue : undefined;
-            resourceInputs["isNegate"] = state ? state.isNegate : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["operator"] = state ? state.operator : undefined;
+            resourceInputs["attributeName"] = state?.attributeName;
+            resourceInputs["attributeValue"] = state?.attributeValue;
+            resourceInputs["childrens"] = state?.childrens;
+            resourceInputs["conditionType"] = state?.conditionType;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dictionaryName"] = state?.dictionaryName;
+            resourceInputs["dictionaryValue"] = state?.dictionaryValue;
+            resourceInputs["isNegate"] = state?.isNegate;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["operator"] = state?.operator;
         } else {
             const args = argsOrState as ConditionArgs | undefined;
-            if ((!args || args.conditionType === undefined) && !opts.urn) {
+            if (args?.conditionType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'conditionType'");
             }
-            resourceInputs["attributeName"] = args ? args.attributeName : undefined;
-            resourceInputs["attributeValue"] = args ? args.attributeValue : undefined;
-            resourceInputs["childrens"] = args ? args.childrens : undefined;
-            resourceInputs["conditionType"] = args ? args.conditionType : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dictionaryName"] = args ? args.dictionaryName : undefined;
-            resourceInputs["dictionaryValue"] = args ? args.dictionaryValue : undefined;
-            resourceInputs["isNegate"] = args ? args.isNegate : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["operator"] = args ? args.operator : undefined;
+            resourceInputs["attributeName"] = args?.attributeName;
+            resourceInputs["attributeValue"] = args?.attributeValue;
+            resourceInputs["childrens"] = args?.childrens;
+            resourceInputs["conditionType"] = args?.conditionType;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dictionaryName"] = args?.dictionaryName;
+            resourceInputs["dictionaryValue"] = args?.dictionaryValue;
+            resourceInputs["isNegate"] = args?.isNegate;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["operator"] = args?.operator;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Condition.__pulumiType, name, resourceInputs, opts);
@@ -169,9 +167,8 @@ export interface ConditionState {
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildren>[]>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      */
     conditionType?: pulumi.Input<string>;
     /**
@@ -195,9 +192,8 @@ export interface ConditionState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
     operator?: pulumi.Input<string>;
 }
@@ -219,9 +215,8 @@ export interface ConditionArgs {
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildren>[]>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      */
     conditionType: pulumi.Input<string>;
     /**
@@ -245,9 +240,8 @@ export interface ConditionArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
     operator?: pulumi.Input<string>;
 }

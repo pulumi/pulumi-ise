@@ -48,17 +48,16 @@ class AuthorizationExceptionRuleArgs:
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         pulumi.set(__self__, "policy_set_id", policy_set_id)
         if childrens is not None:
@@ -204,9 +203,8 @@ class AuthorizationExceptionRuleArgs:
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -218,9 +216,8 @@ class AuthorizationExceptionRuleArgs:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -280,7 +277,8 @@ class AuthorizationExceptionRuleArgs:
     @pulumi.getter
     def state(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        The state that the rule is in. A disabled rule cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 
@@ -318,18 +316,17 @@ class _AuthorizationExceptionRuleState:
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         if childrens is not None:
             pulumi.set(__self__, "childrens", childrens)
@@ -464,9 +461,8 @@ class _AuthorizationExceptionRuleState:
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -478,9 +474,8 @@ class _AuthorizationExceptionRuleState:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -552,7 +547,8 @@ class _AuthorizationExceptionRuleState:
     @pulumi.getter
     def state(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        The state that the rule is in. A disabled rule cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 
@@ -627,18 +623,17 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         ...
     @overload
@@ -778,18 +773,17 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.str] profile: Device admin profiles control the initial login session of the device administrator
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -881,9 +875,8 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -891,9 +884,8 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -941,7 +933,8 @@ class AuthorizationExceptionRule(pulumi.CustomResource):
     @pulumi.getter
     def state(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        The state that the rule is in. A disabled rule cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 

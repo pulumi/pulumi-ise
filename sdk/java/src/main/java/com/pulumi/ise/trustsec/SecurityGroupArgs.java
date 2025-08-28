@@ -79,14 +79,16 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * `-1` to auto-generate - Range: `-1`-`65519`
+     * `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      * 
      */
     @Import(name="value", required=true)
     private Output<Integer> value;
 
     /**
-     * @return `-1` to auto-generate - Range: `-1`-`65519`
+     * @return `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      * 
      */
     public Output<Integer> value() {
@@ -206,7 +208,8 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param value `-1` to auto-generate - Range: `-1`-`65519`
+         * @param value `-1` to auto-generate
+         *   - Range: `-1`-`65519`
          * 
          * @return builder
          * 
@@ -217,7 +220,8 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param value `-1` to auto-generate - Range: `-1`-`65519`
+         * @param value `-1` to auto-generate
+         *   - Range: `-1`-`65519`
          * 
          * @return builder
          * 

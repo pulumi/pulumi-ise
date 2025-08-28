@@ -116,18 +116,16 @@ public class Condition extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.childrens);
     }
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      * 
      */
     @Export(name="conditionType", refs={String.class}, tree="[0]")
     private Output<String> conditionType;
 
     /**
-     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      * 
      */
     public Output<String> conditionType() {
@@ -204,18 +202,16 @@ public class Condition extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     @Export(name="operator", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> operator;
 
     /**
-     * @return Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * @return Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     public Output<Optional<String>> operator() {

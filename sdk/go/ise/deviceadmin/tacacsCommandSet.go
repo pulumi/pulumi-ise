@@ -63,7 +63,8 @@ type TacacsCommandSet struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The name of the TACACS command set
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Permit unmatched commands - Default value: `false`
+	// Permit unmatched commands
+	//   - Default value: `false`
 	PermitUnmatched pulumi.BoolOutput `pulumi:"permitUnmatched"`
 }
 
@@ -102,7 +103,8 @@ type tacacsCommandSetState struct {
 	Description *string `pulumi:"description"`
 	// The name of the TACACS command set
 	Name *string `pulumi:"name"`
-	// Permit unmatched commands - Default value: `false`
+	// Permit unmatched commands
+	//   - Default value: `false`
 	PermitUnmatched *bool `pulumi:"permitUnmatched"`
 }
 
@@ -112,7 +114,8 @@ type TacacsCommandSetState struct {
 	Description pulumi.StringPtrInput
 	// The name of the TACACS command set
 	Name pulumi.StringPtrInput
-	// Permit unmatched commands - Default value: `false`
+	// Permit unmatched commands
+	//   - Default value: `false`
 	PermitUnmatched pulumi.BoolPtrInput
 }
 
@@ -126,7 +129,8 @@ type tacacsCommandSetArgs struct {
 	Description *string `pulumi:"description"`
 	// The name of the TACACS command set
 	Name *string `pulumi:"name"`
-	// Permit unmatched commands - Default value: `false`
+	// Permit unmatched commands
+	//   - Default value: `false`
 	PermitUnmatched *bool `pulumi:"permitUnmatched"`
 }
 
@@ -137,7 +141,8 @@ type TacacsCommandSetArgs struct {
 	Description pulumi.StringPtrInput
 	// The name of the TACACS command set
 	Name pulumi.StringPtrInput
-	// Permit unmatched commands - Default value: `false`
+	// Permit unmatched commands
+	//   - Default value: `false`
 	PermitUnmatched pulumi.BoolPtrInput
 }
 
@@ -242,7 +247,8 @@ func (o TacacsCommandSetOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TacacsCommandSet) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Permit unmatched commands - Default value: `false`
+// Permit unmatched commands
+//   - Default value: `false`
 func (o TacacsCommandSetOutput) PermitUnmatched() pulumi.BoolOutput {
 	return o.ApplyT(func(v *TacacsCommandSet) pulumi.BoolOutput { return v.PermitUnmatched }).(pulumi.BoolOutput)
 }

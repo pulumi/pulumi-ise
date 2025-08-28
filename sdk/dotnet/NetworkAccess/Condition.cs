@@ -67,9 +67,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<ImmutableArray<Outputs.ConditionChildren>> Childrens { get; private set; } = null!;
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-        /// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         /// </summary>
         [Output("conditionType")]
         public Output<string> ConditionType { get; private set; } = null!;
@@ -105,9 +104,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Output("operator")]
         public Output<string?> Operator { get; private set; } = null!;
@@ -183,9 +181,8 @@ namespace Pulumi.Ise.NetworkAccess
         }
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-        /// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         /// </summary>
         [Input("conditionType", required: true)]
         public Input<string> ConditionType { get; set; } = null!;
@@ -221,9 +218,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Input("operator")]
         public Input<string>? Operator { get; set; }
@@ -261,9 +257,8 @@ namespace Pulumi.Ise.NetworkAccess
         }
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-        /// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         /// </summary>
         [Input("conditionType")]
         public Input<string>? ConditionType { get; set; }
@@ -299,9 +294,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Input("operator")]
         public Input<string>? Operator { get; set; }

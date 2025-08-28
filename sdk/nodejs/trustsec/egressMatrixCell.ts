@@ -60,29 +60,33 @@ export class EgressMatrixCell extends pulumi.CustomResource {
     }
 
     /**
-     * Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+     * Can be used only if sgacls not specified.
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     *   - Default value: `NONE`
      */
-    public readonly defaultRule!: pulumi.Output<string>;
+    declare public readonly defaultRule: pulumi.Output<string>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Destination Trustsec Security Group ID
      */
-    public readonly destinationSgtId!: pulumi.Output<string>;
+    declare public readonly destinationSgtId: pulumi.Output<string>;
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      */
-    public readonly matrixCellStatus!: pulumi.Output<string>;
+    declare public readonly matrixCellStatus: pulumi.Output<string>;
     /**
      * List of TrustSec Security Groups ACLs
      */
-    public readonly sgacls!: pulumi.Output<string[] | undefined>;
+    declare public readonly sgacls: pulumi.Output<string[] | undefined>;
     /**
      * Source Trustsec Security Group ID
      */
-    public readonly sourceSgtId!: pulumi.Output<string>;
+    declare public readonly sourceSgtId: pulumi.Output<string>;
 
     /**
      * Create a EgressMatrixCell resource with the given unique name, arguments, and options.
@@ -97,26 +101,26 @@ export class EgressMatrixCell extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EgressMatrixCellState | undefined;
-            resourceInputs["defaultRule"] = state ? state.defaultRule : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinationSgtId"] = state ? state.destinationSgtId : undefined;
-            resourceInputs["matrixCellStatus"] = state ? state.matrixCellStatus : undefined;
-            resourceInputs["sgacls"] = state ? state.sgacls : undefined;
-            resourceInputs["sourceSgtId"] = state ? state.sourceSgtId : undefined;
+            resourceInputs["defaultRule"] = state?.defaultRule;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinationSgtId"] = state?.destinationSgtId;
+            resourceInputs["matrixCellStatus"] = state?.matrixCellStatus;
+            resourceInputs["sgacls"] = state?.sgacls;
+            resourceInputs["sourceSgtId"] = state?.sourceSgtId;
         } else {
             const args = argsOrState as EgressMatrixCellArgs | undefined;
-            if ((!args || args.destinationSgtId === undefined) && !opts.urn) {
+            if (args?.destinationSgtId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'destinationSgtId'");
             }
-            if ((!args || args.sourceSgtId === undefined) && !opts.urn) {
+            if (args?.sourceSgtId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sourceSgtId'");
             }
-            resourceInputs["defaultRule"] = args ? args.defaultRule : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinationSgtId"] = args ? args.destinationSgtId : undefined;
-            resourceInputs["matrixCellStatus"] = args ? args.matrixCellStatus : undefined;
-            resourceInputs["sgacls"] = args ? args.sgacls : undefined;
-            resourceInputs["sourceSgtId"] = args ? args.sourceSgtId : undefined;
+            resourceInputs["defaultRule"] = args?.defaultRule;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinationSgtId"] = args?.destinationSgtId;
+            resourceInputs["matrixCellStatus"] = args?.matrixCellStatus;
+            resourceInputs["sgacls"] = args?.sgacls;
+            resourceInputs["sourceSgtId"] = args?.sourceSgtId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(EgressMatrixCell.__pulumiType, name, resourceInputs, opts);
@@ -128,7 +132,9 @@ export class EgressMatrixCell extends pulumi.CustomResource {
  */
 export interface EgressMatrixCellState {
     /**
-     * Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+     * Can be used only if sgacls not specified.
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     *   - Default value: `NONE`
      */
     defaultRule?: pulumi.Input<string>;
     /**
@@ -140,7 +146,9 @@ export interface EgressMatrixCellState {
      */
     destinationSgtId?: pulumi.Input<string>;
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      */
     matrixCellStatus?: pulumi.Input<string>;
     /**
@@ -158,7 +166,9 @@ export interface EgressMatrixCellState {
  */
 export interface EgressMatrixCellArgs {
     /**
-     * Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+     * Can be used only if sgacls not specified.
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     *   - Default value: `NONE`
      */
     defaultRule?: pulumi.Input<string>;
     /**
@@ -170,7 +180,9 @@ export interface EgressMatrixCellArgs {
      */
     destinationSgtId: pulumi.Input<string>;
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      */
     matrixCellStatus?: pulumi.Input<string>;
     /**

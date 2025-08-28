@@ -71,8 +71,10 @@ class EndpointArgs:
         :param pulumi.Input[_builtins.str] name: The name of the endpoint
         :param pulumi.Input[_builtins.str] portal_user: Portal User
         :param pulumi.Input[_builtins.str] profile_id: Profile ID
-        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined - Default value: `true`
-        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined
+                 - Default value: `true`
         """
         pulumi.set(__self__, "mac", mac)
         pulumi.set(__self__, "static_group_assignment", static_group_assignment)
@@ -416,7 +418,8 @@ class EndpointArgs:
     @pulumi.getter(name="staticGroupAssignmentDefined")
     def static_group_assignment_defined(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        staticGroupAssignmentDefined - Default value: `true`
+        staticGroupAssignmentDefined
+          - Default value: `true`
         """
         return pulumi.get(self, "static_group_assignment_defined")
 
@@ -428,7 +431,8 @@ class EndpointArgs:
     @pulumi.getter(name="staticProfileAssignmentDefined")
     def static_profile_assignment_defined(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Static Profile Assignment Defined - Default value: `true`
+        Static Profile Assignment Defined
+          - Default value: `true`
         """
         return pulumi.get(self, "static_profile_assignment_defined")
 
@@ -491,9 +495,11 @@ class _EndpointState:
         :param pulumi.Input[_builtins.str] portal_user: Portal User
         :param pulumi.Input[_builtins.str] profile_id: Profile ID
         :param pulumi.Input[_builtins.bool] static_group_assignment: Static Group Assignment
-        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] static_profile_assignment: Static Profile Assignment
-        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined
+                 - Default value: `true`
         """
         if custom_attributes is not None:
             pulumi.set(__self__, "custom_attributes", custom_attributes)
@@ -828,7 +834,8 @@ class _EndpointState:
     @pulumi.getter(name="staticGroupAssignmentDefined")
     def static_group_assignment_defined(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        staticGroupAssignmentDefined - Default value: `true`
+        staticGroupAssignmentDefined
+          - Default value: `true`
         """
         return pulumi.get(self, "static_group_assignment_defined")
 
@@ -852,7 +859,8 @@ class _EndpointState:
     @pulumi.getter(name="staticProfileAssignmentDefined")
     def static_profile_assignment_defined(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Static Profile Assignment Defined - Default value: `true`
+        Static Profile Assignment Defined
+          - Default value: `true`
         """
         return pulumi.get(self, "static_profile_assignment_defined")
 
@@ -948,9 +956,11 @@ class Endpoint(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] portal_user: Portal User
         :param pulumi.Input[_builtins.str] profile_id: Profile ID
         :param pulumi.Input[_builtins.bool] static_group_assignment: Static Group Assignment
-        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] static_profile_assignment: Static Profile Assignment
-        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined
+                 - Default value: `true`
         """
         ...
     @overload
@@ -1135,9 +1145,11 @@ class Endpoint(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] portal_user: Portal User
         :param pulumi.Input[_builtins.str] profile_id: Profile ID
         :param pulumi.Input[_builtins.bool] static_group_assignment: Static Group Assignment
-        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_group_assignment_defined: staticGroupAssignmentDefined
+                 - Default value: `true`
         :param pulumi.Input[_builtins.bool] static_profile_assignment: Static Profile Assignment
-        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined - Default value: `true`
+        :param pulumi.Input[_builtins.bool] static_profile_assignment_defined: Static Profile Assignment Defined
+                 - Default value: `true`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1359,7 +1371,8 @@ class Endpoint(pulumi.CustomResource):
     @pulumi.getter(name="staticGroupAssignmentDefined")
     def static_group_assignment_defined(self) -> pulumi.Output[_builtins.bool]:
         """
-        staticGroupAssignmentDefined - Default value: `true`
+        staticGroupAssignmentDefined
+          - Default value: `true`
         """
         return pulumi.get(self, "static_group_assignment_defined")
 
@@ -1375,7 +1388,8 @@ class Endpoint(pulumi.CustomResource):
     @pulumi.getter(name="staticProfileAssignmentDefined")
     def static_profile_assignment_defined(self) -> pulumi.Output[_builtins.bool]:
         """
-        Static Profile Assignment Defined - Default value: `true`
+        Static Profile Assignment Defined
+          - Default value: `true`
         """
         return pulumi.get(self, "static_profile_assignment_defined")
 

@@ -22,16 +22,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     public static final ActiveDirectoryJoinPointState Empty = new ActiveDirectoryJoinPointState();
 
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-     * Default value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+     *   - Default value: `Default_Scope`
      * 
      */
     @Import(name="adScopesNames")
     private @Nullable Output<String> adScopesNames;
 
     /**
-     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-     * Default value: `Default_Scope`
+     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+     *   - Default value: `Default_Scope`
      * 
      */
     public Optional<Output<String>> adScopesNames() {
@@ -39,14 +39,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Aging Time - Default value: `5`
+     * Aging Time
+     *   - Default value: `5`
      * 
      */
     @Import(name="agingTime")
     private @Nullable Output<Integer> agingTime;
 
     /**
-     * @return Aging Time - Default value: `5`
+     * @return Aging Time
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> agingTime() {
@@ -69,14 +71,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+     * Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+     *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
      * 
      */
     @Import(name="authProtectionType")
     private @Nullable Output<String> authProtectionType;
 
     /**
-     * @return Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+     * @return Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+     *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
      * 
      */
     public Optional<Output<String>> authProtectionType() {
@@ -159,14 +163,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable Callback For Dial In Client - Default value: `false`
+     * Enable Callback For Dial In Client
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableCallbackForDialinClient")
     private @Nullable Output<Boolean> enableCallbackForDialinClient;
 
     /**
-     * @return Enable Callback For Dial In Client - Default value: `false`
+     * @return Enable Callback For Dial In Client
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableCallbackForDialinClient() {
@@ -174,14 +180,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable Dial In Permission Check - Default value: `false`
+     * Enable Dial In Permission Check
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableDialinPermissionCheck")
     private @Nullable Output<Boolean> enableDialinPermissionCheck;
 
     /**
-     * @return Enable Dial In Permission Check - Default value: `false`
+     * @return Enable Dial In Permission Check
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableDialinPermissionCheck() {
@@ -204,14 +212,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+     * Enable prevent AD account lockout due to too many bad password attempts
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableFailedAuthProtection")
     private @Nullable Output<Boolean> enableFailedAuthProtection;
 
     /**
-     * @return Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+     * @return Enable prevent AD account lockout due to too many bad password attempts
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableFailedAuthProtection() {
@@ -219,14 +229,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable Machine Access - Default value: `true`
+     * Enable Machine Access
+     *   - Default value: `true`
      * 
      */
     @Import(name="enableMachineAccess")
     private @Nullable Output<Boolean> enableMachineAccess;
 
     /**
-     * @return Enable Machine Access - Default value: `true`
+     * @return Enable Machine Access
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> enableMachineAccess() {
@@ -234,14 +246,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable Machine Authentication - Default value: `true`
+     * Enable Machine Authentication
+     *   - Default value: `true`
      * 
      */
     @Import(name="enableMachineAuth")
     private @Nullable Output<Boolean> enableMachineAuth;
 
     /**
-     * @return Enable Machine Authentication - Default value: `true`
+     * @return Enable Machine Authentication
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> enableMachineAuth() {
@@ -249,14 +263,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable Password Change - Default value: `true`
+     * Enable Password Change
+     *   - Default value: `true`
      * 
      */
     @Import(name="enablePassChange")
     private @Nullable Output<Boolean> enablePassChange;
 
     /**
-     * @return Enable Password Change - Default value: `true`
+     * @return Enable Password Change
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> enablePassChange() {
@@ -264,14 +280,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Enable Rewrites - Default value: `false`
+     * Enable Rewrites
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableRewrites")
     private @Nullable Output<Boolean> enableRewrites;
 
     /**
-     * @return Enable Rewrites - Default value: `false`
+     * @return Enable Rewrites
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableRewrites() {
@@ -279,14 +297,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Number of bad password attempts - Default value: `5`
+     * Number of bad password attempts
+     *   - Default value: `5`
      * 
      */
     @Import(name="failedAuthThreshold")
     private @Nullable Output<Integer> failedAuthThreshold;
 
     /**
-     * @return Number of bad password attempts - Default value: `5`
+     * @return Number of bad password attempts
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> failedAuthThreshold() {
@@ -324,14 +344,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+     * Identity Not In AD Behaviour
+     *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
      * 
      */
     @Import(name="identityNotInAdBehaviour")
     private @Nullable Output<String> identityNotInAdBehaviour;
 
     /**
-     * @return Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+     * @return Identity Not In AD Behaviour
+     *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
      * 
      */
     public Optional<Output<String>> identityNotInAdBehaviour() {
@@ -414,14 +436,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Plain Text Authentication - Default value: `false`
+     * Plain Text Authentication
+     *   - Default value: `false`
      * 
      */
     @Import(name="plaintextAuth")
     private @Nullable Output<Boolean> plaintextAuth;
 
     /**
-     * @return Plain Text Authentication - Default value: `false`
+     * @return Plain Text Authentication
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> plaintextAuth() {
@@ -444,14 +468,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+     * Schema
+     *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
      * 
      */
     @Import(name="schema")
     private @Nullable Output<String> schema;
 
     /**
-     * @return Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+     * @return Schema
+     *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
      * 
      */
     public Optional<Output<String>> schema() {
@@ -504,14 +530,16 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
     }
 
     /**
-     * Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+     * Unreachable Domains Behaviour
+     *   - Choices: `PROCEED`, `DROP`
      * 
      */
     @Import(name="unreachableDomainsBehaviour")
     private @Nullable Output<String> unreachableDomainsBehaviour;
 
     /**
-     * @return Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+     * @return Unreachable Domains Behaviour
+     *   - Choices: `PROCEED`, `DROP`
      * 
      */
     public Optional<Output<String>> unreachableDomainsBehaviour() {
@@ -575,8 +603,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-         * Default value: `Default_Scope`
+         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+         *   - Default value: `Default_Scope`
          * 
          * @return builder
          * 
@@ -587,8 +615,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-         * Default value: `Default_Scope`
+         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+         *   - Default value: `Default_Scope`
          * 
          * @return builder
          * 
@@ -598,7 +626,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param agingTime Aging Time - Default value: `5`
+         * @param agingTime Aging Time
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -609,7 +638,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param agingTime Aging Time - Default value: `5`
+         * @param agingTime Aging Time
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -650,7 +680,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param authProtectionType Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+         * @param authProtectionType Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+         *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
          * 
          * @return builder
          * 
@@ -661,7 +692,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param authProtectionType Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+         * @param authProtectionType Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+         *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
          * 
          * @return builder
          * 
@@ -776,7 +808,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableCallbackForDialinClient Enable Callback For Dial In Client - Default value: `false`
+         * @param enableCallbackForDialinClient Enable Callback For Dial In Client
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -787,7 +820,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableCallbackForDialinClient Enable Callback For Dial In Client - Default value: `false`
+         * @param enableCallbackForDialinClient Enable Callback For Dial In Client
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -797,7 +831,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableDialinPermissionCheck Enable Dial In Permission Check - Default value: `false`
+         * @param enableDialinPermissionCheck Enable Dial In Permission Check
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -808,7 +843,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableDialinPermissionCheck Enable Dial In Permission Check - Default value: `false`
+         * @param enableDialinPermissionCheck Enable Dial In Permission Check
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -839,7 +875,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableFailedAuthProtection Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+         * @param enableFailedAuthProtection Enable prevent AD account lockout due to too many bad password attempts
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -850,7 +887,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableFailedAuthProtection Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+         * @param enableFailedAuthProtection Enable prevent AD account lockout due to too many bad password attempts
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -860,7 +898,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableMachineAccess Enable Machine Access - Default value: `true`
+         * @param enableMachineAccess Enable Machine Access
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -871,7 +910,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableMachineAccess Enable Machine Access - Default value: `true`
+         * @param enableMachineAccess Enable Machine Access
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -881,7 +921,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableMachineAuth Enable Machine Authentication - Default value: `true`
+         * @param enableMachineAuth Enable Machine Authentication
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -892,7 +933,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableMachineAuth Enable Machine Authentication - Default value: `true`
+         * @param enableMachineAuth Enable Machine Authentication
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -902,7 +944,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enablePassChange Enable Password Change - Default value: `true`
+         * @param enablePassChange Enable Password Change
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -913,7 +956,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enablePassChange Enable Password Change - Default value: `true`
+         * @param enablePassChange Enable Password Change
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -923,7 +967,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableRewrites Enable Rewrites - Default value: `false`
+         * @param enableRewrites Enable Rewrites
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -934,7 +979,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param enableRewrites Enable Rewrites - Default value: `false`
+         * @param enableRewrites Enable Rewrites
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -944,7 +990,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param failedAuthThreshold Number of bad password attempts - Default value: `5`
+         * @param failedAuthThreshold Number of bad password attempts
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -955,7 +1002,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param failedAuthThreshold Number of bad password attempts - Default value: `5`
+         * @param failedAuthThreshold Number of bad password attempts
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -1017,7 +1065,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param identityNotInAdBehaviour Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+         * @param identityNotInAdBehaviour Identity Not In AD Behaviour
+         *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
          * 
          * @return builder
          * 
@@ -1028,7 +1077,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param identityNotInAdBehaviour Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+         * @param identityNotInAdBehaviour Identity Not In AD Behaviour
+         *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
          * 
          * @return builder
          * 
@@ -1143,7 +1193,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param plaintextAuth Plain Text Authentication - Default value: `false`
+         * @param plaintextAuth Plain Text Authentication
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1154,7 +1205,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param plaintextAuth Plain Text Authentication - Default value: `false`
+         * @param plaintextAuth Plain Text Authentication
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1195,7 +1247,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param schema Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+         * @param schema Schema
+         *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
          * 
          * @return builder
          * 
@@ -1206,7 +1259,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param schema Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+         * @param schema Schema
+         *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
          * 
          * @return builder
          * 
@@ -1279,7 +1333,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param unreachableDomainsBehaviour Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+         * @param unreachableDomainsBehaviour Unreachable Domains Behaviour
+         *   - Choices: `PROCEED`, `DROP`
          * 
          * @return builder
          * 
@@ -1290,7 +1345,8 @@ public final class ActiveDirectoryJoinPointState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param unreachableDomainsBehaviour Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+         * @param unreachableDomainsBehaviour Unreachable Domains Behaviour
+         *   - Choices: `PROCEED`, `DROP`
          * 
          * @return builder
          * 

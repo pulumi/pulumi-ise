@@ -26,7 +26,8 @@ class SecurityGroupArgs:
                  propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SecurityGroup resource.
-        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate - Range: `-1`-`65519`
+        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate
+                 - Range: `-1`-`65519`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.bool] is_read_only: Read-only
         :param pulumi.Input[_builtins.str] name: The name of the security group
@@ -46,7 +47,8 @@ class SecurityGroupArgs:
     @pulumi.getter
     def value(self) -> pulumi.Input[_builtins.int]:
         """
-        `-1` to auto-generate - Range: `-1`-`65519`
+        `-1` to auto-generate
+          - Range: `-1`-`65519`
         """
         return pulumi.get(self, "value")
 
@@ -117,7 +119,8 @@ class _SecurityGroupState:
         :param pulumi.Input[_builtins.bool] is_read_only: Read-only
         :param pulumi.Input[_builtins.str] name: The name of the security group
         :param pulumi.Input[_builtins.bool] propogate_to_apic: Propagate to APIC (ACI)
-        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate - Range: `-1`-`65519`
+        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate
+                 - Range: `-1`-`65519`
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -182,7 +185,8 @@ class _SecurityGroupState:
     @pulumi.getter
     def value(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        `-1` to auto-generate - Range: `-1`-`65519`
+        `-1` to auto-generate
+          - Range: `-1`-`65519`
         """
         return pulumi.get(self, "value")
 
@@ -234,7 +238,8 @@ class SecurityGroup(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] is_read_only: Read-only
         :param pulumi.Input[_builtins.str] name: The name of the security group
         :param pulumi.Input[_builtins.bool] propogate_to_apic: Propagate to APIC (ACI)
-        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate - Range: `-1`-`65519`
+        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate
+                 - Range: `-1`-`65519`
         """
         ...
     @overload
@@ -329,7 +334,8 @@ class SecurityGroup(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] is_read_only: Read-only
         :param pulumi.Input[_builtins.str] name: The name of the security group
         :param pulumi.Input[_builtins.bool] propogate_to_apic: Propagate to APIC (ACI)
-        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate - Range: `-1`-`65519`
+        :param pulumi.Input[_builtins.int] value: `-1` to auto-generate
+                 - Range: `-1`-`65519`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -378,7 +384,8 @@ class SecurityGroup(pulumi.CustomResource):
     @pulumi.getter
     def value(self) -> pulumi.Output[_builtins.int]:
         """
-        `-1` to auto-generate - Range: `-1`-`65519`
+        `-1` to auto-generate
+          - Range: `-1`-`65519`
         """
         return pulumi.get(self, "value")
 

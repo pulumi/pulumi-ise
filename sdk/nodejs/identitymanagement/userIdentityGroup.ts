@@ -59,15 +59,15 @@ export class UserIdentityGroup extends pulumi.CustomResource {
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The name of the user identity group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Parent user identity group, e.g. `NAC Group:NAC:IdentityGroups:User Identity Groups`
      */
-    public readonly parent!: pulumi.Output<string | undefined>;
+    declare public readonly parent: pulumi.Output<string | undefined>;
 
     /**
      * Create a UserIdentityGroup resource with the given unique name, arguments, and options.
@@ -82,14 +82,14 @@ export class UserIdentityGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as UserIdentityGroupState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["parent"] = state ? state.parent : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["parent"] = state?.parent;
         } else {
             const args = argsOrState as UserIdentityGroupArgs | undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["parent"] = args ? args.parent : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["parent"] = args?.parent;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(UserIdentityGroup.__pulumiType, name, resourceInputs, opts);

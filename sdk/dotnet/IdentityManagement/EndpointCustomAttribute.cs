@@ -49,7 +49,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string> AttributeName { get; private set; } = null!;
 
         /// <summary>
-        /// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        /// Attribute type
+        ///   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         /// </summary>
         [Output("attributeType")]
         public Output<string> AttributeType { get; private set; } = null!;
@@ -107,7 +108,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string> AttributeName { get; set; } = null!;
 
         /// <summary>
-        /// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        /// Attribute type
+        ///   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         /// </summary>
         [Input("attributeType", required: true)]
         public Input<string> AttributeType { get; set; } = null!;
@@ -127,7 +129,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? AttributeName { get; set; }
 
         /// <summary>
-        /// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        /// Attribute type
+        ///   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         /// </summary>
         [Input("attributeType")]
         public Input<string>? AttributeType { get; set; }

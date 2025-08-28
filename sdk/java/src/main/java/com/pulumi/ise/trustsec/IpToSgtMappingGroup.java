@@ -80,14 +80,16 @@ public class IpToSgtMappingGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.deployTo);
     }
     /**
-     * Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      * 
      */
     @Export(name="deployType", refs={String.class}, tree="[0]")
     private Output<String> deployType;
 
     /**
-     * @return Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * @return Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      * 
      */
     public Output<String> deployType() {

@@ -61,40 +61,41 @@ export class CertificateAuthenticationProfile extends pulumi.CustomResource {
     }
 
     /**
-     * Allow as username - Default value: `false`
+     * Allow as username
+     *   - Default value: `false`
      */
-    public readonly allowedAsUserName!: pulumi.Output<boolean>;
+    declare public readonly allowedAsUserName: pulumi.Output<boolean>;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      */
-    public readonly certificateAttributeName!: pulumi.Output<string>;
+    declare public readonly certificateAttributeName: pulumi.Output<string>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      */
-    public readonly externalIdentityStoreName!: pulumi.Output<string>;
+    declare public readonly externalIdentityStoreName: pulumi.Output<string>;
     /**
-     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      */
-    public readonly matchMode!: pulumi.Output<string>;
+    declare public readonly matchMode: pulumi.Output<string>;
     /**
      * The name of the certificate profile
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      */
-    public readonly usernameFrom!: pulumi.Output<string>;
+    declare public readonly usernameFrom: pulumi.Output<string>;
 
     /**
      * Create a CertificateAuthenticationProfile resource with the given unique name, arguments, and options.
@@ -109,22 +110,22 @@ export class CertificateAuthenticationProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CertificateAuthenticationProfileState | undefined;
-            resourceInputs["allowedAsUserName"] = state ? state.allowedAsUserName : undefined;
-            resourceInputs["certificateAttributeName"] = state ? state.certificateAttributeName : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["externalIdentityStoreName"] = state ? state.externalIdentityStoreName : undefined;
-            resourceInputs["matchMode"] = state ? state.matchMode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["usernameFrom"] = state ? state.usernameFrom : undefined;
+            resourceInputs["allowedAsUserName"] = state?.allowedAsUserName;
+            resourceInputs["certificateAttributeName"] = state?.certificateAttributeName;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["externalIdentityStoreName"] = state?.externalIdentityStoreName;
+            resourceInputs["matchMode"] = state?.matchMode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["usernameFrom"] = state?.usernameFrom;
         } else {
             const args = argsOrState as CertificateAuthenticationProfileArgs | undefined;
-            resourceInputs["allowedAsUserName"] = args ? args.allowedAsUserName : undefined;
-            resourceInputs["certificateAttributeName"] = args ? args.certificateAttributeName : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["externalIdentityStoreName"] = args ? args.externalIdentityStoreName : undefined;
-            resourceInputs["matchMode"] = args ? args.matchMode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["usernameFrom"] = args ? args.usernameFrom : undefined;
+            resourceInputs["allowedAsUserName"] = args?.allowedAsUserName;
+            resourceInputs["certificateAttributeName"] = args?.certificateAttributeName;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["externalIdentityStoreName"] = args?.externalIdentityStoreName;
+            resourceInputs["matchMode"] = args?.matchMode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["usernameFrom"] = args?.usernameFrom;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CertificateAuthenticationProfile.__pulumiType, name, resourceInputs, opts);
@@ -136,14 +137,14 @@ export class CertificateAuthenticationProfile extends pulumi.CustomResource {
  */
 export interface CertificateAuthenticationProfileState {
     /**
-     * Allow as username - Default value: `false`
+     * Allow as username
+     *   - Default value: `false`
      */
     allowedAsUserName?: pulumi.Input<boolean>;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      */
     certificateAttributeName?: pulumi.Input<string>;
     /**
@@ -151,13 +152,14 @@ export interface CertificateAuthenticationProfileState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      */
     externalIdentityStoreName?: pulumi.Input<string>;
     /**
-     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      */
     matchMode?: pulumi.Input<string>;
     /**
@@ -165,9 +167,9 @@ export interface CertificateAuthenticationProfileState {
      */
     name?: pulumi.Input<string>;
     /**
-     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      */
     usernameFrom?: pulumi.Input<string>;
 }
@@ -177,14 +179,14 @@ export interface CertificateAuthenticationProfileState {
  */
 export interface CertificateAuthenticationProfileArgs {
     /**
-     * Allow as username - Default value: `false`
+     * Allow as username
+     *   - Default value: `false`
      */
     allowedAsUserName?: pulumi.Input<boolean>;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      */
     certificateAttributeName?: pulumi.Input<string>;
     /**
@@ -192,13 +194,14 @@ export interface CertificateAuthenticationProfileArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      */
     externalIdentityStoreName?: pulumi.Input<string>;
     /**
-     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      */
     matchMode?: pulumi.Input<string>;
     /**
@@ -206,9 +209,9 @@ export interface CertificateAuthenticationProfileArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      */
     usernameFrom?: pulumi.Input<string>;
 }

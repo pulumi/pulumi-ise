@@ -28,20 +28,21 @@ class CertificateAuthenticationProfileArgs:
                  username_from: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CertificateAuthenticationProfile resource.
-        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-               `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-               `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-               `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+                 - Default value: `SUBJECT_COMMON_NAME`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-               value: `[not applicable]`
-        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-               `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+                 - Default value: `[not applicable]`
+        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+                 - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+                 - Default value: `NEVER`
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
-        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-               attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-               Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+                 - Choices: `CERTIFICATE`, `UPN`
+                 - Default value: `CERTIFICATE`
         """
         if allowed_as_user_name is not None:
             pulumi.set(__self__, "allowed_as_user_name", allowed_as_user_name)
@@ -62,7 +63,8 @@ class CertificateAuthenticationProfileArgs:
     @pulumi.getter(name="allowedAsUserName")
     def allowed_as_user_name(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow as username - Default value: `false`
+        Allow as username
+          - Default value: `false`
         """
         return pulumi.get(self, "allowed_as_user_name")
 
@@ -74,10 +76,9 @@ class CertificateAuthenticationProfileArgs:
     @pulumi.getter(name="certificateAttributeName")
     def certificate_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-        `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-        `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-        `SUBJECT_COMMON_NAME`
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+          - Default value: `SUBJECT_COMMON_NAME`
         """
         return pulumi.get(self, "certificate_attribute_name")
 
@@ -101,8 +102,8 @@ class CertificateAuthenticationProfileArgs:
     @pulumi.getter(name="externalIdentityStoreName")
     def external_identity_store_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-        value: `[not applicable]`
+        Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+          - Default value: `[not applicable]`
         """
         return pulumi.get(self, "external_identity_store_name")
 
@@ -114,8 +115,9 @@ class CertificateAuthenticationProfileArgs:
     @pulumi.getter(name="matchMode")
     def match_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-        `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+          - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+          - Default value: `NEVER`
         """
         return pulumi.get(self, "match_mode")
 
@@ -139,9 +141,9 @@ class CertificateAuthenticationProfileArgs:
     @pulumi.getter(name="usernameFrom")
     def username_from(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-        attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-        Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+          - Choices: `CERTIFICATE`, `UPN`
+          - Default value: `CERTIFICATE`
         """
         return pulumi.get(self, "username_from")
 
@@ -162,20 +164,21 @@ class _CertificateAuthenticationProfileState:
                  username_from: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CertificateAuthenticationProfile resources.
-        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-               `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-               `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-               `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+                 - Default value: `SUBJECT_COMMON_NAME`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-               value: `[not applicable]`
-        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-               `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+                 - Default value: `[not applicable]`
+        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+                 - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+                 - Default value: `NEVER`
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
-        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-               attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-               Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+                 - Choices: `CERTIFICATE`, `UPN`
+                 - Default value: `CERTIFICATE`
         """
         if allowed_as_user_name is not None:
             pulumi.set(__self__, "allowed_as_user_name", allowed_as_user_name)
@@ -196,7 +199,8 @@ class _CertificateAuthenticationProfileState:
     @pulumi.getter(name="allowedAsUserName")
     def allowed_as_user_name(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow as username - Default value: `false`
+        Allow as username
+          - Default value: `false`
         """
         return pulumi.get(self, "allowed_as_user_name")
 
@@ -208,10 +212,9 @@ class _CertificateAuthenticationProfileState:
     @pulumi.getter(name="certificateAttributeName")
     def certificate_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-        `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-        `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-        `SUBJECT_COMMON_NAME`
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+          - Default value: `SUBJECT_COMMON_NAME`
         """
         return pulumi.get(self, "certificate_attribute_name")
 
@@ -235,8 +238,8 @@ class _CertificateAuthenticationProfileState:
     @pulumi.getter(name="externalIdentityStoreName")
     def external_identity_store_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-        value: `[not applicable]`
+        Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+          - Default value: `[not applicable]`
         """
         return pulumi.get(self, "external_identity_store_name")
 
@@ -248,8 +251,9 @@ class _CertificateAuthenticationProfileState:
     @pulumi.getter(name="matchMode")
     def match_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-        `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+          - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+          - Default value: `NEVER`
         """
         return pulumi.get(self, "match_mode")
 
@@ -273,9 +277,9 @@ class _CertificateAuthenticationProfileState:
     @pulumi.getter(name="usernameFrom")
     def username_from(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-        attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-        Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+          - Choices: `CERTIFICATE`, `UPN`
+          - Default value: `CERTIFICATE`
         """
         return pulumi.get(self, "username_from")
 
@@ -327,20 +331,21 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-               `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-               `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-               `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+                 - Default value: `SUBJECT_COMMON_NAME`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-               value: `[not applicable]`
-        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-               `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+                 - Default value: `[not applicable]`
+        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+                 - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+                 - Default value: `NEVER`
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
-        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-               attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-               Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+                 - Choices: `CERTIFICATE`, `UPN`
+                 - Default value: `CERTIFICATE`
         """
         ...
     @overload
@@ -437,20 +442,21 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-               `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-               `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-               `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+                 - Default value: `SUBJECT_COMMON_NAME`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-               value: `[not applicable]`
-        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-               `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+                 - Default value: `[not applicable]`
+        :param pulumi.Input[_builtins.str] match_mode: Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+                 - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+                 - Default value: `NEVER`
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
-        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-               attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-               Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        :param pulumi.Input[_builtins.str] username_from: The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+                 - Choices: `CERTIFICATE`, `UPN`
+                 - Default value: `CERTIFICATE`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -469,7 +475,8 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="allowedAsUserName")
     def allowed_as_user_name(self) -> pulumi.Output[_builtins.bool]:
         """
-        Allow as username - Default value: `false`
+        Allow as username
+          - Default value: `false`
         """
         return pulumi.get(self, "allowed_as_user_name")
 
@@ -477,10 +484,9 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="certificateAttributeName")
     def certificate_attribute_name(self) -> pulumi.Output[_builtins.str]:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-        `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-        `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-        `SUBJECT_COMMON_NAME`
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+          - Default value: `SUBJECT_COMMON_NAME`
         """
         return pulumi.get(self, "certificate_attribute_name")
 
@@ -496,8 +502,8 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="externalIdentityStoreName")
     def external_identity_store_name(self) -> pulumi.Output[_builtins.str]:
         """
-        Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-        value: `[not applicable]`
+        Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+          - Default value: `[not applicable]`
         """
         return pulumi.get(self, "external_identity_store_name")
 
@@ -505,8 +511,9 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="matchMode")
     def match_mode(self) -> pulumi.Output[_builtins.str]:
         """
-        Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-        `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+          - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+          - Default value: `NEVER`
         """
         return pulumi.get(self, "match_mode")
 
@@ -522,9 +529,9 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="usernameFrom")
     def username_from(self) -> pulumi.Output[_builtins.str]:
         """
-        The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-        attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-        Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+          - Choices: `CERTIFICATE`, `UPN`
+          - Default value: `CERTIFICATE`
         """
         return pulumi.get(self, "username_from")
 

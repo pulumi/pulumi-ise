@@ -55,7 +55,8 @@ type Dictionary struct {
 
 	// The description of the dictionary
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+	// The dictionary attribute type
+	//   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
 	DictionaryAttrType pulumi.StringOutput `pulumi:"dictionaryAttrType"`
 	// The dictionary name
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -101,7 +102,8 @@ func GetDictionary(ctx *pulumi.Context,
 type dictionaryState struct {
 	// The description of the dictionary
 	Description *string `pulumi:"description"`
-	// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+	// The dictionary attribute type
+	//   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
 	DictionaryAttrType *string `pulumi:"dictionaryAttrType"`
 	// The dictionary name
 	Name *string `pulumi:"name"`
@@ -112,7 +114,8 @@ type dictionaryState struct {
 type DictionaryState struct {
 	// The description of the dictionary
 	Description pulumi.StringPtrInput
-	// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+	// The dictionary attribute type
+	//   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
 	DictionaryAttrType pulumi.StringPtrInput
 	// The dictionary name
 	Name pulumi.StringPtrInput
@@ -127,7 +130,8 @@ func (DictionaryState) ElementType() reflect.Type {
 type dictionaryArgs struct {
 	// The description of the dictionary
 	Description *string `pulumi:"description"`
-	// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+	// The dictionary attribute type
+	//   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
 	DictionaryAttrType string `pulumi:"dictionaryAttrType"`
 	// The dictionary name
 	Name *string `pulumi:"name"`
@@ -139,7 +143,8 @@ type dictionaryArgs struct {
 type DictionaryArgs struct {
 	// The description of the dictionary
 	Description pulumi.StringPtrInput
-	// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+	// The dictionary attribute type
+	//   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
 	DictionaryAttrType pulumi.StringInput
 	// The dictionary name
 	Name pulumi.StringPtrInput
@@ -239,7 +244,8 @@ func (o DictionaryOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Dictionary) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+// The dictionary attribute type
+//   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
 func (o DictionaryOutput) DictionaryAttrType() pulumi.StringOutput {
 	return o.ApplyT(func(v *Dictionary) pulumi.StringOutput { return v.DictionaryAttrType }).(pulumi.StringOutput)
 }

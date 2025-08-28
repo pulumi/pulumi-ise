@@ -126,14 +126,16 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.propogateToApic);
     }
     /**
-     * `-1` to auto-generate - Range: `-1`-`65519`
+     * `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      * 
      */
     @Export(name="value", refs={Integer.class}, tree="[0]")
     private Output<Integer> value;
 
     /**
-     * @return `-1` to auto-generate - Range: `-1`-`65519`
+     * @return `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      * 
      */
     public Output<Integer> value() {

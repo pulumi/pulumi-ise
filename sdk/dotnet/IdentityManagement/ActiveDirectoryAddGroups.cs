@@ -48,8 +48,8 @@ namespace Pulumi.Ise.IdentityManagement
     public partial class ActiveDirectoryAddGroups : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-        /// value: `Default_Scope`
+        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+        ///   - Default value: `Default_Scope`
         /// </summary>
         [Output("adScopesNames")]
         public Output<string> AdScopesNames { get; private set; } = null!;
@@ -137,8 +137,8 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class ActiveDirectoryAddGroupsArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-        /// value: `Default_Scope`
+        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+        ///   - Default value: `Default_Scope`
         /// </summary>
         [Input("adScopesNames")]
         public Input<string>? AdScopesNames { get; set; }
@@ -194,8 +194,8 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class ActiveDirectoryAddGroupsState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-        /// value: `Default_Scope`
+        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+        ///   - Default value: `Default_Scope`
         /// </summary>
         [Input("adScopesNames")]
         public Input<string>? AdScopesNames { get; set; }

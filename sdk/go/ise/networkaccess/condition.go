@@ -63,9 +63,8 @@ type Condition struct {
 	AttributeValue pulumi.StringPtrOutput `pulumi:"attributeValue"`
 	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens ConditionChildrenArrayOutput `pulumi:"childrens"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-	// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
 	ConditionType pulumi.StringOutput `pulumi:"conditionType"`
 	// Condition description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -77,9 +76,8 @@ type Condition struct {
 	IsNegate pulumi.BoolPtrOutput `pulumi:"isNegate"`
 	// Condition name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	Operator pulumi.StringPtrOutput `pulumi:"operator"`
 }
 
@@ -122,9 +120,8 @@ type conditionState struct {
 	AttributeValue *string `pulumi:"attributeValue"`
 	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens []ConditionChildren `pulumi:"childrens"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-	// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
 	ConditionType *string `pulumi:"conditionType"`
 	// Condition description
 	Description *string `pulumi:"description"`
@@ -136,9 +133,8 @@ type conditionState struct {
 	IsNegate *bool `pulumi:"isNegate"`
 	// Condition name
 	Name *string `pulumi:"name"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	Operator *string `pulumi:"operator"`
 }
 
@@ -149,9 +145,8 @@ type ConditionState struct {
 	AttributeValue pulumi.StringPtrInput
 	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens ConditionChildrenArrayInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-	// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
 	ConditionType pulumi.StringPtrInput
 	// Condition description
 	Description pulumi.StringPtrInput
@@ -163,9 +158,8 @@ type ConditionState struct {
 	IsNegate pulumi.BoolPtrInput
 	// Condition name
 	Name pulumi.StringPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	Operator pulumi.StringPtrInput
 }
 
@@ -180,9 +174,8 @@ type conditionArgs struct {
 	AttributeValue *string `pulumi:"attributeValue"`
 	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens []ConditionChildren `pulumi:"childrens"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-	// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
 	ConditionType string `pulumi:"conditionType"`
 	// Condition description
 	Description *string `pulumi:"description"`
@@ -194,9 +187,8 @@ type conditionArgs struct {
 	IsNegate *bool `pulumi:"isNegate"`
 	// Condition name
 	Name *string `pulumi:"name"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	Operator *string `pulumi:"operator"`
 }
 
@@ -208,9 +200,8 @@ type ConditionArgs struct {
 	AttributeValue pulumi.StringPtrInput
 	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
 	Childrens ConditionChildrenArrayInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-	// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
 	ConditionType pulumi.StringInput
 	// Condition description
 	Description pulumi.StringPtrInput
@@ -222,9 +213,8 @@ type ConditionArgs struct {
 	IsNegate pulumi.BoolPtrInput
 	// Condition name
 	Name pulumi.StringPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	Operator pulumi.StringPtrInput
 }
 
@@ -330,9 +320,8 @@ func (o ConditionOutput) Childrens() ConditionChildrenArrayOutput {
 	return o.ApplyT(func(v *Condition) ConditionChildrenArrayOutput { return v.Childrens }).(ConditionChildrenArrayOutput)
 }
 
-// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-// additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-// `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
 func (o ConditionOutput) ConditionType() pulumi.StringOutput {
 	return o.ApplyT(func(v *Condition) pulumi.StringOutput { return v.ConditionType }).(pulumi.StringOutput)
 }
@@ -362,9 +351,8 @@ func (o ConditionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Condition) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 func (o ConditionOutput) Operator() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Condition) pulumi.StringPtrOutput { return v.Operator }).(pulumi.StringPtrOutput)
 }

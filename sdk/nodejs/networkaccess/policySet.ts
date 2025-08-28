@@ -70,72 +70,70 @@ export class PolicySet extends pulumi.CustomResource {
     /**
      * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
-    public readonly childrens!: pulumi.Output<outputs.networkaccess.PolicySetChildren[] | undefined>;
+    declare public readonly childrens: pulumi.Output<outputs.networkaccess.PolicySetChildren[] | undefined>;
     /**
      * Dictionary attribute name
      */
-    public readonly conditionAttributeName!: pulumi.Output<string | undefined>;
+    declare public readonly conditionAttributeName: pulumi.Output<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    public readonly conditionAttributeValue!: pulumi.Output<string | undefined>;
+    declare public readonly conditionAttributeValue: pulumi.Output<string | undefined>;
     /**
      * Dictionary name
      */
-    public readonly conditionDictionaryName!: pulumi.Output<string | undefined>;
+    declare public readonly conditionDictionaryName: pulumi.Output<string | undefined>;
     /**
      * Dictionary value
      */
-    public readonly conditionDictionaryValue!: pulumi.Output<string | undefined>;
+    declare public readonly conditionDictionaryValue: pulumi.Output<string | undefined>;
     /**
      * UUID for condition
      */
-    public readonly conditionId!: pulumi.Output<string | undefined>;
+    declare public readonly conditionId: pulumi.Output<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    public readonly conditionIsNegate!: pulumi.Output<boolean | undefined>;
+    declare public readonly conditionIsNegate: pulumi.Output<boolean | undefined>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
-    public readonly conditionOperator!: pulumi.Output<string | undefined>;
+    declare public readonly conditionOperator: pulumi.Output<string | undefined>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
-    public readonly conditionType!: pulumi.Output<string | undefined>;
+    declare public readonly conditionType: pulumi.Output<string | undefined>;
     /**
      * Indicates if this policy set is the default one
      */
-    public readonly default!: pulumi.Output<boolean | undefined>;
+    declare public readonly default: pulumi.Output<boolean | undefined>;
     /**
      * The description of the policy set
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
      */
-    public readonly isProxy!: pulumi.Output<boolean | undefined>;
+    declare public readonly isProxy: pulumi.Output<boolean | undefined>;
     /**
      * Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number | undefined>;
+    declare public readonly rank: pulumi.Output<number | undefined>;
     /**
      * Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
      */
-    public readonly serviceName!: pulumi.Output<string>;
+    declare public readonly serviceName: pulumi.Output<string>;
     /**
-     * The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-     * `monitor`
+     * The state that the policy set is in. A disabled policy set cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      */
-    public readonly state!: pulumi.Output<string | undefined>;
+    declare public readonly state: pulumi.Output<string | undefined>;
 
     /**
      * Create a PolicySet resource with the given unique name, arguments, and options.
@@ -150,43 +148,43 @@ export class PolicySet extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicySetState | undefined;
-            resourceInputs["childrens"] = state ? state.childrens : undefined;
-            resourceInputs["conditionAttributeName"] = state ? state.conditionAttributeName : undefined;
-            resourceInputs["conditionAttributeValue"] = state ? state.conditionAttributeValue : undefined;
-            resourceInputs["conditionDictionaryName"] = state ? state.conditionDictionaryName : undefined;
-            resourceInputs["conditionDictionaryValue"] = state ? state.conditionDictionaryValue : undefined;
-            resourceInputs["conditionId"] = state ? state.conditionId : undefined;
-            resourceInputs["conditionIsNegate"] = state ? state.conditionIsNegate : undefined;
-            resourceInputs["conditionOperator"] = state ? state.conditionOperator : undefined;
-            resourceInputs["conditionType"] = state ? state.conditionType : undefined;
-            resourceInputs["default"] = state ? state.default : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["isProxy"] = state ? state.isProxy : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rank"] = state ? state.rank : undefined;
-            resourceInputs["serviceName"] = state ? state.serviceName : undefined;
-            resourceInputs["state"] = state ? state.state : undefined;
+            resourceInputs["childrens"] = state?.childrens;
+            resourceInputs["conditionAttributeName"] = state?.conditionAttributeName;
+            resourceInputs["conditionAttributeValue"] = state?.conditionAttributeValue;
+            resourceInputs["conditionDictionaryName"] = state?.conditionDictionaryName;
+            resourceInputs["conditionDictionaryValue"] = state?.conditionDictionaryValue;
+            resourceInputs["conditionId"] = state?.conditionId;
+            resourceInputs["conditionIsNegate"] = state?.conditionIsNegate;
+            resourceInputs["conditionOperator"] = state?.conditionOperator;
+            resourceInputs["conditionType"] = state?.conditionType;
+            resourceInputs["default"] = state?.default;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["isProxy"] = state?.isProxy;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rank"] = state?.rank;
+            resourceInputs["serviceName"] = state?.serviceName;
+            resourceInputs["state"] = state?.state;
         } else {
             const args = argsOrState as PolicySetArgs | undefined;
-            if ((!args || args.serviceName === undefined) && !opts.urn) {
+            if (args?.serviceName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceName'");
             }
-            resourceInputs["childrens"] = args ? args.childrens : undefined;
-            resourceInputs["conditionAttributeName"] = args ? args.conditionAttributeName : undefined;
-            resourceInputs["conditionAttributeValue"] = args ? args.conditionAttributeValue : undefined;
-            resourceInputs["conditionDictionaryName"] = args ? args.conditionDictionaryName : undefined;
-            resourceInputs["conditionDictionaryValue"] = args ? args.conditionDictionaryValue : undefined;
-            resourceInputs["conditionId"] = args ? args.conditionId : undefined;
-            resourceInputs["conditionIsNegate"] = args ? args.conditionIsNegate : undefined;
-            resourceInputs["conditionOperator"] = args ? args.conditionOperator : undefined;
-            resourceInputs["conditionType"] = args ? args.conditionType : undefined;
-            resourceInputs["default"] = args ? args.default : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["isProxy"] = args ? args.isProxy : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rank"] = args ? args.rank : undefined;
-            resourceInputs["serviceName"] = args ? args.serviceName : undefined;
-            resourceInputs["state"] = args ? args.state : undefined;
+            resourceInputs["childrens"] = args?.childrens;
+            resourceInputs["conditionAttributeName"] = args?.conditionAttributeName;
+            resourceInputs["conditionAttributeValue"] = args?.conditionAttributeValue;
+            resourceInputs["conditionDictionaryName"] = args?.conditionDictionaryName;
+            resourceInputs["conditionDictionaryValue"] = args?.conditionDictionaryValue;
+            resourceInputs["conditionId"] = args?.conditionId;
+            resourceInputs["conditionIsNegate"] = args?.conditionIsNegate;
+            resourceInputs["conditionOperator"] = args?.conditionOperator;
+            resourceInputs["conditionType"] = args?.conditionType;
+            resourceInputs["default"] = args?.default;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["isProxy"] = args?.isProxy;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rank"] = args?.rank;
+            resourceInputs["serviceName"] = args?.serviceName;
+            resourceInputs["state"] = args?.state;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(PolicySet.__pulumiType, name, resourceInputs, opts);
@@ -226,15 +224,13 @@ export interface PolicySetState {
      */
     conditionIsNegate?: pulumi.Input<boolean>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
     conditionOperator?: pulumi.Input<string>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
     conditionType?: pulumi.Input<string>;
     /**
@@ -262,8 +258,8 @@ export interface PolicySetState {
      */
     serviceName?: pulumi.Input<string>;
     /**
-     * The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-     * `monitor`
+     * The state that the policy set is in. A disabled policy set cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      */
     state?: pulumi.Input<string>;
 }
@@ -301,15 +297,13 @@ export interface PolicySetArgs {
      */
     conditionIsNegate?: pulumi.Input<boolean>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
     conditionOperator?: pulumi.Input<string>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
     conditionType?: pulumi.Input<string>;
     /**
@@ -337,8 +331,8 @@ export interface PolicySetArgs {
      */
     serviceName: pulumi.Input<string>;
     /**
-     * The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-     * `monitor`
+     * The state that the policy set is in. A disabled policy set cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      */
     state?: pulumi.Input<string>;
 }

@@ -58,7 +58,9 @@ namespace Pulumi.Ise.TrustSec
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        /// IP Version
+        ///   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+        ///   - Default value: `IP_AGNOSTIC`
         /// </summary>
         [Output("ipVersion")]
         public Output<string> IpVersion { get; private set; } = null!;
@@ -134,7 +136,9 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        /// IP Version
+        ///   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+        ///   - Default value: `IP_AGNOSTIC`
         /// </summary>
         [Input("ipVersion")]
         public Input<string>? IpVersion { get; set; }
@@ -172,7 +176,9 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        /// IP Version
+        ///   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+        ///   - Default value: `IP_AGNOSTIC`
         /// </summary>
         [Input("ipVersion")]
         public Input<string>? IpVersion { get; set; }

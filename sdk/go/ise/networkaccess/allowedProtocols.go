@@ -162,13 +162,15 @@ type AllowedProtocols struct {
 	EapFastEapGtc pulumi.BoolPtrOutput `pulumi:"eapFastEapGtc"`
 	// Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
 	EapFastEapGtcPwdChange pulumi.BoolPtrOutput `pulumi:"eapFastEapGtcPwdChange"`
-	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapGtcPwdChangeRetries pulumi.IntPtrOutput `pulumi:"eapFastEapGtcPwdChangeRetries"`
 	// Allow EAP MS CHAP v2
 	EapFastEapMsChapV2 pulumi.BoolPtrOutput `pulumi:"eapFastEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
 	EapFastEapMsChapV2PwdChange pulumi.BoolPtrOutput `pulumi:"eapFastEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapMsChapV2PwdChangeRetries pulumi.IntPtrOutput `pulumi:"eapFastEapMsChapV2PwdChangeRetries"`
 	// Allow EAP TLS
 	EapFastEapTls pulumi.BoolPtrOutput `pulumi:"eapFastEapTls"`
@@ -186,25 +188,25 @@ type AllowedProtocols struct {
 	EapFastPacsAllowMachineAuthentication pulumi.BoolPtrOutput `pulumi:"eapFastPacsAllowMachineAuthentication"`
 	// Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
 	EapFastPacsAuthorizationPacTtl pulumi.IntPtrOutput `pulumi:"eapFastPacsAuthorizationPacTtl"`
-	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsAuthorizationPacTtlUnit pulumi.StringPtrOutput `pulumi:"eapFastPacsAuthorizationPacTtlUnit"`
 	// Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
 	EapFastPacsMachinePacTtl pulumi.IntPtrOutput `pulumi:"eapFastPacsMachinePacTtl"`
-	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsMachinePacTtlUnit pulumi.StringPtrOutput `pulumi:"eapFastPacsMachinePacTtlUnit"`
-	// Server returns access accept after authenticated provisioning. Is required only if
-	// `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+	// Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
 	EapFastPacsServerReturns pulumi.BoolPtrOutput `pulumi:"eapFastPacsServerReturns"`
 	// Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsStatelessSessionResume pulumi.BoolPtrOutput `pulumi:"eapFastPacsStatelessSessionResume"`
 	// PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsTunnelPacTtl pulumi.IntPtrOutput `pulumi:"eapFastPacsTunnelPacTtl"`
-	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-	// `HOURS`, `DAYS`, `WEEKS`
+	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsTunnelPacTtlUnit pulumi.StringPtrOutput `pulumi:"eapFastPacsTunnelPacTtlUnit"`
-	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+	//   - Range: `1`-`100`
 	EapFastPacsUseProactivePacUpdatePercentage pulumi.IntPtrOutput `pulumi:"eapFastPacsUseProactivePacUpdatePercentage"`
 	// Use PACs
 	EapFastUsePacs pulumi.BoolPtrOutput `pulumi:"eapFastUsePacs"`
@@ -214,12 +216,13 @@ type AllowedProtocols struct {
 	EapTlsEnableStatelessSessionResume pulumi.BoolPtrOutput `pulumi:"eapTlsEnableStatelessSessionResume"`
 	// EAP TLS L-Bit
 	EapTlsLBit pulumi.BoolOutput `pulumi:"eapTlsLBit"`
-	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Range: `1`-`100`
 	EapTlsSessionTicketPercentage pulumi.IntPtrOutput `pulumi:"eapTlsSessionTicketPercentage"`
 	// Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
 	EapTlsSessionTicketTtl pulumi.IntPtrOutput `pulumi:"eapTlsSessionTicketTtl"`
-	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapTlsSessionTicketTtlUnit pulumi.StringPtrOutput `pulumi:"eapTlsSessionTicketTtlUnit"`
 	// Allow CHAP
 	EapTtlsChap pulumi.BoolPtrOutput `pulumi:"eapTtlsChap"`
@@ -229,7 +232,8 @@ type AllowedProtocols struct {
 	EapTtlsEapMsChapV2 pulumi.BoolPtrOutput `pulumi:"eapTtlsEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
 	EapTtlsEapMsChapV2PwdChange pulumi.BoolPtrOutput `pulumi:"eapTtlsEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapTtlsEapMsChapV2PwdChangeRetries pulumi.IntPtrOutput `pulumi:"eapTtlsEapMsChapV2PwdChangeRetries"`
 	// Allow MS CHAP v1
 	EapTtlsMsChapV1 pulumi.BoolPtrOutput `pulumi:"eapTtlsMsChapV1"`
@@ -243,14 +247,15 @@ type AllowedProtocols struct {
 	PeapAllowPeapEapGtc pulumi.BoolPtrOutput `pulumi:"peapAllowPeapEapGtc"`
 	// Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
 	PeapAllowPeapEapGtcPwdChange pulumi.BoolPtrOutput `pulumi:"peapAllowPeapEapGtcPwdChange"`
-	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapGtcPwdChangeRetries pulumi.IntPtrOutput `pulumi:"peapAllowPeapEapGtcPwdChangeRetries"`
 	// Allow PEAP EAP MS CHAP v2
 	PeapAllowPeapEapMsChapV2 pulumi.BoolPtrOutput `pulumi:"peapAllowPeapEapMsChapV2"`
 	// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
 	PeapAllowPeapEapMsChapV2PwdChange pulumi.BoolPtrOutput `pulumi:"peapAllowPeapEapMsChapV2PwdChange"`
-	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-	// `0`-`3`
+	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapMsChapV2PwdChangeRetries pulumi.IntPtrOutput `pulumi:"peapAllowPeapEapMsChapV2PwdChangeRetries"`
 	// Allow PEAP EAP TLS
 	PeapAllowPeapEapTls pulumi.BoolPtrOutput `pulumi:"peapAllowPeapEapTls"`
@@ -258,7 +263,8 @@ type AllowedProtocols struct {
 	PeapAllowPeapEapTlsAuthOfExpiredCerts pulumi.BoolPtrOutput `pulumi:"peapAllowPeapEapTlsAuthOfExpiredCerts"`
 	// Allow PEAP v0
 	PeapPeapV0 pulumi.BoolPtrOutput `pulumi:"peapPeapV0"`
-	// Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+	// Preferred EAP protocol
+	//   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
 	PreferredEapProtocol pulumi.StringPtrOutput `pulumi:"preferredEapProtocol"`
 	// Process host lookup
 	ProcessHostLookup pulumi.BoolOutput `pulumi:"processHostLookup"`
@@ -276,7 +282,8 @@ type AllowedProtocols struct {
 	TeapEapMsChapV2 pulumi.BoolPtrOutput `pulumi:"teapEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
 	TeapEapMsChapV2PwdChange pulumi.BoolPtrOutput `pulumi:"teapEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	TeapEapMsChapV2PwdChangeRetries pulumi.IntPtrOutput `pulumi:"teapEapMsChapV2PwdChangeRetries"`
 	// Allow EAP TLS
 	TeapEapTls pulumi.BoolPtrOutput `pulumi:"teapEapTls"`
@@ -402,13 +409,15 @@ type allowedProtocolsState struct {
 	EapFastEapGtc *bool `pulumi:"eapFastEapGtc"`
 	// Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
 	EapFastEapGtcPwdChange *bool `pulumi:"eapFastEapGtcPwdChange"`
-	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapGtcPwdChangeRetries *int `pulumi:"eapFastEapGtcPwdChangeRetries"`
 	// Allow EAP MS CHAP v2
 	EapFastEapMsChapV2 *bool `pulumi:"eapFastEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
 	EapFastEapMsChapV2PwdChange *bool `pulumi:"eapFastEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapMsChapV2PwdChangeRetries *int `pulumi:"eapFastEapMsChapV2PwdChangeRetries"`
 	// Allow EAP TLS
 	EapFastEapTls *bool `pulumi:"eapFastEapTls"`
@@ -426,25 +435,25 @@ type allowedProtocolsState struct {
 	EapFastPacsAllowMachineAuthentication *bool `pulumi:"eapFastPacsAllowMachineAuthentication"`
 	// Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
 	EapFastPacsAuthorizationPacTtl *int `pulumi:"eapFastPacsAuthorizationPacTtl"`
-	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsAuthorizationPacTtlUnit *string `pulumi:"eapFastPacsAuthorizationPacTtlUnit"`
 	// Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
 	EapFastPacsMachinePacTtl *int `pulumi:"eapFastPacsMachinePacTtl"`
-	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsMachinePacTtlUnit *string `pulumi:"eapFastPacsMachinePacTtlUnit"`
-	// Server returns access accept after authenticated provisioning. Is required only if
-	// `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+	// Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
 	EapFastPacsServerReturns *bool `pulumi:"eapFastPacsServerReturns"`
 	// Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsStatelessSessionResume *bool `pulumi:"eapFastPacsStatelessSessionResume"`
 	// PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsTunnelPacTtl *int `pulumi:"eapFastPacsTunnelPacTtl"`
-	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-	// `HOURS`, `DAYS`, `WEEKS`
+	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsTunnelPacTtlUnit *string `pulumi:"eapFastPacsTunnelPacTtlUnit"`
-	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+	//   - Range: `1`-`100`
 	EapFastPacsUseProactivePacUpdatePercentage *int `pulumi:"eapFastPacsUseProactivePacUpdatePercentage"`
 	// Use PACs
 	EapFastUsePacs *bool `pulumi:"eapFastUsePacs"`
@@ -454,12 +463,13 @@ type allowedProtocolsState struct {
 	EapTlsEnableStatelessSessionResume *bool `pulumi:"eapTlsEnableStatelessSessionResume"`
 	// EAP TLS L-Bit
 	EapTlsLBit *bool `pulumi:"eapTlsLBit"`
-	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Range: `1`-`100`
 	EapTlsSessionTicketPercentage *int `pulumi:"eapTlsSessionTicketPercentage"`
 	// Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
 	EapTlsSessionTicketTtl *int `pulumi:"eapTlsSessionTicketTtl"`
-	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapTlsSessionTicketTtlUnit *string `pulumi:"eapTlsSessionTicketTtlUnit"`
 	// Allow CHAP
 	EapTtlsChap *bool `pulumi:"eapTtlsChap"`
@@ -469,7 +479,8 @@ type allowedProtocolsState struct {
 	EapTtlsEapMsChapV2 *bool `pulumi:"eapTtlsEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
 	EapTtlsEapMsChapV2PwdChange *bool `pulumi:"eapTtlsEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapTtlsEapMsChapV2PwdChangeRetries *int `pulumi:"eapTtlsEapMsChapV2PwdChangeRetries"`
 	// Allow MS CHAP v1
 	EapTtlsMsChapV1 *bool `pulumi:"eapTtlsMsChapV1"`
@@ -483,14 +494,15 @@ type allowedProtocolsState struct {
 	PeapAllowPeapEapGtc *bool `pulumi:"peapAllowPeapEapGtc"`
 	// Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
 	PeapAllowPeapEapGtcPwdChange *bool `pulumi:"peapAllowPeapEapGtcPwdChange"`
-	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapGtcPwdChangeRetries *int `pulumi:"peapAllowPeapEapGtcPwdChangeRetries"`
 	// Allow PEAP EAP MS CHAP v2
 	PeapAllowPeapEapMsChapV2 *bool `pulumi:"peapAllowPeapEapMsChapV2"`
 	// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
 	PeapAllowPeapEapMsChapV2PwdChange *bool `pulumi:"peapAllowPeapEapMsChapV2PwdChange"`
-	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-	// `0`-`3`
+	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapMsChapV2PwdChangeRetries *int `pulumi:"peapAllowPeapEapMsChapV2PwdChangeRetries"`
 	// Allow PEAP EAP TLS
 	PeapAllowPeapEapTls *bool `pulumi:"peapAllowPeapEapTls"`
@@ -498,7 +510,8 @@ type allowedProtocolsState struct {
 	PeapAllowPeapEapTlsAuthOfExpiredCerts *bool `pulumi:"peapAllowPeapEapTlsAuthOfExpiredCerts"`
 	// Allow PEAP v0
 	PeapPeapV0 *bool `pulumi:"peapPeapV0"`
-	// Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+	// Preferred EAP protocol
+	//   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
 	PreferredEapProtocol *string `pulumi:"preferredEapProtocol"`
 	// Process host lookup
 	ProcessHostLookup *bool `pulumi:"processHostLookup"`
@@ -516,7 +529,8 @@ type allowedProtocolsState struct {
 	TeapEapMsChapV2 *bool `pulumi:"teapEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
 	TeapEapMsChapV2PwdChange *bool `pulumi:"teapEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	TeapEapMsChapV2PwdChangeRetries *int `pulumi:"teapEapMsChapV2PwdChangeRetries"`
 	// Allow EAP TLS
 	TeapEapTls *bool `pulumi:"teapEapTls"`
@@ -565,13 +579,15 @@ type AllowedProtocolsState struct {
 	EapFastEapGtc pulumi.BoolPtrInput
 	// Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
 	EapFastEapGtcPwdChange pulumi.BoolPtrInput
-	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapGtcPwdChangeRetries pulumi.IntPtrInput
 	// Allow EAP MS CHAP v2
 	EapFastEapMsChapV2 pulumi.BoolPtrInput
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
 	EapFastEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow EAP TLS
 	EapFastEapTls pulumi.BoolPtrInput
@@ -589,25 +605,25 @@ type AllowedProtocolsState struct {
 	EapFastPacsAllowMachineAuthentication pulumi.BoolPtrInput
 	// Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
 	EapFastPacsAuthorizationPacTtl pulumi.IntPtrInput
-	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsAuthorizationPacTtlUnit pulumi.StringPtrInput
 	// Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
 	EapFastPacsMachinePacTtl pulumi.IntPtrInput
-	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsMachinePacTtlUnit pulumi.StringPtrInput
-	// Server returns access accept after authenticated provisioning. Is required only if
-	// `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+	// Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
 	EapFastPacsServerReturns pulumi.BoolPtrInput
 	// Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsStatelessSessionResume pulumi.BoolPtrInput
 	// PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsTunnelPacTtl pulumi.IntPtrInput
-	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-	// `HOURS`, `DAYS`, `WEEKS`
+	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsTunnelPacTtlUnit pulumi.StringPtrInput
-	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+	//   - Range: `1`-`100`
 	EapFastPacsUseProactivePacUpdatePercentage pulumi.IntPtrInput
 	// Use PACs
 	EapFastUsePacs pulumi.BoolPtrInput
@@ -617,12 +633,13 @@ type AllowedProtocolsState struct {
 	EapTlsEnableStatelessSessionResume pulumi.BoolPtrInput
 	// EAP TLS L-Bit
 	EapTlsLBit pulumi.BoolPtrInput
-	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Range: `1`-`100`
 	EapTlsSessionTicketPercentage pulumi.IntPtrInput
 	// Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
 	EapTlsSessionTicketTtl pulumi.IntPtrInput
-	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapTlsSessionTicketTtlUnit pulumi.StringPtrInput
 	// Allow CHAP
 	EapTtlsChap pulumi.BoolPtrInput
@@ -632,7 +649,8 @@ type AllowedProtocolsState struct {
 	EapTtlsEapMsChapV2 pulumi.BoolPtrInput
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
 	EapTtlsEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapTtlsEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow MS CHAP v1
 	EapTtlsMsChapV1 pulumi.BoolPtrInput
@@ -646,14 +664,15 @@ type AllowedProtocolsState struct {
 	PeapAllowPeapEapGtc pulumi.BoolPtrInput
 	// Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
 	PeapAllowPeapEapGtcPwdChange pulumi.BoolPtrInput
-	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapGtcPwdChangeRetries pulumi.IntPtrInput
 	// Allow PEAP EAP MS CHAP v2
 	PeapAllowPeapEapMsChapV2 pulumi.BoolPtrInput
 	// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
 	PeapAllowPeapEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-	// `0`-`3`
+	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow PEAP EAP TLS
 	PeapAllowPeapEapTls pulumi.BoolPtrInput
@@ -661,7 +680,8 @@ type AllowedProtocolsState struct {
 	PeapAllowPeapEapTlsAuthOfExpiredCerts pulumi.BoolPtrInput
 	// Allow PEAP v0
 	PeapPeapV0 pulumi.BoolPtrInput
-	// Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+	// Preferred EAP protocol
+	//   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
 	PreferredEapProtocol pulumi.StringPtrInput
 	// Process host lookup
 	ProcessHostLookup pulumi.BoolPtrInput
@@ -679,7 +699,8 @@ type AllowedProtocolsState struct {
 	TeapEapMsChapV2 pulumi.BoolPtrInput
 	// Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
 	TeapEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	TeapEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow EAP TLS
 	TeapEapTls pulumi.BoolPtrInput
@@ -732,13 +753,15 @@ type allowedProtocolsArgs struct {
 	EapFastEapGtc *bool `pulumi:"eapFastEapGtc"`
 	// Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
 	EapFastEapGtcPwdChange *bool `pulumi:"eapFastEapGtcPwdChange"`
-	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapGtcPwdChangeRetries *int `pulumi:"eapFastEapGtcPwdChangeRetries"`
 	// Allow EAP MS CHAP v2
 	EapFastEapMsChapV2 *bool `pulumi:"eapFastEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
 	EapFastEapMsChapV2PwdChange *bool `pulumi:"eapFastEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapMsChapV2PwdChangeRetries *int `pulumi:"eapFastEapMsChapV2PwdChangeRetries"`
 	// Allow EAP TLS
 	EapFastEapTls *bool `pulumi:"eapFastEapTls"`
@@ -756,25 +779,25 @@ type allowedProtocolsArgs struct {
 	EapFastPacsAllowMachineAuthentication *bool `pulumi:"eapFastPacsAllowMachineAuthentication"`
 	// Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
 	EapFastPacsAuthorizationPacTtl *int `pulumi:"eapFastPacsAuthorizationPacTtl"`
-	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsAuthorizationPacTtlUnit *string `pulumi:"eapFastPacsAuthorizationPacTtlUnit"`
 	// Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
 	EapFastPacsMachinePacTtl *int `pulumi:"eapFastPacsMachinePacTtl"`
-	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsMachinePacTtlUnit *string `pulumi:"eapFastPacsMachinePacTtlUnit"`
-	// Server returns access accept after authenticated provisioning. Is required only if
-	// `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+	// Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
 	EapFastPacsServerReturns *bool `pulumi:"eapFastPacsServerReturns"`
 	// Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsStatelessSessionResume *bool `pulumi:"eapFastPacsStatelessSessionResume"`
 	// PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsTunnelPacTtl *int `pulumi:"eapFastPacsTunnelPacTtl"`
-	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-	// `HOURS`, `DAYS`, `WEEKS`
+	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsTunnelPacTtlUnit *string `pulumi:"eapFastPacsTunnelPacTtlUnit"`
-	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+	//   - Range: `1`-`100`
 	EapFastPacsUseProactivePacUpdatePercentage *int `pulumi:"eapFastPacsUseProactivePacUpdatePercentage"`
 	// Use PACs
 	EapFastUsePacs *bool `pulumi:"eapFastUsePacs"`
@@ -784,12 +807,13 @@ type allowedProtocolsArgs struct {
 	EapTlsEnableStatelessSessionResume *bool `pulumi:"eapTlsEnableStatelessSessionResume"`
 	// EAP TLS L-Bit
 	EapTlsLBit bool `pulumi:"eapTlsLBit"`
-	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Range: `1`-`100`
 	EapTlsSessionTicketPercentage *int `pulumi:"eapTlsSessionTicketPercentage"`
 	// Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
 	EapTlsSessionTicketTtl *int `pulumi:"eapTlsSessionTicketTtl"`
-	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapTlsSessionTicketTtlUnit *string `pulumi:"eapTlsSessionTicketTtlUnit"`
 	// Allow CHAP
 	EapTtlsChap *bool `pulumi:"eapTtlsChap"`
@@ -799,7 +823,8 @@ type allowedProtocolsArgs struct {
 	EapTtlsEapMsChapV2 *bool `pulumi:"eapTtlsEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
 	EapTtlsEapMsChapV2PwdChange *bool `pulumi:"eapTtlsEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapTtlsEapMsChapV2PwdChangeRetries *int `pulumi:"eapTtlsEapMsChapV2PwdChangeRetries"`
 	// Allow MS CHAP v1
 	EapTtlsMsChapV1 *bool `pulumi:"eapTtlsMsChapV1"`
@@ -813,14 +838,15 @@ type allowedProtocolsArgs struct {
 	PeapAllowPeapEapGtc *bool `pulumi:"peapAllowPeapEapGtc"`
 	// Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
 	PeapAllowPeapEapGtcPwdChange *bool `pulumi:"peapAllowPeapEapGtcPwdChange"`
-	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapGtcPwdChangeRetries *int `pulumi:"peapAllowPeapEapGtcPwdChangeRetries"`
 	// Allow PEAP EAP MS CHAP v2
 	PeapAllowPeapEapMsChapV2 *bool `pulumi:"peapAllowPeapEapMsChapV2"`
 	// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
 	PeapAllowPeapEapMsChapV2PwdChange *bool `pulumi:"peapAllowPeapEapMsChapV2PwdChange"`
-	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-	// `0`-`3`
+	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapMsChapV2PwdChangeRetries *int `pulumi:"peapAllowPeapEapMsChapV2PwdChangeRetries"`
 	// Allow PEAP EAP TLS
 	PeapAllowPeapEapTls *bool `pulumi:"peapAllowPeapEapTls"`
@@ -828,7 +854,8 @@ type allowedProtocolsArgs struct {
 	PeapAllowPeapEapTlsAuthOfExpiredCerts *bool `pulumi:"peapAllowPeapEapTlsAuthOfExpiredCerts"`
 	// Allow PEAP v0
 	PeapPeapV0 *bool `pulumi:"peapPeapV0"`
-	// Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+	// Preferred EAP protocol
+	//   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
 	PreferredEapProtocol *string `pulumi:"preferredEapProtocol"`
 	// Process host lookup
 	ProcessHostLookup bool `pulumi:"processHostLookup"`
@@ -846,7 +873,8 @@ type allowedProtocolsArgs struct {
 	TeapEapMsChapV2 *bool `pulumi:"teapEapMsChapV2"`
 	// Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
 	TeapEapMsChapV2PwdChange *bool `pulumi:"teapEapMsChapV2PwdChange"`
-	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	TeapEapMsChapV2PwdChangeRetries *int `pulumi:"teapEapMsChapV2PwdChangeRetries"`
 	// Allow EAP TLS
 	TeapEapTls *bool `pulumi:"teapEapTls"`
@@ -896,13 +924,15 @@ type AllowedProtocolsArgs struct {
 	EapFastEapGtc pulumi.BoolPtrInput
 	// Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
 	EapFastEapGtcPwdChange pulumi.BoolPtrInput
-	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+	// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapGtcPwdChangeRetries pulumi.IntPtrInput
 	// Allow EAP MS CHAP v2
 	EapFastEapMsChapV2 pulumi.BoolPtrInput
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
 	EapFastEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapFastEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow EAP TLS
 	EapFastEapTls pulumi.BoolPtrInput
@@ -920,25 +950,25 @@ type AllowedProtocolsArgs struct {
 	EapFastPacsAllowMachineAuthentication pulumi.BoolPtrInput
 	// Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
 	EapFastPacsAuthorizationPacTtl pulumi.IntPtrInput
-	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsAuthorizationPacTtlUnit pulumi.StringPtrInput
 	// Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
 	EapFastPacsMachinePacTtl pulumi.IntPtrInput
-	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsMachinePacTtlUnit pulumi.StringPtrInput
-	// Server returns access accept after authenticated provisioning. Is required only if
-	// `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+	// Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
 	EapFastPacsServerReturns pulumi.BoolPtrInput
 	// Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsStatelessSessionResume pulumi.BoolPtrInput
 	// PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
 	EapFastPacsTunnelPacTtl pulumi.IntPtrInput
-	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-	// `HOURS`, `DAYS`, `WEEKS`
+	// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapFastPacsTunnelPacTtlUnit pulumi.StringPtrInput
-	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+	// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+	//   - Range: `1`-`100`
 	EapFastPacsUseProactivePacUpdatePercentage pulumi.IntPtrInput
 	// Use PACs
 	EapFastUsePacs pulumi.BoolPtrInput
@@ -948,12 +978,13 @@ type AllowedProtocolsArgs struct {
 	EapTlsEnableStatelessSessionResume pulumi.BoolPtrInput
 	// EAP TLS L-Bit
 	EapTlsLBit pulumi.BoolInput
-	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+	// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Range: `1`-`100`
 	EapTlsSessionTicketPercentage pulumi.IntPtrInput
 	// Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
 	EapTlsSessionTicketTtl pulumi.IntPtrInput
-	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-	// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+	// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+	//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 	EapTlsSessionTicketTtlUnit pulumi.StringPtrInput
 	// Allow CHAP
 	EapTtlsChap pulumi.BoolPtrInput
@@ -963,7 +994,8 @@ type AllowedProtocolsArgs struct {
 	EapTtlsEapMsChapV2 pulumi.BoolPtrInput
 	// Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
 	EapTtlsEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	EapTtlsEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow MS CHAP v1
 	EapTtlsMsChapV1 pulumi.BoolPtrInput
@@ -977,14 +1009,15 @@ type AllowedProtocolsArgs struct {
 	PeapAllowPeapEapGtc pulumi.BoolPtrInput
 	// Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
 	PeapAllowPeapEapGtcPwdChange pulumi.BoolPtrInput
-	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+	// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapGtcPwdChangeRetries pulumi.IntPtrInput
 	// Allow PEAP EAP MS CHAP v2
 	PeapAllowPeapEapMsChapV2 pulumi.BoolPtrInput
 	// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
 	PeapAllowPeapEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-	// `0`-`3`
+	// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	PeapAllowPeapEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow PEAP EAP TLS
 	PeapAllowPeapEapTls pulumi.BoolPtrInput
@@ -992,7 +1025,8 @@ type AllowedProtocolsArgs struct {
 	PeapAllowPeapEapTlsAuthOfExpiredCerts pulumi.BoolPtrInput
 	// Allow PEAP v0
 	PeapPeapV0 pulumi.BoolPtrInput
-	// Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+	// Preferred EAP protocol
+	//   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
 	PreferredEapProtocol pulumi.StringPtrInput
 	// Process host lookup
 	ProcessHostLookup pulumi.BoolInput
@@ -1010,7 +1044,8 @@ type AllowedProtocolsArgs struct {
 	TeapEapMsChapV2 pulumi.BoolPtrInput
 	// Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
 	TeapEapMsChapV2PwdChange pulumi.BoolPtrInput
-	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+	// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+	//   - Range: `0`-`3`
 	TeapEapMsChapV2PwdChangeRetries pulumi.IntPtrInput
 	// Allow EAP TLS
 	TeapEapTls pulumi.BoolPtrInput
@@ -1202,7 +1237,8 @@ func (o AllowedProtocolsOutput) EapFastEapGtcPwdChange() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.EapFastEapGtcPwdChange }).(pulumi.BoolPtrOutput)
 }
 
-// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+// EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+//   - Range: `0`-`3`
 func (o AllowedProtocolsOutput) EapFastEapGtcPwdChangeRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapFastEapGtcPwdChangeRetries }).(pulumi.IntPtrOutput)
 }
@@ -1217,7 +1253,8 @@ func (o AllowedProtocolsOutput) EapFastEapMsChapV2PwdChange() pulumi.BoolPtrOutp
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.EapFastEapMsChapV2PwdChange }).(pulumi.BoolPtrOutput)
 }
 
-// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+// EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+//   - Range: `0`-`3`
 func (o AllowedProtocolsOutput) EapFastEapMsChapV2PwdChangeRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapFastEapMsChapV2PwdChangeRetries }).(pulumi.IntPtrOutput)
 }
@@ -1262,8 +1299,8 @@ func (o AllowedProtocolsOutput) EapFastPacsAuthorizationPacTtl() pulumi.IntPtrOu
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapFastPacsAuthorizationPacTtl }).(pulumi.IntPtrOutput)
 }
 
-// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+// Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 func (o AllowedProtocolsOutput) EapFastPacsAuthorizationPacTtlUnit() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.StringPtrOutput { return v.EapFastPacsAuthorizationPacTtlUnit }).(pulumi.StringPtrOutput)
 }
@@ -1273,14 +1310,13 @@ func (o AllowedProtocolsOutput) EapFastPacsMachinePacTtl() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapFastPacsMachinePacTtl }).(pulumi.IntPtrOutput)
 }
 
-// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+// Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 func (o AllowedProtocolsOutput) EapFastPacsMachinePacTtlUnit() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.StringPtrOutput { return v.EapFastPacsMachinePacTtlUnit }).(pulumi.StringPtrOutput)
 }
 
-// Server returns access accept after authenticated provisioning. Is required only if
-// `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+// Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
 func (o AllowedProtocolsOutput) EapFastPacsServerReturns() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.EapFastPacsServerReturns }).(pulumi.BoolPtrOutput)
 }
@@ -1295,13 +1331,14 @@ func (o AllowedProtocolsOutput) EapFastPacsTunnelPacTtl() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapFastPacsTunnelPacTtl }).(pulumi.IntPtrOutput)
 }
 
-// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-// `HOURS`, `DAYS`, `WEEKS`
+// PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 func (o AllowedProtocolsOutput) EapFastPacsTunnelPacTtlUnit() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.StringPtrOutput { return v.EapFastPacsTunnelPacTtlUnit }).(pulumi.StringPtrOutput)
 }
 
-// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+// Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+//   - Range: `1`-`100`
 func (o AllowedProtocolsOutput) EapFastPacsUseProactivePacUpdatePercentage() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapFastPacsUseProactivePacUpdatePercentage }).(pulumi.IntPtrOutput)
 }
@@ -1326,7 +1363,8 @@ func (o AllowedProtocolsOutput) EapTlsLBit() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolOutput { return v.EapTlsLBit }).(pulumi.BoolOutput)
 }
 
-// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+// Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+//   - Range: `1`-`100`
 func (o AllowedProtocolsOutput) EapTlsSessionTicketPercentage() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapTlsSessionTicketPercentage }).(pulumi.IntPtrOutput)
 }
@@ -1336,8 +1374,8 @@ func (o AllowedProtocolsOutput) EapTlsSessionTicketTtl() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapTlsSessionTicketTtl }).(pulumi.IntPtrOutput)
 }
 
-// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-// `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+// Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+//   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
 func (o AllowedProtocolsOutput) EapTlsSessionTicketTtlUnit() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.StringPtrOutput { return v.EapTlsSessionTicketTtlUnit }).(pulumi.StringPtrOutput)
 }
@@ -1362,7 +1400,8 @@ func (o AllowedProtocolsOutput) EapTtlsEapMsChapV2PwdChange() pulumi.BoolPtrOutp
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.EapTtlsEapMsChapV2PwdChange }).(pulumi.BoolPtrOutput)
 }
 
-// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+// EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+//   - Range: `0`-`3`
 func (o AllowedProtocolsOutput) EapTtlsEapMsChapV2PwdChangeRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.EapTtlsEapMsChapV2PwdChangeRetries }).(pulumi.IntPtrOutput)
 }
@@ -1397,7 +1436,8 @@ func (o AllowedProtocolsOutput) PeapAllowPeapEapGtcPwdChange() pulumi.BoolPtrOut
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.PeapAllowPeapEapGtcPwdChange }).(pulumi.BoolPtrOutput)
 }
 
-// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+// PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+//   - Range: `0`-`3`
 func (o AllowedProtocolsOutput) PeapAllowPeapEapGtcPwdChangeRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.PeapAllowPeapEapGtcPwdChangeRetries }).(pulumi.IntPtrOutput)
 }
@@ -1412,8 +1452,8 @@ func (o AllowedProtocolsOutput) PeapAllowPeapEapMsChapV2PwdChange() pulumi.BoolP
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.PeapAllowPeapEapMsChapV2PwdChange }).(pulumi.BoolPtrOutput)
 }
 
-// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-// `0`-`3`
+// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+//   - Range: `0`-`3`
 func (o AllowedProtocolsOutput) PeapAllowPeapEapMsChapV2PwdChangeRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.PeapAllowPeapEapMsChapV2PwdChangeRetries }).(pulumi.IntPtrOutput)
 }
@@ -1433,7 +1473,8 @@ func (o AllowedProtocolsOutput) PeapPeapV0() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.PeapPeapV0 }).(pulumi.BoolPtrOutput)
 }
 
-// Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+// Preferred EAP protocol
+//   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
 func (o AllowedProtocolsOutput) PreferredEapProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.StringPtrOutput { return v.PreferredEapProtocol }).(pulumi.StringPtrOutput)
 }
@@ -1478,7 +1519,8 @@ func (o AllowedProtocolsOutput) TeapEapMsChapV2PwdChange() pulumi.BoolPtrOutput 
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.TeapEapMsChapV2PwdChange }).(pulumi.BoolPtrOutput)
 }
 
-// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+// EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+//   - Range: `0`-`3`
 func (o AllowedProtocolsOutput) TeapEapMsChapV2PwdChangeRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.IntPtrOutput { return v.TeapEapMsChapV2PwdChangeRetries }).(pulumi.IntPtrOutput)
 }

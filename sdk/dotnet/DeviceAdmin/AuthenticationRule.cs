@@ -98,17 +98,15 @@ namespace Pulumi.Ise.DeviceAdmin
         public Output<bool?> ConditionIsNegate { get; private set; } = null!;
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Output("conditionOperator")]
         public Output<string?> ConditionOperator { get; private set; } = null!;
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        /// `ConditionOrBlock`, `ConditionReference`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Output("conditionType")]
         public Output<string?> ConditionType { get; private set; } = null!;
@@ -126,20 +124,22 @@ namespace Pulumi.Ise.DeviceAdmin
         public Output<string?> IdentitySourceName { get; private set; } = null!;
 
         /// <summary>
-        /// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-        /// `DROP`, `CONTINUE`
+        /// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Output("ifAuthFail")]
         public Output<string> IfAuthFail { get; private set; } = null!;
 
         /// <summary>
-        /// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+        /// Action to perform when ISE is unable to access the identity database
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Output("ifProcessFail")]
         public Output<string> IfProcessFail { get; private set; } = null!;
 
         /// <summary>
-        /// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        /// Action to perform when user is not found in any of identity stores
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Output("ifUserNotFound")]
         public Output<string> IfUserNotFound { get; private set; } = null!;
@@ -163,7 +163,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Output<int?> Rank { get; private set; } = null!;
 
         /// <summary>
-        /// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        /// The state that the rule is in. A disabled rule cannot be matched.
+        ///   - Choices: `disabled`, `enabled`, `monitor`
         /// </summary>
         [Output("state")]
         public Output<string?> State { get; private set; } = null!;
@@ -263,17 +264,15 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<bool>? ConditionIsNegate { get; set; }
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        /// `ConditionOrBlock`, `ConditionReference`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Input("conditionType")]
         public Input<string>? ConditionType { get; set; }
@@ -291,20 +290,22 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string>? IdentitySourceName { get; set; }
 
         /// <summary>
-        /// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-        /// `DROP`, `CONTINUE`
+        /// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Input("ifAuthFail", required: true)]
         public Input<string> IfAuthFail { get; set; } = null!;
 
         /// <summary>
-        /// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+        /// Action to perform when ISE is unable to access the identity database
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Input("ifProcessFail", required: true)]
         public Input<string> IfProcessFail { get; set; } = null!;
 
         /// <summary>
-        /// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        /// Action to perform when user is not found in any of identity stores
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Input("ifUserNotFound", required: true)]
         public Input<string> IfUserNotFound { get; set; } = null!;
@@ -328,7 +329,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<int>? Rank { get; set; }
 
         /// <summary>
-        /// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        /// The state that the rule is in. A disabled rule cannot be matched.
+        ///   - Choices: `disabled`, `enabled`, `monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }
@@ -390,17 +392,15 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<bool>? ConditionIsNegate { get; set; }
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        /// `ConditionOrBlock`, `ConditionReference`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Input("conditionType")]
         public Input<string>? ConditionType { get; set; }
@@ -418,20 +418,22 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string>? IdentitySourceName { get; set; }
 
         /// <summary>
-        /// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-        /// `DROP`, `CONTINUE`
+        /// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Input("ifAuthFail")]
         public Input<string>? IfAuthFail { get; set; }
 
         /// <summary>
-        /// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+        /// Action to perform when ISE is unable to access the identity database
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Input("ifProcessFail")]
         public Input<string>? IfProcessFail { get; set; }
 
         /// <summary>
-        /// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        /// Action to perform when user is not found in any of identity stores
+        ///   - Choices: `REJECT`, `DROP`, `CONTINUE`
         /// </summary>
         [Input("ifUserNotFound")]
         public Input<string>? IfUserNotFound { get; set; }
@@ -455,7 +457,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<int>? Rank { get; set; }
 
         /// <summary>
-        /// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        /// The state that the rule is in. A disabled rule cannot be matched.
+        ///   - Choices: `disabled`, `enabled`, `monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }

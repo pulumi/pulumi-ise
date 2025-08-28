@@ -55,7 +55,9 @@ type DownloadableAcl struct {
 
 	// The DACL content
 	Dacl pulumi.StringOutput `pulumi:"dacl"`
-	// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+	// The type of ACL
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IPV4`
 	DaclType pulumi.StringOutput `pulumi:"daclType"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -98,7 +100,9 @@ func GetDownloadableAcl(ctx *pulumi.Context,
 type downloadableAclState struct {
 	// The DACL content
 	Dacl *string `pulumi:"dacl"`
-	// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+	// The type of ACL
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IPV4`
 	DaclType *string `pulumi:"daclType"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -109,7 +113,9 @@ type downloadableAclState struct {
 type DownloadableAclState struct {
 	// The DACL content
 	Dacl pulumi.StringPtrInput
-	// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+	// The type of ACL
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IPV4`
 	DaclType pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -124,7 +130,9 @@ func (DownloadableAclState) ElementType() reflect.Type {
 type downloadableAclArgs struct {
 	// The DACL content
 	Dacl string `pulumi:"dacl"`
-	// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+	// The type of ACL
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IPV4`
 	DaclType *string `pulumi:"daclType"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -136,7 +144,9 @@ type downloadableAclArgs struct {
 type DownloadableAclArgs struct {
 	// The DACL content
 	Dacl pulumi.StringInput
-	// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+	// The type of ACL
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IPV4`
 	DaclType pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -236,7 +246,9 @@ func (o DownloadableAclOutput) Dacl() pulumi.StringOutput {
 	return o.ApplyT(func(v *DownloadableAcl) pulumi.StringOutput { return v.Dacl }).(pulumi.StringOutput)
 }
 
-// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+// The type of ACL
+//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+//   - Default value: `IPV4`
 func (o DownloadableAclOutput) DaclType() pulumi.StringOutput {
 	return o.ApplyT(func(v *DownloadableAcl) pulumi.StringOutput { return v.DaclType }).(pulumi.StringOutput)
 }

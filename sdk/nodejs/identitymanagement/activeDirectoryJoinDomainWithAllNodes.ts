@@ -52,11 +52,11 @@ export class ActiveDirectoryJoinDomainWithAllNodes extends pulumi.CustomResource
         return obj['__pulumiType'] === ActiveDirectoryJoinDomainWithAllNodes.__pulumiType;
     }
 
-    public readonly additionalDatas!: pulumi.Output<outputs.identitymanagement.ActiveDirectoryJoinDomainWithAllNodesAdditionalData[]>;
+    declare public readonly additionalDatas: pulumi.Output<outputs.identitymanagement.ActiveDirectoryJoinDomainWithAllNodesAdditionalData[]>;
     /**
      * Active Directory Join Point ID
      */
-    public readonly joinPointId!: pulumi.Output<string>;
+    declare public readonly joinPointId: pulumi.Output<string>;
 
     /**
      * Create a ActiveDirectoryJoinDomainWithAllNodes resource with the given unique name, arguments, and options.
@@ -71,18 +71,18 @@ export class ActiveDirectoryJoinDomainWithAllNodes extends pulumi.CustomResource
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ActiveDirectoryJoinDomainWithAllNodesState | undefined;
-            resourceInputs["additionalDatas"] = state ? state.additionalDatas : undefined;
-            resourceInputs["joinPointId"] = state ? state.joinPointId : undefined;
+            resourceInputs["additionalDatas"] = state?.additionalDatas;
+            resourceInputs["joinPointId"] = state?.joinPointId;
         } else {
             const args = argsOrState as ActiveDirectoryJoinDomainWithAllNodesArgs | undefined;
-            if ((!args || args.additionalDatas === undefined) && !opts.urn) {
+            if (args?.additionalDatas === undefined && !opts.urn) {
                 throw new Error("Missing required property 'additionalDatas'");
             }
-            if ((!args || args.joinPointId === undefined) && !opts.urn) {
+            if (args?.joinPointId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'joinPointId'");
             }
-            resourceInputs["additionalDatas"] = args ? args.additionalDatas : undefined;
-            resourceInputs["joinPointId"] = args ? args.joinPointId : undefined;
+            resourceInputs["additionalDatas"] = args?.additionalDatas;
+            resourceInputs["joinPointId"] = args?.joinPointId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ActiveDirectoryJoinDomainWithAllNodes.__pulumiType, name, resourceInputs, opts);

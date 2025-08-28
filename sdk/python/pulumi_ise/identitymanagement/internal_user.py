@@ -36,9 +36,9 @@ class InternalUserArgs:
         """
         The set of arguments for constructing a InternalUser resource.
         :param pulumi.Input[_builtins.str] password: The password of the internal user
-        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-               from ISE 3.2.
-        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password - Default value: `true`
+        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
+        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] custom_attributes: Key value map
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
@@ -48,9 +48,10 @@ class InternalUserArgs:
         :param pulumi.Input[_builtins.str] identity_groups: Comma separated list of identity group IDs.
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
-        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept - Default value: `Internal Users`
-        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-               field is only supported from ISE 3.2. - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
+                 - Default value: `Internal Users`
+        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+                 - Default value: `false`
         """
         pulumi.set(__self__, "password", password)
         if account_name_alias is not None:
@@ -96,8 +97,7 @@ class InternalUserArgs:
     @pulumi.getter(name="accountNameAlias")
     def account_name_alias(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-        from ISE 3.2.
+        The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "account_name_alias")
 
@@ -109,7 +109,8 @@ class InternalUserArgs:
     @pulumi.getter(name="changePassword")
     def change_password(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Requires the user to change the password - Default value: `true`
+        Requires the user to change the password
+          - Default value: `true`
         """
         return pulumi.get(self, "change_password")
 
@@ -229,7 +230,8 @@ class InternalUserArgs:
     @pulumi.getter(name="passwordIdStore")
     def password_id_store(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ID store where the internal user's password is kept - Default value: `Internal Users`
+        The ID store where the internal user's password is kept
+          - Default value: `Internal Users`
         """
         return pulumi.get(self, "password_id_store")
 
@@ -241,8 +243,8 @@ class InternalUserArgs:
     @pulumi.getter(name="passwordNeverExpires")
     def password_never_expires(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-        field is only supported from ISE 3.2. - Default value: `false`
+        Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+          - Default value: `false`
         """
         return pulumi.get(self, "password_never_expires")
 
@@ -270,9 +272,9 @@ class _InternalUserState:
                  password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering InternalUser resources.
-        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-               from ISE 3.2.
-        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password - Default value: `true`
+        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
+        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] custom_attributes: Key value map
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
@@ -283,9 +285,10 @@ class _InternalUserState:
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user
-        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept - Default value: `Internal Users`
-        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-               field is only supported from ISE 3.2. - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
+                 - Default value: `Internal Users`
+        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+                 - Default value: `false`
         """
         if account_name_alias is not None:
             pulumi.set(__self__, "account_name_alias", account_name_alias)
@@ -320,8 +323,7 @@ class _InternalUserState:
     @pulumi.getter(name="accountNameAlias")
     def account_name_alias(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-        from ISE 3.2.
+        The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "account_name_alias")
 
@@ -333,7 +335,8 @@ class _InternalUserState:
     @pulumi.getter(name="changePassword")
     def change_password(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Requires the user to change the password - Default value: `true`
+        Requires the user to change the password
+          - Default value: `true`
         """
         return pulumi.get(self, "change_password")
 
@@ -465,7 +468,8 @@ class _InternalUserState:
     @pulumi.getter(name="passwordIdStore")
     def password_id_store(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ID store where the internal user's password is kept - Default value: `Internal Users`
+        The ID store where the internal user's password is kept
+          - Default value: `Internal Users`
         """
         return pulumi.get(self, "password_id_store")
 
@@ -477,8 +481,8 @@ class _InternalUserState:
     @pulumi.getter(name="passwordNeverExpires")
     def password_never_expires(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-        field is only supported from ISE 3.2. - Default value: `false`
+        Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+          - Default value: `false`
         """
         return pulumi.get(self, "password_never_expires")
 
@@ -542,9 +546,9 @@ class InternalUser(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-               from ISE 3.2.
-        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password - Default value: `true`
+        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
+        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] custom_attributes: Key value map
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
@@ -555,9 +559,10 @@ class InternalUser(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user
-        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept - Default value: `Internal Users`
-        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-               field is only supported from ISE 3.2. - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
+                 - Default value: `Internal Users`
+        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+                 - Default value: `false`
         """
         ...
     @overload
@@ -682,9 +687,9 @@ class InternalUser(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-               from ISE 3.2.
-        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password - Default value: `true`
+        :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
+        :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] custom_attributes: Key value map
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
@@ -695,9 +700,10 @@ class InternalUser(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user
-        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept - Default value: `Internal Users`
-        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-               field is only supported from ISE 3.2. - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
+                 - Default value: `Internal Users`
+        :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+                 - Default value: `false`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -723,8 +729,7 @@ class InternalUser(pulumi.CustomResource):
     @pulumi.getter(name="accountNameAlias")
     def account_name_alias(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-        from ISE 3.2.
+        The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "account_name_alias")
 
@@ -732,7 +737,8 @@ class InternalUser(pulumi.CustomResource):
     @pulumi.getter(name="changePassword")
     def change_password(self) -> pulumi.Output[_builtins.bool]:
         """
-        Requires the user to change the password - Default value: `true`
+        Requires the user to change the password
+          - Default value: `true`
         """
         return pulumi.get(self, "change_password")
 
@@ -820,7 +826,8 @@ class InternalUser(pulumi.CustomResource):
     @pulumi.getter(name="passwordIdStore")
     def password_id_store(self) -> pulumi.Output[_builtins.str]:
         """
-        The ID store where the internal user's password is kept - Default value: `Internal Users`
+        The ID store where the internal user's password is kept
+          - Default value: `Internal Users`
         """
         return pulumi.get(self, "password_id_store")
 
@@ -828,8 +835,8 @@ class InternalUser(pulumi.CustomResource):
     @pulumi.getter(name="passwordNeverExpires")
     def password_never_expires(self) -> pulumi.Output[_builtins.bool]:
         """
-        Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-        field is only supported from ISE 3.2. - Default value: `false`
+        Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+          - Default value: `false`
         """
         return pulumi.get(self, "password_never_expires")
 

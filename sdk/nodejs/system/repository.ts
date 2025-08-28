@@ -63,31 +63,32 @@ export class Repository extends pulumi.CustomResource {
     /**
      * Enable PKI
      */
-    public readonly enablePki!: pulumi.Output<boolean | undefined>;
+    declare public readonly enablePki: pulumi.Output<boolean | undefined>;
     /**
      * Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Password can contain alphanumeric and/or special characters.
      */
-    public readonly password!: pulumi.Output<string | undefined>;
+    declare public readonly password: pulumi.Output<string | undefined>;
     /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */
-    public readonly path!: pulumi.Output<string>;
+    declare public readonly path: pulumi.Output<string>;
     /**
-     * Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+     * Protocol
+     *   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
      */
-    public readonly protocol!: pulumi.Output<string>;
+    declare public readonly protocol: pulumi.Output<string>;
     /**
      * Name of the server
      */
-    public readonly serverName!: pulumi.Output<string | undefined>;
+    declare public readonly serverName: pulumi.Output<string | undefined>;
     /**
      * User name
      */
-    public readonly userName!: pulumi.Output<string | undefined>;
+    declare public readonly userName: pulumi.Output<string | undefined>;
 
     /**
      * Create a Repository resource with the given unique name, arguments, and options.
@@ -102,28 +103,28 @@ export class Repository extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as RepositoryState | undefined;
-            resourceInputs["enablePki"] = state ? state.enablePki : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["password"] = state ? state.password : undefined;
-            resourceInputs["path"] = state ? state.path : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["serverName"] = state ? state.serverName : undefined;
-            resourceInputs["userName"] = state ? state.userName : undefined;
+            resourceInputs["enablePki"] = state?.enablePki;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["password"] = state?.password;
+            resourceInputs["path"] = state?.path;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["serverName"] = state?.serverName;
+            resourceInputs["userName"] = state?.userName;
         } else {
             const args = argsOrState as RepositoryArgs | undefined;
-            if ((!args || args.path === undefined) && !opts.urn) {
+            if (args?.path === undefined && !opts.urn) {
                 throw new Error("Missing required property 'path'");
             }
-            if ((!args || args.protocol === undefined) && !opts.urn) {
+            if (args?.protocol === undefined && !opts.urn) {
                 throw new Error("Missing required property 'protocol'");
             }
-            resourceInputs["enablePki"] = args ? args.enablePki : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["password"] = args ? args.password : undefined;
-            resourceInputs["path"] = args ? args.path : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["serverName"] = args ? args.serverName : undefined;
-            resourceInputs["userName"] = args ? args.userName : undefined;
+            resourceInputs["enablePki"] = args?.enablePki;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["password"] = args?.password;
+            resourceInputs["path"] = args?.path;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["serverName"] = args?.serverName;
+            resourceInputs["userName"] = args?.userName;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Repository.__pulumiType, name, resourceInputs, opts);
@@ -151,7 +152,8 @@ export interface RepositoryState {
      */
     path?: pulumi.Input<string>;
     /**
-     * Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+     * Protocol
+     *   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
      */
     protocol?: pulumi.Input<string>;
     /**
@@ -185,7 +187,8 @@ export interface RepositoryArgs {
      */
     path: pulumi.Input<string>;
     /**
-     * Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+     * Protocol
+     *   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
      */
     protocol: pulumi.Input<string>;
     /**

@@ -50,11 +50,11 @@ export class AuthorizationGlobalExceptionRuleUpdateRank extends pulumi.CustomRes
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number>;
+    declare public readonly rank: pulumi.Output<number>;
     /**
      * Authorization global exception rule ID
      */
-    public readonly ruleId!: pulumi.Output<string>;
+    declare public readonly ruleId: pulumi.Output<string>;
 
     /**
      * Create a AuthorizationGlobalExceptionRuleUpdateRank resource with the given unique name, arguments, and options.
@@ -69,18 +69,18 @@ export class AuthorizationGlobalExceptionRuleUpdateRank extends pulumi.CustomRes
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthorizationGlobalExceptionRuleUpdateRankState | undefined;
-            resourceInputs["rank"] = state ? state.rank : undefined;
-            resourceInputs["ruleId"] = state ? state.ruleId : undefined;
+            resourceInputs["rank"] = state?.rank;
+            resourceInputs["ruleId"] = state?.ruleId;
         } else {
             const args = argsOrState as AuthorizationGlobalExceptionRuleUpdateRankArgs | undefined;
-            if ((!args || args.rank === undefined) && !opts.urn) {
+            if (args?.rank === undefined && !opts.urn) {
                 throw new Error("Missing required property 'rank'");
             }
-            if ((!args || args.ruleId === undefined) && !opts.urn) {
+            if (args?.ruleId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'ruleId'");
             }
-            resourceInputs["rank"] = args ? args.rank : undefined;
-            resourceInputs["ruleId"] = args ? args.ruleId : undefined;
+            resourceInputs["rank"] = args?.rank;
+            resourceInputs["ruleId"] = args?.ruleId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AuthorizationGlobalExceptionRuleUpdateRank.__pulumiType, name, resourceInputs, opts);

@@ -78,14 +78,16 @@ public class EndpointCustomAttribute extends com.pulumi.resources.CustomResource
         return this.attributeName;
     }
     /**
-     * Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      * 
      */
     @Export(name="attributeType", refs={String.class}, tree="[0]")
     private Output<String> attributeType;
 
     /**
-     * @return Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * @return Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      * 
      */
     public Output<String> attributeType() {

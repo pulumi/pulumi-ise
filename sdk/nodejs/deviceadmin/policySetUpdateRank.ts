@@ -50,11 +50,11 @@ export class PolicySetUpdateRank extends pulumi.CustomResource {
     /**
      * Policy set ID
      */
-    public readonly policySetId!: pulumi.Output<string>;
+    declare public readonly policySetId: pulumi.Output<string>;
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number>;
+    declare public readonly rank: pulumi.Output<number>;
 
     /**
      * Create a PolicySetUpdateRank resource with the given unique name, arguments, and options.
@@ -69,18 +69,18 @@ export class PolicySetUpdateRank extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicySetUpdateRankState | undefined;
-            resourceInputs["policySetId"] = state ? state.policySetId : undefined;
-            resourceInputs["rank"] = state ? state.rank : undefined;
+            resourceInputs["policySetId"] = state?.policySetId;
+            resourceInputs["rank"] = state?.rank;
         } else {
             const args = argsOrState as PolicySetUpdateRankArgs | undefined;
-            if ((!args || args.policySetId === undefined) && !opts.urn) {
+            if (args?.policySetId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'policySetId'");
             }
-            if ((!args || args.rank === undefined) && !opts.urn) {
+            if (args?.rank === undefined && !opts.urn) {
                 throw new Error("Missing required property 'rank'");
             }
-            resourceInputs["policySetId"] = args ? args.policySetId : undefined;
-            resourceInputs["rank"] = args ? args.rank : undefined;
+            resourceInputs["policySetId"] = args?.policySetId;
+            resourceInputs["rank"] = args?.rank;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(PolicySetUpdateRank.__pulumiType, name, resourceInputs, opts);

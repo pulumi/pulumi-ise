@@ -54,8 +54,8 @@ import (
 type ActiveDirectoryAddGroups struct {
 	pulumi.CustomResourceState
 
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-	// value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+	//   - Default value: `Default_Scope`
 	AdScopesNames pulumi.StringOutput `pulumi:"adScopesNames"`
 	// Join point Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -107,8 +107,8 @@ func GetActiveDirectoryAddGroups(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ActiveDirectoryAddGroups resources.
 type activeDirectoryAddGroupsState struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-	// value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+	//   - Default value: `Default_Scope`
 	AdScopesNames *string `pulumi:"adScopesNames"`
 	// Join point Description
 	Description *string `pulumi:"description"`
@@ -125,8 +125,8 @@ type activeDirectoryAddGroupsState struct {
 }
 
 type ActiveDirectoryAddGroupsState struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-	// value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+	//   - Default value: `Default_Scope`
 	AdScopesNames pulumi.StringPtrInput
 	// Join point Description
 	Description pulumi.StringPtrInput
@@ -147,8 +147,8 @@ func (ActiveDirectoryAddGroupsState) ElementType() reflect.Type {
 }
 
 type activeDirectoryAddGroupsArgs struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-	// value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+	//   - Default value: `Default_Scope`
 	AdScopesNames *string `pulumi:"adScopesNames"`
 	// Join point Description
 	Description *string `pulumi:"description"`
@@ -166,8 +166,8 @@ type activeDirectoryAddGroupsArgs struct {
 
 // The set of arguments for constructing a ActiveDirectoryAddGroups resource.
 type ActiveDirectoryAddGroupsArgs struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-	// value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+	//   - Default value: `Default_Scope`
 	AdScopesNames pulumi.StringPtrInput
 	// Join point Description
 	Description pulumi.StringPtrInput
@@ -270,8 +270,8 @@ func (o ActiveDirectoryAddGroupsOutput) ToActiveDirectoryAddGroupsOutputWithCont
 	return o
 }
 
-// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-// value: `Default_Scope`
+// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+//   - Default value: `Default_Scope`
 func (o ActiveDirectoryAddGroupsOutput) AdScopesNames() pulumi.StringOutput {
 	return o.ApplyT(func(v *ActiveDirectoryAddGroups) pulumi.StringOutput { return v.AdScopesNames }).(pulumi.StringOutput)
 }

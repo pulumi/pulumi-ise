@@ -66,63 +66,64 @@ export class InternalUser extends pulumi.CustomResource {
     }
 
     /**
-     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      */
-    public readonly accountNameAlias!: pulumi.Output<string | undefined>;
+    declare public readonly accountNameAlias: pulumi.Output<string | undefined>;
     /**
-     * Requires the user to change the password - Default value: `true`
+     * Requires the user to change the password
+     *   - Default value: `true`
      */
-    public readonly changePassword!: pulumi.Output<boolean>;
+    declare public readonly changePassword: pulumi.Output<boolean>;
     /**
      * Key value map
      */
-    public readonly customAttributes!: pulumi.Output<string | undefined>;
+    declare public readonly customAttributes: pulumi.Output<string | undefined>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Email address
      */
-    public readonly email!: pulumi.Output<string | undefined>;
+    declare public readonly email: pulumi.Output<string | undefined>;
     /**
      * This field is added in ISE 2.0 to support TACACS+
      */
-    public readonly enablePassword!: pulumi.Output<string | undefined>;
+    declare public readonly enablePassword: pulumi.Output<string | undefined>;
     /**
      * Whether the user is enabled/disabled
      */
-    public readonly enabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly enabled: pulumi.Output<boolean | undefined>;
     /**
      * First name of the internal user
      */
-    public readonly firstName!: pulumi.Output<string | undefined>;
+    declare public readonly firstName: pulumi.Output<string | undefined>;
     /**
      * Comma separated list of identity group IDs.
      */
-    public readonly identityGroups!: pulumi.Output<string | undefined>;
+    declare public readonly identityGroups: pulumi.Output<string | undefined>;
     /**
      * Last name of the internal user
      */
-    public readonly lastName!: pulumi.Output<string | undefined>;
+    declare public readonly lastName: pulumi.Output<string | undefined>;
     /**
      * The name of the internal user
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The password of the internal user
      */
-    public readonly password!: pulumi.Output<string>;
+    declare public readonly password: pulumi.Output<string>;
     /**
-     * The ID store where the internal user's password is kept - Default value: `Internal Users`
+     * The ID store where the internal user's password is kept
+     *   - Default value: `Internal Users`
      */
-    public readonly passwordIdStore!: pulumi.Output<string>;
+    declare public readonly passwordIdStore: pulumi.Output<string>;
     /**
-     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      */
-    public readonly passwordNeverExpires!: pulumi.Output<boolean>;
+    declare public readonly passwordNeverExpires: pulumi.Output<boolean>;
 
     /**
      * Create a InternalUser resource with the given unique name, arguments, and options.
@@ -137,39 +138,39 @@ export class InternalUser extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as InternalUserState | undefined;
-            resourceInputs["accountNameAlias"] = state ? state.accountNameAlias : undefined;
-            resourceInputs["changePassword"] = state ? state.changePassword : undefined;
-            resourceInputs["customAttributes"] = state ? state.customAttributes : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["email"] = state ? state.email : undefined;
-            resourceInputs["enablePassword"] = state ? state.enablePassword : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["firstName"] = state ? state.firstName : undefined;
-            resourceInputs["identityGroups"] = state ? state.identityGroups : undefined;
-            resourceInputs["lastName"] = state ? state.lastName : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["password"] = state ? state.password : undefined;
-            resourceInputs["passwordIdStore"] = state ? state.passwordIdStore : undefined;
-            resourceInputs["passwordNeverExpires"] = state ? state.passwordNeverExpires : undefined;
+            resourceInputs["accountNameAlias"] = state?.accountNameAlias;
+            resourceInputs["changePassword"] = state?.changePassword;
+            resourceInputs["customAttributes"] = state?.customAttributes;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["email"] = state?.email;
+            resourceInputs["enablePassword"] = state?.enablePassword;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["firstName"] = state?.firstName;
+            resourceInputs["identityGroups"] = state?.identityGroups;
+            resourceInputs["lastName"] = state?.lastName;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["password"] = state?.password;
+            resourceInputs["passwordIdStore"] = state?.passwordIdStore;
+            resourceInputs["passwordNeverExpires"] = state?.passwordNeverExpires;
         } else {
             const args = argsOrState as InternalUserArgs | undefined;
-            if ((!args || args.password === undefined) && !opts.urn) {
+            if (args?.password === undefined && !opts.urn) {
                 throw new Error("Missing required property 'password'");
             }
-            resourceInputs["accountNameAlias"] = args ? args.accountNameAlias : undefined;
-            resourceInputs["changePassword"] = args ? args.changePassword : undefined;
-            resourceInputs["customAttributes"] = args ? args.customAttributes : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["email"] = args ? args.email : undefined;
-            resourceInputs["enablePassword"] = args ? args.enablePassword : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["firstName"] = args ? args.firstName : undefined;
-            resourceInputs["identityGroups"] = args ? args.identityGroups : undefined;
-            resourceInputs["lastName"] = args ? args.lastName : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["password"] = args ? args.password : undefined;
-            resourceInputs["passwordIdStore"] = args ? args.passwordIdStore : undefined;
-            resourceInputs["passwordNeverExpires"] = args ? args.passwordNeverExpires : undefined;
+            resourceInputs["accountNameAlias"] = args?.accountNameAlias;
+            resourceInputs["changePassword"] = args?.changePassword;
+            resourceInputs["customAttributes"] = args?.customAttributes;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["email"] = args?.email;
+            resourceInputs["enablePassword"] = args?.enablePassword;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["firstName"] = args?.firstName;
+            resourceInputs["identityGroups"] = args?.identityGroups;
+            resourceInputs["lastName"] = args?.lastName;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["password"] = args?.password;
+            resourceInputs["passwordIdStore"] = args?.passwordIdStore;
+            resourceInputs["passwordNeverExpires"] = args?.passwordNeverExpires;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(InternalUser.__pulumiType, name, resourceInputs, opts);
@@ -181,12 +182,12 @@ export class InternalUser extends pulumi.CustomResource {
  */
 export interface InternalUserState {
     /**
-     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      */
     accountNameAlias?: pulumi.Input<string>;
     /**
-     * Requires the user to change the password - Default value: `true`
+     * Requires the user to change the password
+     *   - Default value: `true`
      */
     changePassword?: pulumi.Input<boolean>;
     /**
@@ -230,12 +231,13 @@ export interface InternalUserState {
      */
     password?: pulumi.Input<string>;
     /**
-     * The ID store where the internal user's password is kept - Default value: `Internal Users`
+     * The ID store where the internal user's password is kept
+     *   - Default value: `Internal Users`
      */
     passwordIdStore?: pulumi.Input<string>;
     /**
-     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      */
     passwordNeverExpires?: pulumi.Input<boolean>;
 }
@@ -245,12 +247,12 @@ export interface InternalUserState {
  */
 export interface InternalUserArgs {
     /**
-     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      */
     accountNameAlias?: pulumi.Input<string>;
     /**
-     * Requires the user to change the password - Default value: `true`
+     * Requires the user to change the password
+     *   - Default value: `true`
      */
     changePassword?: pulumi.Input<boolean>;
     /**
@@ -294,12 +296,13 @@ export interface InternalUserArgs {
      */
     password: pulumi.Input<string>;
     /**
-     * The ID store where the internal user's password is kept - Default value: `Internal Users`
+     * The ID store where the internal user's password is kept
+     *   - Default value: `Internal Users`
      */
     passwordIdStore?: pulumi.Input<string>;
     /**
-     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      */
     passwordNeverExpires?: pulumi.Input<boolean>;
 }

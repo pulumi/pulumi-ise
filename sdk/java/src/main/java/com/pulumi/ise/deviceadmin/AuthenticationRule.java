@@ -180,36 +180,32 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.conditionIsNegate);
     }
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     @Export(name="conditionOperator", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> conditionOperator;
 
     /**
-     * @return Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * @return Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     public Output<Optional<String>> conditionOperator() {
         return Codegen.optional(this.conditionOperator);
     }
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     @Export(name="conditionType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> conditionType;
 
     /**
-     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     public Output<Optional<String>> conditionType() {
@@ -244,44 +240,48 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.identitySourceName);
     }
     /**
-     * Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-     * `DROP`, `CONTINUE`
+     * Action to perform when authentication fails such as Bad credentials, disabled user and so on
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     @Export(name="ifAuthFail", refs={String.class}, tree="[0]")
     private Output<String> ifAuthFail;
 
     /**
-     * @return Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-     * `DROP`, `CONTINUE`
+     * @return Action to perform when authentication fails such as Bad credentials, disabled user and so on
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     public Output<String> ifAuthFail() {
         return this.ifAuthFail;
     }
     /**
-     * Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * Action to perform when ISE is unable to access the identity database
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     @Export(name="ifProcessFail", refs={String.class}, tree="[0]")
     private Output<String> ifProcessFail;
 
     /**
-     * @return Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * @return Action to perform when ISE is unable to access the identity database
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     public Output<String> ifProcessFail() {
         return this.ifProcessFail;
     }
     /**
-     * Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * Action to perform when user is not found in any of identity stores
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     @Export(name="ifUserNotFound", refs={String.class}, tree="[0]")
     private Output<String> ifUserNotFound;
 
     /**
-     * @return Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * @return Action to perform when user is not found in any of identity stores
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     public Output<String> ifUserNotFound() {
@@ -330,14 +330,16 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.rank);
     }
     /**
-     * The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      * 
      */
     @Export(name="state", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> state;
 
     /**
-     * @return The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * @return The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      * 
      */
     public Output<Optional<String>> state() {

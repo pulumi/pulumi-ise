@@ -58,11 +58,12 @@ export class EndpointCustomAttribute extends pulumi.CustomResource {
     /**
      * The name of the attribute
      */
-    public readonly attributeName!: pulumi.Output<string>;
+    declare public readonly attributeName: pulumi.Output<string>;
     /**
-     * Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      */
-    public readonly attributeType!: pulumi.Output<string>;
+    declare public readonly attributeType: pulumi.Output<string>;
 
     /**
      * Create a EndpointCustomAttribute resource with the given unique name, arguments, and options.
@@ -77,18 +78,18 @@ export class EndpointCustomAttribute extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EndpointCustomAttributeState | undefined;
-            resourceInputs["attributeName"] = state ? state.attributeName : undefined;
-            resourceInputs["attributeType"] = state ? state.attributeType : undefined;
+            resourceInputs["attributeName"] = state?.attributeName;
+            resourceInputs["attributeType"] = state?.attributeType;
         } else {
             const args = argsOrState as EndpointCustomAttributeArgs | undefined;
-            if ((!args || args.attributeName === undefined) && !opts.urn) {
+            if (args?.attributeName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'attributeName'");
             }
-            if ((!args || args.attributeType === undefined) && !opts.urn) {
+            if (args?.attributeType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'attributeType'");
             }
-            resourceInputs["attributeName"] = args ? args.attributeName : undefined;
-            resourceInputs["attributeType"] = args ? args.attributeType : undefined;
+            resourceInputs["attributeName"] = args?.attributeName;
+            resourceInputs["attributeType"] = args?.attributeType;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(EndpointCustomAttribute.__pulumiType, name, resourceInputs, opts);
@@ -104,7 +105,8 @@ export interface EndpointCustomAttributeState {
      */
     attributeName?: pulumi.Input<string>;
     /**
-     * Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      */
     attributeType?: pulumi.Input<string>;
 }
@@ -118,7 +120,8 @@ export interface EndpointCustomAttributeArgs {
      */
     attributeName: pulumi.Input<string>;
     /**
-     * Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      */
     attributeType: pulumi.Input<string>;
 }

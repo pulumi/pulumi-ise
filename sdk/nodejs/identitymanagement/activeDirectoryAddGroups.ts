@@ -59,34 +59,34 @@ export class ActiveDirectoryAddGroups extends pulumi.CustomResource {
     }
 
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      */
-    public readonly adScopesNames!: pulumi.Output<string>;
+    declare public readonly adScopesNames: pulumi.Output<string>;
     /**
      * Join point Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * AD domain associated with the join point
      */
-    public readonly domain!: pulumi.Output<string>;
+    declare public readonly domain: pulumi.Output<string>;
     /**
      * - Default value: `true`
      */
-    public readonly enableDomainAllowedList!: pulumi.Output<boolean>;
+    declare public readonly enableDomainAllowedList: pulumi.Output<boolean>;
     /**
      * List of AD Groups
      */
-    public readonly groups!: pulumi.Output<outputs.identitymanagement.ActiveDirectoryAddGroupsGroup[] | undefined>;
+    declare public readonly groups: pulumi.Output<outputs.identitymanagement.ActiveDirectoryAddGroupsGroup[] | undefined>;
     /**
      * Active Directory Join Point ID
      */
-    public readonly joinPointId!: pulumi.Output<string>;
+    declare public readonly joinPointId: pulumi.Output<string>;
     /**
      * The name of the active directory join point
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
 
     /**
      * Create a ActiveDirectoryAddGroups resource with the given unique name, arguments, and options.
@@ -101,28 +101,28 @@ export class ActiveDirectoryAddGroups extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ActiveDirectoryAddGroupsState | undefined;
-            resourceInputs["adScopesNames"] = state ? state.adScopesNames : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["domain"] = state ? state.domain : undefined;
-            resourceInputs["enableDomainAllowedList"] = state ? state.enableDomainAllowedList : undefined;
-            resourceInputs["groups"] = state ? state.groups : undefined;
-            resourceInputs["joinPointId"] = state ? state.joinPointId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
+            resourceInputs["adScopesNames"] = state?.adScopesNames;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["domain"] = state?.domain;
+            resourceInputs["enableDomainAllowedList"] = state?.enableDomainAllowedList;
+            resourceInputs["groups"] = state?.groups;
+            resourceInputs["joinPointId"] = state?.joinPointId;
+            resourceInputs["name"] = state?.name;
         } else {
             const args = argsOrState as ActiveDirectoryAddGroupsArgs | undefined;
-            if ((!args || args.domain === undefined) && !opts.urn) {
+            if (args?.domain === undefined && !opts.urn) {
                 throw new Error("Missing required property 'domain'");
             }
-            if ((!args || args.joinPointId === undefined) && !opts.urn) {
+            if (args?.joinPointId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'joinPointId'");
             }
-            resourceInputs["adScopesNames"] = args ? args.adScopesNames : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["domain"] = args ? args.domain : undefined;
-            resourceInputs["enableDomainAllowedList"] = args ? args.enableDomainAllowedList : undefined;
-            resourceInputs["groups"] = args ? args.groups : undefined;
-            resourceInputs["joinPointId"] = args ? args.joinPointId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["adScopesNames"] = args?.adScopesNames;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["domain"] = args?.domain;
+            resourceInputs["enableDomainAllowedList"] = args?.enableDomainAllowedList;
+            resourceInputs["groups"] = args?.groups;
+            resourceInputs["joinPointId"] = args?.joinPointId;
+            resourceInputs["name"] = args?.name;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ActiveDirectoryAddGroups.__pulumiType, name, resourceInputs, opts);
@@ -134,8 +134,8 @@ export class ActiveDirectoryAddGroups extends pulumi.CustomResource {
  */
 export interface ActiveDirectoryAddGroupsState {
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      */
     adScopesNames?: pulumi.Input<string>;
     /**
@@ -169,8 +169,8 @@ export interface ActiveDirectoryAddGroupsState {
  */
 export interface ActiveDirectoryAddGroupsArgs {
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      */
     adScopesNames?: pulumi.Input<string>;
     /**

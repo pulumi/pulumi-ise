@@ -26,7 +26,9 @@ class DownloadableAclArgs:
         """
         The set of arguments for constructing a DownloadableAcl resource.
         :param pulumi.Input[_builtins.str] dacl: The DACL content
-        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IPV4`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the downloadable ACL
         """
@@ -54,7 +56,9 @@ class DownloadableAclArgs:
     @pulumi.getter(name="daclType")
     def dacl_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        The type of ACL
+          - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+          - Default value: `IPV4`
         """
         return pulumi.get(self, "dacl_type")
 
@@ -97,7 +101,9 @@ class _DownloadableAclState:
         """
         Input properties used for looking up and filtering DownloadableAcl resources.
         :param pulumi.Input[_builtins.str] dacl: The DACL content
-        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IPV4`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the downloadable ACL
         """
@@ -126,7 +132,9 @@ class _DownloadableAclState:
     @pulumi.getter(name="daclType")
     def dacl_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        The type of ACL
+          - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+          - Default value: `IPV4`
         """
         return pulumi.get(self, "dacl_type")
 
@@ -197,7 +205,9 @@ class DownloadableAcl(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] dacl: The DACL content
-        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IPV4`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the downloadable ACL
         """
@@ -287,7 +297,9 @@ class DownloadableAcl(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] dacl: The DACL content
-        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        :param pulumi.Input[_builtins.str] dacl_type: The type of ACL
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IPV4`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the downloadable ACL
         """
@@ -313,7 +325,9 @@ class DownloadableAcl(pulumi.CustomResource):
     @pulumi.getter(name="daclType")
     def dacl_type(self) -> pulumi.Output[_builtins.str]:
         """
-        The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        The type of ACL
+          - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+          - Default value: `IPV4`
         """
         return pulumi.get(self, "dacl_type")
 

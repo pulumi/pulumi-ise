@@ -51,15 +51,15 @@ export class AuthorizationExceptionRuleUpdateRank extends pulumi.CustomResource 
     /**
      * Policy set ID
      */
-    public readonly policySetId!: pulumi.Output<string>;
+    declare public readonly policySetId: pulumi.Output<string>;
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number>;
+    declare public readonly rank: pulumi.Output<number>;
     /**
      * Authorization exception rule ID
      */
-    public readonly ruleId!: pulumi.Output<string>;
+    declare public readonly ruleId: pulumi.Output<string>;
 
     /**
      * Create a AuthorizationExceptionRuleUpdateRank resource with the given unique name, arguments, and options.
@@ -74,23 +74,23 @@ export class AuthorizationExceptionRuleUpdateRank extends pulumi.CustomResource 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthorizationExceptionRuleUpdateRankState | undefined;
-            resourceInputs["policySetId"] = state ? state.policySetId : undefined;
-            resourceInputs["rank"] = state ? state.rank : undefined;
-            resourceInputs["ruleId"] = state ? state.ruleId : undefined;
+            resourceInputs["policySetId"] = state?.policySetId;
+            resourceInputs["rank"] = state?.rank;
+            resourceInputs["ruleId"] = state?.ruleId;
         } else {
             const args = argsOrState as AuthorizationExceptionRuleUpdateRankArgs | undefined;
-            if ((!args || args.policySetId === undefined) && !opts.urn) {
+            if (args?.policySetId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'policySetId'");
             }
-            if ((!args || args.rank === undefined) && !opts.urn) {
+            if (args?.rank === undefined && !opts.urn) {
                 throw new Error("Missing required property 'rank'");
             }
-            if ((!args || args.ruleId === undefined) && !opts.urn) {
+            if (args?.ruleId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'ruleId'");
             }
-            resourceInputs["policySetId"] = args ? args.policySetId : undefined;
-            resourceInputs["rank"] = args ? args.rank : undefined;
-            resourceInputs["ruleId"] = args ? args.ruleId : undefined;
+            resourceInputs["policySetId"] = args?.policySetId;
+            resourceInputs["rank"] = args?.rank;
+            resourceInputs["ruleId"] = args?.ruleId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AuthorizationExceptionRuleUpdateRank.__pulumiType, name, resourceInputs, opts);

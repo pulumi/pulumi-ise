@@ -48,16 +48,16 @@ namespace Pulumi.Ise.IdentityManagement
     public partial class CertificateAuthenticationProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Allow as username - Default value: `false`
+        /// Allow as username
+        ///   - Default value: `false`
         /// </summary>
         [Output("allowedAsUserName")]
         public Output<bool> AllowedAsUserName { get; private set; } = null!;
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-        /// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-        /// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-        /// `SUBJECT_COMMON_NAME`
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+        ///   - Default value: `SUBJECT_COMMON_NAME`
         /// </summary>
         [Output("certificateAttributeName")]
         public Output<string> CertificateAttributeName { get; private set; } = null!;
@@ -69,15 +69,16 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-        /// value: `[not applicable]`
+        /// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+        ///   - Default value: `[not applicable]`
         /// </summary>
         [Output("externalIdentityStoreName")]
         public Output<string> ExternalIdentityStoreName { get; private set; } = null!;
 
         /// <summary>
-        /// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-        /// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        /// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+        ///   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+        ///   - Default value: `NEVER`
         /// </summary>
         [Output("matchMode")]
         public Output<string> MatchMode { get; private set; } = null!;
@@ -89,9 +90,9 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-        /// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-        /// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        /// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+        ///   - Choices: `CERTIFICATE`, `UPN`
+        ///   - Default value: `CERTIFICATE`
         /// </summary>
         [Output("usernameFrom")]
         public Output<string> UsernameFrom { get; private set; } = null!;
@@ -143,16 +144,16 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class CertificateAuthenticationProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Allow as username - Default value: `false`
+        /// Allow as username
+        ///   - Default value: `false`
         /// </summary>
         [Input("allowedAsUserName")]
         public Input<bool>? AllowedAsUserName { get; set; }
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-        /// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-        /// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-        /// `SUBJECT_COMMON_NAME`
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+        ///   - Default value: `SUBJECT_COMMON_NAME`
         /// </summary>
         [Input("certificateAttributeName")]
         public Input<string>? CertificateAttributeName { get; set; }
@@ -164,15 +165,16 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-        /// value: `[not applicable]`
+        /// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+        ///   - Default value: `[not applicable]`
         /// </summary>
         [Input("externalIdentityStoreName")]
         public Input<string>? ExternalIdentityStoreName { get; set; }
 
         /// <summary>
-        /// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-        /// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        /// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+        ///   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+        ///   - Default value: `NEVER`
         /// </summary>
         [Input("matchMode")]
         public Input<string>? MatchMode { get; set; }
@@ -184,9 +186,9 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-        /// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-        /// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        /// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+        ///   - Choices: `CERTIFICATE`, `UPN`
+        ///   - Default value: `CERTIFICATE`
         /// </summary>
         [Input("usernameFrom")]
         public Input<string>? UsernameFrom { get; set; }
@@ -200,16 +202,16 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class CertificateAuthenticationProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Allow as username - Default value: `false`
+        /// Allow as username
+        ///   - Default value: `false`
         /// </summary>
         [Input("allowedAsUserName")]
         public Input<bool>? AllowedAsUserName { get; set; }
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-        /// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-        /// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-        /// `SUBJECT_COMMON_NAME`
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+        ///   - Default value: `SUBJECT_COMMON_NAME`
         /// </summary>
         [Input("certificateAttributeName")]
         public Input<string>? CertificateAttributeName { get; set; }
@@ -221,15 +223,16 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-        /// value: `[not applicable]`
+        /// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+        ///   - Default value: `[not applicable]`
         /// </summary>
         [Input("externalIdentityStoreName")]
         public Input<string>? ExternalIdentityStoreName { get; set; }
 
         /// <summary>
-        /// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-        /// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+        /// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+        ///   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+        ///   - Default value: `NEVER`
         /// </summary>
         [Input("matchMode")]
         public Input<string>? MatchMode { get; set; }
@@ -241,9 +244,9 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-        /// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-        /// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+        /// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+        ///   - Choices: `CERTIFICATE`, `UPN`
+        ///   - Default value: `CERTIFICATE`
         /// </summary>
         [Input("usernameFrom")]
         public Input<string>? UsernameFrom { get; set; }
