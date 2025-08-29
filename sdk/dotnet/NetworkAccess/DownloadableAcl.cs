@@ -51,7 +51,9 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string> Dacl { get; private set; } = null!;
 
         /// <summary>
-        /// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        /// The type of ACL
+        ///   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+        ///   - Default value: `IPV4`
         /// </summary>
         [Output("daclType")]
         public Output<string> DaclType { get; private set; } = null!;
@@ -121,7 +123,9 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string> Dacl { get; set; } = null!;
 
         /// <summary>
-        /// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        /// The type of ACL
+        ///   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+        ///   - Default value: `IPV4`
         /// </summary>
         [Input("daclType")]
         public Input<string>? DaclType { get; set; }
@@ -153,7 +157,9 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Dacl { get; set; }
 
         /// <summary>
-        /// The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+        /// The type of ACL
+        ///   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+        ///   - Default value: `IPV4`
         /// </summary>
         [Input("daclType")]
         public Input<string>? DaclType { get; set; }

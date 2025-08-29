@@ -59,19 +59,19 @@ export class EndpointIdentityGroup extends pulumi.CustomResource {
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The name of the endpoint identity group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Parent endpoint identity group ID
      */
-    public readonly parentEndpointIdentityGroupId!: pulumi.Output<string | undefined>;
+    declare public readonly parentEndpointIdentityGroupId: pulumi.Output<string | undefined>;
     /**
      * System defined endpoint identity group
      */
-    public readonly systemDefined!: pulumi.Output<boolean | undefined>;
+    declare public readonly systemDefined: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a EndpointIdentityGroup resource with the given unique name, arguments, and options.
@@ -86,16 +86,16 @@ export class EndpointIdentityGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EndpointIdentityGroupState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["parentEndpointIdentityGroupId"] = state ? state.parentEndpointIdentityGroupId : undefined;
-            resourceInputs["systemDefined"] = state ? state.systemDefined : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["parentEndpointIdentityGroupId"] = state?.parentEndpointIdentityGroupId;
+            resourceInputs["systemDefined"] = state?.systemDefined;
         } else {
             const args = argsOrState as EndpointIdentityGroupArgs | undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["parentEndpointIdentityGroupId"] = args ? args.parentEndpointIdentityGroupId : undefined;
-            resourceInputs["systemDefined"] = args ? args.systemDefined : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["parentEndpointIdentityGroupId"] = args?.parentEndpointIdentityGroupId;
+            resourceInputs["systemDefined"] = args?.systemDefined;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(EndpointIdentityGroup.__pulumiType, name, resourceInputs, opts);

@@ -55,26 +55,27 @@ import (
 type CertificateAuthenticationProfile struct {
 	pulumi.CustomResourceState
 
-	// Allow as username - Default value: `false`
+	// Allow as username
+	//   - Default value: `false`
 	AllowedAsUserName pulumi.BoolOutput `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-	// `SUBJECT_COMMON_NAME`
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+	//   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+	//   - Default value: `SUBJECT_COMMON_NAME`
 	CertificateAttributeName pulumi.StringOutput `pulumi:"certificateAttributeName"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-	// value: `[not applicable]`
+	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+	//   - Default value: `[not applicable]`
 	ExternalIdentityStoreName pulumi.StringOutput `pulumi:"externalIdentityStoreName"`
-	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-	// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+	//   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+	//   - Default value: `NEVER`
 	MatchMode pulumi.StringOutput `pulumi:"matchMode"`
 	// The name of the certificate profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-	// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-	// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+	//   - Choices: `CERTIFICATE`, `UPN`
+	//   - Default value: `CERTIFICATE`
 	UsernameFrom pulumi.StringOutput `pulumi:"usernameFrom"`
 }
 
@@ -108,50 +109,52 @@ func GetCertificateAuthenticationProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CertificateAuthenticationProfile resources.
 type certificateAuthenticationProfileState struct {
-	// Allow as username - Default value: `false`
+	// Allow as username
+	//   - Default value: `false`
 	AllowedAsUserName *bool `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-	// `SUBJECT_COMMON_NAME`
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+	//   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+	//   - Default value: `SUBJECT_COMMON_NAME`
 	CertificateAttributeName *string `pulumi:"certificateAttributeName"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-	// value: `[not applicable]`
+	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+	//   - Default value: `[not applicable]`
 	ExternalIdentityStoreName *string `pulumi:"externalIdentityStoreName"`
-	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-	// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+	//   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+	//   - Default value: `NEVER`
 	MatchMode *string `pulumi:"matchMode"`
 	// The name of the certificate profile
 	Name *string `pulumi:"name"`
-	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-	// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-	// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+	//   - Choices: `CERTIFICATE`, `UPN`
+	//   - Default value: `CERTIFICATE`
 	UsernameFrom *string `pulumi:"usernameFrom"`
 }
 
 type CertificateAuthenticationProfileState struct {
-	// Allow as username - Default value: `false`
+	// Allow as username
+	//   - Default value: `false`
 	AllowedAsUserName pulumi.BoolPtrInput
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-	// `SUBJECT_COMMON_NAME`
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+	//   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+	//   - Default value: `SUBJECT_COMMON_NAME`
 	CertificateAttributeName pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-	// value: `[not applicable]`
+	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+	//   - Default value: `[not applicable]`
 	ExternalIdentityStoreName pulumi.StringPtrInput
-	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-	// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+	//   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+	//   - Default value: `NEVER`
 	MatchMode pulumi.StringPtrInput
 	// The name of the certificate profile
 	Name pulumi.StringPtrInput
-	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-	// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-	// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+	//   - Choices: `CERTIFICATE`, `UPN`
+	//   - Default value: `CERTIFICATE`
 	UsernameFrom pulumi.StringPtrInput
 }
 
@@ -160,51 +163,53 @@ func (CertificateAuthenticationProfileState) ElementType() reflect.Type {
 }
 
 type certificateAuthenticationProfileArgs struct {
-	// Allow as username - Default value: `false`
+	// Allow as username
+	//   - Default value: `false`
 	AllowedAsUserName *bool `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-	// `SUBJECT_COMMON_NAME`
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+	//   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+	//   - Default value: `SUBJECT_COMMON_NAME`
 	CertificateAttributeName *string `pulumi:"certificateAttributeName"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-	// value: `[not applicable]`
+	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+	//   - Default value: `[not applicable]`
 	ExternalIdentityStoreName *string `pulumi:"externalIdentityStoreName"`
-	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-	// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+	//   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+	//   - Default value: `NEVER`
 	MatchMode *string `pulumi:"matchMode"`
 	// The name of the certificate profile
 	Name *string `pulumi:"name"`
-	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-	// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-	// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+	//   - Choices: `CERTIFICATE`, `UPN`
+	//   - Default value: `CERTIFICATE`
 	UsernameFrom *string `pulumi:"usernameFrom"`
 }
 
 // The set of arguments for constructing a CertificateAuthenticationProfile resource.
 type CertificateAuthenticationProfileArgs struct {
-	// Allow as username - Default value: `false`
+	// Allow as username
+	//   - Default value: `false`
 	AllowedAsUserName pulumi.BoolPtrInput
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-	// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-	// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-	// `SUBJECT_COMMON_NAME`
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+	//   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+	//   - Default value: `SUBJECT_COMMON_NAME`
 	CertificateAttributeName pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-	// value: `[not applicable]`
+	// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+	//   - Default value: `[not applicable]`
 	ExternalIdentityStoreName pulumi.StringPtrInput
-	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-	// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+	// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+	//   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+	//   - Default value: `NEVER`
 	MatchMode pulumi.StringPtrInput
 	// The name of the certificate profile
 	Name pulumi.StringPtrInput
-	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-	// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-	// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+	// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+	//   - Choices: `CERTIFICATE`, `UPN`
+	//   - Default value: `CERTIFICATE`
 	UsernameFrom pulumi.StringPtrInput
 }
 
@@ -295,15 +300,15 @@ func (o CertificateAuthenticationProfileOutput) ToCertificateAuthenticationProfi
 	return o
 }
 
-// Allow as username - Default value: `false`
+// Allow as username
+//   - Default value: `false`
 func (o CertificateAuthenticationProfileOutput) AllowedAsUserName() pulumi.BoolOutput {
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.BoolOutput { return v.AllowedAsUserName }).(pulumi.BoolOutput)
 }
 
-// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. - Choices:
-// `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-// `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-// `SUBJECT_COMMON_NAME`
+// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+//   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+//   - Default value: `SUBJECT_COMMON_NAME`
 func (o CertificateAuthenticationProfileOutput) CertificateAttributeName() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.StringOutput { return v.CertificateAttributeName }).(pulumi.StringOutput)
 }
@@ -313,14 +318,15 @@ func (o CertificateAuthenticationProfileOutput) Description() pulumi.StringPtrOu
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-// value: `[not applicable]`
+// Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+//   - Default value: `[not applicable]`
 func (o CertificateAuthenticationProfileOutput) ExternalIdentityStoreName() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.StringOutput { return v.ExternalIdentityStoreName }).(pulumi.StringOutput)
 }
 
-// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-// `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+// Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+//   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+//   - Default value: `NEVER`
 func (o CertificateAuthenticationProfileOutput) MatchMode() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.StringOutput { return v.MatchMode }).(pulumi.StringOutput)
 }
@@ -330,9 +336,9 @@ func (o CertificateAuthenticationProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-// attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-// Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+// The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+//   - Choices: `CERTIFICATE`, `UPN`
+//   - Default value: `CERTIFICATE`
 func (o CertificateAuthenticationProfileOutput) UsernameFrom() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateAuthenticationProfile) pulumi.StringOutput { return v.UsernameFrom }).(pulumi.StringOutput)
 }

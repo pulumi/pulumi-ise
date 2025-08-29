@@ -78,13 +78,11 @@ type AuthorizationRule struct {
 	ConditionId pulumi.StringPtrOutput `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrOutput `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrOutput `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrOutput `pulumi:"conditionType"`
 	// Indicates if this rule is the default one
 	Default pulumi.BoolPtrOutput `pulumi:"default"`
@@ -98,7 +96,8 @@ type AuthorizationRule struct {
 	Rank pulumi.IntPtrOutput `pulumi:"rank"`
 	// Security group used in authorization policies
 	SecurityGroup pulumi.StringPtrOutput `pulumi:"securityGroup"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrOutput `pulumi:"state"`
 }
 
@@ -149,13 +148,11 @@ type authorizationRuleState struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Indicates if this rule is the default one
 	Default *bool `pulumi:"default"`
@@ -169,7 +166,8 @@ type authorizationRuleState struct {
 	Rank *int `pulumi:"rank"`
 	// Security group used in authorization policies
 	SecurityGroup *string `pulumi:"securityGroup"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -188,13 +186,11 @@ type AuthorizationRuleState struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Indicates if this rule is the default one
 	Default pulumi.BoolPtrInput
@@ -208,7 +204,8 @@ type AuthorizationRuleState struct {
 	Rank pulumi.IntPtrInput
 	// Security group used in authorization policies
 	SecurityGroup pulumi.StringPtrInput
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -231,13 +228,11 @@ type authorizationRuleArgs struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Indicates if this rule is the default one
 	Default *bool `pulumi:"default"`
@@ -251,7 +246,8 @@ type authorizationRuleArgs struct {
 	Rank *int `pulumi:"rank"`
 	// Security group used in authorization policies
 	SecurityGroup *string `pulumi:"securityGroup"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -271,13 +267,11 @@ type AuthorizationRuleArgs struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Indicates if this rule is the default one
 	Default pulumi.BoolPtrInput
@@ -291,7 +285,8 @@ type AuthorizationRuleArgs struct {
 	Rank pulumi.IntPtrInput
 	// Security group used in authorization policies
 	SecurityGroup pulumi.StringPtrInput
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -417,16 +412,14 @@ func (o AuthorizationRuleOutput) ConditionIsNegate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AuthorizationRule) pulumi.BoolPtrOutput { return v.ConditionIsNegate }).(pulumi.BoolPtrOutput)
 }
 
-// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 func (o AuthorizationRuleOutput) ConditionOperator() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationRule) pulumi.StringPtrOutput { return v.ConditionOperator }).(pulumi.StringPtrOutput)
 }
 
-// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-// `ConditionOrBlock`, `ConditionReference`
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 func (o AuthorizationRuleOutput) ConditionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationRule) pulumi.StringPtrOutput { return v.ConditionType }).(pulumi.StringPtrOutput)
 }
@@ -461,7 +454,8 @@ func (o AuthorizationRuleOutput) SecurityGroup() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationRule) pulumi.StringPtrOutput { return v.SecurityGroup }).(pulumi.StringPtrOutput)
 }
 
-// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+// The state that the rule is in. A disabled rule cannot be matched.
+//   - Choices: `disabled`, `enabled`, `monitor`
 func (o AuthorizationRuleOutput) State() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationRule) pulumi.StringPtrOutput { return v.State }).(pulumi.StringPtrOutput)
 }

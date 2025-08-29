@@ -59,27 +59,27 @@ export class SxpDomainFilter extends pulumi.CustomResource {
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * List of SXP Domains, separated with comma
      */
-    public readonly domains!: pulumi.Output<string>;
+    declare public readonly domains: pulumi.Output<string>;
     /**
      * Resource name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * SGT name or ID. At least one of subnet or sgt or vn should be defined
      */
-    public readonly sgt!: pulumi.Output<string | undefined>;
+    declare public readonly sgt: pulumi.Output<string | undefined>;
     /**
      * Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined
      */
-    public readonly subnet!: pulumi.Output<string | undefined>;
+    declare public readonly subnet: pulumi.Output<string | undefined>;
     /**
      * Virtual Network. At least one of subnet or sgt or vn should be defined
      */
-    public readonly vn!: pulumi.Output<string | undefined>;
+    declare public readonly vn: pulumi.Output<string | undefined>;
 
     /**
      * Create a SxpDomainFilter resource with the given unique name, arguments, and options.
@@ -94,23 +94,23 @@ export class SxpDomainFilter extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SxpDomainFilterState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["domains"] = state ? state.domains : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sgt"] = state ? state.sgt : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
-            resourceInputs["vn"] = state ? state.vn : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["domains"] = state?.domains;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sgt"] = state?.sgt;
+            resourceInputs["subnet"] = state?.subnet;
+            resourceInputs["vn"] = state?.vn;
         } else {
             const args = argsOrState as SxpDomainFilterArgs | undefined;
-            if ((!args || args.domains === undefined) && !opts.urn) {
+            if (args?.domains === undefined && !opts.urn) {
                 throw new Error("Missing required property 'domains'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["domains"] = args ? args.domains : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sgt"] = args ? args.sgt : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
-            resourceInputs["vn"] = args ? args.vn : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["domains"] = args?.domains;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sgt"] = args?.sgt;
+            resourceInputs["subnet"] = args?.subnet;
+            resourceInputs["vn"] = args?.vn;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SxpDomainFilter.__pulumiType, name, resourceInputs, opts);

@@ -61,23 +61,25 @@ export class SecurityGroupAcl extends pulumi.CustomResource {
     /**
      * Content of ACL
      */
-    public readonly aclContent!: pulumi.Output<string>;
+    declare public readonly aclContent: pulumi.Output<string>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      */
-    public readonly ipVersion!: pulumi.Output<string>;
+    declare public readonly ipVersion: pulumi.Output<string>;
     /**
      * The name of the security group ACL
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Read-only
      */
-    public readonly readOnly!: pulumi.Output<boolean | undefined>;
+    declare public readonly readOnly: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a SecurityGroupAcl resource with the given unique name, arguments, and options.
@@ -92,21 +94,21 @@ export class SecurityGroupAcl extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SecurityGroupAclState | undefined;
-            resourceInputs["aclContent"] = state ? state.aclContent : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["ipVersion"] = state ? state.ipVersion : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["readOnly"] = state ? state.readOnly : undefined;
+            resourceInputs["aclContent"] = state?.aclContent;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["ipVersion"] = state?.ipVersion;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["readOnly"] = state?.readOnly;
         } else {
             const args = argsOrState as SecurityGroupAclArgs | undefined;
-            if ((!args || args.aclContent === undefined) && !opts.urn) {
+            if (args?.aclContent === undefined && !opts.urn) {
                 throw new Error("Missing required property 'aclContent'");
             }
-            resourceInputs["aclContent"] = args ? args.aclContent : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["ipVersion"] = args ? args.ipVersion : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["readOnly"] = args ? args.readOnly : undefined;
+            resourceInputs["aclContent"] = args?.aclContent;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["ipVersion"] = args?.ipVersion;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["readOnly"] = args?.readOnly;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SecurityGroupAcl.__pulumiType, name, resourceInputs, opts);
@@ -126,7 +128,9 @@ export interface SecurityGroupAclState {
      */
     description?: pulumi.Input<string>;
     /**
-     * IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      */
     ipVersion?: pulumi.Input<string>;
     /**
@@ -152,7 +156,9 @@ export interface SecurityGroupAclArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      */
     ipVersion?: pulumi.Input<string>;
     /**

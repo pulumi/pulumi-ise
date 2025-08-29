@@ -363,14 +363,16 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * staticGroupAssignmentDefined - Default value: `true`
+     * staticGroupAssignmentDefined
+     *   - Default value: `true`
      * 
      */
     @Import(name="staticGroupAssignmentDefined")
     private @Nullable Output<Boolean> staticGroupAssignmentDefined;
 
     /**
-     * @return staticGroupAssignmentDefined - Default value: `true`
+     * @return staticGroupAssignmentDefined
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> staticGroupAssignmentDefined() {
@@ -393,14 +395,16 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Static Profile Assignment Defined - Default value: `true`
+     * Static Profile Assignment Defined
+     *   - Default value: `true`
      * 
      */
     @Import(name="staticProfileAssignmentDefined")
     private @Nullable Output<Boolean> staticProfileAssignmentDefined;
 
     /**
-     * @return Static Profile Assignment Defined - Default value: `true`
+     * @return Static Profile Assignment Defined
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> staticProfileAssignmentDefined() {
@@ -940,7 +944,8 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param staticGroupAssignmentDefined staticGroupAssignmentDefined - Default value: `true`
+         * @param staticGroupAssignmentDefined staticGroupAssignmentDefined
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -951,7 +956,8 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param staticGroupAssignmentDefined staticGroupAssignmentDefined - Default value: `true`
+         * @param staticGroupAssignmentDefined staticGroupAssignmentDefined
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -982,7 +988,8 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param staticProfileAssignmentDefined Static Profile Assignment Defined - Default value: `true`
+         * @param staticProfileAssignmentDefined Static Profile Assignment Defined
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -993,7 +1000,8 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param staticProfileAssignmentDefined Static Profile Assignment Defined - Default value: `true`
+         * @param staticProfileAssignmentDefined Static Profile Assignment Defined
+         *   - Default value: `true`
          * 
          * @return builder
          * 

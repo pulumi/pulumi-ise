@@ -71,34 +71,34 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile")
 public class CertificateAuthenticationProfile extends com.pulumi.resources.CustomResource {
     /**
-     * Allow as username - Default value: `false`
+     * Allow as username
+     *   - Default value: `false`
      * 
      */
     @Export(name="allowedAsUserName", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> allowedAsUserName;
 
     /**
-     * @return Allow as username - Default value: `false`
+     * @return Allow as username
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> allowedAsUserName() {
         return this.allowedAsUserName;
     }
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      * 
      */
     @Export(name="certificateAttributeName", refs={String.class}, tree="[0]")
     private Output<String> certificateAttributeName;
 
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      * 
      */
     public Output<String> certificateAttributeName() {
@@ -119,32 +119,34 @@ public class CertificateAuthenticationProfile extends com.pulumi.resources.Custo
         return Codegen.optional(this.description);
     }
     /**
-     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      * 
      */
     @Export(name="externalIdentityStoreName", refs={String.class}, tree="[0]")
     private Output<String> externalIdentityStoreName;
 
     /**
-     * @return Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * @return Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      * 
      */
     public Output<String> externalIdentityStoreName() {
         return this.externalIdentityStoreName;
     }
     /**
-     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      * 
      */
     @Export(name="matchMode", refs={String.class}, tree="[0]")
     private Output<String> matchMode;
 
     /**
-     * @return Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * @return Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      * 
      */
     public Output<String> matchMode() {
@@ -165,18 +167,18 @@ public class CertificateAuthenticationProfile extends com.pulumi.resources.Custo
         return this.name;
     }
     /**
-     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      * 
      */
     @Export(name="usernameFrom", refs={String.class}, tree="[0]")
     private Output<String> usernameFrom;
 
     /**
-     * @return The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * @return The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      * 
      */
     public Output<String> usernameFrom() {

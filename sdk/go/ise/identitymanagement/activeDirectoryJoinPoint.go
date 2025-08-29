@@ -24,14 +24,16 @@ import (
 type ActiveDirectoryJoinPoint struct {
 	pulumi.CustomResourceState
 
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-	// Default value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+	//   - Default value: `Default_Scope`
 	AdScopesNames pulumi.StringOutput `pulumi:"adScopesNames"`
-	// Aging Time - Default value: `5`
+	// Aging Time
+	//   - Default value: `5`
 	AgingTime pulumi.IntOutput `pulumi:"agingTime"`
 	// List of AD attributes
 	Attributes ActiveDirectoryJoinPointAttributeArrayOutput `pulumi:"attributes"`
-	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+	//   - Choices: `WIRELESS`, `WIRED`, `BOTH`
 	AuthProtectionType pulumi.StringPtrOutput `pulumi:"authProtectionType"`
 	// User info attribute
 	Country pulumi.StringPtrOutput `pulumi:"country"`
@@ -43,29 +45,38 @@ type ActiveDirectoryJoinPoint struct {
 	Domain pulumi.StringOutput `pulumi:"domain"`
 	// User info attribute
 	Email pulumi.StringPtrOutput `pulumi:"email"`
-	// Enable Callback For Dial In Client - Default value: `false`
+	// Enable Callback For Dial In Client
+	//   - Default value: `false`
 	EnableCallbackForDialinClient pulumi.BoolOutput `pulumi:"enableCallbackForDialinClient"`
-	// Enable Dial In Permission Check - Default value: `false`
+	// Enable Dial In Permission Check
+	//   - Default value: `false`
 	EnableDialinPermissionCheck pulumi.BoolOutput `pulumi:"enableDialinPermissionCheck"`
 	// - Default value: `true`
 	EnableDomainAllowedList pulumi.BoolOutput `pulumi:"enableDomainAllowedList"`
-	// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+	// Enable prevent AD account lockout due to too many bad password attempts
+	//   - Default value: `false`
 	EnableFailedAuthProtection pulumi.BoolOutput `pulumi:"enableFailedAuthProtection"`
-	// Enable Machine Access - Default value: `true`
+	// Enable Machine Access
+	//   - Default value: `true`
 	EnableMachineAccess pulumi.BoolOutput `pulumi:"enableMachineAccess"`
-	// Enable Machine Authentication - Default value: `true`
+	// Enable Machine Authentication
+	//   - Default value: `true`
 	EnableMachineAuth pulumi.BoolOutput `pulumi:"enableMachineAuth"`
-	// Enable Password Change - Default value: `true`
+	// Enable Password Change
+	//   - Default value: `true`
 	EnablePassChange pulumi.BoolOutput `pulumi:"enablePassChange"`
-	// Enable Rewrites - Default value: `false`
+	// Enable Rewrites
+	//   - Default value: `false`
 	EnableRewrites pulumi.BoolOutput `pulumi:"enableRewrites"`
-	// Number of bad password attempts - Default value: `5`
+	// Number of bad password attempts
+	//   - Default value: `5`
 	FailedAuthThreshold pulumi.IntOutput `pulumi:"failedAuthThreshold"`
 	// User info attribute
 	FirstName pulumi.StringPtrOutput `pulumi:"firstName"`
 	// List of AD Groups
 	Groups ActiveDirectoryJoinPointGroupArrayOutput `pulumi:"groups"`
-	// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+	// Identity Not In AD Behaviour
+	//   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
 	IdentityNotInAdBehaviour pulumi.StringPtrOutput `pulumi:"identityNotInAdBehaviour"`
 	// User info attribute
 	JobTitle pulumi.StringPtrOutput `pulumi:"jobTitle"`
@@ -77,11 +88,13 @@ type ActiveDirectoryJoinPoint struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// User info attribute
 	OrganizationalUnit pulumi.StringPtrOutput `pulumi:"organizationalUnit"`
-	// Plain Text Authentication - Default value: `false`
+	// Plain Text Authentication
+	//   - Default value: `false`
 	PlaintextAuth pulumi.BoolOutput `pulumi:"plaintextAuth"`
 	// List of Rewrite rules
 	RewriteRules ActiveDirectoryJoinPointRewriteRuleArrayOutput `pulumi:"rewriteRules"`
-	// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+	// Schema
+	//   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
 	Schema pulumi.StringPtrOutput `pulumi:"schema"`
 	// User info attribute
 	StateOrProvince pulumi.StringPtrOutput `pulumi:"stateOrProvince"`
@@ -89,7 +102,8 @@ type ActiveDirectoryJoinPoint struct {
 	StreetAddress pulumi.StringPtrOutput `pulumi:"streetAddress"`
 	// User info attribute
 	Telephone pulumi.StringPtrOutput `pulumi:"telephone"`
-	// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+	// Unreachable Domains Behaviour
+	//   - Choices: `PROCEED`, `DROP`
 	UnreachableDomainsBehaviour pulumi.StringPtrOutput `pulumi:"unreachableDomainsBehaviour"`
 }
 
@@ -126,14 +140,16 @@ func GetActiveDirectoryJoinPoint(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ActiveDirectoryJoinPoint resources.
 type activeDirectoryJoinPointState struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-	// Default value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+	//   - Default value: `Default_Scope`
 	AdScopesNames *string `pulumi:"adScopesNames"`
-	// Aging Time - Default value: `5`
+	// Aging Time
+	//   - Default value: `5`
 	AgingTime *int `pulumi:"agingTime"`
 	// List of AD attributes
 	Attributes []ActiveDirectoryJoinPointAttribute `pulumi:"attributes"`
-	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+	//   - Choices: `WIRELESS`, `WIRED`, `BOTH`
 	AuthProtectionType *string `pulumi:"authProtectionType"`
 	// User info attribute
 	Country *string `pulumi:"country"`
@@ -145,29 +161,38 @@ type activeDirectoryJoinPointState struct {
 	Domain *string `pulumi:"domain"`
 	// User info attribute
 	Email *string `pulumi:"email"`
-	// Enable Callback For Dial In Client - Default value: `false`
+	// Enable Callback For Dial In Client
+	//   - Default value: `false`
 	EnableCallbackForDialinClient *bool `pulumi:"enableCallbackForDialinClient"`
-	// Enable Dial In Permission Check - Default value: `false`
+	// Enable Dial In Permission Check
+	//   - Default value: `false`
 	EnableDialinPermissionCheck *bool `pulumi:"enableDialinPermissionCheck"`
 	// - Default value: `true`
 	EnableDomainAllowedList *bool `pulumi:"enableDomainAllowedList"`
-	// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+	// Enable prevent AD account lockout due to too many bad password attempts
+	//   - Default value: `false`
 	EnableFailedAuthProtection *bool `pulumi:"enableFailedAuthProtection"`
-	// Enable Machine Access - Default value: `true`
+	// Enable Machine Access
+	//   - Default value: `true`
 	EnableMachineAccess *bool `pulumi:"enableMachineAccess"`
-	// Enable Machine Authentication - Default value: `true`
+	// Enable Machine Authentication
+	//   - Default value: `true`
 	EnableMachineAuth *bool `pulumi:"enableMachineAuth"`
-	// Enable Password Change - Default value: `true`
+	// Enable Password Change
+	//   - Default value: `true`
 	EnablePassChange *bool `pulumi:"enablePassChange"`
-	// Enable Rewrites - Default value: `false`
+	// Enable Rewrites
+	//   - Default value: `false`
 	EnableRewrites *bool `pulumi:"enableRewrites"`
-	// Number of bad password attempts - Default value: `5`
+	// Number of bad password attempts
+	//   - Default value: `5`
 	FailedAuthThreshold *int `pulumi:"failedAuthThreshold"`
 	// User info attribute
 	FirstName *string `pulumi:"firstName"`
 	// List of AD Groups
 	Groups []ActiveDirectoryJoinPointGroup `pulumi:"groups"`
-	// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+	// Identity Not In AD Behaviour
+	//   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
 	IdentityNotInAdBehaviour *string `pulumi:"identityNotInAdBehaviour"`
 	// User info attribute
 	JobTitle *string `pulumi:"jobTitle"`
@@ -179,11 +204,13 @@ type activeDirectoryJoinPointState struct {
 	Name *string `pulumi:"name"`
 	// User info attribute
 	OrganizationalUnit *string `pulumi:"organizationalUnit"`
-	// Plain Text Authentication - Default value: `false`
+	// Plain Text Authentication
+	//   - Default value: `false`
 	PlaintextAuth *bool `pulumi:"plaintextAuth"`
 	// List of Rewrite rules
 	RewriteRules []ActiveDirectoryJoinPointRewriteRule `pulumi:"rewriteRules"`
-	// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+	// Schema
+	//   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
 	Schema *string `pulumi:"schema"`
 	// User info attribute
 	StateOrProvince *string `pulumi:"stateOrProvince"`
@@ -191,19 +218,22 @@ type activeDirectoryJoinPointState struct {
 	StreetAddress *string `pulumi:"streetAddress"`
 	// User info attribute
 	Telephone *string `pulumi:"telephone"`
-	// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+	// Unreachable Domains Behaviour
+	//   - Choices: `PROCEED`, `DROP`
 	UnreachableDomainsBehaviour *string `pulumi:"unreachableDomainsBehaviour"`
 }
 
 type ActiveDirectoryJoinPointState struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-	// Default value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+	//   - Default value: `Default_Scope`
 	AdScopesNames pulumi.StringPtrInput
-	// Aging Time - Default value: `5`
+	// Aging Time
+	//   - Default value: `5`
 	AgingTime pulumi.IntPtrInput
 	// List of AD attributes
 	Attributes ActiveDirectoryJoinPointAttributeArrayInput
-	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+	//   - Choices: `WIRELESS`, `WIRED`, `BOTH`
 	AuthProtectionType pulumi.StringPtrInput
 	// User info attribute
 	Country pulumi.StringPtrInput
@@ -215,29 +245,38 @@ type ActiveDirectoryJoinPointState struct {
 	Domain pulumi.StringPtrInput
 	// User info attribute
 	Email pulumi.StringPtrInput
-	// Enable Callback For Dial In Client - Default value: `false`
+	// Enable Callback For Dial In Client
+	//   - Default value: `false`
 	EnableCallbackForDialinClient pulumi.BoolPtrInput
-	// Enable Dial In Permission Check - Default value: `false`
+	// Enable Dial In Permission Check
+	//   - Default value: `false`
 	EnableDialinPermissionCheck pulumi.BoolPtrInput
 	// - Default value: `true`
 	EnableDomainAllowedList pulumi.BoolPtrInput
-	// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+	// Enable prevent AD account lockout due to too many bad password attempts
+	//   - Default value: `false`
 	EnableFailedAuthProtection pulumi.BoolPtrInput
-	// Enable Machine Access - Default value: `true`
+	// Enable Machine Access
+	//   - Default value: `true`
 	EnableMachineAccess pulumi.BoolPtrInput
-	// Enable Machine Authentication - Default value: `true`
+	// Enable Machine Authentication
+	//   - Default value: `true`
 	EnableMachineAuth pulumi.BoolPtrInput
-	// Enable Password Change - Default value: `true`
+	// Enable Password Change
+	//   - Default value: `true`
 	EnablePassChange pulumi.BoolPtrInput
-	// Enable Rewrites - Default value: `false`
+	// Enable Rewrites
+	//   - Default value: `false`
 	EnableRewrites pulumi.BoolPtrInput
-	// Number of bad password attempts - Default value: `5`
+	// Number of bad password attempts
+	//   - Default value: `5`
 	FailedAuthThreshold pulumi.IntPtrInput
 	// User info attribute
 	FirstName pulumi.StringPtrInput
 	// List of AD Groups
 	Groups ActiveDirectoryJoinPointGroupArrayInput
-	// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+	// Identity Not In AD Behaviour
+	//   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
 	IdentityNotInAdBehaviour pulumi.StringPtrInput
 	// User info attribute
 	JobTitle pulumi.StringPtrInput
@@ -249,11 +288,13 @@ type ActiveDirectoryJoinPointState struct {
 	Name pulumi.StringPtrInput
 	// User info attribute
 	OrganizationalUnit pulumi.StringPtrInput
-	// Plain Text Authentication - Default value: `false`
+	// Plain Text Authentication
+	//   - Default value: `false`
 	PlaintextAuth pulumi.BoolPtrInput
 	// List of Rewrite rules
 	RewriteRules ActiveDirectoryJoinPointRewriteRuleArrayInput
-	// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+	// Schema
+	//   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
 	Schema pulumi.StringPtrInput
 	// User info attribute
 	StateOrProvince pulumi.StringPtrInput
@@ -261,7 +302,8 @@ type ActiveDirectoryJoinPointState struct {
 	StreetAddress pulumi.StringPtrInput
 	// User info attribute
 	Telephone pulumi.StringPtrInput
-	// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+	// Unreachable Domains Behaviour
+	//   - Choices: `PROCEED`, `DROP`
 	UnreachableDomainsBehaviour pulumi.StringPtrInput
 }
 
@@ -270,14 +312,16 @@ func (ActiveDirectoryJoinPointState) ElementType() reflect.Type {
 }
 
 type activeDirectoryJoinPointArgs struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-	// Default value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+	//   - Default value: `Default_Scope`
 	AdScopesNames *string `pulumi:"adScopesNames"`
-	// Aging Time - Default value: `5`
+	// Aging Time
+	//   - Default value: `5`
 	AgingTime *int `pulumi:"agingTime"`
 	// List of AD attributes
 	Attributes []ActiveDirectoryJoinPointAttribute `pulumi:"attributes"`
-	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+	//   - Choices: `WIRELESS`, `WIRED`, `BOTH`
 	AuthProtectionType *string `pulumi:"authProtectionType"`
 	// User info attribute
 	Country *string `pulumi:"country"`
@@ -289,29 +333,38 @@ type activeDirectoryJoinPointArgs struct {
 	Domain string `pulumi:"domain"`
 	// User info attribute
 	Email *string `pulumi:"email"`
-	// Enable Callback For Dial In Client - Default value: `false`
+	// Enable Callback For Dial In Client
+	//   - Default value: `false`
 	EnableCallbackForDialinClient *bool `pulumi:"enableCallbackForDialinClient"`
-	// Enable Dial In Permission Check - Default value: `false`
+	// Enable Dial In Permission Check
+	//   - Default value: `false`
 	EnableDialinPermissionCheck *bool `pulumi:"enableDialinPermissionCheck"`
 	// - Default value: `true`
 	EnableDomainAllowedList *bool `pulumi:"enableDomainAllowedList"`
-	// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+	// Enable prevent AD account lockout due to too many bad password attempts
+	//   - Default value: `false`
 	EnableFailedAuthProtection *bool `pulumi:"enableFailedAuthProtection"`
-	// Enable Machine Access - Default value: `true`
+	// Enable Machine Access
+	//   - Default value: `true`
 	EnableMachineAccess *bool `pulumi:"enableMachineAccess"`
-	// Enable Machine Authentication - Default value: `true`
+	// Enable Machine Authentication
+	//   - Default value: `true`
 	EnableMachineAuth *bool `pulumi:"enableMachineAuth"`
-	// Enable Password Change - Default value: `true`
+	// Enable Password Change
+	//   - Default value: `true`
 	EnablePassChange *bool `pulumi:"enablePassChange"`
-	// Enable Rewrites - Default value: `false`
+	// Enable Rewrites
+	//   - Default value: `false`
 	EnableRewrites *bool `pulumi:"enableRewrites"`
-	// Number of bad password attempts - Default value: `5`
+	// Number of bad password attempts
+	//   - Default value: `5`
 	FailedAuthThreshold *int `pulumi:"failedAuthThreshold"`
 	// User info attribute
 	FirstName *string `pulumi:"firstName"`
 	// List of AD Groups
 	Groups []ActiveDirectoryJoinPointGroup `pulumi:"groups"`
-	// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+	// Identity Not In AD Behaviour
+	//   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
 	IdentityNotInAdBehaviour *string `pulumi:"identityNotInAdBehaviour"`
 	// User info attribute
 	JobTitle *string `pulumi:"jobTitle"`
@@ -323,11 +376,13 @@ type activeDirectoryJoinPointArgs struct {
 	Name *string `pulumi:"name"`
 	// User info attribute
 	OrganizationalUnit *string `pulumi:"organizationalUnit"`
-	// Plain Text Authentication - Default value: `false`
+	// Plain Text Authentication
+	//   - Default value: `false`
 	PlaintextAuth *bool `pulumi:"plaintextAuth"`
 	// List of Rewrite rules
 	RewriteRules []ActiveDirectoryJoinPointRewriteRule `pulumi:"rewriteRules"`
-	// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+	// Schema
+	//   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
 	Schema *string `pulumi:"schema"`
 	// User info attribute
 	StateOrProvince *string `pulumi:"stateOrProvince"`
@@ -335,20 +390,23 @@ type activeDirectoryJoinPointArgs struct {
 	StreetAddress *string `pulumi:"streetAddress"`
 	// User info attribute
 	Telephone *string `pulumi:"telephone"`
-	// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+	// Unreachable Domains Behaviour
+	//   - Choices: `PROCEED`, `DROP`
 	UnreachableDomainsBehaviour *string `pulumi:"unreachableDomainsBehaviour"`
 }
 
 // The set of arguments for constructing a ActiveDirectoryJoinPoint resource.
 type ActiveDirectoryJoinPointArgs struct {
-	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-	// Default value: `Default_Scope`
+	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+	//   - Default value: `Default_Scope`
 	AdScopesNames pulumi.StringPtrInput
-	// Aging Time - Default value: `5`
+	// Aging Time
+	//   - Default value: `5`
 	AgingTime pulumi.IntPtrInput
 	// List of AD attributes
 	Attributes ActiveDirectoryJoinPointAttributeArrayInput
-	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+	// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+	//   - Choices: `WIRELESS`, `WIRED`, `BOTH`
 	AuthProtectionType pulumi.StringPtrInput
 	// User info attribute
 	Country pulumi.StringPtrInput
@@ -360,29 +418,38 @@ type ActiveDirectoryJoinPointArgs struct {
 	Domain pulumi.StringInput
 	// User info attribute
 	Email pulumi.StringPtrInput
-	// Enable Callback For Dial In Client - Default value: `false`
+	// Enable Callback For Dial In Client
+	//   - Default value: `false`
 	EnableCallbackForDialinClient pulumi.BoolPtrInput
-	// Enable Dial In Permission Check - Default value: `false`
+	// Enable Dial In Permission Check
+	//   - Default value: `false`
 	EnableDialinPermissionCheck pulumi.BoolPtrInput
 	// - Default value: `true`
 	EnableDomainAllowedList pulumi.BoolPtrInput
-	// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+	// Enable prevent AD account lockout due to too many bad password attempts
+	//   - Default value: `false`
 	EnableFailedAuthProtection pulumi.BoolPtrInput
-	// Enable Machine Access - Default value: `true`
+	// Enable Machine Access
+	//   - Default value: `true`
 	EnableMachineAccess pulumi.BoolPtrInput
-	// Enable Machine Authentication - Default value: `true`
+	// Enable Machine Authentication
+	//   - Default value: `true`
 	EnableMachineAuth pulumi.BoolPtrInput
-	// Enable Password Change - Default value: `true`
+	// Enable Password Change
+	//   - Default value: `true`
 	EnablePassChange pulumi.BoolPtrInput
-	// Enable Rewrites - Default value: `false`
+	// Enable Rewrites
+	//   - Default value: `false`
 	EnableRewrites pulumi.BoolPtrInput
-	// Number of bad password attempts - Default value: `5`
+	// Number of bad password attempts
+	//   - Default value: `5`
 	FailedAuthThreshold pulumi.IntPtrInput
 	// User info attribute
 	FirstName pulumi.StringPtrInput
 	// List of AD Groups
 	Groups ActiveDirectoryJoinPointGroupArrayInput
-	// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+	// Identity Not In AD Behaviour
+	//   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
 	IdentityNotInAdBehaviour pulumi.StringPtrInput
 	// User info attribute
 	JobTitle pulumi.StringPtrInput
@@ -394,11 +461,13 @@ type ActiveDirectoryJoinPointArgs struct {
 	Name pulumi.StringPtrInput
 	// User info attribute
 	OrganizationalUnit pulumi.StringPtrInput
-	// Plain Text Authentication - Default value: `false`
+	// Plain Text Authentication
+	//   - Default value: `false`
 	PlaintextAuth pulumi.BoolPtrInput
 	// List of Rewrite rules
 	RewriteRules ActiveDirectoryJoinPointRewriteRuleArrayInput
-	// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+	// Schema
+	//   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
 	Schema pulumi.StringPtrInput
 	// User info attribute
 	StateOrProvince pulumi.StringPtrInput
@@ -406,7 +475,8 @@ type ActiveDirectoryJoinPointArgs struct {
 	StreetAddress pulumi.StringPtrInput
 	// User info attribute
 	Telephone pulumi.StringPtrInput
-	// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+	// Unreachable Domains Behaviour
+	//   - Choices: `PROCEED`, `DROP`
 	UnreachableDomainsBehaviour pulumi.StringPtrInput
 }
 
@@ -497,13 +567,14 @@ func (o ActiveDirectoryJoinPointOutput) ToActiveDirectoryJoinPointOutputWithCont
 	return o
 }
 
-// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-// Default value: `Default_Scope`
+// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+//   - Default value: `Default_Scope`
 func (o ActiveDirectoryJoinPointOutput) AdScopesNames() pulumi.StringOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringOutput { return v.AdScopesNames }).(pulumi.StringOutput)
 }
 
-// Aging Time - Default value: `5`
+// Aging Time
+//   - Default value: `5`
 func (o ActiveDirectoryJoinPointOutput) AgingTime() pulumi.IntOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.IntOutput { return v.AgingTime }).(pulumi.IntOutput)
 }
@@ -513,7 +584,8 @@ func (o ActiveDirectoryJoinPointOutput) Attributes() ActiveDirectoryJoinPointAtt
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) ActiveDirectoryJoinPointAttributeArrayOutput { return v.Attributes }).(ActiveDirectoryJoinPointAttributeArrayOutput)
 }
 
-// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+//   - Choices: `WIRELESS`, `WIRED`, `BOTH`
 func (o ActiveDirectoryJoinPointOutput) AuthProtectionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.AuthProtectionType }).(pulumi.StringPtrOutput)
 }
@@ -543,12 +615,14 @@ func (o ActiveDirectoryJoinPointOutput) Email() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.Email }).(pulumi.StringPtrOutput)
 }
 
-// Enable Callback For Dial In Client - Default value: `false`
+// Enable Callback For Dial In Client
+//   - Default value: `false`
 func (o ActiveDirectoryJoinPointOutput) EnableCallbackForDialinClient() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableCallbackForDialinClient }).(pulumi.BoolOutput)
 }
 
-// Enable Dial In Permission Check - Default value: `false`
+// Enable Dial In Permission Check
+//   - Default value: `false`
 func (o ActiveDirectoryJoinPointOutput) EnableDialinPermissionCheck() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableDialinPermissionCheck }).(pulumi.BoolOutput)
 }
@@ -558,32 +632,38 @@ func (o ActiveDirectoryJoinPointOutput) EnableDomainAllowedList() pulumi.BoolOut
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableDomainAllowedList }).(pulumi.BoolOutput)
 }
 
-// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+// Enable prevent AD account lockout due to too many bad password attempts
+//   - Default value: `false`
 func (o ActiveDirectoryJoinPointOutput) EnableFailedAuthProtection() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableFailedAuthProtection }).(pulumi.BoolOutput)
 }
 
-// Enable Machine Access - Default value: `true`
+// Enable Machine Access
+//   - Default value: `true`
 func (o ActiveDirectoryJoinPointOutput) EnableMachineAccess() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableMachineAccess }).(pulumi.BoolOutput)
 }
 
-// Enable Machine Authentication - Default value: `true`
+// Enable Machine Authentication
+//   - Default value: `true`
 func (o ActiveDirectoryJoinPointOutput) EnableMachineAuth() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableMachineAuth }).(pulumi.BoolOutput)
 }
 
-// Enable Password Change - Default value: `true`
+// Enable Password Change
+//   - Default value: `true`
 func (o ActiveDirectoryJoinPointOutput) EnablePassChange() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnablePassChange }).(pulumi.BoolOutput)
 }
 
-// Enable Rewrites - Default value: `false`
+// Enable Rewrites
+//   - Default value: `false`
 func (o ActiveDirectoryJoinPointOutput) EnableRewrites() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.EnableRewrites }).(pulumi.BoolOutput)
 }
 
-// Number of bad password attempts - Default value: `5`
+// Number of bad password attempts
+//   - Default value: `5`
 func (o ActiveDirectoryJoinPointOutput) FailedAuthThreshold() pulumi.IntOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.IntOutput { return v.FailedAuthThreshold }).(pulumi.IntOutput)
 }
@@ -598,7 +678,8 @@ func (o ActiveDirectoryJoinPointOutput) Groups() ActiveDirectoryJoinPointGroupAr
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) ActiveDirectoryJoinPointGroupArrayOutput { return v.Groups }).(ActiveDirectoryJoinPointGroupArrayOutput)
 }
 
-// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+// Identity Not In AD Behaviour
+//   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
 func (o ActiveDirectoryJoinPointOutput) IdentityNotInAdBehaviour() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.IdentityNotInAdBehaviour }).(pulumi.StringPtrOutput)
 }
@@ -628,7 +709,8 @@ func (o ActiveDirectoryJoinPointOutput) OrganizationalUnit() pulumi.StringPtrOut
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.OrganizationalUnit }).(pulumi.StringPtrOutput)
 }
 
-// Plain Text Authentication - Default value: `false`
+// Plain Text Authentication
+//   - Default value: `false`
 func (o ActiveDirectoryJoinPointOutput) PlaintextAuth() pulumi.BoolOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.BoolOutput { return v.PlaintextAuth }).(pulumi.BoolOutput)
 }
@@ -640,7 +722,8 @@ func (o ActiveDirectoryJoinPointOutput) RewriteRules() ActiveDirectoryJoinPointR
 	}).(ActiveDirectoryJoinPointRewriteRuleArrayOutput)
 }
 
-// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+// Schema
+//   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
 func (o ActiveDirectoryJoinPointOutput) Schema() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.Schema }).(pulumi.StringPtrOutput)
 }
@@ -660,7 +743,8 @@ func (o ActiveDirectoryJoinPointOutput) Telephone() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.Telephone }).(pulumi.StringPtrOutput)
 }
 
-// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+// Unreachable Domains Behaviour
+//   - Choices: `PROCEED`, `DROP`
 func (o ActiveDirectoryJoinPointOutput) UnreachableDomainsBehaviour() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ActiveDirectoryJoinPoint) pulumi.StringPtrOutput { return v.UnreachableDomainsBehaviour }).(pulumi.StringPtrOutput)
 }

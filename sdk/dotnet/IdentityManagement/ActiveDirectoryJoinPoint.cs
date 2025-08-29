@@ -24,14 +24,15 @@ namespace Pulumi.Ise.IdentityManagement
     public partial class ActiveDirectoryJoinPoint : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-        /// Default value: `Default_Scope`
+        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+        ///   - Default value: `Default_Scope`
         /// </summary>
         [Output("adScopesNames")]
         public Output<string> AdScopesNames { get; private set; } = null!;
 
         /// <summary>
-        /// Aging Time - Default value: `5`
+        /// Aging Time
+        ///   - Default value: `5`
         /// </summary>
         [Output("agingTime")]
         public Output<int> AgingTime { get; private set; } = null!;
@@ -43,7 +44,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<ImmutableArray<Outputs.ActiveDirectoryJoinPointAttribute>> Attributes { get; private set; } = null!;
 
         /// <summary>
-        /// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        /// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+        ///   - Choices: `WIRELESS`, `WIRED`, `BOTH`
         /// </summary>
         [Output("authProtectionType")]
         public Output<string?> AuthProtectionType { get; private set; } = null!;
@@ -79,13 +81,15 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string?> Email { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Callback For Dial In Client - Default value: `false`
+        /// Enable Callback For Dial In Client
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableCallbackForDialinClient")]
         public Output<bool> EnableCallbackForDialinClient { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Dial In Permission Check - Default value: `false`
+        /// Enable Dial In Permission Check
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableDialinPermissionCheck")]
         public Output<bool> EnableDialinPermissionCheck { get; private set; } = null!;
@@ -97,37 +101,43 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<bool> EnableDomainAllowedList { get; private set; } = null!;
 
         /// <summary>
-        /// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+        /// Enable prevent AD account lockout due to too many bad password attempts
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableFailedAuthProtection")]
         public Output<bool> EnableFailedAuthProtection { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Machine Access - Default value: `true`
+        /// Enable Machine Access
+        ///   - Default value: `true`
         /// </summary>
         [Output("enableMachineAccess")]
         public Output<bool> EnableMachineAccess { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Machine Authentication - Default value: `true`
+        /// Enable Machine Authentication
+        ///   - Default value: `true`
         /// </summary>
         [Output("enableMachineAuth")]
         public Output<bool> EnableMachineAuth { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Password Change - Default value: `true`
+        /// Enable Password Change
+        ///   - Default value: `true`
         /// </summary>
         [Output("enablePassChange")]
         public Output<bool> EnablePassChange { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Rewrites - Default value: `false`
+        /// Enable Rewrites
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableRewrites")]
         public Output<bool> EnableRewrites { get; private set; } = null!;
 
         /// <summary>
-        /// Number of bad password attempts - Default value: `5`
+        /// Number of bad password attempts
+        ///   - Default value: `5`
         /// </summary>
         [Output("failedAuthThreshold")]
         public Output<int> FailedAuthThreshold { get; private set; } = null!;
@@ -145,7 +155,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<ImmutableArray<Outputs.ActiveDirectoryJoinPointGroup>> Groups { get; private set; } = null!;
 
         /// <summary>
-        /// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        /// Identity Not In AD Behaviour
+        ///   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         /// </summary>
         [Output("identityNotInAdBehaviour")]
         public Output<string?> IdentityNotInAdBehaviour { get; private set; } = null!;
@@ -181,7 +192,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string?> OrganizationalUnit { get; private set; } = null!;
 
         /// <summary>
-        /// Plain Text Authentication - Default value: `false`
+        /// Plain Text Authentication
+        ///   - Default value: `false`
         /// </summary>
         [Output("plaintextAuth")]
         public Output<bool> PlaintextAuth { get; private set; } = null!;
@@ -193,7 +205,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<ImmutableArray<Outputs.ActiveDirectoryJoinPointRewriteRule>> RewriteRules { get; private set; } = null!;
 
         /// <summary>
-        /// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        /// Schema
+        ///   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         /// </summary>
         [Output("schema")]
         public Output<string?> Schema { get; private set; } = null!;
@@ -217,7 +230,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string?> Telephone { get; private set; } = null!;
 
         /// <summary>
-        /// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        /// Unreachable Domains Behaviour
+        ///   - Choices: `PROCEED`, `DROP`
         /// </summary>
         [Output("unreachableDomainsBehaviour")]
         public Output<string?> UnreachableDomainsBehaviour { get; private set; } = null!;
@@ -269,14 +283,15 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class ActiveDirectoryJoinPointArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-        /// Default value: `Default_Scope`
+        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+        ///   - Default value: `Default_Scope`
         /// </summary>
         [Input("adScopesNames")]
         public Input<string>? AdScopesNames { get; set; }
 
         /// <summary>
-        /// Aging Time - Default value: `5`
+        /// Aging Time
+        ///   - Default value: `5`
         /// </summary>
         [Input("agingTime")]
         public Input<int>? AgingTime { get; set; }
@@ -294,7 +309,8 @@ namespace Pulumi.Ise.IdentityManagement
         }
 
         /// <summary>
-        /// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        /// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+        ///   - Choices: `WIRELESS`, `WIRED`, `BOTH`
         /// </summary>
         [Input("authProtectionType")]
         public Input<string>? AuthProtectionType { get; set; }
@@ -330,13 +346,15 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Email { get; set; }
 
         /// <summary>
-        /// Enable Callback For Dial In Client - Default value: `false`
+        /// Enable Callback For Dial In Client
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableCallbackForDialinClient")]
         public Input<bool>? EnableCallbackForDialinClient { get; set; }
 
         /// <summary>
-        /// Enable Dial In Permission Check - Default value: `false`
+        /// Enable Dial In Permission Check
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableDialinPermissionCheck")]
         public Input<bool>? EnableDialinPermissionCheck { get; set; }
@@ -348,37 +366,43 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool>? EnableDomainAllowedList { get; set; }
 
         /// <summary>
-        /// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+        /// Enable prevent AD account lockout due to too many bad password attempts
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableFailedAuthProtection")]
         public Input<bool>? EnableFailedAuthProtection { get; set; }
 
         /// <summary>
-        /// Enable Machine Access - Default value: `true`
+        /// Enable Machine Access
+        ///   - Default value: `true`
         /// </summary>
         [Input("enableMachineAccess")]
         public Input<bool>? EnableMachineAccess { get; set; }
 
         /// <summary>
-        /// Enable Machine Authentication - Default value: `true`
+        /// Enable Machine Authentication
+        ///   - Default value: `true`
         /// </summary>
         [Input("enableMachineAuth")]
         public Input<bool>? EnableMachineAuth { get; set; }
 
         /// <summary>
-        /// Enable Password Change - Default value: `true`
+        /// Enable Password Change
+        ///   - Default value: `true`
         /// </summary>
         [Input("enablePassChange")]
         public Input<bool>? EnablePassChange { get; set; }
 
         /// <summary>
-        /// Enable Rewrites - Default value: `false`
+        /// Enable Rewrites
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableRewrites")]
         public Input<bool>? EnableRewrites { get; set; }
 
         /// <summary>
-        /// Number of bad password attempts - Default value: `5`
+        /// Number of bad password attempts
+        ///   - Default value: `5`
         /// </summary>
         [Input("failedAuthThreshold")]
         public Input<int>? FailedAuthThreshold { get; set; }
@@ -402,7 +426,8 @@ namespace Pulumi.Ise.IdentityManagement
         }
 
         /// <summary>
-        /// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        /// Identity Not In AD Behaviour
+        ///   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         /// </summary>
         [Input("identityNotInAdBehaviour")]
         public Input<string>? IdentityNotInAdBehaviour { get; set; }
@@ -438,7 +463,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? OrganizationalUnit { get; set; }
 
         /// <summary>
-        /// Plain Text Authentication - Default value: `false`
+        /// Plain Text Authentication
+        ///   - Default value: `false`
         /// </summary>
         [Input("plaintextAuth")]
         public Input<bool>? PlaintextAuth { get; set; }
@@ -456,7 +482,8 @@ namespace Pulumi.Ise.IdentityManagement
         }
 
         /// <summary>
-        /// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        /// Schema
+        ///   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         /// </summary>
         [Input("schema")]
         public Input<string>? Schema { get; set; }
@@ -480,7 +507,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Telephone { get; set; }
 
         /// <summary>
-        /// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        /// Unreachable Domains Behaviour
+        ///   - Choices: `PROCEED`, `DROP`
         /// </summary>
         [Input("unreachableDomainsBehaviour")]
         public Input<string>? UnreachableDomainsBehaviour { get; set; }
@@ -494,14 +522,15 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class ActiveDirectoryJoinPointState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-        /// Default value: `Default_Scope`
+        /// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+        ///   - Default value: `Default_Scope`
         /// </summary>
         [Input("adScopesNames")]
         public Input<string>? AdScopesNames { get; set; }
 
         /// <summary>
-        /// Aging Time - Default value: `5`
+        /// Aging Time
+        ///   - Default value: `5`
         /// </summary>
         [Input("agingTime")]
         public Input<int>? AgingTime { get; set; }
@@ -519,7 +548,8 @@ namespace Pulumi.Ise.IdentityManagement
         }
 
         /// <summary>
-        /// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        /// Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+        ///   - Choices: `WIRELESS`, `WIRED`, `BOTH`
         /// </summary>
         [Input("authProtectionType")]
         public Input<string>? AuthProtectionType { get; set; }
@@ -555,13 +585,15 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Email { get; set; }
 
         /// <summary>
-        /// Enable Callback For Dial In Client - Default value: `false`
+        /// Enable Callback For Dial In Client
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableCallbackForDialinClient")]
         public Input<bool>? EnableCallbackForDialinClient { get; set; }
 
         /// <summary>
-        /// Enable Dial In Permission Check - Default value: `false`
+        /// Enable Dial In Permission Check
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableDialinPermissionCheck")]
         public Input<bool>? EnableDialinPermissionCheck { get; set; }
@@ -573,37 +605,43 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool>? EnableDomainAllowedList { get; set; }
 
         /// <summary>
-        /// Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+        /// Enable prevent AD account lockout due to too many bad password attempts
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableFailedAuthProtection")]
         public Input<bool>? EnableFailedAuthProtection { get; set; }
 
         /// <summary>
-        /// Enable Machine Access - Default value: `true`
+        /// Enable Machine Access
+        ///   - Default value: `true`
         /// </summary>
         [Input("enableMachineAccess")]
         public Input<bool>? EnableMachineAccess { get; set; }
 
         /// <summary>
-        /// Enable Machine Authentication - Default value: `true`
+        /// Enable Machine Authentication
+        ///   - Default value: `true`
         /// </summary>
         [Input("enableMachineAuth")]
         public Input<bool>? EnableMachineAuth { get; set; }
 
         /// <summary>
-        /// Enable Password Change - Default value: `true`
+        /// Enable Password Change
+        ///   - Default value: `true`
         /// </summary>
         [Input("enablePassChange")]
         public Input<bool>? EnablePassChange { get; set; }
 
         /// <summary>
-        /// Enable Rewrites - Default value: `false`
+        /// Enable Rewrites
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableRewrites")]
         public Input<bool>? EnableRewrites { get; set; }
 
         /// <summary>
-        /// Number of bad password attempts - Default value: `5`
+        /// Number of bad password attempts
+        ///   - Default value: `5`
         /// </summary>
         [Input("failedAuthThreshold")]
         public Input<int>? FailedAuthThreshold { get; set; }
@@ -627,7 +665,8 @@ namespace Pulumi.Ise.IdentityManagement
         }
 
         /// <summary>
-        /// Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        /// Identity Not In AD Behaviour
+        ///   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         /// </summary>
         [Input("identityNotInAdBehaviour")]
         public Input<string>? IdentityNotInAdBehaviour { get; set; }
@@ -663,7 +702,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? OrganizationalUnit { get; set; }
 
         /// <summary>
-        /// Plain Text Authentication - Default value: `false`
+        /// Plain Text Authentication
+        ///   - Default value: `false`
         /// </summary>
         [Input("plaintextAuth")]
         public Input<bool>? PlaintextAuth { get; set; }
@@ -681,7 +721,8 @@ namespace Pulumi.Ise.IdentityManagement
         }
 
         /// <summary>
-        /// Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        /// Schema
+        ///   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         /// </summary>
         [Input("schema")]
         public Input<string>? Schema { get; set; }
@@ -705,7 +746,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Telephone { get; set; }
 
         /// <summary>
-        /// Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        /// Unreachable Domains Behaviour
+        ///   - Choices: `PROCEED`, `DROP`
         /// </summary>
         [Input("unreachableDomainsBehaviour")]
         public Input<string>? UnreachableDomainsBehaviour { get; set; }

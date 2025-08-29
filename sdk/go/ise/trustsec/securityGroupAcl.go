@@ -58,7 +58,9 @@ type SecurityGroupAcl struct {
 	AclContent pulumi.StringOutput `pulumi:"aclContent"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+	// IP Version
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IP_AGNOSTIC`
 	IpVersion pulumi.StringOutput `pulumi:"ipVersion"`
 	// The name of the security group ACL
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -103,7 +105,9 @@ type securityGroupAclState struct {
 	AclContent *string `pulumi:"aclContent"`
 	// Description
 	Description *string `pulumi:"description"`
-	// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+	// IP Version
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IP_AGNOSTIC`
 	IpVersion *string `pulumi:"ipVersion"`
 	// The name of the security group ACL
 	Name *string `pulumi:"name"`
@@ -116,7 +120,9 @@ type SecurityGroupAclState struct {
 	AclContent pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+	// IP Version
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IP_AGNOSTIC`
 	IpVersion pulumi.StringPtrInput
 	// The name of the security group ACL
 	Name pulumi.StringPtrInput
@@ -133,7 +139,9 @@ type securityGroupAclArgs struct {
 	AclContent string `pulumi:"aclContent"`
 	// Description
 	Description *string `pulumi:"description"`
-	// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+	// IP Version
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IP_AGNOSTIC`
 	IpVersion *string `pulumi:"ipVersion"`
 	// The name of the security group ACL
 	Name *string `pulumi:"name"`
@@ -147,7 +155,9 @@ type SecurityGroupAclArgs struct {
 	AclContent pulumi.StringInput
 	// Description
 	Description pulumi.StringPtrInput
-	// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+	// IP Version
+	//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+	//   - Default value: `IP_AGNOSTIC`
 	IpVersion pulumi.StringPtrInput
 	// The name of the security group ACL
 	Name pulumi.StringPtrInput
@@ -252,7 +262,9 @@ func (o SecurityGroupAclOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityGroupAcl) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+// IP Version
+//   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+//   - Default value: `IP_AGNOSTIC`
 func (o SecurityGroupAclOutput) IpVersion() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityGroupAcl) pulumi.StringOutput { return v.IpVersion }).(pulumi.StringOutput)
 }

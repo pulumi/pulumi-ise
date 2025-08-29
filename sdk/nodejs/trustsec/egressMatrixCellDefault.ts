@@ -57,21 +57,24 @@ export class EgressMatrixCellDefault extends pulumi.CustomResource {
     }
 
     /**
-     * Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     * Can be used only if sgacls not specified. Final Catch All Rule
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      */
-    public readonly defaultRule!: pulumi.Output<string | undefined>;
+    declare public readonly defaultRule: pulumi.Output<string | undefined>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      */
-    public readonly matrixCellStatus!: pulumi.Output<string>;
+    declare public readonly matrixCellStatus: pulumi.Output<string>;
     /**
      * List of TrustSec Security Groups ACLs
      */
-    public readonly sgacls!: pulumi.Output<string[] | undefined>;
+    declare public readonly sgacls: pulumi.Output<string[] | undefined>;
 
     /**
      * Create a EgressMatrixCellDefault resource with the given unique name, arguments, and options.
@@ -86,16 +89,16 @@ export class EgressMatrixCellDefault extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EgressMatrixCellDefaultState | undefined;
-            resourceInputs["defaultRule"] = state ? state.defaultRule : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["matrixCellStatus"] = state ? state.matrixCellStatus : undefined;
-            resourceInputs["sgacls"] = state ? state.sgacls : undefined;
+            resourceInputs["defaultRule"] = state?.defaultRule;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["matrixCellStatus"] = state?.matrixCellStatus;
+            resourceInputs["sgacls"] = state?.sgacls;
         } else {
             const args = argsOrState as EgressMatrixCellDefaultArgs | undefined;
-            resourceInputs["defaultRule"] = args ? args.defaultRule : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["matrixCellStatus"] = args ? args.matrixCellStatus : undefined;
-            resourceInputs["sgacls"] = args ? args.sgacls : undefined;
+            resourceInputs["defaultRule"] = args?.defaultRule;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["matrixCellStatus"] = args?.matrixCellStatus;
+            resourceInputs["sgacls"] = args?.sgacls;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(EgressMatrixCellDefault.__pulumiType, name, resourceInputs, opts);
@@ -107,7 +110,8 @@ export class EgressMatrixCellDefault extends pulumi.CustomResource {
  */
 export interface EgressMatrixCellDefaultState {
     /**
-     * Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     * Can be used only if sgacls not specified. Final Catch All Rule
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      */
     defaultRule?: pulumi.Input<string>;
     /**
@@ -115,7 +119,9 @@ export interface EgressMatrixCellDefaultState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      */
     matrixCellStatus?: pulumi.Input<string>;
     /**
@@ -129,7 +135,8 @@ export interface EgressMatrixCellDefaultState {
  */
 export interface EgressMatrixCellDefaultArgs {
     /**
-     * Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     * Can be used only if sgacls not specified. Final Catch All Rule
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      */
     defaultRule?: pulumi.Input<string>;
     /**
@@ -137,7 +144,9 @@ export interface EgressMatrixCellDefaultArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      */
     matrixCellStatus?: pulumi.Input<string>;
     /**

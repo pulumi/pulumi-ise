@@ -72,7 +72,8 @@ namespace Pulumi.Ise.System
         public Output<string> Path { get; private set; } = null!;
 
         /// <summary>
-        /// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        /// Protocol
+        ///   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         /// </summary>
         [Output("protocol")]
         public Output<string> Protocol { get; private set; } = null!;
@@ -160,7 +161,8 @@ namespace Pulumi.Ise.System
         public Input<string> Path { get; set; } = null!;
 
         /// <summary>
-        /// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        /// Protocol
+        ///   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         /// </summary>
         [Input("protocol", required: true)]
         public Input<string> Protocol { get; set; } = null!;
@@ -210,7 +212,8 @@ namespace Pulumi.Ise.System
         public Input<string>? Path { get; set; }
 
         /// <summary>
-        /// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        /// Protocol
+        ///   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

@@ -60,19 +60,21 @@ export class DownloadableAcl extends pulumi.CustomResource {
     /**
      * The DACL content
      */
-    public readonly dacl!: pulumi.Output<string>;
+    declare public readonly dacl: pulumi.Output<string>;
     /**
-     * The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      */
-    public readonly daclType!: pulumi.Output<string>;
+    declare public readonly daclType: pulumi.Output<string>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The name of the downloadable ACL
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
 
     /**
      * Create a DownloadableAcl resource with the given unique name, arguments, and options.
@@ -87,19 +89,19 @@ export class DownloadableAcl extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DownloadableAclState | undefined;
-            resourceInputs["dacl"] = state ? state.dacl : undefined;
-            resourceInputs["daclType"] = state ? state.daclType : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
+            resourceInputs["dacl"] = state?.dacl;
+            resourceInputs["daclType"] = state?.daclType;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
         } else {
             const args = argsOrState as DownloadableAclArgs | undefined;
-            if ((!args || args.dacl === undefined) && !opts.urn) {
+            if (args?.dacl === undefined && !opts.urn) {
                 throw new Error("Missing required property 'dacl'");
             }
-            resourceInputs["dacl"] = args ? args.dacl : undefined;
-            resourceInputs["daclType"] = args ? args.daclType : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["dacl"] = args?.dacl;
+            resourceInputs["daclType"] = args?.daclType;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(DownloadableAcl.__pulumiType, name, resourceInputs, opts);
@@ -115,7 +117,9 @@ export interface DownloadableAclState {
      */
     dacl?: pulumi.Input<string>;
     /**
-     * The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      */
     daclType?: pulumi.Input<string>;
     /**
@@ -137,7 +141,9 @@ export interface DownloadableAclArgs {
      */
     dacl: pulumi.Input<string>;
     /**
-     * The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      */
     daclType?: pulumi.Input<string>;
     /**

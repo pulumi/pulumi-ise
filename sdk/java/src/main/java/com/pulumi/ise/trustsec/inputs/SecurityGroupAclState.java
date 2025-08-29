@@ -47,14 +47,18 @@ public final class SecurityGroupAclState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      * 
      */
     @Import(name="ipVersion")
     private @Nullable Output<String> ipVersion;
 
     /**
-     * @return IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * @return IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      * 
      */
     public Optional<Output<String>> ipVersion() {
@@ -162,7 +166,9 @@ public final class SecurityGroupAclState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ipVersion IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+         * @param ipVersion IP Version
+         *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+         *   - Default value: `IP_AGNOSTIC`
          * 
          * @return builder
          * 
@@ -173,7 +179,9 @@ public final class SecurityGroupAclState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ipVersion IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+         * @param ipVersion IP Version
+         *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+         *   - Default value: `IP_AGNOSTIC`
          * 
          * @return builder
          * 

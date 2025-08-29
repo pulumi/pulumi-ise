@@ -60,19 +60,20 @@ export class Dictionary extends pulumi.CustomResource {
     /**
      * The description of the dictionary
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      */
-    public readonly dictionaryAttrType!: pulumi.Output<string>;
+    declare public readonly dictionaryAttrType: pulumi.Output<string>;
     /**
      * The dictionary name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the dictionary
      */
-    public readonly version!: pulumi.Output<string>;
+    declare public readonly version: pulumi.Output<string>;
 
     /**
      * Create a Dictionary resource with the given unique name, arguments, and options.
@@ -87,22 +88,22 @@ export class Dictionary extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DictionaryState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dictionaryAttrType"] = state ? state.dictionaryAttrType : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dictionaryAttrType"] = state?.dictionaryAttrType;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as DictionaryArgs | undefined;
-            if ((!args || args.dictionaryAttrType === undefined) && !opts.urn) {
+            if (args?.dictionaryAttrType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'dictionaryAttrType'");
             }
-            if ((!args || args.version === undefined) && !opts.urn) {
+            if (args?.version === undefined && !opts.urn) {
                 throw new Error("Missing required property 'version'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dictionaryAttrType"] = args ? args.dictionaryAttrType : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["version"] = args ? args.version : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dictionaryAttrType"] = args?.dictionaryAttrType;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["version"] = args?.version;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Dictionary.__pulumiType, name, resourceInputs, opts);
@@ -118,7 +119,8 @@ export interface DictionaryState {
      */
     description?: pulumi.Input<string>;
     /**
-     * The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      */
     dictionaryAttrType?: pulumi.Input<string>;
     /**
@@ -140,7 +142,8 @@ export interface DictionaryArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      */
     dictionaryAttrType: pulumi.Input<string>;
     /**

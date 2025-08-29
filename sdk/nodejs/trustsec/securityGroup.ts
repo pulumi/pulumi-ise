@@ -61,23 +61,24 @@ export class SecurityGroup extends pulumi.CustomResource {
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Read-only
      */
-    public readonly isReadOnly!: pulumi.Output<boolean | undefined>;
+    declare public readonly isReadOnly: pulumi.Output<boolean | undefined>;
     /**
      * The name of the security group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Propagate to APIC (ACI)
      */
-    public readonly propogateToApic!: pulumi.Output<boolean | undefined>;
+    declare public readonly propogateToApic: pulumi.Output<boolean | undefined>;
     /**
-     * `-1` to auto-generate - Range: `-1`-`65519`
+     * `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      */
-    public readonly value!: pulumi.Output<number>;
+    declare public readonly value: pulumi.Output<number>;
 
     /**
      * Create a SecurityGroup resource with the given unique name, arguments, and options.
@@ -92,21 +93,21 @@ export class SecurityGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SecurityGroupState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["isReadOnly"] = state ? state.isReadOnly : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["propogateToApic"] = state ? state.propogateToApic : undefined;
-            resourceInputs["value"] = state ? state.value : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["isReadOnly"] = state?.isReadOnly;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["propogateToApic"] = state?.propogateToApic;
+            resourceInputs["value"] = state?.value;
         } else {
             const args = argsOrState as SecurityGroupArgs | undefined;
-            if ((!args || args.value === undefined) && !opts.urn) {
+            if (args?.value === undefined && !opts.urn) {
                 throw new Error("Missing required property 'value'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["isReadOnly"] = args ? args.isReadOnly : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["propogateToApic"] = args ? args.propogateToApic : undefined;
-            resourceInputs["value"] = args ? args.value : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["isReadOnly"] = args?.isReadOnly;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["propogateToApic"] = args?.propogateToApic;
+            resourceInputs["value"] = args?.value;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SecurityGroup.__pulumiType, name, resourceInputs, opts);
@@ -134,7 +135,8 @@ export interface SecurityGroupState {
      */
     propogateToApic?: pulumi.Input<boolean>;
     /**
-     * `-1` to auto-generate - Range: `-1`-`65519`
+     * `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      */
     value?: pulumi.Input<number>;
 }
@@ -160,7 +162,8 @@ export interface SecurityGroupArgs {
      */
     propogateToApic?: pulumi.Input<boolean>;
     /**
-     * `-1` to auto-generate - Range: `-1`-`65519`
+     * `-1` to auto-generate
+     *   - Range: `-1`-`65519`
      */
     value: pulumi.Input<number>;
 }

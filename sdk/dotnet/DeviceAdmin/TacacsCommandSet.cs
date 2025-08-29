@@ -68,7 +68,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Permit unmatched commands - Default value: `false`
+        /// Permit unmatched commands
+        ///   - Default value: `false`
         /// </summary>
         [Output("permitUnmatched")]
         public Output<bool> PermitUnmatched { get; private set; } = null!;
@@ -140,7 +141,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Permit unmatched commands - Default value: `false`
+        /// Permit unmatched commands
+        ///   - Default value: `false`
         /// </summary>
         [Input("permitUnmatched")]
         public Input<bool>? PermitUnmatched { get; set; }
@@ -174,7 +176,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Permit unmatched commands - Default value: `false`
+        /// Permit unmatched commands
+        ///   - Default value: `false`
         /// </summary>
         [Input("permitUnmatched")]
         public Input<bool>? PermitUnmatched { get; set; }

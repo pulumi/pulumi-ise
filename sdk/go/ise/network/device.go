@@ -101,17 +101,20 @@ type Device struct {
 	AuthenticationEnableMultiSecret pulumi.BoolPtrOutput `pulumi:"authenticationEnableMultiSecret"`
 	// Encryption key
 	AuthenticationEncryptionKey pulumi.StringPtrOutput `pulumi:"authenticationEncryptionKey"`
-	// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+	// Key input format
+	//   - Choices: `ASCII`, `HEXADECIMAL`
 	AuthenticationEncryptionKeyFormat pulumi.StringPtrOutput `pulumi:"authenticationEncryptionKeyFormat"`
 	// Message authenticator code key
 	AuthenticationMessageAuthenticatorCodeKey pulumi.StringPtrOutput `pulumi:"authenticationMessageAuthenticatorCodeKey"`
-	// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+	// Network protocol
+	//   - Choices: `RADIUS`, `TACACS_PLUS`
 	AuthenticationNetworkProtocol pulumi.StringPtrOutput `pulumi:"authenticationNetworkProtocol"`
 	// RADIUS shared secret
 	AuthenticationRadiusSharedSecret pulumi.StringPtrOutput `pulumi:"authenticationRadiusSharedSecret"`
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret pulumi.StringPtrOutput `pulumi:"authenticationSecondRadiusSharedSecret"`
-	// CoA port - Default value: `1700`
+	// CoA port
+	//   - Default value: `1700`
 	CoaPort pulumi.IntOutput `pulumi:"coaPort"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -125,7 +128,8 @@ type Device struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
 	NetworkDeviceGroups pulumi.StringArrayOutput `pulumi:"networkDeviceGroups"`
-	// Profile name - Default value: `Cisco`
+	// Profile name
+	//   - Default value: `Cisco`
 	ProfileName pulumi.StringOutput `pulumi:"profileName"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery pulumi.BoolPtrOutput `pulumi:"snmpLinkTrapQuery"`
@@ -133,15 +137,18 @@ type Device struct {
 	SnmpMacTrapQuery pulumi.BoolPtrOutput `pulumi:"snmpMacTrapQuery"`
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode pulumi.StringPtrOutput `pulumi:"snmpOriginatingPolicyServiceNode"`
-	// SNMP Polling Interval in seconds - Range: `600`-`86400`
+	// SNMP Polling Interval in seconds
+	//   - Range: `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrOutput `pulumi:"snmpPollingInterval"`
 	// SNMP RO Community
 	SnmpRoCommunity pulumi.StringPtrOutput `pulumi:"snmpRoCommunity"`
-	// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+	// SNMP version
+	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion pulumi.StringPtrOutput `pulumi:"snmpVersion"`
 	// Software version
 	SoftwareVersion pulumi.StringPtrOutput `pulumi:"softwareVersion"`
-	// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+	// Connect mode options
+	//   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
 	TacacsConnectModeOptions pulumi.StringPtrOutput `pulumi:"tacacsConnectModeOptions"`
 	// Shared secret
 	TacacsSharedSecret pulumi.StringPtrOutput `pulumi:"tacacsSharedSecret"`
@@ -175,7 +182,8 @@ type Device struct {
 	TrustsecRestApiUsername pulumi.StringPtrOutput `pulumi:"trustsecRestApiUsername"`
 	// Send configuration to device
 	TrustsecSendConfigurationToDevice pulumi.BoolPtrOutput `pulumi:"trustsecSendConfigurationToDevice"`
-	// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+	// Send configuration to device using
+	//   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
 	TrustsecSendConfigurationToDeviceUsing pulumi.StringPtrOutput `pulumi:"trustsecSendConfigurationToDeviceUsing"`
 }
 
@@ -220,17 +228,20 @@ type deviceState struct {
 	AuthenticationEnableMultiSecret *bool `pulumi:"authenticationEnableMultiSecret"`
 	// Encryption key
 	AuthenticationEncryptionKey *string `pulumi:"authenticationEncryptionKey"`
-	// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+	// Key input format
+	//   - Choices: `ASCII`, `HEXADECIMAL`
 	AuthenticationEncryptionKeyFormat *string `pulumi:"authenticationEncryptionKeyFormat"`
 	// Message authenticator code key
 	AuthenticationMessageAuthenticatorCodeKey *string `pulumi:"authenticationMessageAuthenticatorCodeKey"`
-	// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+	// Network protocol
+	//   - Choices: `RADIUS`, `TACACS_PLUS`
 	AuthenticationNetworkProtocol *string `pulumi:"authenticationNetworkProtocol"`
 	// RADIUS shared secret
 	AuthenticationRadiusSharedSecret *string `pulumi:"authenticationRadiusSharedSecret"`
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret *string `pulumi:"authenticationSecondRadiusSharedSecret"`
-	// CoA port - Default value: `1700`
+	// CoA port
+	//   - Default value: `1700`
 	CoaPort *int `pulumi:"coaPort"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -244,7 +255,8 @@ type deviceState struct {
 	Name *string `pulumi:"name"`
 	// List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
 	NetworkDeviceGroups []string `pulumi:"networkDeviceGroups"`
-	// Profile name - Default value: `Cisco`
+	// Profile name
+	//   - Default value: `Cisco`
 	ProfileName *string `pulumi:"profileName"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery *bool `pulumi:"snmpLinkTrapQuery"`
@@ -252,15 +264,18 @@ type deviceState struct {
 	SnmpMacTrapQuery *bool `pulumi:"snmpMacTrapQuery"`
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode *string `pulumi:"snmpOriginatingPolicyServiceNode"`
-	// SNMP Polling Interval in seconds - Range: `600`-`86400`
+	// SNMP Polling Interval in seconds
+	//   - Range: `600`-`86400`
 	SnmpPollingInterval *int `pulumi:"snmpPollingInterval"`
 	// SNMP RO Community
 	SnmpRoCommunity *string `pulumi:"snmpRoCommunity"`
-	// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+	// SNMP version
+	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion *string `pulumi:"snmpVersion"`
 	// Software version
 	SoftwareVersion *string `pulumi:"softwareVersion"`
-	// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+	// Connect mode options
+	//   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
 	TacacsConnectModeOptions *string `pulumi:"tacacsConnectModeOptions"`
 	// Shared secret
 	TacacsSharedSecret *string `pulumi:"tacacsSharedSecret"`
@@ -294,7 +309,8 @@ type deviceState struct {
 	TrustsecRestApiUsername *string `pulumi:"trustsecRestApiUsername"`
 	// Send configuration to device
 	TrustsecSendConfigurationToDevice *bool `pulumi:"trustsecSendConfigurationToDevice"`
-	// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+	// Send configuration to device using
+	//   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
 	TrustsecSendConfigurationToDeviceUsing *string `pulumi:"trustsecSendConfigurationToDeviceUsing"`
 }
 
@@ -307,17 +323,20 @@ type DeviceState struct {
 	AuthenticationEnableMultiSecret pulumi.BoolPtrInput
 	// Encryption key
 	AuthenticationEncryptionKey pulumi.StringPtrInput
-	// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+	// Key input format
+	//   - Choices: `ASCII`, `HEXADECIMAL`
 	AuthenticationEncryptionKeyFormat pulumi.StringPtrInput
 	// Message authenticator code key
 	AuthenticationMessageAuthenticatorCodeKey pulumi.StringPtrInput
-	// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+	// Network protocol
+	//   - Choices: `RADIUS`, `TACACS_PLUS`
 	AuthenticationNetworkProtocol pulumi.StringPtrInput
 	// RADIUS shared secret
 	AuthenticationRadiusSharedSecret pulumi.StringPtrInput
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret pulumi.StringPtrInput
-	// CoA port - Default value: `1700`
+	// CoA port
+	//   - Default value: `1700`
 	CoaPort pulumi.IntPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -331,7 +350,8 @@ type DeviceState struct {
 	Name pulumi.StringPtrInput
 	// List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
 	NetworkDeviceGroups pulumi.StringArrayInput
-	// Profile name - Default value: `Cisco`
+	// Profile name
+	//   - Default value: `Cisco`
 	ProfileName pulumi.StringPtrInput
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery pulumi.BoolPtrInput
@@ -339,15 +359,18 @@ type DeviceState struct {
 	SnmpMacTrapQuery pulumi.BoolPtrInput
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode pulumi.StringPtrInput
-	// SNMP Polling Interval in seconds - Range: `600`-`86400`
+	// SNMP Polling Interval in seconds
+	//   - Range: `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrInput
 	// SNMP RO Community
 	SnmpRoCommunity pulumi.StringPtrInput
-	// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+	// SNMP version
+	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion pulumi.StringPtrInput
 	// Software version
 	SoftwareVersion pulumi.StringPtrInput
-	// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+	// Connect mode options
+	//   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
 	TacacsConnectModeOptions pulumi.StringPtrInput
 	// Shared secret
 	TacacsSharedSecret pulumi.StringPtrInput
@@ -381,7 +404,8 @@ type DeviceState struct {
 	TrustsecRestApiUsername pulumi.StringPtrInput
 	// Send configuration to device
 	TrustsecSendConfigurationToDevice pulumi.BoolPtrInput
-	// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+	// Send configuration to device using
+	//   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
 	TrustsecSendConfigurationToDeviceUsing pulumi.StringPtrInput
 }
 
@@ -398,17 +422,20 @@ type deviceArgs struct {
 	AuthenticationEnableMultiSecret *bool `pulumi:"authenticationEnableMultiSecret"`
 	// Encryption key
 	AuthenticationEncryptionKey *string `pulumi:"authenticationEncryptionKey"`
-	// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+	// Key input format
+	//   - Choices: `ASCII`, `HEXADECIMAL`
 	AuthenticationEncryptionKeyFormat *string `pulumi:"authenticationEncryptionKeyFormat"`
 	// Message authenticator code key
 	AuthenticationMessageAuthenticatorCodeKey *string `pulumi:"authenticationMessageAuthenticatorCodeKey"`
-	// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+	// Network protocol
+	//   - Choices: `RADIUS`, `TACACS_PLUS`
 	AuthenticationNetworkProtocol *string `pulumi:"authenticationNetworkProtocol"`
 	// RADIUS shared secret
 	AuthenticationRadiusSharedSecret *string `pulumi:"authenticationRadiusSharedSecret"`
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret *string `pulumi:"authenticationSecondRadiusSharedSecret"`
-	// CoA port - Default value: `1700`
+	// CoA port
+	//   - Default value: `1700`
 	CoaPort *int `pulumi:"coaPort"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -422,7 +449,8 @@ type deviceArgs struct {
 	Name *string `pulumi:"name"`
 	// List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
 	NetworkDeviceGroups []string `pulumi:"networkDeviceGroups"`
-	// Profile name - Default value: `Cisco`
+	// Profile name
+	//   - Default value: `Cisco`
 	ProfileName *string `pulumi:"profileName"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery *bool `pulumi:"snmpLinkTrapQuery"`
@@ -430,15 +458,18 @@ type deviceArgs struct {
 	SnmpMacTrapQuery *bool `pulumi:"snmpMacTrapQuery"`
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode *string `pulumi:"snmpOriginatingPolicyServiceNode"`
-	// SNMP Polling Interval in seconds - Range: `600`-`86400`
+	// SNMP Polling Interval in seconds
+	//   - Range: `600`-`86400`
 	SnmpPollingInterval *int `pulumi:"snmpPollingInterval"`
 	// SNMP RO Community
 	SnmpRoCommunity *string `pulumi:"snmpRoCommunity"`
-	// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+	// SNMP version
+	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion *string `pulumi:"snmpVersion"`
 	// Software version
 	SoftwareVersion *string `pulumi:"softwareVersion"`
-	// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+	// Connect mode options
+	//   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
 	TacacsConnectModeOptions *string `pulumi:"tacacsConnectModeOptions"`
 	// Shared secret
 	TacacsSharedSecret *string `pulumi:"tacacsSharedSecret"`
@@ -472,7 +503,8 @@ type deviceArgs struct {
 	TrustsecRestApiUsername *string `pulumi:"trustsecRestApiUsername"`
 	// Send configuration to device
 	TrustsecSendConfigurationToDevice *bool `pulumi:"trustsecSendConfigurationToDevice"`
-	// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+	// Send configuration to device using
+	//   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
 	TrustsecSendConfigurationToDeviceUsing *string `pulumi:"trustsecSendConfigurationToDeviceUsing"`
 }
 
@@ -486,17 +518,20 @@ type DeviceArgs struct {
 	AuthenticationEnableMultiSecret pulumi.BoolPtrInput
 	// Encryption key
 	AuthenticationEncryptionKey pulumi.StringPtrInput
-	// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+	// Key input format
+	//   - Choices: `ASCII`, `HEXADECIMAL`
 	AuthenticationEncryptionKeyFormat pulumi.StringPtrInput
 	// Message authenticator code key
 	AuthenticationMessageAuthenticatorCodeKey pulumi.StringPtrInput
-	// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+	// Network protocol
+	//   - Choices: `RADIUS`, `TACACS_PLUS`
 	AuthenticationNetworkProtocol pulumi.StringPtrInput
 	// RADIUS shared secret
 	AuthenticationRadiusSharedSecret pulumi.StringPtrInput
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret pulumi.StringPtrInput
-	// CoA port - Default value: `1700`
+	// CoA port
+	//   - Default value: `1700`
 	CoaPort pulumi.IntPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -510,7 +545,8 @@ type DeviceArgs struct {
 	Name pulumi.StringPtrInput
 	// List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
 	NetworkDeviceGroups pulumi.StringArrayInput
-	// Profile name - Default value: `Cisco`
+	// Profile name
+	//   - Default value: `Cisco`
 	ProfileName pulumi.StringPtrInput
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery pulumi.BoolPtrInput
@@ -518,15 +554,18 @@ type DeviceArgs struct {
 	SnmpMacTrapQuery pulumi.BoolPtrInput
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode pulumi.StringPtrInput
-	// SNMP Polling Interval in seconds - Range: `600`-`86400`
+	// SNMP Polling Interval in seconds
+	//   - Range: `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrInput
 	// SNMP RO Community
 	SnmpRoCommunity pulumi.StringPtrInput
-	// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+	// SNMP version
+	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion pulumi.StringPtrInput
 	// Software version
 	SoftwareVersion pulumi.StringPtrInput
-	// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+	// Connect mode options
+	//   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
 	TacacsConnectModeOptions pulumi.StringPtrInput
 	// Shared secret
 	TacacsSharedSecret pulumi.StringPtrInput
@@ -560,7 +599,8 @@ type DeviceArgs struct {
 	TrustsecRestApiUsername pulumi.StringPtrInput
 	// Send configuration to device
 	TrustsecSendConfigurationToDevice pulumi.BoolPtrInput
-	// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+	// Send configuration to device using
+	//   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
 	TrustsecSendConfigurationToDeviceUsing pulumi.StringPtrInput
 }
 
@@ -671,7 +711,8 @@ func (o DeviceOutput) AuthenticationEncryptionKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.AuthenticationEncryptionKey }).(pulumi.StringPtrOutput)
 }
 
-// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+// Key input format
+//   - Choices: `ASCII`, `HEXADECIMAL`
 func (o DeviceOutput) AuthenticationEncryptionKeyFormat() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.AuthenticationEncryptionKeyFormat }).(pulumi.StringPtrOutput)
 }
@@ -681,7 +722,8 @@ func (o DeviceOutput) AuthenticationMessageAuthenticatorCodeKey() pulumi.StringP
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.AuthenticationMessageAuthenticatorCodeKey }).(pulumi.StringPtrOutput)
 }
 
-// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+// Network protocol
+//   - Choices: `RADIUS`, `TACACS_PLUS`
 func (o DeviceOutput) AuthenticationNetworkProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.AuthenticationNetworkProtocol }).(pulumi.StringPtrOutput)
 }
@@ -696,7 +738,8 @@ func (o DeviceOutput) AuthenticationSecondRadiusSharedSecret() pulumi.StringPtrO
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.AuthenticationSecondRadiusSharedSecret }).(pulumi.StringPtrOutput)
 }
 
-// CoA port - Default value: `1700`
+// CoA port
+//   - Default value: `1700`
 func (o DeviceOutput) CoaPort() pulumi.IntOutput {
 	return o.ApplyT(func(v *Device) pulumi.IntOutput { return v.CoaPort }).(pulumi.IntOutput)
 }
@@ -731,7 +774,8 @@ func (o DeviceOutput) NetworkDeviceGroups() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringArrayOutput { return v.NetworkDeviceGroups }).(pulumi.StringArrayOutput)
 }
 
-// Profile name - Default value: `Cisco`
+// Profile name
+//   - Default value: `Cisco`
 func (o DeviceOutput) ProfileName() pulumi.StringOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringOutput { return v.ProfileName }).(pulumi.StringOutput)
 }
@@ -751,7 +795,8 @@ func (o DeviceOutput) SnmpOriginatingPolicyServiceNode() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpOriginatingPolicyServiceNode }).(pulumi.StringPtrOutput)
 }
 
-// SNMP Polling Interval in seconds - Range: `600`-`86400`
+// SNMP Polling Interval in seconds
+//   - Range: `600`-`86400`
 func (o DeviceOutput) SnmpPollingInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.IntPtrOutput { return v.SnmpPollingInterval }).(pulumi.IntPtrOutput)
 }
@@ -761,7 +806,8 @@ func (o DeviceOutput) SnmpRoCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpRoCommunity }).(pulumi.StringPtrOutput)
 }
 
-// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+// SNMP version
+//   - Choices: `ONE`, `TWO_C`, `THREE`
 func (o DeviceOutput) SnmpVersion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpVersion }).(pulumi.StringPtrOutput)
 }
@@ -771,7 +817,8 @@ func (o DeviceOutput) SoftwareVersion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SoftwareVersion }).(pulumi.StringPtrOutput)
 }
 
-// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+// Connect mode options
+//   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
 func (o DeviceOutput) TacacsConnectModeOptions() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.TacacsConnectModeOptions }).(pulumi.StringPtrOutput)
 }
@@ -856,7 +903,8 @@ func (o DeviceOutput) TrustsecSendConfigurationToDevice() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.BoolPtrOutput { return v.TrustsecSendConfigurationToDevice }).(pulumi.BoolPtrOutput)
 }
 
-// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+// Send configuration to device using
+//   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
 func (o DeviceOutput) TrustsecSendConfigurationToDeviceUsing() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.TrustsecSendConfigurationToDeviceUsing }).(pulumi.StringPtrOutput)
 }

@@ -56,7 +56,9 @@ class AuthorizationProfileArgs:
                  web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthorizationProfile resource.
-        :param pulumi.Input[_builtins.str] access_type: Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        :param pulumi.Input[_builtins.str] access_type: Access type
+                 - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+                 - Default value: `ACCESS_ACCEPT`
         :param pulumi.Input[_builtins.str] acl: ACL
         :param pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]] advanced_attributes: List of advanced attributes
         :param pulumi.Input[_builtins.bool] agentless_posture: Agentless Posture.
@@ -67,30 +69,40 @@ class AuthorizationProfileArgs:
         :param pulumi.Input[_builtins.str] avc_profile: AVC profile
         :param pulumi.Input[_builtins.str] dacl_name: DACL name
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] interface_template: Interface template
         :param pulumi.Input[_builtins.str] ipv6_acl_filter: IPv6 ACL
         :param pulumi.Input[_builtins.str] ipv6_dacl_name: IPv6 DACL name
-        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy
+                 - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         :param pulumi.Input[_builtins.str] name: The name of the authorization profile
-        :param pulumi.Input[_builtins.bool] neat: NEAT - Default value: `false`
-        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile - Default value: `Cisco`
-        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
-        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer - Range: `1`-`65535`
-        :param pulumi.Input[_builtins.bool] service_template: Service template - Default value: `false`
-        :param pulumi.Input[_builtins.bool] track_movement: Track movement - Default value: `false`
+        :param pulumi.Input[_builtins.bool] neat: NEAT
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile
+                 - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication
+                 - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.bool] service_template: Service template
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] track_movement: Track movement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] unique_identifier: Unique identifier
         :param pulumi.Input[_builtins.str] vlan_name_id: Vlan name or ID
-        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID - Range: `0`-`31`
-        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission - Default value: `false`
-        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local) - Default value: `false`
+        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID
+                 - Range: `0`-`31`
+        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] web_redirection_acl: Web redirection ACL
-        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-               `web_redirection_type` values the field must be ignored.
+        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         :param pulumi.Input[_builtins.str] web_redirection_portal_name: A portal that exist in the DB and fits the `web_redirection_type`
         :param pulumi.Input[_builtins.str] web_redirection_static_ip_host_name_fqdn: IP, hostname or FQDN
-        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-               `NativeSupplicanProvisioning`, `ClientProvisioning`
+        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name`
+                 - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         if access_type is not None:
             pulumi.set(__self__, "access_type", access_type)
@@ -163,7 +175,9 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="accessType")
     def access_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        Access type
+          - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+          - Default value: `ACCESS_ACCEPT`
         """
         return pulumi.get(self, "access_type")
 
@@ -295,7 +309,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="easywiredSessionCandidate")
     def easywired_session_candidate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Easy wired session candidate - Default value: `false`
+        Easy wired session candidate
+          - Default value: `false`
         """
         return pulumi.get(self, "easywired_session_candidate")
 
@@ -343,7 +358,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="macSecPolicy")
     def mac_sec_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        MacSec policy
+          - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         """
         return pulumi.get(self, "mac_sec_policy")
 
@@ -367,7 +383,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter
     def neat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NEAT - Default value: `false`
+        NEAT
+          - Default value: `false`
         """
         return pulumi.get(self, "neat")
 
@@ -379,7 +396,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="profileName")
     def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Value needs to be an existing Network Device Profile - Default value: `Cisco`
+        Value needs to be an existing Network Device Profile
+          - Default value: `Cisco`
         """
         return pulumi.get(self, "profile_name")
 
@@ -391,7 +409,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="reauthenticationConnectivity")
     def reauthentication_connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        Maintain Connectivity During Reauthentication
+          - Choices: `DEFAULT`, `RADIUS_REQUEST`
         """
         return pulumi.get(self, "reauthentication_connectivity")
 
@@ -403,7 +422,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="reauthenticationTimer")
     def reauthentication_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Reauthentication timer - Range: `1`-`65535`
+        Reauthentication timer
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "reauthentication_timer")
 
@@ -415,7 +435,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="serviceTemplate")
     def service_template(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Service template - Default value: `false`
+        Service template
+          - Default value: `false`
         """
         return pulumi.get(self, "service_template")
 
@@ -427,7 +448,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="trackMovement")
     def track_movement(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Track movement - Default value: `false`
+        Track movement
+          - Default value: `false`
         """
         return pulumi.get(self, "track_movement")
 
@@ -463,7 +485,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="vlanTagId")
     def vlan_tag_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Vlan tag ID - Range: `0`-`31`
+        Vlan tag ID
+          - Range: `0`-`31`
         """
         return pulumi.get(self, "vlan_tag_id")
 
@@ -475,7 +498,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="voiceDomainPermission")
     def voice_domain_permission(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Voice domain permission - Default value: `false`
+        Voice domain permission
+          - Default value: `false`
         """
         return pulumi.get(self, "voice_domain_permission")
 
@@ -487,7 +511,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="webAuth")
     def web_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Web authentication (local) - Default value: `false`
+        Web authentication (local)
+          - Default value: `false`
         """
         return pulumi.get(self, "web_auth")
 
@@ -511,8 +536,7 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="webRedirectionDisplayCertificatesRenewalMessages")
     def web_redirection_display_certificates_renewal_messages(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-        `web_redirection_type` values the field must be ignored.
+        This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         """
         return pulumi.get(self, "web_redirection_display_certificates_renewal_messages")
 
@@ -548,8 +572,8 @@ class AuthorizationProfileArgs:
     @pulumi.getter(name="webRedirectionType")
     def web_redirection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-        `NativeSupplicanProvisioning`, `ClientProvisioning`
+        This type must fit the `web_redirection_portal_name`
+          - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         return pulumi.get(self, "web_redirection_type")
 
@@ -596,7 +620,9 @@ class _AuthorizationProfileState:
                  web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationProfile resources.
-        :param pulumi.Input[_builtins.str] access_type: Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        :param pulumi.Input[_builtins.str] access_type: Access type
+                 - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+                 - Default value: `ACCESS_ACCEPT`
         :param pulumi.Input[_builtins.str] acl: ACL
         :param pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]] advanced_attributes: List of advanced attributes
         :param pulumi.Input[_builtins.bool] agentless_posture: Agentless Posture.
@@ -607,30 +633,40 @@ class _AuthorizationProfileState:
         :param pulumi.Input[_builtins.str] avc_profile: AVC profile
         :param pulumi.Input[_builtins.str] dacl_name: DACL name
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] interface_template: Interface template
         :param pulumi.Input[_builtins.str] ipv6_acl_filter: IPv6 ACL
         :param pulumi.Input[_builtins.str] ipv6_dacl_name: IPv6 DACL name
-        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy
+                 - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         :param pulumi.Input[_builtins.str] name: The name of the authorization profile
-        :param pulumi.Input[_builtins.bool] neat: NEAT - Default value: `false`
-        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile - Default value: `Cisco`
-        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
-        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer - Range: `1`-`65535`
-        :param pulumi.Input[_builtins.bool] service_template: Service template - Default value: `false`
-        :param pulumi.Input[_builtins.bool] track_movement: Track movement - Default value: `false`
+        :param pulumi.Input[_builtins.bool] neat: NEAT
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile
+                 - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication
+                 - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.bool] service_template: Service template
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] track_movement: Track movement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] unique_identifier: Unique identifier
         :param pulumi.Input[_builtins.str] vlan_name_id: Vlan name or ID
-        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID - Range: `0`-`31`
-        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission - Default value: `false`
-        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local) - Default value: `false`
+        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID
+                 - Range: `0`-`31`
+        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] web_redirection_acl: Web redirection ACL
-        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-               `web_redirection_type` values the field must be ignored.
+        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         :param pulumi.Input[_builtins.str] web_redirection_portal_name: A portal that exist in the DB and fits the `web_redirection_type`
         :param pulumi.Input[_builtins.str] web_redirection_static_ip_host_name_fqdn: IP, hostname or FQDN
-        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-               `NativeSupplicanProvisioning`, `ClientProvisioning`
+        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name`
+                 - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         if access_type is not None:
             pulumi.set(__self__, "access_type", access_type)
@@ -703,7 +739,9 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="accessType")
     def access_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        Access type
+          - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+          - Default value: `ACCESS_ACCEPT`
         """
         return pulumi.get(self, "access_type")
 
@@ -835,7 +873,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="easywiredSessionCandidate")
     def easywired_session_candidate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Easy wired session candidate - Default value: `false`
+        Easy wired session candidate
+          - Default value: `false`
         """
         return pulumi.get(self, "easywired_session_candidate")
 
@@ -883,7 +922,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="macSecPolicy")
     def mac_sec_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        MacSec policy
+          - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         """
         return pulumi.get(self, "mac_sec_policy")
 
@@ -907,7 +947,8 @@ class _AuthorizationProfileState:
     @pulumi.getter
     def neat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NEAT - Default value: `false`
+        NEAT
+          - Default value: `false`
         """
         return pulumi.get(self, "neat")
 
@@ -919,7 +960,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="profileName")
     def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Value needs to be an existing Network Device Profile - Default value: `Cisco`
+        Value needs to be an existing Network Device Profile
+          - Default value: `Cisco`
         """
         return pulumi.get(self, "profile_name")
 
@@ -931,7 +973,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="reauthenticationConnectivity")
     def reauthentication_connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        Maintain Connectivity During Reauthentication
+          - Choices: `DEFAULT`, `RADIUS_REQUEST`
         """
         return pulumi.get(self, "reauthentication_connectivity")
 
@@ -943,7 +986,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="reauthenticationTimer")
     def reauthentication_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Reauthentication timer - Range: `1`-`65535`
+        Reauthentication timer
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "reauthentication_timer")
 
@@ -955,7 +999,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="serviceTemplate")
     def service_template(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Service template - Default value: `false`
+        Service template
+          - Default value: `false`
         """
         return pulumi.get(self, "service_template")
 
@@ -967,7 +1012,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="trackMovement")
     def track_movement(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Track movement - Default value: `false`
+        Track movement
+          - Default value: `false`
         """
         return pulumi.get(self, "track_movement")
 
@@ -1003,7 +1049,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="vlanTagId")
     def vlan_tag_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Vlan tag ID - Range: `0`-`31`
+        Vlan tag ID
+          - Range: `0`-`31`
         """
         return pulumi.get(self, "vlan_tag_id")
 
@@ -1015,7 +1062,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="voiceDomainPermission")
     def voice_domain_permission(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Voice domain permission - Default value: `false`
+        Voice domain permission
+          - Default value: `false`
         """
         return pulumi.get(self, "voice_domain_permission")
 
@@ -1027,7 +1075,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="webAuth")
     def web_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Web authentication (local) - Default value: `false`
+        Web authentication (local)
+          - Default value: `false`
         """
         return pulumi.get(self, "web_auth")
 
@@ -1051,8 +1100,7 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="webRedirectionDisplayCertificatesRenewalMessages")
     def web_redirection_display_certificates_renewal_messages(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-        `web_redirection_type` values the field must be ignored.
+        This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         """
         return pulumi.get(self, "web_redirection_display_certificates_renewal_messages")
 
@@ -1088,8 +1136,8 @@ class _AuthorizationProfileState:
     @pulumi.getter(name="webRedirectionType")
     def web_redirection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-        `NativeSupplicanProvisioning`, `ClientProvisioning`
+        This type must fit the `web_redirection_portal_name`
+          - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         return pulumi.get(self, "web_redirection_type")
 
@@ -1151,7 +1199,9 @@ class AuthorizationProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] access_type: Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        :param pulumi.Input[_builtins.str] access_type: Access type
+                 - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+                 - Default value: `ACCESS_ACCEPT`
         :param pulumi.Input[_builtins.str] acl: ACL
         :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]] advanced_attributes: List of advanced attributes
         :param pulumi.Input[_builtins.bool] agentless_posture: Agentless Posture.
@@ -1162,30 +1212,40 @@ class AuthorizationProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] avc_profile: AVC profile
         :param pulumi.Input[_builtins.str] dacl_name: DACL name
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] interface_template: Interface template
         :param pulumi.Input[_builtins.str] ipv6_acl_filter: IPv6 ACL
         :param pulumi.Input[_builtins.str] ipv6_dacl_name: IPv6 DACL name
-        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy
+                 - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         :param pulumi.Input[_builtins.str] name: The name of the authorization profile
-        :param pulumi.Input[_builtins.bool] neat: NEAT - Default value: `false`
-        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile - Default value: `Cisco`
-        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
-        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer - Range: `1`-`65535`
-        :param pulumi.Input[_builtins.bool] service_template: Service template - Default value: `false`
-        :param pulumi.Input[_builtins.bool] track_movement: Track movement - Default value: `false`
+        :param pulumi.Input[_builtins.bool] neat: NEAT
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile
+                 - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication
+                 - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.bool] service_template: Service template
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] track_movement: Track movement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] unique_identifier: Unique identifier
         :param pulumi.Input[_builtins.str] vlan_name_id: Vlan name or ID
-        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID - Range: `0`-`31`
-        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission - Default value: `false`
-        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local) - Default value: `false`
+        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID
+                 - Range: `0`-`31`
+        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] web_redirection_acl: Web redirection ACL
-        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-               `web_redirection_type` values the field must be ignored.
+        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         :param pulumi.Input[_builtins.str] web_redirection_portal_name: A portal that exist in the DB and fits the `web_redirection_type`
         :param pulumi.Input[_builtins.str] web_redirection_static_ip_host_name_fqdn: IP, hostname or FQDN
-        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-               `NativeSupplicanProvisioning`, `ClientProvisioning`
+        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name`
+                 - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         ...
     @overload
@@ -1344,7 +1404,9 @@ class AuthorizationProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] access_type: Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        :param pulumi.Input[_builtins.str] access_type: Access type
+                 - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+                 - Default value: `ACCESS_ACCEPT`
         :param pulumi.Input[_builtins.str] acl: ACL
         :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]] advanced_attributes: List of advanced attributes
         :param pulumi.Input[_builtins.bool] agentless_posture: Agentless Posture.
@@ -1355,30 +1417,40 @@ class AuthorizationProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] avc_profile: AVC profile
         :param pulumi.Input[_builtins.str] dacl_name: DACL name
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] easywired_session_candidate: Easy wired session candidate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] interface_template: Interface template
         :param pulumi.Input[_builtins.str] ipv6_acl_filter: IPv6 ACL
         :param pulumi.Input[_builtins.str] ipv6_dacl_name: IPv6 DACL name
-        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        :param pulumi.Input[_builtins.str] mac_sec_policy: MacSec policy
+                 - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         :param pulumi.Input[_builtins.str] name: The name of the authorization profile
-        :param pulumi.Input[_builtins.bool] neat: NEAT - Default value: `false`
-        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile - Default value: `Cisco`
-        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
-        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer - Range: `1`-`65535`
-        :param pulumi.Input[_builtins.bool] service_template: Service template - Default value: `false`
-        :param pulumi.Input[_builtins.bool] track_movement: Track movement - Default value: `false`
+        :param pulumi.Input[_builtins.bool] neat: NEAT
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] profile_name: Value needs to be an existing Network Device Profile
+                 - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] reauthentication_connectivity: Maintain Connectivity During Reauthentication
+                 - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        :param pulumi.Input[_builtins.int] reauthentication_timer: Reauthentication timer
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.bool] service_template: Service template
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] track_movement: Track movement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] unique_identifier: Unique identifier
         :param pulumi.Input[_builtins.str] vlan_name_id: Vlan name or ID
-        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID - Range: `0`-`31`
-        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission - Default value: `false`
-        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local) - Default value: `false`
+        :param pulumi.Input[_builtins.int] vlan_tag_id: Vlan tag ID
+                 - Range: `0`-`31`
+        :param pulumi.Input[_builtins.bool] voice_domain_permission: Voice domain permission
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] web_auth: Web authentication (local)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] web_redirection_acl: Web redirection ACL
-        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-               `web_redirection_type` values the field must be ignored.
+        :param pulumi.Input[_builtins.bool] web_redirection_display_certificates_renewal_messages: This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         :param pulumi.Input[_builtins.str] web_redirection_portal_name: A portal that exist in the DB and fits the `web_redirection_type`
         :param pulumi.Input[_builtins.str] web_redirection_static_ip_host_name_fqdn: IP, hostname or FQDN
-        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-               `NativeSupplicanProvisioning`, `ClientProvisioning`
+        :param pulumi.Input[_builtins.str] web_redirection_type: This type must fit the `web_redirection_portal_name`
+                 - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1423,7 +1495,9 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="accessType")
     def access_type(self) -> pulumi.Output[_builtins.str]:
         """
-        Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        Access type
+          - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+          - Default value: `ACCESS_ACCEPT`
         """
         return pulumi.get(self, "access_type")
 
@@ -1511,7 +1585,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="easywiredSessionCandidate")
     def easywired_session_candidate(self) -> pulumi.Output[_builtins.bool]:
         """
-        Easy wired session candidate - Default value: `false`
+        Easy wired session candidate
+          - Default value: `false`
         """
         return pulumi.get(self, "easywired_session_candidate")
 
@@ -1543,7 +1618,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="macSecPolicy")
     def mac_sec_policy(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        MacSec policy
+          - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         """
         return pulumi.get(self, "mac_sec_policy")
 
@@ -1559,7 +1635,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter
     def neat(self) -> pulumi.Output[_builtins.bool]:
         """
-        NEAT - Default value: `false`
+        NEAT
+          - Default value: `false`
         """
         return pulumi.get(self, "neat")
 
@@ -1567,7 +1644,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="profileName")
     def profile_name(self) -> pulumi.Output[_builtins.str]:
         """
-        Value needs to be an existing Network Device Profile - Default value: `Cisco`
+        Value needs to be an existing Network Device Profile
+          - Default value: `Cisco`
         """
         return pulumi.get(self, "profile_name")
 
@@ -1575,7 +1653,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="reauthenticationConnectivity")
     def reauthentication_connectivity(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        Maintain Connectivity During Reauthentication
+          - Choices: `DEFAULT`, `RADIUS_REQUEST`
         """
         return pulumi.get(self, "reauthentication_connectivity")
 
@@ -1583,7 +1662,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="reauthenticationTimer")
     def reauthentication_timer(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Reauthentication timer - Range: `1`-`65535`
+        Reauthentication timer
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "reauthentication_timer")
 
@@ -1591,7 +1671,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="serviceTemplate")
     def service_template(self) -> pulumi.Output[_builtins.bool]:
         """
-        Service template - Default value: `false`
+        Service template
+          - Default value: `false`
         """
         return pulumi.get(self, "service_template")
 
@@ -1599,7 +1680,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="trackMovement")
     def track_movement(self) -> pulumi.Output[_builtins.bool]:
         """
-        Track movement - Default value: `false`
+        Track movement
+          - Default value: `false`
         """
         return pulumi.get(self, "track_movement")
 
@@ -1623,7 +1705,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="vlanTagId")
     def vlan_tag_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Vlan tag ID - Range: `0`-`31`
+        Vlan tag ID
+          - Range: `0`-`31`
         """
         return pulumi.get(self, "vlan_tag_id")
 
@@ -1631,7 +1714,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="voiceDomainPermission")
     def voice_domain_permission(self) -> pulumi.Output[_builtins.bool]:
         """
-        Voice domain permission - Default value: `false`
+        Voice domain permission
+          - Default value: `false`
         """
         return pulumi.get(self, "voice_domain_permission")
 
@@ -1639,7 +1723,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="webAuth")
     def web_auth(self) -> pulumi.Output[_builtins.bool]:
         """
-        Web authentication (local) - Default value: `false`
+        Web authentication (local)
+          - Default value: `false`
         """
         return pulumi.get(self, "web_auth")
 
@@ -1655,8 +1740,7 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="webRedirectionDisplayCertificatesRenewalMessages")
     def web_redirection_display_certificates_renewal_messages(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-        `web_redirection_type` values the field must be ignored.
+        This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         """
         return pulumi.get(self, "web_redirection_display_certificates_renewal_messages")
 
@@ -1680,8 +1764,8 @@ class AuthorizationProfile(pulumi.CustomResource):
     @pulumi.getter(name="webRedirectionType")
     def web_redirection_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-        `NativeSupplicanProvisioning`, `ClientProvisioning`
+        This type must fit the `web_redirection_portal_name`
+          - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         """
         return pulumi.get(self, "web_redirection_type")
 

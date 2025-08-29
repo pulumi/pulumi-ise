@@ -63,19 +63,20 @@ export class TacacsCommandSet extends pulumi.CustomResource {
         return obj['__pulumiType'] === TacacsCommandSet.__pulumiType;
     }
 
-    public readonly commands!: pulumi.Output<outputs.deviceadmin.TacacsCommandSetCommand[] | undefined>;
+    declare public readonly commands: pulumi.Output<outputs.deviceadmin.TacacsCommandSetCommand[] | undefined>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The name of the TACACS command set
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Permit unmatched commands - Default value: `false`
+     * Permit unmatched commands
+     *   - Default value: `false`
      */
-    public readonly permitUnmatched!: pulumi.Output<boolean>;
+    declare public readonly permitUnmatched: pulumi.Output<boolean>;
 
     /**
      * Create a TacacsCommandSet resource with the given unique name, arguments, and options.
@@ -90,16 +91,16 @@ export class TacacsCommandSet extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TacacsCommandSetState | undefined;
-            resourceInputs["commands"] = state ? state.commands : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["permitUnmatched"] = state ? state.permitUnmatched : undefined;
+            resourceInputs["commands"] = state?.commands;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["permitUnmatched"] = state?.permitUnmatched;
         } else {
             const args = argsOrState as TacacsCommandSetArgs | undefined;
-            resourceInputs["commands"] = args ? args.commands : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["permitUnmatched"] = args ? args.permitUnmatched : undefined;
+            resourceInputs["commands"] = args?.commands;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["permitUnmatched"] = args?.permitUnmatched;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(TacacsCommandSet.__pulumiType, name, resourceInputs, opts);
@@ -120,7 +121,8 @@ export interface TacacsCommandSetState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Permit unmatched commands - Default value: `false`
+     * Permit unmatched commands
+     *   - Default value: `false`
      */
     permitUnmatched?: pulumi.Input<boolean>;
 }
@@ -139,7 +141,8 @@ export interface TacacsCommandSetArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Permit unmatched commands - Default value: `false`
+     * Permit unmatched commands
+     *   - Default value: `false`
      */
     permitUnmatched?: pulumi.Input<boolean>;
 }

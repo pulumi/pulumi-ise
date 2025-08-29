@@ -100,171 +100,179 @@ export class Device extends pulumi.CustomResource {
     /**
      * Enforce use of DTLS
      */
-    public readonly authenticationDtlsRequired!: pulumi.Output<boolean | undefined>;
+    declare public readonly authenticationDtlsRequired: pulumi.Output<boolean | undefined>;
     /**
      * Enable key wrap
      */
-    public readonly authenticationEnableKeyWrap!: pulumi.Output<boolean | undefined>;
+    declare public readonly authenticationEnableKeyWrap: pulumi.Output<boolean | undefined>;
     /**
      * Enable multiple RADIUS shared secrets
      */
-    public readonly authenticationEnableMultiSecret!: pulumi.Output<boolean | undefined>;
+    declare public readonly authenticationEnableMultiSecret: pulumi.Output<boolean | undefined>;
     /**
      * Encryption key
      */
-    public readonly authenticationEncryptionKey!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationEncryptionKey: pulumi.Output<string | undefined>;
     /**
-     * Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      */
-    public readonly authenticationEncryptionKeyFormat!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationEncryptionKeyFormat: pulumi.Output<string | undefined>;
     /**
      * Message authenticator code key
      */
-    public readonly authenticationMessageAuthenticatorCodeKey!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationMessageAuthenticatorCodeKey: pulumi.Output<string | undefined>;
     /**
-     * Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      */
-    public readonly authenticationNetworkProtocol!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationNetworkProtocol: pulumi.Output<string | undefined>;
     /**
      * RADIUS shared secret
      */
-    public readonly authenticationRadiusSharedSecret!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationRadiusSharedSecret: pulumi.Output<string | undefined>;
     /**
      * Second RADIUS shared secret
      */
-    public readonly authenticationSecondRadiusSharedSecret!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationSecondRadiusSharedSecret: pulumi.Output<string | undefined>;
     /**
-     * CoA port - Default value: `1700`
+     * CoA port
+     *   - Default value: `1700`
      */
-    public readonly coaPort!: pulumi.Output<number>;
+    declare public readonly coaPort: pulumi.Output<number>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
      */
-    public readonly dtlsDnsName!: pulumi.Output<string | undefined>;
+    declare public readonly dtlsDnsName: pulumi.Output<string | undefined>;
     /**
      * List of IP subnets
      */
-    public readonly ips!: pulumi.Output<outputs.network.DeviceIp[]>;
+    declare public readonly ips: pulumi.Output<outputs.network.DeviceIp[]>;
     /**
      * Model name
      */
-    public readonly modelName!: pulumi.Output<string | undefined>;
+    declare public readonly modelName: pulumi.Output<string | undefined>;
     /**
      * The name of the network device
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
      */
-    public readonly networkDeviceGroups!: pulumi.Output<string[] | undefined>;
+    declare public readonly networkDeviceGroups: pulumi.Output<string[] | undefined>;
     /**
-     * Profile name - Default value: `Cisco`
+     * Profile name
+     *   - Default value: `Cisco`
      */
-    public readonly profileName!: pulumi.Output<string>;
+    declare public readonly profileName: pulumi.Output<string>;
     /**
      * SNMP link Trap Query
      */
-    public readonly snmpLinkTrapQuery!: pulumi.Output<boolean | undefined>;
+    declare public readonly snmpLinkTrapQuery: pulumi.Output<boolean | undefined>;
     /**
      * SNMP MAC Trap Query
      */
-    public readonly snmpMacTrapQuery!: pulumi.Output<boolean | undefined>;
+    declare public readonly snmpMacTrapQuery: pulumi.Output<boolean | undefined>;
     /**
      * Originating Policy Services Node
      */
-    public readonly snmpOriginatingPolicyServiceNode!: pulumi.Output<string | undefined>;
+    declare public readonly snmpOriginatingPolicyServiceNode: pulumi.Output<string | undefined>;
     /**
-     * SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      */
-    public readonly snmpPollingInterval!: pulumi.Output<number | undefined>;
+    declare public readonly snmpPollingInterval: pulumi.Output<number | undefined>;
     /**
      * SNMP RO Community
      */
-    public readonly snmpRoCommunity!: pulumi.Output<string | undefined>;
+    declare public readonly snmpRoCommunity: pulumi.Output<string | undefined>;
     /**
-     * SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      */
-    public readonly snmpVersion!: pulumi.Output<string | undefined>;
+    declare public readonly snmpVersion: pulumi.Output<string | undefined>;
     /**
      * Software version
      */
-    public readonly softwareVersion!: pulumi.Output<string | undefined>;
+    declare public readonly softwareVersion: pulumi.Output<string | undefined>;
     /**
-     * Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      */
-    public readonly tacacsConnectModeOptions!: pulumi.Output<string | undefined>;
+    declare public readonly tacacsConnectModeOptions: pulumi.Output<string | undefined>;
     /**
      * Shared secret
      */
-    public readonly tacacsSharedSecret!: pulumi.Output<string | undefined>;
+    declare public readonly tacacsSharedSecret: pulumi.Output<string | undefined>;
     /**
      * CoA source host
      */
-    public readonly trustsecCoaSourceHost!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecCoaSourceHost: pulumi.Output<string | undefined>;
     /**
      * TrustSec device ID
      */
-    public readonly trustsecDeviceId!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecDeviceId: pulumi.Output<string | undefined>;
     /**
      * TrustSec device password
      */
-    public readonly trustsecDevicePassword!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecDevicePassword: pulumi.Output<string | undefined>;
     /**
      * Download environment data every X seconds
      */
-    public readonly trustsecDownloadEnvironmentDataEveryXSeconds!: pulumi.Output<number | undefined>;
+    declare public readonly trustsecDownloadEnvironmentDataEveryXSeconds: pulumi.Output<number | undefined>;
     /**
      * Download peer authorization policy every X seconds
      */
-    public readonly trustsecDownloadPeerAuthorizationPolicyEveryXSeconds!: pulumi.Output<number | undefined>;
+    declare public readonly trustsecDownloadPeerAuthorizationPolicyEveryXSeconds: pulumi.Output<number | undefined>;
     /**
      * Download SGACL lists every X seconds
      */
-    public readonly trustsecDownloadSgaclListsEveryXSeconds!: pulumi.Output<number | undefined>;
+    declare public readonly trustsecDownloadSgaclListsEveryXSeconds: pulumi.Output<number | undefined>;
     /**
      * Enable mode password
      */
-    public readonly trustsecEnableModePassword!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecEnableModePassword: pulumi.Output<string | undefined>;
     /**
      * EXEC mode password
      */
-    public readonly trustsecExecModePassword!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecExecModePassword: pulumi.Output<string | undefined>;
     /**
      * EXEC mode username
      */
-    public readonly trustsecExecModeUsername!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecExecModeUsername: pulumi.Output<string | undefined>;
     /**
      * Include this device when deploying Security Group Tag Mapping Updates
      */
-    public readonly trustsecIncludeWhenDeployingSgtUpdates!: pulumi.Output<boolean | undefined>;
+    declare public readonly trustsecIncludeWhenDeployingSgtUpdates: pulumi.Output<boolean | undefined>;
     /**
      * Other TrustSec devices to trust this device
      */
-    public readonly trustsecOtherSgaDevicesToTrustThisDevice!: pulumi.Output<boolean | undefined>;
+    declare public readonly trustsecOtherSgaDevicesToTrustThisDevice: pulumi.Output<boolean | undefined>;
     /**
      * Re-authenticate every X seconds
      */
-    public readonly trustsecReAuthenticationEveryXSeconds!: pulumi.Output<number | undefined>;
+    declare public readonly trustsecReAuthenticationEveryXSeconds: pulumi.Output<number | undefined>;
     /**
      * REST API password
      */
-    public readonly trustsecRestApiPassword!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecRestApiPassword: pulumi.Output<string | undefined>;
     /**
      * REST API username
      */
-    public readonly trustsecRestApiUsername!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecRestApiUsername: pulumi.Output<string | undefined>;
     /**
      * Send configuration to device
      */
-    public readonly trustsecSendConfigurationToDevice!: pulumi.Output<boolean | undefined>;
+    declare public readonly trustsecSendConfigurationToDevice: pulumi.Output<boolean | undefined>;
     /**
-     * Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      */
-    public readonly trustsecSendConfigurationToDeviceUsing!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecSendConfigurationToDeviceUsing: pulumi.Output<string | undefined>;
 
     /**
      * Create a Device resource with the given unique name, arguments, and options.
@@ -279,95 +287,95 @@ export class Device extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DeviceState | undefined;
-            resourceInputs["authenticationDtlsRequired"] = state ? state.authenticationDtlsRequired : undefined;
-            resourceInputs["authenticationEnableKeyWrap"] = state ? state.authenticationEnableKeyWrap : undefined;
-            resourceInputs["authenticationEnableMultiSecret"] = state ? state.authenticationEnableMultiSecret : undefined;
-            resourceInputs["authenticationEncryptionKey"] = state ? state.authenticationEncryptionKey : undefined;
-            resourceInputs["authenticationEncryptionKeyFormat"] = state ? state.authenticationEncryptionKeyFormat : undefined;
-            resourceInputs["authenticationMessageAuthenticatorCodeKey"] = state ? state.authenticationMessageAuthenticatorCodeKey : undefined;
-            resourceInputs["authenticationNetworkProtocol"] = state ? state.authenticationNetworkProtocol : undefined;
-            resourceInputs["authenticationRadiusSharedSecret"] = state ? state.authenticationRadiusSharedSecret : undefined;
-            resourceInputs["authenticationSecondRadiusSharedSecret"] = state ? state.authenticationSecondRadiusSharedSecret : undefined;
-            resourceInputs["coaPort"] = state ? state.coaPort : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dtlsDnsName"] = state ? state.dtlsDnsName : undefined;
-            resourceInputs["ips"] = state ? state.ips : undefined;
-            resourceInputs["modelName"] = state ? state.modelName : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkDeviceGroups"] = state ? state.networkDeviceGroups : undefined;
-            resourceInputs["profileName"] = state ? state.profileName : undefined;
-            resourceInputs["snmpLinkTrapQuery"] = state ? state.snmpLinkTrapQuery : undefined;
-            resourceInputs["snmpMacTrapQuery"] = state ? state.snmpMacTrapQuery : undefined;
-            resourceInputs["snmpOriginatingPolicyServiceNode"] = state ? state.snmpOriginatingPolicyServiceNode : undefined;
-            resourceInputs["snmpPollingInterval"] = state ? state.snmpPollingInterval : undefined;
-            resourceInputs["snmpRoCommunity"] = state ? state.snmpRoCommunity : undefined;
-            resourceInputs["snmpVersion"] = state ? state.snmpVersion : undefined;
-            resourceInputs["softwareVersion"] = state ? state.softwareVersion : undefined;
-            resourceInputs["tacacsConnectModeOptions"] = state ? state.tacacsConnectModeOptions : undefined;
-            resourceInputs["tacacsSharedSecret"] = state ? state.tacacsSharedSecret : undefined;
-            resourceInputs["trustsecCoaSourceHost"] = state ? state.trustsecCoaSourceHost : undefined;
-            resourceInputs["trustsecDeviceId"] = state ? state.trustsecDeviceId : undefined;
-            resourceInputs["trustsecDevicePassword"] = state ? state.trustsecDevicePassword : undefined;
-            resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = state ? state.trustsecDownloadEnvironmentDataEveryXSeconds : undefined;
-            resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = state ? state.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds : undefined;
-            resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = state ? state.trustsecDownloadSgaclListsEveryXSeconds : undefined;
-            resourceInputs["trustsecEnableModePassword"] = state ? state.trustsecEnableModePassword : undefined;
-            resourceInputs["trustsecExecModePassword"] = state ? state.trustsecExecModePassword : undefined;
-            resourceInputs["trustsecExecModeUsername"] = state ? state.trustsecExecModeUsername : undefined;
-            resourceInputs["trustsecIncludeWhenDeployingSgtUpdates"] = state ? state.trustsecIncludeWhenDeployingSgtUpdates : undefined;
-            resourceInputs["trustsecOtherSgaDevicesToTrustThisDevice"] = state ? state.trustsecOtherSgaDevicesToTrustThisDevice : undefined;
-            resourceInputs["trustsecReAuthenticationEveryXSeconds"] = state ? state.trustsecReAuthenticationEveryXSeconds : undefined;
-            resourceInputs["trustsecRestApiPassword"] = state ? state.trustsecRestApiPassword : undefined;
-            resourceInputs["trustsecRestApiUsername"] = state ? state.trustsecRestApiUsername : undefined;
-            resourceInputs["trustsecSendConfigurationToDevice"] = state ? state.trustsecSendConfigurationToDevice : undefined;
-            resourceInputs["trustsecSendConfigurationToDeviceUsing"] = state ? state.trustsecSendConfigurationToDeviceUsing : undefined;
+            resourceInputs["authenticationDtlsRequired"] = state?.authenticationDtlsRequired;
+            resourceInputs["authenticationEnableKeyWrap"] = state?.authenticationEnableKeyWrap;
+            resourceInputs["authenticationEnableMultiSecret"] = state?.authenticationEnableMultiSecret;
+            resourceInputs["authenticationEncryptionKey"] = state?.authenticationEncryptionKey;
+            resourceInputs["authenticationEncryptionKeyFormat"] = state?.authenticationEncryptionKeyFormat;
+            resourceInputs["authenticationMessageAuthenticatorCodeKey"] = state?.authenticationMessageAuthenticatorCodeKey;
+            resourceInputs["authenticationNetworkProtocol"] = state?.authenticationNetworkProtocol;
+            resourceInputs["authenticationRadiusSharedSecret"] = state?.authenticationRadiusSharedSecret;
+            resourceInputs["authenticationSecondRadiusSharedSecret"] = state?.authenticationSecondRadiusSharedSecret;
+            resourceInputs["coaPort"] = state?.coaPort;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dtlsDnsName"] = state?.dtlsDnsName;
+            resourceInputs["ips"] = state?.ips;
+            resourceInputs["modelName"] = state?.modelName;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkDeviceGroups"] = state?.networkDeviceGroups;
+            resourceInputs["profileName"] = state?.profileName;
+            resourceInputs["snmpLinkTrapQuery"] = state?.snmpLinkTrapQuery;
+            resourceInputs["snmpMacTrapQuery"] = state?.snmpMacTrapQuery;
+            resourceInputs["snmpOriginatingPolicyServiceNode"] = state?.snmpOriginatingPolicyServiceNode;
+            resourceInputs["snmpPollingInterval"] = state?.snmpPollingInterval;
+            resourceInputs["snmpRoCommunity"] = state?.snmpRoCommunity;
+            resourceInputs["snmpVersion"] = state?.snmpVersion;
+            resourceInputs["softwareVersion"] = state?.softwareVersion;
+            resourceInputs["tacacsConnectModeOptions"] = state?.tacacsConnectModeOptions;
+            resourceInputs["tacacsSharedSecret"] = state?.tacacsSharedSecret;
+            resourceInputs["trustsecCoaSourceHost"] = state?.trustsecCoaSourceHost;
+            resourceInputs["trustsecDeviceId"] = state?.trustsecDeviceId;
+            resourceInputs["trustsecDevicePassword"] = state?.trustsecDevicePassword;
+            resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = state?.trustsecDownloadEnvironmentDataEveryXSeconds;
+            resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = state?.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
+            resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = state?.trustsecDownloadSgaclListsEveryXSeconds;
+            resourceInputs["trustsecEnableModePassword"] = state?.trustsecEnableModePassword;
+            resourceInputs["trustsecExecModePassword"] = state?.trustsecExecModePassword;
+            resourceInputs["trustsecExecModeUsername"] = state?.trustsecExecModeUsername;
+            resourceInputs["trustsecIncludeWhenDeployingSgtUpdates"] = state?.trustsecIncludeWhenDeployingSgtUpdates;
+            resourceInputs["trustsecOtherSgaDevicesToTrustThisDevice"] = state?.trustsecOtherSgaDevicesToTrustThisDevice;
+            resourceInputs["trustsecReAuthenticationEveryXSeconds"] = state?.trustsecReAuthenticationEveryXSeconds;
+            resourceInputs["trustsecRestApiPassword"] = state?.trustsecRestApiPassword;
+            resourceInputs["trustsecRestApiUsername"] = state?.trustsecRestApiUsername;
+            resourceInputs["trustsecSendConfigurationToDevice"] = state?.trustsecSendConfigurationToDevice;
+            resourceInputs["trustsecSendConfigurationToDeviceUsing"] = state?.trustsecSendConfigurationToDeviceUsing;
         } else {
             const args = argsOrState as DeviceArgs | undefined;
-            if ((!args || args.ips === undefined) && !opts.urn) {
+            if (args?.ips === undefined && !opts.urn) {
                 throw new Error("Missing required property 'ips'");
             }
-            resourceInputs["authenticationDtlsRequired"] = args ? args.authenticationDtlsRequired : undefined;
-            resourceInputs["authenticationEnableKeyWrap"] = args ? args.authenticationEnableKeyWrap : undefined;
-            resourceInputs["authenticationEnableMultiSecret"] = args ? args.authenticationEnableMultiSecret : undefined;
-            resourceInputs["authenticationEncryptionKey"] = args ? args.authenticationEncryptionKey : undefined;
-            resourceInputs["authenticationEncryptionKeyFormat"] = args ? args.authenticationEncryptionKeyFormat : undefined;
-            resourceInputs["authenticationMessageAuthenticatorCodeKey"] = args ? args.authenticationMessageAuthenticatorCodeKey : undefined;
-            resourceInputs["authenticationNetworkProtocol"] = args ? args.authenticationNetworkProtocol : undefined;
-            resourceInputs["authenticationRadiusSharedSecret"] = args ? args.authenticationRadiusSharedSecret : undefined;
-            resourceInputs["authenticationSecondRadiusSharedSecret"] = args ? args.authenticationSecondRadiusSharedSecret : undefined;
-            resourceInputs["coaPort"] = args ? args.coaPort : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dtlsDnsName"] = args ? args.dtlsDnsName : undefined;
-            resourceInputs["ips"] = args ? args.ips : undefined;
-            resourceInputs["modelName"] = args ? args.modelName : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkDeviceGroups"] = args ? args.networkDeviceGroups : undefined;
-            resourceInputs["profileName"] = args ? args.profileName : undefined;
-            resourceInputs["snmpLinkTrapQuery"] = args ? args.snmpLinkTrapQuery : undefined;
-            resourceInputs["snmpMacTrapQuery"] = args ? args.snmpMacTrapQuery : undefined;
-            resourceInputs["snmpOriginatingPolicyServiceNode"] = args ? args.snmpOriginatingPolicyServiceNode : undefined;
-            resourceInputs["snmpPollingInterval"] = args ? args.snmpPollingInterval : undefined;
-            resourceInputs["snmpRoCommunity"] = args ? args.snmpRoCommunity : undefined;
-            resourceInputs["snmpVersion"] = args ? args.snmpVersion : undefined;
-            resourceInputs["softwareVersion"] = args ? args.softwareVersion : undefined;
-            resourceInputs["tacacsConnectModeOptions"] = args ? args.tacacsConnectModeOptions : undefined;
-            resourceInputs["tacacsSharedSecret"] = args ? args.tacacsSharedSecret : undefined;
-            resourceInputs["trustsecCoaSourceHost"] = args ? args.trustsecCoaSourceHost : undefined;
-            resourceInputs["trustsecDeviceId"] = args ? args.trustsecDeviceId : undefined;
-            resourceInputs["trustsecDevicePassword"] = args ? args.trustsecDevicePassword : undefined;
-            resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = args ? args.trustsecDownloadEnvironmentDataEveryXSeconds : undefined;
-            resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = args ? args.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds : undefined;
-            resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = args ? args.trustsecDownloadSgaclListsEveryXSeconds : undefined;
-            resourceInputs["trustsecEnableModePassword"] = args ? args.trustsecEnableModePassword : undefined;
-            resourceInputs["trustsecExecModePassword"] = args ? args.trustsecExecModePassword : undefined;
-            resourceInputs["trustsecExecModeUsername"] = args ? args.trustsecExecModeUsername : undefined;
-            resourceInputs["trustsecIncludeWhenDeployingSgtUpdates"] = args ? args.trustsecIncludeWhenDeployingSgtUpdates : undefined;
-            resourceInputs["trustsecOtherSgaDevicesToTrustThisDevice"] = args ? args.trustsecOtherSgaDevicesToTrustThisDevice : undefined;
-            resourceInputs["trustsecReAuthenticationEveryXSeconds"] = args ? args.trustsecReAuthenticationEveryXSeconds : undefined;
-            resourceInputs["trustsecRestApiPassword"] = args ? args.trustsecRestApiPassword : undefined;
-            resourceInputs["trustsecRestApiUsername"] = args ? args.trustsecRestApiUsername : undefined;
-            resourceInputs["trustsecSendConfigurationToDevice"] = args ? args.trustsecSendConfigurationToDevice : undefined;
-            resourceInputs["trustsecSendConfigurationToDeviceUsing"] = args ? args.trustsecSendConfigurationToDeviceUsing : undefined;
+            resourceInputs["authenticationDtlsRequired"] = args?.authenticationDtlsRequired;
+            resourceInputs["authenticationEnableKeyWrap"] = args?.authenticationEnableKeyWrap;
+            resourceInputs["authenticationEnableMultiSecret"] = args?.authenticationEnableMultiSecret;
+            resourceInputs["authenticationEncryptionKey"] = args?.authenticationEncryptionKey;
+            resourceInputs["authenticationEncryptionKeyFormat"] = args?.authenticationEncryptionKeyFormat;
+            resourceInputs["authenticationMessageAuthenticatorCodeKey"] = args?.authenticationMessageAuthenticatorCodeKey;
+            resourceInputs["authenticationNetworkProtocol"] = args?.authenticationNetworkProtocol;
+            resourceInputs["authenticationRadiusSharedSecret"] = args?.authenticationRadiusSharedSecret;
+            resourceInputs["authenticationSecondRadiusSharedSecret"] = args?.authenticationSecondRadiusSharedSecret;
+            resourceInputs["coaPort"] = args?.coaPort;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dtlsDnsName"] = args?.dtlsDnsName;
+            resourceInputs["ips"] = args?.ips;
+            resourceInputs["modelName"] = args?.modelName;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkDeviceGroups"] = args?.networkDeviceGroups;
+            resourceInputs["profileName"] = args?.profileName;
+            resourceInputs["snmpLinkTrapQuery"] = args?.snmpLinkTrapQuery;
+            resourceInputs["snmpMacTrapQuery"] = args?.snmpMacTrapQuery;
+            resourceInputs["snmpOriginatingPolicyServiceNode"] = args?.snmpOriginatingPolicyServiceNode;
+            resourceInputs["snmpPollingInterval"] = args?.snmpPollingInterval;
+            resourceInputs["snmpRoCommunity"] = args?.snmpRoCommunity;
+            resourceInputs["snmpVersion"] = args?.snmpVersion;
+            resourceInputs["softwareVersion"] = args?.softwareVersion;
+            resourceInputs["tacacsConnectModeOptions"] = args?.tacacsConnectModeOptions;
+            resourceInputs["tacacsSharedSecret"] = args?.tacacsSharedSecret;
+            resourceInputs["trustsecCoaSourceHost"] = args?.trustsecCoaSourceHost;
+            resourceInputs["trustsecDeviceId"] = args?.trustsecDeviceId;
+            resourceInputs["trustsecDevicePassword"] = args?.trustsecDevicePassword;
+            resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = args?.trustsecDownloadEnvironmentDataEveryXSeconds;
+            resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = args?.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
+            resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = args?.trustsecDownloadSgaclListsEveryXSeconds;
+            resourceInputs["trustsecEnableModePassword"] = args?.trustsecEnableModePassword;
+            resourceInputs["trustsecExecModePassword"] = args?.trustsecExecModePassword;
+            resourceInputs["trustsecExecModeUsername"] = args?.trustsecExecModeUsername;
+            resourceInputs["trustsecIncludeWhenDeployingSgtUpdates"] = args?.trustsecIncludeWhenDeployingSgtUpdates;
+            resourceInputs["trustsecOtherSgaDevicesToTrustThisDevice"] = args?.trustsecOtherSgaDevicesToTrustThisDevice;
+            resourceInputs["trustsecReAuthenticationEveryXSeconds"] = args?.trustsecReAuthenticationEveryXSeconds;
+            resourceInputs["trustsecRestApiPassword"] = args?.trustsecRestApiPassword;
+            resourceInputs["trustsecRestApiUsername"] = args?.trustsecRestApiUsername;
+            resourceInputs["trustsecSendConfigurationToDevice"] = args?.trustsecSendConfigurationToDevice;
+            resourceInputs["trustsecSendConfigurationToDeviceUsing"] = args?.trustsecSendConfigurationToDeviceUsing;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Device.__pulumiType, name, resourceInputs, opts);
@@ -395,7 +403,8 @@ export interface DeviceState {
      */
     authenticationEncryptionKey?: pulumi.Input<string>;
     /**
-     * Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      */
     authenticationEncryptionKeyFormat?: pulumi.Input<string>;
     /**
@@ -403,7 +412,8 @@ export interface DeviceState {
      */
     authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string>;
     /**
-     * Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      */
     authenticationNetworkProtocol?: pulumi.Input<string>;
     /**
@@ -415,7 +425,8 @@ export interface DeviceState {
      */
     authenticationSecondRadiusSharedSecret?: pulumi.Input<string>;
     /**
-     * CoA port - Default value: `1700`
+     * CoA port
+     *   - Default value: `1700`
      */
     coaPort?: pulumi.Input<number>;
     /**
@@ -443,7 +454,8 @@ export interface DeviceState {
      */
     networkDeviceGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Profile name - Default value: `Cisco`
+     * Profile name
+     *   - Default value: `Cisco`
      */
     profileName?: pulumi.Input<string>;
     /**
@@ -459,7 +471,8 @@ export interface DeviceState {
      */
     snmpOriginatingPolicyServiceNode?: pulumi.Input<string>;
     /**
-     * SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      */
     snmpPollingInterval?: pulumi.Input<number>;
     /**
@@ -467,7 +480,8 @@ export interface DeviceState {
      */
     snmpRoCommunity?: pulumi.Input<string>;
     /**
-     * SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      */
     snmpVersion?: pulumi.Input<string>;
     /**
@@ -475,7 +489,8 @@ export interface DeviceState {
      */
     softwareVersion?: pulumi.Input<string>;
     /**
-     * Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      */
     tacacsConnectModeOptions?: pulumi.Input<string>;
     /**
@@ -543,7 +558,8 @@ export interface DeviceState {
      */
     trustsecSendConfigurationToDevice?: pulumi.Input<boolean>;
     /**
-     * Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      */
     trustsecSendConfigurationToDeviceUsing?: pulumi.Input<string>;
 }
@@ -569,7 +585,8 @@ export interface DeviceArgs {
      */
     authenticationEncryptionKey?: pulumi.Input<string>;
     /**
-     * Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      */
     authenticationEncryptionKeyFormat?: pulumi.Input<string>;
     /**
@@ -577,7 +594,8 @@ export interface DeviceArgs {
      */
     authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string>;
     /**
-     * Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      */
     authenticationNetworkProtocol?: pulumi.Input<string>;
     /**
@@ -589,7 +607,8 @@ export interface DeviceArgs {
      */
     authenticationSecondRadiusSharedSecret?: pulumi.Input<string>;
     /**
-     * CoA port - Default value: `1700`
+     * CoA port
+     *   - Default value: `1700`
      */
     coaPort?: pulumi.Input<number>;
     /**
@@ -617,7 +636,8 @@ export interface DeviceArgs {
      */
     networkDeviceGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Profile name - Default value: `Cisco`
+     * Profile name
+     *   - Default value: `Cisco`
      */
     profileName?: pulumi.Input<string>;
     /**
@@ -633,7 +653,8 @@ export interface DeviceArgs {
      */
     snmpOriginatingPolicyServiceNode?: pulumi.Input<string>;
     /**
-     * SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      */
     snmpPollingInterval?: pulumi.Input<number>;
     /**
@@ -641,7 +662,8 @@ export interface DeviceArgs {
      */
     snmpRoCommunity?: pulumi.Input<string>;
     /**
-     * SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      */
     snmpVersion?: pulumi.Input<string>;
     /**
@@ -649,7 +671,8 @@ export interface DeviceArgs {
      */
     softwareVersion?: pulumi.Input<string>;
     /**
-     * Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      */
     tacacsConnectModeOptions?: pulumi.Input<string>;
     /**
@@ -717,7 +740,8 @@ export interface DeviceArgs {
      */
     trustsecSendConfigurationToDevice?: pulumi.Input<boolean>;
     /**
-     * Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      */
     trustsecSendConfigurationToDeviceUsing?: pulumi.Input<string>;
 }

@@ -78,24 +78,24 @@ type AuthenticationRule struct {
 	ConditionId pulumi.StringPtrOutput `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrOutput `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrOutput `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrOutput `pulumi:"conditionType"`
 	// Indicates if this rule is the default one
 	Default pulumi.BoolPtrOutput `pulumi:"default"`
 	// Identity source name from the identity stores
 	IdentitySourceName pulumi.StringPtrOutput `pulumi:"identitySourceName"`
-	// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-	// `DROP`, `CONTINUE`
+	// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfAuthFail pulumi.StringOutput `pulumi:"ifAuthFail"`
-	// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when ISE is unable to access the identity database
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfProcessFail pulumi.StringOutput `pulumi:"ifProcessFail"`
-	// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when user is not found in any of identity stores
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfUserNotFound pulumi.StringOutput `pulumi:"ifUserNotFound"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -103,7 +103,8 @@ type AuthenticationRule struct {
 	PolicySetId pulumi.StringOutput `pulumi:"policySetId"`
 	// The rank (priority) in relation to other rules. Lower rank is higher priority.
 	Rank pulumi.IntPtrOutput `pulumi:"rank"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrOutput `pulumi:"state"`
 }
 
@@ -163,24 +164,24 @@ type authenticationRuleState struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Indicates if this rule is the default one
 	Default *bool `pulumi:"default"`
 	// Identity source name from the identity stores
 	IdentitySourceName *string `pulumi:"identitySourceName"`
-	// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-	// `DROP`, `CONTINUE`
+	// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfAuthFail *string `pulumi:"ifAuthFail"`
-	// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when ISE is unable to access the identity database
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfProcessFail *string `pulumi:"ifProcessFail"`
-	// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when user is not found in any of identity stores
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfUserNotFound *string `pulumi:"ifUserNotFound"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
@@ -188,7 +189,8 @@ type authenticationRuleState struct {
 	PolicySetId *string `pulumi:"policySetId"`
 	// The rank (priority) in relation to other rules. Lower rank is higher priority.
 	Rank *int `pulumi:"rank"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -207,24 +209,24 @@ type AuthenticationRuleState struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Indicates if this rule is the default one
 	Default pulumi.BoolPtrInput
 	// Identity source name from the identity stores
 	IdentitySourceName pulumi.StringPtrInput
-	// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-	// `DROP`, `CONTINUE`
+	// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfAuthFail pulumi.StringPtrInput
-	// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when ISE is unable to access the identity database
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfProcessFail pulumi.StringPtrInput
-	// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when user is not found in any of identity stores
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfUserNotFound pulumi.StringPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
@@ -232,7 +234,8 @@ type AuthenticationRuleState struct {
 	PolicySetId pulumi.StringPtrInput
 	// The rank (priority) in relation to other rules. Lower rank is higher priority.
 	Rank pulumi.IntPtrInput
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -255,24 +258,24 @@ type authenticationRuleArgs struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Indicates if this rule is the default one
 	Default *bool `pulumi:"default"`
 	// Identity source name from the identity stores
 	IdentitySourceName *string `pulumi:"identitySourceName"`
-	// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-	// `DROP`, `CONTINUE`
+	// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfAuthFail string `pulumi:"ifAuthFail"`
-	// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when ISE is unable to access the identity database
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfProcessFail string `pulumi:"ifProcessFail"`
-	// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when user is not found in any of identity stores
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfUserNotFound string `pulumi:"ifUserNotFound"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
@@ -280,7 +283,8 @@ type authenticationRuleArgs struct {
 	PolicySetId string `pulumi:"policySetId"`
 	// The rank (priority) in relation to other rules. Lower rank is higher priority.
 	Rank *int `pulumi:"rank"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -300,24 +304,24 @@ type AuthenticationRuleArgs struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Indicates if this rule is the default one
 	Default pulumi.BoolPtrInput
 	// Identity source name from the identity stores
 	IdentitySourceName pulumi.StringPtrInput
-	// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-	// `DROP`, `CONTINUE`
+	// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfAuthFail pulumi.StringInput
-	// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when ISE is unable to access the identity database
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfProcessFail pulumi.StringInput
-	// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+	// Action to perform when user is not found in any of identity stores
+	//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 	IfUserNotFound pulumi.StringInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
@@ -325,7 +329,8 @@ type AuthenticationRuleArgs struct {
 	PolicySetId pulumi.StringInput
 	// The rank (priority) in relation to other rules. Lower rank is higher priority.
 	Rank pulumi.IntPtrInput
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -451,16 +456,14 @@ func (o AuthenticationRuleOutput) ConditionIsNegate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.BoolPtrOutput { return v.ConditionIsNegate }).(pulumi.BoolPtrOutput)
 }
 
-// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 func (o AuthenticationRuleOutput) ConditionOperator() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.ConditionOperator }).(pulumi.StringPtrOutput)
 }
 
-// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-// `ConditionOrBlock`, `ConditionReference`
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 func (o AuthenticationRuleOutput) ConditionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.ConditionType }).(pulumi.StringPtrOutput)
 }
@@ -475,18 +478,20 @@ func (o AuthenticationRuleOutput) IdentitySourceName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.IdentitySourceName }).(pulumi.StringPtrOutput)
 }
 
-// Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-// `DROP`, `CONTINUE`
+// Action to perform when authentication fails such as Bad credentials, disabled user and so on
+//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 func (o AuthenticationRuleOutput) IfAuthFail() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.IfAuthFail }).(pulumi.StringOutput)
 }
 
-// Action to perform when ISE is unable to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+// Action to perform when ISE is unable to access the identity database
+//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 func (o AuthenticationRuleOutput) IfProcessFail() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.IfProcessFail }).(pulumi.StringOutput)
 }
 
-// Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+// Action to perform when user is not found in any of identity stores
+//   - Choices: `REJECT`, `DROP`, `CONTINUE`
 func (o AuthenticationRuleOutput) IfUserNotFound() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.IfUserNotFound }).(pulumi.StringOutput)
 }
@@ -506,7 +511,8 @@ func (o AuthenticationRuleOutput) Rank() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.IntPtrOutput { return v.Rank }).(pulumi.IntPtrOutput)
 }
 
-// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+// The state that the rule is in. A disabled rule cannot be matched.
+//   - Choices: `disabled`, `enabled`, `monitor`
 func (o AuthenticationRuleOutput) State() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.State }).(pulumi.StringPtrOutput)
 }

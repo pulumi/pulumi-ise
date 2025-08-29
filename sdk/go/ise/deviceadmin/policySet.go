@@ -75,13 +75,11 @@ type PolicySet struct {
 	ConditionId pulumi.StringPtrOutput `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrOutput `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrOutput `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrOutput `pulumi:"conditionType"`
 	// Indicates if this policy set is the default one
 	Default pulumi.BoolPtrOutput `pulumi:"default"`
@@ -95,8 +93,8 @@ type PolicySet struct {
 	Rank pulumi.IntPtrOutput `pulumi:"rank"`
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName pulumi.StringOutput `pulumi:"serviceName"`
-	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-	// `monitor`
+	// The state that the policy set is in. A disabled policy set cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrOutput `pulumi:"state"`
 }
 
@@ -147,13 +145,11 @@ type policySetState struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Indicates if this policy set is the default one
 	Default *bool `pulumi:"default"`
@@ -167,8 +163,8 @@ type policySetState struct {
 	Rank *int `pulumi:"rank"`
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName *string `pulumi:"serviceName"`
-	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-	// `monitor`
+	// The state that the policy set is in. A disabled policy set cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -187,13 +183,11 @@ type PolicySetState struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Indicates if this policy set is the default one
 	Default pulumi.BoolPtrInput
@@ -207,8 +201,8 @@ type PolicySetState struct {
 	Rank pulumi.IntPtrInput
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName pulumi.StringPtrInput
-	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-	// `monitor`
+	// The state that the policy set is in. A disabled policy set cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -231,13 +225,11 @@ type policySetArgs struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Indicates if this policy set is the default one
 	Default *bool `pulumi:"default"`
@@ -251,8 +243,8 @@ type policySetArgs struct {
 	Rank *int `pulumi:"rank"`
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName string `pulumi:"serviceName"`
-	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-	// `monitor`
+	// The state that the policy set is in. A disabled policy set cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -272,13 +264,11 @@ type PolicySetArgs struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Indicates if this policy set is the default one
 	Default pulumi.BoolPtrInput
@@ -292,8 +282,8 @@ type PolicySetArgs struct {
 	Rank pulumi.IntPtrInput
 	// Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
 	ServiceName pulumi.StringInput
-	// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-	// `monitor`
+	// The state that the policy set is in. A disabled policy set cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -419,16 +409,14 @@ func (o PolicySetOutput) ConditionIsNegate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *PolicySet) pulumi.BoolPtrOutput { return v.ConditionIsNegate }).(pulumi.BoolPtrOutput)
 }
 
-// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 func (o PolicySetOutput) ConditionOperator() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicySet) pulumi.StringPtrOutput { return v.ConditionOperator }).(pulumi.StringPtrOutput)
 }
 
-// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-// `ConditionOrBlock`, `ConditionReference`
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 func (o PolicySetOutput) ConditionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicySet) pulumi.StringPtrOutput { return v.ConditionType }).(pulumi.StringPtrOutput)
 }
@@ -463,8 +451,8 @@ func (o PolicySetOutput) ServiceName() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicySet) pulumi.StringOutput { return v.ServiceName }).(pulumi.StringOutput)
 }
 
-// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-// `monitor`
+// The state that the policy set is in. A disabled policy set cannot be matched.
+//   - Choices: `disabled`, `enabled`, `monitor`
 func (o PolicySetOutput) State() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicySet) pulumi.StringPtrOutput { return v.State }).(pulumi.StringPtrOutput)
 }

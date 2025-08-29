@@ -54,7 +54,8 @@ type IpToSgtMapping struct {
 
 	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrOutput `pulumi:"deployTo"`
-	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+	// Deploy Type
+	//   - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrOutput `pulumi:"deployType"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -102,7 +103,8 @@ func GetIpToSgtMapping(ctx *pulumi.Context,
 type ipToSgtMappingState struct {
 	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`
-	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+	// Deploy Type
+	//   - Choices: `ALL`, `ND`, `NDG`
 	DeployType *string `pulumi:"deployType"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -121,7 +123,8 @@ type ipToSgtMappingState struct {
 type IpToSgtMappingState struct {
 	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrInput
-	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+	// Deploy Type
+	//   - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -144,7 +147,8 @@ func (IpToSgtMappingState) ElementType() reflect.Type {
 type ipToSgtMappingArgs struct {
 	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`
-	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+	// Deploy Type
+	//   - Choices: `ALL`, `ND`, `NDG`
 	DeployType *string `pulumi:"deployType"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -164,7 +168,8 @@ type ipToSgtMappingArgs struct {
 type IpToSgtMappingArgs struct {
 	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo pulumi.StringPtrInput
-	// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+	// Deploy Type
+	//   - Choices: `ALL`, `ND`, `NDG`
 	DeployType pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -272,7 +277,8 @@ func (o IpToSgtMappingOutput) DeployTo() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.DeployTo }).(pulumi.StringPtrOutput)
 }
 
-// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+// Deploy Type
+//   - Choices: `ALL`, `ND`, `NDG`
 func (o IpToSgtMappingOutput) DeployType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpToSgtMapping) pulumi.StringPtrOutput { return v.DeployType }).(pulumi.StringPtrOutput)
 }

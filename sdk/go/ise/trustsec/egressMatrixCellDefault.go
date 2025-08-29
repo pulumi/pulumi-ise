@@ -51,11 +51,14 @@ import (
 type EgressMatrixCellDefault struct {
 	pulumi.CustomResourceState
 
-	// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	// Can be used only if sgacls not specified. Final Catch All Rule
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
 	DefaultRule pulumi.StringPtrOutput `pulumi:"defaultRule"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringOutput `pulumi:"matrixCellStatus"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayOutput `pulumi:"sgacls"`
@@ -91,22 +94,28 @@ func GetEgressMatrixCellDefault(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering EgressMatrixCellDefault resources.
 type egressMatrixCellDefaultState struct {
-	// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	// Can be used only if sgacls not specified. Final Catch All Rule
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
 	DefaultRule *string `pulumi:"defaultRule"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus *string `pulumi:"matrixCellStatus"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
 }
 
 type EgressMatrixCellDefaultState struct {
-	// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	// Can be used only if sgacls not specified. Final Catch All Rule
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
 	DefaultRule pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringPtrInput
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayInput
@@ -117,11 +126,14 @@ func (EgressMatrixCellDefaultState) ElementType() reflect.Type {
 }
 
 type egressMatrixCellDefaultArgs struct {
-	// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	// Can be used only if sgacls not specified. Final Catch All Rule
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
 	DefaultRule *string `pulumi:"defaultRule"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus *string `pulumi:"matrixCellStatus"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
@@ -129,11 +141,14 @@ type egressMatrixCellDefaultArgs struct {
 
 // The set of arguments for constructing a EgressMatrixCellDefault resource.
 type EgressMatrixCellDefaultArgs struct {
-	// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	// Can be used only if sgacls not specified. Final Catch All Rule
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
 	DefaultRule pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringPtrInput
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayInput
@@ -226,7 +241,8 @@ func (o EgressMatrixCellDefaultOutput) ToEgressMatrixCellDefaultOutputWithContex
 	return o
 }
 
-// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+// Can be used only if sgacls not specified. Final Catch All Rule
+//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
 func (o EgressMatrixCellDefaultOutput) DefaultRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EgressMatrixCellDefault) pulumi.StringPtrOutput { return v.DefaultRule }).(pulumi.StringPtrOutput)
 }
@@ -236,7 +252,9 @@ func (o EgressMatrixCellDefaultOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EgressMatrixCellDefault) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+// Matrix Cell Status
+//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+//   - Default value: `DISABLED`
 func (o EgressMatrixCellDefaultOutput) MatrixCellStatus() pulumi.StringOutput {
 	return o.ApplyT(func(v *EgressMatrixCellDefault) pulumi.StringOutput { return v.MatrixCellStatus }).(pulumi.StringOutput)
 }

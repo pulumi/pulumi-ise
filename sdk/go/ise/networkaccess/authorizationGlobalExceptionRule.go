@@ -75,13 +75,11 @@ type AuthorizationGlobalExceptionRule struct {
 	ConditionId pulumi.StringPtrOutput `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrOutput `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrOutput `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrOutput `pulumi:"conditionType"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -91,7 +89,8 @@ type AuthorizationGlobalExceptionRule struct {
 	Rank pulumi.IntPtrOutput `pulumi:"rank"`
 	// Security group used in authorization policies
 	SecurityGroup pulumi.StringPtrOutput `pulumi:"securityGroup"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrOutput `pulumi:"state"`
 }
 
@@ -139,13 +138,11 @@ type authorizationGlobalExceptionRuleState struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
@@ -155,7 +152,8 @@ type authorizationGlobalExceptionRuleState struct {
 	Rank *int `pulumi:"rank"`
 	// Security group used in authorization policies
 	SecurityGroup *string `pulumi:"securityGroup"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -174,13 +172,11 @@ type AuthorizationGlobalExceptionRuleState struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
@@ -190,7 +186,8 @@ type AuthorizationGlobalExceptionRuleState struct {
 	Rank pulumi.IntPtrInput
 	// Security group used in authorization policies
 	SecurityGroup pulumi.StringPtrInput
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -213,13 +210,11 @@ type authorizationGlobalExceptionRuleArgs struct {
 	ConditionId *string `pulumi:"conditionId"`
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate *bool `pulumi:"conditionIsNegate"`
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator *string `pulumi:"conditionOperator"`
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType *string `pulumi:"conditionType"`
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name *string `pulumi:"name"`
@@ -229,7 +224,8 @@ type authorizationGlobalExceptionRuleArgs struct {
 	Rank *int `pulumi:"rank"`
 	// Security group used in authorization policies
 	SecurityGroup *string `pulumi:"securityGroup"`
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State *string `pulumi:"state"`
 }
 
@@ -249,13 +245,11 @@ type AuthorizationGlobalExceptionRuleArgs struct {
 	ConditionId pulumi.StringPtrInput
 	// Indicates whereas this condition is in negate mode
 	ConditionIsNegate pulumi.BoolPtrInput
-	// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-	// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-	// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+	// Equality operator
+	//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 	ConditionOperator pulumi.StringPtrInput
-	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-	// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-	// `ConditionOrBlock`, `ConditionReference`
+	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+	//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 	ConditionType pulumi.StringPtrInput
 	// Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
 	Name pulumi.StringPtrInput
@@ -265,7 +259,8 @@ type AuthorizationGlobalExceptionRuleArgs struct {
 	Rank pulumi.IntPtrInput
 	// Security group used in authorization policies
 	SecurityGroup pulumi.StringPtrInput
-	// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+	// The state that the rule is in. A disabled rule cannot be matched.
+	//   - Choices: `disabled`, `enabled`, `monitor`
 	State pulumi.StringPtrInput
 }
 
@@ -393,16 +388,14 @@ func (o AuthorizationGlobalExceptionRuleOutput) ConditionIsNegate() pulumi.BoolP
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.BoolPtrOutput { return v.ConditionIsNegate }).(pulumi.BoolPtrOutput)
 }
 
-// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+// Equality operator
+//   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
 func (o AuthorizationGlobalExceptionRuleOutput) ConditionOperator() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.StringPtrOutput { return v.ConditionOperator }).(pulumi.StringPtrOutput)
 }
 
-// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-// `ConditionOrBlock`, `ConditionReference`
+// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+//   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
 func (o AuthorizationGlobalExceptionRuleOutput) ConditionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.StringPtrOutput { return v.ConditionType }).(pulumi.StringPtrOutput)
 }
@@ -427,7 +420,8 @@ func (o AuthorizationGlobalExceptionRuleOutput) SecurityGroup() pulumi.StringPtr
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.StringPtrOutput { return v.SecurityGroup }).(pulumi.StringPtrOutput)
 }
 
-// The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+// The state that the rule is in. A disabled rule cannot be matched.
+//   - Choices: `disabled`, `enabled`, `monitor`
 func (o AuthorizationGlobalExceptionRuleOutput) State() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) pulumi.StringPtrOutput { return v.State }).(pulumi.StringPtrOutput)
 }

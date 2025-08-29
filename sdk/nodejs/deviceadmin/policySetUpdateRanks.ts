@@ -49,7 +49,7 @@ export class PolicySetUpdateRanks extends pulumi.CustomResource {
         return obj['__pulumiType'] === PolicySetUpdateRanks.__pulumiType;
     }
 
-    public readonly policies!: pulumi.Output<outputs.deviceadmin.PolicySetUpdateRanksPolicy[] | undefined>;
+    declare public readonly policies: pulumi.Output<outputs.deviceadmin.PolicySetUpdateRanksPolicy[] | undefined>;
 
     /**
      * Create a PolicySetUpdateRanks resource with the given unique name, arguments, and options.
@@ -64,10 +64,10 @@ export class PolicySetUpdateRanks extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicySetUpdateRanksState | undefined;
-            resourceInputs["policies"] = state ? state.policies : undefined;
+            resourceInputs["policies"] = state?.policies;
         } else {
             const args = argsOrState as PolicySetUpdateRanksArgs | undefined;
-            resourceInputs["policies"] = args ? args.policies : undefined;
+            resourceInputs["policies"] = args?.policies;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(PolicySetUpdateRanks.__pulumiType, name, resourceInputs, opts);

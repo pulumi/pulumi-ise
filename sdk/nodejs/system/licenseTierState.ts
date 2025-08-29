@@ -60,7 +60,7 @@ export class LicenseTierState extends pulumi.CustomResource {
     /**
      * List of licenses
      */
-    public readonly licenses!: pulumi.Output<outputs.system.LicenseTierStateLicense[]>;
+    declare public readonly licenses: pulumi.Output<outputs.system.LicenseTierStateLicense[]>;
 
     /**
      * Create a LicenseTierState resource with the given unique name, arguments, and options.
@@ -75,13 +75,13 @@ export class LicenseTierState extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LicenseTierStateState | undefined;
-            resourceInputs["licenses"] = state ? state.licenses : undefined;
+            resourceInputs["licenses"] = state?.licenses;
         } else {
             const args = argsOrState as LicenseTierStateArgs | undefined;
-            if ((!args || args.licenses === undefined) && !opts.urn) {
+            if (args?.licenses === undefined && !opts.urn) {
                 throw new Error("Missing required property 'licenses'");
             }
-            resourceInputs["licenses"] = args ? args.licenses : undefined;
+            resourceInputs["licenses"] = args?.licenses;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(LicenseTierState.__pulumiType, name, resourceInputs, opts);

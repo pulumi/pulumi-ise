@@ -70,16 +70,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:identitymanagement/activeDirectoryAddGroups:ActiveDirectoryAddGroups")
 public class ActiveDirectoryAddGroups extends com.pulumi.resources.CustomResource {
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      * 
      */
     @Export(name="adScopesNames", refs={String.class}, tree="[0]")
     private Output<String> adScopesNames;
 
     /**
-     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      * 
      */
     public Output<String> adScopesNames() {

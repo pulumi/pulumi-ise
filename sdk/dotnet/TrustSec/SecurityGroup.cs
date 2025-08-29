@@ -70,7 +70,8 @@ namespace Pulumi.Ise.TrustSec
         public Output<bool?> PropogateToApic { get; private set; } = null!;
 
         /// <summary>
-        /// `-1` to auto-generate - Range: `-1`-`65519`
+        /// `-1` to auto-generate
+        ///   - Range: `-1`-`65519`
         /// </summary>
         [Output("value")]
         public Output<int> Value { get; private set; } = null!;
@@ -146,7 +147,8 @@ namespace Pulumi.Ise.TrustSec
         public Input<bool>? PropogateToApic { get; set; }
 
         /// <summary>
-        /// `-1` to auto-generate - Range: `-1`-`65519`
+        /// `-1` to auto-generate
+        ///   - Range: `-1`-`65519`
         /// </summary>
         [Input("value", required: true)]
         public Input<int> Value { get; set; } = null!;
@@ -184,7 +186,8 @@ namespace Pulumi.Ise.TrustSec
         public Input<bool>? PropogateToApic { get; set; }
 
         /// <summary>
-        /// `-1` to auto-generate - Range: `-1`-`65519`
+        /// `-1` to auto-generate
+        ///   - Range: `-1`-`65519`
         /// </summary>
         [Input("value")]
         public Input<int>? Value { get; set; }

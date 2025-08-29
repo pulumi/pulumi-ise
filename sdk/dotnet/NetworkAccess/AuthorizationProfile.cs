@@ -24,7 +24,9 @@ namespace Pulumi.Ise.NetworkAccess
     public partial class AuthorizationProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        /// Access type
+        ///   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+        ///   - Default value: `ACCESS_ACCEPT`
         /// </summary>
         [Output("accessType")]
         public Output<string> AccessType { get; private set; } = null!;
@@ -90,7 +92,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Easy wired session candidate - Default value: `false`
+        /// Easy wired session candidate
+        ///   - Default value: `false`
         /// </summary>
         [Output("easywiredSessionCandidate")]
         public Output<bool> EasywiredSessionCandidate { get; private set; } = null!;
@@ -114,7 +117,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> Ipv6DaclName { get; private set; } = null!;
 
         /// <summary>
-        /// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        /// MacSec policy
+        ///   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         /// </summary>
         [Output("macSecPolicy")]
         public Output<string?> MacSecPolicy { get; private set; } = null!;
@@ -126,37 +130,43 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// NEAT - Default value: `false`
+        /// NEAT
+        ///   - Default value: `false`
         /// </summary>
         [Output("neat")]
         public Output<bool> Neat { get; private set; } = null!;
 
         /// <summary>
-        /// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+        /// Value needs to be an existing Network Device Profile
+        ///   - Default value: `Cisco`
         /// </summary>
         [Output("profileName")]
         public Output<string> ProfileName { get; private set; } = null!;
 
         /// <summary>
-        /// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        /// Maintain Connectivity During Reauthentication
+        ///   - Choices: `DEFAULT`, `RADIUS_REQUEST`
         /// </summary>
         [Output("reauthenticationConnectivity")]
         public Output<string?> ReauthenticationConnectivity { get; private set; } = null!;
 
         /// <summary>
-        /// Reauthentication timer - Range: `1`-`65535`
+        /// Reauthentication timer
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Output("reauthenticationTimer")]
         public Output<int?> ReauthenticationTimer { get; private set; } = null!;
 
         /// <summary>
-        /// Service template - Default value: `false`
+        /// Service template
+        ///   - Default value: `false`
         /// </summary>
         [Output("serviceTemplate")]
         public Output<bool> ServiceTemplate { get; private set; } = null!;
 
         /// <summary>
-        /// Track movement - Default value: `false`
+        /// Track movement
+        ///   - Default value: `false`
         /// </summary>
         [Output("trackMovement")]
         public Output<bool> TrackMovement { get; private set; } = null!;
@@ -174,19 +184,22 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> VlanNameId { get; private set; } = null!;
 
         /// <summary>
-        /// Vlan tag ID - Range: `0`-`31`
+        /// Vlan tag ID
+        ///   - Range: `0`-`31`
         /// </summary>
         [Output("vlanTagId")]
         public Output<int?> VlanTagId { get; private set; } = null!;
 
         /// <summary>
-        /// Voice domain permission - Default value: `false`
+        /// Voice domain permission
+        ///   - Default value: `false`
         /// </summary>
         [Output("voiceDomainPermission")]
         public Output<bool> VoiceDomainPermission { get; private set; } = null!;
 
         /// <summary>
-        /// Web authentication (local) - Default value: `false`
+        /// Web authentication (local)
+        ///   - Default value: `false`
         /// </summary>
         [Output("webAuth")]
         public Output<bool> WebAuth { get; private set; } = null!;
@@ -198,8 +211,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> WebRedirectionAcl { get; private set; } = null!;
 
         /// <summary>
-        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-        /// `web_redirection_type` values the field must be ignored.
+        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         /// </summary>
         [Output("webRedirectionDisplayCertificatesRenewalMessages")]
         public Output<bool?> WebRedirectionDisplayCertificatesRenewalMessages { get; private set; } = null!;
@@ -217,8 +229,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> WebRedirectionStaticIpHostNameFqdn { get; private set; } = null!;
 
         /// <summary>
-        /// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-        /// `NativeSupplicanProvisioning`, `ClientProvisioning`
+        /// This type must fit the `web_redirection_portal_name`
+        ///   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         /// </summary>
         [Output("webRedirectionType")]
         public Output<string?> WebRedirectionType { get; private set; } = null!;
@@ -270,7 +282,9 @@ namespace Pulumi.Ise.NetworkAccess
     public sealed class AuthorizationProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        /// Access type
+        ///   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+        ///   - Default value: `ACCESS_ACCEPT`
         /// </summary>
         [Input("accessType")]
         public Input<string>? AccessType { get; set; }
@@ -342,7 +356,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Easy wired session candidate - Default value: `false`
+        /// Easy wired session candidate
+        ///   - Default value: `false`
         /// </summary>
         [Input("easywiredSessionCandidate")]
         public Input<bool>? EasywiredSessionCandidate { get; set; }
@@ -366,7 +381,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Ipv6DaclName { get; set; }
 
         /// <summary>
-        /// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        /// MacSec policy
+        ///   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         /// </summary>
         [Input("macSecPolicy")]
         public Input<string>? MacSecPolicy { get; set; }
@@ -378,37 +394,43 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NEAT - Default value: `false`
+        /// NEAT
+        ///   - Default value: `false`
         /// </summary>
         [Input("neat")]
         public Input<bool>? Neat { get; set; }
 
         /// <summary>
-        /// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+        /// Value needs to be an existing Network Device Profile
+        ///   - Default value: `Cisco`
         /// </summary>
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }
 
         /// <summary>
-        /// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        /// Maintain Connectivity During Reauthentication
+        ///   - Choices: `DEFAULT`, `RADIUS_REQUEST`
         /// </summary>
         [Input("reauthenticationConnectivity")]
         public Input<string>? ReauthenticationConnectivity { get; set; }
 
         /// <summary>
-        /// Reauthentication timer - Range: `1`-`65535`
+        /// Reauthentication timer
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("reauthenticationTimer")]
         public Input<int>? ReauthenticationTimer { get; set; }
 
         /// <summary>
-        /// Service template - Default value: `false`
+        /// Service template
+        ///   - Default value: `false`
         /// </summary>
         [Input("serviceTemplate")]
         public Input<bool>? ServiceTemplate { get; set; }
 
         /// <summary>
-        /// Track movement - Default value: `false`
+        /// Track movement
+        ///   - Default value: `false`
         /// </summary>
         [Input("trackMovement")]
         public Input<bool>? TrackMovement { get; set; }
@@ -426,19 +448,22 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? VlanNameId { get; set; }
 
         /// <summary>
-        /// Vlan tag ID - Range: `0`-`31`
+        /// Vlan tag ID
+        ///   - Range: `0`-`31`
         /// </summary>
         [Input("vlanTagId")]
         public Input<int>? VlanTagId { get; set; }
 
         /// <summary>
-        /// Voice domain permission - Default value: `false`
+        /// Voice domain permission
+        ///   - Default value: `false`
         /// </summary>
         [Input("voiceDomainPermission")]
         public Input<bool>? VoiceDomainPermission { get; set; }
 
         /// <summary>
-        /// Web authentication (local) - Default value: `false`
+        /// Web authentication (local)
+        ///   - Default value: `false`
         /// </summary>
         [Input("webAuth")]
         public Input<bool>? WebAuth { get; set; }
@@ -450,8 +475,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? WebRedirectionAcl { get; set; }
 
         /// <summary>
-        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-        /// `web_redirection_type` values the field must be ignored.
+        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         /// </summary>
         [Input("webRedirectionDisplayCertificatesRenewalMessages")]
         public Input<bool>? WebRedirectionDisplayCertificatesRenewalMessages { get; set; }
@@ -469,8 +493,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? WebRedirectionStaticIpHostNameFqdn { get; set; }
 
         /// <summary>
-        /// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-        /// `NativeSupplicanProvisioning`, `ClientProvisioning`
+        /// This type must fit the `web_redirection_portal_name`
+        ///   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         /// </summary>
         [Input("webRedirectionType")]
         public Input<string>? WebRedirectionType { get; set; }
@@ -484,7 +508,9 @@ namespace Pulumi.Ise.NetworkAccess
     public sealed class AuthorizationProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+        /// Access type
+        ///   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+        ///   - Default value: `ACCESS_ACCEPT`
         /// </summary>
         [Input("accessType")]
         public Input<string>? AccessType { get; set; }
@@ -556,7 +582,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Easy wired session candidate - Default value: `false`
+        /// Easy wired session candidate
+        ///   - Default value: `false`
         /// </summary>
         [Input("easywiredSessionCandidate")]
         public Input<bool>? EasywiredSessionCandidate { get; set; }
@@ -580,7 +607,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Ipv6DaclName { get; set; }
 
         /// <summary>
-        /// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+        /// MacSec policy
+        ///   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
         /// </summary>
         [Input("macSecPolicy")]
         public Input<string>? MacSecPolicy { get; set; }
@@ -592,37 +620,43 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NEAT - Default value: `false`
+        /// NEAT
+        ///   - Default value: `false`
         /// </summary>
         [Input("neat")]
         public Input<bool>? Neat { get; set; }
 
         /// <summary>
-        /// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+        /// Value needs to be an existing Network Device Profile
+        ///   - Default value: `Cisco`
         /// </summary>
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }
 
         /// <summary>
-        /// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+        /// Maintain Connectivity During Reauthentication
+        ///   - Choices: `DEFAULT`, `RADIUS_REQUEST`
         /// </summary>
         [Input("reauthenticationConnectivity")]
         public Input<string>? ReauthenticationConnectivity { get; set; }
 
         /// <summary>
-        /// Reauthentication timer - Range: `1`-`65535`
+        /// Reauthentication timer
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("reauthenticationTimer")]
         public Input<int>? ReauthenticationTimer { get; set; }
 
         /// <summary>
-        /// Service template - Default value: `false`
+        /// Service template
+        ///   - Default value: `false`
         /// </summary>
         [Input("serviceTemplate")]
         public Input<bool>? ServiceTemplate { get; set; }
 
         /// <summary>
-        /// Track movement - Default value: `false`
+        /// Track movement
+        ///   - Default value: `false`
         /// </summary>
         [Input("trackMovement")]
         public Input<bool>? TrackMovement { get; set; }
@@ -640,19 +674,22 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? VlanNameId { get; set; }
 
         /// <summary>
-        /// Vlan tag ID - Range: `0`-`31`
+        /// Vlan tag ID
+        ///   - Range: `0`-`31`
         /// </summary>
         [Input("vlanTagId")]
         public Input<int>? VlanTagId { get; set; }
 
         /// <summary>
-        /// Voice domain permission - Default value: `false`
+        /// Voice domain permission
+        ///   - Default value: `false`
         /// </summary>
         [Input("voiceDomainPermission")]
         public Input<bool>? VoiceDomainPermission { get; set; }
 
         /// <summary>
-        /// Web authentication (local) - Default value: `false`
+        /// Web authentication (local)
+        ///   - Default value: `false`
         /// </summary>
         [Input("webAuth")]
         public Input<bool>? WebAuth { get; set; }
@@ -664,8 +701,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? WebRedirectionAcl { get; set; }
 
         /// <summary>
-        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-        /// `web_redirection_type` values the field must be ignored.
+        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         /// </summary>
         [Input("webRedirectionDisplayCertificatesRenewalMessages")]
         public Input<bool>? WebRedirectionDisplayCertificatesRenewalMessages { get; set; }
@@ -683,8 +719,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? WebRedirectionStaticIpHostNameFqdn { get; set; }
 
         /// <summary>
-        /// This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-        /// `NativeSupplicanProvisioning`, `ClientProvisioning`
+        /// This type must fit the `web_redirection_portal_name`
+        ///   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
         /// </summary>
         [Input("webRedirectionType")]
         public Input<string>? WebRedirectionType { get; set; }

@@ -125,18 +125,16 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     @Import(name="conditionOperator")
     private @Nullable Output<String> conditionOperator;
 
     /**
-     * @return Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * @return Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     public Optional<Output<String>> conditionOperator() {
@@ -144,18 +142,16 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     @Import(name="conditionType")
     private @Nullable Output<String> conditionType;
 
     /**
-     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     public Optional<Output<String>> conditionType() {
@@ -193,16 +189,16 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-     * `DROP`, `CONTINUE`
+     * Action to perform when authentication fails such as Bad credentials, disabled user and so on
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     @Import(name="ifAuthFail")
     private @Nullable Output<String> ifAuthFail;
 
     /**
-     * @return Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-     * `DROP`, `CONTINUE`
+     * @return Action to perform when authentication fails such as Bad credentials, disabled user and so on
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     public Optional<Output<String>> ifAuthFail() {
@@ -210,14 +206,16 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * Action to perform when ISE is uanble to access the identity database
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     @Import(name="ifProcessFail")
     private @Nullable Output<String> ifProcessFail;
 
     /**
-     * @return Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * @return Action to perform when ISE is uanble to access the identity database
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     public Optional<Output<String>> ifProcessFail() {
@@ -225,14 +223,16 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * Action to perform when user is not found in any of identity stores
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     @Import(name="ifUserNotFound")
     private @Nullable Output<String> ifUserNotFound;
 
     /**
-     * @return Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+     * @return Action to perform when user is not found in any of identity stores
+     *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      * 
      */
     public Optional<Output<String>> ifUserNotFound() {
@@ -285,14 +285,16 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      * 
      */
     @Import(name="state")
     private @Nullable Output<String> state;
 
     /**
-     * @return The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * @return The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      * 
      */
     public Optional<Output<String>> state() {
@@ -498,9 +500,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param conditionOperator Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-         * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-         * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         * @param conditionOperator Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          * 
          * @return builder
          * 
@@ -511,9 +512,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param conditionOperator Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-         * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-         * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         * @param conditionOperator Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          * 
          * @return builder
          * 
@@ -523,9 +523,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-         * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-         * `ConditionOrBlock`, `ConditionReference`
+         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
          * 
          * @return builder
          * 
@@ -536,9 +535,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-         * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-         * `ConditionOrBlock`, `ConditionReference`
+         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
          * 
          * @return builder
          * 
@@ -590,8 +588,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ifAuthFail Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-         * `DROP`, `CONTINUE`
+         * @param ifAuthFail Action to perform when authentication fails such as Bad credentials, disabled user and so on
+         *   - Choices: `REJECT`, `DROP`, `CONTINUE`
          * 
          * @return builder
          * 
@@ -602,8 +600,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ifAuthFail Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-         * `DROP`, `CONTINUE`
+         * @param ifAuthFail Action to perform when authentication fails such as Bad credentials, disabled user and so on
+         *   - Choices: `REJECT`, `DROP`, `CONTINUE`
          * 
          * @return builder
          * 
@@ -613,7 +611,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ifProcessFail Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+         * @param ifProcessFail Action to perform when ISE is uanble to access the identity database
+         *   - Choices: `REJECT`, `DROP`, `CONTINUE`
          * 
          * @return builder
          * 
@@ -624,7 +623,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ifProcessFail Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+         * @param ifProcessFail Action to perform when ISE is uanble to access the identity database
+         *   - Choices: `REJECT`, `DROP`, `CONTINUE`
          * 
          * @return builder
          * 
@@ -634,7 +634,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ifUserNotFound Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+         * @param ifUserNotFound Action to perform when user is not found in any of identity stores
+         *   - Choices: `REJECT`, `DROP`, `CONTINUE`
          * 
          * @return builder
          * 
@@ -645,7 +646,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ifUserNotFound Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+         * @param ifUserNotFound Action to perform when user is not found in any of identity stores
+         *   - Choices: `REJECT`, `DROP`, `CONTINUE`
          * 
          * @return builder
          * 
@@ -718,7 +720,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param state The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+         * @param state The state that the rule is in. A disabled rule cannot be matched.
+         *   - Choices: `disabled`, `enabled`, `monitor`
          * 
          * @return builder
          * 
@@ -729,7 +732,8 @@ public final class AuthenticationRuleState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param state The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+         * @param state The state that the rule is in. A disabled rule cannot be matched.
+         *   - Choices: `disabled`, `enabled`, `monitor`
          * 
          * @return builder
          * 

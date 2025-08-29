@@ -17,16 +17,14 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
     public static final InternalUserState Empty = new InternalUserState();
 
     /**
-     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      * 
      */
     @Import(name="accountNameAlias")
     private @Nullable Output<String> accountNameAlias;
 
     /**
-     * @return The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * @return The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      * 
      */
     public Optional<Output<String>> accountNameAlias() {
@@ -34,14 +32,16 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Requires the user to change the password - Default value: `true`
+     * Requires the user to change the password
+     *   - Default value: `true`
      * 
      */
     @Import(name="changePassword")
     private @Nullable Output<Boolean> changePassword;
 
     /**
-     * @return Requires the user to change the password - Default value: `true`
+     * @return Requires the user to change the password
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> changePassword() {
@@ -199,14 +199,16 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID store where the internal user&#39;s password is kept - Default value: `Internal Users`
+     * The ID store where the internal user&#39;s password is kept
+     *   - Default value: `Internal Users`
      * 
      */
     @Import(name="passwordIdStore")
     private @Nullable Output<String> passwordIdStore;
 
     /**
-     * @return The ID store where the internal user&#39;s password is kept - Default value: `Internal Users`
+     * @return The ID store where the internal user&#39;s password is kept
+     *   - Default value: `Internal Users`
      * 
      */
     public Optional<Output<String>> passwordIdStore() {
@@ -214,16 +216,16 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      * 
      */
     @Import(name="passwordNeverExpires")
     private @Nullable Output<Boolean> passwordNeverExpires;
 
     /**
-     * @return Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * @return Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> passwordNeverExpires() {
@@ -268,8 +270,7 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param accountNameAlias The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-         * from ISE 3.2.
+         * @param accountNameAlias The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
          * 
          * @return builder
          * 
@@ -280,8 +281,7 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param accountNameAlias The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-         * from ISE 3.2.
+         * @param accountNameAlias The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
          * 
          * @return builder
          * 
@@ -291,7 +291,8 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param changePassword Requires the user to change the password - Default value: `true`
+         * @param changePassword Requires the user to change the password
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -302,7 +303,8 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param changePassword Requires the user to change the password - Default value: `true`
+         * @param changePassword Requires the user to change the password
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -522,7 +524,8 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param passwordIdStore The ID store where the internal user&#39;s password is kept - Default value: `Internal Users`
+         * @param passwordIdStore The ID store where the internal user&#39;s password is kept
+         *   - Default value: `Internal Users`
          * 
          * @return builder
          * 
@@ -533,7 +536,8 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param passwordIdStore The ID store where the internal user&#39;s password is kept - Default value: `Internal Users`
+         * @param passwordIdStore The ID store where the internal user&#39;s password is kept
+         *   - Default value: `Internal Users`
          * 
          * @return builder
          * 
@@ -543,8 +547,8 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param passwordNeverExpires Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-         * field is only supported from ISE 3.2. - Default value: `false`
+         * @param passwordNeverExpires Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -555,8 +559,8 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param passwordNeverExpires Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-         * field is only supported from ISE 3.2. - Default value: `false`
+         * @param passwordNeverExpires Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+         *   - Default value: `false`
          * 
          * @return builder
          * 

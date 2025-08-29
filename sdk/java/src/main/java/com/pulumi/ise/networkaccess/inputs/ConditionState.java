@@ -64,18 +64,16 @@ public final class ConditionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      * 
      */
     @Import(name="conditionType")
     private @Nullable Output<String> conditionType;
 
     /**
-     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-     * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      * 
      */
     public Optional<Output<String>> conditionType() {
@@ -158,18 +156,16 @@ public final class ConditionState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     @Import(name="operator")
     private @Nullable Output<String> operator;
 
     /**
-     * @return Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * @return Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     public Optional<Output<String>> operator() {
@@ -283,9 +279,8 @@ public final class ConditionState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-         * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-         * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
          * 
          * @return builder
          * 
@@ -296,9 +291,8 @@ public final class ConditionState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-         * additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-         * `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+         * @param conditionType Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+         *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
          * 
          * @return builder
          * 
@@ -413,9 +407,8 @@ public final class ConditionState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param operator Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-         * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-         * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         * @param operator Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          * 
          * @return builder
          * 
@@ -426,9 +419,8 @@ public final class ConditionState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param operator Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-         * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-         * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         * @param operator Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          * 
          * @return builder
          * 

@@ -120,65 +120,71 @@ class AllowedProtocolsArgs:
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc_pwd_change: Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_enable_eap_chaining: Enable EAP chaining
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_anonymous_provisioning: Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_authenticated_provisioning: Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-               `true`.
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_authorization_pac_ttl: Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-               `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.int] eap_fast_pacs_machine_pac_ttl: Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if
-               `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_stateless_session_resume: Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_tunnel_pac_ttl: PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-               `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.bool] eap_fast_use_pacs: Use PACs
         :param pulumi.Input[_builtins.bool] eap_tls_allow_auth_of_expired_certs: Allow authentication of expired certificates
         :param pulumi.Input[_builtins.bool] eap_tls_enable_stateless_session_resume: Enable stateless session resume
-        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.int] eap_tls_session_ticket_ttl: Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.bool] eap_ttls_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_md5: Allow EAP MD5
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v1: Allow MS CHAP v1
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v2: Allow MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_pap_ascii: Allow PAP ASCII
         :param pulumi.Input[_builtins.str] name: The name of the allowed protocols
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc: Allow PEAP EAP GTC
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc_pwd_change: Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2: Allow PEAP EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2_pwd_change: Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-               `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls: Allow PEAP EAP TLS
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls_auth_of_expired_certs: Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] peap_peap_v0: Allow PEAP v0
-        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol
+                 - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] teap_downgrade_msk: Allow downgrade to MSK
         :param pulumi.Input[_builtins.bool] teap_eap_accept_client_cert_during_tunnel_est: Accept client certificate during tunnel establishment
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] teap_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] teap_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] teap_request_basic_pwd_auth: Request basic password authentication
@@ -590,7 +596,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastEapGtcPwdChangeRetries")
     def eap_fast_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change_retries")
 
@@ -626,7 +633,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastEapMsChapV2PwdChangeRetries")
     def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries")
 
@@ -698,8 +706,7 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastPacsAllowClientCert")
     def eap_fast_pacs_allow_client_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-        `true`.
+        Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_client_cert")
 
@@ -735,8 +742,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtlUnit")
     def eap_fast_pacs_authorization_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-        `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl_unit")
 
@@ -760,8 +767,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastPacsMachinePacTtlUnit")
     def eap_fast_pacs_machine_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-        `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl_unit")
 
@@ -773,8 +780,7 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastPacsServerReturns")
     def eap_fast_pacs_server_returns(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Server returns access accept after authenticated provisioning. Is required only if
-        `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_server_returns")
 
@@ -810,8 +816,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastPacsTunnelPacTtlUnit")
     def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-        `HOURS`, `DAYS`, `WEEKS`
+        PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl_unit")
 
@@ -823,7 +829,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapFastPacsUseProactivePacUpdatePercentage")
     def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "eap_fast_pacs_use_proactive_pac_update_percentage")
 
@@ -871,7 +878,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapTlsSessionTicketPercentage")
     def eap_tls_session_ticket_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "eap_tls_session_ticket_percentage")
 
@@ -895,8 +903,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapTlsSessionTicketTtlUnit")
     def eap_tls_session_ticket_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-        `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_tls_session_ticket_ttl_unit")
 
@@ -956,7 +964,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChangeRetries")
     def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries")
 
@@ -1040,7 +1049,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChangeRetries")
     def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change_retries")
 
@@ -1076,8 +1086,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChangeRetries")
     def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-        `0`-`3`
+        Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries")
 
@@ -1125,7 +1135,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="preferredEapProtocol")
     def preferred_eap_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        Preferred EAP protocol
+          - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         """
         return pulumi.get(self, "preferred_eap_protocol")
 
@@ -1209,7 +1220,8 @@ class AllowedProtocolsArgs:
     @pulumi.getter(name="teapEapMsChapV2PwdChangeRetries")
     def teap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change_retries")
 
@@ -1355,59 +1367,64 @@ class _AllowedProtocolsState:
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc_pwd_change: Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_enable_eap_chaining: Enable EAP chaining
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_anonymous_provisioning: Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_authenticated_provisioning: Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-               `true`.
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_authorization_pac_ttl: Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-               `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.int] eap_fast_pacs_machine_pac_ttl: Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if
-               `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_stateless_session_resume: Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_tunnel_pac_ttl: PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-               `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.bool] eap_fast_use_pacs: Use PACs
         :param pulumi.Input[_builtins.bool] eap_tls_allow_auth_of_expired_certs: Allow authentication of expired certificates
         :param pulumi.Input[_builtins.bool] eap_tls_enable_stateless_session_resume: Enable stateless session resume
         :param pulumi.Input[_builtins.bool] eap_tls_l_bit: EAP TLS L-Bit
-        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.int] eap_tls_session_ticket_ttl: Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.bool] eap_ttls_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_md5: Allow EAP MD5
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v1: Allow MS CHAP v1
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v2: Allow MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_pap_ascii: Allow PAP ASCII
         :param pulumi.Input[_builtins.str] name: The name of the allowed protocols
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc: Allow PEAP EAP GTC
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc_pwd_change: Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2: Allow PEAP EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2_pwd_change: Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-               `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls: Allow PEAP EAP TLS
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls_auth_of_expired_certs: Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] peap_peap_v0: Allow PEAP v0
-        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol
+                 - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         :param pulumi.Input[_builtins.bool] process_host_lookup: Process host lookup
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
@@ -1416,7 +1433,8 @@ class _AllowedProtocolsState:
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] teap_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] teap_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] teap_request_basic_pwd_auth: Request basic password authentication
@@ -1808,7 +1826,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastEapGtcPwdChangeRetries")
     def eap_fast_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change_retries")
 
@@ -1844,7 +1863,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastEapMsChapV2PwdChangeRetries")
     def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries")
 
@@ -1916,8 +1936,7 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastPacsAllowClientCert")
     def eap_fast_pacs_allow_client_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-        `true`.
+        Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_client_cert")
 
@@ -1953,8 +1972,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtlUnit")
     def eap_fast_pacs_authorization_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-        `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl_unit")
 
@@ -1978,8 +1997,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastPacsMachinePacTtlUnit")
     def eap_fast_pacs_machine_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-        `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl_unit")
 
@@ -1991,8 +2010,7 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastPacsServerReturns")
     def eap_fast_pacs_server_returns(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Server returns access accept after authenticated provisioning. Is required only if
-        `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_server_returns")
 
@@ -2028,8 +2046,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastPacsTunnelPacTtlUnit")
     def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-        `HOURS`, `DAYS`, `WEEKS`
+        PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl_unit")
 
@@ -2041,7 +2059,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapFastPacsUseProactivePacUpdatePercentage")
     def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "eap_fast_pacs_use_proactive_pac_update_percentage")
 
@@ -2101,7 +2120,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapTlsSessionTicketPercentage")
     def eap_tls_session_ticket_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "eap_tls_session_ticket_percentage")
 
@@ -2125,8 +2145,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapTlsSessionTicketTtlUnit")
     def eap_tls_session_ticket_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-        `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_tls_session_ticket_ttl_unit")
 
@@ -2186,7 +2206,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChangeRetries")
     def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries")
 
@@ -2270,7 +2291,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChangeRetries")
     def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change_retries")
 
@@ -2306,8 +2328,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChangeRetries")
     def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-        `0`-`3`
+        Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries")
 
@@ -2355,7 +2377,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="preferredEapProtocol")
     def preferred_eap_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        Preferred EAP protocol
+          - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         """
         return pulumi.get(self, "preferred_eap_protocol")
 
@@ -2463,7 +2486,8 @@ class _AllowedProtocolsState:
     @pulumi.getter(name="teapEapMsChapV2PwdChangeRetries")
     def teap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change_retries")
 
@@ -2708,59 +2732,64 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc_pwd_change: Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_enable_eap_chaining: Enable EAP chaining
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_anonymous_provisioning: Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_authenticated_provisioning: Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-               `true`.
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_authorization_pac_ttl: Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-               `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.int] eap_fast_pacs_machine_pac_ttl: Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if
-               `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_stateless_session_resume: Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_tunnel_pac_ttl: PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-               `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.bool] eap_fast_use_pacs: Use PACs
         :param pulumi.Input[_builtins.bool] eap_tls_allow_auth_of_expired_certs: Allow authentication of expired certificates
         :param pulumi.Input[_builtins.bool] eap_tls_enable_stateless_session_resume: Enable stateless session resume
         :param pulumi.Input[_builtins.bool] eap_tls_l_bit: EAP TLS L-Bit
-        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.int] eap_tls_session_ticket_ttl: Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.bool] eap_ttls_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_md5: Allow EAP MD5
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v1: Allow MS CHAP v1
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v2: Allow MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_pap_ascii: Allow PAP ASCII
         :param pulumi.Input[_builtins.str] name: The name of the allowed protocols
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc: Allow PEAP EAP GTC
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc_pwd_change: Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2: Allow PEAP EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2_pwd_change: Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-               `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls: Allow PEAP EAP TLS
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls_auth_of_expired_certs: Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] peap_peap_v0: Allow PEAP v0
-        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol
+                 - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         :param pulumi.Input[_builtins.bool] process_host_lookup: Process host lookup
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
@@ -2769,7 +2798,8 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] teap_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] teap_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] teap_request_basic_pwd_auth: Request basic password authentication
@@ -3198,59 +3228,64 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc_pwd_change: Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_gtc_pwd_change_retries: EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_fast_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_fast_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] eap_fast_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_enable_eap_chaining: Enable EAP chaining
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_anonymous_provisioning: Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_authenticated_provisioning: Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-               `true`.
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_client_cert: Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_authorization_pac_ttl: Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-               `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_authorization_pac_ttl_unit: Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.int] eap_fast_pacs_machine_pac_ttl: Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if
-               `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_machine_pac_ttl_unit: Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.bool] eap_fast_pacs_server_returns: Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         :param pulumi.Input[_builtins.bool] eap_fast_pacs_stateless_session_resume: Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
         :param pulumi.Input[_builtins.int] eap_fast_pacs_tunnel_pac_ttl: PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
-        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-               `HOURS`, `DAYS`, `WEEKS`
-        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] eap_fast_pacs_tunnel_pac_ttl_unit: PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.int] eap_fast_pacs_use_proactive_pac_update_percentage: Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.bool] eap_fast_use_pacs: Use PACs
         :param pulumi.Input[_builtins.bool] eap_tls_allow_auth_of_expired_certs: Allow authentication of expired certificates
         :param pulumi.Input[_builtins.bool] eap_tls_enable_stateless_session_resume: Enable stateless session resume
         :param pulumi.Input[_builtins.bool] eap_tls_l_bit: EAP TLS L-Bit
-        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] eap_tls_session_ticket_percentage: Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.int] eap_tls_session_ticket_ttl: Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
-        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-               `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        :param pulumi.Input[_builtins.str] eap_tls_session_ticket_ttl_unit: Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+                 - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         :param pulumi.Input[_builtins.bool] eap_ttls_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_md5: Allow EAP MD5
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] eap_ttls_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v1: Allow MS CHAP v1
         :param pulumi.Input[_builtins.bool] eap_ttls_ms_chap_v2: Allow MS CHAP v2
         :param pulumi.Input[_builtins.bool] eap_ttls_pap_ascii: Allow PAP ASCII
         :param pulumi.Input[_builtins.str] name: The name of the allowed protocols
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc: Allow PEAP EAP GTC
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_gtc_pwd_change: Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_gtc_pwd_change_retries: PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2: Allow PEAP EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_ms_chap_v2_pwd_change: Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-               `0`-`3`
+        :param pulumi.Input[_builtins.int] peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls: Allow PEAP EAP TLS
         :param pulumi.Input[_builtins.bool] peap_allow_peap_eap_tls_auth_of_expired_certs: Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] peap_peap_v0: Allow PEAP v0
-        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol
+                 - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         :param pulumi.Input[_builtins.bool] process_host_lookup: Process host lookup
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
@@ -3259,7 +3294,8 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2: Allow EAP MS CHAP v2
         :param pulumi.Input[_builtins.bool] teap_eap_ms_chap_v2_pwd_change: Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
-        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] teap_eap_ms_chap_v2_pwd_change_retries: EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.bool] teap_eap_tls: Allow EAP TLS
         :param pulumi.Input[_builtins.bool] teap_eap_tls_auth_of_expired_certs: Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
         :param pulumi.Input[_builtins.bool] teap_request_basic_pwd_auth: Request basic password authentication
@@ -3503,7 +3539,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastEapGtcPwdChangeRetries")
     def eap_fast_eap_gtc_pwd_change_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+        EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change_retries")
 
@@ -3527,7 +3564,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastEapMsChapV2PwdChangeRetries")
     def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries")
 
@@ -3575,8 +3613,7 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastPacsAllowClientCert")
     def eap_fast_pacs_allow_client_cert(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-        `true`.
+        Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_client_cert")
 
@@ -3600,8 +3637,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtlUnit")
     def eap_fast_pacs_authorization_pac_ttl_unit(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-        `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl_unit")
 
@@ -3617,8 +3654,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastPacsMachinePacTtlUnit")
     def eap_fast_pacs_machine_pac_ttl_unit(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-        `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl_unit")
 
@@ -3626,8 +3663,7 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastPacsServerReturns")
     def eap_fast_pacs_server_returns(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Server returns access accept after authenticated provisioning. Is required only if
-        `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_server_returns")
 
@@ -3651,8 +3687,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastPacsTunnelPacTtlUnit")
     def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-        `HOURS`, `DAYS`, `WEEKS`
+        PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl_unit")
 
@@ -3660,7 +3696,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapFastPacsUseProactivePacUpdatePercentage")
     def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+        Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "eap_fast_pacs_use_proactive_pac_update_percentage")
 
@@ -3700,7 +3737,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapTlsSessionTicketPercentage")
     def eap_tls_session_ticket_percentage(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+        Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "eap_tls_session_ticket_percentage")
 
@@ -3716,8 +3754,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapTlsSessionTicketTtlUnit")
     def eap_tls_session_ticket_ttl_unit(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-        `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+        Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+          - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         """
         return pulumi.get(self, "eap_tls_session_ticket_ttl_unit")
 
@@ -3757,7 +3795,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChangeRetries")
     def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries")
 
@@ -3813,7 +3852,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChangeRetries")
     def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+        PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change_retries")
 
@@ -3837,8 +3877,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChangeRetries")
     def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-        `0`-`3`
+        Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries")
 
@@ -3870,7 +3910,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="preferredEapProtocol")
     def preferred_eap_protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+        Preferred EAP protocol
+          - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         """
         return pulumi.get(self, "preferred_eap_protocol")
 
@@ -3942,7 +3983,8 @@ class AllowedProtocols(pulumi.CustomResource):
     @pulumi.getter(name="teapEapMsChapV2PwdChangeRetries")
     def teap_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+        EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change_retries")
 

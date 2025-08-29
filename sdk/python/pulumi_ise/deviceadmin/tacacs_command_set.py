@@ -29,7 +29,8 @@ class TacacsCommandSetArgs:
         The set of arguments for constructing a TacacsCommandSet resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS command set
-        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands - Default value: `false`
+        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands
+                 - Default value: `false`
         """
         if commands is not None:
             pulumi.set(__self__, "commands", commands)
@@ -77,7 +78,8 @@ class TacacsCommandSetArgs:
     @pulumi.getter(name="permitUnmatched")
     def permit_unmatched(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Permit unmatched commands - Default value: `false`
+        Permit unmatched commands
+          - Default value: `false`
         """
         return pulumi.get(self, "permit_unmatched")
 
@@ -97,7 +99,8 @@ class _TacacsCommandSetState:
         Input properties used for looking up and filtering TacacsCommandSet resources.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS command set
-        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands - Default value: `false`
+        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands
+                 - Default value: `false`
         """
         if commands is not None:
             pulumi.set(__self__, "commands", commands)
@@ -145,7 +148,8 @@ class _TacacsCommandSetState:
     @pulumi.getter(name="permitUnmatched")
     def permit_unmatched(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Permit unmatched commands - Default value: `false`
+        Permit unmatched commands
+          - Default value: `false`
         """
         return pulumi.get(self, "permit_unmatched")
 
@@ -197,7 +201,8 @@ class TacacsCommandSet(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS command set
-        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands - Default value: `false`
+        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands
+                 - Default value: `false`
         """
         ...
     @overload
@@ -288,7 +293,8 @@ class TacacsCommandSet(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS command set
-        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands - Default value: `false`
+        :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands
+                 - Default value: `false`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -325,7 +331,8 @@ class TacacsCommandSet(pulumi.CustomResource):
     @pulumi.getter(name="permitUnmatched")
     def permit_unmatched(self) -> pulumi.Output[_builtins.bool]:
         """
-        Permit unmatched commands - Default value: `false`
+        Permit unmatched commands
+          - Default value: `false`
         """
         return pulumi.get(self, "permit_unmatched")
 

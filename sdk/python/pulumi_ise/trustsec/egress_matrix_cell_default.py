@@ -25,9 +25,12 @@ class EgressMatrixCellDefaultArgs:
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a EgressMatrixCellDefault resource.
-        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule
+                 - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
+                 - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+                 - Default value: `DISABLED`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         """
         if default_rule is not None:
@@ -43,7 +46,8 @@ class EgressMatrixCellDefaultArgs:
     @pulumi.getter(name="defaultRule")
     def default_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        Can be used only if sgacls not specified. Final Catch All Rule
+          - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         """
         return pulumi.get(self, "default_rule")
 
@@ -67,7 +71,9 @@ class EgressMatrixCellDefaultArgs:
     @pulumi.getter(name="matrixCellStatus")
     def matrix_cell_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        Matrix Cell Status
+          - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+          - Default value: `DISABLED`
         """
         return pulumi.get(self, "matrix_cell_status")
 
@@ -97,9 +103,12 @@ class _EgressMatrixCellDefaultState:
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering EgressMatrixCellDefault resources.
-        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule
+                 - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
+                 - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+                 - Default value: `DISABLED`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         """
         if default_rule is not None:
@@ -115,7 +124,8 @@ class _EgressMatrixCellDefaultState:
     @pulumi.getter(name="defaultRule")
     def default_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        Can be used only if sgacls not specified. Final Catch All Rule
+          - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         """
         return pulumi.get(self, "default_rule")
 
@@ -139,7 +149,9 @@ class _EgressMatrixCellDefaultState:
     @pulumi.getter(name="matrixCellStatus")
     def matrix_cell_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        Matrix Cell Status
+          - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+          - Default value: `DISABLED`
         """
         return pulumi.get(self, "matrix_cell_status")
 
@@ -196,9 +208,12 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule
+                 - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
+                 - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+                 - Default value: `DISABLED`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         """
         ...
@@ -283,9 +298,12 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified. Final Catch All Rule
+                 - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
+                 - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+                 - Default value: `DISABLED`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -302,7 +320,8 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
     @pulumi.getter(name="defaultRule")
     def default_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        Can be used only if sgacls not specified. Final Catch All Rule
+          - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         """
         return pulumi.get(self, "default_rule")
 
@@ -318,7 +337,9 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
     @pulumi.getter(name="matrixCellStatus")
     def matrix_cell_status(self) -> pulumi.Output[_builtins.str]:
         """
-        Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        Matrix Cell Status
+          - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+          - Default value: `DISABLED`
         """
         return pulumi.get(self, "matrix_cell_status")
 

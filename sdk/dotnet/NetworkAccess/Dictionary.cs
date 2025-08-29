@@ -51,7 +51,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        /// The dictionary attribute type
+        ///   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         /// </summary>
         [Output("dictionaryAttrType")]
         public Output<string> DictionaryAttrType { get; private set; } = null!;
@@ -121,7 +122,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        /// The dictionary attribute type
+        ///   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         /// </summary>
         [Input("dictionaryAttrType", required: true)]
         public Input<string> DictionaryAttrType { get; set; } = null!;
@@ -153,7 +155,8 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        /// The dictionary attribute type
+        ///   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         /// </summary>
         [Input("dictionaryAttrType")]
         public Input<string>? DictionaryAttrType { get; set; }

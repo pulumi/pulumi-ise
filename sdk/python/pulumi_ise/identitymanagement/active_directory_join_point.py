@@ -57,39 +57,53 @@ class ActiveDirectoryJoinPointArgs:
         """
         The set of arguments for constructing a ActiveDirectoryJoinPoint resource.
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-               Default value: `Default_Scope`
-        :param pulumi.Input[_builtins.int] aging_time: Aging Time - Default value: `5`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+                 - Default value: `Default_Scope`
+        :param pulumi.Input[_builtins.int] aging_time: Aging Time
+                 - Default value: `5`
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]] attributes: List of AD attributes
-        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+                 - Choices: `WIRELESS`, `WIRED`, `BOTH`
         :param pulumi.Input[_builtins.str] country: User info attribute
         :param pulumi.Input[_builtins.str] department: User info attribute
         :param pulumi.Input[_builtins.str] description: Join point description
         :param pulumi.Input[_builtins.str] email: User info attribute
-        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check
+                 - Default value: `false`
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites - Default value: `false`
-        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts - Default value: `5`
+        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] first_name: User info attribute
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]] groups: List of AD Groups
-        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour
+                 - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         :param pulumi.Input[_builtins.str] job_title: User info attribute
         :param pulumi.Input[_builtins.str] last_name: User info attribute
         :param pulumi.Input[_builtins.str] locality: User info attribute
         :param pulumi.Input[_builtins.str] name: The name of the active directory join point
         :param pulumi.Input[_builtins.str] organizational_unit: User info attribute
-        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication - Default value: `false`
+        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]] rewrite_rules: List of Rewrite rules
-        :param pulumi.Input[_builtins.str] schema: Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        :param pulumi.Input[_builtins.str] schema: Schema
+                 - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         :param pulumi.Input[_builtins.str] state_or_province: User info attribute
         :param pulumi.Input[_builtins.str] street_address: User info attribute
         :param pulumi.Input[_builtins.str] telephone: User info attribute
-        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour
+                 - Choices: `PROCEED`, `DROP`
         """
         pulumi.set(__self__, "domain", domain)
         if ad_scopes_names is not None:
@@ -173,8 +187,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-        Default value: `Default_Scope`
+        String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+          - Default value: `Default_Scope`
         """
         return pulumi.get(self, "ad_scopes_names")
 
@@ -186,7 +200,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="agingTime")
     def aging_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Aging Time - Default value: `5`
+        Aging Time
+          - Default value: `5`
         """
         return pulumi.get(self, "aging_time")
 
@@ -210,7 +225,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="authProtectionType")
     def auth_protection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+          - Choices: `WIRELESS`, `WIRED`, `BOTH`
         """
         return pulumi.get(self, "auth_protection_type")
 
@@ -270,7 +286,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enableCallbackForDialinClient")
     def enable_callback_for_dialin_client(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Callback For Dial In Client - Default value: `false`
+        Enable Callback For Dial In Client
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_callback_for_dialin_client")
 
@@ -282,7 +299,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enableDialinPermissionCheck")
     def enable_dialin_permission_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Dial In Permission Check - Default value: `false`
+        Enable Dial In Permission Check
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_dialin_permission_check")
 
@@ -306,7 +324,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enableFailedAuthProtection")
     def enable_failed_auth_protection(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+        Enable prevent AD account lockout due to too many bad password attempts
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_failed_auth_protection")
 
@@ -318,7 +337,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enableMachineAccess")
     def enable_machine_access(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Machine Access - Default value: `true`
+        Enable Machine Access
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_machine_access")
 
@@ -330,7 +350,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enableMachineAuth")
     def enable_machine_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Machine Authentication - Default value: `true`
+        Enable Machine Authentication
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_machine_auth")
 
@@ -342,7 +363,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enablePassChange")
     def enable_pass_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Password Change - Default value: `true`
+        Enable Password Change
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_pass_change")
 
@@ -354,7 +376,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="enableRewrites")
     def enable_rewrites(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Rewrites - Default value: `false`
+        Enable Rewrites
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_rewrites")
 
@@ -366,7 +389,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="failedAuthThreshold")
     def failed_auth_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of bad password attempts - Default value: `5`
+        Number of bad password attempts
+          - Default value: `5`
         """
         return pulumi.get(self, "failed_auth_threshold")
 
@@ -402,7 +426,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="identityNotInAdBehaviour")
     def identity_not_in_ad_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        Identity Not In AD Behaviour
+          - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         """
         return pulumi.get(self, "identity_not_in_ad_behaviour")
 
@@ -474,7 +499,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="plaintextAuth")
     def plaintext_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Plain Text Authentication - Default value: `false`
+        Plain Text Authentication
+          - Default value: `false`
         """
         return pulumi.get(self, "plaintext_auth")
 
@@ -498,7 +524,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter
     def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        Schema
+          - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         """
         return pulumi.get(self, "schema")
 
@@ -546,7 +573,8 @@ class ActiveDirectoryJoinPointArgs:
     @pulumi.getter(name="unreachableDomainsBehaviour")
     def unreachable_domains_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        Unreachable Domains Behaviour
+          - Choices: `PROCEED`, `DROP`
         """
         return pulumi.get(self, "unreachable_domains_behaviour")
 
@@ -593,40 +621,54 @@ class _ActiveDirectoryJoinPointState:
                  unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryJoinPoint resources.
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-               Default value: `Default_Scope`
-        :param pulumi.Input[_builtins.int] aging_time: Aging Time - Default value: `5`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+                 - Default value: `Default_Scope`
+        :param pulumi.Input[_builtins.int] aging_time: Aging Time
+                 - Default value: `5`
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]] attributes: List of AD attributes
-        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+                 - Choices: `WIRELESS`, `WIRED`, `BOTH`
         :param pulumi.Input[_builtins.str] country: User info attribute
         :param pulumi.Input[_builtins.str] department: User info attribute
         :param pulumi.Input[_builtins.str] description: Join point description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.str] email: User info attribute
-        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check
+                 - Default value: `false`
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites - Default value: `false`
-        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts - Default value: `5`
+        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] first_name: User info attribute
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]] groups: List of AD Groups
-        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour
+                 - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         :param pulumi.Input[_builtins.str] job_title: User info attribute
         :param pulumi.Input[_builtins.str] last_name: User info attribute
         :param pulumi.Input[_builtins.str] locality: User info attribute
         :param pulumi.Input[_builtins.str] name: The name of the active directory join point
         :param pulumi.Input[_builtins.str] organizational_unit: User info attribute
-        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication - Default value: `false`
+        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]] rewrite_rules: List of Rewrite rules
-        :param pulumi.Input[_builtins.str] schema: Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        :param pulumi.Input[_builtins.str] schema: Schema
+                 - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         :param pulumi.Input[_builtins.str] state_or_province: User info attribute
         :param pulumi.Input[_builtins.str] street_address: User info attribute
         :param pulumi.Input[_builtins.str] telephone: User info attribute
-        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour
+                 - Choices: `PROCEED`, `DROP`
         """
         if ad_scopes_names is not None:
             pulumi.set(__self__, "ad_scopes_names", ad_scopes_names)
@@ -699,8 +741,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-        Default value: `Default_Scope`
+        String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+          - Default value: `Default_Scope`
         """
         return pulumi.get(self, "ad_scopes_names")
 
@@ -712,7 +754,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="agingTime")
     def aging_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Aging Time - Default value: `5`
+        Aging Time
+          - Default value: `5`
         """
         return pulumi.get(self, "aging_time")
 
@@ -736,7 +779,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="authProtectionType")
     def auth_protection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+          - Choices: `WIRELESS`, `WIRED`, `BOTH`
         """
         return pulumi.get(self, "auth_protection_type")
 
@@ -808,7 +852,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enableCallbackForDialinClient")
     def enable_callback_for_dialin_client(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Callback For Dial In Client - Default value: `false`
+        Enable Callback For Dial In Client
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_callback_for_dialin_client")
 
@@ -820,7 +865,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enableDialinPermissionCheck")
     def enable_dialin_permission_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Dial In Permission Check - Default value: `false`
+        Enable Dial In Permission Check
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_dialin_permission_check")
 
@@ -844,7 +890,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enableFailedAuthProtection")
     def enable_failed_auth_protection(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+        Enable prevent AD account lockout due to too many bad password attempts
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_failed_auth_protection")
 
@@ -856,7 +903,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enableMachineAccess")
     def enable_machine_access(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Machine Access - Default value: `true`
+        Enable Machine Access
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_machine_access")
 
@@ -868,7 +916,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enableMachineAuth")
     def enable_machine_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Machine Authentication - Default value: `true`
+        Enable Machine Authentication
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_machine_auth")
 
@@ -880,7 +929,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enablePassChange")
     def enable_pass_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Password Change - Default value: `true`
+        Enable Password Change
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_pass_change")
 
@@ -892,7 +942,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="enableRewrites")
     def enable_rewrites(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Rewrites - Default value: `false`
+        Enable Rewrites
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_rewrites")
 
@@ -904,7 +955,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="failedAuthThreshold")
     def failed_auth_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of bad password attempts - Default value: `5`
+        Number of bad password attempts
+          - Default value: `5`
         """
         return pulumi.get(self, "failed_auth_threshold")
 
@@ -940,7 +992,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="identityNotInAdBehaviour")
     def identity_not_in_ad_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        Identity Not In AD Behaviour
+          - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         """
         return pulumi.get(self, "identity_not_in_ad_behaviour")
 
@@ -1012,7 +1065,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="plaintextAuth")
     def plaintext_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Plain Text Authentication - Default value: `false`
+        Plain Text Authentication
+          - Default value: `false`
         """
         return pulumi.get(self, "plaintext_auth")
 
@@ -1036,7 +1090,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter
     def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        Schema
+          - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         """
         return pulumi.get(self, "schema")
 
@@ -1084,7 +1139,8 @@ class _ActiveDirectoryJoinPointState:
     @pulumi.getter(name="unreachableDomainsBehaviour")
     def unreachable_domains_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        Unreachable Domains Behaviour
+          - Choices: `PROCEED`, `DROP`
         """
         return pulumi.get(self, "unreachable_domains_behaviour")
 
@@ -1146,40 +1202,54 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-               Default value: `Default_Scope`
-        :param pulumi.Input[_builtins.int] aging_time: Aging Time - Default value: `5`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+                 - Default value: `Default_Scope`
+        :param pulumi.Input[_builtins.int] aging_time: Aging Time
+                 - Default value: `5`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]] attributes: List of AD attributes
-        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+                 - Choices: `WIRELESS`, `WIRED`, `BOTH`
         :param pulumi.Input[_builtins.str] country: User info attribute
         :param pulumi.Input[_builtins.str] department: User info attribute
         :param pulumi.Input[_builtins.str] description: Join point description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.str] email: User info attribute
-        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check
+                 - Default value: `false`
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites - Default value: `false`
-        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts - Default value: `5`
+        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] first_name: User info attribute
         :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]] groups: List of AD Groups
-        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour
+                 - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         :param pulumi.Input[_builtins.str] job_title: User info attribute
         :param pulumi.Input[_builtins.str] last_name: User info attribute
         :param pulumi.Input[_builtins.str] locality: User info attribute
         :param pulumi.Input[_builtins.str] name: The name of the active directory join point
         :param pulumi.Input[_builtins.str] organizational_unit: User info attribute
-        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication - Default value: `false`
+        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]] rewrite_rules: List of Rewrite rules
-        :param pulumi.Input[_builtins.str] schema: Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        :param pulumi.Input[_builtins.str] schema: Schema
+                 - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         :param pulumi.Input[_builtins.str] state_or_province: User info attribute
         :param pulumi.Input[_builtins.str] street_address: User info attribute
         :param pulumi.Input[_builtins.str] telephone: User info attribute
-        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour
+                 - Choices: `PROCEED`, `DROP`
         """
         ...
     @overload
@@ -1340,40 +1410,54 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-               Default value: `Default_Scope`
-        :param pulumi.Input[_builtins.int] aging_time: Aging Time - Default value: `5`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+                 - Default value: `Default_Scope`
+        :param pulumi.Input[_builtins.int] aging_time: Aging Time
+                 - Default value: `5`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]] attributes: List of AD attributes
-        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+                 - Choices: `WIRELESS`, `WIRED`, `BOTH`
         :param pulumi.Input[_builtins.str] country: User info attribute
         :param pulumi.Input[_builtins.str] department: User info attribute
         :param pulumi.Input[_builtins.str] description: Join point description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.str] email: User info attribute
-        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_callback_for_dialin_client: Enable Callback For Dial In Client
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dialin_permission_check: Enable Dial In Permission Check
+                 - Default value: `false`
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
-        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change - Default value: `true`
-        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites - Default value: `false`
-        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts - Default value: `5`
+        :param pulumi.Input[_builtins.bool] enable_failed_auth_protection: Enable prevent AD account lockout due to too many bad password attempts
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_machine_access: Enable Machine Access
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_machine_auth: Enable Machine Authentication
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_pass_change: Enable Password Change
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable_rewrites: Enable Rewrites
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] first_name: User info attribute
         :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]] groups: List of AD Groups
-        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour
+                 - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         :param pulumi.Input[_builtins.str] job_title: User info attribute
         :param pulumi.Input[_builtins.str] last_name: User info attribute
         :param pulumi.Input[_builtins.str] locality: User info attribute
         :param pulumi.Input[_builtins.str] name: The name of the active directory join point
         :param pulumi.Input[_builtins.str] organizational_unit: User info attribute
-        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication - Default value: `false`
+        :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]] rewrite_rules: List of Rewrite rules
-        :param pulumi.Input[_builtins.str] schema: Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        :param pulumi.Input[_builtins.str] schema: Schema
+                 - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         :param pulumi.Input[_builtins.str] state_or_province: User info attribute
         :param pulumi.Input[_builtins.str] street_address: User info attribute
         :param pulumi.Input[_builtins.str] telephone: User info attribute
-        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        :param pulumi.Input[_builtins.str] unreachable_domains_behaviour: Unreachable Domains Behaviour
+                 - Choices: `PROCEED`, `DROP`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1418,8 +1502,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> pulumi.Output[_builtins.str]:
         """
-        String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-        Default value: `Default_Scope`
+        String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+          - Default value: `Default_Scope`
         """
         return pulumi.get(self, "ad_scopes_names")
 
@@ -1427,7 +1511,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="agingTime")
     def aging_time(self) -> pulumi.Output[_builtins.int]:
         """
-        Aging Time - Default value: `5`
+        Aging Time
+          - Default value: `5`
         """
         return pulumi.get(self, "aging_time")
 
@@ -1443,7 +1528,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="authProtectionType")
     def auth_protection_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+        Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+          - Choices: `WIRELESS`, `WIRED`, `BOTH`
         """
         return pulumi.get(self, "auth_protection_type")
 
@@ -1491,7 +1577,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enableCallbackForDialinClient")
     def enable_callback_for_dialin_client(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable Callback For Dial In Client - Default value: `false`
+        Enable Callback For Dial In Client
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_callback_for_dialin_client")
 
@@ -1499,7 +1586,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enableDialinPermissionCheck")
     def enable_dialin_permission_check(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable Dial In Permission Check - Default value: `false`
+        Enable Dial In Permission Check
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_dialin_permission_check")
 
@@ -1515,7 +1603,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enableFailedAuthProtection")
     def enable_failed_auth_protection(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+        Enable prevent AD account lockout due to too many bad password attempts
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_failed_auth_protection")
 
@@ -1523,7 +1612,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enableMachineAccess")
     def enable_machine_access(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable Machine Access - Default value: `true`
+        Enable Machine Access
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_machine_access")
 
@@ -1531,7 +1621,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enableMachineAuth")
     def enable_machine_auth(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable Machine Authentication - Default value: `true`
+        Enable Machine Authentication
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_machine_auth")
 
@@ -1539,7 +1630,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enablePassChange")
     def enable_pass_change(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable Password Change - Default value: `true`
+        Enable Password Change
+          - Default value: `true`
         """
         return pulumi.get(self, "enable_pass_change")
 
@@ -1547,7 +1639,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="enableRewrites")
     def enable_rewrites(self) -> pulumi.Output[_builtins.bool]:
         """
-        Enable Rewrites - Default value: `false`
+        Enable Rewrites
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_rewrites")
 
@@ -1555,7 +1648,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="failedAuthThreshold")
     def failed_auth_threshold(self) -> pulumi.Output[_builtins.int]:
         """
-        Number of bad password attempts - Default value: `5`
+        Number of bad password attempts
+          - Default value: `5`
         """
         return pulumi.get(self, "failed_auth_threshold")
 
@@ -1579,7 +1673,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="identityNotInAdBehaviour")
     def identity_not_in_ad_behaviour(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+        Identity Not In AD Behaviour
+          - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         """
         return pulumi.get(self, "identity_not_in_ad_behaviour")
 
@@ -1627,7 +1722,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="plaintextAuth")
     def plaintext_auth(self) -> pulumi.Output[_builtins.bool]:
         """
-        Plain Text Authentication - Default value: `false`
+        Plain Text Authentication
+          - Default value: `false`
         """
         return pulumi.get(self, "plaintext_auth")
 
@@ -1643,7 +1739,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter
     def schema(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+        Schema
+          - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         """
         return pulumi.get(self, "schema")
 
@@ -1675,7 +1772,8 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     @pulumi.getter(name="unreachableDomainsBehaviour")
     def unreachable_domains_behaviour(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+        Unreachable Domains Behaviour
+          - Choices: `PROCEED`, `DROP`
         """
         return pulumi.get(self, "unreachable_domains_behaviour")
 

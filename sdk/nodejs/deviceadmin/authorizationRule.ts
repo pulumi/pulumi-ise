@@ -71,71 +71,70 @@ export class AuthorizationRule extends pulumi.CustomResource {
     /**
      * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      */
-    public readonly childrens!: pulumi.Output<outputs.deviceadmin.AuthorizationRuleChildren[] | undefined>;
+    declare public readonly childrens: pulumi.Output<outputs.deviceadmin.AuthorizationRuleChildren[] | undefined>;
     /**
      * Command sets enforce the specified list of commands that can be executed by a device administrator
      */
-    public readonly commandSets!: pulumi.Output<string[] | undefined>;
+    declare public readonly commandSets: pulumi.Output<string[] | undefined>;
     /**
      * Dictionary attribute name
      */
-    public readonly conditionAttributeName!: pulumi.Output<string | undefined>;
+    declare public readonly conditionAttributeName: pulumi.Output<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    public readonly conditionAttributeValue!: pulumi.Output<string | undefined>;
+    declare public readonly conditionAttributeValue: pulumi.Output<string | undefined>;
     /**
      * Dictionary name
      */
-    public readonly conditionDictionaryName!: pulumi.Output<string | undefined>;
+    declare public readonly conditionDictionaryName: pulumi.Output<string | undefined>;
     /**
      * Dictionary value
      */
-    public readonly conditionDictionaryValue!: pulumi.Output<string | undefined>;
+    declare public readonly conditionDictionaryValue: pulumi.Output<string | undefined>;
     /**
      * UUID for condition
      */
-    public readonly conditionId!: pulumi.Output<string | undefined>;
+    declare public readonly conditionId: pulumi.Output<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    public readonly conditionIsNegate!: pulumi.Output<boolean | undefined>;
+    declare public readonly conditionIsNegate: pulumi.Output<boolean | undefined>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
-    public readonly conditionOperator!: pulumi.Output<string | undefined>;
+    declare public readonly conditionOperator: pulumi.Output<string | undefined>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
-    public readonly conditionType!: pulumi.Output<string | undefined>;
+    declare public readonly conditionType: pulumi.Output<string | undefined>;
     /**
      * Indicates if this rule is the default one
      */
-    public readonly default!: pulumi.Output<boolean | undefined>;
+    declare public readonly default: pulumi.Output<boolean | undefined>;
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Policy set ID
      */
-    public readonly policySetId!: pulumi.Output<string>;
+    declare public readonly policySetId: pulumi.Output<string>;
     /**
      * Device admin profiles control the initial login session of the device administrator
      */
-    public readonly profile!: pulumi.Output<string | undefined>;
+    declare public readonly profile: pulumi.Output<string | undefined>;
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    public readonly rank!: pulumi.Output<number | undefined>;
+    declare public readonly rank: pulumi.Output<number | undefined>;
     /**
-     * The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      */
-    public readonly state!: pulumi.Output<string | undefined>;
+    declare public readonly state: pulumi.Output<string | undefined>;
 
     /**
      * Create a AuthorizationRule resource with the given unique name, arguments, and options.
@@ -150,43 +149,43 @@ export class AuthorizationRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthorizationRuleState | undefined;
-            resourceInputs["childrens"] = state ? state.childrens : undefined;
-            resourceInputs["commandSets"] = state ? state.commandSets : undefined;
-            resourceInputs["conditionAttributeName"] = state ? state.conditionAttributeName : undefined;
-            resourceInputs["conditionAttributeValue"] = state ? state.conditionAttributeValue : undefined;
-            resourceInputs["conditionDictionaryName"] = state ? state.conditionDictionaryName : undefined;
-            resourceInputs["conditionDictionaryValue"] = state ? state.conditionDictionaryValue : undefined;
-            resourceInputs["conditionId"] = state ? state.conditionId : undefined;
-            resourceInputs["conditionIsNegate"] = state ? state.conditionIsNegate : undefined;
-            resourceInputs["conditionOperator"] = state ? state.conditionOperator : undefined;
-            resourceInputs["conditionType"] = state ? state.conditionType : undefined;
-            resourceInputs["default"] = state ? state.default : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["policySetId"] = state ? state.policySetId : undefined;
-            resourceInputs["profile"] = state ? state.profile : undefined;
-            resourceInputs["rank"] = state ? state.rank : undefined;
-            resourceInputs["state"] = state ? state.state : undefined;
+            resourceInputs["childrens"] = state?.childrens;
+            resourceInputs["commandSets"] = state?.commandSets;
+            resourceInputs["conditionAttributeName"] = state?.conditionAttributeName;
+            resourceInputs["conditionAttributeValue"] = state?.conditionAttributeValue;
+            resourceInputs["conditionDictionaryName"] = state?.conditionDictionaryName;
+            resourceInputs["conditionDictionaryValue"] = state?.conditionDictionaryValue;
+            resourceInputs["conditionId"] = state?.conditionId;
+            resourceInputs["conditionIsNegate"] = state?.conditionIsNegate;
+            resourceInputs["conditionOperator"] = state?.conditionOperator;
+            resourceInputs["conditionType"] = state?.conditionType;
+            resourceInputs["default"] = state?.default;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["policySetId"] = state?.policySetId;
+            resourceInputs["profile"] = state?.profile;
+            resourceInputs["rank"] = state?.rank;
+            resourceInputs["state"] = state?.state;
         } else {
             const args = argsOrState as AuthorizationRuleArgs | undefined;
-            if ((!args || args.policySetId === undefined) && !opts.urn) {
+            if (args?.policySetId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'policySetId'");
             }
-            resourceInputs["childrens"] = args ? args.childrens : undefined;
-            resourceInputs["commandSets"] = args ? args.commandSets : undefined;
-            resourceInputs["conditionAttributeName"] = args ? args.conditionAttributeName : undefined;
-            resourceInputs["conditionAttributeValue"] = args ? args.conditionAttributeValue : undefined;
-            resourceInputs["conditionDictionaryName"] = args ? args.conditionDictionaryName : undefined;
-            resourceInputs["conditionDictionaryValue"] = args ? args.conditionDictionaryValue : undefined;
-            resourceInputs["conditionId"] = args ? args.conditionId : undefined;
-            resourceInputs["conditionIsNegate"] = args ? args.conditionIsNegate : undefined;
-            resourceInputs["conditionOperator"] = args ? args.conditionOperator : undefined;
-            resourceInputs["conditionType"] = args ? args.conditionType : undefined;
-            resourceInputs["default"] = args ? args.default : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["policySetId"] = args ? args.policySetId : undefined;
-            resourceInputs["profile"] = args ? args.profile : undefined;
-            resourceInputs["rank"] = args ? args.rank : undefined;
-            resourceInputs["state"] = args ? args.state : undefined;
+            resourceInputs["childrens"] = args?.childrens;
+            resourceInputs["commandSets"] = args?.commandSets;
+            resourceInputs["conditionAttributeName"] = args?.conditionAttributeName;
+            resourceInputs["conditionAttributeValue"] = args?.conditionAttributeValue;
+            resourceInputs["conditionDictionaryName"] = args?.conditionDictionaryName;
+            resourceInputs["conditionDictionaryValue"] = args?.conditionDictionaryValue;
+            resourceInputs["conditionId"] = args?.conditionId;
+            resourceInputs["conditionIsNegate"] = args?.conditionIsNegate;
+            resourceInputs["conditionOperator"] = args?.conditionOperator;
+            resourceInputs["conditionType"] = args?.conditionType;
+            resourceInputs["default"] = args?.default;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["policySetId"] = args?.policySetId;
+            resourceInputs["profile"] = args?.profile;
+            resourceInputs["rank"] = args?.rank;
+            resourceInputs["state"] = args?.state;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AuthorizationRule.__pulumiType, name, resourceInputs, opts);
@@ -230,15 +229,13 @@ export interface AuthorizationRuleState {
      */
     conditionIsNegate?: pulumi.Input<boolean>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
     conditionOperator?: pulumi.Input<string>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
     conditionType?: pulumi.Input<string>;
     /**
@@ -262,7 +259,8 @@ export interface AuthorizationRuleState {
      */
     rank?: pulumi.Input<number>;
     /**
-     * The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      */
     state?: pulumi.Input<string>;
 }
@@ -304,15 +302,13 @@ export interface AuthorizationRuleArgs {
      */
     conditionIsNegate?: pulumi.Input<boolean>;
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      */
     conditionOperator?: pulumi.Input<string>;
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
     conditionType?: pulumi.Input<string>;
     /**
@@ -336,7 +332,8 @@ export interface AuthorizationRuleArgs {
      */
     rank?: pulumi.Input<number>;
     /**
-     * The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      */
     state?: pulumi.Input<string>;
 }

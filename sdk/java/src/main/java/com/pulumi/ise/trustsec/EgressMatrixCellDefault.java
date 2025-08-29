@@ -67,14 +67,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault")
 public class EgressMatrixCellDefault extends com.pulumi.resources.CustomResource {
     /**
-     * Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     * Can be used only if sgacls not specified. Final Catch All Rule
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      * 
      */
     @Export(name="defaultRule", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultRule;
 
     /**
-     * @return Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     * @return Can be used only if sgacls not specified. Final Catch All Rule
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      * 
      */
     public Output<Optional<String>> defaultRule() {
@@ -95,14 +97,18 @@ public class EgressMatrixCellDefault extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.description);
     }
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      * 
      */
     @Export(name="matrixCellStatus", refs={String.class}, tree="[0]")
     private Output<String> matrixCellStatus;
 
     /**
-     * @return Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * @return Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      * 
      */
     public Output<String> matrixCellStatus() {

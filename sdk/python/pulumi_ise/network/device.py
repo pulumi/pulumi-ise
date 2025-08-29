@@ -70,26 +70,33 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
-        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
+                 - Choices: `ASCII`, `HEXADECIMAL`
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
-        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
+                 - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
-        :param pulumi.Input[_builtins.int] coa_port: CoA port - Default value: `1700`
+        :param pulumi.Input[_builtins.int] coa_port: CoA port
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[_builtins.str] model_name: Model name
         :param pulumi.Input[_builtins.str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
-        :param pulumi.Input[_builtins.str] profile_name: Profile name - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] profile_name: Profile name
+                 - Default value: `Cisco`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
-        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
+                 - Range: `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
-        :param pulumi.Input[_builtins.str] snmp_version: SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        :param pulumi.Input[_builtins.str] snmp_version: SNMP version
+                 - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
-        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
+                 - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
@@ -106,7 +113,8 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
-        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
+                 - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         pulumi.set(__self__, "ips", ips)
         if authentication_dtls_required is not None:
@@ -256,7 +264,8 @@ class DeviceArgs:
     @pulumi.getter(name="authenticationEncryptionKeyFormat")
     def authentication_encryption_key_format(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        Key input format
+          - Choices: `ASCII`, `HEXADECIMAL`
         """
         return pulumi.get(self, "authentication_encryption_key_format")
 
@@ -280,7 +289,8 @@ class DeviceArgs:
     @pulumi.getter(name="authenticationNetworkProtocol")
     def authentication_network_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        Network protocol
+          - Choices: `RADIUS`, `TACACS_PLUS`
         """
         return pulumi.get(self, "authentication_network_protocol")
 
@@ -316,7 +326,8 @@ class DeviceArgs:
     @pulumi.getter(name="coaPort")
     def coa_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        CoA port - Default value: `1700`
+        CoA port
+          - Default value: `1700`
         """
         return pulumi.get(self, "coa_port")
 
@@ -388,7 +399,8 @@ class DeviceArgs:
     @pulumi.getter(name="profileName")
     def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Profile name - Default value: `Cisco`
+        Profile name
+          - Default value: `Cisco`
         """
         return pulumi.get(self, "profile_name")
 
@@ -436,7 +448,8 @@ class DeviceArgs:
     @pulumi.getter(name="snmpPollingInterval")
     def snmp_polling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        SNMP Polling Interval in seconds - Range: `600`-`86400`
+        SNMP Polling Interval in seconds
+          - Range: `600`-`86400`
         """
         return pulumi.get(self, "snmp_polling_interval")
 
@@ -460,7 +473,8 @@ class DeviceArgs:
     @pulumi.getter(name="snmpVersion")
     def snmp_version(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        SNMP version
+          - Choices: `ONE`, `TWO_C`, `THREE`
         """
         return pulumi.get(self, "snmp_version")
 
@@ -484,7 +498,8 @@ class DeviceArgs:
     @pulumi.getter(name="tacacsConnectModeOptions")
     def tacacs_connect_mode_options(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        Connect mode options
+          - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         """
         return pulumi.get(self, "tacacs_connect_mode_options")
 
@@ -688,7 +703,8 @@ class DeviceArgs:
     @pulumi.getter(name="trustsecSendConfigurationToDeviceUsing")
     def trustsec_send_configuration_to_device_using(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        Send configuration to device using
+          - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         return pulumi.get(self, "trustsec_send_configuration_to_device_using")
 
@@ -748,27 +764,34 @@ class _DeviceState:
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
-        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
+                 - Choices: `ASCII`, `HEXADECIMAL`
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
-        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
+                 - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
-        :param pulumi.Input[_builtins.int] coa_port: CoA port - Default value: `1700`
+        :param pulumi.Input[_builtins.int] coa_port: CoA port
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]] ips: List of IP subnets
         :param pulumi.Input[_builtins.str] model_name: Model name
         :param pulumi.Input[_builtins.str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
-        :param pulumi.Input[_builtins.str] profile_name: Profile name - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] profile_name: Profile name
+                 - Default value: `Cisco`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
-        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
+                 - Range: `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
-        :param pulumi.Input[_builtins.str] snmp_version: SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        :param pulumi.Input[_builtins.str] snmp_version: SNMP version
+                 - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
-        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
+                 - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
@@ -785,7 +808,8 @@ class _DeviceState:
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
-        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
+                 - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         if authentication_dtls_required is not None:
             pulumi.set(__self__, "authentication_dtls_required", authentication_dtls_required)
@@ -924,7 +948,8 @@ class _DeviceState:
     @pulumi.getter(name="authenticationEncryptionKeyFormat")
     def authentication_encryption_key_format(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        Key input format
+          - Choices: `ASCII`, `HEXADECIMAL`
         """
         return pulumi.get(self, "authentication_encryption_key_format")
 
@@ -948,7 +973,8 @@ class _DeviceState:
     @pulumi.getter(name="authenticationNetworkProtocol")
     def authentication_network_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        Network protocol
+          - Choices: `RADIUS`, `TACACS_PLUS`
         """
         return pulumi.get(self, "authentication_network_protocol")
 
@@ -984,7 +1010,8 @@ class _DeviceState:
     @pulumi.getter(name="coaPort")
     def coa_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        CoA port - Default value: `1700`
+        CoA port
+          - Default value: `1700`
         """
         return pulumi.get(self, "coa_port")
 
@@ -1068,7 +1095,8 @@ class _DeviceState:
     @pulumi.getter(name="profileName")
     def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Profile name - Default value: `Cisco`
+        Profile name
+          - Default value: `Cisco`
         """
         return pulumi.get(self, "profile_name")
 
@@ -1116,7 +1144,8 @@ class _DeviceState:
     @pulumi.getter(name="snmpPollingInterval")
     def snmp_polling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        SNMP Polling Interval in seconds - Range: `600`-`86400`
+        SNMP Polling Interval in seconds
+          - Range: `600`-`86400`
         """
         return pulumi.get(self, "snmp_polling_interval")
 
@@ -1140,7 +1169,8 @@ class _DeviceState:
     @pulumi.getter(name="snmpVersion")
     def snmp_version(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        SNMP version
+          - Choices: `ONE`, `TWO_C`, `THREE`
         """
         return pulumi.get(self, "snmp_version")
 
@@ -1164,7 +1194,8 @@ class _DeviceState:
     @pulumi.getter(name="tacacsConnectModeOptions")
     def tacacs_connect_mode_options(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        Connect mode options
+          - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         """
         return pulumi.get(self, "tacacs_connect_mode_options")
 
@@ -1368,7 +1399,8 @@ class _DeviceState:
     @pulumi.getter(name="trustsecSendConfigurationToDeviceUsing")
     def trustsec_send_configuration_to_device_using(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        Send configuration to device using
+          - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         return pulumi.get(self, "trustsec_send_configuration_to_device_using")
 
@@ -1494,27 +1526,34 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
-        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
+                 - Choices: `ASCII`, `HEXADECIMAL`
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
-        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
+                 - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
-        :param pulumi.Input[_builtins.int] coa_port: CoA port - Default value: `1700`
+        :param pulumi.Input[_builtins.int] coa_port: CoA port
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
         :param pulumi.Input[_builtins.str] model_name: Model name
         :param pulumi.Input[_builtins.str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
-        :param pulumi.Input[_builtins.str] profile_name: Profile name - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] profile_name: Profile name
+                 - Default value: `Cisco`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
-        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
+                 - Range: `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
-        :param pulumi.Input[_builtins.str] snmp_version: SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        :param pulumi.Input[_builtins.str] snmp_version: SNMP version
+                 - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
-        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
+                 - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
@@ -1531,7 +1570,8 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
-        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
+                 - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         ...
     @overload
@@ -1774,27 +1814,34 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
-        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
+                 - Choices: `ASCII`, `HEXADECIMAL`
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
-        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
+                 - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
-        :param pulumi.Input[_builtins.int] coa_port: CoA port - Default value: `1700`
+        :param pulumi.Input[_builtins.int] coa_port: CoA port
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
         :param pulumi.Input[_builtins.str] model_name: Model name
         :param pulumi.Input[_builtins.str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
-        :param pulumi.Input[_builtins.str] profile_name: Profile name - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] profile_name: Profile name
+                 - Default value: `Cisco`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
-        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
+                 - Range: `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
-        :param pulumi.Input[_builtins.str] snmp_version: SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        :param pulumi.Input[_builtins.str] snmp_version: SNMP version
+                 - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
-        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
+                 - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
@@ -1811,7 +1858,8 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
-        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
+                 - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1897,7 +1945,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="authenticationEncryptionKeyFormat")
     def authentication_encryption_key_format(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        Key input format
+          - Choices: `ASCII`, `HEXADECIMAL`
         """
         return pulumi.get(self, "authentication_encryption_key_format")
 
@@ -1913,7 +1962,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="authenticationNetworkProtocol")
     def authentication_network_protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        Network protocol
+          - Choices: `RADIUS`, `TACACS_PLUS`
         """
         return pulumi.get(self, "authentication_network_protocol")
 
@@ -1937,7 +1987,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="coaPort")
     def coa_port(self) -> pulumi.Output[_builtins.int]:
         """
-        CoA port - Default value: `1700`
+        CoA port
+          - Default value: `1700`
         """
         return pulumi.get(self, "coa_port")
 
@@ -1993,7 +2044,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="profileName")
     def profile_name(self) -> pulumi.Output[_builtins.str]:
         """
-        Profile name - Default value: `Cisco`
+        Profile name
+          - Default value: `Cisco`
         """
         return pulumi.get(self, "profile_name")
 
@@ -2025,7 +2077,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="snmpPollingInterval")
     def snmp_polling_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        SNMP Polling Interval in seconds - Range: `600`-`86400`
+        SNMP Polling Interval in seconds
+          - Range: `600`-`86400`
         """
         return pulumi.get(self, "snmp_polling_interval")
 
@@ -2041,7 +2094,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="snmpVersion")
     def snmp_version(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        SNMP version
+          - Choices: `ONE`, `TWO_C`, `THREE`
         """
         return pulumi.get(self, "snmp_version")
 
@@ -2057,7 +2111,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="tacacsConnectModeOptions")
     def tacacs_connect_mode_options(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        Connect mode options
+          - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         """
         return pulumi.get(self, "tacacs_connect_mode_options")
 
@@ -2193,7 +2248,8 @@ class Device(pulumi.CustomResource):
     @pulumi.getter(name="trustsecSendConfigurationToDeviceUsing")
     def trustsec_send_configuration_to_device_using(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        Send configuration to device using
+          - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         """
         return pulumi.get(self, "trustsec_send_configuration_to_device_using")
 

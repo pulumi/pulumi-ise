@@ -406,14 +406,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapFastEapGtcPwdChange);
     }
     /**
-     * EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+     * EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="eapFastEapGtcPwdChangeRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> eapFastEapGtcPwdChangeRetries;
 
     /**
-     * @return EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`. - Range: `0`-`3`
+     * @return EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Optional<Integer>> eapFastEapGtcPwdChangeRetries() {
@@ -448,14 +450,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapFastEapMsChapV2PwdChange);
     }
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="eapFastEapMsChapV2PwdChangeRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> eapFastEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Optional<Integer>> eapFastEapMsChapV2PwdChangeRetries() {
@@ -532,16 +536,14 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapFastPacsAllowAuthenticatedProvisioning);
     }
     /**
-     * Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-     * `true`.
+     * Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
      * 
      */
     @Export(name="eapFastPacsAllowClientCert", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> eapFastPacsAllowClientCert;
 
     /**
-     * @return Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is
-     * `true`.
+     * @return Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
      * 
      */
     public Output<Optional<Boolean>> eapFastPacsAllowClientCert() {
@@ -576,16 +578,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapFastPacsAuthorizationPacTtl);
     }
     /**
-     * Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-     * `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     @Export(name="eapFastPacsAuthorizationPacTtlUnit", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> eapFastPacsAuthorizationPacTtlUnit;
 
     /**
-     * @return Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`. - Choices:
-     * `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * @return Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     public Output<Optional<String>> eapFastPacsAuthorizationPacTtlUnit() {
@@ -606,32 +608,30 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapFastPacsMachinePacTtl);
     }
     /**
-     * Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     @Export(name="eapFastPacsMachinePacTtlUnit", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> eapFastPacsMachinePacTtlUnit;
 
     /**
-     * @return Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * @return Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     public Output<Optional<String>> eapFastPacsMachinePacTtlUnit() {
         return Codegen.optional(this.eapFastPacsMachinePacTtlUnit);
     }
     /**
-     * Server returns access accept after authenticated provisioning. Is required only if
-     * `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
      * 
      */
     @Export(name="eapFastPacsServerReturns", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> eapFastPacsServerReturns;
 
     /**
-     * @return Server returns access accept after authenticated provisioning. Is required only if
-     * `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
      * 
      */
     public Output<Optional<Boolean>> eapFastPacsServerReturns() {
@@ -666,30 +666,32 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapFastPacsTunnelPacTtl);
     }
     /**
-     * PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-     * `HOURS`, `DAYS`, `WEEKS`
+     * PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     @Export(name="eapFastPacsTunnelPacTtlUnit", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> eapFastPacsTunnelPacTtlUnit;
 
     /**
-     * @return PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-     * `HOURS`, `DAYS`, `WEEKS`
+     * @return PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     public Output<Optional<String>> eapFastPacsTunnelPacTtlUnit() {
         return Codegen.optional(this.eapFastPacsTunnelPacTtlUnit);
     }
     /**
-     * Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+     * Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+     *   - Range: `1`-`100`
      * 
      */
     @Export(name="eapFastPacsUseProactivePacUpdatePercentage", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> eapFastPacsUseProactivePacUpdatePercentage;
 
     /**
-     * @return Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`. - Range: `1`-`100`
+     * @return Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+     *   - Range: `1`-`100`
      * 
      */
     public Output<Optional<Integer>> eapFastPacsUseProactivePacUpdatePercentage() {
@@ -752,14 +754,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return this.eapTlsLBit;
     }
     /**
-     * Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+     * Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     *   - Range: `1`-`100`
      * 
      */
     @Export(name="eapTlsSessionTicketPercentage", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> eapTlsSessionTicketPercentage;
 
     /**
-     * @return Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Range: `1`-`100`
+     * @return Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     *   - Range: `1`-`100`
      * 
      */
     public Output<Optional<Integer>> eapTlsSessionTicketPercentage() {
@@ -780,16 +784,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapTlsSessionTicketTtl);
     }
     /**
-     * Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     @Export(name="eapTlsSessionTicketTtlUnit", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> eapTlsSessionTicketTtlUnit;
 
     /**
-     * @return Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * @return Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
     public Output<Optional<String>> eapTlsSessionTicketTtlUnit() {
@@ -852,14 +856,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.eapTtlsEapMsChapV2PwdChange);
     }
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="eapTtlsEapMsChapV2PwdChangeRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> eapTtlsEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Optional<Integer>> eapTtlsEapMsChapV2PwdChangeRetries() {
@@ -950,14 +956,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.peapAllowPeapEapGtcPwdChange);
     }
     /**
-     * PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+     * PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="peapAllowPeapEapGtcPwdChangeRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> peapAllowPeapEapGtcPwdChangeRetries;
 
     /**
-     * @return PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`. - Range: `0`-`3`
+     * @return PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Optional<Integer>> peapAllowPeapEapGtcPwdChangeRetries() {
@@ -992,16 +1000,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.peapAllowPeapEapMsChapV2PwdChange);
     }
     /**
-     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-     * `0`-`3`
+     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="peapAllowPeapEapMsChapV2PwdChangeRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> peapAllowPeapEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`. - Range:
-     * `0`-`3`
+     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Optional<Integer>> peapAllowPeapEapMsChapV2PwdChangeRetries() {
@@ -1050,14 +1058,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.peapPeapV0);
     }
     /**
-     * Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+     * Preferred EAP protocol
+     *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      * 
      */
     @Export(name="preferredEapProtocol", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> preferredEapProtocol;
 
     /**
-     * @return Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+     * @return Preferred EAP protocol
+     *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      * 
      */
     public Output<Optional<String>> preferredEapProtocol() {
@@ -1176,14 +1186,16 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.teapEapMsChapV2PwdChange);
     }
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="teapEapMsChapV2PwdChangeRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> teapEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`. - Range: `0`-`3`
+     * @return EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Optional<Integer>> teapEapMsChapV2PwdChangeRetries() {

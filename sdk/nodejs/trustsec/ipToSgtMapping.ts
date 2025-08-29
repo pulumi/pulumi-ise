@@ -60,35 +60,36 @@ export class IpToSgtMapping extends pulumi.CustomResource {
     /**
      * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      */
-    public readonly deployTo!: pulumi.Output<string | undefined>;
+    declare public readonly deployTo: pulumi.Output<string | undefined>;
     /**
-     * Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      */
-    public readonly deployType!: pulumi.Output<string | undefined>;
+    declare public readonly deployType: pulumi.Output<string | undefined>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Mandatory if `hostName` is empty
      */
-    public readonly hostIp!: pulumi.Output<string | undefined>;
+    declare public readonly hostIp: pulumi.Output<string | undefined>;
     /**
      * Mandatory if `hostIp` is empty
      */
-    public readonly hostName!: pulumi.Output<string | undefined>;
+    declare public readonly hostName: pulumi.Output<string | undefined>;
     /**
      * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      */
-    public readonly mappingGroup!: pulumi.Output<string | undefined>;
+    declare public readonly mappingGroup: pulumi.Output<string | undefined>;
     /**
      * The name of the IP to SGT mapping
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      */
-    public readonly sgt!: pulumi.Output<string | undefined>;
+    declare public readonly sgt: pulumi.Output<string | undefined>;
 
     /**
      * Create a IpToSgtMapping resource with the given unique name, arguments, and options.
@@ -103,24 +104,24 @@ export class IpToSgtMapping extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IpToSgtMappingState | undefined;
-            resourceInputs["deployTo"] = state ? state.deployTo : undefined;
-            resourceInputs["deployType"] = state ? state.deployType : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["hostIp"] = state ? state.hostIp : undefined;
-            resourceInputs["hostName"] = state ? state.hostName : undefined;
-            resourceInputs["mappingGroup"] = state ? state.mappingGroup : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sgt"] = state ? state.sgt : undefined;
+            resourceInputs["deployTo"] = state?.deployTo;
+            resourceInputs["deployType"] = state?.deployType;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["hostIp"] = state?.hostIp;
+            resourceInputs["hostName"] = state?.hostName;
+            resourceInputs["mappingGroup"] = state?.mappingGroup;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sgt"] = state?.sgt;
         } else {
             const args = argsOrState as IpToSgtMappingArgs | undefined;
-            resourceInputs["deployTo"] = args ? args.deployTo : undefined;
-            resourceInputs["deployType"] = args ? args.deployType : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["hostIp"] = args ? args.hostIp : undefined;
-            resourceInputs["hostName"] = args ? args.hostName : undefined;
-            resourceInputs["mappingGroup"] = args ? args.mappingGroup : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sgt"] = args ? args.sgt : undefined;
+            resourceInputs["deployTo"] = args?.deployTo;
+            resourceInputs["deployType"] = args?.deployType;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["hostIp"] = args?.hostIp;
+            resourceInputs["hostName"] = args?.hostName;
+            resourceInputs["mappingGroup"] = args?.mappingGroup;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sgt"] = args?.sgt;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(IpToSgtMapping.__pulumiType, name, resourceInputs, opts);
@@ -136,7 +137,8 @@ export interface IpToSgtMappingState {
      */
     deployTo?: pulumi.Input<string>;
     /**
-     * Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      */
     deployType?: pulumi.Input<string>;
     /**
@@ -174,7 +176,8 @@ export interface IpToSgtMappingArgs {
      */
     deployTo?: pulumi.Input<string>;
     /**
-     * Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      */
     deployType?: pulumi.Input<string>;
     /**

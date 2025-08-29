@@ -64,7 +64,8 @@ type Repository struct {
 	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path pulumi.StringOutput `pulumi:"path"`
-	// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+	// Protocol
+	//   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
 	Protocol pulumi.StringOutput `pulumi:"protocol"`
 	// Name of the server
 	ServerName pulumi.StringPtrOutput `pulumi:"serverName"`
@@ -116,7 +117,8 @@ type repositoryState struct {
 	Password *string `pulumi:"password"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path *string `pulumi:"path"`
-	// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+	// Protocol
+	//   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
 	Protocol *string `pulumi:"protocol"`
 	// Name of the server
 	ServerName *string `pulumi:"serverName"`
@@ -133,7 +135,8 @@ type RepositoryState struct {
 	Password pulumi.StringPtrInput
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path pulumi.StringPtrInput
-	// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+	// Protocol
+	//   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
 	Protocol pulumi.StringPtrInput
 	// Name of the server
 	ServerName pulumi.StringPtrInput
@@ -154,7 +157,8 @@ type repositoryArgs struct {
 	Password *string `pulumi:"password"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path string `pulumi:"path"`
-	// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+	// Protocol
+	//   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
 	Protocol string `pulumi:"protocol"`
 	// Name of the server
 	ServerName *string `pulumi:"serverName"`
@@ -172,7 +176,8 @@ type RepositoryArgs struct {
 	Password pulumi.StringPtrInput
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path pulumi.StringInput
-	// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+	// Protocol
+	//   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
 	Protocol pulumi.StringInput
 	// Name of the server
 	ServerName pulumi.StringPtrInput
@@ -287,7 +292,8 @@ func (o RepositoryOutput) Path() pulumi.StringOutput {
 	return o.ApplyT(func(v *Repository) pulumi.StringOutput { return v.Path }).(pulumi.StringOutput)
 }
 
-// Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+// Protocol
+//   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
 func (o RepositoryOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v *Repository) pulumi.StringOutput { return v.Protocol }).(pulumi.StringOutput)
 }

@@ -81,14 +81,18 @@ public class DownloadableAcl extends com.pulumi.resources.CustomResource {
         return this.dacl;
     }
     /**
-     * The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      * 
      */
     @Export(name="daclType", refs={String.class}, tree="[0]")
     private Output<String> daclType;
 
     /**
-     * @return The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * @return The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      * 
      */
     public Output<String> daclType() {

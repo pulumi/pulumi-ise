@@ -53,14 +53,14 @@ namespace Pulumi.Ise.IdentityManagement
     public partial class InternalUser : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-        /// from ISE 3.2.
+        /// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         /// </summary>
         [Output("accountNameAlias")]
         public Output<string?> AccountNameAlias { get; private set; } = null!;
 
         /// <summary>
-        /// Requires the user to change the password - Default value: `true`
+        /// Requires the user to change the password
+        ///   - Default value: `true`
         /// </summary>
         [Output("changePassword")]
         public Output<bool> ChangePassword { get; private set; } = null!;
@@ -126,14 +126,15 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string> Password { get; private set; } = null!;
 
         /// <summary>
-        /// The ID store where the internal user's password is kept - Default value: `Internal Users`
+        /// The ID store where the internal user's password is kept
+        ///   - Default value: `Internal Users`
         /// </summary>
         [Output("passwordIdStore")]
         public Output<string> PasswordIdStore { get; private set; } = null!;
 
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-        /// field is only supported from ISE 3.2. - Default value: `false`
+        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        ///   - Default value: `false`
         /// </summary>
         [Output("passwordNeverExpires")]
         public Output<bool> PasswordNeverExpires { get; private set; } = null!;
@@ -185,14 +186,14 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class InternalUserArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-        /// from ISE 3.2.
+        /// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         /// </summary>
         [Input("accountNameAlias")]
         public Input<string>? AccountNameAlias { get; set; }
 
         /// <summary>
-        /// Requires the user to change the password - Default value: `true`
+        /// Requires the user to change the password
+        ///   - Default value: `true`
         /// </summary>
         [Input("changePassword")]
         public Input<bool>? ChangePassword { get; set; }
@@ -258,14 +259,15 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string> Password { get; set; } = null!;
 
         /// <summary>
-        /// The ID store where the internal user's password is kept - Default value: `Internal Users`
+        /// The ID store where the internal user's password is kept
+        ///   - Default value: `Internal Users`
         /// </summary>
         [Input("passwordIdStore")]
         public Input<string>? PasswordIdStore { get; set; }
 
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-        /// field is only supported from ISE 3.2. - Default value: `false`
+        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        ///   - Default value: `false`
         /// </summary>
         [Input("passwordNeverExpires")]
         public Input<bool>? PasswordNeverExpires { get; set; }
@@ -279,14 +281,14 @@ namespace Pulumi.Ise.IdentityManagement
     public sealed class InternalUserState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-        /// from ISE 3.2.
+        /// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         /// </summary>
         [Input("accountNameAlias")]
         public Input<string>? AccountNameAlias { get; set; }
 
         /// <summary>
-        /// Requires the user to change the password - Default value: `true`
+        /// Requires the user to change the password
+        ///   - Default value: `true`
         /// </summary>
         [Input("changePassword")]
         public Input<bool>? ChangePassword { get; set; }
@@ -352,14 +354,15 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Password { get; set; }
 
         /// <summary>
-        /// The ID store where the internal user's password is kept - Default value: `Internal Users`
+        /// The ID store where the internal user's password is kept
+        ///   - Default value: `Internal Users`
         /// </summary>
         [Input("passwordIdStore")]
         public Input<string>? PasswordIdStore { get; set; }
 
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-        /// field is only supported from ISE 3.2. - Default value: `false`
+        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        ///   - Default value: `false`
         /// </summary>
         [Input("passwordNeverExpires")]
         public Input<bool>? PasswordNeverExpires { get; set; }

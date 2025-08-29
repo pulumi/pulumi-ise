@@ -57,13 +57,17 @@ import (
 type EgressMatrixCell struct {
 	pulumi.CustomResourceState
 
-	// Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+	// Can be used only if sgacls not specified.
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	//   - Default value: `NONE`
 	DefaultRule pulumi.StringOutput `pulumi:"defaultRule"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Destination Trustsec Security Group ID
 	DestinationSgtId pulumi.StringOutput `pulumi:"destinationSgtId"`
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringOutput `pulumi:"matrixCellStatus"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayOutput `pulumi:"sgacls"`
@@ -107,13 +111,17 @@ func GetEgressMatrixCell(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering EgressMatrixCell resources.
 type egressMatrixCellState struct {
-	// Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+	// Can be used only if sgacls not specified.
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	//   - Default value: `NONE`
 	DefaultRule *string `pulumi:"defaultRule"`
 	// Description
 	Description *string `pulumi:"description"`
 	// Destination Trustsec Security Group ID
 	DestinationSgtId *string `pulumi:"destinationSgtId"`
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus *string `pulumi:"matrixCellStatus"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
@@ -122,13 +130,17 @@ type egressMatrixCellState struct {
 }
 
 type EgressMatrixCellState struct {
-	// Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+	// Can be used only if sgacls not specified.
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	//   - Default value: `NONE`
 	DefaultRule pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
 	// Destination Trustsec Security Group ID
 	DestinationSgtId pulumi.StringPtrInput
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringPtrInput
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayInput
@@ -141,13 +153,17 @@ func (EgressMatrixCellState) ElementType() reflect.Type {
 }
 
 type egressMatrixCellArgs struct {
-	// Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+	// Can be used only if sgacls not specified.
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	//   - Default value: `NONE`
 	DefaultRule *string `pulumi:"defaultRule"`
 	// Description
 	Description *string `pulumi:"description"`
 	// Destination Trustsec Security Group ID
 	DestinationSgtId string `pulumi:"destinationSgtId"`
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus *string `pulumi:"matrixCellStatus"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
@@ -157,13 +173,17 @@ type egressMatrixCellArgs struct {
 
 // The set of arguments for constructing a EgressMatrixCell resource.
 type EgressMatrixCellArgs struct {
-	// Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+	// Can be used only if sgacls not specified.
+	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+	//   - Default value: `NONE`
 	DefaultRule pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
 	// Destination Trustsec Security Group ID
 	DestinationSgtId pulumi.StringInput
-	// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+	// Matrix Cell Status
+	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringPtrInput
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayInput
@@ -258,7 +278,9 @@ func (o EgressMatrixCellOutput) ToEgressMatrixCellOutputWithContext(ctx context.
 	return o
 }
 
-// Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+// Can be used only if sgacls not specified.
+//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+//   - Default value: `NONE`
 func (o EgressMatrixCellOutput) DefaultRule() pulumi.StringOutput {
 	return o.ApplyT(func(v *EgressMatrixCell) pulumi.StringOutput { return v.DefaultRule }).(pulumi.StringOutput)
 }
@@ -273,7 +295,9 @@ func (o EgressMatrixCellOutput) DestinationSgtId() pulumi.StringOutput {
 	return o.ApplyT(func(v *EgressMatrixCell) pulumi.StringOutput { return v.DestinationSgtId }).(pulumi.StringOutput)
 }
 
-// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+// Matrix Cell Status
+//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+//   - Default value: `DISABLED`
 func (o EgressMatrixCellOutput) MatrixCellStatus() pulumi.StringOutput {
 	return o.ApplyT(func(v *EgressMatrixCell) pulumi.StringOutput { return v.MatrixCellStatus }).(pulumi.StringOutput)
 }

@@ -95,17 +95,15 @@ namespace Pulumi.Ise.DeviceAdmin
         public Output<bool?> ConditionIsNegate { get; private set; } = null!;
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Output("conditionOperator")]
         public Output<string?> ConditionOperator { get; private set; } = null!;
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        /// `ConditionOrBlock`, `ConditionReference`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Output("conditionType")]
         public Output<string?> ConditionType { get; private set; } = null!;
@@ -147,8 +145,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Output<string> ServiceName { get; private set; } = null!;
 
         /// <summary>
-        /// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-        /// `monitor`
+        /// The state that the policy set is in. A disabled policy set cannot be matched.
+        ///   - Choices: `disabled`, `enabled`, `monitor`
         /// </summary>
         [Output("state")]
         public Output<string?> State { get; private set; } = null!;
@@ -248,17 +246,15 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<bool>? ConditionIsNegate { get; set; }
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        /// `ConditionOrBlock`, `ConditionReference`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Input("conditionType")]
         public Input<string>? ConditionType { get; set; }
@@ -300,8 +296,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string> ServiceName { get; set; } = null!;
 
         /// <summary>
-        /// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-        /// `monitor`
+        /// The state that the policy set is in. A disabled policy set cannot be matched.
+        ///   - Choices: `disabled`, `enabled`, `monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }
@@ -363,17 +359,15 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<bool>? ConditionIsNegate { get; set; }
 
         /// <summary>
-        /// Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        /// `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        /// `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        /// Equality operator
+        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
 
         /// <summary>
-        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        /// additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        /// `ConditionOrBlock`, `ConditionReference`
+        /// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Input("conditionType")]
         public Input<string>? ConditionType { get; set; }
@@ -415,8 +409,8 @@ namespace Pulumi.Ise.DeviceAdmin
         public Input<string>? ServiceName { get; set; }
 
         /// <summary>
-        /// The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-        /// `monitor`
+        /// The state that the policy set is in. A disabled policy set cannot be matched.
+        ///   - Choices: `disabled`, `enabled`, `monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }
