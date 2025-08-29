@@ -55,8 +55,8 @@ export class AuthorizationExceptionRuleUpdateRanks extends pulumi.CustomResource
     /**
      * Policy set ID
      */
-    public readonly policySetId!: pulumi.Output<string>;
-    public readonly rules!: pulumi.Output<outputs.networkaccess.AuthorizationExceptionRuleUpdateRanksRule[] | undefined>;
+    declare public readonly policySetId: pulumi.Output<string>;
+    declare public readonly rules: pulumi.Output<outputs.networkaccess.AuthorizationExceptionRuleUpdateRanksRule[] | undefined>;
 
     /**
      * Create a AuthorizationExceptionRuleUpdateRanks resource with the given unique name, arguments, and options.
@@ -71,15 +71,15 @@ export class AuthorizationExceptionRuleUpdateRanks extends pulumi.CustomResource
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthorizationExceptionRuleUpdateRanksState | undefined;
-            resourceInputs["policySetId"] = state ? state.policySetId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["policySetId"] = state?.policySetId;
+            resourceInputs["rules"] = state?.rules;
         } else {
             const args = argsOrState as AuthorizationExceptionRuleUpdateRanksArgs | undefined;
-            if ((!args || args.policySetId === undefined) && !opts.urn) {
+            if (args?.policySetId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'policySetId'");
             }
-            resourceInputs["policySetId"] = args ? args.policySetId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["policySetId"] = args?.policySetId;
+            resourceInputs["rules"] = args?.rules;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AuthorizationExceptionRuleUpdateRanks.__pulumiType, name, resourceInputs, opts);

@@ -81,14 +81,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      * 
      */
     @Import(name="authenticationEncryptionKeyFormat")
     private @Nullable Output<String> authenticationEncryptionKeyFormat;
 
     /**
-     * @return Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * @return Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      * 
      */
     public Optional<Output<String>> authenticationEncryptionKeyFormat() {
@@ -111,14 +113,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      * 
      */
     @Import(name="authenticationNetworkProtocol")
     private @Nullable Output<String> authenticationNetworkProtocol;
 
     /**
-     * @return Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * @return Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      * 
      */
     public Optional<Output<String>> authenticationNetworkProtocol() {
@@ -156,14 +160,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * CoA port - Default value: `1700`
+     * CoA port
+     *   - Default value: `1700`
      * 
      */
     @Import(name="coaPort")
     private @Nullable Output<Integer> coaPort;
 
     /**
-     * @return CoA port - Default value: `1700`
+     * @return CoA port
+     *   - Default value: `1700`
      * 
      */
     public Optional<Output<Integer>> coaPort() {
@@ -261,14 +267,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Profile name - Default value: `Cisco`
+     * Profile name
+     *   - Default value: `Cisco`
      * 
      */
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
     /**
-     * @return Profile name - Default value: `Cisco`
+     * @return Profile name
+     *   - Default value: `Cisco`
      * 
      */
     public Optional<Output<String>> profileName() {
@@ -321,14 +329,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      * 
      */
     @Import(name="snmpPollingInterval")
     private @Nullable Output<Integer> snmpPollingInterval;
 
     /**
-     * @return SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * @return SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      * 
      */
     public Optional<Output<Integer>> snmpPollingInterval() {
@@ -351,14 +361,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      * 
      */
     @Import(name="snmpVersion")
     private @Nullable Output<String> snmpVersion;
 
     /**
-     * @return SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * @return SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      * 
      */
     public Optional<Output<String>> snmpVersion() {
@@ -381,14 +393,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      * 
      */
     @Import(name="tacacsConnectModeOptions")
     private @Nullable Output<String> tacacsConnectModeOptions;
 
     /**
-     * @return Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * @return Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      * 
      */
     public Optional<Output<String>> tacacsConnectModeOptions() {
@@ -636,14 +650,16 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      * 
      */
     @Import(name="trustsecSendConfigurationToDeviceUsing")
     private @Nullable Output<String> trustsecSendConfigurationToDeviceUsing;
 
     /**
-     * @return Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * @return Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      * 
      */
     public Optional<Output<String>> trustsecSendConfigurationToDeviceUsing() {
@@ -800,7 +816,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authenticationEncryptionKeyFormat Key input format - Choices: `ASCII`, `HEXADECIMAL`
+         * @param authenticationEncryptionKeyFormat Key input format
+         *   - Choices: `ASCII`, `HEXADECIMAL`
          * 
          * @return builder
          * 
@@ -811,7 +828,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authenticationEncryptionKeyFormat Key input format - Choices: `ASCII`, `HEXADECIMAL`
+         * @param authenticationEncryptionKeyFormat Key input format
+         *   - Choices: `ASCII`, `HEXADECIMAL`
          * 
          * @return builder
          * 
@@ -842,7 +860,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authenticationNetworkProtocol Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+         * @param authenticationNetworkProtocol Network protocol
+         *   - Choices: `RADIUS`, `TACACS_PLUS`
          * 
          * @return builder
          * 
@@ -853,7 +872,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authenticationNetworkProtocol Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+         * @param authenticationNetworkProtocol Network protocol
+         *   - Choices: `RADIUS`, `TACACS_PLUS`
          * 
          * @return builder
          * 
@@ -905,7 +925,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param coaPort CoA port - Default value: `1700`
+         * @param coaPort CoA port
+         *   - Default value: `1700`
          * 
          * @return builder
          * 
@@ -916,7 +937,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param coaPort CoA port - Default value: `1700`
+         * @param coaPort CoA port
+         *   - Default value: `1700`
          * 
          * @return builder
          * 
@@ -1072,7 +1094,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param profileName Profile name - Default value: `Cisco`
+         * @param profileName Profile name
+         *   - Default value: `Cisco`
          * 
          * @return builder
          * 
@@ -1083,7 +1106,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param profileName Profile name - Default value: `Cisco`
+         * @param profileName Profile name
+         *   - Default value: `Cisco`
          * 
          * @return builder
          * 
@@ -1156,7 +1180,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snmpPollingInterval SNMP Polling Interval in seconds - Range: `600`-`86400`
+         * @param snmpPollingInterval SNMP Polling Interval in seconds
+         *   - Range: `600`-`86400`
          * 
          * @return builder
          * 
@@ -1167,7 +1192,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snmpPollingInterval SNMP Polling Interval in seconds - Range: `600`-`86400`
+         * @param snmpPollingInterval SNMP Polling Interval in seconds
+         *   - Range: `600`-`86400`
          * 
          * @return builder
          * 
@@ -1198,7 +1224,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snmpVersion SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+         * @param snmpVersion SNMP version
+         *   - Choices: `ONE`, `TWO_C`, `THREE`
          * 
          * @return builder
          * 
@@ -1209,7 +1236,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snmpVersion SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+         * @param snmpVersion SNMP version
+         *   - Choices: `ONE`, `TWO_C`, `THREE`
          * 
          * @return builder
          * 
@@ -1240,7 +1268,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tacacsConnectModeOptions Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+         * @param tacacsConnectModeOptions Connect mode options
+         *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
          * 
          * @return builder
          * 
@@ -1251,7 +1280,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tacacsConnectModeOptions Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+         * @param tacacsConnectModeOptions Connect mode options
+         *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
          * 
          * @return builder
          * 
@@ -1597,7 +1627,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param trustsecSendConfigurationToDeviceUsing Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+         * @param trustsecSendConfigurationToDeviceUsing Send configuration to device using
+         *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
          * 
          * @return builder
          * 
@@ -1608,7 +1639,8 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param trustsecSendConfigurationToDeviceUsing Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+         * @param trustsecSendConfigurationToDeviceUsing Send configuration to device using
+         *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
          * 
          * @return builder
          * 

@@ -31,14 +31,16 @@ public final class EndpointCustomAttributeState extends com.pulumi.resources.Res
     }
 
     /**
-     * Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      * 
      */
     @Import(name="attributeType")
     private @Nullable Output<String> attributeType;
 
     /**
-     * @return Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+     * @return Attribute type
+     *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      * 
      */
     public Optional<Output<String>> attributeType() {
@@ -92,7 +94,8 @@ public final class EndpointCustomAttributeState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param attributeType Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+         * @param attributeType Attribute type
+         *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
          * 
          * @return builder
          * 
@@ -103,7 +106,8 @@ public final class EndpointCustomAttributeState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param attributeType Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+         * @param attributeType Attribute type
+         *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
          * 
          * @return builder
          * 

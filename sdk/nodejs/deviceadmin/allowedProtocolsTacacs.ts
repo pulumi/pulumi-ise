@@ -61,23 +61,23 @@ export class AllowedProtocolsTacacs extends pulumi.CustomResource {
     /**
      * Allow CHAP
      */
-    public readonly allowChap!: pulumi.Output<boolean>;
+    declare public readonly allowChap: pulumi.Output<boolean>;
     /**
      * Allow MS CHAP v1
      */
-    public readonly allowMsChapV1!: pulumi.Output<boolean>;
+    declare public readonly allowMsChapV1: pulumi.Output<boolean>;
     /**
      * Allow PAP ASCII
      */
-    public readonly allowPapAscii!: pulumi.Output<boolean>;
+    declare public readonly allowPapAscii: pulumi.Output<boolean>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The name of the allowed protocols
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
 
     /**
      * Create a AllowedProtocolsTacacs resource with the given unique name, arguments, and options.
@@ -92,27 +92,27 @@ export class AllowedProtocolsTacacs extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AllowedProtocolsTacacsState | undefined;
-            resourceInputs["allowChap"] = state ? state.allowChap : undefined;
-            resourceInputs["allowMsChapV1"] = state ? state.allowMsChapV1 : undefined;
-            resourceInputs["allowPapAscii"] = state ? state.allowPapAscii : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
+            resourceInputs["allowChap"] = state?.allowChap;
+            resourceInputs["allowMsChapV1"] = state?.allowMsChapV1;
+            resourceInputs["allowPapAscii"] = state?.allowPapAscii;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
         } else {
             const args = argsOrState as AllowedProtocolsTacacsArgs | undefined;
-            if ((!args || args.allowChap === undefined) && !opts.urn) {
+            if (args?.allowChap === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowChap'");
             }
-            if ((!args || args.allowMsChapV1 === undefined) && !opts.urn) {
+            if (args?.allowMsChapV1 === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowMsChapV1'");
             }
-            if ((!args || args.allowPapAscii === undefined) && !opts.urn) {
+            if (args?.allowPapAscii === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowPapAscii'");
             }
-            resourceInputs["allowChap"] = args ? args.allowChap : undefined;
-            resourceInputs["allowMsChapV1"] = args ? args.allowMsChapV1 : undefined;
-            resourceInputs["allowPapAscii"] = args ? args.allowPapAscii : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["allowChap"] = args?.allowChap;
+            resourceInputs["allowMsChapV1"] = args?.allowMsChapV1;
+            resourceInputs["allowPapAscii"] = args?.allowPapAscii;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AllowedProtocolsTacacs.__pulumiType, name, resourceInputs, opts);

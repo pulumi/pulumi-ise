@@ -104,11 +104,13 @@ type Endpoint struct {
 	ProfileId pulumi.StringPtrOutput `pulumi:"profileId"`
 	// Static Group Assignment
 	StaticGroupAssignment pulumi.BoolOutput `pulumi:"staticGroupAssignment"`
-	// staticGroupAssignmentDefined - Default value: `true`
+	// staticGroupAssignmentDefined
+	//   - Default value: `true`
 	StaticGroupAssignmentDefined pulumi.BoolOutput `pulumi:"staticGroupAssignmentDefined"`
 	// Static Profile Assignment
 	StaticProfileAssignment pulumi.BoolOutput `pulumi:"staticProfileAssignment"`
-	// Static Profile Assignment Defined - Default value: `true`
+	// Static Profile Assignment Defined
+	//   - Default value: `true`
 	StaticProfileAssignmentDefined pulumi.BoolOutput `pulumi:"staticProfileAssignmentDefined"`
 }
 
@@ -197,11 +199,13 @@ type endpointState struct {
 	ProfileId *string `pulumi:"profileId"`
 	// Static Group Assignment
 	StaticGroupAssignment *bool `pulumi:"staticGroupAssignment"`
-	// staticGroupAssignmentDefined - Default value: `true`
+	// staticGroupAssignmentDefined
+	//   - Default value: `true`
 	StaticGroupAssignmentDefined *bool `pulumi:"staticGroupAssignmentDefined"`
 	// Static Profile Assignment
 	StaticProfileAssignment *bool `pulumi:"staticProfileAssignment"`
-	// Static Profile Assignment Defined - Default value: `true`
+	// Static Profile Assignment Defined
+	//   - Default value: `true`
 	StaticProfileAssignmentDefined *bool `pulumi:"staticProfileAssignmentDefined"`
 }
 
@@ -252,11 +256,13 @@ type EndpointState struct {
 	ProfileId pulumi.StringPtrInput
 	// Static Group Assignment
 	StaticGroupAssignment pulumi.BoolPtrInput
-	// staticGroupAssignmentDefined - Default value: `true`
+	// staticGroupAssignmentDefined
+	//   - Default value: `true`
 	StaticGroupAssignmentDefined pulumi.BoolPtrInput
 	// Static Profile Assignment
 	StaticProfileAssignment pulumi.BoolPtrInput
-	// Static Profile Assignment Defined - Default value: `true`
+	// Static Profile Assignment Defined
+	//   - Default value: `true`
 	StaticProfileAssignmentDefined pulumi.BoolPtrInput
 }
 
@@ -311,11 +317,13 @@ type endpointArgs struct {
 	ProfileId *string `pulumi:"profileId"`
 	// Static Group Assignment
 	StaticGroupAssignment bool `pulumi:"staticGroupAssignment"`
-	// staticGroupAssignmentDefined - Default value: `true`
+	// staticGroupAssignmentDefined
+	//   - Default value: `true`
 	StaticGroupAssignmentDefined *bool `pulumi:"staticGroupAssignmentDefined"`
 	// Static Profile Assignment
 	StaticProfileAssignment bool `pulumi:"staticProfileAssignment"`
-	// Static Profile Assignment Defined - Default value: `true`
+	// Static Profile Assignment Defined
+	//   - Default value: `true`
 	StaticProfileAssignmentDefined *bool `pulumi:"staticProfileAssignmentDefined"`
 }
 
@@ -367,11 +375,13 @@ type EndpointArgs struct {
 	ProfileId pulumi.StringPtrInput
 	// Static Group Assignment
 	StaticGroupAssignment pulumi.BoolInput
-	// staticGroupAssignmentDefined - Default value: `true`
+	// staticGroupAssignmentDefined
+	//   - Default value: `true`
 	StaticGroupAssignmentDefined pulumi.BoolPtrInput
 	// Static Profile Assignment
 	StaticProfileAssignment pulumi.BoolInput
-	// Static Profile Assignment Defined - Default value: `true`
+	// Static Profile Assignment Defined
+	//   - Default value: `true`
 	StaticProfileAssignmentDefined pulumi.BoolPtrInput
 }
 
@@ -577,7 +587,8 @@ func (o EndpointOutput) StaticGroupAssignment() pulumi.BoolOutput {
 	return o.ApplyT(func(v *Endpoint) pulumi.BoolOutput { return v.StaticGroupAssignment }).(pulumi.BoolOutput)
 }
 
-// staticGroupAssignmentDefined - Default value: `true`
+// staticGroupAssignmentDefined
+//   - Default value: `true`
 func (o EndpointOutput) StaticGroupAssignmentDefined() pulumi.BoolOutput {
 	return o.ApplyT(func(v *Endpoint) pulumi.BoolOutput { return v.StaticGroupAssignmentDefined }).(pulumi.BoolOutput)
 }
@@ -587,7 +598,8 @@ func (o EndpointOutput) StaticProfileAssignment() pulumi.BoolOutput {
 	return o.ApplyT(func(v *Endpoint) pulumi.BoolOutput { return v.StaticProfileAssignment }).(pulumi.BoolOutput)
 }
 
-// Static Profile Assignment Defined - Default value: `true`
+// Static Profile Assignment Defined
+//   - Default value: `true`
 func (o EndpointOutput) StaticProfileAssignmentDefined() pulumi.BoolOutput {
 	return o.ApplyT(func(v *Endpoint) pulumi.BoolOutput { return v.StaticProfileAssignmentDefined }).(pulumi.BoolOutput)
 }

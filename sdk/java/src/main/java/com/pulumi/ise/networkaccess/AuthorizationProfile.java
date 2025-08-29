@@ -38,14 +38,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:networkaccess/authorizationProfile:AuthorizationProfile")
 public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
     /**
-     * Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+     * Access type
+     *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+     *   - Default value: `ACCESS_ACCEPT`
      * 
      */
     @Export(name="accessType", refs={String.class}, tree="[0]")
     private Output<String> accessType;
 
     /**
-     * @return Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+     * @return Access type
+     *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+     *   - Default value: `ACCESS_ACCEPT`
      * 
      */
     public Output<String> accessType() {
@@ -192,14 +196,16 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Easy wired session candidate - Default value: `false`
+     * Easy wired session candidate
+     *   - Default value: `false`
      * 
      */
     @Export(name="easywiredSessionCandidate", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> easywiredSessionCandidate;
 
     /**
-     * @return Easy wired session candidate - Default value: `false`
+     * @return Easy wired session candidate
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> easywiredSessionCandidate() {
@@ -248,14 +254,16 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ipv6DaclName);
     }
     /**
-     * MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+     * MacSec policy
+     *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
      * 
      */
     @Export(name="macSecPolicy", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> macSecPolicy;
 
     /**
-     * @return MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+     * @return MacSec policy
+     *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
      * 
      */
     public Output<Optional<String>> macSecPolicy() {
@@ -276,84 +284,96 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * NEAT - Default value: `false`
+     * NEAT
+     *   - Default value: `false`
      * 
      */
     @Export(name="neat", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> neat;
 
     /**
-     * @return NEAT - Default value: `false`
+     * @return NEAT
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> neat() {
         return this.neat;
     }
     /**
-     * Value needs to be an existing Network Device Profile - Default value: `Cisco`
+     * Value needs to be an existing Network Device Profile
+     *   - Default value: `Cisco`
      * 
      */
     @Export(name="profileName", refs={String.class}, tree="[0]")
     private Output<String> profileName;
 
     /**
-     * @return Value needs to be an existing Network Device Profile - Default value: `Cisco`
+     * @return Value needs to be an existing Network Device Profile
+     *   - Default value: `Cisco`
      * 
      */
     public Output<String> profileName() {
         return this.profileName;
     }
     /**
-     * Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+     * Maintain Connectivity During Reauthentication
+     *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
      * 
      */
     @Export(name="reauthenticationConnectivity", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> reauthenticationConnectivity;
 
     /**
-     * @return Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+     * @return Maintain Connectivity During Reauthentication
+     *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
      * 
      */
     public Output<Optional<String>> reauthenticationConnectivity() {
         return Codegen.optional(this.reauthenticationConnectivity);
     }
     /**
-     * Reauthentication timer - Range: `1`-`65535`
+     * Reauthentication timer
+     *   - Range: `1`-`65535`
      * 
      */
     @Export(name="reauthenticationTimer", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> reauthenticationTimer;
 
     /**
-     * @return Reauthentication timer - Range: `1`-`65535`
+     * @return Reauthentication timer
+     *   - Range: `1`-`65535`
      * 
      */
     public Output<Optional<Integer>> reauthenticationTimer() {
         return Codegen.optional(this.reauthenticationTimer);
     }
     /**
-     * Service template - Default value: `false`
+     * Service template
+     *   - Default value: `false`
      * 
      */
     @Export(name="serviceTemplate", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> serviceTemplate;
 
     /**
-     * @return Service template - Default value: `false`
+     * @return Service template
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> serviceTemplate() {
         return this.serviceTemplate;
     }
     /**
-     * Track movement - Default value: `false`
+     * Track movement
+     *   - Default value: `false`
      * 
      */
     @Export(name="trackMovement", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> trackMovement;
 
     /**
-     * @return Track movement - Default value: `false`
+     * @return Track movement
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> trackMovement() {
@@ -388,42 +408,48 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.vlanNameId);
     }
     /**
-     * Vlan tag ID - Range: `0`-`31`
+     * Vlan tag ID
+     *   - Range: `0`-`31`
      * 
      */
     @Export(name="vlanTagId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> vlanTagId;
 
     /**
-     * @return Vlan tag ID - Range: `0`-`31`
+     * @return Vlan tag ID
+     *   - Range: `0`-`31`
      * 
      */
     public Output<Optional<Integer>> vlanTagId() {
         return Codegen.optional(this.vlanTagId);
     }
     /**
-     * Voice domain permission - Default value: `false`
+     * Voice domain permission
+     *   - Default value: `false`
      * 
      */
     @Export(name="voiceDomainPermission", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> voiceDomainPermission;
 
     /**
-     * @return Voice domain permission - Default value: `false`
+     * @return Voice domain permission
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> voiceDomainPermission() {
         return this.voiceDomainPermission;
     }
     /**
-     * Web authentication (local) - Default value: `false`
+     * Web authentication (local)
+     *   - Default value: `false`
      * 
      */
     @Export(name="webAuth", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> webAuth;
 
     /**
-     * @return Web authentication (local) - Default value: `false`
+     * @return Web authentication (local)
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> webAuth() {
@@ -444,16 +470,14 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.webRedirectionAcl);
     }
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
      * 
      */
     @Export(name="webRedirectionDisplayCertificatesRenewalMessages", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> webRedirectionDisplayCertificatesRenewalMessages;
 
     /**
-     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
      * 
      */
     public Output<Optional<Boolean>> webRedirectionDisplayCertificatesRenewalMessages() {
@@ -488,16 +512,16 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.webRedirectionStaticIpHostNameFqdn);
     }
     /**
-     * This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-     * `NativeSupplicanProvisioning`, `ClientProvisioning`
+     * This type must fit the `web_redirection_portal_name`
+     *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
     @Export(name="webRedirectionType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> webRedirectionType;
 
     /**
-     * @return This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-     * `NativeSupplicanProvisioning`, `ClientProvisioning`
+     * @return This type must fit the `web_redirection_portal_name`
+     *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
     public Output<Optional<String>> webRedirectionType() {

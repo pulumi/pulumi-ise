@@ -44,7 +44,8 @@ namespace Pulumi.Ise.TrustSec
     public partial class EgressMatrixCellDefault : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        /// Can be used only if sgacls not specified. Final Catch All Rule
+        ///   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         /// </summary>
         [Output("defaultRule")]
         public Output<string?> DefaultRule { get; private set; } = null!;
@@ -56,7 +57,9 @@ namespace Pulumi.Ise.TrustSec
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        /// Matrix Cell Status
+        ///   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+        ///   - Default value: `DISABLED`
         /// </summary>
         [Output("matrixCellStatus")]
         public Output<string> MatrixCellStatus { get; private set; } = null!;
@@ -114,7 +117,8 @@ namespace Pulumi.Ise.TrustSec
     public sealed class EgressMatrixCellDefaultArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        /// Can be used only if sgacls not specified. Final Catch All Rule
+        ///   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         /// </summary>
         [Input("defaultRule")]
         public Input<string>? DefaultRule { get; set; }
@@ -126,7 +130,9 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        /// Matrix Cell Status
+        ///   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+        ///   - Default value: `DISABLED`
         /// </summary>
         [Input("matrixCellStatus")]
         public Input<string>? MatrixCellStatus { get; set; }
@@ -152,7 +158,8 @@ namespace Pulumi.Ise.TrustSec
     public sealed class EgressMatrixCellDefaultState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Can be used only if sgacls not specified. Final Catch All Rule - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+        /// Can be used only if sgacls not specified. Final Catch All Rule
+        ///   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
         /// </summary>
         [Input("defaultRule")]
         public Input<string>? DefaultRule { get; set; }
@@ -164,7 +171,9 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+        /// Matrix Cell Status
+        ///   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+        ///   - Default value: `DISABLED`
         /// </summary>
         [Input("matrixCellStatus")]
         public Input<string>? MatrixCellStatus { get; set; }

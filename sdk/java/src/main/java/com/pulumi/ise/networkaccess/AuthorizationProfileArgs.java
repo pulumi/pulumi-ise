@@ -20,14 +20,18 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     public static final AuthorizationProfileArgs Empty = new AuthorizationProfileArgs();
 
     /**
-     * Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+     * Access type
+     *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+     *   - Default value: `ACCESS_ACCEPT`
      * 
      */
     @Import(name="accessType")
     private @Nullable Output<String> accessType;
 
     /**
-     * @return Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+     * @return Access type
+     *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+     *   - Default value: `ACCESS_ACCEPT`
      * 
      */
     public Optional<Output<String>> accessType() {
@@ -185,14 +189,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Easy wired session candidate - Default value: `false`
+     * Easy wired session candidate
+     *   - Default value: `false`
      * 
      */
     @Import(name="easywiredSessionCandidate")
     private @Nullable Output<Boolean> easywiredSessionCandidate;
 
     /**
-     * @return Easy wired session candidate - Default value: `false`
+     * @return Easy wired session candidate
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> easywiredSessionCandidate() {
@@ -245,14 +251,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+     * MacSec policy
+     *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
      * 
      */
     @Import(name="macSecPolicy")
     private @Nullable Output<String> macSecPolicy;
 
     /**
-     * @return MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+     * @return MacSec policy
+     *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
      * 
      */
     public Optional<Output<String>> macSecPolicy() {
@@ -275,14 +283,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * NEAT - Default value: `false`
+     * NEAT
+     *   - Default value: `false`
      * 
      */
     @Import(name="neat")
     private @Nullable Output<Boolean> neat;
 
     /**
-     * @return NEAT - Default value: `false`
+     * @return NEAT
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> neat() {
@@ -290,14 +300,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Value needs to be an existing Network Device Profile - Default value: `Cisco`
+     * Value needs to be an existing Network Device Profile
+     *   - Default value: `Cisco`
      * 
      */
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
     /**
-     * @return Value needs to be an existing Network Device Profile - Default value: `Cisco`
+     * @return Value needs to be an existing Network Device Profile
+     *   - Default value: `Cisco`
      * 
      */
     public Optional<Output<String>> profileName() {
@@ -305,14 +317,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+     * Maintain Connectivity During Reauthentication
+     *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
      * 
      */
     @Import(name="reauthenticationConnectivity")
     private @Nullable Output<String> reauthenticationConnectivity;
 
     /**
-     * @return Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+     * @return Maintain Connectivity During Reauthentication
+     *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
      * 
      */
     public Optional<Output<String>> reauthenticationConnectivity() {
@@ -320,14 +334,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Reauthentication timer - Range: `1`-`65535`
+     * Reauthentication timer
+     *   - Range: `1`-`65535`
      * 
      */
     @Import(name="reauthenticationTimer")
     private @Nullable Output<Integer> reauthenticationTimer;
 
     /**
-     * @return Reauthentication timer - Range: `1`-`65535`
+     * @return Reauthentication timer
+     *   - Range: `1`-`65535`
      * 
      */
     public Optional<Output<Integer>> reauthenticationTimer() {
@@ -335,14 +351,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Service template - Default value: `false`
+     * Service template
+     *   - Default value: `false`
      * 
      */
     @Import(name="serviceTemplate")
     private @Nullable Output<Boolean> serviceTemplate;
 
     /**
-     * @return Service template - Default value: `false`
+     * @return Service template
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> serviceTemplate() {
@@ -350,14 +368,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Track movement - Default value: `false`
+     * Track movement
+     *   - Default value: `false`
      * 
      */
     @Import(name="trackMovement")
     private @Nullable Output<Boolean> trackMovement;
 
     /**
-     * @return Track movement - Default value: `false`
+     * @return Track movement
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> trackMovement() {
@@ -395,14 +415,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Vlan tag ID - Range: `0`-`31`
+     * Vlan tag ID
+     *   - Range: `0`-`31`
      * 
      */
     @Import(name="vlanTagId")
     private @Nullable Output<Integer> vlanTagId;
 
     /**
-     * @return Vlan tag ID - Range: `0`-`31`
+     * @return Vlan tag ID
+     *   - Range: `0`-`31`
      * 
      */
     public Optional<Output<Integer>> vlanTagId() {
@@ -410,14 +432,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Voice domain permission - Default value: `false`
+     * Voice domain permission
+     *   - Default value: `false`
      * 
      */
     @Import(name="voiceDomainPermission")
     private @Nullable Output<Boolean> voiceDomainPermission;
 
     /**
-     * @return Voice domain permission - Default value: `false`
+     * @return Voice domain permission
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> voiceDomainPermission() {
@@ -425,14 +449,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Web authentication (local) - Default value: `false`
+     * Web authentication (local)
+     *   - Default value: `false`
      * 
      */
     @Import(name="webAuth")
     private @Nullable Output<Boolean> webAuth;
 
     /**
-     * @return Web authentication (local) - Default value: `false`
+     * @return Web authentication (local)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> webAuth() {
@@ -455,16 +481,14 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
      * 
      */
     @Import(name="webRedirectionDisplayCertificatesRenewalMessages")
     private @Nullable Output<Boolean> webRedirectionDisplayCertificatesRenewalMessages;
 
     /**
-     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-     * `web_redirection_type` values the field must be ignored.
+     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
      * 
      */
     public Optional<Output<Boolean>> webRedirectionDisplayCertificatesRenewalMessages() {
@@ -502,16 +526,16 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-     * `NativeSupplicanProvisioning`, `ClientProvisioning`
+     * This type must fit the `web_redirection_portal_name`
+     *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
     @Import(name="webRedirectionType")
     private @Nullable Output<String> webRedirectionType;
 
     /**
-     * @return This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-     * `NativeSupplicanProvisioning`, `ClientProvisioning`
+     * @return This type must fit the `web_redirection_portal_name`
+     *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
     public Optional<Output<String>> webRedirectionType() {
@@ -575,7 +599,9 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param accessType Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+         * @param accessType Access type
+         *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+         *   - Default value: `ACCESS_ACCEPT`
          * 
          * @return builder
          * 
@@ -586,7 +612,9 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param accessType Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+         * @param accessType Access type
+         *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+         *   - Default value: `ACCESS_ACCEPT`
          * 
          * @return builder
          * 
@@ -816,7 +844,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param easywiredSessionCandidate Easy wired session candidate - Default value: `false`
+         * @param easywiredSessionCandidate Easy wired session candidate
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -827,7 +856,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param easywiredSessionCandidate Easy wired session candidate - Default value: `false`
+         * @param easywiredSessionCandidate Easy wired session candidate
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -900,7 +930,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param macSecPolicy MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+         * @param macSecPolicy MacSec policy
+         *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
          * 
          * @return builder
          * 
@@ -911,7 +942,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param macSecPolicy MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+         * @param macSecPolicy MacSec policy
+         *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
          * 
          * @return builder
          * 
@@ -942,7 +974,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param neat NEAT - Default value: `false`
+         * @param neat NEAT
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -953,7 +986,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param neat NEAT - Default value: `false`
+         * @param neat NEAT
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -963,7 +997,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param profileName Value needs to be an existing Network Device Profile - Default value: `Cisco`
+         * @param profileName Value needs to be an existing Network Device Profile
+         *   - Default value: `Cisco`
          * 
          * @return builder
          * 
@@ -974,7 +1009,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param profileName Value needs to be an existing Network Device Profile - Default value: `Cisco`
+         * @param profileName Value needs to be an existing Network Device Profile
+         *   - Default value: `Cisco`
          * 
          * @return builder
          * 
@@ -984,7 +1020,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param reauthenticationConnectivity Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+         * @param reauthenticationConnectivity Maintain Connectivity During Reauthentication
+         *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
          * 
          * @return builder
          * 
@@ -995,7 +1032,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param reauthenticationConnectivity Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+         * @param reauthenticationConnectivity Maintain Connectivity During Reauthentication
+         *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
          * 
          * @return builder
          * 
@@ -1005,7 +1043,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param reauthenticationTimer Reauthentication timer - Range: `1`-`65535`
+         * @param reauthenticationTimer Reauthentication timer
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -1016,7 +1055,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param reauthenticationTimer Reauthentication timer - Range: `1`-`65535`
+         * @param reauthenticationTimer Reauthentication timer
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -1026,7 +1066,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param serviceTemplate Service template - Default value: `false`
+         * @param serviceTemplate Service template
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1037,7 +1078,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param serviceTemplate Service template - Default value: `false`
+         * @param serviceTemplate Service template
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1047,7 +1089,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param trackMovement Track movement - Default value: `false`
+         * @param trackMovement Track movement
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1058,7 +1101,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param trackMovement Track movement - Default value: `false`
+         * @param trackMovement Track movement
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1110,7 +1154,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param vlanTagId Vlan tag ID - Range: `0`-`31`
+         * @param vlanTagId Vlan tag ID
+         *   - Range: `0`-`31`
          * 
          * @return builder
          * 
@@ -1121,7 +1166,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param vlanTagId Vlan tag ID - Range: `0`-`31`
+         * @param vlanTagId Vlan tag ID
+         *   - Range: `0`-`31`
          * 
          * @return builder
          * 
@@ -1131,7 +1177,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param voiceDomainPermission Voice domain permission - Default value: `false`
+         * @param voiceDomainPermission Voice domain permission
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1142,7 +1189,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param voiceDomainPermission Voice domain permission - Default value: `false`
+         * @param voiceDomainPermission Voice domain permission
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1152,7 +1200,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param webAuth Web authentication (local) - Default value: `false`
+         * @param webAuth Web authentication (local)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1163,7 +1212,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param webAuth Web authentication (local) - Default value: `false`
+         * @param webAuth Web authentication (local)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1194,8 +1244,7 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-         * `web_redirection_type` values the field must be ignored.
+         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
          * 
          * @return builder
          * 
@@ -1206,8 +1255,7 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other
-         * `web_redirection_type` values the field must be ignored.
+         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
          * 
          * @return builder
          * 
@@ -1259,8 +1307,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param webRedirectionType This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-         * `NativeSupplicanProvisioning`, `ClientProvisioning`
+         * @param webRedirectionType This type must fit the `web_redirection_portal_name`
+         *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
          * 
          * @return builder
          * 
@@ -1271,8 +1319,8 @@ public final class AuthorizationProfileArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param webRedirectionType This type must fit the `web_redirection_portal_name` - Choices: `CentralizedWebAuth`, `HotSpot`,
-         * `NativeSupplicanProvisioning`, `ClientProvisioning`
+         * @param webRedirectionType This type must fit the `web_redirection_portal_name`
+         *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
          * 
          * @return builder
          * 

@@ -47,19 +47,17 @@ class PolicySetArgs:
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this policy set is the default one
         :param pulumi.Input[_builtins.str] description: The description of the policy set
         :param pulumi.Input[_builtins.bool] is_proxy: Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
         :param pulumi.Input[_builtins.str] name: Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other policy sets. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-               `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         pulumi.set(__self__, "service_name", service_name)
         if childrens is not None:
@@ -193,9 +191,8 @@ class PolicySetArgs:
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -207,9 +204,8 @@ class PolicySetArgs:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -281,8 +277,8 @@ class PolicySetArgs:
     @pulumi.getter
     def state(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-        `monitor`
+        The state that the policy set is in. A disabled policy set cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 
@@ -319,20 +315,18 @@ class _PolicySetState:
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this policy set is the default one
         :param pulumi.Input[_builtins.str] description: The description of the policy set
         :param pulumi.Input[_builtins.bool] is_proxy: Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
         :param pulumi.Input[_builtins.str] name: Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         :param pulumi.Input[_builtins.str] service_name: Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
-        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-               `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         if childrens is not None:
             pulumi.set(__self__, "childrens", childrens)
@@ -455,9 +449,8 @@ class _PolicySetState:
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -469,9 +462,8 @@ class _PolicySetState:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -555,8 +547,8 @@ class _PolicySetState:
     @pulumi.getter
     def state(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-        `monitor`
+        The state that the policy set is in. A disabled policy set cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 
@@ -629,20 +621,18 @@ class PolicySet(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this policy set is the default one
         :param pulumi.Input[_builtins.str] description: The description of the policy set
         :param pulumi.Input[_builtins.bool] is_proxy: Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
         :param pulumi.Input[_builtins.str] name: Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         :param pulumi.Input[_builtins.str] service_name: Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
-        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-               `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         ...
     @overload
@@ -780,20 +770,18 @@ class PolicySet(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this policy set is the default one
         :param pulumi.Input[_builtins.str] description: The description of the policy set
         :param pulumi.Input[_builtins.bool] is_proxy: Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
         :param pulumi.Input[_builtins.str] name: Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         :param pulumi.Input[_builtins.str] service_name: Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
-        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-               `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the policy set is in. A disabled policy set cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -877,9 +865,8 @@ class PolicySet(pulumi.CustomResource):
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -887,9 +874,8 @@ class PolicySet(pulumi.CustomResource):
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -945,8 +931,8 @@ class PolicySet(pulumi.CustomResource):
     @pulumi.getter
     def state(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The state that the policy set is in. A disabled policy set cannot be matched. - Choices: `disabled`, `enabled`,
-        `monitor`
+        The state that the policy set is in. A disabled policy set cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 

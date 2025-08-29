@@ -56,14 +56,16 @@ public final class TacacsCommandSetArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Permit unmatched commands - Default value: `false`
+     * Permit unmatched commands
+     *   - Default value: `false`
      * 
      */
     @Import(name="permitUnmatched")
     private @Nullable Output<Boolean> permitUnmatched;
 
     /**
-     * @return Permit unmatched commands - Default value: `false`
+     * @return Permit unmatched commands
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> permitUnmatched() {
@@ -153,7 +155,8 @@ public final class TacacsCommandSetArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param permitUnmatched Permit unmatched commands - Default value: `false`
+         * @param permitUnmatched Permit unmatched commands
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -164,7 +167,8 @@ public final class TacacsCommandSetArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param permitUnmatched Permit unmatched commands - Default value: `false`
+         * @param permitUnmatched Permit unmatched commands
+         *   - Default value: `false`
          * 
          * @return builder
          * 

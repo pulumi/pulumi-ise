@@ -97,14 +97,18 @@ public class SecurityGroupAcl extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      * 
      */
     @Export(name="ipVersion", refs={String.class}, tree="[0]")
     private Output<String> ipVersion;
 
     /**
-     * @return IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+     * @return IP Version
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IP_AGNOSTIC`
      * 
      */
     public Output<String> ipVersion() {

@@ -18,14 +18,18 @@ public final class EgressMatrixCellArgs extends com.pulumi.resources.ResourceArg
     public static final EgressMatrixCellArgs Empty = new EgressMatrixCellArgs();
 
     /**
-     * Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+     * Can be used only if sgacls not specified.
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     *   - Default value: `NONE`
      * 
      */
     @Import(name="defaultRule")
     private @Nullable Output<String> defaultRule;
 
     /**
-     * @return Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+     * @return Can be used only if sgacls not specified.
+     *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+     *   - Default value: `NONE`
      * 
      */
     public Optional<Output<String>> defaultRule() {
@@ -63,14 +67,18 @@ public final class EgressMatrixCellArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      * 
      */
     @Import(name="matrixCellStatus")
     private @Nullable Output<String> matrixCellStatus;
 
     /**
-     * @return Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+     * @return Matrix Cell Status
+     *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+     *   - Default value: `DISABLED`
      * 
      */
     public Optional<Output<String>> matrixCellStatus() {
@@ -137,7 +145,9 @@ public final class EgressMatrixCellArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param defaultRule Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+         * @param defaultRule Can be used only if sgacls not specified.
+         *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+         *   - Default value: `NONE`
          * 
          * @return builder
          * 
@@ -148,7 +158,9 @@ public final class EgressMatrixCellArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param defaultRule Can be used only if sgacls not specified. - Choices: `NONE`, `DENY_IP`, `PERMIT_IP` - Default value: `NONE`
+         * @param defaultRule Can be used only if sgacls not specified.
+         *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
+         *   - Default value: `NONE`
          * 
          * @return builder
          * 
@@ -200,7 +212,9 @@ public final class EgressMatrixCellArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param matrixCellStatus Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+         * @param matrixCellStatus Matrix Cell Status
+         *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+         *   - Default value: `DISABLED`
          * 
          * @return builder
          * 
@@ -211,7 +225,9 @@ public final class EgressMatrixCellArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param matrixCellStatus Matrix Cell Status - Choices: `DISABLED`, `ENABLED`, `MONITOR` - Default value: `DISABLED`
+         * @param matrixCellStatus Matrix Cell Status
+         *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
+         *   - Default value: `DISABLED`
          * 
          * @return builder
          * 

@@ -28,7 +28,9 @@ class SecurityGroupAclArgs:
         The set of arguments for constructing a SecurityGroupAcl resource.
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        :param pulumi.Input[_builtins.str] ip_version: IP Version
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[_builtins.str] name: The name of the security group ACL
         :param pulumi.Input[_builtins.bool] read_only: Read-only
         """
@@ -70,7 +72,9 @@ class SecurityGroupAclArgs:
     @pulumi.getter(name="ipVersion")
     def ip_version(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        IP Version
+          - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+          - Default value: `IP_AGNOSTIC`
         """
         return pulumi.get(self, "ip_version")
 
@@ -115,7 +119,9 @@ class _SecurityGroupAclState:
         Input properties used for looking up and filtering SecurityGroupAcl resources.
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        :param pulumi.Input[_builtins.str] ip_version: IP Version
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[_builtins.str] name: The name of the security group ACL
         :param pulumi.Input[_builtins.bool] read_only: Read-only
         """
@@ -158,7 +164,9 @@ class _SecurityGroupAclState:
     @pulumi.getter(name="ipVersion")
     def ip_version(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        IP Version
+          - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+          - Default value: `IP_AGNOSTIC`
         """
         return pulumi.get(self, "ip_version")
 
@@ -232,7 +240,9 @@ class SecurityGroupAcl(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        :param pulumi.Input[_builtins.str] ip_version: IP Version
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[_builtins.str] name: The name of the security group ACL
         :param pulumi.Input[_builtins.bool] read_only: Read-only
         """
@@ -327,7 +337,9 @@ class SecurityGroupAcl(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] ip_version: IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        :param pulumi.Input[_builtins.str] ip_version: IP Version
+                 - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+                 - Default value: `IP_AGNOSTIC`
         :param pulumi.Input[_builtins.str] name: The name of the security group ACL
         :param pulumi.Input[_builtins.bool] read_only: Read-only
         """
@@ -362,7 +374,9 @@ class SecurityGroupAcl(pulumi.CustomResource):
     @pulumi.getter(name="ipVersion")
     def ip_version(self) -> pulumi.Output[_builtins.str]:
         """
-        IP Version - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IP_AGNOSTIC`
+        IP Version
+          - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+          - Default value: `IP_AGNOSTIC`
         """
         return pulumi.get(self, "ip_version")
 

@@ -61,10 +61,10 @@ import (
 type InternalUser struct {
 	pulumi.CustomResourceState
 
-	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-	// from ISE 3.2.
+	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 	AccountNameAlias pulumi.StringPtrOutput `pulumi:"accountNameAlias"`
-	// Requires the user to change the password - Default value: `true`
+	// Requires the user to change the password
+	//   - Default value: `true`
 	ChangePassword pulumi.BoolOutput `pulumi:"changePassword"`
 	// Key value map
 	CustomAttributes pulumi.StringPtrOutput `pulumi:"customAttributes"`
@@ -86,10 +86,11 @@ type InternalUser struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The password of the internal user
 	Password pulumi.StringOutput `pulumi:"password"`
-	// The ID store where the internal user's password is kept - Default value: `Internal Users`
+	// The ID store where the internal user's password is kept
+	//   - Default value: `Internal Users`
 	PasswordIdStore pulumi.StringOutput `pulumi:"passwordIdStore"`
-	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-	// field is only supported from ISE 3.2. - Default value: `false`
+	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+	//   - Default value: `false`
 	PasswordNeverExpires pulumi.BoolOutput `pulumi:"passwordNeverExpires"`
 }
 
@@ -126,10 +127,10 @@ func GetInternalUser(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering InternalUser resources.
 type internalUserState struct {
-	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-	// from ISE 3.2.
+	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 	AccountNameAlias *string `pulumi:"accountNameAlias"`
-	// Requires the user to change the password - Default value: `true`
+	// Requires the user to change the password
+	//   - Default value: `true`
 	ChangePassword *bool `pulumi:"changePassword"`
 	// Key value map
 	CustomAttributes *string `pulumi:"customAttributes"`
@@ -151,18 +152,19 @@ type internalUserState struct {
 	Name *string `pulumi:"name"`
 	// The password of the internal user
 	Password *string `pulumi:"password"`
-	// The ID store where the internal user's password is kept - Default value: `Internal Users`
+	// The ID store where the internal user's password is kept
+	//   - Default value: `Internal Users`
 	PasswordIdStore *string `pulumi:"passwordIdStore"`
-	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-	// field is only supported from ISE 3.2. - Default value: `false`
+	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+	//   - Default value: `false`
 	PasswordNeverExpires *bool `pulumi:"passwordNeverExpires"`
 }
 
 type InternalUserState struct {
-	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-	// from ISE 3.2.
+	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 	AccountNameAlias pulumi.StringPtrInput
-	// Requires the user to change the password - Default value: `true`
+	// Requires the user to change the password
+	//   - Default value: `true`
 	ChangePassword pulumi.BoolPtrInput
 	// Key value map
 	CustomAttributes pulumi.StringPtrInput
@@ -184,10 +186,11 @@ type InternalUserState struct {
 	Name pulumi.StringPtrInput
 	// The password of the internal user
 	Password pulumi.StringPtrInput
-	// The ID store where the internal user's password is kept - Default value: `Internal Users`
+	// The ID store where the internal user's password is kept
+	//   - Default value: `Internal Users`
 	PasswordIdStore pulumi.StringPtrInput
-	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-	// field is only supported from ISE 3.2. - Default value: `false`
+	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+	//   - Default value: `false`
 	PasswordNeverExpires pulumi.BoolPtrInput
 }
 
@@ -196,10 +199,10 @@ func (InternalUserState) ElementType() reflect.Type {
 }
 
 type internalUserArgs struct {
-	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-	// from ISE 3.2.
+	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 	AccountNameAlias *string `pulumi:"accountNameAlias"`
-	// Requires the user to change the password - Default value: `true`
+	// Requires the user to change the password
+	//   - Default value: `true`
 	ChangePassword *bool `pulumi:"changePassword"`
 	// Key value map
 	CustomAttributes *string `pulumi:"customAttributes"`
@@ -221,19 +224,20 @@ type internalUserArgs struct {
 	Name *string `pulumi:"name"`
 	// The password of the internal user
 	Password string `pulumi:"password"`
-	// The ID store where the internal user's password is kept - Default value: `Internal Users`
+	// The ID store where the internal user's password is kept
+	//   - Default value: `Internal Users`
 	PasswordIdStore *string `pulumi:"passwordIdStore"`
-	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-	// field is only supported from ISE 3.2. - Default value: `false`
+	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+	//   - Default value: `false`
 	PasswordNeverExpires *bool `pulumi:"passwordNeverExpires"`
 }
 
 // The set of arguments for constructing a InternalUser resource.
 type InternalUserArgs struct {
-	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-	// from ISE 3.2.
+	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 	AccountNameAlias pulumi.StringPtrInput
-	// Requires the user to change the password - Default value: `true`
+	// Requires the user to change the password
+	//   - Default value: `true`
 	ChangePassword pulumi.BoolPtrInput
 	// Key value map
 	CustomAttributes pulumi.StringPtrInput
@@ -255,10 +259,11 @@ type InternalUserArgs struct {
 	Name pulumi.StringPtrInput
 	// The password of the internal user
 	Password pulumi.StringInput
-	// The ID store where the internal user's password is kept - Default value: `Internal Users`
+	// The ID store where the internal user's password is kept
+	//   - Default value: `Internal Users`
 	PasswordIdStore pulumi.StringPtrInput
-	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-	// field is only supported from ISE 3.2. - Default value: `false`
+	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+	//   - Default value: `false`
 	PasswordNeverExpires pulumi.BoolPtrInput
 }
 
@@ -349,13 +354,13 @@ func (o InternalUserOutput) ToInternalUserOutputWithContext(ctx context.Context)
 	return o
 }
 
-// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-// from ISE 3.2.
+// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 func (o InternalUserOutput) AccountNameAlias() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.StringPtrOutput { return v.AccountNameAlias }).(pulumi.StringPtrOutput)
 }
 
-// Requires the user to change the password - Default value: `true`
+// Requires the user to change the password
+//   - Default value: `true`
 func (o InternalUserOutput) ChangePassword() pulumi.BoolOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.BoolOutput { return v.ChangePassword }).(pulumi.BoolOutput)
 }
@@ -410,13 +415,14 @@ func (o InternalUserOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.StringOutput { return v.Password }).(pulumi.StringOutput)
 }
 
-// The ID store where the internal user's password is kept - Default value: `Internal Users`
+// The ID store where the internal user's password is kept
+//   - Default value: `Internal Users`
 func (o InternalUserOutput) PasswordIdStore() pulumi.StringOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.StringOutput { return v.PasswordIdStore }).(pulumi.StringOutput)
 }
 
-// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-// field is only supported from ISE 3.2. - Default value: `false`
+// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+//   - Default value: `false`
 func (o InternalUserOutput) PasswordNeverExpires() pulumi.BoolOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.BoolOutput { return v.PasswordNeverExpires }).(pulumi.BoolOutput)
 }

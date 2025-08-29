@@ -32,14 +32,16 @@ public final class DictionaryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      * 
      */
     @Import(name="dictionaryAttrType", required=true)
     private Output<String> dictionaryAttrType;
 
     /**
-     * @return The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * @return The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      * 
      */
     public Output<String> dictionaryAttrType() {
@@ -125,7 +127,8 @@ public final class DictionaryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dictionaryAttrType The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+         * @param dictionaryAttrType The dictionary attribute type
+         *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
          * 
          * @return builder
          * 
@@ -136,7 +139,8 @@ public final class DictionaryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dictionaryAttrType The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+         * @param dictionaryAttrType The dictionary attribute type
+         *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
          * 
          * @return builder
          * 

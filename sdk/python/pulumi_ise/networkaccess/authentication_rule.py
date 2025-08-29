@@ -41,10 +41,12 @@ class AuthenticationRuleArgs:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationRule resource.
-        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-               `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
@@ -53,17 +55,16 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] identity_source_name: Identity source name from the identity stores
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         pulumi.set(__self__, "if_auth_fail", if_auth_fail)
         pulumi.set(__self__, "if_process_fail", if_process_fail)
@@ -102,8 +103,8 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="ifAuthFail")
     def if_auth_fail(self) -> pulumi.Input[_builtins.str]:
         """
-        Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-        `DROP`, `CONTINUE`
+        Action to perform when authentication fails such as Bad credentials, disabled user and so on
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_auth_fail")
 
@@ -115,7 +116,8 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="ifProcessFail")
     def if_process_fail(self) -> pulumi.Input[_builtins.str]:
         """
-        Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+        Action to perform when ISE is uanble to access the identity database
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_process_fail")
 
@@ -127,7 +129,8 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="ifUserNotFound")
     def if_user_not_found(self) -> pulumi.Input[_builtins.str]:
         """
-        Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        Action to perform when user is not found in any of identity stores
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_user_not_found")
 
@@ -235,9 +238,8 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -249,9 +251,8 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -311,7 +312,8 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def state(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        The state that the rule is in. A disabled rule cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 
@@ -350,22 +352,23 @@ class _AuthenticationRuleState:
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] identity_source_name: Identity source name from the identity stores
-        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-               `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         if childrens is not None:
             pulumi.set(__self__, "childrens", childrens)
@@ -492,9 +495,8 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -506,9 +508,8 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -544,8 +545,8 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="ifAuthFail")
     def if_auth_fail(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-        `DROP`, `CONTINUE`
+        Action to perform when authentication fails such as Bad credentials, disabled user and so on
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_auth_fail")
 
@@ -557,7 +558,8 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="ifProcessFail")
     def if_process_fail(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+        Action to perform when ISE is uanble to access the identity database
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_process_fail")
 
@@ -569,7 +571,8 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="ifUserNotFound")
     def if_user_not_found(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        Action to perform when user is not found in any of identity stores
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_user_not_found")
 
@@ -617,7 +620,8 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def state(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        The state that the rule is in. A disabled rule cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 
@@ -695,22 +699,23 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] identity_source_name: Identity source name from the identity stores
-        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-               `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         ...
     @overload
@@ -863,22 +868,23 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] condition_dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.str] condition_id: UUID for condition
         :param pulumi.Input[_builtins.bool] condition_is_negate: Indicates whereas this condition is in negate mode
-        :param pulumi.Input[_builtins.str] condition_operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-               `ConditionOrBlock`, `ConditionReference`
+        :param pulumi.Input[_builtins.str] condition_operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         :param pulumi.Input[_builtins.bool] default: Indicates if this rule is the default one
         :param pulumi.Input[_builtins.str] identity_source_name: Identity source name from the identity stores
-        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-               `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
-        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is uanble to access the identity database
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
+        :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores
+                 - Choices: `REJECT`, `DROP`, `CONTINUE`
         :param pulumi.Input[_builtins.str] name: Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
-        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        :param pulumi.Input[_builtins.str] state: The state that the rule is in. A disabled rule cannot be matched.
+                 - Choices: `disabled`, `enabled`, `monitor`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -964,9 +970,8 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="conditionOperator")
     def condition_operator(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "condition_operator")
 
@@ -974,9 +979,8 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-        `ConditionOrBlock`, `ConditionReference`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         """
         return pulumi.get(self, "condition_type")
 
@@ -1000,8 +1004,8 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="ifAuthFail")
     def if_auth_fail(self) -> pulumi.Output[_builtins.str]:
         """
-        Action to perform when authentication fails such as Bad credentials, disabled user and so on - Choices: `REJECT`,
-        `DROP`, `CONTINUE`
+        Action to perform when authentication fails such as Bad credentials, disabled user and so on
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_auth_fail")
 
@@ -1009,7 +1013,8 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="ifProcessFail")
     def if_process_fail(self) -> pulumi.Output[_builtins.str]:
         """
-        Action to perform when ISE is uanble to access the identity database - Choices: `REJECT`, `DROP`, `CONTINUE`
+        Action to perform when ISE is uanble to access the identity database
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_process_fail")
 
@@ -1017,7 +1022,8 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="ifUserNotFound")
     def if_user_not_found(self) -> pulumi.Output[_builtins.str]:
         """
-        Action to perform when user is not found in any of identity stores - Choices: `REJECT`, `DROP`, `CONTINUE`
+        Action to perform when user is not found in any of identity stores
+          - Choices: `REJECT`, `DROP`, `CONTINUE`
         """
         return pulumi.get(self, "if_user_not_found")
 
@@ -1049,7 +1055,8 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def state(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+        The state that the rule is in. A disabled rule cannot be matched.
+          - Choices: `disabled`, `enabled`, `monitor`
         """
         return pulumi.get(self, "state")
 

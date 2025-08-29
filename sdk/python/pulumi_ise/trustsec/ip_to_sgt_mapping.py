@@ -30,7 +30,8 @@ class IpToSgtMappingArgs:
         """
         The set of arguments for constructing a IpToSgtMapping resource.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] host_ip: Mandatory if `host_name` is empty
         :param pulumi.Input[_builtins.str] host_name: Mandatory if `host_ip` is empty
@@ -71,7 +72,8 @@ class IpToSgtMappingArgs:
     @pulumi.getter(name="deployType")
     def deploy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        Deploy Type
+          - Choices: `ALL`, `ND`, `NDG`
         """
         return pulumi.get(self, "deploy_type")
 
@@ -166,7 +168,8 @@ class _IpToSgtMappingState:
         """
         Input properties used for looking up and filtering IpToSgtMapping resources.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] host_ip: Mandatory if `host_name` is empty
         :param pulumi.Input[_builtins.str] host_name: Mandatory if `host_ip` is empty
@@ -207,7 +210,8 @@ class _IpToSgtMappingState:
     @pulumi.getter(name="deployType")
     def deploy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        Deploy Type
+          - Choices: `ALL`, `ND`, `NDG`
         """
         return pulumi.get(self, "deploy_type")
 
@@ -330,7 +334,8 @@ class IpToSgtMapping(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] host_ip: Mandatory if `host_name` is empty
         :param pulumi.Input[_builtins.str] host_name: Mandatory if `host_ip` is empty
@@ -434,7 +439,8 @@ class IpToSgtMapping(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] host_ip: Mandatory if `host_name` is empty
         :param pulumi.Input[_builtins.str] host_name: Mandatory if `host_ip` is empty
@@ -468,7 +474,8 @@ class IpToSgtMapping(pulumi.CustomResource):
     @pulumi.getter(name="deployType")
     def deploy_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        Deploy Type
+          - Choices: `ALL`, `ND`, `NDG`
         """
         return pulumi.get(self, "deploy_type")
 

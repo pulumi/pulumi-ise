@@ -50,7 +50,8 @@ namespace Pulumi.Ise.TrustSec
         public Output<string?> DeployTo { get; private set; } = null!;
 
         /// <summary>
-        /// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        /// Deploy Type
+        ///   - Choices: `ALL`, `ND`, `NDG`
         /// </summary>
         [Output("deployType")]
         public Output<string> DeployType { get; private set; } = null!;
@@ -126,7 +127,8 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? DeployTo { get; set; }
 
         /// <summary>
-        /// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        /// Deploy Type
+        ///   - Choices: `ALL`, `ND`, `NDG`
         /// </summary>
         [Input("deployType", required: true)]
         public Input<string> DeployType { get; set; } = null!;
@@ -164,7 +166,8 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? DeployTo { get; set; }
 
         /// <summary>
-        /// Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        /// Deploy Type
+        ///   - Choices: `ALL`, `ND`, `NDG`
         /// </summary>
         [Input("deployType")]
         public Input<string>? DeployType { get; set; }

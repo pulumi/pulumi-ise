@@ -53,7 +53,8 @@ type EndpointCustomAttribute struct {
 
 	// The name of the attribute
 	AttributeName pulumi.StringOutput `pulumi:"attributeName"`
-	// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+	// Attribute type
+	//   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
 	AttributeType pulumi.StringOutput `pulumi:"attributeType"`
 }
 
@@ -95,14 +96,16 @@ func GetEndpointCustomAttribute(ctx *pulumi.Context,
 type endpointCustomAttributeState struct {
 	// The name of the attribute
 	AttributeName *string `pulumi:"attributeName"`
-	// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+	// Attribute type
+	//   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
 	AttributeType *string `pulumi:"attributeType"`
 }
 
 type EndpointCustomAttributeState struct {
 	// The name of the attribute
 	AttributeName pulumi.StringPtrInput
-	// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+	// Attribute type
+	//   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
 	AttributeType pulumi.StringPtrInput
 }
 
@@ -113,7 +116,8 @@ func (EndpointCustomAttributeState) ElementType() reflect.Type {
 type endpointCustomAttributeArgs struct {
 	// The name of the attribute
 	AttributeName string `pulumi:"attributeName"`
-	// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+	// Attribute type
+	//   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
 	AttributeType string `pulumi:"attributeType"`
 }
 
@@ -121,7 +125,8 @@ type endpointCustomAttributeArgs struct {
 type EndpointCustomAttributeArgs struct {
 	// The name of the attribute
 	AttributeName pulumi.StringInput
-	// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+	// Attribute type
+	//   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
 	AttributeType pulumi.StringInput
 }
 
@@ -217,7 +222,8 @@ func (o EndpointCustomAttributeOutput) AttributeName() pulumi.StringOutput {
 	return o.ApplyT(func(v *EndpointCustomAttribute) pulumi.StringOutput { return v.AttributeName }).(pulumi.StringOutput)
 }
 
-// Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+// Attribute type
+//   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
 func (o EndpointCustomAttributeOutput) AttributeType() pulumi.StringOutput {
 	return o.ApplyT(func(v *EndpointCustomAttribute) pulumi.StringOutput { return v.AttributeType }).(pulumi.StringOutput)
 }

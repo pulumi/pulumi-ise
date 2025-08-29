@@ -23,7 +23,9 @@ import (
 type AuthorizationProfile struct {
 	pulumi.CustomResourceState
 
-	// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+	// Access type
+	//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+	//   - Default value: `ACCESS_ACCEPT`
 	AccessType pulumi.StringOutput `pulumi:"accessType"`
 	// ACL
 	Acl pulumi.StringPtrOutput `pulumi:"acl"`
@@ -45,7 +47,8 @@ type AuthorizationProfile struct {
 	DaclName pulumi.StringPtrOutput `pulumi:"daclName"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Easy wired session candidate - Default value: `false`
+	// Easy wired session candidate
+	//   - Default value: `false`
 	EasywiredSessionCandidate pulumi.BoolOutput `pulumi:"easywiredSessionCandidate"`
 	// Interface template
 	InterfaceTemplate pulumi.StringPtrOutput `pulumi:"interfaceTemplate"`
@@ -53,43 +56,52 @@ type AuthorizationProfile struct {
 	Ipv6AclFilter pulumi.StringPtrOutput `pulumi:"ipv6AclFilter"`
 	// IPv6 DACL name
 	Ipv6DaclName pulumi.StringPtrOutput `pulumi:"ipv6DaclName"`
-	// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+	// MacSec policy
+	//   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
 	MacSecPolicy pulumi.StringPtrOutput `pulumi:"macSecPolicy"`
 	// The name of the authorization profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// NEAT - Default value: `false`
+	// NEAT
+	//   - Default value: `false`
 	Neat pulumi.BoolOutput `pulumi:"neat"`
-	// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+	// Value needs to be an existing Network Device Profile
+	//   - Default value: `Cisco`
 	ProfileName pulumi.StringOutput `pulumi:"profileName"`
-	// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+	// Maintain Connectivity During Reauthentication
+	//   - Choices: `DEFAULT`, `RADIUS_REQUEST`
 	ReauthenticationConnectivity pulumi.StringPtrOutput `pulumi:"reauthenticationConnectivity"`
-	// Reauthentication timer - Range: `1`-`65535`
+	// Reauthentication timer
+	//   - Range: `1`-`65535`
 	ReauthenticationTimer pulumi.IntPtrOutput `pulumi:"reauthenticationTimer"`
-	// Service template - Default value: `false`
+	// Service template
+	//   - Default value: `false`
 	ServiceTemplate pulumi.BoolOutput `pulumi:"serviceTemplate"`
-	// Track movement - Default value: `false`
+	// Track movement
+	//   - Default value: `false`
 	TrackMovement pulumi.BoolOutput `pulumi:"trackMovement"`
 	// Unique identifier
 	UniqueIdentifier pulumi.StringPtrOutput `pulumi:"uniqueIdentifier"`
 	// Vlan name or ID
 	VlanNameId pulumi.StringPtrOutput `pulumi:"vlanNameId"`
-	// Vlan tag ID - Range: `0`-`31`
+	// Vlan tag ID
+	//   - Range: `0`-`31`
 	VlanTagId pulumi.IntPtrOutput `pulumi:"vlanTagId"`
-	// Voice domain permission - Default value: `false`
+	// Voice domain permission
+	//   - Default value: `false`
 	VoiceDomainPermission pulumi.BoolOutput `pulumi:"voiceDomainPermission"`
-	// Web authentication (local) - Default value: `false`
+	// Web authentication (local)
+	//   - Default value: `false`
 	WebAuth pulumi.BoolOutput `pulumi:"webAuth"`
 	// Web redirection ACL
 	WebRedirectionAcl pulumi.StringPtrOutput `pulumi:"webRedirectionAcl"`
-	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
-	// values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages pulumi.BoolPtrOutput `pulumi:"webRedirectionDisplayCertificatesRenewalMessages"`
 	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName pulumi.StringPtrOutput `pulumi:"webRedirectionPortalName"`
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn pulumi.StringPtrOutput `pulumi:"webRedirectionStaticIpHostNameFqdn"`
-	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
-	// `NativeSupplicanProvisioning`, `ClientProvisioning`
+	// This type must fit the `webRedirectionPortalName`
+	//   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType pulumi.StringPtrOutput `pulumi:"webRedirectionType"`
 }
 
@@ -123,7 +135,9 @@ func GetAuthorizationProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthorizationProfile resources.
 type authorizationProfileState struct {
-	// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+	// Access type
+	//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+	//   - Default value: `ACCESS_ACCEPT`
 	AccessType *string `pulumi:"accessType"`
 	// ACL
 	Acl *string `pulumi:"acl"`
@@ -145,7 +159,8 @@ type authorizationProfileState struct {
 	DaclName *string `pulumi:"daclName"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Easy wired session candidate - Default value: `false`
+	// Easy wired session candidate
+	//   - Default value: `false`
 	EasywiredSessionCandidate *bool `pulumi:"easywiredSessionCandidate"`
 	// Interface template
 	InterfaceTemplate *string `pulumi:"interfaceTemplate"`
@@ -153,48 +168,59 @@ type authorizationProfileState struct {
 	Ipv6AclFilter *string `pulumi:"ipv6AclFilter"`
 	// IPv6 DACL name
 	Ipv6DaclName *string `pulumi:"ipv6DaclName"`
-	// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+	// MacSec policy
+	//   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
 	MacSecPolicy *string `pulumi:"macSecPolicy"`
 	// The name of the authorization profile
 	Name *string `pulumi:"name"`
-	// NEAT - Default value: `false`
+	// NEAT
+	//   - Default value: `false`
 	Neat *bool `pulumi:"neat"`
-	// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+	// Value needs to be an existing Network Device Profile
+	//   - Default value: `Cisco`
 	ProfileName *string `pulumi:"profileName"`
-	// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+	// Maintain Connectivity During Reauthentication
+	//   - Choices: `DEFAULT`, `RADIUS_REQUEST`
 	ReauthenticationConnectivity *string `pulumi:"reauthenticationConnectivity"`
-	// Reauthentication timer - Range: `1`-`65535`
+	// Reauthentication timer
+	//   - Range: `1`-`65535`
 	ReauthenticationTimer *int `pulumi:"reauthenticationTimer"`
-	// Service template - Default value: `false`
+	// Service template
+	//   - Default value: `false`
 	ServiceTemplate *bool `pulumi:"serviceTemplate"`
-	// Track movement - Default value: `false`
+	// Track movement
+	//   - Default value: `false`
 	TrackMovement *bool `pulumi:"trackMovement"`
 	// Unique identifier
 	UniqueIdentifier *string `pulumi:"uniqueIdentifier"`
 	// Vlan name or ID
 	VlanNameId *string `pulumi:"vlanNameId"`
-	// Vlan tag ID - Range: `0`-`31`
+	// Vlan tag ID
+	//   - Range: `0`-`31`
 	VlanTagId *int `pulumi:"vlanTagId"`
-	// Voice domain permission - Default value: `false`
+	// Voice domain permission
+	//   - Default value: `false`
 	VoiceDomainPermission *bool `pulumi:"voiceDomainPermission"`
-	// Web authentication (local) - Default value: `false`
+	// Web authentication (local)
+	//   - Default value: `false`
 	WebAuth *bool `pulumi:"webAuth"`
 	// Web redirection ACL
 	WebRedirectionAcl *string `pulumi:"webRedirectionAcl"`
-	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
-	// values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages *bool `pulumi:"webRedirectionDisplayCertificatesRenewalMessages"`
 	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName *string `pulumi:"webRedirectionPortalName"`
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn *string `pulumi:"webRedirectionStaticIpHostNameFqdn"`
-	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
-	// `NativeSupplicanProvisioning`, `ClientProvisioning`
+	// This type must fit the `webRedirectionPortalName`
+	//   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType *string `pulumi:"webRedirectionType"`
 }
 
 type AuthorizationProfileState struct {
-	// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+	// Access type
+	//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+	//   - Default value: `ACCESS_ACCEPT`
 	AccessType pulumi.StringPtrInput
 	// ACL
 	Acl pulumi.StringPtrInput
@@ -216,7 +242,8 @@ type AuthorizationProfileState struct {
 	DaclName pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Easy wired session candidate - Default value: `false`
+	// Easy wired session candidate
+	//   - Default value: `false`
 	EasywiredSessionCandidate pulumi.BoolPtrInput
 	// Interface template
 	InterfaceTemplate pulumi.StringPtrInput
@@ -224,43 +251,52 @@ type AuthorizationProfileState struct {
 	Ipv6AclFilter pulumi.StringPtrInput
 	// IPv6 DACL name
 	Ipv6DaclName pulumi.StringPtrInput
-	// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+	// MacSec policy
+	//   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
 	MacSecPolicy pulumi.StringPtrInput
 	// The name of the authorization profile
 	Name pulumi.StringPtrInput
-	// NEAT - Default value: `false`
+	// NEAT
+	//   - Default value: `false`
 	Neat pulumi.BoolPtrInput
-	// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+	// Value needs to be an existing Network Device Profile
+	//   - Default value: `Cisco`
 	ProfileName pulumi.StringPtrInput
-	// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+	// Maintain Connectivity During Reauthentication
+	//   - Choices: `DEFAULT`, `RADIUS_REQUEST`
 	ReauthenticationConnectivity pulumi.StringPtrInput
-	// Reauthentication timer - Range: `1`-`65535`
+	// Reauthentication timer
+	//   - Range: `1`-`65535`
 	ReauthenticationTimer pulumi.IntPtrInput
-	// Service template - Default value: `false`
+	// Service template
+	//   - Default value: `false`
 	ServiceTemplate pulumi.BoolPtrInput
-	// Track movement - Default value: `false`
+	// Track movement
+	//   - Default value: `false`
 	TrackMovement pulumi.BoolPtrInput
 	// Unique identifier
 	UniqueIdentifier pulumi.StringPtrInput
 	// Vlan name or ID
 	VlanNameId pulumi.StringPtrInput
-	// Vlan tag ID - Range: `0`-`31`
+	// Vlan tag ID
+	//   - Range: `0`-`31`
 	VlanTagId pulumi.IntPtrInput
-	// Voice domain permission - Default value: `false`
+	// Voice domain permission
+	//   - Default value: `false`
 	VoiceDomainPermission pulumi.BoolPtrInput
-	// Web authentication (local) - Default value: `false`
+	// Web authentication (local)
+	//   - Default value: `false`
 	WebAuth pulumi.BoolPtrInput
 	// Web redirection ACL
 	WebRedirectionAcl pulumi.StringPtrInput
-	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
-	// values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages pulumi.BoolPtrInput
 	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName pulumi.StringPtrInput
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn pulumi.StringPtrInput
-	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
-	// `NativeSupplicanProvisioning`, `ClientProvisioning`
+	// This type must fit the `webRedirectionPortalName`
+	//   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType pulumi.StringPtrInput
 }
 
@@ -269,7 +305,9 @@ func (AuthorizationProfileState) ElementType() reflect.Type {
 }
 
 type authorizationProfileArgs struct {
-	// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+	// Access type
+	//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+	//   - Default value: `ACCESS_ACCEPT`
 	AccessType *string `pulumi:"accessType"`
 	// ACL
 	Acl *string `pulumi:"acl"`
@@ -291,7 +329,8 @@ type authorizationProfileArgs struct {
 	DaclName *string `pulumi:"daclName"`
 	// Description
 	Description *string `pulumi:"description"`
-	// Easy wired session candidate - Default value: `false`
+	// Easy wired session candidate
+	//   - Default value: `false`
 	EasywiredSessionCandidate *bool `pulumi:"easywiredSessionCandidate"`
 	// Interface template
 	InterfaceTemplate *string `pulumi:"interfaceTemplate"`
@@ -299,49 +338,60 @@ type authorizationProfileArgs struct {
 	Ipv6AclFilter *string `pulumi:"ipv6AclFilter"`
 	// IPv6 DACL name
 	Ipv6DaclName *string `pulumi:"ipv6DaclName"`
-	// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+	// MacSec policy
+	//   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
 	MacSecPolicy *string `pulumi:"macSecPolicy"`
 	// The name of the authorization profile
 	Name *string `pulumi:"name"`
-	// NEAT - Default value: `false`
+	// NEAT
+	//   - Default value: `false`
 	Neat *bool `pulumi:"neat"`
-	// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+	// Value needs to be an existing Network Device Profile
+	//   - Default value: `Cisco`
 	ProfileName *string `pulumi:"profileName"`
-	// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+	// Maintain Connectivity During Reauthentication
+	//   - Choices: `DEFAULT`, `RADIUS_REQUEST`
 	ReauthenticationConnectivity *string `pulumi:"reauthenticationConnectivity"`
-	// Reauthentication timer - Range: `1`-`65535`
+	// Reauthentication timer
+	//   - Range: `1`-`65535`
 	ReauthenticationTimer *int `pulumi:"reauthenticationTimer"`
-	// Service template - Default value: `false`
+	// Service template
+	//   - Default value: `false`
 	ServiceTemplate *bool `pulumi:"serviceTemplate"`
-	// Track movement - Default value: `false`
+	// Track movement
+	//   - Default value: `false`
 	TrackMovement *bool `pulumi:"trackMovement"`
 	// Unique identifier
 	UniqueIdentifier *string `pulumi:"uniqueIdentifier"`
 	// Vlan name or ID
 	VlanNameId *string `pulumi:"vlanNameId"`
-	// Vlan tag ID - Range: `0`-`31`
+	// Vlan tag ID
+	//   - Range: `0`-`31`
 	VlanTagId *int `pulumi:"vlanTagId"`
-	// Voice domain permission - Default value: `false`
+	// Voice domain permission
+	//   - Default value: `false`
 	VoiceDomainPermission *bool `pulumi:"voiceDomainPermission"`
-	// Web authentication (local) - Default value: `false`
+	// Web authentication (local)
+	//   - Default value: `false`
 	WebAuth *bool `pulumi:"webAuth"`
 	// Web redirection ACL
 	WebRedirectionAcl *string `pulumi:"webRedirectionAcl"`
-	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
-	// values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages *bool `pulumi:"webRedirectionDisplayCertificatesRenewalMessages"`
 	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName *string `pulumi:"webRedirectionPortalName"`
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn *string `pulumi:"webRedirectionStaticIpHostNameFqdn"`
-	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
-	// `NativeSupplicanProvisioning`, `ClientProvisioning`
+	// This type must fit the `webRedirectionPortalName`
+	//   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType *string `pulumi:"webRedirectionType"`
 }
 
 // The set of arguments for constructing a AuthorizationProfile resource.
 type AuthorizationProfileArgs struct {
-	// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+	// Access type
+	//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+	//   - Default value: `ACCESS_ACCEPT`
 	AccessType pulumi.StringPtrInput
 	// ACL
 	Acl pulumi.StringPtrInput
@@ -363,7 +413,8 @@ type AuthorizationProfileArgs struct {
 	DaclName pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
-	// Easy wired session candidate - Default value: `false`
+	// Easy wired session candidate
+	//   - Default value: `false`
 	EasywiredSessionCandidate pulumi.BoolPtrInput
 	// Interface template
 	InterfaceTemplate pulumi.StringPtrInput
@@ -371,43 +422,52 @@ type AuthorizationProfileArgs struct {
 	Ipv6AclFilter pulumi.StringPtrInput
 	// IPv6 DACL name
 	Ipv6DaclName pulumi.StringPtrInput
-	// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+	// MacSec policy
+	//   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
 	MacSecPolicy pulumi.StringPtrInput
 	// The name of the authorization profile
 	Name pulumi.StringPtrInput
-	// NEAT - Default value: `false`
+	// NEAT
+	//   - Default value: `false`
 	Neat pulumi.BoolPtrInput
-	// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+	// Value needs to be an existing Network Device Profile
+	//   - Default value: `Cisco`
 	ProfileName pulumi.StringPtrInput
-	// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+	// Maintain Connectivity During Reauthentication
+	//   - Choices: `DEFAULT`, `RADIUS_REQUEST`
 	ReauthenticationConnectivity pulumi.StringPtrInput
-	// Reauthentication timer - Range: `1`-`65535`
+	// Reauthentication timer
+	//   - Range: `1`-`65535`
 	ReauthenticationTimer pulumi.IntPtrInput
-	// Service template - Default value: `false`
+	// Service template
+	//   - Default value: `false`
 	ServiceTemplate pulumi.BoolPtrInput
-	// Track movement - Default value: `false`
+	// Track movement
+	//   - Default value: `false`
 	TrackMovement pulumi.BoolPtrInput
 	// Unique identifier
 	UniqueIdentifier pulumi.StringPtrInput
 	// Vlan name or ID
 	VlanNameId pulumi.StringPtrInput
-	// Vlan tag ID - Range: `0`-`31`
+	// Vlan tag ID
+	//   - Range: `0`-`31`
 	VlanTagId pulumi.IntPtrInput
-	// Voice domain permission - Default value: `false`
+	// Voice domain permission
+	//   - Default value: `false`
 	VoiceDomainPermission pulumi.BoolPtrInput
-	// Web authentication (local) - Default value: `false`
+	// Web authentication (local)
+	//   - Default value: `false`
 	WebAuth pulumi.BoolPtrInput
 	// Web redirection ACL
 	WebRedirectionAcl pulumi.StringPtrInput
-	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
-	// values the field must be ignored.
+	// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
 	WebRedirectionDisplayCertificatesRenewalMessages pulumi.BoolPtrInput
 	// A portal that exist in the DB and fits the `webRedirectionType`
 	WebRedirectionPortalName pulumi.StringPtrInput
 	// IP, hostname or FQDN
 	WebRedirectionStaticIpHostNameFqdn pulumi.StringPtrInput
-	// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
-	// `NativeSupplicanProvisioning`, `ClientProvisioning`
+	// This type must fit the `webRedirectionPortalName`
+	//   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
 	WebRedirectionType pulumi.StringPtrInput
 }
 
@@ -498,7 +558,9 @@ func (o AuthorizationProfileOutput) ToAuthorizationProfileOutputWithContext(ctx 
 	return o
 }
 
-// Access type - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT` - Default value: `ACCESS_ACCEPT`
+// Access type
+//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
+//   - Default value: `ACCESS_ACCEPT`
 func (o AuthorizationProfileOutput) AccessType() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringOutput { return v.AccessType }).(pulumi.StringOutput)
 }
@@ -555,7 +617,8 @@ func (o AuthorizationProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Easy wired session candidate - Default value: `false`
+// Easy wired session candidate
+//   - Default value: `false`
 func (o AuthorizationProfileOutput) EasywiredSessionCandidate() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolOutput { return v.EasywiredSessionCandidate }).(pulumi.BoolOutput)
 }
@@ -575,7 +638,8 @@ func (o AuthorizationProfileOutput) Ipv6DaclName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.Ipv6DaclName }).(pulumi.StringPtrOutput)
 }
 
-// MacSec policy - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
+// MacSec policy
+//   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
 func (o AuthorizationProfileOutput) MacSecPolicy() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.MacSecPolicy }).(pulumi.StringPtrOutput)
 }
@@ -585,32 +649,38 @@ func (o AuthorizationProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// NEAT - Default value: `false`
+// NEAT
+//   - Default value: `false`
 func (o AuthorizationProfileOutput) Neat() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolOutput { return v.Neat }).(pulumi.BoolOutput)
 }
 
-// Value needs to be an existing Network Device Profile - Default value: `Cisco`
+// Value needs to be an existing Network Device Profile
+//   - Default value: `Cisco`
 func (o AuthorizationProfileOutput) ProfileName() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringOutput { return v.ProfileName }).(pulumi.StringOutput)
 }
 
-// Maintain Connectivity During Reauthentication - Choices: `DEFAULT`, `RADIUS_REQUEST`
+// Maintain Connectivity During Reauthentication
+//   - Choices: `DEFAULT`, `RADIUS_REQUEST`
 func (o AuthorizationProfileOutput) ReauthenticationConnectivity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.ReauthenticationConnectivity }).(pulumi.StringPtrOutput)
 }
 
-// Reauthentication timer - Range: `1`-`65535`
+// Reauthentication timer
+//   - Range: `1`-`65535`
 func (o AuthorizationProfileOutput) ReauthenticationTimer() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.IntPtrOutput { return v.ReauthenticationTimer }).(pulumi.IntPtrOutput)
 }
 
-// Service template - Default value: `false`
+// Service template
+//   - Default value: `false`
 func (o AuthorizationProfileOutput) ServiceTemplate() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolOutput { return v.ServiceTemplate }).(pulumi.BoolOutput)
 }
 
-// Track movement - Default value: `false`
+// Track movement
+//   - Default value: `false`
 func (o AuthorizationProfileOutput) TrackMovement() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolOutput { return v.TrackMovement }).(pulumi.BoolOutput)
 }
@@ -625,17 +695,20 @@ func (o AuthorizationProfileOutput) VlanNameId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.VlanNameId }).(pulumi.StringPtrOutput)
 }
 
-// Vlan tag ID - Range: `0`-`31`
+// Vlan tag ID
+//   - Range: `0`-`31`
 func (o AuthorizationProfileOutput) VlanTagId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.IntPtrOutput { return v.VlanTagId }).(pulumi.IntPtrOutput)
 }
 
-// Voice domain permission - Default value: `false`
+// Voice domain permission
+//   - Default value: `false`
 func (o AuthorizationProfileOutput) VoiceDomainPermission() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolOutput { return v.VoiceDomainPermission }).(pulumi.BoolOutput)
 }
 
-// Web authentication (local) - Default value: `false`
+// Web authentication (local)
+//   - Default value: `false`
 func (o AuthorizationProfileOutput) WebAuth() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolOutput { return v.WebAuth }).(pulumi.BoolOutput)
 }
@@ -645,8 +718,7 @@ func (o AuthorizationProfileOutput) WebRedirectionAcl() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionAcl }).(pulumi.StringPtrOutput)
 }
 
-// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType`
-// values the field must be ignored.
+// This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
 func (o AuthorizationProfileOutput) WebRedirectionDisplayCertificatesRenewalMessages() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.BoolPtrOutput {
 		return v.WebRedirectionDisplayCertificatesRenewalMessages
@@ -663,8 +735,8 @@ func (o AuthorizationProfileOutput) WebRedirectionStaticIpHostNameFqdn() pulumi.
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionStaticIpHostNameFqdn }).(pulumi.StringPtrOutput)
 }
 
-// This type must fit the `webRedirectionPortalName` - Choices: `CentralizedWebAuth`, `HotSpot`,
-// `NativeSupplicanProvisioning`, `ClientProvisioning`
+// This type must fit the `webRedirectionPortalName`
+//   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
 func (o AuthorizationProfileOutput) WebRedirectionType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthorizationProfile) pulumi.StringPtrOutput { return v.WebRedirectionType }).(pulumi.StringPtrOutput)
 }

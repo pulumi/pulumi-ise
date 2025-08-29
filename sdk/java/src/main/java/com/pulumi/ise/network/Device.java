@@ -166,14 +166,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authenticationEncryptionKey);
     }
     /**
-     * Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      * 
      */
     @Export(name="authenticationEncryptionKeyFormat", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationEncryptionKeyFormat;
 
     /**
-     * @return Key input format - Choices: `ASCII`, `HEXADECIMAL`
+     * @return Key input format
+     *   - Choices: `ASCII`, `HEXADECIMAL`
      * 
      */
     public Output<Optional<String>> authenticationEncryptionKeyFormat() {
@@ -194,14 +196,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authenticationMessageAuthenticatorCodeKey);
     }
     /**
-     * Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      * 
      */
     @Export(name="authenticationNetworkProtocol", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationNetworkProtocol;
 
     /**
-     * @return Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+     * @return Network protocol
+     *   - Choices: `RADIUS`, `TACACS_PLUS`
      * 
      */
     public Output<Optional<String>> authenticationNetworkProtocol() {
@@ -236,14 +240,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authenticationSecondRadiusSharedSecret);
     }
     /**
-     * CoA port - Default value: `1700`
+     * CoA port
+     *   - Default value: `1700`
      * 
      */
     @Export(name="coaPort", refs={Integer.class}, tree="[0]")
     private Output<Integer> coaPort;
 
     /**
-     * @return CoA port - Default value: `1700`
+     * @return CoA port
+     *   - Default value: `1700`
      * 
      */
     public Output<Integer> coaPort() {
@@ -334,14 +340,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.networkDeviceGroups);
     }
     /**
-     * Profile name - Default value: `Cisco`
+     * Profile name
+     *   - Default value: `Cisco`
      * 
      */
     @Export(name="profileName", refs={String.class}, tree="[0]")
     private Output<String> profileName;
 
     /**
-     * @return Profile name - Default value: `Cisco`
+     * @return Profile name
+     *   - Default value: `Cisco`
      * 
      */
     public Output<String> profileName() {
@@ -390,14 +398,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.snmpOriginatingPolicyServiceNode);
     }
     /**
-     * SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      * 
      */
     @Export(name="snmpPollingInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> snmpPollingInterval;
 
     /**
-     * @return SNMP Polling Interval in seconds - Range: `600`-`86400`
+     * @return SNMP Polling Interval in seconds
+     *   - Range: `600`-`86400`
      * 
      */
     public Output<Optional<Integer>> snmpPollingInterval() {
@@ -418,14 +428,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.snmpRoCommunity);
     }
     /**
-     * SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      * 
      */
     @Export(name="snmpVersion", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snmpVersion;
 
     /**
-     * @return SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+     * @return SNMP version
+     *   - Choices: `ONE`, `TWO_C`, `THREE`
      * 
      */
     public Output<Optional<String>> snmpVersion() {
@@ -446,14 +458,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.softwareVersion);
     }
     /**
-     * Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      * 
      */
     @Export(name="tacacsConnectModeOptions", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tacacsConnectModeOptions;
 
     /**
-     * @return Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+     * @return Connect mode options
+     *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      * 
      */
     public Output<Optional<String>> tacacsConnectModeOptions() {
@@ -684,14 +698,16 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.trustsecSendConfigurationToDevice);
     }
     /**
-     * Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      * 
      */
     @Export(name="trustsecSendConfigurationToDeviceUsing", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> trustsecSendConfigurationToDeviceUsing;
 
     /**
-     * @return Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+     * @return Send configuration to device using
+     *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      * 
      */
     public Output<Optional<String>> trustsecSendConfigurationToDeviceUsing() {

@@ -24,7 +24,8 @@ class EndpointCustomAttributeArgs:
         """
         The set of arguments for constructing a EndpointCustomAttribute resource.
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
-        :param pulumi.Input[_builtins.str] attribute_type: Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        :param pulumi.Input[_builtins.str] attribute_type: Attribute type
+                 - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         pulumi.set(__self__, "attribute_name", attribute_name)
         pulumi.set(__self__, "attribute_type", attribute_type)
@@ -45,7 +46,8 @@ class EndpointCustomAttributeArgs:
     @pulumi.getter(name="attributeType")
     def attribute_type(self) -> pulumi.Input[_builtins.str]:
         """
-        Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        Attribute type
+          - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         return pulumi.get(self, "attribute_type")
 
@@ -62,7 +64,8 @@ class _EndpointCustomAttributeState:
         """
         Input properties used for looking up and filtering EndpointCustomAttribute resources.
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
-        :param pulumi.Input[_builtins.str] attribute_type: Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        :param pulumi.Input[_builtins.str] attribute_type: Attribute type
+                 - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         if attribute_name is not None:
             pulumi.set(__self__, "attribute_name", attribute_name)
@@ -85,7 +88,8 @@ class _EndpointCustomAttributeState:
     @pulumi.getter(name="attributeType")
     def attribute_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        Attribute type
+          - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         return pulumi.get(self, "attribute_type")
 
@@ -128,7 +132,8 @@ class EndpointCustomAttribute(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
-        :param pulumi.Input[_builtins.str] attribute_type: Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        :param pulumi.Input[_builtins.str] attribute_type: Attribute type
+                 - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         ...
     @overload
@@ -210,7 +215,8 @@ class EndpointCustomAttribute(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
-        :param pulumi.Input[_builtins.str] attribute_type: Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        :param pulumi.Input[_builtins.str] attribute_type: Attribute type
+                 - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -232,7 +238,8 @@ class EndpointCustomAttribute(pulumi.CustomResource):
     @pulumi.getter(name="attributeType")
     def attribute_type(self) -> pulumi.Output[_builtins.str]:
         """
-        Attribute type - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
+        Attribute type
+          - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
         """
         return pulumi.get(self, "attribute_type")
 

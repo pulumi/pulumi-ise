@@ -33,9 +33,8 @@ class ConditionArgs:
                  operator: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Condition resource.
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-               `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
@@ -44,9 +43,8 @@ class ConditionArgs:
         :param pulumi.Input[_builtins.str] dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.bool] is_negate: Indicates whereas this condition is in negate mode
         :param pulumi.Input[_builtins.str] name: Condition name
-        :param pulumi.Input[_builtins.str] operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         pulumi.set(__self__, "condition_type", condition_type)
         if attribute_name is not None:
@@ -72,9 +70,8 @@ class ConditionArgs:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> pulumi.Input[_builtins.str]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-        `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         """
         return pulumi.get(self, "condition_type")
 
@@ -182,9 +179,8 @@ class ConditionArgs:
     @pulumi.getter
     def operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
 
@@ -211,17 +207,15 @@ class _ConditionState:
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-               `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] description: Condition description
         :param pulumi.Input[_builtins.str] dictionary_name: Dictionary name
         :param pulumi.Input[_builtins.str] dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.bool] is_negate: Indicates whereas this condition is in negate mode
         :param pulumi.Input[_builtins.str] name: Condition name
-        :param pulumi.Input[_builtins.str] operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         if attribute_name is not None:
             pulumi.set(__self__, "attribute_name", attribute_name)
@@ -284,9 +278,8 @@ class _ConditionState:
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-        `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         """
         return pulumi.get(self, "condition_type")
 
@@ -358,9 +351,8 @@ class _ConditionState:
     @pulumi.getter
     def operator(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
 
@@ -419,17 +411,15 @@ class Condition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-               `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] description: Condition description
         :param pulumi.Input[_builtins.str] dictionary_name: Dictionary name
         :param pulumi.Input[_builtins.str] dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.bool] is_negate: Indicates whereas this condition is in negate mode
         :param pulumi.Input[_builtins.str] name: Condition name
-        :param pulumi.Input[_builtins.str] operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         ...
     @overload
@@ -541,17 +531,15 @@ class Condition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
-        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-               additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-               `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+                 - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] description: Condition description
         :param pulumi.Input[_builtins.str] dictionary_name: Dictionary name
         :param pulumi.Input[_builtins.str] dictionary_value: Dictionary value
         :param pulumi.Input[_builtins.bool] is_negate: Indicates whereas this condition is in negate mode
         :param pulumi.Input[_builtins.str] name: Condition name
-        :param pulumi.Input[_builtins.str] operator: Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-               `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-               `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        :param pulumi.Input[_builtins.str] operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -597,9 +585,8 @@ class Condition(pulumi.CustomResource):
     @pulumi.getter(name="conditionType")
     def condition_type(self) -> pulumi.Output[_builtins.str]:
         """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-        additional conditions are present under the children attribute. - Choices: `LibraryConditionAndBlock`,
-        `LibraryConditionAttributes`, `LibraryConditionOrBlock`
+        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+          - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         """
         return pulumi.get(self, "condition_type")
 
@@ -647,9 +634,8 @@ class Condition(pulumi.CustomResource):
     @pulumi.getter
     def operator(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-        `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-        `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
 

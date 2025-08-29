@@ -25,7 +25,8 @@ class DictionaryArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Dictionary resource.
-        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type
+                 - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         :param pulumi.Input[_builtins.str] version: The version of the dictionary
         :param pulumi.Input[_builtins.str] description: The description of the dictionary
         :param pulumi.Input[_builtins.str] name: The dictionary name
@@ -41,7 +42,8 @@ class DictionaryArgs:
     @pulumi.getter(name="dictionaryAttrType")
     def dictionary_attr_type(self) -> pulumi.Input[_builtins.str]:
         """
-        The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        The dictionary attribute type
+          - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         """
         return pulumi.get(self, "dictionary_attr_type")
 
@@ -96,7 +98,8 @@ class _DictionaryState:
         """
         Input properties used for looking up and filtering Dictionary resources.
         :param pulumi.Input[_builtins.str] description: The description of the dictionary
-        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type
+                 - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         :param pulumi.Input[_builtins.str] name: The dictionary name
         :param pulumi.Input[_builtins.str] version: The version of the dictionary
         """
@@ -125,7 +128,8 @@ class _DictionaryState:
     @pulumi.getter(name="dictionaryAttrType")
     def dictionary_attr_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        The dictionary attribute type
+          - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         """
         return pulumi.get(self, "dictionary_attr_type")
 
@@ -196,7 +200,8 @@ class Dictionary(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the dictionary
-        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type
+                 - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         :param pulumi.Input[_builtins.str] name: The dictionary name
         :param pulumi.Input[_builtins.str] version: The version of the dictionary
         """
@@ -288,7 +293,8 @@ class Dictionary(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the dictionary
-        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type
+                 - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         :param pulumi.Input[_builtins.str] name: The dictionary name
         :param pulumi.Input[_builtins.str] version: The version of the dictionary
         """
@@ -314,7 +320,8 @@ class Dictionary(pulumi.CustomResource):
     @pulumi.getter(name="dictionaryAttrType")
     def dictionary_attr_type(self) -> pulumi.Output[_builtins.str]:
         """
-        The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+        The dictionary attribute type
+          - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         """
         return pulumi.get(self, "dictionary_attr_type")
 

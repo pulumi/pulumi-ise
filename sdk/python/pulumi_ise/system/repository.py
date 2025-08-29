@@ -29,7 +29,8 @@ class RepositoryArgs:
         """
         The set of arguments for constructing a Repository resource.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
-        :param pulumi.Input[_builtins.str] protocol: Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+                 - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
@@ -65,7 +66,8 @@ class RepositoryArgs:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[_builtins.str]:
         """
-        Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        Protocol
+          - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         """
         return pulumi.get(self, "protocol")
 
@@ -150,7 +152,8 @@ class _RepositoryState:
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
-        :param pulumi.Input[_builtins.str] protocol: Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+                 - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         :param pulumi.Input[_builtins.str] server_name: Name of the server
         :param pulumi.Input[_builtins.str] user_name: User name
         """
@@ -221,7 +224,8 @@ class _RepositoryState:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        Protocol
+          - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         """
         return pulumi.get(self, "protocol")
 
@@ -301,7 +305,8 @@ class Repository(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
-        :param pulumi.Input[_builtins.str] protocol: Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+                 - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         :param pulumi.Input[_builtins.str] server_name: Name of the server
         :param pulumi.Input[_builtins.str] user_name: User name
         """
@@ -408,7 +413,8 @@ class Repository(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
-        :param pulumi.Input[_builtins.str] protocol: Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+                 - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         :param pulumi.Input[_builtins.str] server_name: Name of the server
         :param pulumi.Input[_builtins.str] user_name: User name
         """
@@ -461,7 +467,8 @@ class Repository(pulumi.CustomResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output[_builtins.str]:
         """
-        Protocol - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
+        Protocol
+          - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
         """
         return pulumi.get(self, "protocol")
 

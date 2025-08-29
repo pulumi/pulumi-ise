@@ -131,317 +131,324 @@ export class AllowedProtocols extends pulumi.CustomResource {
     /**
      * Allow 5G. This field is only supported from ISE 3.2.
      */
-    public readonly allow5g!: pulumi.Output<boolean | undefined>;
+    declare public readonly allow5g: pulumi.Output<boolean | undefined>;
     /**
      * Allow CHAP
      */
-    public readonly allowChap!: pulumi.Output<boolean>;
+    declare public readonly allowChap: pulumi.Output<boolean>;
     /**
      * Allow EAP Fast
      */
-    public readonly allowEapFast!: pulumi.Output<boolean>;
+    declare public readonly allowEapFast: pulumi.Output<boolean>;
     /**
      * Allow EAP MD5
      */
-    public readonly allowEapMd5!: pulumi.Output<boolean>;
+    declare public readonly allowEapMd5: pulumi.Output<boolean>;
     /**
      * Allow EAP TLS
      */
-    public readonly allowEapTls!: pulumi.Output<boolean>;
+    declare public readonly allowEapTls: pulumi.Output<boolean>;
     /**
      * Allow EAP TTLS
      */
-    public readonly allowEapTtls!: pulumi.Output<boolean>;
+    declare public readonly allowEapTtls: pulumi.Output<boolean>;
     /**
      * Allow LEAP
      */
-    public readonly allowLeap!: pulumi.Output<boolean>;
+    declare public readonly allowLeap: pulumi.Output<boolean>;
     /**
      * Allow MS CHAP v1
      */
-    public readonly allowMsChapV1!: pulumi.Output<boolean>;
+    declare public readonly allowMsChapV1: pulumi.Output<boolean>;
     /**
      * Allow MS CHAP v2
      */
-    public readonly allowMsChapV2!: pulumi.Output<boolean>;
+    declare public readonly allowMsChapV2: pulumi.Output<boolean>;
     /**
      * Allow PAP ASCII
      */
-    public readonly allowPapAscii!: pulumi.Output<boolean>;
+    declare public readonly allowPapAscii: pulumi.Output<boolean>;
     /**
      * Allow PEAP
      */
-    public readonly allowPeap!: pulumi.Output<boolean>;
+    declare public readonly allowPeap: pulumi.Output<boolean>;
     /**
      * Allow preferred EAP protocol
      */
-    public readonly allowPreferredEapProtocol!: pulumi.Output<boolean>;
+    declare public readonly allowPreferredEapProtocol: pulumi.Output<boolean>;
     /**
      * Allow TEAP
      */
-    public readonly allowTeap!: pulumi.Output<boolean>;
+    declare public readonly allowTeap: pulumi.Output<boolean>;
     /**
      * Allow weak ciphers for EAP
      */
-    public readonly allowWeakCiphersForEap!: pulumi.Output<boolean>;
+    declare public readonly allowWeakCiphersForEap: pulumi.Output<boolean>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
-    public readonly eapFastAcceptClientCert!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastAcceptClientCert: pulumi.Output<boolean | undefined>;
     /**
      * Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      */
-    public readonly eapFastAllowMachineAuthentication!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastAllowMachineAuthentication: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP GTC
      */
-    public readonly eapFastEapGtc!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEapGtc: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      */
-    public readonly eapFastEapGtcPwdChange!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEapGtcPwdChange: pulumi.Output<boolean | undefined>;
     /**
-     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+     *   - Range: `0`-`3`
      */
-    public readonly eapFastEapGtcPwdChangeRetries!: pulumi.Output<number | undefined>;
+    declare public readonly eapFastEapGtcPwdChangeRetries: pulumi.Output<number | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    public readonly eapFastEapMsChapV2!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEapMsChapV2: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      */
-    public readonly eapFastEapMsChapV2PwdChange!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEapMsChapV2PwdChange: pulumi.Output<boolean | undefined>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
-    public readonly eapFastEapMsChapV2PwdChangeRetries!: pulumi.Output<number | undefined>;
+    declare public readonly eapFastEapMsChapV2PwdChangeRetries: pulumi.Output<number | undefined>;
     /**
      * Allow EAP TLS
      */
-    public readonly eapFastEapTls!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEapTls: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      */
-    public readonly eapFastEapTlsAuthOfExpiredCerts!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEapTlsAuthOfExpiredCerts: pulumi.Output<boolean | undefined>;
     /**
      * Enable EAP chaining
      */
-    public readonly eapFastEnableEapChaining!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastEnableEapChaining: pulumi.Output<boolean | undefined>;
     /**
      * Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      */
-    public readonly eapFastPacsAllowAnonymousProvisioning!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastPacsAllowAnonymousProvisioning: pulumi.Output<boolean | undefined>;
     /**
      * Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      */
-    public readonly eapFastPacsAllowAuthenticatedProvisioning!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastPacsAllowAuthenticatedProvisioning: pulumi.Output<boolean | undefined>;
     /**
      * Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
-    public readonly eapFastPacsAllowClientCert!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastPacsAllowClientCert: pulumi.Output<boolean | undefined>;
     /**
      * Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      */
-    public readonly eapFastPacsAllowMachineAuthentication!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastPacsAllowMachineAuthentication: pulumi.Output<boolean | undefined>;
     /**
      * Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      */
-    public readonly eapFastPacsAuthorizationPacTtl!: pulumi.Output<number | undefined>;
+    declare public readonly eapFastPacsAuthorizationPacTtl: pulumi.Output<number | undefined>;
     /**
-     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    public readonly eapFastPacsAuthorizationPacTtlUnit!: pulumi.Output<string | undefined>;
+    declare public readonly eapFastPacsAuthorizationPacTtlUnit: pulumi.Output<string | undefined>;
     /**
      * Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      */
-    public readonly eapFastPacsMachinePacTtl!: pulumi.Output<number | undefined>;
+    declare public readonly eapFastPacsMachinePacTtl: pulumi.Output<number | undefined>;
     /**
-     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    public readonly eapFastPacsMachinePacTtlUnit!: pulumi.Output<string | undefined>;
+    declare public readonly eapFastPacsMachinePacTtlUnit: pulumi.Output<string | undefined>;
     /**
-     * Server returns access accept after authenticated provisioning. Is required only if
-     * `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+     * Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
-    public readonly eapFastPacsServerReturns!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastPacsServerReturns: pulumi.Output<boolean | undefined>;
     /**
      * Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      */
-    public readonly eapFastPacsStatelessSessionResume!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastPacsStatelessSessionResume: pulumi.Output<boolean | undefined>;
     /**
      * PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      */
-    public readonly eapFastPacsTunnelPacTtl!: pulumi.Output<number | undefined>;
+    declare public readonly eapFastPacsTunnelPacTtl: pulumi.Output<number | undefined>;
     /**
-     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-     * `HOURS`, `DAYS`, `WEEKS`
+     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    public readonly eapFastPacsTunnelPacTtlUnit!: pulumi.Output<string | undefined>;
+    declare public readonly eapFastPacsTunnelPacTtlUnit: pulumi.Output<string | undefined>;
     /**
-     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+     *   - Range: `1`-`100`
      */
-    public readonly eapFastPacsUseProactivePacUpdatePercentage!: pulumi.Output<number | undefined>;
+    declare public readonly eapFastPacsUseProactivePacUpdatePercentage: pulumi.Output<number | undefined>;
     /**
      * Use PACs
      */
-    public readonly eapFastUsePacs!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapFastUsePacs: pulumi.Output<boolean | undefined>;
     /**
      * Allow authentication of expired certificates
      */
-    public readonly eapTlsAllowAuthOfExpiredCerts!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTlsAllowAuthOfExpiredCerts: pulumi.Output<boolean | undefined>;
     /**
      * Enable stateless session resume
      */
-    public readonly eapTlsEnableStatelessSessionResume!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTlsEnableStatelessSessionResume: pulumi.Output<boolean | undefined>;
     /**
      * EAP TLS L-Bit
      */
-    public readonly eapTlsLBit!: pulumi.Output<boolean>;
+    declare public readonly eapTlsLBit: pulumi.Output<boolean>;
     /**
-     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+     *   - Range: `1`-`100`
      */
-    public readonly eapTlsSessionTicketPercentage!: pulumi.Output<number | undefined>;
+    declare public readonly eapTlsSessionTicketPercentage: pulumi.Output<number | undefined>;
     /**
      * Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      */
-    public readonly eapTlsSessionTicketTtl!: pulumi.Output<number | undefined>;
+    declare public readonly eapTlsSessionTicketTtl: pulumi.Output<number | undefined>;
     /**
-     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    public readonly eapTlsSessionTicketTtlUnit!: pulumi.Output<string | undefined>;
+    declare public readonly eapTlsSessionTicketTtlUnit: pulumi.Output<string | undefined>;
     /**
      * Allow CHAP
      */
-    public readonly eapTtlsChap!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsChap: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP MD5
      */
-    public readonly eapTtlsEapMd5!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsEapMd5: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    public readonly eapTtlsEapMsChapV2!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsEapMsChapV2: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      */
-    public readonly eapTtlsEapMsChapV2PwdChange!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsEapMsChapV2PwdChange: pulumi.Output<boolean | undefined>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
-    public readonly eapTtlsEapMsChapV2PwdChangeRetries!: pulumi.Output<number | undefined>;
+    declare public readonly eapTtlsEapMsChapV2PwdChangeRetries: pulumi.Output<number | undefined>;
     /**
      * Allow MS CHAP v1
      */
-    public readonly eapTtlsMsChapV1!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsMsChapV1: pulumi.Output<boolean | undefined>;
     /**
      * Allow MS CHAP v2
      */
-    public readonly eapTtlsMsChapV2!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsMsChapV2: pulumi.Output<boolean | undefined>;
     /**
      * Allow PAP ASCII
      */
-    public readonly eapTtlsPapAscii!: pulumi.Output<boolean | undefined>;
+    declare public readonly eapTtlsPapAscii: pulumi.Output<boolean | undefined>;
     /**
      * The name of the allowed protocols
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Allow PEAP EAP GTC
      */
-    public readonly peapAllowPeapEapGtc!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapAllowPeapEapGtc: pulumi.Output<boolean | undefined>;
     /**
      * Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      */
-    public readonly peapAllowPeapEapGtcPwdChange!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapAllowPeapEapGtcPwdChange: pulumi.Output<boolean | undefined>;
     /**
-     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+     *   - Range: `0`-`3`
      */
-    public readonly peapAllowPeapEapGtcPwdChangeRetries!: pulumi.Output<number | undefined>;
+    declare public readonly peapAllowPeapEapGtcPwdChangeRetries: pulumi.Output<number | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2
      */
-    public readonly peapAllowPeapEapMsChapV2!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapAllowPeapEapMsChapV2: pulumi.Output<boolean | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      */
-    public readonly peapAllowPeapEapMsChapV2PwdChange!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapAllowPeapEapMsChapV2PwdChange: pulumi.Output<boolean | undefined>;
     /**
-     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-     * `0`-`3`
+     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
-    public readonly peapAllowPeapEapMsChapV2PwdChangeRetries!: pulumi.Output<number | undefined>;
+    declare public readonly peapAllowPeapEapMsChapV2PwdChangeRetries: pulumi.Output<number | undefined>;
     /**
      * Allow PEAP EAP TLS
      */
-    public readonly peapAllowPeapEapTls!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapAllowPeapEapTls: pulumi.Output<boolean | undefined>;
     /**
      * Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      */
-    public readonly peapAllowPeapEapTlsAuthOfExpiredCerts!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapAllowPeapEapTlsAuthOfExpiredCerts: pulumi.Output<boolean | undefined>;
     /**
      * Allow PEAP v0
      */
-    public readonly peapPeapV0!: pulumi.Output<boolean | undefined>;
+    declare public readonly peapPeapV0: pulumi.Output<boolean | undefined>;
     /**
-     * Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+     * Preferred EAP protocol
+     *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      */
-    public readonly preferredEapProtocol!: pulumi.Output<string | undefined>;
+    declare public readonly preferredEapProtocol: pulumi.Output<string | undefined>;
     /**
      * Process host lookup
      */
-    public readonly processHostLookup!: pulumi.Output<boolean>;
+    declare public readonly processHostLookup: pulumi.Output<boolean>;
     /**
      * Require cryptobinding
      */
-    public readonly requireCryptobinding!: pulumi.Output<boolean | undefined>;
+    declare public readonly requireCryptobinding: pulumi.Output<boolean | undefined>;
     /**
      * Require message authentication
      */
-    public readonly requireMessageAuth!: pulumi.Output<boolean>;
+    declare public readonly requireMessageAuth: pulumi.Output<boolean>;
     /**
      * Allow downgrade to MSK
      */
-    public readonly teapDowngradeMsk!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapDowngradeMsk: pulumi.Output<boolean | undefined>;
     /**
      * Accept client certificate during tunnel establishment
      */
-    public readonly teapEapAcceptClientCertDuringTunnelEst!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapEapAcceptClientCertDuringTunnelEst: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP chaining
      */
-    public readonly teapEapChaining!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapEapChaining: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    public readonly teapEapMsChapV2!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapEapMsChapV2: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      */
-    public readonly teapEapMsChapV2PwdChange!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapEapMsChapV2PwdChange: pulumi.Output<boolean | undefined>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
-    public readonly teapEapMsChapV2PwdChangeRetries!: pulumi.Output<number | undefined>;
+    declare public readonly teapEapMsChapV2PwdChangeRetries: pulumi.Output<number | undefined>;
     /**
      * Allow EAP TLS
      */
-    public readonly teapEapTls!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapEapTls: pulumi.Output<boolean | undefined>;
     /**
      * Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      */
-    public readonly teapEapTlsAuthOfExpiredCerts!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapEapTlsAuthOfExpiredCerts: pulumi.Output<boolean | undefined>;
     /**
      * Request basic password authentication
      */
-    public readonly teapRequestBasicPwdAuth!: pulumi.Output<boolean | undefined>;
+    declare public readonly teapRequestBasicPwdAuth: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a AllowedProtocols resource with the given unique name, arguments, and options.
@@ -456,210 +463,210 @@ export class AllowedProtocols extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AllowedProtocolsState | undefined;
-            resourceInputs["allow5g"] = state ? state.allow5g : undefined;
-            resourceInputs["allowChap"] = state ? state.allowChap : undefined;
-            resourceInputs["allowEapFast"] = state ? state.allowEapFast : undefined;
-            resourceInputs["allowEapMd5"] = state ? state.allowEapMd5 : undefined;
-            resourceInputs["allowEapTls"] = state ? state.allowEapTls : undefined;
-            resourceInputs["allowEapTtls"] = state ? state.allowEapTtls : undefined;
-            resourceInputs["allowLeap"] = state ? state.allowLeap : undefined;
-            resourceInputs["allowMsChapV1"] = state ? state.allowMsChapV1 : undefined;
-            resourceInputs["allowMsChapV2"] = state ? state.allowMsChapV2 : undefined;
-            resourceInputs["allowPapAscii"] = state ? state.allowPapAscii : undefined;
-            resourceInputs["allowPeap"] = state ? state.allowPeap : undefined;
-            resourceInputs["allowPreferredEapProtocol"] = state ? state.allowPreferredEapProtocol : undefined;
-            resourceInputs["allowTeap"] = state ? state.allowTeap : undefined;
-            resourceInputs["allowWeakCiphersForEap"] = state ? state.allowWeakCiphersForEap : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["eapFastAcceptClientCert"] = state ? state.eapFastAcceptClientCert : undefined;
-            resourceInputs["eapFastAllowMachineAuthentication"] = state ? state.eapFastAllowMachineAuthentication : undefined;
-            resourceInputs["eapFastEapGtc"] = state ? state.eapFastEapGtc : undefined;
-            resourceInputs["eapFastEapGtcPwdChange"] = state ? state.eapFastEapGtcPwdChange : undefined;
-            resourceInputs["eapFastEapGtcPwdChangeRetries"] = state ? state.eapFastEapGtcPwdChangeRetries : undefined;
-            resourceInputs["eapFastEapMsChapV2"] = state ? state.eapFastEapMsChapV2 : undefined;
-            resourceInputs["eapFastEapMsChapV2PwdChange"] = state ? state.eapFastEapMsChapV2PwdChange : undefined;
-            resourceInputs["eapFastEapMsChapV2PwdChangeRetries"] = state ? state.eapFastEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["eapFastEapTls"] = state ? state.eapFastEapTls : undefined;
-            resourceInputs["eapFastEapTlsAuthOfExpiredCerts"] = state ? state.eapFastEapTlsAuthOfExpiredCerts : undefined;
-            resourceInputs["eapFastEnableEapChaining"] = state ? state.eapFastEnableEapChaining : undefined;
-            resourceInputs["eapFastPacsAllowAnonymousProvisioning"] = state ? state.eapFastPacsAllowAnonymousProvisioning : undefined;
-            resourceInputs["eapFastPacsAllowAuthenticatedProvisioning"] = state ? state.eapFastPacsAllowAuthenticatedProvisioning : undefined;
-            resourceInputs["eapFastPacsAllowClientCert"] = state ? state.eapFastPacsAllowClientCert : undefined;
-            resourceInputs["eapFastPacsAllowMachineAuthentication"] = state ? state.eapFastPacsAllowMachineAuthentication : undefined;
-            resourceInputs["eapFastPacsAuthorizationPacTtl"] = state ? state.eapFastPacsAuthorizationPacTtl : undefined;
-            resourceInputs["eapFastPacsAuthorizationPacTtlUnit"] = state ? state.eapFastPacsAuthorizationPacTtlUnit : undefined;
-            resourceInputs["eapFastPacsMachinePacTtl"] = state ? state.eapFastPacsMachinePacTtl : undefined;
-            resourceInputs["eapFastPacsMachinePacTtlUnit"] = state ? state.eapFastPacsMachinePacTtlUnit : undefined;
-            resourceInputs["eapFastPacsServerReturns"] = state ? state.eapFastPacsServerReturns : undefined;
-            resourceInputs["eapFastPacsStatelessSessionResume"] = state ? state.eapFastPacsStatelessSessionResume : undefined;
-            resourceInputs["eapFastPacsTunnelPacTtl"] = state ? state.eapFastPacsTunnelPacTtl : undefined;
-            resourceInputs["eapFastPacsTunnelPacTtlUnit"] = state ? state.eapFastPacsTunnelPacTtlUnit : undefined;
-            resourceInputs["eapFastPacsUseProactivePacUpdatePercentage"] = state ? state.eapFastPacsUseProactivePacUpdatePercentage : undefined;
-            resourceInputs["eapFastUsePacs"] = state ? state.eapFastUsePacs : undefined;
-            resourceInputs["eapTlsAllowAuthOfExpiredCerts"] = state ? state.eapTlsAllowAuthOfExpiredCerts : undefined;
-            resourceInputs["eapTlsEnableStatelessSessionResume"] = state ? state.eapTlsEnableStatelessSessionResume : undefined;
-            resourceInputs["eapTlsLBit"] = state ? state.eapTlsLBit : undefined;
-            resourceInputs["eapTlsSessionTicketPercentage"] = state ? state.eapTlsSessionTicketPercentage : undefined;
-            resourceInputs["eapTlsSessionTicketTtl"] = state ? state.eapTlsSessionTicketTtl : undefined;
-            resourceInputs["eapTlsSessionTicketTtlUnit"] = state ? state.eapTlsSessionTicketTtlUnit : undefined;
-            resourceInputs["eapTtlsChap"] = state ? state.eapTtlsChap : undefined;
-            resourceInputs["eapTtlsEapMd5"] = state ? state.eapTtlsEapMd5 : undefined;
-            resourceInputs["eapTtlsEapMsChapV2"] = state ? state.eapTtlsEapMsChapV2 : undefined;
-            resourceInputs["eapTtlsEapMsChapV2PwdChange"] = state ? state.eapTtlsEapMsChapV2PwdChange : undefined;
-            resourceInputs["eapTtlsEapMsChapV2PwdChangeRetries"] = state ? state.eapTtlsEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["eapTtlsMsChapV1"] = state ? state.eapTtlsMsChapV1 : undefined;
-            resourceInputs["eapTtlsMsChapV2"] = state ? state.eapTtlsMsChapV2 : undefined;
-            resourceInputs["eapTtlsPapAscii"] = state ? state.eapTtlsPapAscii : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["peapAllowPeapEapGtc"] = state ? state.peapAllowPeapEapGtc : undefined;
-            resourceInputs["peapAllowPeapEapGtcPwdChange"] = state ? state.peapAllowPeapEapGtcPwdChange : undefined;
-            resourceInputs["peapAllowPeapEapGtcPwdChangeRetries"] = state ? state.peapAllowPeapEapGtcPwdChangeRetries : undefined;
-            resourceInputs["peapAllowPeapEapMsChapV2"] = state ? state.peapAllowPeapEapMsChapV2 : undefined;
-            resourceInputs["peapAllowPeapEapMsChapV2PwdChange"] = state ? state.peapAllowPeapEapMsChapV2PwdChange : undefined;
-            resourceInputs["peapAllowPeapEapMsChapV2PwdChangeRetries"] = state ? state.peapAllowPeapEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["peapAllowPeapEapTls"] = state ? state.peapAllowPeapEapTls : undefined;
-            resourceInputs["peapAllowPeapEapTlsAuthOfExpiredCerts"] = state ? state.peapAllowPeapEapTlsAuthOfExpiredCerts : undefined;
-            resourceInputs["peapPeapV0"] = state ? state.peapPeapV0 : undefined;
-            resourceInputs["preferredEapProtocol"] = state ? state.preferredEapProtocol : undefined;
-            resourceInputs["processHostLookup"] = state ? state.processHostLookup : undefined;
-            resourceInputs["requireCryptobinding"] = state ? state.requireCryptobinding : undefined;
-            resourceInputs["requireMessageAuth"] = state ? state.requireMessageAuth : undefined;
-            resourceInputs["teapDowngradeMsk"] = state ? state.teapDowngradeMsk : undefined;
-            resourceInputs["teapEapAcceptClientCertDuringTunnelEst"] = state ? state.teapEapAcceptClientCertDuringTunnelEst : undefined;
-            resourceInputs["teapEapChaining"] = state ? state.teapEapChaining : undefined;
-            resourceInputs["teapEapMsChapV2"] = state ? state.teapEapMsChapV2 : undefined;
-            resourceInputs["teapEapMsChapV2PwdChange"] = state ? state.teapEapMsChapV2PwdChange : undefined;
-            resourceInputs["teapEapMsChapV2PwdChangeRetries"] = state ? state.teapEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["teapEapTls"] = state ? state.teapEapTls : undefined;
-            resourceInputs["teapEapTlsAuthOfExpiredCerts"] = state ? state.teapEapTlsAuthOfExpiredCerts : undefined;
-            resourceInputs["teapRequestBasicPwdAuth"] = state ? state.teapRequestBasicPwdAuth : undefined;
+            resourceInputs["allow5g"] = state?.allow5g;
+            resourceInputs["allowChap"] = state?.allowChap;
+            resourceInputs["allowEapFast"] = state?.allowEapFast;
+            resourceInputs["allowEapMd5"] = state?.allowEapMd5;
+            resourceInputs["allowEapTls"] = state?.allowEapTls;
+            resourceInputs["allowEapTtls"] = state?.allowEapTtls;
+            resourceInputs["allowLeap"] = state?.allowLeap;
+            resourceInputs["allowMsChapV1"] = state?.allowMsChapV1;
+            resourceInputs["allowMsChapV2"] = state?.allowMsChapV2;
+            resourceInputs["allowPapAscii"] = state?.allowPapAscii;
+            resourceInputs["allowPeap"] = state?.allowPeap;
+            resourceInputs["allowPreferredEapProtocol"] = state?.allowPreferredEapProtocol;
+            resourceInputs["allowTeap"] = state?.allowTeap;
+            resourceInputs["allowWeakCiphersForEap"] = state?.allowWeakCiphersForEap;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["eapFastAcceptClientCert"] = state?.eapFastAcceptClientCert;
+            resourceInputs["eapFastAllowMachineAuthentication"] = state?.eapFastAllowMachineAuthentication;
+            resourceInputs["eapFastEapGtc"] = state?.eapFastEapGtc;
+            resourceInputs["eapFastEapGtcPwdChange"] = state?.eapFastEapGtcPwdChange;
+            resourceInputs["eapFastEapGtcPwdChangeRetries"] = state?.eapFastEapGtcPwdChangeRetries;
+            resourceInputs["eapFastEapMsChapV2"] = state?.eapFastEapMsChapV2;
+            resourceInputs["eapFastEapMsChapV2PwdChange"] = state?.eapFastEapMsChapV2PwdChange;
+            resourceInputs["eapFastEapMsChapV2PwdChangeRetries"] = state?.eapFastEapMsChapV2PwdChangeRetries;
+            resourceInputs["eapFastEapTls"] = state?.eapFastEapTls;
+            resourceInputs["eapFastEapTlsAuthOfExpiredCerts"] = state?.eapFastEapTlsAuthOfExpiredCerts;
+            resourceInputs["eapFastEnableEapChaining"] = state?.eapFastEnableEapChaining;
+            resourceInputs["eapFastPacsAllowAnonymousProvisioning"] = state?.eapFastPacsAllowAnonymousProvisioning;
+            resourceInputs["eapFastPacsAllowAuthenticatedProvisioning"] = state?.eapFastPacsAllowAuthenticatedProvisioning;
+            resourceInputs["eapFastPacsAllowClientCert"] = state?.eapFastPacsAllowClientCert;
+            resourceInputs["eapFastPacsAllowMachineAuthentication"] = state?.eapFastPacsAllowMachineAuthentication;
+            resourceInputs["eapFastPacsAuthorizationPacTtl"] = state?.eapFastPacsAuthorizationPacTtl;
+            resourceInputs["eapFastPacsAuthorizationPacTtlUnit"] = state?.eapFastPacsAuthorizationPacTtlUnit;
+            resourceInputs["eapFastPacsMachinePacTtl"] = state?.eapFastPacsMachinePacTtl;
+            resourceInputs["eapFastPacsMachinePacTtlUnit"] = state?.eapFastPacsMachinePacTtlUnit;
+            resourceInputs["eapFastPacsServerReturns"] = state?.eapFastPacsServerReturns;
+            resourceInputs["eapFastPacsStatelessSessionResume"] = state?.eapFastPacsStatelessSessionResume;
+            resourceInputs["eapFastPacsTunnelPacTtl"] = state?.eapFastPacsTunnelPacTtl;
+            resourceInputs["eapFastPacsTunnelPacTtlUnit"] = state?.eapFastPacsTunnelPacTtlUnit;
+            resourceInputs["eapFastPacsUseProactivePacUpdatePercentage"] = state?.eapFastPacsUseProactivePacUpdatePercentage;
+            resourceInputs["eapFastUsePacs"] = state?.eapFastUsePacs;
+            resourceInputs["eapTlsAllowAuthOfExpiredCerts"] = state?.eapTlsAllowAuthOfExpiredCerts;
+            resourceInputs["eapTlsEnableStatelessSessionResume"] = state?.eapTlsEnableStatelessSessionResume;
+            resourceInputs["eapTlsLBit"] = state?.eapTlsLBit;
+            resourceInputs["eapTlsSessionTicketPercentage"] = state?.eapTlsSessionTicketPercentage;
+            resourceInputs["eapTlsSessionTicketTtl"] = state?.eapTlsSessionTicketTtl;
+            resourceInputs["eapTlsSessionTicketTtlUnit"] = state?.eapTlsSessionTicketTtlUnit;
+            resourceInputs["eapTtlsChap"] = state?.eapTtlsChap;
+            resourceInputs["eapTtlsEapMd5"] = state?.eapTtlsEapMd5;
+            resourceInputs["eapTtlsEapMsChapV2"] = state?.eapTtlsEapMsChapV2;
+            resourceInputs["eapTtlsEapMsChapV2PwdChange"] = state?.eapTtlsEapMsChapV2PwdChange;
+            resourceInputs["eapTtlsEapMsChapV2PwdChangeRetries"] = state?.eapTtlsEapMsChapV2PwdChangeRetries;
+            resourceInputs["eapTtlsMsChapV1"] = state?.eapTtlsMsChapV1;
+            resourceInputs["eapTtlsMsChapV2"] = state?.eapTtlsMsChapV2;
+            resourceInputs["eapTtlsPapAscii"] = state?.eapTtlsPapAscii;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["peapAllowPeapEapGtc"] = state?.peapAllowPeapEapGtc;
+            resourceInputs["peapAllowPeapEapGtcPwdChange"] = state?.peapAllowPeapEapGtcPwdChange;
+            resourceInputs["peapAllowPeapEapGtcPwdChangeRetries"] = state?.peapAllowPeapEapGtcPwdChangeRetries;
+            resourceInputs["peapAllowPeapEapMsChapV2"] = state?.peapAllowPeapEapMsChapV2;
+            resourceInputs["peapAllowPeapEapMsChapV2PwdChange"] = state?.peapAllowPeapEapMsChapV2PwdChange;
+            resourceInputs["peapAllowPeapEapMsChapV2PwdChangeRetries"] = state?.peapAllowPeapEapMsChapV2PwdChangeRetries;
+            resourceInputs["peapAllowPeapEapTls"] = state?.peapAllowPeapEapTls;
+            resourceInputs["peapAllowPeapEapTlsAuthOfExpiredCerts"] = state?.peapAllowPeapEapTlsAuthOfExpiredCerts;
+            resourceInputs["peapPeapV0"] = state?.peapPeapV0;
+            resourceInputs["preferredEapProtocol"] = state?.preferredEapProtocol;
+            resourceInputs["processHostLookup"] = state?.processHostLookup;
+            resourceInputs["requireCryptobinding"] = state?.requireCryptobinding;
+            resourceInputs["requireMessageAuth"] = state?.requireMessageAuth;
+            resourceInputs["teapDowngradeMsk"] = state?.teapDowngradeMsk;
+            resourceInputs["teapEapAcceptClientCertDuringTunnelEst"] = state?.teapEapAcceptClientCertDuringTunnelEst;
+            resourceInputs["teapEapChaining"] = state?.teapEapChaining;
+            resourceInputs["teapEapMsChapV2"] = state?.teapEapMsChapV2;
+            resourceInputs["teapEapMsChapV2PwdChange"] = state?.teapEapMsChapV2PwdChange;
+            resourceInputs["teapEapMsChapV2PwdChangeRetries"] = state?.teapEapMsChapV2PwdChangeRetries;
+            resourceInputs["teapEapTls"] = state?.teapEapTls;
+            resourceInputs["teapEapTlsAuthOfExpiredCerts"] = state?.teapEapTlsAuthOfExpiredCerts;
+            resourceInputs["teapRequestBasicPwdAuth"] = state?.teapRequestBasicPwdAuth;
         } else {
             const args = argsOrState as AllowedProtocolsArgs | undefined;
-            if ((!args || args.allowChap === undefined) && !opts.urn) {
+            if (args?.allowChap === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowChap'");
             }
-            if ((!args || args.allowEapFast === undefined) && !opts.urn) {
+            if (args?.allowEapFast === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowEapFast'");
             }
-            if ((!args || args.allowEapMd5 === undefined) && !opts.urn) {
+            if (args?.allowEapMd5 === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowEapMd5'");
             }
-            if ((!args || args.allowEapTls === undefined) && !opts.urn) {
+            if (args?.allowEapTls === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowEapTls'");
             }
-            if ((!args || args.allowEapTtls === undefined) && !opts.urn) {
+            if (args?.allowEapTtls === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowEapTtls'");
             }
-            if ((!args || args.allowLeap === undefined) && !opts.urn) {
+            if (args?.allowLeap === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowLeap'");
             }
-            if ((!args || args.allowMsChapV1 === undefined) && !opts.urn) {
+            if (args?.allowMsChapV1 === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowMsChapV1'");
             }
-            if ((!args || args.allowMsChapV2 === undefined) && !opts.urn) {
+            if (args?.allowMsChapV2 === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowMsChapV2'");
             }
-            if ((!args || args.allowPapAscii === undefined) && !opts.urn) {
+            if (args?.allowPapAscii === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowPapAscii'");
             }
-            if ((!args || args.allowPeap === undefined) && !opts.urn) {
+            if (args?.allowPeap === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowPeap'");
             }
-            if ((!args || args.allowPreferredEapProtocol === undefined) && !opts.urn) {
+            if (args?.allowPreferredEapProtocol === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowPreferredEapProtocol'");
             }
-            if ((!args || args.allowTeap === undefined) && !opts.urn) {
+            if (args?.allowTeap === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowTeap'");
             }
-            if ((!args || args.allowWeakCiphersForEap === undefined) && !opts.urn) {
+            if (args?.allowWeakCiphersForEap === undefined && !opts.urn) {
                 throw new Error("Missing required property 'allowWeakCiphersForEap'");
             }
-            if ((!args || args.eapTlsLBit === undefined) && !opts.urn) {
+            if (args?.eapTlsLBit === undefined && !opts.urn) {
                 throw new Error("Missing required property 'eapTlsLBit'");
             }
-            if ((!args || args.processHostLookup === undefined) && !opts.urn) {
+            if (args?.processHostLookup === undefined && !opts.urn) {
                 throw new Error("Missing required property 'processHostLookup'");
             }
-            if ((!args || args.requireMessageAuth === undefined) && !opts.urn) {
+            if (args?.requireMessageAuth === undefined && !opts.urn) {
                 throw new Error("Missing required property 'requireMessageAuth'");
             }
-            resourceInputs["allow5g"] = args ? args.allow5g : undefined;
-            resourceInputs["allowChap"] = args ? args.allowChap : undefined;
-            resourceInputs["allowEapFast"] = args ? args.allowEapFast : undefined;
-            resourceInputs["allowEapMd5"] = args ? args.allowEapMd5 : undefined;
-            resourceInputs["allowEapTls"] = args ? args.allowEapTls : undefined;
-            resourceInputs["allowEapTtls"] = args ? args.allowEapTtls : undefined;
-            resourceInputs["allowLeap"] = args ? args.allowLeap : undefined;
-            resourceInputs["allowMsChapV1"] = args ? args.allowMsChapV1 : undefined;
-            resourceInputs["allowMsChapV2"] = args ? args.allowMsChapV2 : undefined;
-            resourceInputs["allowPapAscii"] = args ? args.allowPapAscii : undefined;
-            resourceInputs["allowPeap"] = args ? args.allowPeap : undefined;
-            resourceInputs["allowPreferredEapProtocol"] = args ? args.allowPreferredEapProtocol : undefined;
-            resourceInputs["allowTeap"] = args ? args.allowTeap : undefined;
-            resourceInputs["allowWeakCiphersForEap"] = args ? args.allowWeakCiphersForEap : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["eapFastAcceptClientCert"] = args ? args.eapFastAcceptClientCert : undefined;
-            resourceInputs["eapFastAllowMachineAuthentication"] = args ? args.eapFastAllowMachineAuthentication : undefined;
-            resourceInputs["eapFastEapGtc"] = args ? args.eapFastEapGtc : undefined;
-            resourceInputs["eapFastEapGtcPwdChange"] = args ? args.eapFastEapGtcPwdChange : undefined;
-            resourceInputs["eapFastEapGtcPwdChangeRetries"] = args ? args.eapFastEapGtcPwdChangeRetries : undefined;
-            resourceInputs["eapFastEapMsChapV2"] = args ? args.eapFastEapMsChapV2 : undefined;
-            resourceInputs["eapFastEapMsChapV2PwdChange"] = args ? args.eapFastEapMsChapV2PwdChange : undefined;
-            resourceInputs["eapFastEapMsChapV2PwdChangeRetries"] = args ? args.eapFastEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["eapFastEapTls"] = args ? args.eapFastEapTls : undefined;
-            resourceInputs["eapFastEapTlsAuthOfExpiredCerts"] = args ? args.eapFastEapTlsAuthOfExpiredCerts : undefined;
-            resourceInputs["eapFastEnableEapChaining"] = args ? args.eapFastEnableEapChaining : undefined;
-            resourceInputs["eapFastPacsAllowAnonymousProvisioning"] = args ? args.eapFastPacsAllowAnonymousProvisioning : undefined;
-            resourceInputs["eapFastPacsAllowAuthenticatedProvisioning"] = args ? args.eapFastPacsAllowAuthenticatedProvisioning : undefined;
-            resourceInputs["eapFastPacsAllowClientCert"] = args ? args.eapFastPacsAllowClientCert : undefined;
-            resourceInputs["eapFastPacsAllowMachineAuthentication"] = args ? args.eapFastPacsAllowMachineAuthentication : undefined;
-            resourceInputs["eapFastPacsAuthorizationPacTtl"] = args ? args.eapFastPacsAuthorizationPacTtl : undefined;
-            resourceInputs["eapFastPacsAuthorizationPacTtlUnit"] = args ? args.eapFastPacsAuthorizationPacTtlUnit : undefined;
-            resourceInputs["eapFastPacsMachinePacTtl"] = args ? args.eapFastPacsMachinePacTtl : undefined;
-            resourceInputs["eapFastPacsMachinePacTtlUnit"] = args ? args.eapFastPacsMachinePacTtlUnit : undefined;
-            resourceInputs["eapFastPacsServerReturns"] = args ? args.eapFastPacsServerReturns : undefined;
-            resourceInputs["eapFastPacsStatelessSessionResume"] = args ? args.eapFastPacsStatelessSessionResume : undefined;
-            resourceInputs["eapFastPacsTunnelPacTtl"] = args ? args.eapFastPacsTunnelPacTtl : undefined;
-            resourceInputs["eapFastPacsTunnelPacTtlUnit"] = args ? args.eapFastPacsTunnelPacTtlUnit : undefined;
-            resourceInputs["eapFastPacsUseProactivePacUpdatePercentage"] = args ? args.eapFastPacsUseProactivePacUpdatePercentage : undefined;
-            resourceInputs["eapFastUsePacs"] = args ? args.eapFastUsePacs : undefined;
-            resourceInputs["eapTlsAllowAuthOfExpiredCerts"] = args ? args.eapTlsAllowAuthOfExpiredCerts : undefined;
-            resourceInputs["eapTlsEnableStatelessSessionResume"] = args ? args.eapTlsEnableStatelessSessionResume : undefined;
-            resourceInputs["eapTlsLBit"] = args ? args.eapTlsLBit : undefined;
-            resourceInputs["eapTlsSessionTicketPercentage"] = args ? args.eapTlsSessionTicketPercentage : undefined;
-            resourceInputs["eapTlsSessionTicketTtl"] = args ? args.eapTlsSessionTicketTtl : undefined;
-            resourceInputs["eapTlsSessionTicketTtlUnit"] = args ? args.eapTlsSessionTicketTtlUnit : undefined;
-            resourceInputs["eapTtlsChap"] = args ? args.eapTtlsChap : undefined;
-            resourceInputs["eapTtlsEapMd5"] = args ? args.eapTtlsEapMd5 : undefined;
-            resourceInputs["eapTtlsEapMsChapV2"] = args ? args.eapTtlsEapMsChapV2 : undefined;
-            resourceInputs["eapTtlsEapMsChapV2PwdChange"] = args ? args.eapTtlsEapMsChapV2PwdChange : undefined;
-            resourceInputs["eapTtlsEapMsChapV2PwdChangeRetries"] = args ? args.eapTtlsEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["eapTtlsMsChapV1"] = args ? args.eapTtlsMsChapV1 : undefined;
-            resourceInputs["eapTtlsMsChapV2"] = args ? args.eapTtlsMsChapV2 : undefined;
-            resourceInputs["eapTtlsPapAscii"] = args ? args.eapTtlsPapAscii : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["peapAllowPeapEapGtc"] = args ? args.peapAllowPeapEapGtc : undefined;
-            resourceInputs["peapAllowPeapEapGtcPwdChange"] = args ? args.peapAllowPeapEapGtcPwdChange : undefined;
-            resourceInputs["peapAllowPeapEapGtcPwdChangeRetries"] = args ? args.peapAllowPeapEapGtcPwdChangeRetries : undefined;
-            resourceInputs["peapAllowPeapEapMsChapV2"] = args ? args.peapAllowPeapEapMsChapV2 : undefined;
-            resourceInputs["peapAllowPeapEapMsChapV2PwdChange"] = args ? args.peapAllowPeapEapMsChapV2PwdChange : undefined;
-            resourceInputs["peapAllowPeapEapMsChapV2PwdChangeRetries"] = args ? args.peapAllowPeapEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["peapAllowPeapEapTls"] = args ? args.peapAllowPeapEapTls : undefined;
-            resourceInputs["peapAllowPeapEapTlsAuthOfExpiredCerts"] = args ? args.peapAllowPeapEapTlsAuthOfExpiredCerts : undefined;
-            resourceInputs["peapPeapV0"] = args ? args.peapPeapV0 : undefined;
-            resourceInputs["preferredEapProtocol"] = args ? args.preferredEapProtocol : undefined;
-            resourceInputs["processHostLookup"] = args ? args.processHostLookup : undefined;
-            resourceInputs["requireCryptobinding"] = args ? args.requireCryptobinding : undefined;
-            resourceInputs["requireMessageAuth"] = args ? args.requireMessageAuth : undefined;
-            resourceInputs["teapDowngradeMsk"] = args ? args.teapDowngradeMsk : undefined;
-            resourceInputs["teapEapAcceptClientCertDuringTunnelEst"] = args ? args.teapEapAcceptClientCertDuringTunnelEst : undefined;
-            resourceInputs["teapEapChaining"] = args ? args.teapEapChaining : undefined;
-            resourceInputs["teapEapMsChapV2"] = args ? args.teapEapMsChapV2 : undefined;
-            resourceInputs["teapEapMsChapV2PwdChange"] = args ? args.teapEapMsChapV2PwdChange : undefined;
-            resourceInputs["teapEapMsChapV2PwdChangeRetries"] = args ? args.teapEapMsChapV2PwdChangeRetries : undefined;
-            resourceInputs["teapEapTls"] = args ? args.teapEapTls : undefined;
-            resourceInputs["teapEapTlsAuthOfExpiredCerts"] = args ? args.teapEapTlsAuthOfExpiredCerts : undefined;
-            resourceInputs["teapRequestBasicPwdAuth"] = args ? args.teapRequestBasicPwdAuth : undefined;
+            resourceInputs["allow5g"] = args?.allow5g;
+            resourceInputs["allowChap"] = args?.allowChap;
+            resourceInputs["allowEapFast"] = args?.allowEapFast;
+            resourceInputs["allowEapMd5"] = args?.allowEapMd5;
+            resourceInputs["allowEapTls"] = args?.allowEapTls;
+            resourceInputs["allowEapTtls"] = args?.allowEapTtls;
+            resourceInputs["allowLeap"] = args?.allowLeap;
+            resourceInputs["allowMsChapV1"] = args?.allowMsChapV1;
+            resourceInputs["allowMsChapV2"] = args?.allowMsChapV2;
+            resourceInputs["allowPapAscii"] = args?.allowPapAscii;
+            resourceInputs["allowPeap"] = args?.allowPeap;
+            resourceInputs["allowPreferredEapProtocol"] = args?.allowPreferredEapProtocol;
+            resourceInputs["allowTeap"] = args?.allowTeap;
+            resourceInputs["allowWeakCiphersForEap"] = args?.allowWeakCiphersForEap;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["eapFastAcceptClientCert"] = args?.eapFastAcceptClientCert;
+            resourceInputs["eapFastAllowMachineAuthentication"] = args?.eapFastAllowMachineAuthentication;
+            resourceInputs["eapFastEapGtc"] = args?.eapFastEapGtc;
+            resourceInputs["eapFastEapGtcPwdChange"] = args?.eapFastEapGtcPwdChange;
+            resourceInputs["eapFastEapGtcPwdChangeRetries"] = args?.eapFastEapGtcPwdChangeRetries;
+            resourceInputs["eapFastEapMsChapV2"] = args?.eapFastEapMsChapV2;
+            resourceInputs["eapFastEapMsChapV2PwdChange"] = args?.eapFastEapMsChapV2PwdChange;
+            resourceInputs["eapFastEapMsChapV2PwdChangeRetries"] = args?.eapFastEapMsChapV2PwdChangeRetries;
+            resourceInputs["eapFastEapTls"] = args?.eapFastEapTls;
+            resourceInputs["eapFastEapTlsAuthOfExpiredCerts"] = args?.eapFastEapTlsAuthOfExpiredCerts;
+            resourceInputs["eapFastEnableEapChaining"] = args?.eapFastEnableEapChaining;
+            resourceInputs["eapFastPacsAllowAnonymousProvisioning"] = args?.eapFastPacsAllowAnonymousProvisioning;
+            resourceInputs["eapFastPacsAllowAuthenticatedProvisioning"] = args?.eapFastPacsAllowAuthenticatedProvisioning;
+            resourceInputs["eapFastPacsAllowClientCert"] = args?.eapFastPacsAllowClientCert;
+            resourceInputs["eapFastPacsAllowMachineAuthentication"] = args?.eapFastPacsAllowMachineAuthentication;
+            resourceInputs["eapFastPacsAuthorizationPacTtl"] = args?.eapFastPacsAuthorizationPacTtl;
+            resourceInputs["eapFastPacsAuthorizationPacTtlUnit"] = args?.eapFastPacsAuthorizationPacTtlUnit;
+            resourceInputs["eapFastPacsMachinePacTtl"] = args?.eapFastPacsMachinePacTtl;
+            resourceInputs["eapFastPacsMachinePacTtlUnit"] = args?.eapFastPacsMachinePacTtlUnit;
+            resourceInputs["eapFastPacsServerReturns"] = args?.eapFastPacsServerReturns;
+            resourceInputs["eapFastPacsStatelessSessionResume"] = args?.eapFastPacsStatelessSessionResume;
+            resourceInputs["eapFastPacsTunnelPacTtl"] = args?.eapFastPacsTunnelPacTtl;
+            resourceInputs["eapFastPacsTunnelPacTtlUnit"] = args?.eapFastPacsTunnelPacTtlUnit;
+            resourceInputs["eapFastPacsUseProactivePacUpdatePercentage"] = args?.eapFastPacsUseProactivePacUpdatePercentage;
+            resourceInputs["eapFastUsePacs"] = args?.eapFastUsePacs;
+            resourceInputs["eapTlsAllowAuthOfExpiredCerts"] = args?.eapTlsAllowAuthOfExpiredCerts;
+            resourceInputs["eapTlsEnableStatelessSessionResume"] = args?.eapTlsEnableStatelessSessionResume;
+            resourceInputs["eapTlsLBit"] = args?.eapTlsLBit;
+            resourceInputs["eapTlsSessionTicketPercentage"] = args?.eapTlsSessionTicketPercentage;
+            resourceInputs["eapTlsSessionTicketTtl"] = args?.eapTlsSessionTicketTtl;
+            resourceInputs["eapTlsSessionTicketTtlUnit"] = args?.eapTlsSessionTicketTtlUnit;
+            resourceInputs["eapTtlsChap"] = args?.eapTtlsChap;
+            resourceInputs["eapTtlsEapMd5"] = args?.eapTtlsEapMd5;
+            resourceInputs["eapTtlsEapMsChapV2"] = args?.eapTtlsEapMsChapV2;
+            resourceInputs["eapTtlsEapMsChapV2PwdChange"] = args?.eapTtlsEapMsChapV2PwdChange;
+            resourceInputs["eapTtlsEapMsChapV2PwdChangeRetries"] = args?.eapTtlsEapMsChapV2PwdChangeRetries;
+            resourceInputs["eapTtlsMsChapV1"] = args?.eapTtlsMsChapV1;
+            resourceInputs["eapTtlsMsChapV2"] = args?.eapTtlsMsChapV2;
+            resourceInputs["eapTtlsPapAscii"] = args?.eapTtlsPapAscii;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["peapAllowPeapEapGtc"] = args?.peapAllowPeapEapGtc;
+            resourceInputs["peapAllowPeapEapGtcPwdChange"] = args?.peapAllowPeapEapGtcPwdChange;
+            resourceInputs["peapAllowPeapEapGtcPwdChangeRetries"] = args?.peapAllowPeapEapGtcPwdChangeRetries;
+            resourceInputs["peapAllowPeapEapMsChapV2"] = args?.peapAllowPeapEapMsChapV2;
+            resourceInputs["peapAllowPeapEapMsChapV2PwdChange"] = args?.peapAllowPeapEapMsChapV2PwdChange;
+            resourceInputs["peapAllowPeapEapMsChapV2PwdChangeRetries"] = args?.peapAllowPeapEapMsChapV2PwdChangeRetries;
+            resourceInputs["peapAllowPeapEapTls"] = args?.peapAllowPeapEapTls;
+            resourceInputs["peapAllowPeapEapTlsAuthOfExpiredCerts"] = args?.peapAllowPeapEapTlsAuthOfExpiredCerts;
+            resourceInputs["peapPeapV0"] = args?.peapPeapV0;
+            resourceInputs["preferredEapProtocol"] = args?.preferredEapProtocol;
+            resourceInputs["processHostLookup"] = args?.processHostLookup;
+            resourceInputs["requireCryptobinding"] = args?.requireCryptobinding;
+            resourceInputs["requireMessageAuth"] = args?.requireMessageAuth;
+            resourceInputs["teapDowngradeMsk"] = args?.teapDowngradeMsk;
+            resourceInputs["teapEapAcceptClientCertDuringTunnelEst"] = args?.teapEapAcceptClientCertDuringTunnelEst;
+            resourceInputs["teapEapChaining"] = args?.teapEapChaining;
+            resourceInputs["teapEapMsChapV2"] = args?.teapEapMsChapV2;
+            resourceInputs["teapEapMsChapV2PwdChange"] = args?.teapEapMsChapV2PwdChange;
+            resourceInputs["teapEapMsChapV2PwdChangeRetries"] = args?.teapEapMsChapV2PwdChangeRetries;
+            resourceInputs["teapEapTls"] = args?.teapEapTls;
+            resourceInputs["teapEapTlsAuthOfExpiredCerts"] = args?.teapEapTlsAuthOfExpiredCerts;
+            resourceInputs["teapRequestBasicPwdAuth"] = args?.teapRequestBasicPwdAuth;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AllowedProtocols.__pulumiType, name, resourceInputs, opts);
@@ -747,7 +754,8 @@ export interface AllowedProtocolsState {
      */
     eapFastEapGtcPwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+     *   - Range: `0`-`3`
      */
     eapFastEapGtcPwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -759,7 +767,8 @@ export interface AllowedProtocolsState {
      */
     eapFastEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     eapFastEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -795,8 +804,8 @@ export interface AllowedProtocolsState {
      */
     eapFastPacsAuthorizationPacTtl?: pulumi.Input<number>;
     /**
-     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapFastPacsAuthorizationPacTtlUnit?: pulumi.Input<string>;
     /**
@@ -804,13 +813,12 @@ export interface AllowedProtocolsState {
      */
     eapFastPacsMachinePacTtl?: pulumi.Input<number>;
     /**
-     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapFastPacsMachinePacTtlUnit?: pulumi.Input<string>;
     /**
-     * Server returns access accept after authenticated provisioning. Is required only if
-     * `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+     * Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
     eapFastPacsServerReturns?: pulumi.Input<boolean>;
     /**
@@ -822,12 +830,13 @@ export interface AllowedProtocolsState {
      */
     eapFastPacsTunnelPacTtl?: pulumi.Input<number>;
     /**
-     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-     * `HOURS`, `DAYS`, `WEEKS`
+     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapFastPacsTunnelPacTtlUnit?: pulumi.Input<string>;
     /**
-     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+     *   - Range: `1`-`100`
      */
     eapFastPacsUseProactivePacUpdatePercentage?: pulumi.Input<number>;
     /**
@@ -847,7 +856,8 @@ export interface AllowedProtocolsState {
      */
     eapTlsLBit?: pulumi.Input<boolean>;
     /**
-     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+     *   - Range: `1`-`100`
      */
     eapTlsSessionTicketPercentage?: pulumi.Input<number>;
     /**
@@ -855,8 +865,8 @@ export interface AllowedProtocolsState {
      */
     eapTlsSessionTicketTtl?: pulumi.Input<number>;
     /**
-     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapTlsSessionTicketTtlUnit?: pulumi.Input<string>;
     /**
@@ -876,7 +886,8 @@ export interface AllowedProtocolsState {
      */
     eapTtlsEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     eapTtlsEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -904,7 +915,8 @@ export interface AllowedProtocolsState {
      */
     peapAllowPeapEapGtcPwdChange?: pulumi.Input<boolean>;
     /**
-     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+     *   - Range: `0`-`3`
      */
     peapAllowPeapEapGtcPwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -916,8 +928,8 @@ export interface AllowedProtocolsState {
      */
     peapAllowPeapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-     * `0`-`3`
+     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     peapAllowPeapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -933,7 +945,8 @@ export interface AllowedProtocolsState {
      */
     peapPeapV0?: pulumi.Input<boolean>;
     /**
-     * Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+     * Preferred EAP protocol
+     *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      */
     preferredEapProtocol?: pulumi.Input<string>;
     /**
@@ -969,7 +982,8 @@ export interface AllowedProtocolsState {
      */
     teapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     teapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -1067,7 +1081,8 @@ export interface AllowedProtocolsArgs {
      */
     eapFastEapGtcPwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`. - Range: `0`-`3`
+     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
+     *   - Range: `0`-`3`
      */
     eapFastEapGtcPwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -1079,7 +1094,8 @@ export interface AllowedProtocolsArgs {
      */
     eapFastEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     eapFastEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -1115,8 +1131,8 @@ export interface AllowedProtocolsArgs {
      */
     eapFastPacsAuthorizationPacTtl?: pulumi.Input<number>;
     /**
-     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapFastPacsAuthorizationPacTtlUnit?: pulumi.Input<string>;
     /**
@@ -1124,13 +1140,12 @@ export interface AllowedProtocolsArgs {
      */
     eapFastPacsMachinePacTtl?: pulumi.Input<number>;
     /**
-     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapFastPacsMachinePacTtlUnit?: pulumi.Input<string>;
     /**
-     * Server returns access accept after authenticated provisioning. Is required only if
-     * `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
+     * Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
     eapFastPacsServerReturns?: pulumi.Input<boolean>;
     /**
@@ -1142,12 +1157,13 @@ export interface AllowedProtocolsArgs {
      */
     eapFastPacsTunnelPacTtl?: pulumi.Input<number>;
     /**
-     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`. - Choices: `SECONDS`, `MINUTES`,
-     * `HOURS`, `DAYS`, `WEEKS`
+     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapFastPacsTunnelPacTtlUnit?: pulumi.Input<string>;
     /**
-     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`. - Range: `1`-`100`
+     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
+     *   - Range: `1`-`100`
      */
     eapFastPacsUseProactivePacUpdatePercentage?: pulumi.Input<number>;
     /**
@@ -1167,7 +1183,8 @@ export interface AllowedProtocolsArgs {
      */
     eapTlsLBit: pulumi.Input<boolean>;
     /**
-     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Range: `1`-`100`
+     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+     *   - Range: `1`-`100`
      */
     eapTlsSessionTicketPercentage?: pulumi.Input<number>;
     /**
@@ -1175,8 +1192,8 @@ export interface AllowedProtocolsArgs {
      */
     eapTlsSessionTicketTtl?: pulumi.Input<number>;
     /**
-     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`. - Choices: `SECONDS`,
-     * `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
+     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
+     *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
     eapTlsSessionTicketTtlUnit?: pulumi.Input<string>;
     /**
@@ -1196,7 +1213,8 @@ export interface AllowedProtocolsArgs {
      */
     eapTtlsEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     eapTtlsEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -1224,7 +1242,8 @@ export interface AllowedProtocolsArgs {
      */
     peapAllowPeapEapGtcPwdChange?: pulumi.Input<boolean>;
     /**
-     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`. - Range: `0`-`3`
+     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
+     *   - Range: `0`-`3`
      */
     peapAllowPeapEapGtcPwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -1236,8 +1255,8 @@ export interface AllowedProtocolsArgs {
      */
     peapAllowPeapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`. - Range:
-     * `0`-`3`
+     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     peapAllowPeapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**
@@ -1253,7 +1272,8 @@ export interface AllowedProtocolsArgs {
      */
     peapPeapV0?: pulumi.Input<boolean>;
     /**
-     * Preferred EAP protocol - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
+     * Preferred EAP protocol
+     *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      */
     preferredEapProtocol?: pulumi.Input<string>;
     /**
@@ -1289,7 +1309,8 @@ export interface AllowedProtocolsArgs {
      */
     teapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`. - Range: `0`-`3`
+     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
+     *   - Range: `0`-`3`
      */
     teapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
     /**

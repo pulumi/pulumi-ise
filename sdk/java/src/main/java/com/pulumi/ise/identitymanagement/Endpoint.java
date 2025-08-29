@@ -396,14 +396,16 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.staticGroupAssignment;
     }
     /**
-     * staticGroupAssignmentDefined - Default value: `true`
+     * staticGroupAssignmentDefined
+     *   - Default value: `true`
      * 
      */
     @Export(name="staticGroupAssignmentDefined", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> staticGroupAssignmentDefined;
 
     /**
-     * @return staticGroupAssignmentDefined - Default value: `true`
+     * @return staticGroupAssignmentDefined
+     *   - Default value: `true`
      * 
      */
     public Output<Boolean> staticGroupAssignmentDefined() {
@@ -424,14 +426,16 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.staticProfileAssignment;
     }
     /**
-     * Static Profile Assignment Defined - Default value: `true`
+     * Static Profile Assignment Defined
+     *   - Default value: `true`
      * 
      */
     @Export(name="staticProfileAssignmentDefined", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> staticProfileAssignmentDefined;
 
     /**
-     * @return Static Profile Assignment Defined - Default value: `true`
+     * @return Static Profile Assignment Defined
+     *   - Default value: `true`
      * 
      */
     public Output<Boolean> staticProfileAssignmentDefined() {

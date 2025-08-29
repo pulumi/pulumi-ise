@@ -66,20 +66,20 @@ export class IdentitySourceSequence extends pulumi.CustomResource {
     /**
      * Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
      */
-    public readonly breakOnStoreFail!: pulumi.Output<boolean>;
+    declare public readonly breakOnStoreFail: pulumi.Output<boolean>;
     /**
      * Certificate Authentication Profile, empty if doesn't exist
      */
-    public readonly certificateAuthenticationProfile!: pulumi.Output<string>;
+    declare public readonly certificateAuthenticationProfile: pulumi.Output<string>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
-    public readonly identitySources!: pulumi.Output<outputs.identitymanagement.IdentitySourceSequenceIdentitySource[]>;
+    declare public readonly description: pulumi.Output<string | undefined>;
+    declare public readonly identitySources: pulumi.Output<outputs.identitymanagement.IdentitySourceSequenceIdentitySource[]>;
     /**
      * The name of the identity source sequence
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
 
     /**
      * Create a IdentitySourceSequence resource with the given unique name, arguments, and options.
@@ -94,27 +94,27 @@ export class IdentitySourceSequence extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IdentitySourceSequenceState | undefined;
-            resourceInputs["breakOnStoreFail"] = state ? state.breakOnStoreFail : undefined;
-            resourceInputs["certificateAuthenticationProfile"] = state ? state.certificateAuthenticationProfile : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["identitySources"] = state ? state.identitySources : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
+            resourceInputs["breakOnStoreFail"] = state?.breakOnStoreFail;
+            resourceInputs["certificateAuthenticationProfile"] = state?.certificateAuthenticationProfile;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["identitySources"] = state?.identitySources;
+            resourceInputs["name"] = state?.name;
         } else {
             const args = argsOrState as IdentitySourceSequenceArgs | undefined;
-            if ((!args || args.breakOnStoreFail === undefined) && !opts.urn) {
+            if (args?.breakOnStoreFail === undefined && !opts.urn) {
                 throw new Error("Missing required property 'breakOnStoreFail'");
             }
-            if ((!args || args.certificateAuthenticationProfile === undefined) && !opts.urn) {
+            if (args?.certificateAuthenticationProfile === undefined && !opts.urn) {
                 throw new Error("Missing required property 'certificateAuthenticationProfile'");
             }
-            if ((!args || args.identitySources === undefined) && !opts.urn) {
+            if (args?.identitySources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'identitySources'");
             }
-            resourceInputs["breakOnStoreFail"] = args ? args.breakOnStoreFail : undefined;
-            resourceInputs["certificateAuthenticationProfile"] = args ? args.certificateAuthenticationProfile : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["identitySources"] = args ? args.identitySources : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["breakOnStoreFail"] = args?.breakOnStoreFail;
+            resourceInputs["certificateAuthenticationProfile"] = args?.certificateAuthenticationProfile;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["identitySources"] = args?.identitySources;
+            resourceInputs["name"] = args?.name;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(IdentitySourceSequence.__pulumiType, name, resourceInputs, opts);

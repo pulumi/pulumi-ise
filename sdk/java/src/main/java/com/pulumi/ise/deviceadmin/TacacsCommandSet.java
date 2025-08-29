@@ -109,14 +109,16 @@ public class TacacsCommandSet extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Permit unmatched commands - Default value: `false`
+     * Permit unmatched commands
+     *   - Default value: `false`
      * 
      */
     @Export(name="permitUnmatched", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> permitUnmatched;
 
     /**
-     * @return Permit unmatched commands - Default value: `false`
+     * @return Permit unmatched commands
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> permitUnmatched() {

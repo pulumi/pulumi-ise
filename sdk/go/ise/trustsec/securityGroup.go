@@ -62,7 +62,8 @@ type SecurityGroup struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Propagate to APIC (ACI)
 	PropogateToApic pulumi.BoolPtrOutput `pulumi:"propogateToApic"`
-	// `-1` to auto-generate - Range: `-1`-`65519`
+	// `-1` to auto-generate
+	//   - Range: `-1`-`65519`
 	Value pulumi.IntOutput `pulumi:"value"`
 }
 
@@ -107,7 +108,8 @@ type securityGroupState struct {
 	Name *string `pulumi:"name"`
 	// Propagate to APIC (ACI)
 	PropogateToApic *bool `pulumi:"propogateToApic"`
-	// `-1` to auto-generate - Range: `-1`-`65519`
+	// `-1` to auto-generate
+	//   - Range: `-1`-`65519`
 	Value *int `pulumi:"value"`
 }
 
@@ -120,7 +122,8 @@ type SecurityGroupState struct {
 	Name pulumi.StringPtrInput
 	// Propagate to APIC (ACI)
 	PropogateToApic pulumi.BoolPtrInput
-	// `-1` to auto-generate - Range: `-1`-`65519`
+	// `-1` to auto-generate
+	//   - Range: `-1`-`65519`
 	Value pulumi.IntPtrInput
 }
 
@@ -137,7 +140,8 @@ type securityGroupArgs struct {
 	Name *string `pulumi:"name"`
 	// Propagate to APIC (ACI)
 	PropogateToApic *bool `pulumi:"propogateToApic"`
-	// `-1` to auto-generate - Range: `-1`-`65519`
+	// `-1` to auto-generate
+	//   - Range: `-1`-`65519`
 	Value int `pulumi:"value"`
 }
 
@@ -151,7 +155,8 @@ type SecurityGroupArgs struct {
 	Name pulumi.StringPtrInput
 	// Propagate to APIC (ACI)
 	PropogateToApic pulumi.BoolPtrInput
-	// `-1` to auto-generate - Range: `-1`-`65519`
+	// `-1` to auto-generate
+	//   - Range: `-1`-`65519`
 	Value pulumi.IntInput
 }
 
@@ -262,7 +267,8 @@ func (o SecurityGroupOutput) PropogateToApic() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SecurityGroup) pulumi.BoolPtrOutput { return v.PropogateToApic }).(pulumi.BoolPtrOutput)
 }
 
-// `-1` to auto-generate - Range: `-1`-`65519`
+// `-1` to auto-generate
+//   - Range: `-1`-`65519`
 func (o SecurityGroupOutput) Value() pulumi.IntOutput {
 	return o.ApplyT(func(v *SecurityGroup) pulumi.IntOutput { return v.Value }).(pulumi.IntOutput)
 }

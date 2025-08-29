@@ -20,16 +20,16 @@ public final class ActiveDirectoryAddGroupsArgs extends com.pulumi.resources.Res
     public static final ActiveDirectoryAddGroupsArgs Empty = new ActiveDirectoryAddGroupsArgs();
 
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      * 
      */
     @Import(name="adScopesNames")
     private @Nullable Output<String> adScopesNames;
 
     /**
-     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-     * value: `Default_Scope`
+     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+     *   - Default value: `Default_Scope`
      * 
      */
     public Optional<Output<String>> adScopesNames() {
@@ -157,8 +157,8 @@ public final class ActiveDirectoryAddGroupsArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-         * value: `Default_Scope`
+         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+         *   - Default value: `Default_Scope`
          * 
          * @return builder
          * 
@@ -169,8 +169,8 @@ public final class ActiveDirectoryAddGroupsArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-         * value: `Default_Scope`
+         * @param adScopesNames String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+         *   - Default value: `Default_Scope`
          * 
          * @return builder
          * 

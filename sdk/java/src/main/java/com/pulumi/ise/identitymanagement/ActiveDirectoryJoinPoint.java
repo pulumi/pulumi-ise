@@ -40,30 +40,32 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint")
 public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResource {
     /**
-     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-     * Default value: `Default_Scope`
+     * String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+     *   - Default value: `Default_Scope`
      * 
      */
     @Export(name="adScopesNames", refs={String.class}, tree="[0]")
     private Output<String> adScopesNames;
 
     /**
-     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comma. -
-     * Default value: `Default_Scope`
+     * @return String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
+     *   - Default value: `Default_Scope`
      * 
      */
     public Output<String> adScopesNames() {
         return this.adScopesNames;
     }
     /**
-     * Aging Time - Default value: `5`
+     * Aging Time
+     *   - Default value: `5`
      * 
      */
     @Export(name="agingTime", refs={Integer.class}, tree="[0]")
     private Output<Integer> agingTime;
 
     /**
-     * @return Aging Time - Default value: `5`
+     * @return Aging Time
+     *   - Default value: `5`
      * 
      */
     public Output<Integer> agingTime() {
@@ -84,14 +86,16 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.attributes);
     }
     /**
-     * Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+     * Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+     *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
      * 
      */
     @Export(name="authProtectionType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authProtectionType;
 
     /**
-     * @return Enable prevent AD account lockout for WIRELESS/WIRED/BOTH - Choices: `WIRELESS`, `WIRED`, `BOTH`
+     * @return Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
+     *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
      * 
      */
     public Output<Optional<String>> authProtectionType() {
@@ -168,28 +172,32 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.email);
     }
     /**
-     * Enable Callback For Dial In Client - Default value: `false`
+     * Enable Callback For Dial In Client
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableCallbackForDialinClient", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableCallbackForDialinClient;
 
     /**
-     * @return Enable Callback For Dial In Client - Default value: `false`
+     * @return Enable Callback For Dial In Client
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> enableCallbackForDialinClient() {
         return this.enableCallbackForDialinClient;
     }
     /**
-     * Enable Dial In Permission Check - Default value: `false`
+     * Enable Dial In Permission Check
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableDialinPermissionCheck", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableDialinPermissionCheck;
 
     /**
-     * @return Enable Dial In Permission Check - Default value: `false`
+     * @return Enable Dial In Permission Check
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> enableDialinPermissionCheck() {
@@ -210,84 +218,96 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return this.enableDomainAllowedList;
     }
     /**
-     * Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+     * Enable prevent AD account lockout due to too many bad password attempts
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableFailedAuthProtection", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableFailedAuthProtection;
 
     /**
-     * @return Enable prevent AD account lockout due to too many bad password attempts - Default value: `false`
+     * @return Enable prevent AD account lockout due to too many bad password attempts
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> enableFailedAuthProtection() {
         return this.enableFailedAuthProtection;
     }
     /**
-     * Enable Machine Access - Default value: `true`
+     * Enable Machine Access
+     *   - Default value: `true`
      * 
      */
     @Export(name="enableMachineAccess", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableMachineAccess;
 
     /**
-     * @return Enable Machine Access - Default value: `true`
+     * @return Enable Machine Access
+     *   - Default value: `true`
      * 
      */
     public Output<Boolean> enableMachineAccess() {
         return this.enableMachineAccess;
     }
     /**
-     * Enable Machine Authentication - Default value: `true`
+     * Enable Machine Authentication
+     *   - Default value: `true`
      * 
      */
     @Export(name="enableMachineAuth", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableMachineAuth;
 
     /**
-     * @return Enable Machine Authentication - Default value: `true`
+     * @return Enable Machine Authentication
+     *   - Default value: `true`
      * 
      */
     public Output<Boolean> enableMachineAuth() {
         return this.enableMachineAuth;
     }
     /**
-     * Enable Password Change - Default value: `true`
+     * Enable Password Change
+     *   - Default value: `true`
      * 
      */
     @Export(name="enablePassChange", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enablePassChange;
 
     /**
-     * @return Enable Password Change - Default value: `true`
+     * @return Enable Password Change
+     *   - Default value: `true`
      * 
      */
     public Output<Boolean> enablePassChange() {
         return this.enablePassChange;
     }
     /**
-     * Enable Rewrites - Default value: `false`
+     * Enable Rewrites
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableRewrites", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableRewrites;
 
     /**
-     * @return Enable Rewrites - Default value: `false`
+     * @return Enable Rewrites
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> enableRewrites() {
         return this.enableRewrites;
     }
     /**
-     * Number of bad password attempts - Default value: `5`
+     * Number of bad password attempts
+     *   - Default value: `5`
      * 
      */
     @Export(name="failedAuthThreshold", refs={Integer.class}, tree="[0]")
     private Output<Integer> failedAuthThreshold;
 
     /**
-     * @return Number of bad password attempts - Default value: `5`
+     * @return Number of bad password attempts
+     *   - Default value: `5`
      * 
      */
     public Output<Integer> failedAuthThreshold() {
@@ -322,14 +342,16 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.groups);
     }
     /**
-     * Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+     * Identity Not In AD Behaviour
+     *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
      * 
      */
     @Export(name="identityNotInAdBehaviour", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> identityNotInAdBehaviour;
 
     /**
-     * @return Identity Not In AD Behaviour - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
+     * @return Identity Not In AD Behaviour
+     *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
      * 
      */
     public Output<Optional<String>> identityNotInAdBehaviour() {
@@ -406,14 +428,16 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.organizationalUnit);
     }
     /**
-     * Plain Text Authentication - Default value: `false`
+     * Plain Text Authentication
+     *   - Default value: `false`
      * 
      */
     @Export(name="plaintextAuth", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> plaintextAuth;
 
     /**
-     * @return Plain Text Authentication - Default value: `false`
+     * @return Plain Text Authentication
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> plaintextAuth() {
@@ -434,14 +458,16 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.rewriteRules);
     }
     /**
-     * Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+     * Schema
+     *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
      * 
      */
     @Export(name="schema", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> schema;
 
     /**
-     * @return Schema - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
+     * @return Schema
+     *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
      * 
      */
     public Output<Optional<String>> schema() {
@@ -490,14 +516,16 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.telephone);
     }
     /**
-     * Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+     * Unreachable Domains Behaviour
+     *   - Choices: `PROCEED`, `DROP`
      * 
      */
     @Export(name="unreachableDomainsBehaviour", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> unreachableDomainsBehaviour;
 
     /**
-     * @return Unreachable Domains Behaviour - Choices: `PROCEED`, `DROP`
+     * @return Unreachable Domains Behaviour
+     *   - Choices: `PROCEED`, `DROP`
      * 
      */
     public Output<Optional<String>> unreachableDomainsBehaviour() {

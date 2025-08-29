@@ -17,14 +17,16 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     public static final CertificateAuthenticationProfileArgs Empty = new CertificateAuthenticationProfileArgs();
 
     /**
-     * Allow as username - Default value: `false`
+     * Allow as username
+     *   - Default value: `false`
      * 
      */
     @Import(name="allowedAsUserName")
     private @Nullable Output<Boolean> allowedAsUserName;
 
     /**
-     * @return Allow as username - Default value: `false`
+     * @return Allow as username
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> allowedAsUserName() {
@@ -32,20 +34,18 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     }
 
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      * 
      */
     @Import(name="certificateAttributeName")
     private @Nullable Output<String> certificateAttributeName;
 
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-     * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-     * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-     * `SUBJECT_COMMON_NAME`
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+     *   - Default value: `SUBJECT_COMMON_NAME`
      * 
      */
     public Optional<Output<String>> certificateAttributeName() {
@@ -68,16 +68,16 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     }
 
     /**
-     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      * 
      */
     @Import(name="externalIdentityStoreName")
     private @Nullable Output<String> externalIdentityStoreName;
 
     /**
-     * @return Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-     * value: `[not applicable]`
+     * @return Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+     *   - Default value: `[not applicable]`
      * 
      */
     public Optional<Output<String>> externalIdentityStoreName() {
@@ -85,16 +85,18 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     }
 
     /**
-     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      * 
      */
     @Import(name="matchMode")
     private @Nullable Output<String> matchMode;
 
     /**
-     * @return Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-     * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+     * @return Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+     *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+     *   - Default value: `NEVER`
      * 
      */
     public Optional<Output<String>> matchMode() {
@@ -117,18 +119,18 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     }
 
     /**
-     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      * 
      */
     @Import(name="usernameFrom")
     private @Nullable Output<String> usernameFrom;
 
     /**
-     * @return The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-     * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-     * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+     * @return The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+     *   - Choices: `CERTIFICATE`, `UPN`
+     *   - Default value: `CERTIFICATE`
      * 
      */
     public Optional<Output<String>> usernameFrom() {
@@ -166,7 +168,8 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param allowedAsUserName Allow as username - Default value: `false`
+         * @param allowedAsUserName Allow as username
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -177,7 +180,8 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param allowedAsUserName Allow as username - Default value: `false`
+         * @param allowedAsUserName Allow as username
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -187,10 +191,9 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-         * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-         * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-         * `SUBJECT_COMMON_NAME`
+         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+         *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+         *   - Default value: `SUBJECT_COMMON_NAME`
          * 
          * @return builder
          * 
@@ -201,10 +204,9 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. - Choices:
-         * `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`,
-         * `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS` - Default value:
-         * `SUBJECT_COMMON_NAME`
+         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+         *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
+         *   - Default value: `SUBJECT_COMMON_NAME`
          * 
          * @return builder
          * 
@@ -235,8 +237,8 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param externalIdentityStoreName Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-         * value: `[not applicable]`
+         * @param externalIdentityStoreName Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+         *   - Default value: `[not applicable]`
          * 
          * @return builder
          * 
@@ -247,8 +249,8 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param externalIdentityStoreName Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen - Default
-         * value: `[not applicable]`
+         * @param externalIdentityStoreName Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
+         *   - Default value: `[not applicable]`
          * 
          * @return builder
          * 
@@ -258,8 +260,9 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param matchMode Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-         * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+         * @param matchMode Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+         *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+         *   - Default value: `NEVER`
          * 
          * @return builder
          * 
@@ -270,8 +273,9 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param matchMode Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON - Choices:
-         * `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON` - Default value: `NEVER`
+         * @param matchMode Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
+         *   - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
+         *   - Default value: `NEVER`
          * 
          * @return builder
          * 
@@ -302,9 +306,9 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param usernameFrom The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-         * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-         * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+         * @param usernameFrom The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+         *   - Choices: `CERTIFICATE`, `UPN`
+         *   - Default value: `CERTIFICATE`
          * 
          * @return builder
          * 
@@ -315,9 +319,9 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param usernameFrom The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific
-         * attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the
-         * Certificate - an option only in AD) - Choices: `CERTIFICATE`, `UPN` - Default value: `CERTIFICATE`
+         * @param usernameFrom The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
+         *   - Choices: `CERTIFICATE`, `UPN`
+         *   - Default value: `CERTIFICATE`
          * 
          * @return builder
          * 

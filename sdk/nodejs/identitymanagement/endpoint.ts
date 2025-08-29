@@ -65,107 +65,109 @@ export class Endpoint extends pulumi.CustomResource {
     /**
      * Custom Attributes
      */
-    public readonly customAttributes!: pulumi.Output<{[key: string]: string} | undefined>;
+    declare public readonly customAttributes: pulumi.Output<{[key: string]: string} | undefined>;
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Identity Group ID
      */
-    public readonly groupId!: pulumi.Output<string | undefined>;
+    declare public readonly groupId: pulumi.Output<string | undefined>;
     /**
      * Identity Store
      */
-    public readonly identityStore!: pulumi.Output<string | undefined>;
+    declare public readonly identityStore: pulumi.Output<string | undefined>;
     /**
      * Identity Store Id
      */
-    public readonly identityStoreId!: pulumi.Output<string | undefined>;
+    declare public readonly identityStoreId: pulumi.Output<string | undefined>;
     /**
      * MAC address of the endpoint
      */
-    public readonly mac!: pulumi.Output<string>;
+    declare public readonly mac: pulumi.Output<string>;
     /**
      * Mdm Compliance Status
      */
-    public readonly mdmComplianceStatus!: pulumi.Output<boolean | undefined>;
+    declare public readonly mdmComplianceStatus: pulumi.Output<boolean | undefined>;
     /**
      * Mdm Encrypted
      */
-    public readonly mdmEncrypted!: pulumi.Output<boolean | undefined>;
+    declare public readonly mdmEncrypted: pulumi.Output<boolean | undefined>;
     /**
      * Mdm Enrolled
      */
-    public readonly mdmEnrolled!: pulumi.Output<boolean | undefined>;
+    declare public readonly mdmEnrolled: pulumi.Output<boolean | undefined>;
     /**
      * Mdm IMEI
      */
-    public readonly mdmImei!: pulumi.Output<string | undefined>;
+    declare public readonly mdmImei: pulumi.Output<string | undefined>;
     /**
      * Mdm JailBroken
      */
-    public readonly mdmJailBroken!: pulumi.Output<boolean | undefined>;
+    declare public readonly mdmJailBroken: pulumi.Output<boolean | undefined>;
     /**
      * Mdm Manufacturer
      */
-    public readonly mdmManufacturer!: pulumi.Output<string | undefined>;
+    declare public readonly mdmManufacturer: pulumi.Output<string | undefined>;
     /**
      * Mdm Model
      */
-    public readonly mdmModel!: pulumi.Output<string | undefined>;
+    declare public readonly mdmModel: pulumi.Output<string | undefined>;
     /**
      * Mdm OS
      */
-    public readonly mdmOs!: pulumi.Output<string | undefined>;
+    declare public readonly mdmOs: pulumi.Output<string | undefined>;
     /**
      * Mdm PhoneNumber
      */
-    public readonly mdmPhoneNumber!: pulumi.Output<string | undefined>;
+    declare public readonly mdmPhoneNumber: pulumi.Output<string | undefined>;
     /**
      * Mdm Pinlock
      */
-    public readonly mdmPinlock!: pulumi.Output<boolean | undefined>;
+    declare public readonly mdmPinlock: pulumi.Output<boolean | undefined>;
     /**
      * Mdm Reachable
      */
-    public readonly mdmReachable!: pulumi.Output<boolean | undefined>;
+    declare public readonly mdmReachable: pulumi.Output<boolean | undefined>;
     /**
      * Mdm Serial
      */
-    public readonly mdmSerial!: pulumi.Output<string | undefined>;
+    declare public readonly mdmSerial: pulumi.Output<string | undefined>;
     /**
      * Mdm Server Name
      */
-    public readonly mdmServerName!: pulumi.Output<string | undefined>;
+    declare public readonly mdmServerName: pulumi.Output<string | undefined>;
     /**
      * The name of the endpoint
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Portal User
      */
-    public readonly portalUser!: pulumi.Output<string | undefined>;
+    declare public readonly portalUser: pulumi.Output<string | undefined>;
     /**
      * Profile ID
      */
-    public readonly profileId!: pulumi.Output<string | undefined>;
+    declare public readonly profileId: pulumi.Output<string | undefined>;
     /**
      * Static Group Assignment
      */
-    public readonly staticGroupAssignment!: pulumi.Output<boolean>;
+    declare public readonly staticGroupAssignment: pulumi.Output<boolean>;
     /**
-     * staticGroupAssignmentDefined - Default value: `true`
+     * staticGroupAssignmentDefined
+     *   - Default value: `true`
      */
-    public readonly staticGroupAssignmentDefined!: pulumi.Output<boolean>;
+    declare public readonly staticGroupAssignmentDefined: pulumi.Output<boolean>;
     /**
      * Static Profile Assignment
      */
-    public readonly staticProfileAssignment!: pulumi.Output<boolean>;
+    declare public readonly staticProfileAssignment: pulumi.Output<boolean>;
     /**
-     * Static Profile Assignment Defined - Default value: `true`
+     * Static Profile Assignment Defined
+     *   - Default value: `true`
      */
-    public readonly staticProfileAssignmentDefined!: pulumi.Output<boolean>;
+    declare public readonly staticProfileAssignmentDefined: pulumi.Output<boolean>;
 
     /**
      * Create a Endpoint resource with the given unique name, arguments, and options.
@@ -180,69 +182,69 @@ export class Endpoint extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EndpointState | undefined;
-            resourceInputs["customAttributes"] = state ? state.customAttributes : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["groupId"] = state ? state.groupId : undefined;
-            resourceInputs["identityStore"] = state ? state.identityStore : undefined;
-            resourceInputs["identityStoreId"] = state ? state.identityStoreId : undefined;
-            resourceInputs["mac"] = state ? state.mac : undefined;
-            resourceInputs["mdmComplianceStatus"] = state ? state.mdmComplianceStatus : undefined;
-            resourceInputs["mdmEncrypted"] = state ? state.mdmEncrypted : undefined;
-            resourceInputs["mdmEnrolled"] = state ? state.mdmEnrolled : undefined;
-            resourceInputs["mdmImei"] = state ? state.mdmImei : undefined;
-            resourceInputs["mdmJailBroken"] = state ? state.mdmJailBroken : undefined;
-            resourceInputs["mdmManufacturer"] = state ? state.mdmManufacturer : undefined;
-            resourceInputs["mdmModel"] = state ? state.mdmModel : undefined;
-            resourceInputs["mdmOs"] = state ? state.mdmOs : undefined;
-            resourceInputs["mdmPhoneNumber"] = state ? state.mdmPhoneNumber : undefined;
-            resourceInputs["mdmPinlock"] = state ? state.mdmPinlock : undefined;
-            resourceInputs["mdmReachable"] = state ? state.mdmReachable : undefined;
-            resourceInputs["mdmSerial"] = state ? state.mdmSerial : undefined;
-            resourceInputs["mdmServerName"] = state ? state.mdmServerName : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["portalUser"] = state ? state.portalUser : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["staticGroupAssignment"] = state ? state.staticGroupAssignment : undefined;
-            resourceInputs["staticGroupAssignmentDefined"] = state ? state.staticGroupAssignmentDefined : undefined;
-            resourceInputs["staticProfileAssignment"] = state ? state.staticProfileAssignment : undefined;
-            resourceInputs["staticProfileAssignmentDefined"] = state ? state.staticProfileAssignmentDefined : undefined;
+            resourceInputs["customAttributes"] = state?.customAttributes;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["groupId"] = state?.groupId;
+            resourceInputs["identityStore"] = state?.identityStore;
+            resourceInputs["identityStoreId"] = state?.identityStoreId;
+            resourceInputs["mac"] = state?.mac;
+            resourceInputs["mdmComplianceStatus"] = state?.mdmComplianceStatus;
+            resourceInputs["mdmEncrypted"] = state?.mdmEncrypted;
+            resourceInputs["mdmEnrolled"] = state?.mdmEnrolled;
+            resourceInputs["mdmImei"] = state?.mdmImei;
+            resourceInputs["mdmJailBroken"] = state?.mdmJailBroken;
+            resourceInputs["mdmManufacturer"] = state?.mdmManufacturer;
+            resourceInputs["mdmModel"] = state?.mdmModel;
+            resourceInputs["mdmOs"] = state?.mdmOs;
+            resourceInputs["mdmPhoneNumber"] = state?.mdmPhoneNumber;
+            resourceInputs["mdmPinlock"] = state?.mdmPinlock;
+            resourceInputs["mdmReachable"] = state?.mdmReachable;
+            resourceInputs["mdmSerial"] = state?.mdmSerial;
+            resourceInputs["mdmServerName"] = state?.mdmServerName;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["portalUser"] = state?.portalUser;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["staticGroupAssignment"] = state?.staticGroupAssignment;
+            resourceInputs["staticGroupAssignmentDefined"] = state?.staticGroupAssignmentDefined;
+            resourceInputs["staticProfileAssignment"] = state?.staticProfileAssignment;
+            resourceInputs["staticProfileAssignmentDefined"] = state?.staticProfileAssignmentDefined;
         } else {
             const args = argsOrState as EndpointArgs | undefined;
-            if ((!args || args.mac === undefined) && !opts.urn) {
+            if (args?.mac === undefined && !opts.urn) {
                 throw new Error("Missing required property 'mac'");
             }
-            if ((!args || args.staticGroupAssignment === undefined) && !opts.urn) {
+            if (args?.staticGroupAssignment === undefined && !opts.urn) {
                 throw new Error("Missing required property 'staticGroupAssignment'");
             }
-            if ((!args || args.staticProfileAssignment === undefined) && !opts.urn) {
+            if (args?.staticProfileAssignment === undefined && !opts.urn) {
                 throw new Error("Missing required property 'staticProfileAssignment'");
             }
-            resourceInputs["customAttributes"] = args ? args.customAttributes : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["groupId"] = args ? args.groupId : undefined;
-            resourceInputs["identityStore"] = args ? args.identityStore : undefined;
-            resourceInputs["identityStoreId"] = args ? args.identityStoreId : undefined;
-            resourceInputs["mac"] = args ? args.mac : undefined;
-            resourceInputs["mdmComplianceStatus"] = args ? args.mdmComplianceStatus : undefined;
-            resourceInputs["mdmEncrypted"] = args ? args.mdmEncrypted : undefined;
-            resourceInputs["mdmEnrolled"] = args ? args.mdmEnrolled : undefined;
-            resourceInputs["mdmImei"] = args ? args.mdmImei : undefined;
-            resourceInputs["mdmJailBroken"] = args ? args.mdmJailBroken : undefined;
-            resourceInputs["mdmManufacturer"] = args ? args.mdmManufacturer : undefined;
-            resourceInputs["mdmModel"] = args ? args.mdmModel : undefined;
-            resourceInputs["mdmOs"] = args ? args.mdmOs : undefined;
-            resourceInputs["mdmPhoneNumber"] = args ? args.mdmPhoneNumber : undefined;
-            resourceInputs["mdmPinlock"] = args ? args.mdmPinlock : undefined;
-            resourceInputs["mdmReachable"] = args ? args.mdmReachable : undefined;
-            resourceInputs["mdmSerial"] = args ? args.mdmSerial : undefined;
-            resourceInputs["mdmServerName"] = args ? args.mdmServerName : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["portalUser"] = args ? args.portalUser : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["staticGroupAssignment"] = args ? args.staticGroupAssignment : undefined;
-            resourceInputs["staticGroupAssignmentDefined"] = args ? args.staticGroupAssignmentDefined : undefined;
-            resourceInputs["staticProfileAssignment"] = args ? args.staticProfileAssignment : undefined;
-            resourceInputs["staticProfileAssignmentDefined"] = args ? args.staticProfileAssignmentDefined : undefined;
+            resourceInputs["customAttributes"] = args?.customAttributes;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["groupId"] = args?.groupId;
+            resourceInputs["identityStore"] = args?.identityStore;
+            resourceInputs["identityStoreId"] = args?.identityStoreId;
+            resourceInputs["mac"] = args?.mac;
+            resourceInputs["mdmComplianceStatus"] = args?.mdmComplianceStatus;
+            resourceInputs["mdmEncrypted"] = args?.mdmEncrypted;
+            resourceInputs["mdmEnrolled"] = args?.mdmEnrolled;
+            resourceInputs["mdmImei"] = args?.mdmImei;
+            resourceInputs["mdmJailBroken"] = args?.mdmJailBroken;
+            resourceInputs["mdmManufacturer"] = args?.mdmManufacturer;
+            resourceInputs["mdmModel"] = args?.mdmModel;
+            resourceInputs["mdmOs"] = args?.mdmOs;
+            resourceInputs["mdmPhoneNumber"] = args?.mdmPhoneNumber;
+            resourceInputs["mdmPinlock"] = args?.mdmPinlock;
+            resourceInputs["mdmReachable"] = args?.mdmReachable;
+            resourceInputs["mdmSerial"] = args?.mdmSerial;
+            resourceInputs["mdmServerName"] = args?.mdmServerName;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["portalUser"] = args?.portalUser;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["staticGroupAssignment"] = args?.staticGroupAssignment;
+            resourceInputs["staticGroupAssignmentDefined"] = args?.staticGroupAssignmentDefined;
+            resourceInputs["staticProfileAssignment"] = args?.staticProfileAssignment;
+            resourceInputs["staticProfileAssignmentDefined"] = args?.staticProfileAssignmentDefined;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Endpoint.__pulumiType, name, resourceInputs, opts);
@@ -346,7 +348,8 @@ export interface EndpointState {
      */
     staticGroupAssignment?: pulumi.Input<boolean>;
     /**
-     * staticGroupAssignmentDefined - Default value: `true`
+     * staticGroupAssignmentDefined
+     *   - Default value: `true`
      */
     staticGroupAssignmentDefined?: pulumi.Input<boolean>;
     /**
@@ -354,7 +357,8 @@ export interface EndpointState {
      */
     staticProfileAssignment?: pulumi.Input<boolean>;
     /**
-     * Static Profile Assignment Defined - Default value: `true`
+     * Static Profile Assignment Defined
+     *   - Default value: `true`
      */
     staticProfileAssignmentDefined?: pulumi.Input<boolean>;
 }
@@ -456,7 +460,8 @@ export interface EndpointArgs {
      */
     staticGroupAssignment: pulumi.Input<boolean>;
     /**
-     * staticGroupAssignmentDefined - Default value: `true`
+     * staticGroupAssignmentDefined
+     *   - Default value: `true`
      */
     staticGroupAssignmentDefined?: pulumi.Input<boolean>;
     /**
@@ -464,7 +469,8 @@ export interface EndpointArgs {
      */
     staticProfileAssignment: pulumi.Input<boolean>;
     /**
-     * Static Profile Assignment Defined - Default value: `true`
+     * Static Profile Assignment Defined
+     *   - Default value: `true`
      */
     staticProfileAssignmentDefined?: pulumi.Input<boolean>;
 }

@@ -26,7 +26,8 @@ class IpToSgtMappingGroupArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a IpToSgtMappingGroup resource.
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] sgt: Trustsec Security Group ID
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `deploy_type` is `ALL`
         :param pulumi.Input[_builtins.str] description: Description
@@ -45,7 +46,8 @@ class IpToSgtMappingGroupArgs:
     @pulumi.getter(name="deployType")
     def deploy_type(self) -> pulumi.Input[_builtins.str]:
         """
-        Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        Deploy Type
+          - Choices: `ALL`, `ND`, `NDG`
         """
         return pulumi.get(self, "deploy_type")
 
@@ -113,7 +115,8 @@ class _IpToSgtMappingGroupState:
         """
         Input properties used for looking up and filtering IpToSgtMappingGroup resources.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the IP to SGT mapping Group
         :param pulumi.Input[_builtins.str] sgt: Trustsec Security Group ID
@@ -145,7 +148,8 @@ class _IpToSgtMappingGroupState:
     @pulumi.getter(name="deployType")
     def deploy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        Deploy Type
+          - Choices: `ALL`, `ND`, `NDG`
         """
         return pulumi.get(self, "deploy_type")
 
@@ -228,7 +232,8 @@ class IpToSgtMappingGroup(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the IP to SGT mapping Group
         :param pulumi.Input[_builtins.str] sgt: Trustsec Security Group ID
@@ -323,7 +328,8 @@ class IpToSgtMappingGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `deploy_type` is `ALL`
-        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
+                 - Choices: `ALL`, `ND`, `NDG`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the IP to SGT mapping Group
         :param pulumi.Input[_builtins.str] sgt: Trustsec Security Group ID
@@ -351,7 +357,8 @@ class IpToSgtMappingGroup(pulumi.CustomResource):
     @pulumi.getter(name="deployType")
     def deploy_type(self) -> pulumi.Output[_builtins.str]:
         """
-        Deploy Type - Choices: `ALL`, `ND`, `NDG`
+        Deploy Type
+          - Choices: `ALL`, `ND`, `NDG`
         """
         return pulumi.get(self, "deploy_type")
 

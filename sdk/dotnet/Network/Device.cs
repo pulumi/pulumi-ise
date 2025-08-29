@@ -111,7 +111,8 @@ namespace Pulumi.Ise.Network
         public Output<string?> AuthenticationEncryptionKey { get; private set; } = null!;
 
         /// <summary>
-        /// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        /// Key input format
+        ///   - Choices: `ASCII`, `HEXADECIMAL`
         /// </summary>
         [Output("authenticationEncryptionKeyFormat")]
         public Output<string?> AuthenticationEncryptionKeyFormat { get; private set; } = null!;
@@ -123,7 +124,8 @@ namespace Pulumi.Ise.Network
         public Output<string?> AuthenticationMessageAuthenticatorCodeKey { get; private set; } = null!;
 
         /// <summary>
-        /// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        /// Network protocol
+        ///   - Choices: `RADIUS`, `TACACS_PLUS`
         /// </summary>
         [Output("authenticationNetworkProtocol")]
         public Output<string?> AuthenticationNetworkProtocol { get; private set; } = null!;
@@ -141,7 +143,8 @@ namespace Pulumi.Ise.Network
         public Output<string?> AuthenticationSecondRadiusSharedSecret { get; private set; } = null!;
 
         /// <summary>
-        /// CoA port - Default value: `1700`
+        /// CoA port
+        ///   - Default value: `1700`
         /// </summary>
         [Output("coaPort")]
         public Output<int> CoaPort { get; private set; } = null!;
@@ -183,7 +186,8 @@ namespace Pulumi.Ise.Network
         public Output<ImmutableArray<string>> NetworkDeviceGroups { get; private set; } = null!;
 
         /// <summary>
-        /// Profile name - Default value: `Cisco`
+        /// Profile name
+        ///   - Default value: `Cisco`
         /// </summary>
         [Output("profileName")]
         public Output<string> ProfileName { get; private set; } = null!;
@@ -207,7 +211,8 @@ namespace Pulumi.Ise.Network
         public Output<string?> SnmpOriginatingPolicyServiceNode { get; private set; } = null!;
 
         /// <summary>
-        /// SNMP Polling Interval in seconds - Range: `600`-`86400`
+        /// SNMP Polling Interval in seconds
+        ///   - Range: `600`-`86400`
         /// </summary>
         [Output("snmpPollingInterval")]
         public Output<int?> SnmpPollingInterval { get; private set; } = null!;
@@ -219,7 +224,8 @@ namespace Pulumi.Ise.Network
         public Output<string?> SnmpRoCommunity { get; private set; } = null!;
 
         /// <summary>
-        /// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        /// SNMP version
+        ///   - Choices: `ONE`, `TWO_C`, `THREE`
         /// </summary>
         [Output("snmpVersion")]
         public Output<string?> SnmpVersion { get; private set; } = null!;
@@ -231,7 +237,8 @@ namespace Pulumi.Ise.Network
         public Output<string?> SoftwareVersion { get; private set; } = null!;
 
         /// <summary>
-        /// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        /// Connect mode options
+        ///   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         /// </summary>
         [Output("tacacsConnectModeOptions")]
         public Output<string?> TacacsConnectModeOptions { get; private set; } = null!;
@@ -333,7 +340,8 @@ namespace Pulumi.Ise.Network
         public Output<bool?> TrustsecSendConfigurationToDevice { get; private set; } = null!;
 
         /// <summary>
-        /// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        /// Send configuration to device using
+        ///   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         /// </summary>
         [Output("trustsecSendConfigurationToDeviceUsing")]
         public Output<string?> TrustsecSendConfigurationToDeviceUsing { get; private set; } = null!;
@@ -409,7 +417,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? AuthenticationEncryptionKey { get; set; }
 
         /// <summary>
-        /// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        /// Key input format
+        ///   - Choices: `ASCII`, `HEXADECIMAL`
         /// </summary>
         [Input("authenticationEncryptionKeyFormat")]
         public Input<string>? AuthenticationEncryptionKeyFormat { get; set; }
@@ -421,7 +430,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? AuthenticationMessageAuthenticatorCodeKey { get; set; }
 
         /// <summary>
-        /// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        /// Network protocol
+        ///   - Choices: `RADIUS`, `TACACS_PLUS`
         /// </summary>
         [Input("authenticationNetworkProtocol")]
         public Input<string>? AuthenticationNetworkProtocol { get; set; }
@@ -439,7 +449,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? AuthenticationSecondRadiusSharedSecret { get; set; }
 
         /// <summary>
-        /// CoA port - Default value: `1700`
+        /// CoA port
+        ///   - Default value: `1700`
         /// </summary>
         [Input("coaPort")]
         public Input<int>? CoaPort { get; set; }
@@ -493,7 +504,8 @@ namespace Pulumi.Ise.Network
         }
 
         /// <summary>
-        /// Profile name - Default value: `Cisco`
+        /// Profile name
+        ///   - Default value: `Cisco`
         /// </summary>
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }
@@ -517,7 +529,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? SnmpOriginatingPolicyServiceNode { get; set; }
 
         /// <summary>
-        /// SNMP Polling Interval in seconds - Range: `600`-`86400`
+        /// SNMP Polling Interval in seconds
+        ///   - Range: `600`-`86400`
         /// </summary>
         [Input("snmpPollingInterval")]
         public Input<int>? SnmpPollingInterval { get; set; }
@@ -529,7 +542,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? SnmpRoCommunity { get; set; }
 
         /// <summary>
-        /// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        /// SNMP version
+        ///   - Choices: `ONE`, `TWO_C`, `THREE`
         /// </summary>
         [Input("snmpVersion")]
         public Input<string>? SnmpVersion { get; set; }
@@ -541,7 +555,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? SoftwareVersion { get; set; }
 
         /// <summary>
-        /// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        /// Connect mode options
+        ///   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         /// </summary>
         [Input("tacacsConnectModeOptions")]
         public Input<string>? TacacsConnectModeOptions { get; set; }
@@ -643,7 +658,8 @@ namespace Pulumi.Ise.Network
         public Input<bool>? TrustsecSendConfigurationToDevice { get; set; }
 
         /// <summary>
-        /// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        /// Send configuration to device using
+        ///   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         /// </summary>
         [Input("trustsecSendConfigurationToDeviceUsing")]
         public Input<string>? TrustsecSendConfigurationToDeviceUsing { get; set; }
@@ -681,7 +697,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? AuthenticationEncryptionKey { get; set; }
 
         /// <summary>
-        /// Key input format - Choices: `ASCII`, `HEXADECIMAL`
+        /// Key input format
+        ///   - Choices: `ASCII`, `HEXADECIMAL`
         /// </summary>
         [Input("authenticationEncryptionKeyFormat")]
         public Input<string>? AuthenticationEncryptionKeyFormat { get; set; }
@@ -693,7 +710,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? AuthenticationMessageAuthenticatorCodeKey { get; set; }
 
         /// <summary>
-        /// Network protocol - Choices: `RADIUS`, `TACACS_PLUS`
+        /// Network protocol
+        ///   - Choices: `RADIUS`, `TACACS_PLUS`
         /// </summary>
         [Input("authenticationNetworkProtocol")]
         public Input<string>? AuthenticationNetworkProtocol { get; set; }
@@ -711,7 +729,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? AuthenticationSecondRadiusSharedSecret { get; set; }
 
         /// <summary>
-        /// CoA port - Default value: `1700`
+        /// CoA port
+        ///   - Default value: `1700`
         /// </summary>
         [Input("coaPort")]
         public Input<int>? CoaPort { get; set; }
@@ -765,7 +784,8 @@ namespace Pulumi.Ise.Network
         }
 
         /// <summary>
-        /// Profile name - Default value: `Cisco`
+        /// Profile name
+        ///   - Default value: `Cisco`
         /// </summary>
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }
@@ -789,7 +809,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? SnmpOriginatingPolicyServiceNode { get; set; }
 
         /// <summary>
-        /// SNMP Polling Interval in seconds - Range: `600`-`86400`
+        /// SNMP Polling Interval in seconds
+        ///   - Range: `600`-`86400`
         /// </summary>
         [Input("snmpPollingInterval")]
         public Input<int>? SnmpPollingInterval { get; set; }
@@ -801,7 +822,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? SnmpRoCommunity { get; set; }
 
         /// <summary>
-        /// SNMP version - Choices: `ONE`, `TWO_C`, `THREE`
+        /// SNMP version
+        ///   - Choices: `ONE`, `TWO_C`, `THREE`
         /// </summary>
         [Input("snmpVersion")]
         public Input<string>? SnmpVersion { get; set; }
@@ -813,7 +835,8 @@ namespace Pulumi.Ise.Network
         public Input<string>? SoftwareVersion { get; set; }
 
         /// <summary>
-        /// Connect mode options - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
+        /// Connect mode options
+        ///   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         /// </summary>
         [Input("tacacsConnectModeOptions")]
         public Input<string>? TacacsConnectModeOptions { get; set; }
@@ -915,7 +938,8 @@ namespace Pulumi.Ise.Network
         public Input<bool>? TrustsecSendConfigurationToDevice { get; set; }
 
         /// <summary>
-        /// Send configuration to device using - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
+        /// Send configuration to device using
+        ///   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
         /// </summary>
         [Input("trustsecSendConfigurationToDeviceUsing")]
         public Input<string>? TrustsecSendConfigurationToDeviceUsing { get; set; }

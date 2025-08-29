@@ -76,30 +76,30 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:identitymanagement/internalUser:InternalUser")
 public class InternalUser extends com.pulumi.resources.CustomResource {
     /**
-     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      * 
      */
     @Export(name="accountNameAlias", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> accountNameAlias;
 
     /**
-     * @return The Account Name Alias will be used to send email notifications about password expiration. This field is only supported
-     * from ISE 3.2.
+     * @return The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      * 
      */
     public Output<Optional<String>> accountNameAlias() {
         return Codegen.optional(this.accountNameAlias);
     }
     /**
-     * Requires the user to change the password - Default value: `true`
+     * Requires the user to change the password
+     *   - Default value: `true`
      * 
      */
     @Export(name="changePassword", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> changePassword;
 
     /**
-     * @return Requires the user to change the password - Default value: `true`
+     * @return Requires the user to change the password
+     *   - Default value: `true`
      * 
      */
     public Output<Boolean> changePassword() {
@@ -246,30 +246,32 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
         return this.password;
     }
     /**
-     * The ID store where the internal user&#39;s password is kept - Default value: `Internal Users`
+     * The ID store where the internal user&#39;s password is kept
+     *   - Default value: `Internal Users`
      * 
      */
     @Export(name="passwordIdStore", refs={String.class}, tree="[0]")
     private Output<String> passwordIdStore;
 
     /**
-     * @return The ID store where the internal user&#39;s password is kept - Default value: `Internal Users`
+     * @return The ID store where the internal user&#39;s password is kept
+     *   - Default value: `Internal Users`
      * 
      */
     public Output<String> passwordIdStore() {
         return this.passwordIdStore;
     }
     /**
-     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      * 
      */
     @Export(name="passwordNeverExpires", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> passwordNeverExpires;
 
     /**
-     * @return Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This
-     * field is only supported from ISE 3.2. - Default value: `false`
+     * @return Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> passwordNeverExpires() {

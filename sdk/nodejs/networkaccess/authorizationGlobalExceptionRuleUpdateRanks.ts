@@ -49,7 +49,7 @@ export class AuthorizationGlobalExceptionRuleUpdateRanks extends pulumi.CustomRe
         return obj['__pulumiType'] === AuthorizationGlobalExceptionRuleUpdateRanks.__pulumiType;
     }
 
-    public readonly rules!: pulumi.Output<outputs.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRule[] | undefined>;
+    declare public readonly rules: pulumi.Output<outputs.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRule[] | undefined>;
 
     /**
      * Create a AuthorizationGlobalExceptionRuleUpdateRanks resource with the given unique name, arguments, and options.
@@ -64,10 +64,10 @@ export class AuthorizationGlobalExceptionRuleUpdateRanks extends pulumi.CustomRe
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthorizationGlobalExceptionRuleUpdateRanksState | undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["rules"] = state?.rules;
         } else {
             const args = argsOrState as AuthorizationGlobalExceptionRuleUpdateRanksArgs | undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["rules"] = args?.rules;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AuthorizationGlobalExceptionRuleUpdateRanks.__pulumiType, name, resourceInputs, opts);

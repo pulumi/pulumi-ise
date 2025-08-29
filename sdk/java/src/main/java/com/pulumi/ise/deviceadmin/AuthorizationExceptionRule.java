@@ -192,36 +192,32 @@ public class AuthorizationExceptionRule extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.conditionIsNegate);
     }
     /**
-     * Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     @Export(name="conditionOperator", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> conditionOperator;
 
     /**
-     * @return Equality operator - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`,
-     * `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`,
-     * `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+     * @return Equality operator
+     *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
      * 
      */
     public Output<Optional<String>> conditionOperator() {
         return Codegen.optional(this.conditionOperator);
     }
     /**
-     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     @Export(name="conditionType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> conditionType;
 
     /**
-     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that
-     * additional conditions are present under the children attribute. - Choices: `ConditionAndBlock`, `ConditionAttributes`,
-     * `ConditionOrBlock`, `ConditionReference`
+     * @return Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     public Output<Optional<String>> conditionType() {
@@ -298,14 +294,16 @@ public class AuthorizationExceptionRule extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.rank);
     }
     /**
-     * The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      * 
      */
     @Export(name="state", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> state;
 
     /**
-     * @return The state that the rule is in. A disabled rule cannot be matched. - Choices: `disabled`, `enabled`, `monitor`
+     * @return The state that the rule is in. A disabled rule cannot be matched.
+     *   - Choices: `disabled`, `enabled`, `monitor`
      * 
      */
     public Output<Optional<String>> state() {

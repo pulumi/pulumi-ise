@@ -32,8 +32,8 @@ class ActiveDirectoryAddGroupsArgs:
         The set of arguments for constructing a ActiveDirectoryAddGroups resource.
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-               value: `Default_Scope`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+                 - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.str] description: Join point Description
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
         :param pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]] groups: List of AD Groups
@@ -80,8 +80,8 @@ class ActiveDirectoryAddGroupsArgs:
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-        value: `Default_Scope`
+        String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+          - Default value: `Default_Scope`
         """
         return pulumi.get(self, "ad_scopes_names")
 
@@ -150,8 +150,8 @@ class _ActiveDirectoryAddGroupsState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryAddGroups resources.
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-               value: `Default_Scope`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+                 - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.str] description: Join point Description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
@@ -178,8 +178,8 @@ class _ActiveDirectoryAddGroupsState:
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-        value: `Default_Scope`
+        String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+          - Default value: `Default_Scope`
         """
         return pulumi.get(self, "ad_scopes_names")
 
@@ -299,8 +299,8 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-               value: `Default_Scope`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+                 - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.str] description: Join point Description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
@@ -403,8 +403,8 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-               value: `Default_Scope`
+        :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+                 - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.str] description: Join point Description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
@@ -429,8 +429,8 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> pulumi.Output[_builtins.str]:
         """
-        String that contains the names of the scopes that the active directory belongs to. Names are separated by comm - Default
-        value: `Default_Scope`
+        String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
+          - Default value: `Default_Scope`
         """
         return pulumi.get(self, "ad_scopes_names")
 

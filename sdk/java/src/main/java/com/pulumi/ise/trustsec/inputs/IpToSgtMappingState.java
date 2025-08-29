@@ -31,14 +31,16 @@ public final class IpToSgtMappingState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      * 
      */
     @Import(name="deployType")
     private @Nullable Output<String> deployType;
 
     /**
-     * @return Deploy Type - Choices: `ALL`, `ND`, `NDG`
+     * @return Deploy Type
+     *   - Choices: `ALL`, `ND`, `NDG`
      * 
      */
     public Optional<Output<String>> deployType() {
@@ -188,7 +190,8 @@ public final class IpToSgtMappingState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param deployType Deploy Type - Choices: `ALL`, `ND`, `NDG`
+         * @param deployType Deploy Type
+         *   - Choices: `ALL`, `ND`, `NDG`
          * 
          * @return builder
          * 
@@ -199,7 +202,8 @@ public final class IpToSgtMappingState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param deployType Deploy Type - Choices: `ALL`, `ND`, `NDG`
+         * @param deployType Deploy Type
+         *   - Choices: `ALL`, `ND`, `NDG`
          * 
          * @return builder
          * 

@@ -32,14 +32,18 @@ public final class DownloadableAclArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      * 
      */
     @Import(name="daclType")
     private @Nullable Output<String> daclType;
 
     /**
-     * @return The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+     * @return The type of ACL
+     *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+     *   - Default value: `IPV4`
      * 
      */
     public Optional<Output<String>> daclType() {
@@ -125,7 +129,9 @@ public final class DownloadableAclArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param daclType The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+         * @param daclType The type of ACL
+         *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+         *   - Default value: `IPV4`
          * 
          * @return builder
          * 
@@ -136,7 +142,9 @@ public final class DownloadableAclArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param daclType The type of ACL - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC` - Default value: `IPV4`
+         * @param daclType The type of ACL
+         *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
+         *   - Default value: `IPV4`
          * 
          * @return builder
          * 

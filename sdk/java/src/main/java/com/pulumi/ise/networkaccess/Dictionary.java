@@ -81,14 +81,16 @@ public class Dictionary extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      * 
      */
     @Export(name="dictionaryAttrType", refs={String.class}, tree="[0]")
     private Output<String> dictionaryAttrType;
 
     /**
-     * @return The dictionary attribute type - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
+     * @return The dictionary attribute type
+     *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      * 
      */
     public Output<String> dictionaryAttrType() {

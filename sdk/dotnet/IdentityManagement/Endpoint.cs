@@ -188,7 +188,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<bool> StaticGroupAssignment { get; private set; } = null!;
 
         /// <summary>
-        /// staticGroupAssignmentDefined - Default value: `true`
+        /// staticGroupAssignmentDefined
+        ///   - Default value: `true`
         /// </summary>
         [Output("staticGroupAssignmentDefined")]
         public Output<bool> StaticGroupAssignmentDefined { get; private set; } = null!;
@@ -200,7 +201,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<bool> StaticProfileAssignment { get; private set; } = null!;
 
         /// <summary>
-        /// Static Profile Assignment Defined - Default value: `true`
+        /// Static Profile Assignment Defined
+        ///   - Default value: `true`
         /// </summary>
         [Output("staticProfileAssignmentDefined")]
         public Output<bool> StaticProfileAssignmentDefined { get; private set; } = null!;
@@ -396,7 +398,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool> StaticGroupAssignment { get; set; } = null!;
 
         /// <summary>
-        /// staticGroupAssignmentDefined - Default value: `true`
+        /// staticGroupAssignmentDefined
+        ///   - Default value: `true`
         /// </summary>
         [Input("staticGroupAssignmentDefined")]
         public Input<bool>? StaticGroupAssignmentDefined { get; set; }
@@ -408,7 +411,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool> StaticProfileAssignment { get; set; } = null!;
 
         /// <summary>
-        /// Static Profile Assignment Defined - Default value: `true`
+        /// Static Profile Assignment Defined
+        ///   - Default value: `true`
         /// </summary>
         [Input("staticProfileAssignmentDefined")]
         public Input<bool>? StaticProfileAssignmentDefined { get; set; }
@@ -566,7 +570,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool>? StaticGroupAssignment { get; set; }
 
         /// <summary>
-        /// staticGroupAssignmentDefined - Default value: `true`
+        /// staticGroupAssignmentDefined
+        ///   - Default value: `true`
         /// </summary>
         [Input("staticGroupAssignmentDefined")]
         public Input<bool>? StaticGroupAssignmentDefined { get; set; }
@@ -578,7 +583,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool>? StaticProfileAssignment { get; set; }
 
         /// <summary>
-        /// Static Profile Assignment Defined - Default value: `true`
+        /// Static Profile Assignment Defined
+        ///   - Default value: `true`
         /// </summary>
         [Input("staticProfileAssignmentDefined")]
         public Input<bool>? StaticProfileAssignmentDefined { get; set; }
