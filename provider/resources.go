@@ -103,7 +103,7 @@ func convertName(tfname string) (module string, name string) {
 
 	contract.Assertf(!unicode.IsDigit(rune(module[0])), "Pulumi namespace must not start with a digit: %s", name)
 	contract.Assertf(!unicode.IsDigit(rune(name[0])), "Pulumi name must not start with a digit: %s", name)
-	return
+	return module, name
 }
 
 func trimPrefixCaseInsensitive(s, prefix string) string {
