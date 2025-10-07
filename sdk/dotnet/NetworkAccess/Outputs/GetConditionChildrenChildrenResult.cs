@@ -46,7 +46,7 @@ namespace Pulumi.Ise.NetworkAccess.Outputs
         /// </summary>
         public readonly bool IsNegate;
         /// <summary>
-        /// Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+        /// Condition name. Required if `ConditionType` is `ConditionReference`, if `ConditionType` is `ConditionAttributes` then this attribute is not used.
         /// </summary>
         public readonly string Name;
         /// <summary>

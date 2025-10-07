@@ -9,6 +9,62 @@ import * as utilities from "../utilities";
 /**
  * This resource can manage an Active Directory Join Point.
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as ise from "@pulumi/ise";
+ *
+ * const example = new ise.identitymanagement.ActiveDirectoryJoinPoint("example", {
+ *     name: "cisco.local",
+ *     description: "My AD join point",
+ *     domain: "cisco.local",
+ *     adScopesNames: "Default_Scope",
+ *     enableDomainAllowedList: true,
+ *     groups: [{
+ *         name: "cisco.local/operators",
+ *         sid: "S-1-5-32-548",
+ *         type: "GLOBAL",
+ *     }],
+ *     attributes: [{
+ *         name: "Attribute_1",
+ *         type: "STRING",
+ *         internal_name: "internal_name",
+ *         default_value: "default_string",
+ *     }],
+ *     rewriteRules: [{
+ *         row_id: "0",
+ *         rewrite_match: "rewrite_match",
+ *         rewrite_result: "rewrite_result",
+ *     }],
+ *     enableRewrites: false,
+ *     enablePassChange: true,
+ *     enableMachineAuth: true,
+ *     enableMachineAccess: true,
+ *     enableDialinPermissionCheck: false,
+ *     plaintextAuth: false,
+ *     agingTime: 5,
+ *     enableCallbackForDialinClient: false,
+ *     identityNotInAdBehaviour: "SEARCH_JOINED_FOREST",
+ *     unreachableDomainsBehaviour: "PROCEED",
+ *     schema: "ACTIVE_DIRECTORY",
+ *     firstName: "givenName",
+ *     department: "department",
+ *     lastName: "sn",
+ *     organizationalUnit: "company",
+ *     jobTitle: "title",
+ *     locality: "l",
+ *     email: "mail",
+ *     stateOrProvince: "st",
+ *     telephone: "telephoneNumber",
+ *     country: "co",
+ *     streetAddress: "streetAddress",
+ *     enableFailedAuthProtection: false,
+ *     failedAuthThreshold: 5,
+ *     authProtectionType: "WIRELESS",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

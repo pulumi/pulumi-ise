@@ -9,6 +9,52 @@ import * as utilities from "../utilities";
 /**
  * This resource can manage an authorization profiles policy element.
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as ise from "@pulumi/ise";
+ *
+ * const example = new ise.networkaccess.AuthorizationProfile("example", {
+ *     name: "AuthzProfile1",
+ *     description: "My Authorization Profile",
+ *     vlanNameId: "VLAN10",
+ *     vlanTagId: 0,
+ *     webRedirectionType: "CentralizedWebAuth",
+ *     webRedirectionAcl: "TEST_ACL",
+ *     webRedirectionPortalName: "Sponsored Guest Portal (default)",
+ *     webRedirectionStaticIpHostNameFqdn: "1.2.3.4",
+ *     webRedirectionDisplayCertificatesRenewalMessages: true,
+ *     agentlessPosture: false,
+ *     accessType: "ACCESS_ACCEPT",
+ *     profileName: "Cisco",
+ *     airespaceAcl: "ACL1",
+ *     acl: "ACL1",
+ *     autoSmartPort: "PROFILE1",
+ *     interfaceTemplate: "TEMP1",
+ *     ipv6AclFilter: "ACL1",
+ *     avcProfile: "PROF1",
+ *     asaVpn: "1",
+ *     uniqueIdentifier: "ID1234",
+ *     trackMovement: false,
+ *     serviceTemplate: false,
+ *     easywiredSessionCandidate: false,
+ *     voiceDomainPermission: false,
+ *     neat: false,
+ *     webAuth: false,
+ *     macSecPolicy: "MUST_SECURE",
+ *     reauthenticationConnectivity: "DEFAULT",
+ *     reauthenticationTimer: 1,
+ *     advancedAttributes: [{
+ *         attribute_left_dictionary_name: "Cisco",
+ *         attribute_left_name: "cisco-av-pair",
+ *         attribute_right_value_type: "AttributeValue",
+ *         attribute_right_value: "set_nadprofile_vlan=true,vlan=TEST,tag=1",
+ *     }],
+ *     airespaceIpv6Acl: "ACL1",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

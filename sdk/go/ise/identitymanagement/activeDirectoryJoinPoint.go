@@ -14,6 +14,83 @@ import (
 
 // This resource can manage an Active Directory Join Point.
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/identitymanagement"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := identitymanagement.NewActiveDirectoryJoinPoint(ctx, "example", &identitymanagement.ActiveDirectoryJoinPointArgs{
+//				Name:                    pulumi.String("cisco.local"),
+//				Description:             pulumi.String("My AD join point"),
+//				Domain:                  pulumi.String("cisco.local"),
+//				AdScopesNames:           pulumi.String("Default_Scope"),
+//				EnableDomainAllowedList: pulumi.Bool(true),
+//				Groups: identitymanagement.ActiveDirectoryJoinPointGroupArray{
+//					&identitymanagement.ActiveDirectoryJoinPointGroupArgs{
+//						Name: pulumi.String("cisco.local/operators"),
+//						Sid:  pulumi.String("S-1-5-32-548"),
+//						Type: pulumi.String("GLOBAL"),
+//					},
+//				},
+//				Attributes: identitymanagement.ActiveDirectoryJoinPointAttributeArray{
+//					&identitymanagement.ActiveDirectoryJoinPointAttributeArgs{
+//						Name:          pulumi.String("Attribute_1"),
+//						Type:          pulumi.String("STRING"),
+//						Internal_name: "internal_name",
+//						Default_value: "default_string",
+//					},
+//				},
+//				RewriteRules: identitymanagement.ActiveDirectoryJoinPointRewriteRuleArray{
+//					&identitymanagement.ActiveDirectoryJoinPointRewriteRuleArgs{
+//						Row_id:         "0",
+//						Rewrite_match:  "rewrite_match",
+//						Rewrite_result: "rewrite_result",
+//					},
+//				},
+//				EnableRewrites:                pulumi.Bool(false),
+//				EnablePassChange:              pulumi.Bool(true),
+//				EnableMachineAuth:             pulumi.Bool(true),
+//				EnableMachineAccess:           pulumi.Bool(true),
+//				EnableDialinPermissionCheck:   pulumi.Bool(false),
+//				PlaintextAuth:                 pulumi.Bool(false),
+//				AgingTime:                     pulumi.Int(5),
+//				EnableCallbackForDialinClient: pulumi.Bool(false),
+//				IdentityNotInAdBehaviour:      pulumi.String("SEARCH_JOINED_FOREST"),
+//				UnreachableDomainsBehaviour:   pulumi.String("PROCEED"),
+//				Schema:                        pulumi.String("ACTIVE_DIRECTORY"),
+//				FirstName:                     pulumi.String("givenName"),
+//				Department:                    pulumi.String("department"),
+//				LastName:                      pulumi.String("sn"),
+//				OrganizationalUnit:            pulumi.String("company"),
+//				JobTitle:                      pulumi.String("title"),
+//				Locality:                      pulumi.String("l"),
+//				Email:                         pulumi.String("mail"),
+//				StateOrProvince:               pulumi.String("st"),
+//				Telephone:                     pulumi.String("telephoneNumber"),
+//				Country:                       pulumi.String("co"),
+//				StreetAddress:                 pulumi.String("streetAddress"),
+//				EnableFailedAuthProtection:    pulumi.Bool(false),
+//				FailedAuthThreshold:           pulumi.Int(5),
+//				AuthProtectionType:            pulumi.String("WIRELESS"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -24,7 +24,7 @@ public final class GetConditionChildren {
      */
     private String attributeValue;
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private List<GetConditionChildrenChildren> childrens;
@@ -59,7 +59,7 @@ public final class GetConditionChildren {
      */
     private Boolean isNegate;
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     private String name;
@@ -85,7 +85,7 @@ public final class GetConditionChildren {
         return this.attributeValue;
     }
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<GetConditionChildrenChildren> childrens() {
@@ -134,7 +134,7 @@ public final class GetConditionChildren {
         return this.isNegate;
     }
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     public String name() {

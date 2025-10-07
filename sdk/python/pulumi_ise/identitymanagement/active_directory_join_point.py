@@ -1192,6 +1192,61 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         """
         This resource can manage an Active Directory Join Point.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_ise as ise
+
+        example = ise.identitymanagement.ActiveDirectoryJoinPoint("example",
+            name="cisco.local",
+            description="My AD join point",
+            domain="cisco.local",
+            ad_scopes_names="Default_Scope",
+            enable_domain_allowed_list=True,
+            groups=[{
+                "name": "cisco.local/operators",
+                "sid": "S-1-5-32-548",
+                "type": "GLOBAL",
+            }],
+            attributes=[{
+                "name": "Attribute_1",
+                "type": "STRING",
+                "internal_name": "internal_name",
+                "default_value": "default_string",
+            }],
+            rewrite_rules=[{
+                "row_id": "0",
+                "rewrite_match": "rewrite_match",
+                "rewrite_result": "rewrite_result",
+            }],
+            enable_rewrites=False,
+            enable_pass_change=True,
+            enable_machine_auth=True,
+            enable_machine_access=True,
+            enable_dialin_permission_check=False,
+            plaintext_auth=False,
+            aging_time=5,
+            enable_callback_for_dialin_client=False,
+            identity_not_in_ad_behaviour="SEARCH_JOINED_FOREST",
+            unreachable_domains_behaviour="PROCEED",
+            schema="ACTIVE_DIRECTORY",
+            first_name="givenName",
+            department="department",
+            last_name="sn",
+            organizational_unit="company",
+            job_title="title",
+            locality="l",
+            email="mail",
+            state_or_province="st",
+            telephone="telephoneNumber",
+            country="co",
+            street_address="streetAddress",
+            enable_failed_auth_protection=False,
+            failed_auth_threshold=5,
+            auth_protection_type="WIRELESS")
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1259,6 +1314,61 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage an Active Directory Join Point.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_ise as ise
+
+        example = ise.identitymanagement.ActiveDirectoryJoinPoint("example",
+            name="cisco.local",
+            description="My AD join point",
+            domain="cisco.local",
+            ad_scopes_names="Default_Scope",
+            enable_domain_allowed_list=True,
+            groups=[{
+                "name": "cisco.local/operators",
+                "sid": "S-1-5-32-548",
+                "type": "GLOBAL",
+            }],
+            attributes=[{
+                "name": "Attribute_1",
+                "type": "STRING",
+                "internal_name": "internal_name",
+                "default_value": "default_string",
+            }],
+            rewrite_rules=[{
+                "row_id": "0",
+                "rewrite_match": "rewrite_match",
+                "rewrite_result": "rewrite_result",
+            }],
+            enable_rewrites=False,
+            enable_pass_change=True,
+            enable_machine_auth=True,
+            enable_machine_access=True,
+            enable_dialin_permission_check=False,
+            plaintext_auth=False,
+            aging_time=5,
+            enable_callback_for_dialin_client=False,
+            identity_not_in_ad_behaviour="SEARCH_JOINED_FOREST",
+            unreachable_domains_behaviour="PROCEED",
+            schema="ACTIVE_DIRECTORY",
+            first_name="givenName",
+            department="department",
+            last_name="sn",
+            organizational_unit="company",
+            job_title="title",
+            locality="l",
+            email="mail",
+            state_or_province="st",
+            telephone="telephoneNumber",
+            country="co",
+            street_address="streetAddress",
+            enable_failed_auth_protection=False,
+            failed_auth_threshold=5,
+            auth_protection_type="WIRELESS")
+        ```
 
         ## Import
 

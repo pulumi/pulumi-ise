@@ -12,6 +12,81 @@ namespace Pulumi.Ise.IdentityManagement
     /// <summary>
     /// This resource can manage an Active Directory Join Point.
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Ise = Pulumi.Ise;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Ise.IdentityManagement.ActiveDirectoryJoinPoint("example", new()
+    ///     {
+    ///         Name = "cisco.local",
+    ///         Description = "My AD join point",
+    ///         Domain = "cisco.local",
+    ///         AdScopesNames = "Default_Scope",
+    ///         EnableDomainAllowedList = true,
+    ///         Groups = new[]
+    ///         {
+    ///             new Ise.IdentityManagement.Inputs.ActiveDirectoryJoinPointGroupArgs
+    ///             {
+    ///                 Name = "cisco.local/operators",
+    ///                 Sid = "S-1-5-32-548",
+    ///                 Type = "GLOBAL",
+    ///             },
+    ///         },
+    ///         Attributes = new[]
+    ///         {
+    ///             new Ise.IdentityManagement.Inputs.ActiveDirectoryJoinPointAttributeArgs
+    ///             {
+    ///                 Name = "Attribute_1",
+    ///                 Type = "STRING",
+    ///                 Internal_name = "internal_name",
+    ///                 Default_value = "default_string",
+    ///             },
+    ///         },
+    ///         RewriteRules = new[]
+    ///         {
+    ///             new Ise.IdentityManagement.Inputs.ActiveDirectoryJoinPointRewriteRuleArgs
+    ///             {
+    ///                 Row_id = "0",
+    ///                 Rewrite_match = "rewrite_match",
+    ///                 Rewrite_result = "rewrite_result",
+    ///             },
+    ///         },
+    ///         EnableRewrites = false,
+    ///         EnablePassChange = true,
+    ///         EnableMachineAuth = true,
+    ///         EnableMachineAccess = true,
+    ///         EnableDialinPermissionCheck = false,
+    ///         PlaintextAuth = false,
+    ///         AgingTime = 5,
+    ///         EnableCallbackForDialinClient = false,
+    ///         IdentityNotInAdBehaviour = "SEARCH_JOINED_FOREST",
+    ///         UnreachableDomainsBehaviour = "PROCEED",
+    ///         Schema = "ACTIVE_DIRECTORY",
+    ///         FirstName = "givenName",
+    ///         Department = "department",
+    ///         LastName = "sn",
+    ///         OrganizationalUnit = "company",
+    ///         JobTitle = "title",
+    ///         Locality = "l",
+    ///         Email = "mail",
+    ///         StateOrProvince = "st",
+    ///         Telephone = "telephoneNumber",
+    ///         Country = "co",
+    ///         StreetAddress = "streetAddress",
+    ///         EnableFailedAuthProtection = false,
+    ///         FailedAuthThreshold = 5,
+    ///         AuthProtectionType = "WIRELESS",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -82,55 +157,55 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Enable Callback For Dial In Client
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableCallbackForDialinClient")]
         public Output<bool> EnableCallbackForDialinClient { get; private set; } = null!;
 
         /// <summary>
         /// Enable Dial In Permission Check
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableDialinPermissionCheck")]
         public Output<bool> EnableDialinPermissionCheck { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Output("enableDomainAllowedList")]
         public Output<bool> EnableDomainAllowedList { get; private set; } = null!;
 
         /// <summary>
         /// Enable prevent AD account lockout due to too many bad password attempts
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableFailedAuthProtection")]
         public Output<bool> EnableFailedAuthProtection { get; private set; } = null!;
 
         /// <summary>
         /// Enable Machine Access
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("enableMachineAccess")]
         public Output<bool> EnableMachineAccess { get; private set; } = null!;
 
         /// <summary>
         /// Enable Machine Authentication
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("enableMachineAuth")]
         public Output<bool> EnableMachineAuth { get; private set; } = null!;
 
         /// <summary>
         /// Enable Password Change
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("enablePassChange")]
         public Output<bool> EnablePassChange { get; private set; } = null!;
 
         /// <summary>
         /// Enable Rewrites
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableRewrites")]
         public Output<bool> EnableRewrites { get; private set; } = null!;
@@ -193,7 +268,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Plain Text Authentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("plaintextAuth")]
         public Output<bool> PlaintextAuth { get; private set; } = null!;
@@ -347,55 +422,55 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Enable Callback For Dial In Client
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableCallbackForDialinClient")]
         public Input<bool>? EnableCallbackForDialinClient { get; set; }
 
         /// <summary>
         /// Enable Dial In Permission Check
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableDialinPermissionCheck")]
         public Input<bool>? EnableDialinPermissionCheck { get; set; }
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("enableDomainAllowedList")]
         public Input<bool>? EnableDomainAllowedList { get; set; }
 
         /// <summary>
         /// Enable prevent AD account lockout due to too many bad password attempts
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableFailedAuthProtection")]
         public Input<bool>? EnableFailedAuthProtection { get; set; }
 
         /// <summary>
         /// Enable Machine Access
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enableMachineAccess")]
         public Input<bool>? EnableMachineAccess { get; set; }
 
         /// <summary>
         /// Enable Machine Authentication
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enableMachineAuth")]
         public Input<bool>? EnableMachineAuth { get; set; }
 
         /// <summary>
         /// Enable Password Change
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enablePassChange")]
         public Input<bool>? EnablePassChange { get; set; }
 
         /// <summary>
         /// Enable Rewrites
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableRewrites")]
         public Input<bool>? EnableRewrites { get; set; }
@@ -464,7 +539,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Plain Text Authentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("plaintextAuth")]
         public Input<bool>? PlaintextAuth { get; set; }
@@ -586,55 +661,55 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Enable Callback For Dial In Client
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableCallbackForDialinClient")]
         public Input<bool>? EnableCallbackForDialinClient { get; set; }
 
         /// <summary>
         /// Enable Dial In Permission Check
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableDialinPermissionCheck")]
         public Input<bool>? EnableDialinPermissionCheck { get; set; }
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("enableDomainAllowedList")]
         public Input<bool>? EnableDomainAllowedList { get; set; }
 
         /// <summary>
         /// Enable prevent AD account lockout due to too many bad password attempts
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableFailedAuthProtection")]
         public Input<bool>? EnableFailedAuthProtection { get; set; }
 
         /// <summary>
         /// Enable Machine Access
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enableMachineAccess")]
         public Input<bool>? EnableMachineAccess { get; set; }
 
         /// <summary>
         /// Enable Machine Authentication
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enableMachineAuth")]
         public Input<bool>? EnableMachineAuth { get; set; }
 
         /// <summary>
         /// Enable Password Change
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enablePassChange")]
         public Input<bool>? EnablePassChange { get; set; }
 
         /// <summary>
         /// Enable Rewrites
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableRewrites")]
         public Input<bool>? EnableRewrites { get; set; }
@@ -703,7 +778,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Plain Text Authentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("plaintextAuth")]
         public Input<bool>? PlaintextAuth { get; set; }
