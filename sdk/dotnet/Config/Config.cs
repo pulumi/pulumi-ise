@@ -34,7 +34,7 @@ namespace Pulumi.Ise
 
         private static readonly __Value<bool?> _insecure = new __Value<bool?>(() => __config.GetBoolean("insecure"));
         /// <summary>
-        /// Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `true`.
+        /// Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `True`.
         /// </summary>
         public static bool? Insecure
         {

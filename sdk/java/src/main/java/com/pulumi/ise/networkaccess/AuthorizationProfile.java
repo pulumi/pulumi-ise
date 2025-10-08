@@ -21,6 +21,75 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage an authorization profiles policy element.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.ise.networkaccess.AuthorizationProfile;
+ * import com.pulumi.ise.networkaccess.AuthorizationProfileArgs;
+ * import com.pulumi.ise.networkaccess.inputs.AuthorizationProfileAdvancedAttributeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AuthorizationProfile("example", AuthorizationProfileArgs.builder()
+ *             .name("AuthzProfile1")
+ *             .description("My Authorization Profile")
+ *             .vlanNameId("VLAN10")
+ *             .vlanTagId(0)
+ *             .webRedirectionType("CentralizedWebAuth")
+ *             .webRedirectionAcl("TEST_ACL")
+ *             .webRedirectionPortalName("Sponsored Guest Portal (default)")
+ *             .webRedirectionStaticIpHostNameFqdn("1.2.3.4")
+ *             .webRedirectionDisplayCertificatesRenewalMessages(true)
+ *             .agentlessPosture(false)
+ *             .accessType("ACCESS_ACCEPT")
+ *             .profileName("Cisco")
+ *             .airespaceAcl("ACL1")
+ *             .acl("ACL1")
+ *             .autoSmartPort("PROFILE1")
+ *             .interfaceTemplate("TEMP1")
+ *             .ipv6AclFilter("ACL1")
+ *             .avcProfile("PROF1")
+ *             .asaVpn("1")
+ *             .uniqueIdentifier("ID1234")
+ *             .trackMovement(false)
+ *             .serviceTemplate(false)
+ *             .easywiredSessionCandidate(false)
+ *             .voiceDomainPermission(false)
+ *             .neat(false)
+ *             .webAuth(false)
+ *             .macSecPolicy("MUST_SECURE")
+ *             .reauthenticationConnectivity("DEFAULT")
+ *             .reauthenticationTimer(1)
+ *             .advancedAttributes(AuthorizationProfileAdvancedAttributeArgs.builder()
+ *                 .attribute_left_dictionary_name("Cisco")
+ *                 .attribute_left_name("cisco-av-pair")
+ *                 .attribute_right_value_type("AttributeValue")
+ *                 .attribute_right_value("set_nadprofile_vlan=true,vlan=TEST,tag=1")
+ *                 .build())
+ *             .airespaceIpv6Acl("ACL1")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:
@@ -465,28 +534,28 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.webRedirectionAcl);
     }
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      * 
      */
     @Export(name="webRedirectionDisplayCertificatesRenewalMessages", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> webRedirectionDisplayCertificatesRenewalMessages;
 
     /**
-     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+     * @return This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      * 
      */
     public Output<Optional<Boolean>> webRedirectionDisplayCertificatesRenewalMessages() {
         return Codegen.optional(this.webRedirectionDisplayCertificatesRenewalMessages);
     }
     /**
-     * A portal that exist in the DB and fits the `web_redirection_type`
+     * A portal that exist in the DB and fits the `webRedirectionType`
      * 
      */
     @Export(name="webRedirectionPortalName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> webRedirectionPortalName;
 
     /**
-     * @return A portal that exist in the DB and fits the `web_redirection_type`
+     * @return A portal that exist in the DB and fits the `webRedirectionType`
      * 
      */
     public Output<Optional<String>> webRedirectionPortalName() {
@@ -507,7 +576,7 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.webRedirectionStaticIpHostNameFqdn);
     }
     /**
-     * This type must fit the `web_redirection_portal_name`
+     * This type must fit the `webRedirectionPortalName`
      *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
@@ -515,7 +584,7 @@ public class AuthorizationProfile extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> webRedirectionType;
 
     /**
-     * @return This type must fit the `web_redirection_portal_name`
+     * @return This type must fit the `webRedirectionPortalName`
      *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */

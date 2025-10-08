@@ -22,17 +22,17 @@ public final class AuthorizationProfileAdvancedAttribute {
      */
     private @Nullable String attributeLeftName;
     /**
-     * @return Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     private @Nullable String attributeRightDictionaryName;
     /**
-     * @return Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     private @Nullable String attributeRightName;
     /**
-     * @return Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+     * @return Attribute value, only required when `attributeRightValueType` is `AttributeValue`
      * 
      */
     private @Nullable String attributeRightValue;
@@ -59,21 +59,21 @@ public final class AuthorizationProfileAdvancedAttribute {
         return Optional.ofNullable(this.attributeLeftName);
     }
     /**
-     * @return Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     public Optional<String> attributeRightDictionaryName() {
         return Optional.ofNullable(this.attributeRightDictionaryName);
     }
     /**
-     * @return Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     public Optional<String> attributeRightName() {
         return Optional.ofNullable(this.attributeRightName);
     }
     /**
-     * @return Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+     * @return Attribute value, only required when `attributeRightValueType` is `AttributeValue`
      * 
      */
     public Optional<String> attributeRightValue() {

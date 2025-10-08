@@ -45,7 +45,7 @@ namespace Pulumi.Ise.TrustSec
     public partial class IpToSgtMapping : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+        /// Mandatory unless `MappingGroup` is set or unless `DeployType` is `ALL`
         /// </summary>
         [Output("deployTo")]
         public Output<string?> DeployTo { get; private set; } = null!;
@@ -64,19 +64,19 @@ namespace Pulumi.Ise.TrustSec
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Mandatory if `host_name` is empty
+        /// Mandatory if `HostName` is empty
         /// </summary>
         [Output("hostIp")]
         public Output<string?> HostIp { get; private set; } = null!;
 
         /// <summary>
-        /// Mandatory if `host_ip` is empty
+        /// Mandatory if `HostIp` is empty
         /// </summary>
         [Output("hostName")]
         public Output<string?> HostName { get; private set; } = null!;
 
         /// <summary>
-        /// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+        /// IP to SGT Mapping Group ID. Mandatory unless `Sgt` and `DeployTo` and `DeployType` are set
         /// </summary>
         [Output("mappingGroup")]
         public Output<string?> MappingGroup { get; private set; } = null!;
@@ -88,7 +88,7 @@ namespace Pulumi.Ise.TrustSec
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+        /// Trustsec Security Group ID. Mandatory unless `MappingGroup` is set
         /// </summary>
         [Output("sgt")]
         public Output<string?> Sgt { get; private set; } = null!;
@@ -140,7 +140,7 @@ namespace Pulumi.Ise.TrustSec
     public sealed class IpToSgtMappingArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+        /// Mandatory unless `MappingGroup` is set or unless `DeployType` is `ALL`
         /// </summary>
         [Input("deployTo")]
         public Input<string>? DeployTo { get; set; }
@@ -159,19 +159,19 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Mandatory if `host_name` is empty
+        /// Mandatory if `HostName` is empty
         /// </summary>
         [Input("hostIp")]
         public Input<string>? HostIp { get; set; }
 
         /// <summary>
-        /// Mandatory if `host_ip` is empty
+        /// Mandatory if `HostIp` is empty
         /// </summary>
         [Input("hostName")]
         public Input<string>? HostName { get; set; }
 
         /// <summary>
-        /// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+        /// IP to SGT Mapping Group ID. Mandatory unless `Sgt` and `DeployTo` and `DeployType` are set
         /// </summary>
         [Input("mappingGroup")]
         public Input<string>? MappingGroup { get; set; }
@@ -183,7 +183,7 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+        /// Trustsec Security Group ID. Mandatory unless `MappingGroup` is set
         /// </summary>
         [Input("sgt")]
         public Input<string>? Sgt { get; set; }
@@ -197,7 +197,7 @@ namespace Pulumi.Ise.TrustSec
     public sealed class IpToSgtMappingState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+        /// Mandatory unless `MappingGroup` is set or unless `DeployType` is `ALL`
         /// </summary>
         [Input("deployTo")]
         public Input<string>? DeployTo { get; set; }
@@ -216,19 +216,19 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Mandatory if `host_name` is empty
+        /// Mandatory if `HostName` is empty
         /// </summary>
         [Input("hostIp")]
         public Input<string>? HostIp { get; set; }
 
         /// <summary>
-        /// Mandatory if `host_ip` is empty
+        /// Mandatory if `HostIp` is empty
         /// </summary>
         [Input("hostName")]
         public Input<string>? HostName { get; set; }
 
         /// <summary>
-        /// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+        /// IP to SGT Mapping Group ID. Mandatory unless `Sgt` and `DeployTo` and `DeployType` are set
         /// </summary>
         [Input("mappingGroup")]
         public Input<string>? MappingGroup { get; set; }
@@ -240,7 +240,7 @@ namespace Pulumi.Ise.TrustSec
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+        /// Trustsec Security Group ID. Mandatory unless `MappingGroup` is set
         /// </summary>
         [Input("sgt")]
         public Input<string>? Sgt { get; set; }

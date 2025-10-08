@@ -16,14 +16,14 @@ public final class IpToSgtMappingGroupState extends com.pulumi.resources.Resourc
     public static final IpToSgtMappingGroupState Empty = new IpToSgtMappingGroupState();
 
     /**
-     * Mandatory unless `deploy_type` is `ALL`
+     * Mandatory unless `deployType` is `ALL`
      * 
      */
     @Import(name="deployTo")
     private @Nullable Output<String> deployTo;
 
     /**
-     * @return Mandatory unless `deploy_type` is `ALL`
+     * @return Mandatory unless `deployType` is `ALL`
      * 
      */
     public Optional<Output<String>> deployTo() {
@@ -121,7 +121,7 @@ public final class IpToSgtMappingGroupState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param deployTo Mandatory unless `deploy_type` is `ALL`
+         * @param deployTo Mandatory unless `deployType` is `ALL`
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class IpToSgtMappingGroupState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param deployTo Mandatory unless `deploy_type` is `ALL`
+         * @param deployTo Mandatory unless `deployType` is `ALL`
          * 
          * @return builder
          * 
