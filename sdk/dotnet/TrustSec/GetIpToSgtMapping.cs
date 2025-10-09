@@ -130,7 +130,7 @@ namespace Pulumi.Ise.TrustSec
     public sealed class GetIpToSgtMappingResult
     {
         /// <summary>
-        /// Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+        /// Mandatory unless `MappingGroup` is set or unless `DeployType` is `ALL`
         /// </summary>
         public readonly string DeployTo;
         /// <summary>
@@ -142,11 +142,11 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Mandatory if `host_name` is empty
+        /// Mandatory if `HostName` is empty
         /// </summary>
         public readonly string HostIp;
         /// <summary>
-        /// Mandatory if `host_ip` is empty
+        /// Mandatory if `HostIp` is empty
         /// </summary>
         public readonly string HostName;
         /// <summary>
@@ -154,7 +154,7 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+        /// IP to SGT Mapping Group ID. Mandatory unless `Sgt` and `DeployTo` and `DeployType` are set
         /// </summary>
         public readonly string MappingGroup;
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+        /// Trustsec Security Group ID. Mandatory unless `MappingGroup` is set
         /// </summary>
         public readonly string Sgt;
 

@@ -138,7 +138,7 @@ namespace Pulumi.Ise.DeviceAdmin
         /// </summary>
         public readonly string AttributeValue;
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetConditionChildrenResult> Childrens;
         /// <summary>

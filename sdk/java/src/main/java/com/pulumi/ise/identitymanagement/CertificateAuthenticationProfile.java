@@ -85,7 +85,7 @@ public class CertificateAuthenticationProfile extends com.pulumi.resources.Custo
         return this.allowedAsUserName;
     }
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
      *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
      *   - Default value: `SUBJECT_COMMON_NAME`
      * 
@@ -94,7 +94,7 @@ public class CertificateAuthenticationProfile extends com.pulumi.resources.Custo
     private Output<String> certificateAttributeName;
 
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
      *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
      *   - Default value: `SUBJECT_COMMON_NAME`
      * 

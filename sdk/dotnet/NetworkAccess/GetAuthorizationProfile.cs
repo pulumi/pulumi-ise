@@ -250,11 +250,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly string WebRedirectionAcl;
         /// <summary>
-        /// This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+        /// This attribute is mandatory when `WebRedirectionType` value is `CentralizedWebAuth`. For all other `WebRedirectionType` values the field must be ignored.
         /// </summary>
         public readonly bool WebRedirectionDisplayCertificatesRenewalMessages;
         /// <summary>
-        /// A portal that exist in the DB and fits the `web_redirection_type`
+        /// A portal that exist in the DB and fits the `WebRedirectionType`
         /// </summary>
         public readonly string WebRedirectionPortalName;
         /// <summary>
@@ -262,7 +262,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly string WebRedirectionStaticIpHostNameFqdn;
         /// <summary>
-        /// This type must fit the `web_redirection_portal_name`
+        /// This type must fit the `WebRedirectionPortalName`
         /// </summary>
         public readonly string WebRedirectionType;
 

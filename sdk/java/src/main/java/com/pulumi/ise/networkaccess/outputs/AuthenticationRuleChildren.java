@@ -26,7 +26,7 @@ public final class AuthenticationRuleChildren {
      */
     private @Nullable String attributeValue;
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private @Nullable List<AuthenticationRuleChildrenChildren> childrens;
@@ -79,7 +79,7 @@ public final class AuthenticationRuleChildren {
         return Optional.ofNullable(this.attributeValue);
     }
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<AuthenticationRuleChildrenChildren> childrens() {
