@@ -28,7 +28,7 @@ namespace Pulumi.Ise.DeviceAdmin.Inputs
         private InputList<Inputs.AuthenticationRuleChildrenChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.AuthenticationRuleChildrenChildrenArgs> Childrens
         {
@@ -69,7 +69,7 @@ namespace Pulumi.Ise.DeviceAdmin.Inputs
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("operator")]
         public Input<string>? Operator { get; set; }

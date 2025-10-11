@@ -25,19 +25,19 @@ namespace Pulumi.Ise.NetworkAccess.Inputs
         public Input<string>? AttributeLeftName { get; set; }
 
         /// <summary>
-        /// Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        /// Dictionary name, only required when `AttributeRightValueType` is `AdvancedDictionaryAttribute`
         /// </summary>
         [Input("attributeRightDictionaryName")]
         public Input<string>? AttributeRightDictionaryName { get; set; }
 
         /// <summary>
-        /// Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        /// Attribute name, only required when `AttributeRightValueType` is `AdvancedDictionaryAttribute`
         /// </summary>
         [Input("attributeRightName")]
         public Input<string>? AttributeRightName { get; set; }
 
         /// <summary>
-        /// Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+        /// Attribute value, only required when `AttributeRightValueType` is `AttributeValue`
         /// </summary>
         [Input("attributeRightValue")]
         public Input<string>? AttributeRightValue { get; set; }

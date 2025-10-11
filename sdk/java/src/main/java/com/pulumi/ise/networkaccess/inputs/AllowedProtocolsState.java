@@ -243,14 +243,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+     * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     @Import(name="eapFastAcceptClientCert")
     private @Nullable Output<Boolean> eapFastAcceptClientCert;
 
     /**
-     * @return Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+     * @return Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     public Optional<Output<Boolean>> eapFastAcceptClientCert() {
@@ -258,14 +258,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+     * Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     @Import(name="eapFastAllowMachineAuthentication")
     private @Nullable Output<Boolean> eapFastAllowMachineAuthentication;
 
     /**
-     * @return Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+     * @return Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     public Optional<Output<Boolean>> eapFastAllowMachineAuthentication() {
@@ -288,14 +288,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+     * Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      * 
      */
     @Import(name="eapFastEapGtcPwdChange")
     private @Nullable Output<Boolean> eapFastEapGtcPwdChange;
 
     /**
-     * @return Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+     * @return Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastEapGtcPwdChange() {
@@ -303,7 +303,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+     * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -311,7 +311,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> eapFastEapGtcPwdChangeRetries;
 
     /**
-     * @return EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+     * @return EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -335,14 +335,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      * 
      */
     @Import(name="eapFastEapMsChapV2PwdChange")
     private @Nullable Output<Boolean> eapFastEapMsChapV2PwdChange;
 
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastEapMsChapV2PwdChange() {
@@ -350,7 +350,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -358,7 +358,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> eapFastEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -382,14 +382,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+     * Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      * 
      */
     @Import(name="eapFastEapTlsAuthOfExpiredCerts")
     private @Nullable Output<Boolean> eapFastEapTlsAuthOfExpiredCerts;
 
     /**
-     * @return Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+     * @return Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastEapTlsAuthOfExpiredCerts() {
@@ -412,14 +412,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     @Import(name="eapFastPacsAllowAnonymousProvisioning")
     private @Nullable Output<Boolean> eapFastPacsAllowAnonymousProvisioning;
 
     /**
-     * @return Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastPacsAllowAnonymousProvisioning() {
@@ -427,14 +427,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     @Import(name="eapFastPacsAllowAuthenticatedProvisioning")
     private @Nullable Output<Boolean> eapFastPacsAllowAuthenticatedProvisioning;
 
     /**
-     * @return Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastPacsAllowAuthenticatedProvisioning() {
@@ -442,14 +442,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     @Import(name="eapFastPacsAllowClientCert")
     private @Nullable Output<Boolean> eapFastPacsAllowClientCert;
 
     /**
-     * @return Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastPacsAllowClientCert() {
@@ -457,14 +457,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+     * Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     @Import(name="eapFastPacsAllowMachineAuthentication")
     private @Nullable Output<Boolean> eapFastPacsAllowMachineAuthentication;
 
     /**
-     * @return Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastPacsAllowMachineAuthentication() {
@@ -472,14 +472,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      * 
      */
     @Import(name="eapFastPacsAuthorizationPacTtl")
     private @Nullable Output<Integer> eapFastPacsAuthorizationPacTtl;
 
     /**
-     * @return Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * @return Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      * 
      */
     public Optional<Output<Integer>> eapFastPacsAuthorizationPacTtl() {
@@ -487,7 +487,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -495,7 +495,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<String> eapFastPacsAuthorizationPacTtlUnit;
 
     /**
-     * @return Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * @return Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -504,14 +504,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      * 
      */
     @Import(name="eapFastPacsMachinePacTtl")
     private @Nullable Output<Integer> eapFastPacsMachinePacTtl;
 
     /**
-     * @return Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * @return Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      * 
      */
     public Optional<Output<Integer>> eapFastPacsMachinePacTtl() {
@@ -519,7 +519,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -527,7 +527,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<String> eapFastPacsMachinePacTtlUnit;
 
     /**
-     * @return Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * @return Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -536,14 +536,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     @Import(name="eapFastPacsServerReturns")
     private @Nullable Output<Boolean> eapFastPacsServerReturns;
 
     /**
-     * @return Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastPacsServerReturns() {
@@ -551,14 +551,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+     * Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     @Import(name="eapFastPacsStatelessSessionResume")
     private @Nullable Output<Boolean> eapFastPacsStatelessSessionResume;
 
     /**
-     * @return Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapFastPacsStatelessSessionResume() {
@@ -566,14 +566,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+     * PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     @Import(name="eapFastPacsTunnelPacTtl")
     private @Nullable Output<Integer> eapFastPacsTunnelPacTtl;
 
     /**
-     * @return PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Optional<Output<Integer>> eapFastPacsTunnelPacTtl() {
@@ -581,7 +581,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+     * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -589,7 +589,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<String> eapFastPacsTunnelPacTtlUnit;
 
     /**
-     * @return PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -598,7 +598,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+     * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
      *   - Range: `1`-`100`
      * 
      */
@@ -606,7 +606,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> eapFastPacsUseProactivePacUpdatePercentage;
 
     /**
-     * @return Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
      *   - Range: `1`-`100`
      * 
      */
@@ -675,7 +675,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Range: `1`-`100`
      * 
      */
@@ -683,7 +683,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> eapTlsSessionTicketPercentage;
 
     /**
-     * @return Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Range: `1`-`100`
      * 
      */
@@ -692,14 +692,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     @Import(name="eapTlsSessionTicketTtl")
     private @Nullable Output<Integer> eapTlsSessionTicketTtl;
 
     /**
-     * @return Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     public Optional<Output<Integer>> eapTlsSessionTicketTtl() {
@@ -707,7 +707,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -715,7 +715,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<String> eapTlsSessionTicketTtlUnit;
 
     /**
-     * @return Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      * 
      */
@@ -769,14 +769,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      * 
      */
     @Import(name="eapTtlsEapMsChapV2PwdChange")
     private @Nullable Output<Boolean> eapTtlsEapMsChapV2PwdChange;
 
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      * 
      */
     public Optional<Output<Boolean>> eapTtlsEapMsChapV2PwdChange() {
@@ -784,7 +784,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -792,7 +792,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> eapTtlsEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -876,14 +876,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+     * Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      * 
      */
     @Import(name="peapAllowPeapEapGtcPwdChange")
     private @Nullable Output<Boolean> peapAllowPeapEapGtcPwdChange;
 
     /**
-     * @return Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+     * @return Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      * 
      */
     public Optional<Output<Boolean>> peapAllowPeapEapGtcPwdChange() {
@@ -891,7 +891,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+     * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -899,7 +899,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> peapAllowPeapEapGtcPwdChangeRetries;
 
     /**
-     * @return PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+     * @return PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -923,14 +923,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      * 
      */
     @Import(name="peapAllowPeapEapMsChapV2PwdChange")
     private @Nullable Output<Boolean> peapAllowPeapEapMsChapV2PwdChange;
 
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * @return Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      * 
      */
     public Optional<Output<Boolean>> peapAllowPeapEapMsChapV2PwdChange() {
@@ -938,7 +938,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -946,7 +946,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> peapAllowPeapEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -970,14 +970,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+     * Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      * 
      */
     @Import(name="peapAllowPeapEapTlsAuthOfExpiredCerts")
     private @Nullable Output<Boolean> peapAllowPeapEapTlsAuthOfExpiredCerts;
 
     /**
-     * @return Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+     * @return Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      * 
      */
     public Optional<Output<Boolean>> peapAllowPeapEapTlsAuthOfExpiredCerts() {
@@ -1122,14 +1122,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      * 
      */
     @Import(name="teapEapMsChapV2PwdChange")
     private @Nullable Output<Boolean> teapEapMsChapV2PwdChange;
 
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      * 
      */
     public Optional<Output<Boolean>> teapEapMsChapV2PwdChange() {
@@ -1137,7 +1137,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -1145,7 +1145,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<Integer> teapEapMsChapV2PwdChangeRetries;
 
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      * 
      */
@@ -1169,14 +1169,14 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+     * Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      * 
      */
     @Import(name="teapEapTlsAuthOfExpiredCerts")
     private @Nullable Output<Boolean> teapEapTlsAuthOfExpiredCerts;
 
     /**
-     * @return Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+     * @return Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      * 
      */
     public Optional<Output<Boolean>> teapEapTlsAuthOfExpiredCerts() {
@@ -1614,7 +1614,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastAcceptClientCert Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+         * @param eapFastAcceptClientCert Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
          * 
          * @return builder
          * 
@@ -1625,7 +1625,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastAcceptClientCert Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+         * @param eapFastAcceptClientCert Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
          * 
          * @return builder
          * 
@@ -1635,7 +1635,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastAllowMachineAuthentication Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+         * @param eapFastAllowMachineAuthentication Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
          * 
          * @return builder
          * 
@@ -1646,7 +1646,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastAllowMachineAuthentication Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+         * @param eapFastAllowMachineAuthentication Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
          * 
          * @return builder
          * 
@@ -1677,7 +1677,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapGtcPwdChange Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+         * @param eapFastEapGtcPwdChange Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
          * 
          * @return builder
          * 
@@ -1688,7 +1688,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapGtcPwdChange Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+         * @param eapFastEapGtcPwdChange Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
          * 
          * @return builder
          * 
@@ -1698,7 +1698,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapGtcPwdChangeRetries EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+         * @param eapFastEapGtcPwdChangeRetries EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -1710,7 +1710,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapGtcPwdChangeRetries EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+         * @param eapFastEapGtcPwdChangeRetries EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -1742,7 +1742,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+         * @param eapFastEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -1753,7 +1753,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+         * @param eapFastEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -1763,7 +1763,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+         * @param eapFastEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -1775,7 +1775,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+         * @param eapFastEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -1807,7 +1807,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+         * @param eapFastEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
          * 
          * @return builder
          * 
@@ -1818,7 +1818,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+         * @param eapFastEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
          * 
          * @return builder
          * 
@@ -1849,7 +1849,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowAnonymousProvisioning Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsAllowAnonymousProvisioning Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -1860,7 +1860,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowAnonymousProvisioning Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsAllowAnonymousProvisioning Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -1870,7 +1870,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowAuthenticatedProvisioning Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsAllowAuthenticatedProvisioning Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -1881,7 +1881,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowAuthenticatedProvisioning Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsAllowAuthenticatedProvisioning Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -1891,7 +1891,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowClientCert Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+         * @param eapFastPacsAllowClientCert Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
          * 
          * @return builder
          * 
@@ -1902,7 +1902,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowClientCert Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+         * @param eapFastPacsAllowClientCert Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
          * 
          * @return builder
          * 
@@ -1912,7 +1912,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowMachineAuthentication Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsAllowMachineAuthentication Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -1923,7 +1923,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAllowMachineAuthentication Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsAllowMachineAuthentication Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -1933,7 +1933,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAuthorizationPacTtl Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+         * @param eapFastPacsAuthorizationPacTtl Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
          * 
          * @return builder
          * 
@@ -1944,7 +1944,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAuthorizationPacTtl Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+         * @param eapFastPacsAuthorizationPacTtl Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
          * 
          * @return builder
          * 
@@ -1954,7 +1954,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAuthorizationPacTtlUnit Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+         * @param eapFastPacsAuthorizationPacTtlUnit Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -1966,7 +1966,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsAuthorizationPacTtlUnit Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+         * @param eapFastPacsAuthorizationPacTtlUnit Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -1977,7 +1977,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsMachinePacTtl Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+         * @param eapFastPacsMachinePacTtl Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
          * 
          * @return builder
          * 
@@ -1988,7 +1988,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsMachinePacTtl Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+         * @param eapFastPacsMachinePacTtl Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
          * 
          * @return builder
          * 
@@ -1998,7 +1998,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsMachinePacTtlUnit Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+         * @param eapFastPacsMachinePacTtlUnit Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -2010,7 +2010,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsMachinePacTtlUnit Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+         * @param eapFastPacsMachinePacTtlUnit Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -2021,7 +2021,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsServerReturns Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+         * @param eapFastPacsServerReturns Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
          * 
          * @return builder
          * 
@@ -2032,7 +2032,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsServerReturns Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+         * @param eapFastPacsServerReturns Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
          * 
          * @return builder
          * 
@@ -2042,7 +2042,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsStatelessSessionResume Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsStatelessSessionResume Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -2053,7 +2053,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsStatelessSessionResume Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsStatelessSessionResume Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -2063,7 +2063,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsTunnelPacTtl PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsTunnelPacTtl PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -2074,7 +2074,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsTunnelPacTtl PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsTunnelPacTtl PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
          * 
          * @return builder
          * 
@@ -2084,7 +2084,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsTunnelPacTtlUnit PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsTunnelPacTtlUnit PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -2096,7 +2096,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsTunnelPacTtlUnit PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsTunnelPacTtlUnit PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -2107,7 +2107,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsUseProactivePacUpdatePercentage Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsUseProactivePacUpdatePercentage Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
          *   - Range: `1`-`100`
          * 
          * @return builder
@@ -2119,7 +2119,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapFastPacsUseProactivePacUpdatePercentage Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+         * @param eapFastPacsUseProactivePacUpdatePercentage Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
          *   - Range: `1`-`100`
          * 
          * @return builder
@@ -2214,7 +2214,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTlsSessionTicketPercentage Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+         * @param eapTlsSessionTicketPercentage Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
          *   - Range: `1`-`100`
          * 
          * @return builder
@@ -2226,7 +2226,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTlsSessionTicketPercentage Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+         * @param eapTlsSessionTicketPercentage Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
          *   - Range: `1`-`100`
          * 
          * @return builder
@@ -2237,7 +2237,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTlsSessionTicketTtl Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+         * @param eapTlsSessionTicketTtl Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
          * 
          * @return builder
          * 
@@ -2248,7 +2248,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTlsSessionTicketTtl Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+         * @param eapTlsSessionTicketTtl Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
          * 
          * @return builder
          * 
@@ -2258,7 +2258,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTlsSessionTicketTtlUnit Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+         * @param eapTlsSessionTicketTtlUnit Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -2270,7 +2270,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTlsSessionTicketTtlUnit Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+         * @param eapTlsSessionTicketTtlUnit Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
          *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
          * 
          * @return builder
@@ -2344,7 +2344,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTtlsEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+         * @param eapTtlsEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -2355,7 +2355,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTtlsEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+         * @param eapTtlsEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -2365,7 +2365,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTtlsEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+         * @param eapTtlsEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2377,7 +2377,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eapTtlsEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+         * @param eapTtlsEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2493,7 +2493,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapGtcPwdChange Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+         * @param peapAllowPeapEapGtcPwdChange Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
          * 
          * @return builder
          * 
@@ -2504,7 +2504,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapGtcPwdChange Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+         * @param peapAllowPeapEapGtcPwdChange Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
          * 
          * @return builder
          * 
@@ -2514,7 +2514,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapGtcPwdChangeRetries PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+         * @param peapAllowPeapEapGtcPwdChangeRetries PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2526,7 +2526,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapGtcPwdChangeRetries PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+         * @param peapAllowPeapEapGtcPwdChangeRetries PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2558,7 +2558,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapMsChapV2PwdChange Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+         * @param peapAllowPeapEapMsChapV2PwdChange Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -2569,7 +2569,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapMsChapV2PwdChange Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+         * @param peapAllowPeapEapMsChapV2PwdChange Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -2579,7 +2579,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapMsChapV2PwdChangeRetries Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+         * @param peapAllowPeapEapMsChapV2PwdChangeRetries Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2591,7 +2591,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapMsChapV2PwdChangeRetries Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+         * @param peapAllowPeapEapMsChapV2PwdChangeRetries Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2623,7 +2623,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapTlsAuthOfExpiredCerts Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+         * @param peapAllowPeapEapTlsAuthOfExpiredCerts Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
          * 
          * @return builder
          * 
@@ -2634,7 +2634,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param peapAllowPeapEapTlsAuthOfExpiredCerts Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+         * @param peapAllowPeapEapTlsAuthOfExpiredCerts Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
          * 
          * @return builder
          * 
@@ -2835,7 +2835,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param teapEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+         * @param teapEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -2846,7 +2846,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param teapEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+         * @param teapEapMsChapV2PwdChange Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
          * 
          * @return builder
          * 
@@ -2856,7 +2856,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param teapEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+         * @param teapEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2868,7 +2868,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param teapEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+         * @param teapEapMsChapV2PwdChangeRetries EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
          *   - Range: `0`-`3`
          * 
          * @return builder
@@ -2900,7 +2900,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param teapEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+         * @param teapEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
          * 
          * @return builder
          * 
@@ -2911,7 +2911,7 @@ public final class AllowedProtocolsState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param teapEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+         * @param teapEapTlsAuthOfExpiredCerts Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
          * 
          * @return builder
          * 

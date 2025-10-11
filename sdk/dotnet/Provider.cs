@@ -75,7 +75,7 @@ namespace Pulumi.Ise
     public sealed class ProviderArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `true`.
+        /// Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `True`.
         /// </summary>
         [Input("insecure", json: true)]
         public Input<bool>? Insecure { get; set; }

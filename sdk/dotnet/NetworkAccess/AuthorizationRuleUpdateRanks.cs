@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Ise.NetworkAccess
 {
     /// <summary>
-    /// This resource is used to bulk update rank field in network access authorization rules. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_policy_set resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
+    /// This resource is used to bulk update rank field in network access authorization rules. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and NetworkAccessPolicySet resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
     /// 
     /// ## Example Usage
     /// 

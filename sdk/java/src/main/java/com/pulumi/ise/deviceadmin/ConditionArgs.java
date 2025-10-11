@@ -50,14 +50,14 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      * 
      */
     @Import(name="childrens")
     private @Nullable Output<List<ConditionChildrenArgs>> childrens;
 
     /**
-     * @return List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      * 
      */
     public Optional<Output<List<ConditionChildrenArgs>>> childrens() {
@@ -249,7 +249,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -260,7 +260,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
          * 
          * @return builder
          * 

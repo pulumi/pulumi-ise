@@ -50,14 +50,14 @@ public final class AuthorizationRuleChildrenArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     @Import(name="childrens")
     private @Nullable Output<List<AuthorizationRuleChildrenChildrenArgs>> childrens;
 
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public Optional<Output<List<AuthorizationRuleChildrenChildrenArgs>>> childrens() {
@@ -233,7 +233,7 @@ public final class AuthorizationRuleChildrenArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class AuthorizationRuleChildrenArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class AuthorizationRuleChildrenArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 

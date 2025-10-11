@@ -130,7 +130,7 @@ namespace Pulumi.Ise.TrustSec
     public sealed class GetIpToSgtMappingGroupResult
     {
         /// <summary>
-        /// Mandatory unless `deploy_type` is `ALL`
+        /// Mandatory unless `DeployType` is `ALL`
         /// </summary>
         public readonly string DeployTo;
         /// <summary>

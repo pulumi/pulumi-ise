@@ -49,13 +49,13 @@ namespace Pulumi.Ise.IdentityManagement
     {
         /// <summary>
         /// Allow as username
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("allowedAsUserName")]
         public Output<bool> AllowedAsUserName { get; private set; } = null!;
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
         ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
         ///   - Default value: `SUBJECT_COMMON_NAME`
         /// </summary>
@@ -145,13 +145,13 @@ namespace Pulumi.Ise.IdentityManagement
     {
         /// <summary>
         /// Allow as username
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("allowedAsUserName")]
         public Input<bool>? AllowedAsUserName { get; set; }
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
         ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
         ///   - Default value: `SUBJECT_COMMON_NAME`
         /// </summary>
@@ -203,13 +203,13 @@ namespace Pulumi.Ise.IdentityManagement
     {
         /// <summary>
         /// Allow as username
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("allowedAsUserName")]
         public Input<bool>? AllowedAsUserName { get; set; }
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
         ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
         ///   - Default value: `SUBJECT_COMMON_NAME`
         /// </summary>

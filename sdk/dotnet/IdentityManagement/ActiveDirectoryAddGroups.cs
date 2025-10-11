@@ -67,7 +67,7 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string> Domain { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Output("enableDomainAllowedList")]
         public Output<bool> EnableDomainAllowedList { get; private set; } = null!;
@@ -156,7 +156,7 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string> Domain { get; set; } = null!;
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("enableDomainAllowedList")]
         public Input<bool>? EnableDomainAllowedList { get; set; }
@@ -213,7 +213,7 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Domain { get; set; }
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("enableDomainAllowedList")]
         public Input<bool>? EnableDomainAllowedList { get; set; }

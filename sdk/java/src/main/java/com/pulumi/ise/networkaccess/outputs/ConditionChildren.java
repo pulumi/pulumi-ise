@@ -26,7 +26,7 @@ public final class ConditionChildren {
      */
     private @Nullable String attributeValue;
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private @Nullable List<ConditionChildrenChildren> childrens;
@@ -62,7 +62,7 @@ public final class ConditionChildren {
      */
     private @Nullable Boolean isNegate;
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     private @Nullable String name;
@@ -89,7 +89,7 @@ public final class ConditionChildren {
         return Optional.ofNullable(this.attributeValue);
     }
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<ConditionChildrenChildren> childrens() {
@@ -139,7 +139,7 @@ public final class ConditionChildren {
         return Optional.ofNullable(this.isNegate);
     }
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     public Optional<String> name() {

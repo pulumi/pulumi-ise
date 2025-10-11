@@ -24,7 +24,7 @@ public final class GetAuthorizationExceptionRuleChildren {
      */
     private String attributeValue;
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private List<GetAuthorizationExceptionRuleChildrenChildren> childrens;
@@ -75,7 +75,7 @@ public final class GetAuthorizationExceptionRuleChildren {
         return this.attributeValue;
     }
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<GetAuthorizationExceptionRuleChildrenChildren> childrens() {

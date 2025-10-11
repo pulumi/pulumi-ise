@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetIpToSgtMappingGroupResult {
     /**
-     * @return Mandatory unless `deploy_type` is `ALL`
+     * @return Mandatory unless `deployType` is `ALL`
      * 
      */
     private String deployTo;
@@ -43,7 +43,7 @@ public final class GetIpToSgtMappingGroupResult {
 
     private GetIpToSgtMappingGroupResult() {}
     /**
-     * @return Mandatory unless `deploy_type` is `ALL`
+     * @return Mandatory unless `deployType` is `ALL`
      * 
      */
     public String deployTo() {

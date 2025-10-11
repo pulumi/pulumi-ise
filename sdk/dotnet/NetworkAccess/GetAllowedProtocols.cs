@@ -190,11 +190,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         public readonly bool EapFastAcceptClientCert;
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         public readonly bool EapFastAllowMachineAuthentication;
         /// <summary>
@@ -202,11 +202,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool EapFastEapGtc;
         /// <summary>
-        /// Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// Allow EAP GTC password change. Is required only if `EapFastEapGtc` is `True`.
         /// </summary>
         public readonly bool EapFastEapGtcPwdChange;
         /// <summary>
-        /// EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// EAP GTC password change retries. Is required only if `EapFastEapGtc` is `True`.
         /// </summary>
         public readonly int EapFastEapGtcPwdChangeRetries;
         /// <summary>
@@ -214,11 +214,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool EapFastEapMsChapV2;
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapFastEapMsChapV2` is `True`.
         /// </summary>
         public readonly bool EapFastEapMsChapV2PwdChange;
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapFastEapMsChapV2` is `True`.
         /// </summary>
         public readonly int EapFastEapMsChapV2PwdChangeRetries;
         /// <summary>
@@ -226,7 +226,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool EapFastEapTls;
         /// <summary>
-        /// Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certificates. Is required only if `EapFastEapTls` is `True`.
         /// </summary>
         public readonly bool EapFastEapTlsAuthOfExpiredCerts;
         /// <summary>
@@ -234,55 +234,55 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool EapFastEnableEapChaining;
         /// <summary>
-        /// Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow anonymous provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly bool EapFastPacsAllowAnonymousProvisioning;
         /// <summary>
-        /// Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow authenticated provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly bool EapFastPacsAllowAuthenticatedProvisioning;
         /// <summary>
-        /// Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Accept client certification for provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         public readonly bool EapFastPacsAllowClientCert;
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly bool EapFastPacsAllowMachineAuthentication;
         /// <summary>
-        /// Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         /// </summary>
         public readonly int EapFastPacsAuthorizationPacTtl;
         /// <summary>
-        /// Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL unit. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         /// </summary>
         public readonly string EapFastPacsAuthorizationPacTtlUnit;
         /// <summary>
-        /// Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         /// </summary>
         public readonly int EapFastPacsMachinePacTtl;
         /// <summary>
-        /// Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL unit. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         /// </summary>
         public readonly string EapFastPacsMachinePacTtlUnit;
         /// <summary>
-        /// Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Server returns access accept after authenticated provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         public readonly bool EapFastPacsServerReturns;
         /// <summary>
-        /// Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Stateless session resume. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly bool EapFastPacsStatelessSessionResume;
         /// <summary>
-        /// PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly int EapFastPacsTunnelPacTtl;
         /// <summary>
-        /// PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live unit. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly string EapFastPacsTunnelPacTtlUnit;
         /// <summary>
-        /// Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Use proactive pac update percentage. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         public readonly int EapFastPacsUseProactivePacUpdatePercentage;
         /// <summary>
@@ -302,15 +302,15 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool EapTlsLBit;
         /// <summary>
-        /// Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket percentage. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         /// </summary>
         public readonly int EapTlsSessionTicketPercentage;
         /// <summary>
-        /// Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         /// </summary>
         public readonly int EapTlsSessionTicketTtl;
         /// <summary>
-        /// Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL unit. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         /// </summary>
         public readonly string EapTlsSessionTicketTtlUnit;
         /// <summary>
@@ -326,11 +326,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool EapTtlsEapMsChapV2;
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapTtlsEapMsChapV2` is `True`.
         /// </summary>
         public readonly bool EapTtlsEapMsChapV2PwdChange;
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapTtlsEapMsChapV2` is `True`.
         /// </summary>
         public readonly int EapTtlsEapMsChapV2PwdChangeRetries;
         /// <summary>
@@ -358,11 +358,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool PeapAllowPeapEapGtc;
         /// <summary>
-        /// Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// Allow PEAP EAP GTC password change. Is required only if `AllowPeapEapGtc` is `True`.
         /// </summary>
         public readonly bool PeapAllowPeapEapGtcPwdChange;
         /// <summary>
-        /// PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// PEAP EAP GTC password change retries. Is required only if `AllowPeapEapGtc` is `True`.
         /// </summary>
         public readonly int PeapAllowPeapEapGtcPwdChangeRetries;
         /// <summary>
@@ -370,11 +370,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool PeapAllowPeapEapMsChapV2;
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `AllowPeapEapMsChapV2` is `True`.
         /// </summary>
         public readonly bool PeapAllowPeapEapMsChapV2PwdChange;
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `AllowPeapEapMsChapV2` is `True`.
         /// </summary>
         public readonly int PeapAllowPeapEapMsChapV2PwdChangeRetries;
         /// <summary>
@@ -382,7 +382,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool PeapAllowPeapEapTls;
         /// <summary>
-        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `PeapAllowPeapEapTls` is `True`.
         /// </summary>
         public readonly bool PeapAllowPeapEapTlsAuthOfExpiredCerts;
         /// <summary>
@@ -422,11 +422,11 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool TeapEapMsChapV2;
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `TeapEapMsChapV2` is `True`.
         /// </summary>
         public readonly bool TeapEapMsChapV2PwdChange;
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `TeapEapMsChapV2` is `True`.
         /// </summary>
         public readonly int TeapEapMsChapV2PwdChangeRetries;
         /// <summary>
@@ -434,7 +434,7 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool TeapEapTls;
         /// <summary>
-        /// Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certs. Is required only if `TeapEapTls` is `True`.
         /// </summary>
         public readonly bool TeapEapTlsAuthOfExpiredCerts;
         /// <summary>

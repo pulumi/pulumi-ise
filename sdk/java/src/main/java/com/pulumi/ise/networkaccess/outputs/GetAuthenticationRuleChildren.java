@@ -24,7 +24,7 @@ public final class GetAuthenticationRuleChildren {
      */
     private String attributeValue;
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private List<GetAuthenticationRuleChildrenChildren> childrens;
@@ -75,7 +75,7 @@ public final class GetAuthenticationRuleChildren {
         return this.attributeValue;
     }
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<GetAuthenticationRuleChildrenChildren> childrens() {

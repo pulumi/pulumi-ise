@@ -9,6 +9,8 @@ import * as utilities from "../utilities";
 /**
  * This resource can manage an authorization profiles policy element.
  *
+ * ## Example Usage
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -145,7 +145,7 @@ namespace Pulumi.Ise.DeviceAdmin
     public sealed class GetAuthorizationExceptionRuleResult
     {
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAuthorizationExceptionRuleChildrenResult> Childrens;
         /// <summary>

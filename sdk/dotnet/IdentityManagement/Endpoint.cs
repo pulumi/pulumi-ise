@@ -189,7 +189,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// staticGroupAssignmentDefined
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("staticGroupAssignmentDefined")]
         public Output<bool> StaticGroupAssignmentDefined { get; private set; } = null!;
@@ -202,7 +202,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Static Profile Assignment Defined
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("staticProfileAssignmentDefined")]
         public Output<bool> StaticProfileAssignmentDefined { get; private set; } = null!;
@@ -399,7 +399,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// staticGroupAssignmentDefined
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("staticGroupAssignmentDefined")]
         public Input<bool>? StaticGroupAssignmentDefined { get; set; }
@@ -412,7 +412,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Static Profile Assignment Defined
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("staticProfileAssignmentDefined")]
         public Input<bool>? StaticProfileAssignmentDefined { get; set; }
@@ -571,7 +571,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// staticGroupAssignmentDefined
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("staticGroupAssignmentDefined")]
         public Input<bool>? StaticGroupAssignmentDefined { get; set; }
@@ -584,7 +584,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Static Profile Assignment Defined
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("staticProfileAssignmentDefined")]
         public Input<bool>? StaticProfileAssignmentDefined { get; set; }

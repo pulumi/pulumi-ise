@@ -17,7 +17,7 @@ public final class GetCertificateAuthenticationProfileResult {
      */
     private Boolean allowedAsUserName;
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
      * 
      */
     private String certificateAttributeName;
@@ -61,7 +61,7 @@ public final class GetCertificateAuthenticationProfileResult {
         return this.allowedAsUserName;
     }
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
      * 
      */
     public String certificateAttributeName() {

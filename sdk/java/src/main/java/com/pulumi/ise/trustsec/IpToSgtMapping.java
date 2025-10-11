@@ -65,14 +65,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:trustsec/ipToSgtMapping:IpToSgtMapping")
 public class IpToSgtMapping extends com.pulumi.resources.CustomResource {
     /**
-     * Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      * 
      */
     @Export(name="deployTo", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> deployTo;
 
     /**
-     * @return Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * @return Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      * 
      */
     public Output<Optional<String>> deployTo() {
@@ -109,42 +109,42 @@ public class IpToSgtMapping extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Mandatory if `host_name` is empty
+     * Mandatory if `hostName` is empty
      * 
      */
     @Export(name="hostIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> hostIp;
 
     /**
-     * @return Mandatory if `host_name` is empty
+     * @return Mandatory if `hostName` is empty
      * 
      */
     public Output<Optional<String>> hostIp() {
         return Codegen.optional(this.hostIp);
     }
     /**
-     * Mandatory if `host_ip` is empty
+     * Mandatory if `hostIp` is empty
      * 
      */
     @Export(name="hostName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> hostName;
 
     /**
-     * @return Mandatory if `host_ip` is empty
+     * @return Mandatory if `hostIp` is empty
      * 
      */
     public Output<Optional<String>> hostName() {
         return Codegen.optional(this.hostName);
     }
     /**
-     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      * 
      */
     @Export(name="mappingGroup", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mappingGroup;
 
     /**
-     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      * 
      */
     public Output<Optional<String>> mappingGroup() {
@@ -165,14 +165,14 @@ public class IpToSgtMapping extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      * 
      */
     @Export(name="sgt", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> sgt;
 
     /**
-     * @return Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * @return Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      * 
      */
     public Output<Optional<String>> sgt() {

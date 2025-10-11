@@ -28,7 +28,7 @@ namespace Pulumi.Ise.NetworkAccess.Inputs
         private InputList<Inputs.ConditionChildrenChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.ConditionChildrenChildrenGetArgs> Childrens
         {
@@ -74,14 +74,14 @@ namespace Pulumi.Ise.NetworkAccess.Inputs
         public Input<bool>? IsNegate { get; set; }
 
         /// <summary>
-        /// Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+        /// Condition name. Required if `ConditionType` is `ConditionReference`, if `ConditionType` is `ConditionAttributes` then this attribute is not used.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("operator")]
         public Input<string>? Operator { get; set; }

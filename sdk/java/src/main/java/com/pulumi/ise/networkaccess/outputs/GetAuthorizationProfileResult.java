@@ -165,12 +165,12 @@ public final class GetAuthorizationProfileResult {
      */
     private String webRedirectionAcl;
     /**
-     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+     * @return This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      * 
      */
     private Boolean webRedirectionDisplayCertificatesRenewalMessages;
     /**
-     * @return A portal that exist in the DB and fits the `web_redirection_type`
+     * @return A portal that exist in the DB and fits the `webRedirectionType`
      * 
      */
     private String webRedirectionPortalName;
@@ -180,7 +180,7 @@ public final class GetAuthorizationProfileResult {
      */
     private String webRedirectionStaticIpHostNameFqdn;
     /**
-     * @return This type must fit the `web_redirection_portal_name`
+     * @return This type must fit the `webRedirectionPortalName`
      * 
      */
     private String webRedirectionType;
@@ -397,14 +397,14 @@ public final class GetAuthorizationProfileResult {
         return this.webRedirectionAcl;
     }
     /**
-     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+     * @return This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      * 
      */
     public Boolean webRedirectionDisplayCertificatesRenewalMessages() {
         return this.webRedirectionDisplayCertificatesRenewalMessages;
     }
     /**
-     * @return A portal that exist in the DB and fits the `web_redirection_type`
+     * @return A portal that exist in the DB and fits the `webRedirectionType`
      * 
      */
     public String webRedirectionPortalName() {
@@ -418,7 +418,7 @@ public final class GetAuthorizationProfileResult {
         return this.webRedirectionStaticIpHostNameFqdn;
     }
     /**
-     * @return This type must fit the `web_redirection_portal_name`
+     * @return This type must fit the `webRedirectionPortalName`
      * 
      */
     public String webRedirectionType() {

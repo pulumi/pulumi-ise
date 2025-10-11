@@ -60,7 +60,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Requires the user to change the password
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("changePassword")]
         public Output<bool> ChangePassword { get; private set; } = null!;
@@ -133,8 +133,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string> PasswordIdStore { get; private set; } = null!;
 
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
-        ///   - Default value: `false`
+        /// Set to `True` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        ///   - Default value: `False`
         /// </summary>
         [Output("passwordNeverExpires")]
         public Output<bool> PasswordNeverExpires { get; private set; } = null!;
@@ -193,7 +193,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Requires the user to change the password
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("changePassword")]
         public Input<bool>? ChangePassword { get; set; }
@@ -266,8 +266,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? PasswordIdStore { get; set; }
 
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
-        ///   - Default value: `false`
+        /// Set to `True` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        ///   - Default value: `False`
         /// </summary>
         [Input("passwordNeverExpires")]
         public Input<bool>? PasswordNeverExpires { get; set; }
@@ -288,7 +288,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Requires the user to change the password
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("changePassword")]
         public Input<bool>? ChangePassword { get; set; }
@@ -361,8 +361,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? PasswordIdStore { get; set; }
 
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
-        ///   - Default value: `false`
+        /// Set to `True` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        ///   - Default value: `False`
         /// </summary>
         [Input("passwordNeverExpires")]
         public Input<bool>? PasswordNeverExpires { get; set; }

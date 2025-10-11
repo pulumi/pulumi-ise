@@ -22,15 +22,15 @@ namespace Pulumi.Ise.NetworkAccess.Outputs
         /// </summary>
         public readonly string? AttributeLeftName;
         /// <summary>
-        /// Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        /// Dictionary name, only required when `AttributeRightValueType` is `AdvancedDictionaryAttribute`
         /// </summary>
         public readonly string? AttributeRightDictionaryName;
         /// <summary>
-        /// Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+        /// Attribute name, only required when `AttributeRightValueType` is `AdvancedDictionaryAttribute`
         /// </summary>
         public readonly string? AttributeRightName;
         /// <summary>
-        /// Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+        /// Attribute value, only required when `AttributeRightValueType` is `AttributeValue`
         /// </summary>
         public readonly string? AttributeRightValue;
         /// <summary>

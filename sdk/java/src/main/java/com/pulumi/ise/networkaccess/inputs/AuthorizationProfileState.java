@@ -481,14 +481,14 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
     }
 
     /**
-     * This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+     * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      * 
      */
     @Import(name="webRedirectionDisplayCertificatesRenewalMessages")
     private @Nullable Output<Boolean> webRedirectionDisplayCertificatesRenewalMessages;
 
     /**
-     * @return This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+     * @return This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      * 
      */
     public Optional<Output<Boolean>> webRedirectionDisplayCertificatesRenewalMessages() {
@@ -496,14 +496,14 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
     }
 
     /**
-     * A portal that exist in the DB and fits the `web_redirection_type`
+     * A portal that exist in the DB and fits the `webRedirectionType`
      * 
      */
     @Import(name="webRedirectionPortalName")
     private @Nullable Output<String> webRedirectionPortalName;
 
     /**
-     * @return A portal that exist in the DB and fits the `web_redirection_type`
+     * @return A portal that exist in the DB and fits the `webRedirectionType`
      * 
      */
     public Optional<Output<String>> webRedirectionPortalName() {
@@ -526,7 +526,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
     }
 
     /**
-     * This type must fit the `web_redirection_portal_name`
+     * This type must fit the `webRedirectionPortalName`
      *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
@@ -534,7 +534,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
     private @Nullable Output<String> webRedirectionType;
 
     /**
-     * @return This type must fit the `web_redirection_portal_name`
+     * @return This type must fit the `webRedirectionPortalName`
      *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      * 
      */
@@ -1244,7 +1244,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
          * 
          * @return builder
          * 
@@ -1255,7 +1255,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
+         * @param webRedirectionDisplayCertificatesRenewalMessages This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
          * 
          * @return builder
          * 
@@ -1265,7 +1265,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param webRedirectionPortalName A portal that exist in the DB and fits the `web_redirection_type`
+         * @param webRedirectionPortalName A portal that exist in the DB and fits the `webRedirectionType`
          * 
          * @return builder
          * 
@@ -1276,7 +1276,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param webRedirectionPortalName A portal that exist in the DB and fits the `web_redirection_type`
+         * @param webRedirectionPortalName A portal that exist in the DB and fits the `webRedirectionType`
          * 
          * @return builder
          * 
@@ -1307,7 +1307,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param webRedirectionType This type must fit the `web_redirection_portal_name`
+         * @param webRedirectionType This type must fit the `webRedirectionPortalName`
          *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
          * 
          * @return builder
@@ -1319,7 +1319,7 @@ public final class AuthorizationProfileState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param webRedirectionType This type must fit the `web_redirection_portal_name`
+         * @param webRedirectionType This type must fit the `webRedirectionPortalName`
          *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
          * 
          * @return builder

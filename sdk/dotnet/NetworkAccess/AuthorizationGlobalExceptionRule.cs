@@ -55,7 +55,7 @@ namespace Pulumi.Ise.NetworkAccess
     public partial class AuthorizationGlobalExceptionRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.AuthorizationGlobalExceptionRuleChildren>> Childrens { get; private set; } = null!;
@@ -98,7 +98,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Output("conditionOperator")]
         public Output<string?> ConditionOperator { get; private set; } = null!;
@@ -136,7 +136,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// The state that the rule is in. A disabled rule cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Output("state")]
         public Output<string?> State { get; private set; } = null!;
@@ -191,7 +191,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenArgs> Childrens
         {
@@ -237,7 +237,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
@@ -281,7 +281,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// The state that the rule is in. A disabled rule cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }
@@ -298,7 +298,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenGetArgs> Childrens
         {
@@ -344,7 +344,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
@@ -388,7 +388,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// The state that the rule is in. A disabled rule cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }

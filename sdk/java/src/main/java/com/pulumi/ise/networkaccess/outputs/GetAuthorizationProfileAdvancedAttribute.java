@@ -21,17 +21,17 @@ public final class GetAuthorizationProfileAdvancedAttribute {
      */
     private String attributeLeftName;
     /**
-     * @return Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     private String attributeRightDictionaryName;
     /**
-     * @return Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     private String attributeRightName;
     /**
-     * @return Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+     * @return Attribute value, only required when `attributeRightValueType` is `AttributeValue`
      * 
      */
     private String attributeRightValue;
@@ -57,21 +57,21 @@ public final class GetAuthorizationProfileAdvancedAttribute {
         return this.attributeLeftName;
     }
     /**
-     * @return Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     public String attributeRightDictionaryName() {
         return this.attributeRightDictionaryName;
     }
     /**
-     * @return Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     public String attributeRightName() {
         return this.attributeRightName;
     }
     /**
-     * @return Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+     * @return Attribute value, only required when `attributeRightValueType` is `AttributeValue`
      * 
      */
     public String attributeRightValue() {

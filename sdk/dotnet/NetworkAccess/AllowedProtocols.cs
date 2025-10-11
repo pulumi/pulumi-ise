@@ -206,13 +206,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Output("eapFastAcceptClientCert")]
         public Output<bool?> EapFastAcceptClientCert { get; private set; } = null!;
 
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Output("eapFastAllowMachineAuthentication")]
         public Output<bool?> EapFastAllowMachineAuthentication { get; private set; } = null!;
@@ -224,13 +224,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> EapFastEapGtc { get; private set; } = null!;
 
         /// <summary>
-        /// Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// Allow EAP GTC password change. Is required only if `EapFastEapGtc` is `True`.
         /// </summary>
         [Output("eapFastEapGtcPwdChange")]
         public Output<bool?> EapFastEapGtcPwdChange { get; private set; } = null!;
 
         /// <summary>
-        /// EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// EAP GTC password change retries. Is required only if `EapFastEapGtc` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Output("eapFastEapGtcPwdChangeRetries")]
@@ -243,13 +243,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> EapFastEapMsChapV2 { get; private set; } = null!;
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapFastEapMsChapV2` is `True`.
         /// </summary>
         [Output("eapFastEapMsChapV2PwdChange")]
         public Output<bool?> EapFastEapMsChapV2PwdChange { get; private set; } = null!;
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapFastEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Output("eapFastEapMsChapV2PwdChangeRetries")]
@@ -262,7 +262,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> EapFastEapTls { get; private set; } = null!;
 
         /// <summary>
-        /// Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certificates. Is required only if `EapFastEapTls` is `True`.
         /// </summary>
         [Output("eapFastEapTlsAuthOfExpiredCerts")]
         public Output<bool?> EapFastEapTlsAuthOfExpiredCerts { get; private set; } = null!;
@@ -274,82 +274,82 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> EapFastEnableEapChaining { get; private set; } = null!;
 
         /// <summary>
-        /// Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow anonymous provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Output("eapFastPacsAllowAnonymousProvisioning")]
         public Output<bool?> EapFastPacsAllowAnonymousProvisioning { get; private set; } = null!;
 
         /// <summary>
-        /// Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow authenticated provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Output("eapFastPacsAllowAuthenticatedProvisioning")]
         public Output<bool?> EapFastPacsAllowAuthenticatedProvisioning { get; private set; } = null!;
 
         /// <summary>
-        /// Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Accept client certification for provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         [Output("eapFastPacsAllowClientCert")]
         public Output<bool?> EapFastPacsAllowClientCert { get; private set; } = null!;
 
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Output("eapFastPacsAllowMachineAuthentication")]
         public Output<bool?> EapFastPacsAllowMachineAuthentication { get; private set; } = null!;
 
         /// <summary>
-        /// Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         /// </summary>
         [Output("eapFastPacsAuthorizationPacTtl")]
         public Output<int?> EapFastPacsAuthorizationPacTtl { get; private set; } = null!;
 
         /// <summary>
-        /// Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL unit. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Output("eapFastPacsAuthorizationPacTtlUnit")]
         public Output<string?> EapFastPacsAuthorizationPacTtlUnit { get; private set; } = null!;
 
         /// <summary>
-        /// Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         /// </summary>
         [Output("eapFastPacsMachinePacTtl")]
         public Output<int?> EapFastPacsMachinePacTtl { get; private set; } = null!;
 
         /// <summary>
-        /// Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL unit. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Output("eapFastPacsMachinePacTtlUnit")]
         public Output<string?> EapFastPacsMachinePacTtlUnit { get; private set; } = null!;
 
         /// <summary>
-        /// Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Server returns access accept after authenticated provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         [Output("eapFastPacsServerReturns")]
         public Output<bool?> EapFastPacsServerReturns { get; private set; } = null!;
 
         /// <summary>
-        /// Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Stateless session resume. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Output("eapFastPacsStatelessSessionResume")]
         public Output<bool?> EapFastPacsStatelessSessionResume { get; private set; } = null!;
 
         /// <summary>
-        /// PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Output("eapFastPacsTunnelPacTtl")]
         public Output<int?> EapFastPacsTunnelPacTtl { get; private set; } = null!;
 
         /// <summary>
-        /// PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live unit. Is required only if `EapFastUsePacs` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Output("eapFastPacsTunnelPacTtlUnit")]
         public Output<string?> EapFastPacsTunnelPacTtlUnit { get; private set; } = null!;
 
         /// <summary>
-        /// Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Use proactive pac update percentage. Is required only if `EapFastUsePacs` is `True`.
         ///   - Range: `1`-`100`
         /// </summary>
         [Output("eapFastPacsUseProactivePacUpdatePercentage")]
@@ -380,20 +380,20 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool> EapTlsLBit { get; private set; } = null!;
 
         /// <summary>
-        /// Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket percentage. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         ///   - Range: `1`-`100`
         /// </summary>
         [Output("eapTlsSessionTicketPercentage")]
         public Output<int?> EapTlsSessionTicketPercentage { get; private set; } = null!;
 
         /// <summary>
-        /// Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         /// </summary>
         [Output("eapTlsSessionTicketTtl")]
         public Output<int?> EapTlsSessionTicketTtl { get; private set; } = null!;
 
         /// <summary>
-        /// Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL unit. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Output("eapTlsSessionTicketTtlUnit")]
@@ -418,13 +418,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> EapTtlsEapMsChapV2 { get; private set; } = null!;
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapTtlsEapMsChapV2` is `True`.
         /// </summary>
         [Output("eapTtlsEapMsChapV2PwdChange")]
         public Output<bool?> EapTtlsEapMsChapV2PwdChange { get; private set; } = null!;
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapTtlsEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Output("eapTtlsEapMsChapV2PwdChangeRetries")]
@@ -461,13 +461,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> PeapAllowPeapEapGtc { get; private set; } = null!;
 
         /// <summary>
-        /// Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// Allow PEAP EAP GTC password change. Is required only if `AllowPeapEapGtc` is `True`.
         /// </summary>
         [Output("peapAllowPeapEapGtcPwdChange")]
         public Output<bool?> PeapAllowPeapEapGtcPwdChange { get; private set; } = null!;
 
         /// <summary>
-        /// PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// PEAP EAP GTC password change retries. Is required only if `AllowPeapEapGtc` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Output("peapAllowPeapEapGtcPwdChangeRetries")]
@@ -480,13 +480,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> PeapAllowPeapEapMsChapV2 { get; private set; } = null!;
 
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `AllowPeapEapMsChapV2` is `True`.
         /// </summary>
         [Output("peapAllowPeapEapMsChapV2PwdChange")]
         public Output<bool?> PeapAllowPeapEapMsChapV2PwdChange { get; private set; } = null!;
 
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `AllowPeapEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Output("peapAllowPeapEapMsChapV2PwdChangeRetries")]
@@ -499,7 +499,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> PeapAllowPeapEapTls { get; private set; } = null!;
 
         /// <summary>
-        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `PeapAllowPeapEapTls` is `True`.
         /// </summary>
         [Output("peapAllowPeapEapTlsAuthOfExpiredCerts")]
         public Output<bool?> PeapAllowPeapEapTlsAuthOfExpiredCerts { get; private set; } = null!;
@@ -560,13 +560,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> TeapEapMsChapV2 { get; private set; } = null!;
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `TeapEapMsChapV2` is `True`.
         /// </summary>
         [Output("teapEapMsChapV2PwdChange")]
         public Output<bool?> TeapEapMsChapV2PwdChange { get; private set; } = null!;
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `TeapEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Output("teapEapMsChapV2PwdChangeRetries")]
@@ -579,7 +579,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool?> TeapEapTls { get; private set; } = null!;
 
         /// <summary>
-        /// Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certs. Is required only if `TeapEapTls` is `True`.
         /// </summary>
         [Output("teapEapTlsAuthOfExpiredCerts")]
         public Output<bool?> TeapEapTlsAuthOfExpiredCerts { get; private set; } = null!;
@@ -727,13 +727,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Input("eapFastAcceptClientCert")]
         public Input<bool>? EapFastAcceptClientCert { get; set; }
 
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Input("eapFastAllowMachineAuthentication")]
         public Input<bool>? EapFastAllowMachineAuthentication { get; set; }
@@ -745,13 +745,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEapGtc { get; set; }
 
         /// <summary>
-        /// Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// Allow EAP GTC password change. Is required only if `EapFastEapGtc` is `True`.
         /// </summary>
         [Input("eapFastEapGtcPwdChange")]
         public Input<bool>? EapFastEapGtcPwdChange { get; set; }
 
         /// <summary>
-        /// EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// EAP GTC password change retries. Is required only if `EapFastEapGtc` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("eapFastEapGtcPwdChangeRetries")]
@@ -764,13 +764,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapFastEapMsChapV2` is `True`.
         /// </summary>
         [Input("eapFastEapMsChapV2PwdChange")]
         public Input<bool>? EapFastEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapFastEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("eapFastEapMsChapV2PwdChangeRetries")]
@@ -783,7 +783,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEapTls { get; set; }
 
         /// <summary>
-        /// Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certificates. Is required only if `EapFastEapTls` is `True`.
         /// </summary>
         [Input("eapFastEapTlsAuthOfExpiredCerts")]
         public Input<bool>? EapFastEapTlsAuthOfExpiredCerts { get; set; }
@@ -795,82 +795,82 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEnableEapChaining { get; set; }
 
         /// <summary>
-        /// Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow anonymous provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowAnonymousProvisioning")]
         public Input<bool>? EapFastPacsAllowAnonymousProvisioning { get; set; }
 
         /// <summary>
-        /// Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow authenticated provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowAuthenticatedProvisioning")]
         public Input<bool>? EapFastPacsAllowAuthenticatedProvisioning { get; set; }
 
         /// <summary>
-        /// Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Accept client certification for provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowClientCert")]
         public Input<bool>? EapFastPacsAllowClientCert { get; set; }
 
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowMachineAuthentication")]
         public Input<bool>? EapFastPacsAllowMachineAuthentication { get; set; }
 
         /// <summary>
-        /// Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         /// </summary>
         [Input("eapFastPacsAuthorizationPacTtl")]
         public Input<int>? EapFastPacsAuthorizationPacTtl { get; set; }
 
         /// <summary>
-        /// Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL unit. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapFastPacsAuthorizationPacTtlUnit")]
         public Input<string>? EapFastPacsAuthorizationPacTtlUnit { get; set; }
 
         /// <summary>
-        /// Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         /// </summary>
         [Input("eapFastPacsMachinePacTtl")]
         public Input<int>? EapFastPacsMachinePacTtl { get; set; }
 
         /// <summary>
-        /// Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL unit. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapFastPacsMachinePacTtlUnit")]
         public Input<string>? EapFastPacsMachinePacTtlUnit { get; set; }
 
         /// <summary>
-        /// Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Server returns access accept after authenticated provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         [Input("eapFastPacsServerReturns")]
         public Input<bool>? EapFastPacsServerReturns { get; set; }
 
         /// <summary>
-        /// Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Stateless session resume. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsStatelessSessionResume")]
         public Input<bool>? EapFastPacsStatelessSessionResume { get; set; }
 
         /// <summary>
-        /// PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsTunnelPacTtl")]
         public Input<int>? EapFastPacsTunnelPacTtl { get; set; }
 
         /// <summary>
-        /// PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live unit. Is required only if `EapFastUsePacs` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapFastPacsTunnelPacTtlUnit")]
         public Input<string>? EapFastPacsTunnelPacTtlUnit { get; set; }
 
         /// <summary>
-        /// Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Use proactive pac update percentage. Is required only if `EapFastUsePacs` is `True`.
         ///   - Range: `1`-`100`
         /// </summary>
         [Input("eapFastPacsUseProactivePacUpdatePercentage")]
@@ -901,20 +901,20 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool> EapTlsLBit { get; set; } = null!;
 
         /// <summary>
-        /// Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket percentage. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         ///   - Range: `1`-`100`
         /// </summary>
         [Input("eapTlsSessionTicketPercentage")]
         public Input<int>? EapTlsSessionTicketPercentage { get; set; }
 
         /// <summary>
-        /// Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         /// </summary>
         [Input("eapTlsSessionTicketTtl")]
         public Input<int>? EapTlsSessionTicketTtl { get; set; }
 
         /// <summary>
-        /// Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL unit. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapTlsSessionTicketTtlUnit")]
@@ -939,13 +939,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapTtlsEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapTtlsEapMsChapV2` is `True`.
         /// </summary>
         [Input("eapTtlsEapMsChapV2PwdChange")]
         public Input<bool>? EapTtlsEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapTtlsEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("eapTtlsEapMsChapV2PwdChangeRetries")]
@@ -982,13 +982,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? PeapAllowPeapEapGtc { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// Allow PEAP EAP GTC password change. Is required only if `AllowPeapEapGtc` is `True`.
         /// </summary>
         [Input("peapAllowPeapEapGtcPwdChange")]
         public Input<bool>? PeapAllowPeapEapGtcPwdChange { get; set; }
 
         /// <summary>
-        /// PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// PEAP EAP GTC password change retries. Is required only if `AllowPeapEapGtc` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("peapAllowPeapEapGtcPwdChangeRetries")]
@@ -1001,13 +1001,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? PeapAllowPeapEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `AllowPeapEapMsChapV2` is `True`.
         /// </summary>
         [Input("peapAllowPeapEapMsChapV2PwdChange")]
         public Input<bool>? PeapAllowPeapEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `AllowPeapEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("peapAllowPeapEapMsChapV2PwdChangeRetries")]
@@ -1020,7 +1020,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? PeapAllowPeapEapTls { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `PeapAllowPeapEapTls` is `True`.
         /// </summary>
         [Input("peapAllowPeapEapTlsAuthOfExpiredCerts")]
         public Input<bool>? PeapAllowPeapEapTlsAuthOfExpiredCerts { get; set; }
@@ -1081,13 +1081,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? TeapEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `TeapEapMsChapV2` is `True`.
         /// </summary>
         [Input("teapEapMsChapV2PwdChange")]
         public Input<bool>? TeapEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `TeapEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("teapEapMsChapV2PwdChangeRetries")]
@@ -1100,7 +1100,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? TeapEapTls { get; set; }
 
         /// <summary>
-        /// Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certs. Is required only if `TeapEapTls` is `True`.
         /// </summary>
         [Input("teapEapTlsAuthOfExpiredCerts")]
         public Input<bool>? TeapEapTlsAuthOfExpiredCerts { get; set; }
@@ -1210,13 +1210,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Input("eapFastAcceptClientCert")]
         public Input<bool>? EapFastAcceptClientCert { get; set; }
 
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Input("eapFastAllowMachineAuthentication")]
         public Input<bool>? EapFastAllowMachineAuthentication { get; set; }
@@ -1228,13 +1228,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEapGtc { get; set; }
 
         /// <summary>
-        /// Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// Allow EAP GTC password change. Is required only if `EapFastEapGtc` is `True`.
         /// </summary>
         [Input("eapFastEapGtcPwdChange")]
         public Input<bool>? EapFastEapGtcPwdChange { get; set; }
 
         /// <summary>
-        /// EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+        /// EAP GTC password change retries. Is required only if `EapFastEapGtc` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("eapFastEapGtcPwdChangeRetries")]
@@ -1247,13 +1247,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapFastEapMsChapV2` is `True`.
         /// </summary>
         [Input("eapFastEapMsChapV2PwdChange")]
         public Input<bool>? EapFastEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapFastEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("eapFastEapMsChapV2PwdChangeRetries")]
@@ -1266,7 +1266,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEapTls { get; set; }
 
         /// <summary>
-        /// Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certificates. Is required only if `EapFastEapTls` is `True`.
         /// </summary>
         [Input("eapFastEapTlsAuthOfExpiredCerts")]
         public Input<bool>? EapFastEapTlsAuthOfExpiredCerts { get; set; }
@@ -1278,82 +1278,82 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapFastEnableEapChaining { get; set; }
 
         /// <summary>
-        /// Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow anonymous provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowAnonymousProvisioning")]
         public Input<bool>? EapFastPacsAllowAnonymousProvisioning { get; set; }
 
         /// <summary>
-        /// Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow authenticated provisioning. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowAuthenticatedProvisioning")]
         public Input<bool>? EapFastPacsAllowAuthenticatedProvisioning { get; set; }
 
         /// <summary>
-        /// Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Accept client certification for provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowClientCert")]
         public Input<bool>? EapFastPacsAllowClientCert { get; set; }
 
         /// <summary>
-        /// Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Allow machine authentication. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsAllowMachineAuthentication")]
         public Input<bool>? EapFastPacsAllowMachineAuthentication { get; set; }
 
         /// <summary>
-        /// Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         /// </summary>
         [Input("eapFastPacsAuthorizationPacTtl")]
         public Input<int>? EapFastPacsAuthorizationPacTtl { get; set; }
 
         /// <summary>
-        /// Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+        /// Authorization PAC TTL unit. Is required only if `EapFastPacsStatelessSessionResume` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapFastPacsAuthorizationPacTtlUnit")]
         public Input<string>? EapFastPacsAuthorizationPacTtlUnit { get; set; }
 
         /// <summary>
-        /// Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         /// </summary>
         [Input("eapFastPacsMachinePacTtl")]
         public Input<int>? EapFastPacsMachinePacTtl { get; set; }
 
         /// <summary>
-        /// Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+        /// Machine PAC TTL unit. Is required only if `EapFastPacsAllowMachineAuthentication` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapFastPacsMachinePacTtlUnit")]
         public Input<string>? EapFastPacsMachinePacTtlUnit { get; set; }
 
         /// <summary>
-        /// Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+        /// Server returns access accept after authenticated provisioning. Is required only if `EapFastPacsAllowAuthenticatedProvisioning` is `True`.
         /// </summary>
         [Input("eapFastPacsServerReturns")]
         public Input<bool>? EapFastPacsServerReturns { get; set; }
 
         /// <summary>
-        /// Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Stateless session resume. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsStatelessSessionResume")]
         public Input<bool>? EapFastPacsStatelessSessionResume { get; set; }
 
         /// <summary>
-        /// PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live. Is required only if `EapFastUsePacs` is `True`.
         /// </summary>
         [Input("eapFastPacsTunnelPacTtl")]
         public Input<int>? EapFastPacsTunnelPacTtl { get; set; }
 
         /// <summary>
-        /// PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+        /// PACs tunnel PAC time to live unit. Is required only if `EapFastUsePacs` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapFastPacsTunnelPacTtlUnit")]
         public Input<string>? EapFastPacsTunnelPacTtlUnit { get; set; }
 
         /// <summary>
-        /// Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+        /// Use proactive pac update percentage. Is required only if `EapFastUsePacs` is `True`.
         ///   - Range: `1`-`100`
         /// </summary>
         [Input("eapFastPacsUseProactivePacUpdatePercentage")]
@@ -1384,20 +1384,20 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapTlsLBit { get; set; }
 
         /// <summary>
-        /// Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket percentage. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         ///   - Range: `1`-`100`
         /// </summary>
         [Input("eapTlsSessionTicketPercentage")]
         public Input<int>? EapTlsSessionTicketPercentage { get; set; }
 
         /// <summary>
-        /// Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         /// </summary>
         [Input("eapTlsSessionTicketTtl")]
         public Input<int>? EapTlsSessionTicketTtl { get; set; }
 
         /// <summary>
-        /// Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+        /// Session ticket TTL unit. Is required only if `EapTlsEnableStatelessSessionResume` is `True`.
         ///   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
         /// </summary>
         [Input("eapTlsSessionTicketTtlUnit")]
@@ -1422,13 +1422,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? EapTtlsEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `EapTtlsEapMsChapV2` is `True`.
         /// </summary>
         [Input("eapTtlsEapMsChapV2PwdChange")]
         public Input<bool>? EapTtlsEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `EapTtlsEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("eapTtlsEapMsChapV2PwdChangeRetries")]
@@ -1465,13 +1465,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? PeapAllowPeapEapGtc { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// Allow PEAP EAP GTC password change. Is required only if `AllowPeapEapGtc` is `True`.
         /// </summary>
         [Input("peapAllowPeapEapGtcPwdChange")]
         public Input<bool>? PeapAllowPeapEapGtcPwdChange { get; set; }
 
         /// <summary>
-        /// PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+        /// PEAP EAP GTC password change retries. Is required only if `AllowPeapEapGtc` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("peapAllowPeapEapGtcPwdChangeRetries")]
@@ -1484,13 +1484,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? PeapAllowPeapEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change. Is required only if `AllowPeapEapMsChapV2` is `True`.
         /// </summary>
         [Input("peapAllowPeapEapMsChapV2PwdChange")]
         public Input<bool>? PeapAllowPeapEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+        /// Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `AllowPeapEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("peapAllowPeapEapMsChapV2PwdChangeRetries")]
@@ -1503,7 +1503,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? PeapAllowPeapEapTls { get; set; }
 
         /// <summary>
-        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+        /// Allow PEAP EAP TLS authentication of expired certificates. Is required only if `PeapAllowPeapEapTls` is `True`.
         /// </summary>
         [Input("peapAllowPeapEapTlsAuthOfExpiredCerts")]
         public Input<bool>? PeapAllowPeapEapTlsAuthOfExpiredCerts { get; set; }
@@ -1564,13 +1564,13 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? TeapEapMsChapV2 { get; set; }
 
         /// <summary>
-        /// Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// Allow EAP MS CHAP v2 password change. Is required only if `TeapEapMsChapV2` is `True`.
         /// </summary>
         [Input("teapEapMsChapV2PwdChange")]
         public Input<bool>? TeapEapMsChapV2PwdChange { get; set; }
 
         /// <summary>
-        /// EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+        /// EAP MS CHAP v2 password change retries. Is required only if `TeapEapMsChapV2` is `True`.
         ///   - Range: `0`-`3`
         /// </summary>
         [Input("teapEapMsChapV2PwdChangeRetries")]
@@ -1583,7 +1583,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool>? TeapEapTls { get; set; }
 
         /// <summary>
-        /// Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+        /// Allow EAP TLS authentication of expired certs. Is required only if `TeapEapTls` is `True`.
         /// </summary>
         [Input("teapEapTlsAuthOfExpiredCerts")]
         public Input<bool>? TeapEapTlsAuthOfExpiredCerts { get; set; }

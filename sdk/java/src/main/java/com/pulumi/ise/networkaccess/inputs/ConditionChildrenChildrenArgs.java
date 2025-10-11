@@ -140,14 +140,14 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     public Optional<Output<String>> name() {
@@ -375,7 +375,7 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+         * @param name Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          * 
          * @return builder
          * 
@@ -386,7 +386,7 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+         * @param name Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          * 
          * @return builder
          * 

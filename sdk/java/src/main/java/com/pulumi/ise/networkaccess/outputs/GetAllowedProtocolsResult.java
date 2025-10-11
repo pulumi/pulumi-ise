@@ -88,12 +88,12 @@ public final class GetAllowedProtocolsResult {
      */
     private String description;
     /**
-     * @return Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+     * @return Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     private Boolean eapFastAcceptClientCert;
     /**
-     * @return Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+     * @return Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     private Boolean eapFastAllowMachineAuthentication;
@@ -103,12 +103,12 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean eapFastEapGtc;
     /**
-     * @return Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+     * @return Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      * 
      */
     private Boolean eapFastEapGtcPwdChange;
     /**
-     * @return EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+     * @return EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
      * 
      */
     private Integer eapFastEapGtcPwdChangeRetries;
@@ -118,12 +118,12 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean eapFastEapMsChapV2;
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      * 
      */
     private Boolean eapFastEapMsChapV2PwdChange;
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
      * 
      */
     private Integer eapFastEapMsChapV2PwdChangeRetries;
@@ -133,7 +133,7 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean eapFastEapTls;
     /**
-     * @return Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+     * @return Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      * 
      */
     private Boolean eapFastEapTlsAuthOfExpiredCerts;
@@ -143,67 +143,67 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean eapFastEnableEapChaining;
     /**
-     * @return Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private Boolean eapFastPacsAllowAnonymousProvisioning;
     /**
-     * @return Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private Boolean eapFastPacsAllowAuthenticatedProvisioning;
     /**
-     * @return Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     private Boolean eapFastPacsAllowClientCert;
     /**
-     * @return Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private Boolean eapFastPacsAllowMachineAuthentication;
     /**
-     * @return Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * @return Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      * 
      */
     private Integer eapFastPacsAuthorizationPacTtl;
     /**
-     * @return Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * @return Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      * 
      */
     private String eapFastPacsAuthorizationPacTtlUnit;
     /**
-     * @return Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * @return Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      * 
      */
     private Integer eapFastPacsMachinePacTtl;
     /**
-     * @return Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * @return Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      * 
      */
     private String eapFastPacsMachinePacTtlUnit;
     /**
-     * @return Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     private Boolean eapFastPacsServerReturns;
     /**
-     * @return Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private Boolean eapFastPacsStatelessSessionResume;
     /**
-     * @return PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private Integer eapFastPacsTunnelPacTtl;
     /**
-     * @return PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private String eapFastPacsTunnelPacTtlUnit;
     /**
-     * @return Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     private Integer eapFastPacsUseProactivePacUpdatePercentage;
@@ -228,17 +228,17 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean eapTlsLBit;
     /**
-     * @return Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     private Integer eapTlsSessionTicketPercentage;
     /**
-     * @return Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     private Integer eapTlsSessionTicketTtl;
     /**
-     * @return Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     private String eapTlsSessionTicketTtlUnit;
@@ -258,12 +258,12 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean eapTtlsEapMsChapV2;
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      * 
      */
     private Boolean eapTtlsEapMsChapV2PwdChange;
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
      * 
      */
     private Integer eapTtlsEapMsChapV2PwdChangeRetries;
@@ -298,12 +298,12 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean peapAllowPeapEapGtc;
     /**
-     * @return Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+     * @return Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      * 
      */
     private Boolean peapAllowPeapEapGtcPwdChange;
     /**
-     * @return PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+     * @return PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
      * 
      */
     private Integer peapAllowPeapEapGtcPwdChangeRetries;
@@ -313,12 +313,12 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean peapAllowPeapEapMsChapV2;
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * @return Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      * 
      */
     private Boolean peapAllowPeapEapMsChapV2PwdChange;
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
      * 
      */
     private Integer peapAllowPeapEapMsChapV2PwdChangeRetries;
@@ -328,7 +328,7 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean peapAllowPeapEapTls;
     /**
-     * @return Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+     * @return Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      * 
      */
     private Boolean peapAllowPeapEapTlsAuthOfExpiredCerts;
@@ -378,12 +378,12 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean teapEapMsChapV2;
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      * 
      */
     private Boolean teapEapMsChapV2PwdChange;
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
      * 
      */
     private Integer teapEapMsChapV2PwdChangeRetries;
@@ -393,7 +393,7 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean teapEapTls;
     /**
-     * @return Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+     * @return Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      * 
      */
     private Boolean teapEapTlsAuthOfExpiredCerts;
@@ -510,14 +510,14 @@ public final class GetAllowedProtocolsResult {
         return this.description;
     }
     /**
-     * @return Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
+     * @return Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     public Boolean eapFastAcceptClientCert() {
         return this.eapFastAcceptClientCert;
     }
     /**
-     * @return Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
+     * @return Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
     public Boolean eapFastAllowMachineAuthentication() {
@@ -531,14 +531,14 @@ public final class GetAllowedProtocolsResult {
         return this.eapFastEapGtc;
     }
     /**
-     * @return Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
+     * @return Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      * 
      */
     public Boolean eapFastEapGtcPwdChange() {
         return this.eapFastEapGtcPwdChange;
     }
     /**
-     * @return EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
+     * @return EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
      * 
      */
     public Integer eapFastEapGtcPwdChangeRetries() {
@@ -552,14 +552,14 @@ public final class GetAllowedProtocolsResult {
         return this.eapFastEapMsChapV2;
     }
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      * 
      */
     public Boolean eapFastEapMsChapV2PwdChange() {
         return this.eapFastEapMsChapV2PwdChange;
     }
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
      * 
      */
     public Integer eapFastEapMsChapV2PwdChangeRetries() {
@@ -573,7 +573,7 @@ public final class GetAllowedProtocolsResult {
         return this.eapFastEapTls;
     }
     /**
-     * @return Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
+     * @return Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      * 
      */
     public Boolean eapFastEapTlsAuthOfExpiredCerts() {
@@ -587,91 +587,91 @@ public final class GetAllowedProtocolsResult {
         return this.eapFastEnableEapChaining;
     }
     /**
-     * @return Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Boolean eapFastPacsAllowAnonymousProvisioning() {
         return this.eapFastPacsAllowAnonymousProvisioning;
     }
     /**
-     * @return Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Boolean eapFastPacsAllowAuthenticatedProvisioning() {
         return this.eapFastPacsAllowAuthenticatedProvisioning;
     }
     /**
-     * @return Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     public Boolean eapFastPacsAllowClientCert() {
         return this.eapFastPacsAllowClientCert;
     }
     /**
-     * @return Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Boolean eapFastPacsAllowMachineAuthentication() {
         return this.eapFastPacsAllowMachineAuthentication;
     }
     /**
-     * @return Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * @return Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      * 
      */
     public Integer eapFastPacsAuthorizationPacTtl() {
         return this.eapFastPacsAuthorizationPacTtl;
     }
     /**
-     * @return Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
+     * @return Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      * 
      */
     public String eapFastPacsAuthorizationPacTtlUnit() {
         return this.eapFastPacsAuthorizationPacTtlUnit;
     }
     /**
-     * @return Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * @return Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      * 
      */
     public Integer eapFastPacsMachinePacTtl() {
         return this.eapFastPacsMachinePacTtl;
     }
     /**
-     * @return Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
+     * @return Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      * 
      */
     public String eapFastPacsMachinePacTtlUnit() {
         return this.eapFastPacsMachinePacTtlUnit;
     }
     /**
-     * @return Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
+     * @return Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      * 
      */
     public Boolean eapFastPacsServerReturns() {
         return this.eapFastPacsServerReturns;
     }
     /**
-     * @return Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Boolean eapFastPacsStatelessSessionResume() {
         return this.eapFastPacsStatelessSessionResume;
     }
     /**
-     * @return PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Integer eapFastPacsTunnelPacTtl() {
         return this.eapFastPacsTunnelPacTtl;
     }
     /**
-     * @return PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public String eapFastPacsTunnelPacTtlUnit() {
         return this.eapFastPacsTunnelPacTtlUnit;
     }
     /**
-     * @return Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
+     * @return Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
      * 
      */
     public Integer eapFastPacsUseProactivePacUpdatePercentage() {
@@ -706,21 +706,21 @@ public final class GetAllowedProtocolsResult {
         return this.eapTlsLBit;
     }
     /**
-     * @return Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     public Integer eapTlsSessionTicketPercentage() {
         return this.eapTlsSessionTicketPercentage;
     }
     /**
-     * @return Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     public Integer eapTlsSessionTicketTtl() {
         return this.eapTlsSessionTicketTtl;
     }
     /**
-     * @return Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
+     * @return Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      * 
      */
     public String eapTlsSessionTicketTtlUnit() {
@@ -748,14 +748,14 @@ public final class GetAllowedProtocolsResult {
         return this.eapTtlsEapMsChapV2;
     }
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      * 
      */
     public Boolean eapTtlsEapMsChapV2PwdChange() {
         return this.eapTtlsEapMsChapV2PwdChange;
     }
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
      * 
      */
     public Integer eapTtlsEapMsChapV2PwdChangeRetries() {
@@ -804,14 +804,14 @@ public final class GetAllowedProtocolsResult {
         return this.peapAllowPeapEapGtc;
     }
     /**
-     * @return Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
+     * @return Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      * 
      */
     public Boolean peapAllowPeapEapGtcPwdChange() {
         return this.peapAllowPeapEapGtcPwdChange;
     }
     /**
-     * @return PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
+     * @return PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
      * 
      */
     public Integer peapAllowPeapEapGtcPwdChangeRetries() {
@@ -825,14 +825,14 @@ public final class GetAllowedProtocolsResult {
         return this.peapAllowPeapEapMsChapV2;
     }
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * @return Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      * 
      */
     public Boolean peapAllowPeapEapMsChapV2PwdChange() {
         return this.peapAllowPeapEapMsChapV2PwdChange;
     }
     /**
-     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
+     * @return Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
      * 
      */
     public Integer peapAllowPeapEapMsChapV2PwdChangeRetries() {
@@ -846,7 +846,7 @@ public final class GetAllowedProtocolsResult {
         return this.peapAllowPeapEapTls;
     }
     /**
-     * @return Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
+     * @return Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      * 
      */
     public Boolean peapAllowPeapEapTlsAuthOfExpiredCerts() {
@@ -916,14 +916,14 @@ public final class GetAllowedProtocolsResult {
         return this.teapEapMsChapV2;
     }
     /**
-     * @return Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * @return Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      * 
      */
     public Boolean teapEapMsChapV2PwdChange() {
         return this.teapEapMsChapV2PwdChange;
     }
     /**
-     * @return EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
+     * @return EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
      * 
      */
     public Integer teapEapMsChapV2PwdChangeRetries() {
@@ -937,7 +937,7 @@ public final class GetAllowedProtocolsResult {
         return this.teapEapTls;
     }
     /**
-     * @return Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
+     * @return Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      * 
      */
     public Boolean teapEapTlsAuthOfExpiredCerts() {

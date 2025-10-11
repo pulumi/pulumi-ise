@@ -61,7 +61,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> AttributeValue { get; private set; } = null!;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.ConditionChildren>> Childrens { get; private set; } = null!;
@@ -105,7 +105,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Output("operator")]
         public Output<string?> Operator { get; private set; } = null!;
@@ -172,7 +172,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.ConditionChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.ConditionChildrenArgs> Childrens
         {
@@ -219,7 +219,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("operator")]
         public Input<string>? Operator { get; set; }
@@ -248,7 +248,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.ConditionChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.ConditionChildrenGetArgs> Childrens
         {
@@ -295,7 +295,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("operator")]
         public Input<string>? Operator { get; set; }

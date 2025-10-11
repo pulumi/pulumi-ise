@@ -134,7 +134,7 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public readonly bool AllowedAsUserName;
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
         /// </summary>
         public readonly string CertificateAttributeName;
         /// <summary>

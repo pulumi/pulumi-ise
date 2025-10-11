@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthorizationRuleResult {
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private List<GetAuthorizationRuleChildren> childrens;
@@ -102,7 +102,7 @@ public final class GetAuthorizationRuleResult {
 
     private GetAuthorizationRuleResult() {}
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<GetAuthorizationRuleChildren> childrens() {

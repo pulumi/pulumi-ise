@@ -50,14 +50,14 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     @Import(name="childrens")
     private @Nullable Output<List<ConditionChildrenChildrenArgs>> childrens;
 
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public Optional<Output<List<ConditionChildrenChildrenArgs>>> childrens() {
@@ -157,14 +157,14 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     public Optional<Output<String>> name() {
@@ -265,7 +265,7 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -276,7 +276,7 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+         * @param name Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class ConditionChildrenArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+         * @param name Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
          * 
          * @return builder
          * 

@@ -78,14 +78,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule")
 public class AuthorizationExceptionRule extends com.pulumi.resources.CustomResource {
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     @Export(name="childrens", refs={List.class,AuthorizationExceptionRuleChildren.class}, tree="[0,1]")
     private Output</* @Nullable */ List<AuthorizationExceptionRuleChildren>> childrens;
 
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public Output<Optional<List<AuthorizationExceptionRuleChildren>>> childrens() {
