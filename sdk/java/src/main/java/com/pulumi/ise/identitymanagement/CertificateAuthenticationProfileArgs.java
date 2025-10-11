@@ -34,7 +34,7 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     }
 
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
      *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
      *   - Default value: `SUBJECT_COMMON_NAME`
      * 
@@ -43,7 +43,7 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     private @Nullable Output<String> certificateAttributeName;
 
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
      *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
      *   - Default value: `SUBJECT_COMMON_NAME`
      * 
@@ -191,7 +191,7 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
          *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
          *   - Default value: `SUBJECT_COMMON_NAME`
          * 
@@ -204,7 +204,7 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
          *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
          *   - Default value: `SUBJECT_COMMON_NAME`
          * 

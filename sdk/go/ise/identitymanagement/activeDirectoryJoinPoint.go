@@ -14,6 +14,8 @@ import (
 
 // This resource can manage an Active Directory Join Point.
 //
+// ## Example Usage
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

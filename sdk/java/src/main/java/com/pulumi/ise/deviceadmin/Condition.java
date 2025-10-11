@@ -100,14 +100,14 @@ public class Condition extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.attributeValue);
     }
     /**
-     * List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      * 
      */
     @Export(name="childrens", refs={List.class,ConditionChildren.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ConditionChildren>> childrens;
 
     /**
-     * @return List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
      * 
      */
     public Output<Optional<List<ConditionChildren>>> childrens() {

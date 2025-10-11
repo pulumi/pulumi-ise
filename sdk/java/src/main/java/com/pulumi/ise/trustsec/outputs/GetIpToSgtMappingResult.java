@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetIpToSgtMappingResult {
     /**
-     * @return Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * @return Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      * 
      */
     private String deployTo;
@@ -26,12 +26,12 @@ public final class GetIpToSgtMappingResult {
      */
     private String description;
     /**
-     * @return Mandatory if `host_name` is empty
+     * @return Mandatory if `hostName` is empty
      * 
      */
     private String hostIp;
     /**
-     * @return Mandatory if `host_ip` is empty
+     * @return Mandatory if `hostIp` is empty
      * 
      */
     private String hostName;
@@ -41,7 +41,7 @@ public final class GetIpToSgtMappingResult {
      */
     private String id;
     /**
-     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      * 
      */
     private String mappingGroup;
@@ -51,14 +51,14 @@ public final class GetIpToSgtMappingResult {
      */
     private String name;
     /**
-     * @return Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * @return Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      * 
      */
     private String sgt;
 
     private GetIpToSgtMappingResult() {}
     /**
-     * @return Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * @return Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      * 
      */
     public String deployTo() {
@@ -79,14 +79,14 @@ public final class GetIpToSgtMappingResult {
         return this.description;
     }
     /**
-     * @return Mandatory if `host_name` is empty
+     * @return Mandatory if `hostName` is empty
      * 
      */
     public String hostIp() {
         return this.hostIp;
     }
     /**
-     * @return Mandatory if `host_ip` is empty
+     * @return Mandatory if `hostIp` is empty
      * 
      */
     public String hostName() {
@@ -100,7 +100,7 @@ public final class GetIpToSgtMappingResult {
         return this.id;
     }
     /**
-     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      * 
      */
     public String mappingGroup() {
@@ -114,7 +114,7 @@ public final class GetIpToSgtMappingResult {
         return this.name;
     }
     /**
-     * @return Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * @return Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      * 
      */
     public String sgt() {
