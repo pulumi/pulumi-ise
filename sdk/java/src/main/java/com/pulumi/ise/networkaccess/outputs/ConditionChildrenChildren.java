@@ -55,7 +55,7 @@ public final class ConditionChildrenChildren {
      */
     private @Nullable Boolean isNegate;
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     private @Nullable String name;
@@ -125,7 +125,7 @@ public final class ConditionChildrenChildren {
         return Optional.ofNullable(this.isNegate);
     }
     /**
-     * @return Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+     * @return Condition name. Required if `conditionType` is `ConditionReference`, if `conditionType` is `ConditionAttributes` then this attribute is not used.
      * 
      */
     public Optional<String> name() {

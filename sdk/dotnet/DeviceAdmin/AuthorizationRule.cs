@@ -57,7 +57,7 @@ namespace Pulumi.Ise.DeviceAdmin
     public partial class AuthorizationRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.AuthorizationRuleChildren>> Childrens { get; private set; } = null!;
@@ -106,7 +106,7 @@ namespace Pulumi.Ise.DeviceAdmin
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Output("conditionOperator")]
         public Output<string?> ConditionOperator { get; private set; } = null!;
@@ -150,7 +150,7 @@ namespace Pulumi.Ise.DeviceAdmin
 
         /// <summary>
         /// The state that the rule is in. A disabled rule cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Output("state")]
         public Output<string?> State { get; private set; } = null!;
@@ -205,7 +205,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.AuthorizationRuleChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.AuthorizationRuleChildrenArgs> Childrens
         {
@@ -263,7 +263,7 @@ namespace Pulumi.Ise.DeviceAdmin
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
@@ -307,7 +307,7 @@ namespace Pulumi.Ise.DeviceAdmin
 
         /// <summary>
         /// The state that the rule is in. A disabled rule cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }
@@ -324,7 +324,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.AuthorizationRuleChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.AuthorizationRuleChildrenGetArgs> Childrens
         {
@@ -382,7 +382,7 @@ namespace Pulumi.Ise.DeviceAdmin
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
@@ -426,7 +426,7 @@ namespace Pulumi.Ise.DeviceAdmin
 
         /// <summary>
         /// The state that the rule is in. A disabled rule cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }

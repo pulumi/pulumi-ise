@@ -22,7 +22,7 @@ namespace Pulumi.Ise.NetworkAccess.Outputs
         /// </summary>
         public readonly string AttributeValue;
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAuthorizationRuleChildrenChildrenResult> Childrens;
         /// <summary>

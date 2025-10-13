@@ -46,14 +46,14 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
     }
 
     /**
-     * Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     @Import(name="attributeRightDictionaryName")
     private @Nullable Output<String> attributeRightDictionaryName;
 
     /**
-     * @return Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     public Optional<Output<String>> attributeRightDictionaryName() {
@@ -61,14 +61,14 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
     }
 
     /**
-     * Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     @Import(name="attributeRightName")
     private @Nullable Output<String> attributeRightName;
 
     /**
-     * @return Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+     * @return Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
      * 
      */
     public Optional<Output<String>> attributeRightName() {
@@ -76,14 +76,14 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
     }
 
     /**
-     * Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+     * Attribute value, only required when `attributeRightValueType` is `AttributeValue`
      * 
      */
     @Import(name="attributeRightValue")
     private @Nullable Output<String> attributeRightValue;
 
     /**
-     * @return Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+     * @return Attribute value, only required when `attributeRightValueType` is `AttributeValue`
      * 
      */
     public Optional<Output<String>> attributeRightValue() {
@@ -179,7 +179,7 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
         }
 
         /**
-         * @param attributeRightDictionaryName Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+         * @param attributeRightDictionaryName Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
         }
 
         /**
-         * @param attributeRightDictionaryName Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+         * @param attributeRightDictionaryName Dictionary name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
         }
 
         /**
-         * @param attributeRightName Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+         * @param attributeRightName Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
         }
 
         /**
-         * @param attributeRightName Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+         * @param attributeRightName Attribute name, only required when `attributeRightValueType` is `AdvancedDictionaryAttribute`
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
         }
 
         /**
-         * @param attributeRightValue Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+         * @param attributeRightValue Attribute value, only required when `attributeRightValueType` is `AttributeValue`
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class AuthorizationProfileAdvancedAttributeArgs extends com.pulumi.
         }
 
         /**
-         * @param attributeRightValue Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+         * @param attributeRightValue Attribute value, only required when `attributeRightValueType` is `AttributeValue`
          * 
          * @return builder
          * 
