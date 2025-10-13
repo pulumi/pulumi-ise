@@ -16,14 +16,14 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
     public static final IpToSgtMappingArgs Empty = new IpToSgtMappingArgs();
 
     /**
-     * Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      * 
      */
     @Import(name="deployTo")
     private @Nullable Output<String> deployTo;
 
     /**
-     * @return Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+     * @return Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      * 
      */
     public Optional<Output<String>> deployTo() {
@@ -63,14 +63,14 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Mandatory if `host_name` is empty
+     * Mandatory if `hostName` is empty
      * 
      */
     @Import(name="hostIp")
     private @Nullable Output<String> hostIp;
 
     /**
-     * @return Mandatory if `host_name` is empty
+     * @return Mandatory if `hostName` is empty
      * 
      */
     public Optional<Output<String>> hostIp() {
@@ -78,14 +78,14 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Mandatory if `host_ip` is empty
+     * Mandatory if `hostIp` is empty
      * 
      */
     @Import(name="hostName")
     private @Nullable Output<String> hostName;
 
     /**
-     * @return Mandatory if `host_ip` is empty
+     * @return Mandatory if `hostIp` is empty
      * 
      */
     public Optional<Output<String>> hostName() {
@@ -93,14 +93,14 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      * 
      */
     @Import(name="mappingGroup")
     private @Nullable Output<String> mappingGroup;
 
     /**
-     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+     * @return IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      * 
      */
     public Optional<Output<String>> mappingGroup() {
@@ -123,14 +123,14 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      * 
      */
     @Import(name="sgt")
     private @Nullable Output<String> sgt;
 
     /**
-     * @return Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+     * @return Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      * 
      */
     public Optional<Output<String>> sgt() {
@@ -169,7 +169,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param deployTo Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+         * @param deployTo Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param deployTo Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
+         * @param deployTo Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
          * 
          * @return builder
          * 
@@ -234,7 +234,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param hostIp Mandatory if `host_name` is empty
+         * @param hostIp Mandatory if `hostName` is empty
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param hostIp Mandatory if `host_name` is empty
+         * @param hostIp Mandatory if `hostName` is empty
          * 
          * @return builder
          * 
@@ -255,7 +255,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param hostName Mandatory if `host_ip` is empty
+         * @param hostName Mandatory if `hostIp` is empty
          * 
          * @return builder
          * 
@@ -266,7 +266,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param hostName Mandatory if `host_ip` is empty
+         * @param hostName Mandatory if `hostIp` is empty
          * 
          * @return builder
          * 
@@ -276,7 +276,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param mappingGroup IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+         * @param mappingGroup IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
          * 
          * @return builder
          * 
@@ -287,7 +287,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param mappingGroup IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
+         * @param mappingGroup IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
          * 
          * @return builder
          * 
@@ -318,7 +318,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sgt Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+         * @param sgt Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
          * 
          * @return builder
          * 
@@ -329,7 +329,7 @@ public final class IpToSgtMappingArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sgt Trustsec Security Group ID. Mandatory unless `mapping_group` is set
+         * @param sgt Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
          * 
          * @return builder
          * 

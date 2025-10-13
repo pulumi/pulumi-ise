@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthorizationGlobalExceptionRuleResult {
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     private List<GetAuthorizationGlobalExceptionRuleChildren> childrens;
@@ -92,7 +92,7 @@ public final class GetAuthorizationGlobalExceptionRuleResult {
 
     private GetAuthorizationGlobalExceptionRuleResult() {}
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public List<GetAuthorizationGlobalExceptionRuleChildren> childrens() {

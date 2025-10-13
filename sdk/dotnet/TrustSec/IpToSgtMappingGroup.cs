@@ -44,7 +44,7 @@ namespace Pulumi.Ise.TrustSec
     public partial class IpToSgtMappingGroup : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Mandatory unless `deploy_type` is `ALL`
+        /// Mandatory unless `DeployType` is `ALL`
         /// </summary>
         [Output("deployTo")]
         public Output<string?> DeployTo { get; private set; } = null!;
@@ -121,7 +121,7 @@ namespace Pulumi.Ise.TrustSec
     public sealed class IpToSgtMappingGroupArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Mandatory unless `deploy_type` is `ALL`
+        /// Mandatory unless `DeployType` is `ALL`
         /// </summary>
         [Input("deployTo")]
         public Input<string>? DeployTo { get; set; }
@@ -160,7 +160,7 @@ namespace Pulumi.Ise.TrustSec
     public sealed class IpToSgtMappingGroupState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Mandatory unless `deploy_type` is `ALL`
+        /// Mandatory unless `DeployType` is `ALL`
         /// </summary>
         [Input("deployTo")]
         public Input<string>? DeployTo { get; set; }

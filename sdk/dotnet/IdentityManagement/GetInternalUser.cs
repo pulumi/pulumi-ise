@@ -186,7 +186,7 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public readonly string PasswordIdStore;
         /// <summary>
-        /// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
+        /// Set to `True` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
         /// </summary>
         public readonly bool PasswordNeverExpires;
 

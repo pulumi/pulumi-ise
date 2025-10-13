@@ -20,14 +20,14 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
     public static final AuthorizationRuleState Empty = new AuthorizationRuleState();
 
     /**
-     * List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     @Import(name="childrens")
     private @Nullable Output<List<AuthorizationRuleChildrenArgs>> childrens;
 
     /**
-     * @return List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
      * 
      */
     public Optional<Output<List<AuthorizationRuleChildrenArgs>>> childrens() {
@@ -305,7 +305,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -316,7 +316,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 
@@ -326,7 +326,7 @@ public final class AuthorizationRuleState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param childrens List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
          * 
          * @return builder
          * 

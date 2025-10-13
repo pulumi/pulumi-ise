@@ -53,7 +53,7 @@ namespace Pulumi.Ise.NetworkAccess
     public partial class PolicySet : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.PolicySetChildren>> Childrens { get; private set; } = null!;
@@ -96,7 +96,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Output("conditionOperator")]
         public Output<string?> ConditionOperator { get; private set; } = null!;
@@ -146,7 +146,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// The state that the policy set is in. A disabled policy set cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Output("state")]
         public Output<string?> State { get; private set; } = null!;
@@ -201,7 +201,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.PolicySetChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.PolicySetChildrenArgs> Childrens
         {
@@ -247,7 +247,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
@@ -297,7 +297,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// The state that the policy set is in. A disabled policy set cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }
@@ -314,7 +314,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.PolicySetChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         /// </summary>
         public InputList<Inputs.PolicySetChildrenGetArgs> Childrens
         {
@@ -360,7 +360,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// Equality operator
-        ///   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+        ///   - Choices: `Contains`, `endsWith`, `Equals`, `greaterOrEquals`, `greaterThan`, `In`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `Matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
         /// </summary>
         [Input("conditionOperator")]
         public Input<string>? ConditionOperator { get; set; }
@@ -410,7 +410,7 @@ namespace Pulumi.Ise.NetworkAccess
 
         /// <summary>
         /// The state that the policy set is in. A disabled policy set cannot be matched.
-        ///   - Choices: `disabled`, `enabled`, `monitor`
+        ///   - Choices: `Disabled`, `Enabled`, `Monitor`
         /// </summary>
         [Input("state")]
         public Input<string>? State { get; set; }

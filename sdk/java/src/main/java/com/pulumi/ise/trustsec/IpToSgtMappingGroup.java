@@ -64,14 +64,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup")
 public class IpToSgtMappingGroup extends com.pulumi.resources.CustomResource {
     /**
-     * Mandatory unless `deploy_type` is `ALL`
+     * Mandatory unless `deployType` is `ALL`
      * 
      */
     @Export(name="deployTo", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> deployTo;
 
     /**
-     * @return Mandatory unless `deploy_type` is `ALL`
+     * @return Mandatory unless `deployType` is `ALL`
      * 
      */
     public Output<Optional<String>> deployTo() {
