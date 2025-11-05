@@ -23,6 +23,73 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.ise.networkaccess.AuthorizationProfile;
+ * import com.pulumi.ise.networkaccess.AuthorizationProfileArgs;
+ * import com.pulumi.ise.networkaccess.inputs.AuthorizationProfileAdvancedAttributeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AuthorizationProfile("example", AuthorizationProfileArgs.builder()
+ *             .name("AuthzProfile1")
+ *             .description("My Authorization Profile")
+ *             .vlanNameId("VLAN10")
+ *             .vlanTagId(0)
+ *             .webRedirectionType("CentralizedWebAuth")
+ *             .webRedirectionAcl("TEST_ACL")
+ *             .webRedirectionPortalName("Sponsored Guest Portal (default)")
+ *             .webRedirectionStaticIpHostNameFqdn("1.2.3.4")
+ *             .webRedirectionDisplayCertificatesRenewalMessages(true)
+ *             .agentlessPosture(false)
+ *             .accessType("ACCESS_ACCEPT")
+ *             .profileName("Cisco")
+ *             .airespaceAcl("ACL1")
+ *             .acl("ACL1")
+ *             .autoSmartPort("PROFILE1")
+ *             .interfaceTemplate("TEMP1")
+ *             .ipv6AclFilter("ACL1")
+ *             .avcProfile("PROF1")
+ *             .asaVpn("1")
+ *             .uniqueIdentifier("ID1234")
+ *             .trackMovement(false)
+ *             .serviceTemplate(false)
+ *             .easywiredSessionCandidate(false)
+ *             .voiceDomainPermission(false)
+ *             .neat(false)
+ *             .webAuth(false)
+ *             .macSecPolicy("MUST_SECURE")
+ *             .reauthenticationConnectivity("DEFAULT")
+ *             .reauthenticationTimer(1)
+ *             .advancedAttributes(AuthorizationProfileAdvancedAttributeArgs.builder()
+ *                 .attributeLeftDictionaryName("Cisco")
+ *                 .attributeLeftName("cisco-av-pair")
+ *                 .attributeRightValueType("AttributeValue")
+ *                 .attributeRightValue("set_nadprofile_vlan=true,vlan=TEST,tag=1")
+ *                 .build())
+ *             .airespaceIpv6Acl("ACL1")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

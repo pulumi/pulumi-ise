@@ -14,6 +14,61 @@ namespace Pulumi.Ise.NetworkAccess
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Ise = Pulumi.Ise;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Ise.NetworkAccess.AuthorizationProfile("example", new()
+    ///     {
+    ///         Name = "AuthzProfile1",
+    ///         Description = "My Authorization Profile",
+    ///         VlanNameId = "VLAN10",
+    ///         VlanTagId = 0,
+    ///         WebRedirectionType = "CentralizedWebAuth",
+    ///         WebRedirectionAcl = "TEST_ACL",
+    ///         WebRedirectionPortalName = "Sponsored Guest Portal (default)",
+    ///         WebRedirectionStaticIpHostNameFqdn = "1.2.3.4",
+    ///         WebRedirectionDisplayCertificatesRenewalMessages = true,
+    ///         AgentlessPosture = false,
+    ///         AccessType = "ACCESS_ACCEPT",
+    ///         ProfileName = "Cisco",
+    ///         AirespaceAcl = "ACL1",
+    ///         Acl = "ACL1",
+    ///         AutoSmartPort = "PROFILE1",
+    ///         InterfaceTemplate = "TEMP1",
+    ///         Ipv6AclFilter = "ACL1",
+    ///         AvcProfile = "PROF1",
+    ///         AsaVpn = "1",
+    ///         UniqueIdentifier = "ID1234",
+    ///         TrackMovement = false,
+    ///         ServiceTemplate = false,
+    ///         EasywiredSessionCandidate = false,
+    ///         VoiceDomainPermission = false,
+    ///         Neat = false,
+    ///         WebAuth = false,
+    ///         MacSecPolicy = "MUST_SECURE",
+    ///         ReauthenticationConnectivity = "DEFAULT",
+    ///         ReauthenticationTimer = 1,
+    ///         AdvancedAttributes = new[]
+    ///         {
+    ///             new Ise.NetworkAccess.Inputs.AuthorizationProfileAdvancedAttributeArgs
+    ///             {
+    ///                 AttributeLeftDictionaryName = "Cisco",
+    ///                 AttributeLeftName = "cisco-av-pair",
+    ///                 AttributeRightValueType = "AttributeValue",
+    ///                 AttributeRightValue = "set_nadprofile_vlan=true,vlan=TEST,tag=1",
+    ///             },
+    ///         },
+    ///         AirespaceIpv6Acl = "ACL1",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

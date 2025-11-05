@@ -1191,6 +1191,49 @@ class AuthorizationProfile(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_ise as ise
+
+        example = ise.networkaccess.AuthorizationProfile("example",
+            name="AuthzProfile1",
+            description="My Authorization Profile",
+            vlan_name_id="VLAN10",
+            vlan_tag_id=0,
+            web_redirection_type="CentralizedWebAuth",
+            web_redirection_acl="TEST_ACL",
+            web_redirection_portal_name="Sponsored Guest Portal (default)",
+            web_redirection_static_ip_host_name_fqdn="1.2.3.4",
+            web_redirection_display_certificates_renewal_messages=True,
+            agentless_posture=False,
+            access_type="ACCESS_ACCEPT",
+            profile_name="Cisco",
+            airespace_acl="ACL1",
+            acl="ACL1",
+            auto_smart_port="PROFILE1",
+            interface_template="TEMP1",
+            ipv6_acl_filter="ACL1",
+            avc_profile="PROF1",
+            asa_vpn="1",
+            unique_identifier="ID1234",
+            track_movement=False,
+            service_template=False,
+            easywired_session_candidate=False,
+            voice_domain_permission=False,
+            neat=False,
+            web_auth=False,
+            mac_sec_policy="MUST_SECURE",
+            reauthentication_connectivity="DEFAULT",
+            reauthentication_timer=1,
+            advanced_attributes=[{
+                "attribute_left_dictionary_name": "Cisco",
+                "attribute_left_name": "cisco-av-pair",
+                "attribute_right_value_type": "AttributeValue",
+                "attribute_right_value": "set_nadprofile_vlan=true,vlan=TEST,tag=1",
+            }],
+            airespace_ipv6_acl="ACL1")
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1259,6 +1302,49 @@ class AuthorizationProfile(pulumi.CustomResource):
         This resource can manage an authorization profiles policy element.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_ise as ise
+
+        example = ise.networkaccess.AuthorizationProfile("example",
+            name="AuthzProfile1",
+            description="My Authorization Profile",
+            vlan_name_id="VLAN10",
+            vlan_tag_id=0,
+            web_redirection_type="CentralizedWebAuth",
+            web_redirection_acl="TEST_ACL",
+            web_redirection_portal_name="Sponsored Guest Portal (default)",
+            web_redirection_static_ip_host_name_fqdn="1.2.3.4",
+            web_redirection_display_certificates_renewal_messages=True,
+            agentless_posture=False,
+            access_type="ACCESS_ACCEPT",
+            profile_name="Cisco",
+            airespace_acl="ACL1",
+            acl="ACL1",
+            auto_smart_port="PROFILE1",
+            interface_template="TEMP1",
+            ipv6_acl_filter="ACL1",
+            avc_profile="PROF1",
+            asa_vpn="1",
+            unique_identifier="ID1234",
+            track_movement=False,
+            service_template=False,
+            easywired_session_candidate=False,
+            voice_domain_permission=False,
+            neat=False,
+            web_auth=False,
+            mac_sec_policy="MUST_SECURE",
+            reauthentication_connectivity="DEFAULT",
+            reauthentication_timer=1,
+            advanced_attributes=[{
+                "attribute_left_dictionary_name": "Cisco",
+                "attribute_left_name": "cisco-av-pair",
+                "attribute_right_value_type": "AttributeValue",
+                "attribute_right_value": "set_nadprofile_vlan=true,vlan=TEST,tag=1",
+            }],
+            airespace_ipv6_acl="ACL1")
+        ```
 
         ## Import
 

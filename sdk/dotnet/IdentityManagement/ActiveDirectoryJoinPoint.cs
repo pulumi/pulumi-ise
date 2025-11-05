@@ -14,6 +14,79 @@ namespace Pulumi.Ise.IdentityManagement
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Ise = Pulumi.Ise;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Ise.IdentityManagement.ActiveDirectoryJoinPoint("example", new()
+    ///     {
+    ///         Name = "cisco.local",
+    ///         Description = "My AD join point",
+    ///         Domain = "cisco.local",
+    ///         AdScopesNames = "Default_Scope",
+    ///         EnableDomainAllowedList = true,
+    ///         Groups = new[]
+    ///         {
+    ///             new Ise.IdentityManagement.Inputs.ActiveDirectoryJoinPointGroupArgs
+    ///             {
+    ///                 Name = "cisco.local/operators",
+    ///                 Sid = "S-1-5-32-548",
+    ///                 Type = "GLOBAL",
+    ///             },
+    ///         },
+    ///         Attributes = new[]
+    ///         {
+    ///             new Ise.IdentityManagement.Inputs.ActiveDirectoryJoinPointAttributeArgs
+    ///             {
+    ///                 Name = "Attribute_1",
+    ///                 Type = "STRING",
+    ///                 InternalName = "internal_name",
+    ///                 DefaultValue = "default_string",
+    ///             },
+    ///         },
+    ///         RewriteRules = new[]
+    ///         {
+    ///             new Ise.IdentityManagement.Inputs.ActiveDirectoryJoinPointRewriteRuleArgs
+    ///             {
+    ///                 RowId = "0",
+    ///                 RewriteMatch = "rewrite_match",
+    ///                 RewriteResult = "rewrite_result",
+    ///             },
+    ///         },
+    ///         EnableRewrites = false,
+    ///         EnablePassChange = true,
+    ///         EnableMachineAuth = true,
+    ///         EnableMachineAccess = true,
+    ///         EnableDialinPermissionCheck = false,
+    ///         PlaintextAuth = false,
+    ///         AgingTime = 5,
+    ///         EnableCallbackForDialinClient = false,
+    ///         IdentityNotInAdBehaviour = "SEARCH_JOINED_FOREST",
+    ///         UnreachableDomainsBehaviour = "PROCEED",
+    ///         Schema = "ACTIVE_DIRECTORY",
+    ///         FirstName = "givenName",
+    ///         Department = "department",
+    ///         LastName = "sn",
+    ///         OrganizationalUnit = "company",
+    ///         JobTitle = "title",
+    ///         Locality = "l",
+    ///         Email = "mail",
+    ///         StateOrProvince = "st",
+    ///         Telephone = "telephoneNumber",
+    ///         Country = "co",
+    ///         StreetAddress = "streetAddress",
+    ///         EnableFailedAuthProtection = false,
+    ///         FailedAuthThreshold = 5,
+    ///         AuthProtectionType = "WIRELESS",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
