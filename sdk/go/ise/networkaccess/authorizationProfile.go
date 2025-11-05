@@ -15,6 +15,67 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := networkaccess.NewAuthorizationProfile(ctx, "example", &networkaccess.AuthorizationProfileArgs{
+//				Name:                               pulumi.String("AuthzProfile1"),
+//				Description:                        pulumi.String("My Authorization Profile"),
+//				VlanNameId:                         pulumi.String("VLAN10"),
+//				VlanTagId:                          pulumi.Int(0),
+//				WebRedirectionType:                 pulumi.String("CentralizedWebAuth"),
+//				WebRedirectionAcl:                  pulumi.String("TEST_ACL"),
+//				WebRedirectionPortalName:           pulumi.String("Sponsored Guest Portal (default)"),
+//				WebRedirectionStaticIpHostNameFqdn: pulumi.String("1.2.3.4"),
+//				WebRedirectionDisplayCertificatesRenewalMessages: pulumi.Bool(true),
+//				AgentlessPosture:             pulumi.Bool(false),
+//				AccessType:                   pulumi.String("ACCESS_ACCEPT"),
+//				ProfileName:                  pulumi.String("Cisco"),
+//				AirespaceAcl:                 pulumi.String("ACL1"),
+//				Acl:                          pulumi.String("ACL1"),
+//				AutoSmartPort:                pulumi.String("PROFILE1"),
+//				InterfaceTemplate:            pulumi.String("TEMP1"),
+//				Ipv6AclFilter:                pulumi.String("ACL1"),
+//				AvcProfile:                   pulumi.String("PROF1"),
+//				AsaVpn:                       pulumi.String("1"),
+//				UniqueIdentifier:             pulumi.String("ID1234"),
+//				TrackMovement:                pulumi.Bool(false),
+//				ServiceTemplate:              pulumi.Bool(false),
+//				EasywiredSessionCandidate:    pulumi.Bool(false),
+//				VoiceDomainPermission:        pulumi.Bool(false),
+//				Neat:                         pulumi.Bool(false),
+//				WebAuth:                      pulumi.Bool(false),
+//				MacSecPolicy:                 pulumi.String("MUST_SECURE"),
+//				ReauthenticationConnectivity: pulumi.String("DEFAULT"),
+//				ReauthenticationTimer:        pulumi.Int(1),
+//				AdvancedAttributes: networkaccess.AuthorizationProfileAdvancedAttributeArray{
+//					&networkaccess.AuthorizationProfileAdvancedAttributeArgs{
+//						AttributeLeftDictionaryName: pulumi.String("Cisco"),
+//						AttributeLeftName:           pulumi.String("cisco-av-pair"),
+//						AttributeRightValueType:     pulumi.String("AttributeValue"),
+//						AttributeRightValue:         pulumi.String("set_nadprofile_vlan=true,vlan=TEST,tag=1"),
+//					},
+//				},
+//				AirespaceIpv6Acl: pulumi.String("ACL1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:
