@@ -15,6 +15,11 @@ export type EgressMatrixCellDefault = import("./egressMatrixCellDefault").Egress
 export const EgressMatrixCellDefault: typeof import("./egressMatrixCellDefault").EgressMatrixCellDefault = null as any;
 utilities.lazyLoad(exports, ["EgressMatrixCellDefault"], () => require("./egressMatrixCellDefault"));
 
+export { EgressPushMatrixArgs, EgressPushMatrixState } from "./egressPushMatrix";
+export type EgressPushMatrix = import("./egressPushMatrix").EgressPushMatrix;
+export const EgressPushMatrix: typeof import("./egressPushMatrix").EgressPushMatrix = null as any;
+utilities.lazyLoad(exports, ["EgressPushMatrix"], () => require("./egressPushMatrix"));
+
 export { GetEgressMatrixCellArgs, GetEgressMatrixCellResult, GetEgressMatrixCellOutputArgs } from "./getEgressMatrixCell";
 export const getEgressMatrixCell: typeof import("./getEgressMatrixCell").getEgressMatrixCell = null as any;
 export const getEgressMatrixCellOutput: typeof import("./getEgressMatrixCell").getEgressMatrixCellOutput = null as any;
@@ -84,6 +89,8 @@ const _module = {
                 return new EgressMatrixCell(name, <any>undefined, { urn })
             case "ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault":
                 return new EgressMatrixCellDefault(name, <any>undefined, { urn })
+            case "ise:trustsec/egressPushMatrix:EgressPushMatrix":
+                return new EgressPushMatrix(name, <any>undefined, { urn })
             case "ise:trustsec/ipToSgtMapping:IpToSgtMapping":
                 return new IpToSgtMapping(name, <any>undefined, { urn })
             case "ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup":
@@ -101,6 +108,7 @@ const _module = {
 };
 pulumi.runtime.registerResourceModule("ise", "trustsec/egressMatrixCell", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/egressMatrixCellDefault", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/egressPushMatrix", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMapping", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMappingGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroup", _module)

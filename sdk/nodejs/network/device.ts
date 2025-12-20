@@ -39,8 +39,13 @@ import * as utilities from "../utilities";
  *     snmpLinkTrapQuery: true,
  *     snmpMacTrapQuery: true,
  *     snmpPollingInterval: 1200,
- *     snmpRoCommunity: "rocom",
- *     snmpVersion: "TWO_C",
+ *     snmpVersion: "THREE",
+ *     snmpUsername: "user123",
+ *     snmpSecurityLevel: "PRIV",
+ *     snmpAuthProtocol: "SHA2",
+ *     snmpAuthPassword: "Cisco123",
+ *     snmpPrivacyProtocol: "AES256",
+ *     snmpPrivacyPassword: "Cisco12345",
  *     tacacsConnectModeOptions: "OFF",
  *     tacacsSharedSecret: "cisco123",
  *     trustsecDeviceId: "device123",
@@ -170,6 +175,15 @@ export class Device extends pulumi.CustomResource {
      */
     declare public readonly profileName: pulumi.Output<string>;
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     */
+    declare public readonly snmpAuthPassword: pulumi.Output<string | undefined>;
+    /**
+     * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     */
+    declare public readonly snmpAuthProtocol: pulumi.Output<string | undefined>;
+    /**
      * SNMP link Trap Query
      */
     declare public readonly snmpLinkTrapQuery: pulumi.Output<boolean | undefined>;
@@ -187,9 +201,27 @@ export class Device extends pulumi.CustomResource {
      */
     declare public readonly snmpPollingInterval: pulumi.Output<number | undefined>;
     /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     */
+    declare public readonly snmpPrivacyPassword: pulumi.Output<string | undefined>;
+    /**
+     * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     */
+    declare public readonly snmpPrivacyProtocol: pulumi.Output<string | undefined>;
+    /**
      * SNMP RO Community
      */
     declare public readonly snmpRoCommunity: pulumi.Output<string | undefined>;
+    /**
+     * SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     */
+    declare public readonly snmpSecurityLevel: pulumi.Output<string | undefined>;
+    /**
+     * SNMP username. Required for snmp version 3.
+     */
+    declare public readonly snmpUsername: pulumi.Output<string | undefined>;
     /**
      * SNMP version
      *   - Choices: `ONE`, `TWO_C`, `THREE`
@@ -304,11 +336,17 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["networkDeviceGroups"] = state?.networkDeviceGroups;
             resourceInputs["profileName"] = state?.profileName;
+            resourceInputs["snmpAuthPassword"] = state?.snmpAuthPassword;
+            resourceInputs["snmpAuthProtocol"] = state?.snmpAuthProtocol;
             resourceInputs["snmpLinkTrapQuery"] = state?.snmpLinkTrapQuery;
             resourceInputs["snmpMacTrapQuery"] = state?.snmpMacTrapQuery;
             resourceInputs["snmpOriginatingPolicyServiceNode"] = state?.snmpOriginatingPolicyServiceNode;
             resourceInputs["snmpPollingInterval"] = state?.snmpPollingInterval;
+            resourceInputs["snmpPrivacyPassword"] = state?.snmpPrivacyPassword;
+            resourceInputs["snmpPrivacyProtocol"] = state?.snmpPrivacyProtocol;
             resourceInputs["snmpRoCommunity"] = state?.snmpRoCommunity;
+            resourceInputs["snmpSecurityLevel"] = state?.snmpSecurityLevel;
+            resourceInputs["snmpUsername"] = state?.snmpUsername;
             resourceInputs["snmpVersion"] = state?.snmpVersion;
             resourceInputs["softwareVersion"] = state?.softwareVersion;
             resourceInputs["tacacsConnectModeOptions"] = state?.tacacsConnectModeOptions;
@@ -351,11 +389,17 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["networkDeviceGroups"] = args?.networkDeviceGroups;
             resourceInputs["profileName"] = args?.profileName;
+            resourceInputs["snmpAuthPassword"] = args?.snmpAuthPassword;
+            resourceInputs["snmpAuthProtocol"] = args?.snmpAuthProtocol;
             resourceInputs["snmpLinkTrapQuery"] = args?.snmpLinkTrapQuery;
             resourceInputs["snmpMacTrapQuery"] = args?.snmpMacTrapQuery;
             resourceInputs["snmpOriginatingPolicyServiceNode"] = args?.snmpOriginatingPolicyServiceNode;
             resourceInputs["snmpPollingInterval"] = args?.snmpPollingInterval;
+            resourceInputs["snmpPrivacyPassword"] = args?.snmpPrivacyPassword;
+            resourceInputs["snmpPrivacyProtocol"] = args?.snmpPrivacyProtocol;
             resourceInputs["snmpRoCommunity"] = args?.snmpRoCommunity;
+            resourceInputs["snmpSecurityLevel"] = args?.snmpSecurityLevel;
+            resourceInputs["snmpUsername"] = args?.snmpUsername;
             resourceInputs["snmpVersion"] = args?.snmpVersion;
             resourceInputs["softwareVersion"] = args?.softwareVersion;
             resourceInputs["tacacsConnectModeOptions"] = args?.tacacsConnectModeOptions;
@@ -459,6 +503,15 @@ export interface DeviceState {
      */
     profileName?: pulumi.Input<string>;
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     */
+    snmpAuthPassword?: pulumi.Input<string>;
+    /**
+     * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     */
+    snmpAuthProtocol?: pulumi.Input<string>;
+    /**
      * SNMP link Trap Query
      */
     snmpLinkTrapQuery?: pulumi.Input<boolean>;
@@ -476,9 +529,27 @@ export interface DeviceState {
      */
     snmpPollingInterval?: pulumi.Input<number>;
     /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     */
+    snmpPrivacyPassword?: pulumi.Input<string>;
+    /**
+     * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     */
+    snmpPrivacyProtocol?: pulumi.Input<string>;
+    /**
      * SNMP RO Community
      */
     snmpRoCommunity?: pulumi.Input<string>;
+    /**
+     * SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     */
+    snmpSecurityLevel?: pulumi.Input<string>;
+    /**
+     * SNMP username. Required for snmp version 3.
+     */
+    snmpUsername?: pulumi.Input<string>;
     /**
      * SNMP version
      *   - Choices: `ONE`, `TWO_C`, `THREE`
@@ -641,6 +712,15 @@ export interface DeviceArgs {
      */
     profileName?: pulumi.Input<string>;
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     */
+    snmpAuthPassword?: pulumi.Input<string>;
+    /**
+     * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     */
+    snmpAuthProtocol?: pulumi.Input<string>;
+    /**
      * SNMP link Trap Query
      */
     snmpLinkTrapQuery?: pulumi.Input<boolean>;
@@ -658,9 +738,27 @@ export interface DeviceArgs {
      */
     snmpPollingInterval?: pulumi.Input<number>;
     /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     */
+    snmpPrivacyPassword?: pulumi.Input<string>;
+    /**
+     * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     */
+    snmpPrivacyProtocol?: pulumi.Input<string>;
+    /**
      * SNMP RO Community
      */
     snmpRoCommunity?: pulumi.Input<string>;
+    /**
+     * SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     */
+    snmpSecurityLevel?: pulumi.Input<string>;
+    /**
+     * SNMP username. Required for snmp version 3.
+     */
+    snmpUsername?: pulumi.Input<string>;
     /**
      * SNMP version
      *   - Choices: `ONE`, `TWO_C`, `THREE`

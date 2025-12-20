@@ -494,6 +494,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "trustsec/egressPushMatrix",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/egressPushMatrix:EgressPushMatrix": "EgressPushMatrix"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "trustsec/ipToSgtMapping",
   "fqn": "pulumi_ise.trustsec",
   "classes": {

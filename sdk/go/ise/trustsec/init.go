@@ -25,6 +25,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &EgressMatrixCell{}
 	case "ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault":
 		r = &EgressMatrixCellDefault{}
+	case "ise:trustsec/egressPushMatrix:EgressPushMatrix":
+		r = &EgressPushMatrix{}
 	case "ise:trustsec/ipToSgtMapping:IpToSgtMapping":
 		r = &IpToSgtMapping{}
 	case "ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup":
@@ -56,6 +58,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"trustsec/egressMatrixCellDefault",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"trustsec/egressPushMatrix",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

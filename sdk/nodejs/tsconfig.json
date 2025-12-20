@@ -113,6 +113,7 @@
         "system/repository.ts",
         "trustsec/egressMatrixCell.ts",
         "trustsec/egressMatrixCellDefault.ts",
+        "trustsec/egressPushMatrix.ts",
         "trustsec/getEgressMatrixCell.ts",
         "trustsec/getEgressMatrixCellDefault.ts",
         "trustsec/getIpToSgtMapping.ts",

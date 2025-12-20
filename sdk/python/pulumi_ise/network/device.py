@@ -38,11 +38,17 @@ class DeviceArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
                  software_version: Optional[pulumi.Input[_builtins.str]] = None,
                  tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
@@ -86,12 +92,21 @@ class DeviceArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+                 - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
+        :param pulumi.Input[_builtins.str] snmp_security_level: SNMP security level. Required for snmp version 3.
+                 - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        :param pulumi.Input[_builtins.str] snmp_username: SNMP username. Required for snmp version 3.
         :param pulumi.Input[_builtins.str] snmp_version: SNMP version
                  - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
@@ -149,6 +164,10 @@ class DeviceArgs:
             pulumi.set(__self__, "network_device_groups", network_device_groups)
         if profile_name is not None:
             pulumi.set(__self__, "profile_name", profile_name)
+        if snmp_auth_password is not None:
+            pulumi.set(__self__, "snmp_auth_password", snmp_auth_password)
+        if snmp_auth_protocol is not None:
+            pulumi.set(__self__, "snmp_auth_protocol", snmp_auth_protocol)
         if snmp_link_trap_query is not None:
             pulumi.set(__self__, "snmp_link_trap_query", snmp_link_trap_query)
         if snmp_mac_trap_query is not None:
@@ -157,8 +176,16 @@ class DeviceArgs:
             pulumi.set(__self__, "snmp_originating_policy_service_node", snmp_originating_policy_service_node)
         if snmp_polling_interval is not None:
             pulumi.set(__self__, "snmp_polling_interval", snmp_polling_interval)
+        if snmp_privacy_password is not None:
+            pulumi.set(__self__, "snmp_privacy_password", snmp_privacy_password)
+        if snmp_privacy_protocol is not None:
+            pulumi.set(__self__, "snmp_privacy_protocol", snmp_privacy_protocol)
         if snmp_ro_community is not None:
             pulumi.set(__self__, "snmp_ro_community", snmp_ro_community)
+        if snmp_security_level is not None:
+            pulumi.set(__self__, "snmp_security_level", snmp_security_level)
+        if snmp_username is not None:
+            pulumi.set(__self__, "snmp_username", snmp_username)
         if snmp_version is not None:
             pulumi.set(__self__, "snmp_version", snmp_version)
         if software_version is not None:
@@ -409,6 +436,31 @@ class DeviceArgs:
         pulumi.set(self, "profile_name", value)
 
     @_builtins.property
+    @pulumi.getter(name="snmpAuthPassword")
+    def snmp_auth_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        """
+        return pulumi.get(self, "snmp_auth_password")
+
+    @snmp_auth_password.setter
+    def snmp_auth_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_auth_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthProtocol")
+    def snmp_auth_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Choices: `MD5`, `SHA`, `SHA2`
+        """
+        return pulumi.get(self, "snmp_auth_protocol")
+
+    @snmp_auth_protocol.setter
+    def snmp_auth_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_auth_protocol", value)
+
+    @_builtins.property
     @pulumi.getter(name="snmpLinkTrapQuery")
     def snmp_link_trap_query(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -458,6 +510,31 @@ class DeviceArgs:
         pulumi.set(self, "snmp_polling_interval", value)
 
     @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPassword")
+    def snmp_privacy_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        """
+        return pulumi.get(self, "snmp_privacy_password")
+
+    @snmp_privacy_password.setter
+    def snmp_privacy_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_privacy_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyProtocol")
+    def snmp_privacy_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+          - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+        """
+        return pulumi.get(self, "snmp_privacy_protocol")
+
+    @snmp_privacy_protocol.setter
+    def snmp_privacy_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_privacy_protocol", value)
+
+    @_builtins.property
     @pulumi.getter(name="snmpRoCommunity")
     def snmp_ro_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -468,6 +545,31 @@ class DeviceArgs:
     @snmp_ro_community.setter
     def snmp_ro_community(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snmp_ro_community", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpSecurityLevel")
+    def snmp_security_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP security level. Required for snmp version 3.
+          - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        """
+        return pulumi.get(self, "snmp_security_level")
+
+    @snmp_security_level.setter
+    def snmp_security_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_security_level", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpUsername")
+    def snmp_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP username. Required for snmp version 3.
+        """
+        return pulumi.get(self, "snmp_username")
+
+    @snmp_username.setter
+    def snmp_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_username", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpVersion")
@@ -733,11 +835,17 @@ class _DeviceState:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
                  software_version: Optional[pulumi.Input[_builtins.str]] = None,
                  tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
@@ -781,12 +889,21 @@ class _DeviceState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+                 - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
+        :param pulumi.Input[_builtins.str] snmp_security_level: SNMP security level. Required for snmp version 3.
+                 - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        :param pulumi.Input[_builtins.str] snmp_username: SNMP username. Required for snmp version 3.
         :param pulumi.Input[_builtins.str] snmp_version: SNMP version
                  - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
@@ -845,6 +962,10 @@ class _DeviceState:
             pulumi.set(__self__, "network_device_groups", network_device_groups)
         if profile_name is not None:
             pulumi.set(__self__, "profile_name", profile_name)
+        if snmp_auth_password is not None:
+            pulumi.set(__self__, "snmp_auth_password", snmp_auth_password)
+        if snmp_auth_protocol is not None:
+            pulumi.set(__self__, "snmp_auth_protocol", snmp_auth_protocol)
         if snmp_link_trap_query is not None:
             pulumi.set(__self__, "snmp_link_trap_query", snmp_link_trap_query)
         if snmp_mac_trap_query is not None:
@@ -853,8 +974,16 @@ class _DeviceState:
             pulumi.set(__self__, "snmp_originating_policy_service_node", snmp_originating_policy_service_node)
         if snmp_polling_interval is not None:
             pulumi.set(__self__, "snmp_polling_interval", snmp_polling_interval)
+        if snmp_privacy_password is not None:
+            pulumi.set(__self__, "snmp_privacy_password", snmp_privacy_password)
+        if snmp_privacy_protocol is not None:
+            pulumi.set(__self__, "snmp_privacy_protocol", snmp_privacy_protocol)
         if snmp_ro_community is not None:
             pulumi.set(__self__, "snmp_ro_community", snmp_ro_community)
+        if snmp_security_level is not None:
+            pulumi.set(__self__, "snmp_security_level", snmp_security_level)
+        if snmp_username is not None:
+            pulumi.set(__self__, "snmp_username", snmp_username)
         if snmp_version is not None:
             pulumi.set(__self__, "snmp_version", snmp_version)
         if software_version is not None:
@@ -1105,6 +1234,31 @@ class _DeviceState:
         pulumi.set(self, "profile_name", value)
 
     @_builtins.property
+    @pulumi.getter(name="snmpAuthPassword")
+    def snmp_auth_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        """
+        return pulumi.get(self, "snmp_auth_password")
+
+    @snmp_auth_password.setter
+    def snmp_auth_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_auth_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthProtocol")
+    def snmp_auth_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Choices: `MD5`, `SHA`, `SHA2`
+        """
+        return pulumi.get(self, "snmp_auth_protocol")
+
+    @snmp_auth_protocol.setter
+    def snmp_auth_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_auth_protocol", value)
+
+    @_builtins.property
     @pulumi.getter(name="snmpLinkTrapQuery")
     def snmp_link_trap_query(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -1154,6 +1308,31 @@ class _DeviceState:
         pulumi.set(self, "snmp_polling_interval", value)
 
     @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPassword")
+    def snmp_privacy_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        """
+        return pulumi.get(self, "snmp_privacy_password")
+
+    @snmp_privacy_password.setter
+    def snmp_privacy_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_privacy_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyProtocol")
+    def snmp_privacy_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+          - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+        """
+        return pulumi.get(self, "snmp_privacy_protocol")
+
+    @snmp_privacy_protocol.setter
+    def snmp_privacy_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_privacy_protocol", value)
+
+    @_builtins.property
     @pulumi.getter(name="snmpRoCommunity")
     def snmp_ro_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -1164,6 +1343,31 @@ class _DeviceState:
     @snmp_ro_community.setter
     def snmp_ro_community(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snmp_ro_community", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpSecurityLevel")
+    def snmp_security_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP security level. Required for snmp version 3.
+          - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        """
+        return pulumi.get(self, "snmp_security_level")
+
+    @snmp_security_level.setter
+    def snmp_security_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_security_level", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpUsername")
+    def snmp_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        SNMP username. Required for snmp version 3.
+        """
+        return pulumi.get(self, "snmp_username")
+
+    @snmp_username.setter
+    def snmp_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snmp_username", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpVersion")
@@ -1432,11 +1636,17 @@ class Device(pulumi.CustomResource):
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
                  software_version: Optional[pulumi.Input[_builtins.str]] = None,
                  tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1491,8 +1701,13 @@ class Device(pulumi.CustomResource):
             snmp_link_trap_query=True,
             snmp_mac_trap_query=True,
             snmp_polling_interval=1200,
-            snmp_ro_community="rocom",
-            snmp_version="TWO_C",
+            snmp_version="THREE",
+            snmp_username="user123",
+            snmp_security_level="PRIV",
+            snmp_auth_protocol="SHA2",
+            snmp_auth_password="Cisco123",
+            snmp_privacy_protocol="AES256",
+            snmp_privacy_password="Cisco12345",
             tacacs_connect_mode_options="OFF",
             tacacs_shared_secret="cisco123",
             trustsec_device_id="device123",
@@ -1543,12 +1758,21 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+                 - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
+        :param pulumi.Input[_builtins.str] snmp_security_level: SNMP security level. Required for snmp version 3.
+                 - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        :param pulumi.Input[_builtins.str] snmp_username: SNMP username. Required for snmp version 3.
         :param pulumi.Input[_builtins.str] snmp_version: SNMP version
                  - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
@@ -1612,8 +1836,13 @@ class Device(pulumi.CustomResource):
             snmp_link_trap_query=True,
             snmp_mac_trap_query=True,
             snmp_polling_interval=1200,
-            snmp_ro_community="rocom",
-            snmp_version="TWO_C",
+            snmp_version="THREE",
+            snmp_username="user123",
+            snmp_security_level="PRIV",
+            snmp_auth_protocol="SHA2",
+            snmp_auth_password="Cisco123",
+            snmp_privacy_protocol="AES256",
+            snmp_privacy_password="Cisco12345",
             tacacs_connect_mode_options="OFF",
             tacacs_shared_secret="cisco123",
             trustsec_device_id="device123",
@@ -1673,11 +1902,17 @@ class Device(pulumi.CustomResource):
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
+                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
                  snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
                  software_version: Optional[pulumi.Input[_builtins.str]] = None,
                  tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1726,11 +1961,17 @@ class Device(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["network_device_groups"] = network_device_groups
             __props__.__dict__["profile_name"] = profile_name
+            __props__.__dict__["snmp_auth_password"] = snmp_auth_password
+            __props__.__dict__["snmp_auth_protocol"] = snmp_auth_protocol
             __props__.__dict__["snmp_link_trap_query"] = snmp_link_trap_query
             __props__.__dict__["snmp_mac_trap_query"] = snmp_mac_trap_query
             __props__.__dict__["snmp_originating_policy_service_node"] = snmp_originating_policy_service_node
             __props__.__dict__["snmp_polling_interval"] = snmp_polling_interval
+            __props__.__dict__["snmp_privacy_password"] = snmp_privacy_password
+            __props__.__dict__["snmp_privacy_protocol"] = snmp_privacy_protocol
             __props__.__dict__["snmp_ro_community"] = snmp_ro_community
+            __props__.__dict__["snmp_security_level"] = snmp_security_level
+            __props__.__dict__["snmp_username"] = snmp_username
             __props__.__dict__["snmp_version"] = snmp_version
             __props__.__dict__["software_version"] = software_version
             __props__.__dict__["tacacs_connect_mode_options"] = tacacs_connect_mode_options
@@ -1778,11 +2019,17 @@ class Device(pulumi.CustomResource):
             name: Optional[pulumi.Input[_builtins.str]] = None,
             network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             profile_name: Optional[pulumi.Input[_builtins.str]] = None,
+            snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
+            snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
             snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
             snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
             snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
             snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
+            snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
+            snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
             snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
+            snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
+            snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
             snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
             software_version: Optional[pulumi.Input[_builtins.str]] = None,
             tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1831,12 +2078,21 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
+        :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `600`-`86400`
+        :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+                 - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
+        :param pulumi.Input[_builtins.str] snmp_security_level: SNMP security level. Required for snmp version 3.
+                 - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        :param pulumi.Input[_builtins.str] snmp_username: SNMP username. Required for snmp version 3.
         :param pulumi.Input[_builtins.str] snmp_version: SNMP version
                  - Choices: `ONE`, `TWO_C`, `THREE`
         :param pulumi.Input[_builtins.str] software_version: Software version
@@ -1882,11 +2138,17 @@ class Device(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         __props__.__dict__["network_device_groups"] = network_device_groups
         __props__.__dict__["profile_name"] = profile_name
+        __props__.__dict__["snmp_auth_password"] = snmp_auth_password
+        __props__.__dict__["snmp_auth_protocol"] = snmp_auth_protocol
         __props__.__dict__["snmp_link_trap_query"] = snmp_link_trap_query
         __props__.__dict__["snmp_mac_trap_query"] = snmp_mac_trap_query
         __props__.__dict__["snmp_originating_policy_service_node"] = snmp_originating_policy_service_node
         __props__.__dict__["snmp_polling_interval"] = snmp_polling_interval
+        __props__.__dict__["snmp_privacy_password"] = snmp_privacy_password
+        __props__.__dict__["snmp_privacy_protocol"] = snmp_privacy_protocol
         __props__.__dict__["snmp_ro_community"] = snmp_ro_community
+        __props__.__dict__["snmp_security_level"] = snmp_security_level
+        __props__.__dict__["snmp_username"] = snmp_username
         __props__.__dict__["snmp_version"] = snmp_version
         __props__.__dict__["software_version"] = software_version
         __props__.__dict__["tacacs_connect_mode_options"] = tacacs_connect_mode_options
@@ -2050,6 +2312,23 @@ class Device(pulumi.CustomResource):
         return pulumi.get(self, "profile_name")
 
     @_builtins.property
+    @pulumi.getter(name="snmpAuthPassword")
+    def snmp_auth_password(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        """
+        return pulumi.get(self, "snmp_auth_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthProtocol")
+    def snmp_auth_protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Choices: `MD5`, `SHA`, `SHA2`
+        """
+        return pulumi.get(self, "snmp_auth_protocol")
+
+    @_builtins.property
     @pulumi.getter(name="snmpLinkTrapQuery")
     def snmp_link_trap_query(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
@@ -2083,12 +2362,46 @@ class Device(pulumi.CustomResource):
         return pulumi.get(self, "snmp_polling_interval")
 
     @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPassword")
+    def snmp_privacy_password(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        """
+        return pulumi.get(self, "snmp_privacy_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyProtocol")
+    def snmp_privacy_protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+          - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+        """
+        return pulumi.get(self, "snmp_privacy_protocol")
+
+    @_builtins.property
     @pulumi.getter(name="snmpRoCommunity")
     def snmp_ro_community(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         SNMP RO Community
         """
         return pulumi.get(self, "snmp_ro_community")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpSecurityLevel")
+    def snmp_security_level(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        SNMP security level. Required for snmp version 3.
+          - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        """
+        return pulumi.get(self, "snmp_security_level")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpUsername")
+    def snmp_username(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        SNMP username. Required for snmp version 3.
+        """
+        return pulumi.get(self, "snmp_username")
 
     @_builtins.property
     @pulumi.getter(name="snmpVersion")
