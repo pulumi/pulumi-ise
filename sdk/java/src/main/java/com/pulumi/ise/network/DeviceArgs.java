@@ -284,6 +284,38 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    @Import(name="snmpAuthPassword")
+    private @Nullable Output<String> snmpAuthPassword;
+
+    /**
+     * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    public Optional<Output<String>> snmpAuthPassword() {
+        return Optional.ofNullable(this.snmpAuthPassword);
+    }
+
+    /**
+     * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     * 
+     */
+    @Import(name="snmpAuthProtocol")
+    private @Nullable Output<String> snmpAuthProtocol;
+
+    /**
+     * @return SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     * 
+     */
+    public Optional<Output<String>> snmpAuthProtocol() {
+        return Optional.ofNullable(this.snmpAuthProtocol);
+    }
+
+    /**
      * SNMP link Trap Query
      * 
      */
@@ -346,6 +378,38 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    @Import(name="snmpPrivacyPassword")
+    private @Nullable Output<String> snmpPrivacyPassword;
+
+    /**
+     * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    public Optional<Output<String>> snmpPrivacyPassword() {
+        return Optional.ofNullable(this.snmpPrivacyPassword);
+    }
+
+    /**
+     * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     * 
+     */
+    @Import(name="snmpPrivacyProtocol")
+    private @Nullable Output<String> snmpPrivacyProtocol;
+
+    /**
+     * @return SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     * 
+     */
+    public Optional<Output<String>> snmpPrivacyProtocol() {
+        return Optional.ofNullable(this.snmpPrivacyProtocol);
+    }
+
+    /**
      * SNMP RO Community
      * 
      */
@@ -358,6 +422,38 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> snmpRoCommunity() {
         return Optional.ofNullable(this.snmpRoCommunity);
+    }
+
+    /**
+     * SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     * 
+     */
+    @Import(name="snmpSecurityLevel")
+    private @Nullable Output<String> snmpSecurityLevel;
+
+    /**
+     * @return SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     * 
+     */
+    public Optional<Output<String>> snmpSecurityLevel() {
+        return Optional.ofNullable(this.snmpSecurityLevel);
+    }
+
+    /**
+     * SNMP username. Required for snmp version 3.
+     * 
+     */
+    @Import(name="snmpUsername")
+    private @Nullable Output<String> snmpUsername;
+
+    /**
+     * @return SNMP username. Required for snmp version 3.
+     * 
+     */
+    public Optional<Output<String>> snmpUsername() {
+        return Optional.ofNullable(this.snmpUsername);
     }
 
     /**
@@ -686,11 +782,17 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         this.name = $.name;
         this.networkDeviceGroups = $.networkDeviceGroups;
         this.profileName = $.profileName;
+        this.snmpAuthPassword = $.snmpAuthPassword;
+        this.snmpAuthProtocol = $.snmpAuthProtocol;
         this.snmpLinkTrapQuery = $.snmpLinkTrapQuery;
         this.snmpMacTrapQuery = $.snmpMacTrapQuery;
         this.snmpOriginatingPolicyServiceNode = $.snmpOriginatingPolicyServiceNode;
         this.snmpPollingInterval = $.snmpPollingInterval;
+        this.snmpPrivacyPassword = $.snmpPrivacyPassword;
+        this.snmpPrivacyProtocol = $.snmpPrivacyProtocol;
         this.snmpRoCommunity = $.snmpRoCommunity;
+        this.snmpSecurityLevel = $.snmpSecurityLevel;
+        this.snmpUsername = $.snmpUsername;
         this.snmpVersion = $.snmpVersion;
         this.softwareVersion = $.softwareVersion;
         this.tacacsConnectModeOptions = $.tacacsConnectModeOptions;
@@ -1117,6 +1219,50 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param snmpAuthPassword SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthPassword(@Nullable Output<String> snmpAuthPassword) {
+            $.snmpAuthPassword = snmpAuthPassword;
+            return this;
+        }
+
+        /**
+         * @param snmpAuthPassword SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthPassword(String snmpAuthPassword) {
+            return snmpAuthPassword(Output.of(snmpAuthPassword));
+        }
+
+        /**
+         * @param snmpAuthProtocol SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         *   - Choices: `MD5`, `SHA`, `SHA2`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthProtocol(@Nullable Output<String> snmpAuthProtocol) {
+            $.snmpAuthProtocol = snmpAuthProtocol;
+            return this;
+        }
+
+        /**
+         * @param snmpAuthProtocol SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         *   - Choices: `MD5`, `SHA`, `SHA2`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthProtocol(String snmpAuthProtocol) {
+            return snmpAuthProtocol(Output.of(snmpAuthProtocol));
+        }
+
+        /**
          * @param snmpLinkTrapQuery SNMP link Trap Query
          * 
          * @return builder
@@ -1203,6 +1349,50 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param snmpPrivacyPassword SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyPassword(@Nullable Output<String> snmpPrivacyPassword) {
+            $.snmpPrivacyPassword = snmpPrivacyPassword;
+            return this;
+        }
+
+        /**
+         * @param snmpPrivacyPassword SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyPassword(String snmpPrivacyPassword) {
+            return snmpPrivacyPassword(Output.of(snmpPrivacyPassword));
+        }
+
+        /**
+         * @param snmpPrivacyProtocol SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+         *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyProtocol(@Nullable Output<String> snmpPrivacyProtocol) {
+            $.snmpPrivacyProtocol = snmpPrivacyProtocol;
+            return this;
+        }
+
+        /**
+         * @param snmpPrivacyProtocol SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+         *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyProtocol(String snmpPrivacyProtocol) {
+            return snmpPrivacyProtocol(Output.of(snmpPrivacyProtocol));
+        }
+
+        /**
          * @param snmpRoCommunity SNMP RO Community
          * 
          * @return builder
@@ -1221,6 +1411,50 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder snmpRoCommunity(String snmpRoCommunity) {
             return snmpRoCommunity(Output.of(snmpRoCommunity));
+        }
+
+        /**
+         * @param snmpSecurityLevel SNMP security level. Required for snmp version 3.
+         *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpSecurityLevel(@Nullable Output<String> snmpSecurityLevel) {
+            $.snmpSecurityLevel = snmpSecurityLevel;
+            return this;
+        }
+
+        /**
+         * @param snmpSecurityLevel SNMP security level. Required for snmp version 3.
+         *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpSecurityLevel(String snmpSecurityLevel) {
+            return snmpSecurityLevel(Output.of(snmpSecurityLevel));
+        }
+
+        /**
+         * @param snmpUsername SNMP username. Required for snmp version 3.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpUsername(@Nullable Output<String> snmpUsername) {
+            $.snmpUsername = snmpUsername;
+            return this;
+        }
+
+        /**
+         * @param snmpUsername SNMP username. Required for snmp version 3.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpUsername(String snmpUsername) {
+            return snmpUsername(Output.of(snmpUsername));
         }
 
         /**

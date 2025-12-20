@@ -120,6 +120,14 @@ export interface GetDeviceResult {
      */
     readonly profileName: string;
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     */
+    readonly snmpAuthPassword: string;
+    /**
+     * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     */
+    readonly snmpAuthProtocol: string;
+    /**
      * SNMP link Trap Query
      */
     readonly snmpLinkTrapQuery: boolean;
@@ -136,9 +144,25 @@ export interface GetDeviceResult {
      */
     readonly snmpPollingInterval: number;
     /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     */
+    readonly snmpPrivacyPassword: string;
+    /**
+     * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     */
+    readonly snmpPrivacyProtocol: string;
+    /**
      * SNMP RO Community
      */
     readonly snmpRoCommunity: string;
+    /**
+     * SNMP security level. Required for snmp version 3.
+     */
+    readonly snmpSecurityLevel: string;
+    /**
+     * SNMP username. Required for snmp version 3.
+     */
+    readonly snmpUsername: string;
     /**
      * SNMP version
      */

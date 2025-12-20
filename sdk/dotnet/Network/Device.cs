@@ -51,8 +51,13 @@ namespace Pulumi.Ise.Network
     ///         SnmpLinkTrapQuery = true,
     ///         SnmpMacTrapQuery = true,
     ///         SnmpPollingInterval = 1200,
-    ///         SnmpRoCommunity = "rocom",
-    ///         SnmpVersion = "TWO_C",
+    ///         SnmpVersion = "THREE",
+    ///         SnmpUsername = "user123",
+    ///         SnmpSecurityLevel = "PRIV",
+    ///         SnmpAuthProtocol = "SHA2",
+    ///         SnmpAuthPassword = "Cisco123",
+    ///         SnmpPrivacyProtocol = "AES256",
+    ///         SnmpPrivacyPassword = "Cisco12345",
     ///         TacacsConnectModeOptions = "OFF",
     ///         TacacsSharedSecret = "cisco123",
     ///         TrustsecDeviceId = "device123",
@@ -193,6 +198,19 @@ namespace Pulumi.Ise.Network
         public Output<string> ProfileName { get; private set; } = null!;
 
         /// <summary>
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        /// </summary>
+        [Output("snmpAuthPassword")]
+        public Output<string?> SnmpAuthPassword { get; private set; } = null!;
+
+        /// <summary>
+        /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Choices: `MD5`, `SHA`, `SHA2`
+        /// </summary>
+        [Output("snmpAuthProtocol")]
+        public Output<string?> SnmpAuthProtocol { get; private set; } = null!;
+
+        /// <summary>
         /// SNMP link Trap Query
         /// </summary>
         [Output("snmpLinkTrapQuery")]
@@ -218,10 +236,36 @@ namespace Pulumi.Ise.Network
         public Output<int?> SnmpPollingInterval { get; private set; } = null!;
 
         /// <summary>
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        /// </summary>
+        [Output("snmpPrivacyPassword")]
+        public Output<string?> SnmpPrivacyPassword { get; private set; } = null!;
+
+        /// <summary>
+        /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+        ///   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+        /// </summary>
+        [Output("snmpPrivacyProtocol")]
+        public Output<string?> SnmpPrivacyProtocol { get; private set; } = null!;
+
+        /// <summary>
         /// SNMP RO Community
         /// </summary>
         [Output("snmpRoCommunity")]
         public Output<string?> SnmpRoCommunity { get; private set; } = null!;
+
+        /// <summary>
+        /// SNMP security level. Required for snmp version 3.
+        ///   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        /// </summary>
+        [Output("snmpSecurityLevel")]
+        public Output<string?> SnmpSecurityLevel { get; private set; } = null!;
+
+        /// <summary>
+        /// SNMP username. Required for snmp version 3.
+        /// </summary>
+        [Output("snmpUsername")]
+        public Output<string?> SnmpUsername { get; private set; } = null!;
 
         /// <summary>
         /// SNMP version
@@ -511,6 +555,19 @@ namespace Pulumi.Ise.Network
         public Input<string>? ProfileName { get; set; }
 
         /// <summary>
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        /// </summary>
+        [Input("snmpAuthPassword")]
+        public Input<string>? SnmpAuthPassword { get; set; }
+
+        /// <summary>
+        /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Choices: `MD5`, `SHA`, `SHA2`
+        /// </summary>
+        [Input("snmpAuthProtocol")]
+        public Input<string>? SnmpAuthProtocol { get; set; }
+
+        /// <summary>
         /// SNMP link Trap Query
         /// </summary>
         [Input("snmpLinkTrapQuery")]
@@ -536,10 +593,36 @@ namespace Pulumi.Ise.Network
         public Input<int>? SnmpPollingInterval { get; set; }
 
         /// <summary>
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        /// </summary>
+        [Input("snmpPrivacyPassword")]
+        public Input<string>? SnmpPrivacyPassword { get; set; }
+
+        /// <summary>
+        /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+        ///   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+        /// </summary>
+        [Input("snmpPrivacyProtocol")]
+        public Input<string>? SnmpPrivacyProtocol { get; set; }
+
+        /// <summary>
         /// SNMP RO Community
         /// </summary>
         [Input("snmpRoCommunity")]
         public Input<string>? SnmpRoCommunity { get; set; }
+
+        /// <summary>
+        /// SNMP security level. Required for snmp version 3.
+        ///   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        /// </summary>
+        [Input("snmpSecurityLevel")]
+        public Input<string>? SnmpSecurityLevel { get; set; }
+
+        /// <summary>
+        /// SNMP username. Required for snmp version 3.
+        /// </summary>
+        [Input("snmpUsername")]
+        public Input<string>? SnmpUsername { get; set; }
 
         /// <summary>
         /// SNMP version
@@ -791,6 +874,19 @@ namespace Pulumi.Ise.Network
         public Input<string>? ProfileName { get; set; }
 
         /// <summary>
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        /// </summary>
+        [Input("snmpAuthPassword")]
+        public Input<string>? SnmpAuthPassword { get; set; }
+
+        /// <summary>
+        /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Choices: `MD5`, `SHA`, `SHA2`
+        /// </summary>
+        [Input("snmpAuthProtocol")]
+        public Input<string>? SnmpAuthProtocol { get; set; }
+
+        /// <summary>
         /// SNMP link Trap Query
         /// </summary>
         [Input("snmpLinkTrapQuery")]
@@ -816,10 +912,36 @@ namespace Pulumi.Ise.Network
         public Input<int>? SnmpPollingInterval { get; set; }
 
         /// <summary>
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        /// </summary>
+        [Input("snmpPrivacyPassword")]
+        public Input<string>? SnmpPrivacyPassword { get; set; }
+
+        /// <summary>
+        /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+        ///   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+        /// </summary>
+        [Input("snmpPrivacyProtocol")]
+        public Input<string>? SnmpPrivacyProtocol { get; set; }
+
+        /// <summary>
         /// SNMP RO Community
         /// </summary>
         [Input("snmpRoCommunity")]
         public Input<string>? SnmpRoCommunity { get; set; }
+
+        /// <summary>
+        /// SNMP security level. Required for snmp version 3.
+        ///   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+        /// </summary>
+        [Input("snmpSecurityLevel")]
+        public Input<string>? SnmpSecurityLevel { get; set; }
+
+        /// <summary>
+        /// SNMP username. Required for snmp version 3.
+        /// </summary>
+        [Input("snmpUsername")]
+        public Input<string>? SnmpUsername { get; set; }
 
         /// <summary>
         /// SNMP version

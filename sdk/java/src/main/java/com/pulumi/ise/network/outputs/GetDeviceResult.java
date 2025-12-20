@@ -105,6 +105,16 @@ public final class GetDeviceResult {
      */
     private String profileName;
     /**
+     * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    private String snmpAuthPassword;
+    /**
+     * @return SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    private String snmpAuthProtocol;
+    /**
      * @return SNMP link Trap Query
      * 
      */
@@ -125,10 +135,30 @@ public final class GetDeviceResult {
      */
     private Integer snmpPollingInterval;
     /**
+     * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    private String snmpPrivacyPassword;
+    /**
+     * @return SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     * 
+     */
+    private String snmpPrivacyProtocol;
+    /**
      * @return SNMP RO Community
      * 
      */
     private String snmpRoCommunity;
+    /**
+     * @return SNMP security level. Required for snmp version 3.
+     * 
+     */
+    private String snmpSecurityLevel;
+    /**
+     * @return SNMP username. Required for snmp version 3.
+     * 
+     */
+    private String snmpUsername;
     /**
      * @return SNMP version
      * 
@@ -358,6 +388,20 @@ public final class GetDeviceResult {
         return this.profileName;
     }
     /**
+     * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    public String snmpAuthPassword() {
+        return this.snmpAuthPassword;
+    }
+    /**
+     * @return SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    public String snmpAuthProtocol() {
+        return this.snmpAuthProtocol;
+    }
+    /**
      * @return SNMP link Trap Query
      * 
      */
@@ -386,11 +430,39 @@ public final class GetDeviceResult {
         return this.snmpPollingInterval;
     }
     /**
+     * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    public String snmpPrivacyPassword() {
+        return this.snmpPrivacyPassword;
+    }
+    /**
+     * @return SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     * 
+     */
+    public String snmpPrivacyProtocol() {
+        return this.snmpPrivacyProtocol;
+    }
+    /**
      * @return SNMP RO Community
      * 
      */
     public String snmpRoCommunity() {
         return this.snmpRoCommunity;
+    }
+    /**
+     * @return SNMP security level. Required for snmp version 3.
+     * 
+     */
+    public String snmpSecurityLevel() {
+        return this.snmpSecurityLevel;
+    }
+    /**
+     * @return SNMP username. Required for snmp version 3.
+     * 
+     */
+    public String snmpUsername() {
+        return this.snmpUsername;
     }
     /**
      * @return SNMP version
@@ -560,11 +632,17 @@ public final class GetDeviceResult {
         private String name;
         private List<String> networkDeviceGroups;
         private String profileName;
+        private String snmpAuthPassword;
+        private String snmpAuthProtocol;
         private Boolean snmpLinkTrapQuery;
         private Boolean snmpMacTrapQuery;
         private String snmpOriginatingPolicyServiceNode;
         private Integer snmpPollingInterval;
+        private String snmpPrivacyPassword;
+        private String snmpPrivacyProtocol;
         private String snmpRoCommunity;
+        private String snmpSecurityLevel;
+        private String snmpUsername;
         private String snmpVersion;
         private String softwareVersion;
         private String tacacsConnectModeOptions;
@@ -606,11 +684,17 @@ public final class GetDeviceResult {
     	      this.name = defaults.name;
     	      this.networkDeviceGroups = defaults.networkDeviceGroups;
     	      this.profileName = defaults.profileName;
+    	      this.snmpAuthPassword = defaults.snmpAuthPassword;
+    	      this.snmpAuthProtocol = defaults.snmpAuthProtocol;
     	      this.snmpLinkTrapQuery = defaults.snmpLinkTrapQuery;
     	      this.snmpMacTrapQuery = defaults.snmpMacTrapQuery;
     	      this.snmpOriginatingPolicyServiceNode = defaults.snmpOriginatingPolicyServiceNode;
     	      this.snmpPollingInterval = defaults.snmpPollingInterval;
+    	      this.snmpPrivacyPassword = defaults.snmpPrivacyPassword;
+    	      this.snmpPrivacyProtocol = defaults.snmpPrivacyProtocol;
     	      this.snmpRoCommunity = defaults.snmpRoCommunity;
+    	      this.snmpSecurityLevel = defaults.snmpSecurityLevel;
+    	      this.snmpUsername = defaults.snmpUsername;
     	      this.snmpVersion = defaults.snmpVersion;
     	      this.softwareVersion = defaults.softwareVersion;
     	      this.tacacsConnectModeOptions = defaults.tacacsConnectModeOptions;
@@ -784,6 +868,22 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snmpAuthPassword(String snmpAuthPassword) {
+            if (snmpAuthPassword == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpAuthPassword");
+            }
+            this.snmpAuthPassword = snmpAuthPassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpAuthProtocol(String snmpAuthProtocol) {
+            if (snmpAuthProtocol == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpAuthProtocol");
+            }
+            this.snmpAuthProtocol = snmpAuthProtocol;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snmpLinkTrapQuery(Boolean snmpLinkTrapQuery) {
             if (snmpLinkTrapQuery == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "snmpLinkTrapQuery");
@@ -816,11 +916,43 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snmpPrivacyPassword(String snmpPrivacyPassword) {
+            if (snmpPrivacyPassword == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpPrivacyPassword");
+            }
+            this.snmpPrivacyPassword = snmpPrivacyPassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpPrivacyProtocol(String snmpPrivacyProtocol) {
+            if (snmpPrivacyProtocol == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpPrivacyProtocol");
+            }
+            this.snmpPrivacyProtocol = snmpPrivacyProtocol;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snmpRoCommunity(String snmpRoCommunity) {
             if (snmpRoCommunity == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "snmpRoCommunity");
             }
             this.snmpRoCommunity = snmpRoCommunity;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpSecurityLevel(String snmpSecurityLevel) {
+            if (snmpSecurityLevel == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpSecurityLevel");
+            }
+            this.snmpSecurityLevel = snmpSecurityLevel;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpUsername(String snmpUsername) {
+            if (snmpUsername == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpUsername");
+            }
+            this.snmpUsername = snmpUsername;
             return this;
         }
         @CustomType.Setter
@@ -1003,11 +1135,17 @@ public final class GetDeviceResult {
             _resultValue.name = name;
             _resultValue.networkDeviceGroups = networkDeviceGroups;
             _resultValue.profileName = profileName;
+            _resultValue.snmpAuthPassword = snmpAuthPassword;
+            _resultValue.snmpAuthProtocol = snmpAuthProtocol;
             _resultValue.snmpLinkTrapQuery = snmpLinkTrapQuery;
             _resultValue.snmpMacTrapQuery = snmpMacTrapQuery;
             _resultValue.snmpOriginatingPolicyServiceNode = snmpOriginatingPolicyServiceNode;
             _resultValue.snmpPollingInterval = snmpPollingInterval;
+            _resultValue.snmpPrivacyPassword = snmpPrivacyPassword;
+            _resultValue.snmpPrivacyProtocol = snmpPrivacyProtocol;
             _resultValue.snmpRoCommunity = snmpRoCommunity;
+            _resultValue.snmpSecurityLevel = snmpSecurityLevel;
+            _resultValue.snmpUsername = snmpUsername;
             _resultValue.snmpVersion = snmpVersion;
             _resultValue.softwareVersion = softwareVersion;
             _resultValue.tacacsConnectModeOptions = tacacsConnectModeOptions;

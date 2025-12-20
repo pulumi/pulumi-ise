@@ -70,8 +70,13 @@ import javax.annotation.Nullable;
  *             .snmpLinkTrapQuery(true)
  *             .snmpMacTrapQuery(true)
  *             .snmpPollingInterval(1200)
- *             .snmpRoCommunity("rocom")
- *             .snmpVersion("TWO_C")
+ *             .snmpVersion("THREE")
+ *             .snmpUsername("user123")
+ *             .snmpSecurityLevel("PRIV")
+ *             .snmpAuthProtocol("SHA2")
+ *             .snmpAuthPassword("Cisco123")
+ *             .snmpPrivacyProtocol("AES256")
+ *             .snmpPrivacyPassword("Cisco12345")
  *             .tacacsConnectModeOptions("OFF")
  *             .tacacsSharedSecret("cisco123")
  *             .trustsecDeviceId("device123")
@@ -354,6 +359,36 @@ public class Device extends com.pulumi.resources.CustomResource {
         return this.profileName;
     }
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    @Export(name="snmpAuthPassword", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> snmpAuthPassword;
+
+    /**
+     * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    public Output<Optional<String>> snmpAuthPassword() {
+        return Codegen.optional(this.snmpAuthPassword);
+    }
+    /**
+     * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     * 
+     */
+    @Export(name="snmpAuthProtocol", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> snmpAuthProtocol;
+
+    /**
+     * @return SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Choices: `MD5`, `SHA`, `SHA2`
+     * 
+     */
+    public Output<Optional<String>> snmpAuthProtocol() {
+        return Codegen.optional(this.snmpAuthProtocol);
+    }
+    /**
      * SNMP link Trap Query
      * 
      */
@@ -412,6 +447,36 @@ public class Device extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.snmpPollingInterval);
     }
     /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    @Export(name="snmpPrivacyPassword", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> snmpPrivacyPassword;
+
+    /**
+     * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    public Output<Optional<String>> snmpPrivacyPassword() {
+        return Codegen.optional(this.snmpPrivacyPassword);
+    }
+    /**
+     * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     * 
+     */
+    @Export(name="snmpPrivacyProtocol", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> snmpPrivacyProtocol;
+
+    /**
+     * @return SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+     *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+     * 
+     */
+    public Output<Optional<String>> snmpPrivacyProtocol() {
+        return Codegen.optional(this.snmpPrivacyProtocol);
+    }
+    /**
      * SNMP RO Community
      * 
      */
@@ -424,6 +489,36 @@ public class Device extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> snmpRoCommunity() {
         return Codegen.optional(this.snmpRoCommunity);
+    }
+    /**
+     * SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     * 
+     */
+    @Export(name="snmpSecurityLevel", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> snmpSecurityLevel;
+
+    /**
+     * @return SNMP security level. Required for snmp version 3.
+     *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+     * 
+     */
+    public Output<Optional<String>> snmpSecurityLevel() {
+        return Codegen.optional(this.snmpSecurityLevel);
+    }
+    /**
+     * SNMP username. Required for snmp version 3.
+     * 
+     */
+    @Export(name="snmpUsername", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> snmpUsername;
+
+    /**
+     * @return SNMP username. Required for snmp version 3.
+     * 
+     */
+    public Output<Optional<String>> snmpUsername() {
+        return Codegen.optional(this.snmpUsername);
     }
     /**
      * SNMP version

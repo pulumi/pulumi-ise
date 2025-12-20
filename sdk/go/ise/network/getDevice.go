@@ -94,6 +94,10 @@ type LookupDeviceResult struct {
 	NetworkDeviceGroups []string `pulumi:"networkDeviceGroups"`
 	// Profile name
 	ProfileName string `pulumi:"profileName"`
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPassword string `pulumi:"snmpAuthPassword"`
+	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthProtocol string `pulumi:"snmpAuthProtocol"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery bool `pulumi:"snmpLinkTrapQuery"`
 	// SNMP MAC Trap Query
@@ -102,8 +106,16 @@ type LookupDeviceResult struct {
 	SnmpOriginatingPolicyServiceNode string `pulumi:"snmpOriginatingPolicyServiceNode"`
 	// SNMP Polling Interval in seconds
 	SnmpPollingInterval int `pulumi:"snmpPollingInterval"`
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPassword string `pulumi:"snmpPrivacyPassword"`
+	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+	SnmpPrivacyProtocol string `pulumi:"snmpPrivacyProtocol"`
 	// SNMP RO Community
 	SnmpRoCommunity string `pulumi:"snmpRoCommunity"`
+	// SNMP security level. Required for snmp version 3.
+	SnmpSecurityLevel string `pulumi:"snmpSecurityLevel"`
+	// SNMP username. Required for snmp version 3.
+	SnmpUsername string `pulumi:"snmpUsername"`
 	// SNMP version
 	SnmpVersion string `pulumi:"snmpVersion"`
 	// Software version
@@ -272,6 +284,16 @@ func (o LookupDeviceResultOutput) ProfileName() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.ProfileName }).(pulumi.StringOutput)
 }
 
+// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+func (o LookupDeviceResultOutput) SnmpAuthPassword() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpAuthPassword }).(pulumi.StringOutput)
+}
+
+// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+func (o LookupDeviceResultOutput) SnmpAuthProtocol() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpAuthProtocol }).(pulumi.StringOutput)
+}
+
 // SNMP link Trap Query
 func (o LookupDeviceResultOutput) SnmpLinkTrapQuery() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDeviceResult) bool { return v.SnmpLinkTrapQuery }).(pulumi.BoolOutput)
@@ -292,9 +314,29 @@ func (o LookupDeviceResultOutput) SnmpPollingInterval() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupDeviceResult) int { return v.SnmpPollingInterval }).(pulumi.IntOutput)
 }
 
+// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+func (o LookupDeviceResultOutput) SnmpPrivacyPassword() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpPrivacyPassword }).(pulumi.StringOutput)
+}
+
+// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+func (o LookupDeviceResultOutput) SnmpPrivacyProtocol() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpPrivacyProtocol }).(pulumi.StringOutput)
+}
+
 // SNMP RO Community
 func (o LookupDeviceResultOutput) SnmpRoCommunity() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpRoCommunity }).(pulumi.StringOutput)
+}
+
+// SNMP security level. Required for snmp version 3.
+func (o LookupDeviceResultOutput) SnmpSecurityLevel() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpSecurityLevel }).(pulumi.StringOutput)
+}
+
+// SNMP username. Required for snmp version 3.
+func (o LookupDeviceResultOutput) SnmpUsername() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpUsername }).(pulumi.StringOutput)
 }
 
 // SNMP version

@@ -54,8 +54,13 @@ import (
 //				SnmpLinkTrapQuery:                            pulumi.Bool(true),
 //				SnmpMacTrapQuery:                             pulumi.Bool(true),
 //				SnmpPollingInterval:                          pulumi.Int(1200),
-//				SnmpRoCommunity:                              pulumi.String("rocom"),
-//				SnmpVersion:                                  pulumi.String("TWO_C"),
+//				SnmpVersion:                                  pulumi.String("THREE"),
+//				SnmpUsername:                                 pulumi.String("user123"),
+//				SnmpSecurityLevel:                            pulumi.String("PRIV"),
+//				SnmpAuthProtocol:                             pulumi.String("SHA2"),
+//				SnmpAuthPassword:                             pulumi.String("Cisco123"),
+//				SnmpPrivacyProtocol:                          pulumi.String("AES256"),
+//				SnmpPrivacyPassword:                          pulumi.String("Cisco12345"),
 //				TacacsConnectModeOptions:                     pulumi.String("OFF"),
 //				TacacsSharedSecret:                           pulumi.String("cisco123"),
 //				TrustsecDeviceId:                             pulumi.String("device123"),
@@ -131,6 +136,11 @@ type Device struct {
 	// Profile name
 	//   - Default value: `Cisco`
 	ProfileName pulumi.StringOutput `pulumi:"profileName"`
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPassword pulumi.StringPtrOutput `pulumi:"snmpAuthPassword"`
+	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	//   - Choices: `MD5`, `SHA`, `SHA2`
+	SnmpAuthProtocol pulumi.StringPtrOutput `pulumi:"snmpAuthProtocol"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery pulumi.BoolPtrOutput `pulumi:"snmpLinkTrapQuery"`
 	// SNMP MAC Trap Query
@@ -140,8 +150,18 @@ type Device struct {
 	// SNMP Polling Interval in seconds
 	//   - Range: `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrOutput `pulumi:"snmpPollingInterval"`
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPassword pulumi.StringPtrOutput `pulumi:"snmpPrivacyPassword"`
+	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+	//   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+	SnmpPrivacyProtocol pulumi.StringPtrOutput `pulumi:"snmpPrivacyProtocol"`
 	// SNMP RO Community
 	SnmpRoCommunity pulumi.StringPtrOutput `pulumi:"snmpRoCommunity"`
+	// SNMP security level. Required for snmp version 3.
+	//   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+	SnmpSecurityLevel pulumi.StringPtrOutput `pulumi:"snmpSecurityLevel"`
+	// SNMP username. Required for snmp version 3.
+	SnmpUsername pulumi.StringPtrOutput `pulumi:"snmpUsername"`
 	// SNMP version
 	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion pulumi.StringPtrOutput `pulumi:"snmpVersion"`
@@ -258,6 +278,11 @@ type deviceState struct {
 	// Profile name
 	//   - Default value: `Cisco`
 	ProfileName *string `pulumi:"profileName"`
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPassword *string `pulumi:"snmpAuthPassword"`
+	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	//   - Choices: `MD5`, `SHA`, `SHA2`
+	SnmpAuthProtocol *string `pulumi:"snmpAuthProtocol"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery *bool `pulumi:"snmpLinkTrapQuery"`
 	// SNMP MAC Trap Query
@@ -267,8 +292,18 @@ type deviceState struct {
 	// SNMP Polling Interval in seconds
 	//   - Range: `600`-`86400`
 	SnmpPollingInterval *int `pulumi:"snmpPollingInterval"`
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPassword *string `pulumi:"snmpPrivacyPassword"`
+	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+	//   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+	SnmpPrivacyProtocol *string `pulumi:"snmpPrivacyProtocol"`
 	// SNMP RO Community
 	SnmpRoCommunity *string `pulumi:"snmpRoCommunity"`
+	// SNMP security level. Required for snmp version 3.
+	//   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+	SnmpSecurityLevel *string `pulumi:"snmpSecurityLevel"`
+	// SNMP username. Required for snmp version 3.
+	SnmpUsername *string `pulumi:"snmpUsername"`
 	// SNMP version
 	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion *string `pulumi:"snmpVersion"`
@@ -353,6 +388,11 @@ type DeviceState struct {
 	// Profile name
 	//   - Default value: `Cisco`
 	ProfileName pulumi.StringPtrInput
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPassword pulumi.StringPtrInput
+	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	//   - Choices: `MD5`, `SHA`, `SHA2`
+	SnmpAuthProtocol pulumi.StringPtrInput
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery pulumi.BoolPtrInput
 	// SNMP MAC Trap Query
@@ -362,8 +402,18 @@ type DeviceState struct {
 	// SNMP Polling Interval in seconds
 	//   - Range: `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrInput
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPassword pulumi.StringPtrInput
+	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+	//   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+	SnmpPrivacyProtocol pulumi.StringPtrInput
 	// SNMP RO Community
 	SnmpRoCommunity pulumi.StringPtrInput
+	// SNMP security level. Required for snmp version 3.
+	//   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+	SnmpSecurityLevel pulumi.StringPtrInput
+	// SNMP username. Required for snmp version 3.
+	SnmpUsername pulumi.StringPtrInput
 	// SNMP version
 	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion pulumi.StringPtrInput
@@ -452,6 +502,11 @@ type deviceArgs struct {
 	// Profile name
 	//   - Default value: `Cisco`
 	ProfileName *string `pulumi:"profileName"`
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPassword *string `pulumi:"snmpAuthPassword"`
+	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	//   - Choices: `MD5`, `SHA`, `SHA2`
+	SnmpAuthProtocol *string `pulumi:"snmpAuthProtocol"`
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery *bool `pulumi:"snmpLinkTrapQuery"`
 	// SNMP MAC Trap Query
@@ -461,8 +516,18 @@ type deviceArgs struct {
 	// SNMP Polling Interval in seconds
 	//   - Range: `600`-`86400`
 	SnmpPollingInterval *int `pulumi:"snmpPollingInterval"`
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPassword *string `pulumi:"snmpPrivacyPassword"`
+	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+	//   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+	SnmpPrivacyProtocol *string `pulumi:"snmpPrivacyProtocol"`
 	// SNMP RO Community
 	SnmpRoCommunity *string `pulumi:"snmpRoCommunity"`
+	// SNMP security level. Required for snmp version 3.
+	//   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+	SnmpSecurityLevel *string `pulumi:"snmpSecurityLevel"`
+	// SNMP username. Required for snmp version 3.
+	SnmpUsername *string `pulumi:"snmpUsername"`
 	// SNMP version
 	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion *string `pulumi:"snmpVersion"`
@@ -548,6 +613,11 @@ type DeviceArgs struct {
 	// Profile name
 	//   - Default value: `Cisco`
 	ProfileName pulumi.StringPtrInput
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPassword pulumi.StringPtrInput
+	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	//   - Choices: `MD5`, `SHA`, `SHA2`
+	SnmpAuthProtocol pulumi.StringPtrInput
 	// SNMP link Trap Query
 	SnmpLinkTrapQuery pulumi.BoolPtrInput
 	// SNMP MAC Trap Query
@@ -557,8 +627,18 @@ type DeviceArgs struct {
 	// SNMP Polling Interval in seconds
 	//   - Range: `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrInput
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPassword pulumi.StringPtrInput
+	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+	//   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+	SnmpPrivacyProtocol pulumi.StringPtrInput
 	// SNMP RO Community
 	SnmpRoCommunity pulumi.StringPtrInput
+	// SNMP security level. Required for snmp version 3.
+	//   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+	SnmpSecurityLevel pulumi.StringPtrInput
+	// SNMP username. Required for snmp version 3.
+	SnmpUsername pulumi.StringPtrInput
 	// SNMP version
 	//   - Choices: `ONE`, `TWO_C`, `THREE`
 	SnmpVersion pulumi.StringPtrInput
@@ -780,6 +860,17 @@ func (o DeviceOutput) ProfileName() pulumi.StringOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringOutput { return v.ProfileName }).(pulumi.StringOutput)
 }
 
+// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+func (o DeviceOutput) SnmpAuthPassword() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpAuthPassword }).(pulumi.StringPtrOutput)
+}
+
+// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+//   - Choices: `MD5`, `SHA`, `SHA2`
+func (o DeviceOutput) SnmpAuthProtocol() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpAuthProtocol }).(pulumi.StringPtrOutput)
+}
+
 // SNMP link Trap Query
 func (o DeviceOutput) SnmpLinkTrapQuery() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.BoolPtrOutput { return v.SnmpLinkTrapQuery }).(pulumi.BoolPtrOutput)
@@ -801,9 +892,31 @@ func (o DeviceOutput) SnmpPollingInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.IntPtrOutput { return v.SnmpPollingInterval }).(pulumi.IntPtrOutput)
 }
 
+// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+func (o DeviceOutput) SnmpPrivacyPassword() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpPrivacyPassword }).(pulumi.StringPtrOutput)
+}
+
+// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+//   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
+func (o DeviceOutput) SnmpPrivacyProtocol() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpPrivacyProtocol }).(pulumi.StringPtrOutput)
+}
+
 // SNMP RO Community
 func (o DeviceOutput) SnmpRoCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpRoCommunity }).(pulumi.StringPtrOutput)
+}
+
+// SNMP security level. Required for snmp version 3.
+//   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
+func (o DeviceOutput) SnmpSecurityLevel() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpSecurityLevel }).(pulumi.StringPtrOutput)
+}
+
+// SNMP username. Required for snmp version 3.
+func (o DeviceOutput) SnmpUsername() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.StringPtrOutput { return v.SnmpUsername }).(pulumi.StringPtrOutput)
 }
 
 // SNMP version

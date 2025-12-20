@@ -27,7 +27,7 @@ class GetDeviceResult:
     """
     A collection of values returned by getDevice.
     """
-    def __init__(__self__, authentication_dtls_required=None, authentication_enable_key_wrap=None, authentication_enable_multi_secret=None, authentication_encryption_key=None, authentication_encryption_key_format=None, authentication_message_authenticator_code_key=None, authentication_network_protocol=None, authentication_radius_shared_secret=None, authentication_second_radius_shared_secret=None, coa_port=None, description=None, dtls_dns_name=None, id=None, ips=None, model_name=None, name=None, network_device_groups=None, profile_name=None, snmp_link_trap_query=None, snmp_mac_trap_query=None, snmp_originating_policy_service_node=None, snmp_polling_interval=None, snmp_ro_community=None, snmp_version=None, software_version=None, tacacs_connect_mode_options=None, tacacs_shared_secret=None, trustsec_coa_source_host=None, trustsec_device_id=None, trustsec_device_password=None, trustsec_download_environment_data_every_x_seconds=None, trustsec_download_peer_authorization_policy_every_x_seconds=None, trustsec_download_sgacl_lists_every_x_seconds=None, trustsec_enable_mode_password=None, trustsec_exec_mode_password=None, trustsec_exec_mode_username=None, trustsec_include_when_deploying_sgt_updates=None, trustsec_other_sga_devices_to_trust_this_device=None, trustsec_re_authentication_every_x_seconds=None, trustsec_rest_api_password=None, trustsec_rest_api_username=None, trustsec_send_configuration_to_device=None, trustsec_send_configuration_to_device_using=None):
+    def __init__(__self__, authentication_dtls_required=None, authentication_enable_key_wrap=None, authentication_enable_multi_secret=None, authentication_encryption_key=None, authentication_encryption_key_format=None, authentication_message_authenticator_code_key=None, authentication_network_protocol=None, authentication_radius_shared_secret=None, authentication_second_radius_shared_secret=None, coa_port=None, description=None, dtls_dns_name=None, id=None, ips=None, model_name=None, name=None, network_device_groups=None, profile_name=None, snmp_auth_password=None, snmp_auth_protocol=None, snmp_link_trap_query=None, snmp_mac_trap_query=None, snmp_originating_policy_service_node=None, snmp_polling_interval=None, snmp_privacy_password=None, snmp_privacy_protocol=None, snmp_ro_community=None, snmp_security_level=None, snmp_username=None, snmp_version=None, software_version=None, tacacs_connect_mode_options=None, tacacs_shared_secret=None, trustsec_coa_source_host=None, trustsec_device_id=None, trustsec_device_password=None, trustsec_download_environment_data_every_x_seconds=None, trustsec_download_peer_authorization_policy_every_x_seconds=None, trustsec_download_sgacl_lists_every_x_seconds=None, trustsec_enable_mode_password=None, trustsec_exec_mode_password=None, trustsec_exec_mode_username=None, trustsec_include_when_deploying_sgt_updates=None, trustsec_other_sga_devices_to_trust_this_device=None, trustsec_re_authentication_every_x_seconds=None, trustsec_rest_api_password=None, trustsec_rest_api_username=None, trustsec_send_configuration_to_device=None, trustsec_send_configuration_to_device_using=None):
         if authentication_dtls_required and not isinstance(authentication_dtls_required, bool):
             raise TypeError("Expected argument 'authentication_dtls_required' to be a bool")
         pulumi.set(__self__, "authentication_dtls_required", authentication_dtls_required)
@@ -82,6 +82,12 @@ class GetDeviceResult:
         if profile_name and not isinstance(profile_name, str):
             raise TypeError("Expected argument 'profile_name' to be a str")
         pulumi.set(__self__, "profile_name", profile_name)
+        if snmp_auth_password and not isinstance(snmp_auth_password, str):
+            raise TypeError("Expected argument 'snmp_auth_password' to be a str")
+        pulumi.set(__self__, "snmp_auth_password", snmp_auth_password)
+        if snmp_auth_protocol and not isinstance(snmp_auth_protocol, str):
+            raise TypeError("Expected argument 'snmp_auth_protocol' to be a str")
+        pulumi.set(__self__, "snmp_auth_protocol", snmp_auth_protocol)
         if snmp_link_trap_query and not isinstance(snmp_link_trap_query, bool):
             raise TypeError("Expected argument 'snmp_link_trap_query' to be a bool")
         pulumi.set(__self__, "snmp_link_trap_query", snmp_link_trap_query)
@@ -94,9 +100,21 @@ class GetDeviceResult:
         if snmp_polling_interval and not isinstance(snmp_polling_interval, int):
             raise TypeError("Expected argument 'snmp_polling_interval' to be a int")
         pulumi.set(__self__, "snmp_polling_interval", snmp_polling_interval)
+        if snmp_privacy_password and not isinstance(snmp_privacy_password, str):
+            raise TypeError("Expected argument 'snmp_privacy_password' to be a str")
+        pulumi.set(__self__, "snmp_privacy_password", snmp_privacy_password)
+        if snmp_privacy_protocol and not isinstance(snmp_privacy_protocol, str):
+            raise TypeError("Expected argument 'snmp_privacy_protocol' to be a str")
+        pulumi.set(__self__, "snmp_privacy_protocol", snmp_privacy_protocol)
         if snmp_ro_community and not isinstance(snmp_ro_community, str):
             raise TypeError("Expected argument 'snmp_ro_community' to be a str")
         pulumi.set(__self__, "snmp_ro_community", snmp_ro_community)
+        if snmp_security_level and not isinstance(snmp_security_level, str):
+            raise TypeError("Expected argument 'snmp_security_level' to be a str")
+        pulumi.set(__self__, "snmp_security_level", snmp_security_level)
+        if snmp_username and not isinstance(snmp_username, str):
+            raise TypeError("Expected argument 'snmp_username' to be a str")
+        pulumi.set(__self__, "snmp_username", snmp_username)
         if snmp_version and not isinstance(snmp_version, str):
             raise TypeError("Expected argument 'snmp_version' to be a str")
         pulumi.set(__self__, "snmp_version", snmp_version)
@@ -303,6 +321,22 @@ class GetDeviceResult:
         return pulumi.get(self, "profile_name")
 
     @_builtins.property
+    @pulumi.getter(name="snmpAuthPassword")
+    def snmp_auth_password(self) -> _builtins.str:
+        """
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        """
+        return pulumi.get(self, "snmp_auth_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthProtocol")
+    def snmp_auth_protocol(self) -> _builtins.str:
+        """
+        SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        """
+        return pulumi.get(self, "snmp_auth_protocol")
+
+    @_builtins.property
     @pulumi.getter(name="snmpLinkTrapQuery")
     def snmp_link_trap_query(self) -> _builtins.bool:
         """
@@ -335,12 +369,44 @@ class GetDeviceResult:
         return pulumi.get(self, "snmp_polling_interval")
 
     @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPassword")
+    def snmp_privacy_password(self) -> _builtins.str:
+        """
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        """
+        return pulumi.get(self, "snmp_privacy_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyProtocol")
+    def snmp_privacy_protocol(self) -> _builtins.str:
+        """
+        SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+        """
+        return pulumi.get(self, "snmp_privacy_protocol")
+
+    @_builtins.property
     @pulumi.getter(name="snmpRoCommunity")
     def snmp_ro_community(self) -> _builtins.str:
         """
         SNMP RO Community
         """
         return pulumi.get(self, "snmp_ro_community")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpSecurityLevel")
+    def snmp_security_level(self) -> _builtins.str:
+        """
+        SNMP security level. Required for snmp version 3.
+        """
+        return pulumi.get(self, "snmp_security_level")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpUsername")
+    def snmp_username(self) -> _builtins.str:
+        """
+        SNMP username. Required for snmp version 3.
+        """
+        return pulumi.get(self, "snmp_username")
 
     @_builtins.property
     @pulumi.getter(name="snmpVersion")
@@ -527,11 +593,17 @@ class AwaitableGetDeviceResult(GetDeviceResult):
             name=self.name,
             network_device_groups=self.network_device_groups,
             profile_name=self.profile_name,
+            snmp_auth_password=self.snmp_auth_password,
+            snmp_auth_protocol=self.snmp_auth_protocol,
             snmp_link_trap_query=self.snmp_link_trap_query,
             snmp_mac_trap_query=self.snmp_mac_trap_query,
             snmp_originating_policy_service_node=self.snmp_originating_policy_service_node,
             snmp_polling_interval=self.snmp_polling_interval,
+            snmp_privacy_password=self.snmp_privacy_password,
+            snmp_privacy_protocol=self.snmp_privacy_protocol,
             snmp_ro_community=self.snmp_ro_community,
+            snmp_security_level=self.snmp_security_level,
+            snmp_username=self.snmp_username,
             snmp_version=self.snmp_version,
             software_version=self.software_version,
             tacacs_connect_mode_options=self.tacacs_connect_mode_options,
@@ -598,11 +670,17 @@ def get_device(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         network_device_groups=pulumi.get(__ret__, 'network_device_groups'),
         profile_name=pulumi.get(__ret__, 'profile_name'),
+        snmp_auth_password=pulumi.get(__ret__, 'snmp_auth_password'),
+        snmp_auth_protocol=pulumi.get(__ret__, 'snmp_auth_protocol'),
         snmp_link_trap_query=pulumi.get(__ret__, 'snmp_link_trap_query'),
         snmp_mac_trap_query=pulumi.get(__ret__, 'snmp_mac_trap_query'),
         snmp_originating_policy_service_node=pulumi.get(__ret__, 'snmp_originating_policy_service_node'),
         snmp_polling_interval=pulumi.get(__ret__, 'snmp_polling_interval'),
+        snmp_privacy_password=pulumi.get(__ret__, 'snmp_privacy_password'),
+        snmp_privacy_protocol=pulumi.get(__ret__, 'snmp_privacy_protocol'),
         snmp_ro_community=pulumi.get(__ret__, 'snmp_ro_community'),
+        snmp_security_level=pulumi.get(__ret__, 'snmp_security_level'),
+        snmp_username=pulumi.get(__ret__, 'snmp_username'),
         snmp_version=pulumi.get(__ret__, 'snmp_version'),
         software_version=pulumi.get(__ret__, 'software_version'),
         tacacs_connect_mode_options=pulumi.get(__ret__, 'tacacs_connect_mode_options'),
@@ -666,11 +744,17 @@ def get_device_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None
         name=pulumi.get(__response__, 'name'),
         network_device_groups=pulumi.get(__response__, 'network_device_groups'),
         profile_name=pulumi.get(__response__, 'profile_name'),
+        snmp_auth_password=pulumi.get(__response__, 'snmp_auth_password'),
+        snmp_auth_protocol=pulumi.get(__response__, 'snmp_auth_protocol'),
         snmp_link_trap_query=pulumi.get(__response__, 'snmp_link_trap_query'),
         snmp_mac_trap_query=pulumi.get(__response__, 'snmp_mac_trap_query'),
         snmp_originating_policy_service_node=pulumi.get(__response__, 'snmp_originating_policy_service_node'),
         snmp_polling_interval=pulumi.get(__response__, 'snmp_polling_interval'),
+        snmp_privacy_password=pulumi.get(__response__, 'snmp_privacy_password'),
+        snmp_privacy_protocol=pulumi.get(__response__, 'snmp_privacy_protocol'),
         snmp_ro_community=pulumi.get(__response__, 'snmp_ro_community'),
+        snmp_security_level=pulumi.get(__response__, 'snmp_security_level'),
+        snmp_username=pulumi.get(__response__, 'snmp_username'),
         snmp_version=pulumi.get(__response__, 'snmp_version'),
         software_version=pulumi.get(__response__, 'software_version'),
         tacacs_connect_mode_options=pulumi.get(__response__, 'tacacs_connect_mode_options'),

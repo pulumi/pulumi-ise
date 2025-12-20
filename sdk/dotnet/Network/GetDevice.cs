@@ -202,6 +202,14 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly string ProfileName;
         /// <summary>
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        /// </summary>
+        public readonly string SnmpAuthPassword;
+        /// <summary>
+        /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        /// </summary>
+        public readonly string SnmpAuthProtocol;
+        /// <summary>
         /// SNMP link Trap Query
         /// </summary>
         public readonly bool SnmpLinkTrapQuery;
@@ -218,9 +226,25 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly int SnmpPollingInterval;
         /// <summary>
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        /// </summary>
+        public readonly string SnmpPrivacyPassword;
+        /// <summary>
+        /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
+        /// </summary>
+        public readonly string SnmpPrivacyProtocol;
+        /// <summary>
         /// SNMP RO Community
         /// </summary>
         public readonly string SnmpRoCommunity;
+        /// <summary>
+        /// SNMP security level. Required for snmp version 3.
+        /// </summary>
+        public readonly string SnmpSecurityLevel;
+        /// <summary>
+        /// SNMP username. Required for snmp version 3.
+        /// </summary>
+        public readonly string SnmpUsername;
         /// <summary>
         /// SNMP version
         /// </summary>
@@ -340,6 +364,10 @@ namespace Pulumi.Ise.Network
 
             string profileName,
 
+            string snmpAuthPassword,
+
+            string snmpAuthProtocol,
+
             bool snmpLinkTrapQuery,
 
             bool snmpMacTrapQuery,
@@ -348,7 +376,15 @@ namespace Pulumi.Ise.Network
 
             int snmpPollingInterval,
 
+            string snmpPrivacyPassword,
+
+            string snmpPrivacyProtocol,
+
             string snmpRoCommunity,
+
+            string snmpSecurityLevel,
+
+            string snmpUsername,
 
             string snmpVersion,
 
@@ -408,11 +444,17 @@ namespace Pulumi.Ise.Network
             Name = name;
             NetworkDeviceGroups = networkDeviceGroups;
             ProfileName = profileName;
+            SnmpAuthPassword = snmpAuthPassword;
+            SnmpAuthProtocol = snmpAuthProtocol;
             SnmpLinkTrapQuery = snmpLinkTrapQuery;
             SnmpMacTrapQuery = snmpMacTrapQuery;
             SnmpOriginatingPolicyServiceNode = snmpOriginatingPolicyServiceNode;
             SnmpPollingInterval = snmpPollingInterval;
+            SnmpPrivacyPassword = snmpPrivacyPassword;
+            SnmpPrivacyProtocol = snmpPrivacyProtocol;
             SnmpRoCommunity = snmpRoCommunity;
+            SnmpSecurityLevel = snmpSecurityLevel;
+            SnmpUsername = snmpUsername;
             SnmpVersion = snmpVersion;
             SoftwareVersion = softwareVersion;
             TacacsConnectModeOptions = tacacsConnectModeOptions;
