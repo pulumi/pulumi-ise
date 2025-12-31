@@ -1,0 +1,3 @@
+name: ise
+description: A Pulumi resource provider for ise.
+language: schema
