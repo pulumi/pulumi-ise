@@ -64,7 +64,7 @@ class GetCertificateAuthenticationProfileResult:
     @pulumi.getter(name="certificateAttributeName")
     def certificate_attribute_name(self) -> _builtins.str:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL*SUBJECT*AND*ALTERNATIVE*NAMES.
         """
         return pulumi.get(self, "certificate_attribute_name")
 

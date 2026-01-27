@@ -17,7 +17,7 @@ public final class GetCertificateAuthenticationProfileResult {
      */
     private Boolean allowedAsUserName;
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL*SUBJECT*AND*ALTERNATIVE*NAMES.
      * 
      */
     private String certificateAttributeName;
@@ -61,7 +61,7 @@ public final class GetCertificateAuthenticationProfileResult {
         return this.allowedAsUserName;
     }
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL*SUBJECT*AND*ALTERNATIVE*NAMES.
      * 
      */
     public String certificateAttributeName() {

@@ -77,7 +77,7 @@ class EgressPushMatrix(pulumi.CustomResource):
                  force: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        This resource triggers a TrustSec Egress Matrix Push operation to all TrustSec devices.
+        This resource triggers a CoA notification on TrustSec Policy, SGACL, or TrustSec Environment Data updates
 
         ## Example Usage
 
@@ -100,7 +100,7 @@ class EgressPushMatrix(pulumi.CustomResource):
                  args: Optional[EgressPushMatrixArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        This resource triggers a TrustSec Egress Matrix Push operation to all TrustSec devices.
+        This resource triggers a CoA notification on TrustSec Policy, SGACL, or TrustSec Environment Data updates
 
         ## Example Usage
 

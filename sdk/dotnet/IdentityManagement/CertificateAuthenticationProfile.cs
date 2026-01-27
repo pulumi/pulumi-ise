@@ -55,12 +55,11 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<bool> AllowedAsUserName { get; private set; } = null!;
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
-        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-        ///   - Default value: `SUBJECT_COMMON_NAME`
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`. When `UsernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         /// </summary>
         [Output("certificateAttributeName")]
-        public Output<string> CertificateAttributeName { get; private set; } = null!;
+        public Output<string?> CertificateAttributeName { get; private set; } = null!;
 
         /// <summary>
         /// Description
@@ -151,9 +150,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool>? AllowedAsUserName { get; set; }
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
-        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-        ///   - Default value: `SUBJECT_COMMON_NAME`
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`. When `UsernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         /// </summary>
         [Input("certificateAttributeName")]
         public Input<string>? CertificateAttributeName { get; set; }
@@ -209,9 +207,8 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<bool>? AllowedAsUserName { get; set; }
 
         /// <summary>
-        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`.
-        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-        ///   - Default value: `SUBJECT_COMMON_NAME`
+        /// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `UsernameFrom`. When `UsernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+        ///   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         /// </summary>
         [Input("certificateAttributeName")]
         public Input<string>? CertificateAttributeName { get; set; }
