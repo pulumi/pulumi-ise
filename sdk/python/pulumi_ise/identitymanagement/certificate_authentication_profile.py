@@ -30,9 +30,8 @@ class CertificateAuthenticationProfileArgs:
         The set of arguments for constructing a CertificateAuthenticationProfile resource.
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-                 - Default value: `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
                  - Default value: `[not applicable]`
@@ -76,9 +75,8 @@ class CertificateAuthenticationProfileArgs:
     @pulumi.getter(name="certificateAttributeName")
     def certificate_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-          - Default value: `SUBJECT_COMMON_NAME`
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         """
         return pulumi.get(self, "certificate_attribute_name")
 
@@ -166,9 +164,8 @@ class _CertificateAuthenticationProfileState:
         Input properties used for looking up and filtering CertificateAuthenticationProfile resources.
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-                 - Default value: `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
                  - Default value: `[not applicable]`
@@ -212,9 +209,8 @@ class _CertificateAuthenticationProfileState:
     @pulumi.getter(name="certificateAttributeName")
     def certificate_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-          - Default value: `SUBJECT_COMMON_NAME`
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         """
         return pulumi.get(self, "certificate_attribute_name")
 
@@ -333,9 +329,8 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-                 - Default value: `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
                  - Default value: `[not applicable]`
@@ -444,9 +439,8 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-                 - Default value: `SUBJECT_COMMON_NAME`
+        :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+                 - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] external_identity_store_name: Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
                  - Default value: `[not applicable]`
@@ -482,11 +476,10 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="certificateAttributeName")
-    def certificate_attribute_name(self) -> pulumi.Output[_builtins.str]:
+    def certificate_attribute_name(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`.
-          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-          - Default value: `SUBJECT_COMMON_NAME`
+        Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+          - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
         """
         return pulumi.get(self, "certificate_attribute_name")
 

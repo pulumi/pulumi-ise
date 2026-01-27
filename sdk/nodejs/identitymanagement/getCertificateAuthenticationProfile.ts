@@ -50,7 +50,7 @@ export interface GetCertificateAuthenticationProfileResult {
      */
     readonly allowedAsUserName: boolean;
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL*SUBJECT*AND*ALTERNATIVE*NAMES.
      */
     readonly certificateAttributeName: string;
     /**

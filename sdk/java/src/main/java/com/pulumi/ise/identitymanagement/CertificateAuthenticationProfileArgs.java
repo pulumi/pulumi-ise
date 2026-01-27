@@ -34,18 +34,16 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
     }
 
     /**
-     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
-     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-     *   - Default value: `SUBJECT_COMMON_NAME`
+     * Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
      * 
      */
     @Import(name="certificateAttributeName")
     private @Nullable Output<String> certificateAttributeName;
 
     /**
-     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
-     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-     *   - Default value: `SUBJECT_COMMON_NAME`
+     * @return Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+     *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
      * 
      */
     public Optional<Output<String>> certificateAttributeName() {
@@ -191,9 +189,8 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
-         *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-         *   - Default value: `SUBJECT_COMMON_NAME`
+         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+         *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
          * 
          * @return builder
          * 
@@ -204,9 +201,8 @@ public final class CertificateAuthenticationProfileArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
-         *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`
-         *   - Default value: `SUBJECT_COMMON_NAME`
+         * @param certificateAttributeName Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
+         *   - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
          * 
          * @return builder
          * 

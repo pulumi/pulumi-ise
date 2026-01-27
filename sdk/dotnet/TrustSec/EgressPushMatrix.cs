@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Ise.TrustSec
 {
     /// <summary>
-    /// This resource triggers a TrustSec Egress Matrix Push operation to all TrustSec devices.
+    /// This resource triggers a CoA notification on TrustSec Policy, SGACL, or TrustSec Environment Data updates
     /// 
     /// ## Example Usage
     /// 

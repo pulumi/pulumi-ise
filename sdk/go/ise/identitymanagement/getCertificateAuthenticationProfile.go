@@ -60,7 +60,7 @@ type LookupCertificateAuthenticationProfileArgs struct {
 type LookupCertificateAuthenticationProfileResult struct {
 	// Allow as username
 	AllowedAsUserName bool `pulumi:"allowedAsUserName"`
-	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+	// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL*SUBJECT*AND*ALTERNATIVE*NAMES.
 	CertificateAttributeName string `pulumi:"certificateAttributeName"`
 	// Description
 	Description string `pulumi:"description"`
@@ -117,7 +117,7 @@ func (o LookupCertificateAuthenticationProfileResultOutput) AllowedAsUserName() 
 	return o.ApplyT(func(v LookupCertificateAuthenticationProfileResult) bool { return v.AllowedAsUserName }).(pulumi.BoolOutput)
 }
 
-// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`.
+// Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `usernameFrom`. When `usernameFrom` is set to UPN, ISE automatically sets this to ALL*SUBJECT*AND*ALTERNATIVE*NAMES.
 func (o LookupCertificateAuthenticationProfileResultOutput) CertificateAttributeName() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateAuthenticationProfileResult) string { return v.CertificateAttributeName }).(pulumi.StringOutput)
 }
