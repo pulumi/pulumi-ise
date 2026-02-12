@@ -19,22 +19,17 @@ __all__ = [
     'LicenseTierStateLicenseArgsDict',
 ]
 
-MYPY = False
-
-if not MYPY:
-    class LicenseTierStateLicenseArgsDict(TypedDict):
-        name: pulumi.Input[_builtins.str]
-        """
-        License name
-          - Choices: `ESSENTIAL`, `ADVANTAGE`, `PREMIER`, `DEVICEADMIN`, `VM`
-        """
-        status: pulumi.Input[_builtins.str]
-        """
-        License status
-          - Choices: `ENABLED`, `DISABLED`
-        """
-elif False:
-    LicenseTierStateLicenseArgsDict: TypeAlias = Mapping[str, Any]
+class LicenseTierStateLicenseArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    License name
+      - Choices: `ESSENTIAL`, `ADVANTAGE`, `PREMIER`, `DEVICEADMIN`, `VM`
+    """
+    status: pulumi.Input[_builtins.str]
+    """
+    License status
+      - Choices: `ENABLED`, `DISABLED`
+    """
 
 @pulumi.input_type
 class LicenseTierStateLicenseArgs:

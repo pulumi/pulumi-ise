@@ -29,21 +29,16 @@ __all__ = [
     'IdentitySourceSequenceIdentitySourceArgsDict',
 ]
 
-MYPY = False
-
-if not MYPY:
-    class ActiveDirectoryAddGroupsGroupArgsDict(TypedDict):
-        name: pulumi.Input[_builtins.str]
-        """
-        Required for each group in the group list with no duplication between groups
-        """
-        sid: pulumi.Input[_builtins.str]
-        """
-        Required for each group in the group list with no duplication between groups
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ActiveDirectoryAddGroupsGroupArgsDict: TypeAlias = Mapping[str, Any]
+class ActiveDirectoryAddGroupsGroupArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Required for each group in the group list with no duplication between groups
+    """
+    sid: pulumi.Input[_builtins.str]
+    """
+    Required for each group in the group list with no duplication between groups
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ActiveDirectoryAddGroupsGroupArgs:
@@ -94,18 +89,15 @@ class ActiveDirectoryAddGroupsGroupArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict(TypedDict):
-        name: pulumi.Input[_builtins.str]
-        """
-        Additional attribute name
-        """
-        value: pulumi.Input[_builtins.str]
-        """
-        Additional attribute value
-        """
-elif False:
-    ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict: TypeAlias = Mapping[str, Any]
+class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Additional attribute name
+    """
+    value: pulumi.Input[_builtins.str]
+    """
+    Additional attribute value
+    """
 
 @pulumi.input_type
 class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs:
@@ -144,27 +136,24 @@ class ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class ActiveDirectoryJoinPointAttributeArgsDict(TypedDict):
-        default_value: pulumi.Input[_builtins.str]
-        """
-        Required for each attribute in the attribute list. Can contain an empty string.
-        """
-        internal_name: pulumi.Input[_builtins.str]
-        """
-        Required for each attribute in the attribute list
-        """
-        name: pulumi.Input[_builtins.str]
-        """
-        Required for each attribute in the attribute list with no duplication between attributes
-        """
-        type: pulumi.Input[_builtins.str]
-        """
-        Required for each group in the group list
-          - Choices: `STRING`, `IP`, `BOOLEAN`, `INT`, `OCTET_STRING`
-        """
-elif False:
-    ActiveDirectoryJoinPointAttributeArgsDict: TypeAlias = Mapping[str, Any]
+class ActiveDirectoryJoinPointAttributeArgsDict(TypedDict):
+    default_value: pulumi.Input[_builtins.str]
+    """
+    Required for each attribute in the attribute list. Can contain an empty string.
+    """
+    internal_name: pulumi.Input[_builtins.str]
+    """
+    Required for each attribute in the attribute list
+    """
+    name: pulumi.Input[_builtins.str]
+    """
+    Required for each attribute in the attribute list with no duplication between attributes
+    """
+    type: pulumi.Input[_builtins.str]
+    """
+    Required for each group in the group list
+      - Choices: `STRING`, `IP`, `BOOLEAN`, `INT`, `OCTET_STRING`
+    """
 
 @pulumi.input_type
 class ActiveDirectoryJoinPointAttributeArgs:
@@ -235,19 +224,16 @@ class ActiveDirectoryJoinPointAttributeArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ActiveDirectoryJoinPointGroupArgsDict(TypedDict):
-        name: pulumi.Input[_builtins.str]
-        """
-        Required for each group in the group list with no duplication between groups
-        """
-        sid: pulumi.Input[_builtins.str]
-        """
-        Required for each group in the group list with no duplication between groups
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ActiveDirectoryJoinPointGroupArgsDict: TypeAlias = Mapping[str, Any]
+class ActiveDirectoryJoinPointGroupArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Required for each group in the group list with no duplication between groups
+    """
+    sid: pulumi.Input[_builtins.str]
+    """
+    Required for each group in the group list with no duplication between groups
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ActiveDirectoryJoinPointGroupArgs:
@@ -298,22 +284,19 @@ class ActiveDirectoryJoinPointGroupArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ActiveDirectoryJoinPointRewriteRuleArgsDict(TypedDict):
-        rewrite_match: pulumi.Input[_builtins.str]
-        """
-        Required for each rule in the list with no duplication between rules
-        """
-        rewrite_result: pulumi.Input[_builtins.str]
-        """
-        Required for each rule in the list
-        """
-        row_id: pulumi.Input[_builtins.str]
-        """
-        Required for each rule in the list in serial order
-        """
-elif False:
-    ActiveDirectoryJoinPointRewriteRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ActiveDirectoryJoinPointRewriteRuleArgsDict(TypedDict):
+    rewrite_match: pulumi.Input[_builtins.str]
+    """
+    Required for each rule in the list with no duplication between rules
+    """
+    rewrite_result: pulumi.Input[_builtins.str]
+    """
+    Required for each rule in the list
+    """
+    row_id: pulumi.Input[_builtins.str]
+    """
+    Required for each rule in the list in serial order
+    """
 
 @pulumi.input_type
 class ActiveDirectoryJoinPointRewriteRuleArgs:
@@ -367,18 +350,15 @@ class ActiveDirectoryJoinPointRewriteRuleArgs:
         pulumi.set(self, "row_id", value)
 
 
-if not MYPY:
-    class IdentitySourceSequenceIdentitySourceArgsDict(TypedDict):
-        name: pulumi.Input[_builtins.str]
-        """
-        Name of the identity source
-        """
-        order: pulumi.Input[_builtins.int]
-        """
-        Order of the identity source in the sequence
-        """
-elif False:
-    IdentitySourceSequenceIdentitySourceArgsDict: TypeAlias = Mapping[str, Any]
+class IdentitySourceSequenceIdentitySourceArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Name of the identity source
+    """
+    order: pulumi.Input[_builtins.int]
+    """
+    Order of the identity source in the sequence
+    """
 
 @pulumi.input_type
 class IdentitySourceSequenceIdentitySourceArgs:

@@ -53,50 +53,45 @@ __all__ = [
     'PolicySetUpdateRanksPolicyArgsDict',
 ]
 
-MYPY = False
-
-if not MYPY:
-    class AuthenticationRuleChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenArgsDict']]]]
-        """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
-        """
-elif False:
-    AuthenticationRuleChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthenticationRuleChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+      - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenArgsDict']]]]
+    """
+    List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+    """
 
 @pulumi.input_type
 class AuthenticationRuleChildrenArgs:
@@ -252,44 +247,41 @@ class AuthenticationRuleChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthenticationRuleChildrenChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Condition type.
-          - Choices: `ConditionAttributes`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        """
-elif False:
-    AuthenticationRuleChildrenChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthenticationRuleChildrenChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Condition type.
+      - Choices: `ConditionAttributes`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+    """
 
 @pulumi.input_type
 class AuthenticationRuleChildrenChildrenArgs:
@@ -429,18 +421,15 @@ class AuthenticationRuleChildrenChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthenticationRuleUpdateRanksRuleArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Authentication rule ID
-        """
-        rank: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The rank (priority) in relation to other rules. Lower rank is higher priority.
-        """
-elif False:
-    AuthenticationRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+class AuthenticationRuleUpdateRanksRuleArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Authentication rule ID
+    """
+    rank: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The rank (priority) in relation to other rules. Lower rank is higher priority.
+    """
 
 @pulumi.input_type
 class AuthenticationRuleUpdateRanksRuleArgs:
@@ -481,48 +470,45 @@ class AuthenticationRuleUpdateRanksRuleArgs:
         pulumi.set(self, "rank", value)
 
 
-if not MYPY:
-    class AuthorizationExceptionRuleChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenArgsDict']]]]
-        """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
-        """
-elif False:
-    AuthorizationExceptionRuleChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationExceptionRuleChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+      - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenArgsDict']]]]
+    """
+    List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+    """
 
 @pulumi.input_type
 class AuthorizationExceptionRuleChildrenArgs:
@@ -678,44 +664,41 @@ class AuthorizationExceptionRuleChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthorizationExceptionRuleChildrenChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Condition type.
-          - Choices: `ConditionAttributes`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        """
-elif False:
-    AuthorizationExceptionRuleChildrenChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationExceptionRuleChildrenChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Condition type.
+      - Choices: `ConditionAttributes`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+    """
 
 @pulumi.input_type
 class AuthorizationExceptionRuleChildrenChildrenArgs:
@@ -855,18 +838,15 @@ class AuthorizationExceptionRuleChildrenChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthorizationExceptionRuleUpdateRanksRuleArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Authorization rule ID
-        """
-        rank: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The rank (priority) in relation to other rules. Lower rank is higher priority.
-        """
-elif False:
-    AuthorizationExceptionRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationExceptionRuleUpdateRanksRuleArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Authorization rule ID
+    """
+    rank: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The rank (priority) in relation to other rules. Lower rank is higher priority.
+    """
 
 @pulumi.input_type
 class AuthorizationExceptionRuleUpdateRanksRuleArgs:
@@ -907,48 +887,45 @@ class AuthorizationExceptionRuleUpdateRanksRuleArgs:
         pulumi.set(self, "rank", value)
 
 
-if not MYPY:
-    class AuthorizationGlobalExceptionRuleChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict']]]]
-        """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
-        """
-elif False:
-    AuthorizationGlobalExceptionRuleChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationGlobalExceptionRuleChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+      - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict']]]]
+    """
+    List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+    """
 
 @pulumi.input_type
 class AuthorizationGlobalExceptionRuleChildrenArgs:
@@ -1104,44 +1081,41 @@ class AuthorizationGlobalExceptionRuleChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Condition type.
-          - Choices: `ConditionAttributes`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        """
-elif False:
-    AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Condition type.
+      - Choices: `ConditionAttributes`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+    """
 
 @pulumi.input_type
 class AuthorizationGlobalExceptionRuleChildrenChildrenArgs:
@@ -1281,18 +1255,15 @@ class AuthorizationGlobalExceptionRuleChildrenChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Authorization rule ID
-        """
-        rank: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The rank (priority) in relation to other rules. Lower rank is higher priority.
-        """
-elif False:
-    AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Authorization rule ID
+    """
+    rank: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The rank (priority) in relation to other rules. Lower rank is higher priority.
+    """
 
 @pulumi.input_type
 class AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs:
@@ -1333,35 +1304,32 @@ class AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs:
         pulumi.set(self, "rank", value)
 
 
-if not MYPY:
-    class AuthorizationProfileAdvancedAttributeArgsDict(TypedDict):
-        attribute_left_dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        attribute_left_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute name
-        """
-        attribute_right_dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
-        """
-        attribute_right_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
-        """
-        attribute_right_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
-        """
-        attribute_right_value_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Advanced attribute value type
-          - Choices: `AdvancedDictionaryAttribute`, `AttributeValue`
-        """
-elif False:
-    AuthorizationProfileAdvancedAttributeArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationProfileAdvancedAttributeArgsDict(TypedDict):
+    attribute_left_dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    attribute_left_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute name
+    """
+    attribute_right_dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+    """
+    attribute_right_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute name, only required when `attribute_right_value_type` is `AdvancedDictionaryAttribute`
+    """
+    attribute_right_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value, only required when `attribute_right_value_type` is `AttributeValue`
+    """
+    attribute_right_value_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Advanced attribute value type
+      - Choices: `AdvancedDictionaryAttribute`, `AttributeValue`
+    """
 
 @pulumi.input_type
 class AuthorizationProfileAdvancedAttributeArgs:
@@ -1468,48 +1436,45 @@ class AuthorizationProfileAdvancedAttributeArgs:
         pulumi.set(self, "attribute_right_value_type", value)
 
 
-if not MYPY:
-    class AuthorizationRuleChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenArgsDict']]]]
-        """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
-        """
-elif False:
-    AuthorizationRuleChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationRuleChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+      - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenArgsDict']]]]
+    """
+    List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+    """
 
 @pulumi.input_type
 class AuthorizationRuleChildrenArgs:
@@ -1665,44 +1630,41 @@ class AuthorizationRuleChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthorizationRuleChildrenChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Condition type.
-          - Choices: `ConditionAttributes`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        """
-elif False:
-    AuthorizationRuleChildrenChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationRuleChildrenChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Condition type.
+      - Choices: `ConditionAttributes`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+    """
 
 @pulumi.input_type
 class AuthorizationRuleChildrenChildrenArgs:
@@ -1842,18 +1804,15 @@ class AuthorizationRuleChildrenChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class AuthorizationRuleUpdateRanksRuleArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Authorization rule ID
-        """
-        rank: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The rank (priority) in relation to other rules. Lower rank is higher priority.
-        """
-elif False:
-    AuthorizationRuleUpdateRanksRuleArgsDict: TypeAlias = Mapping[str, Any]
+class AuthorizationRuleUpdateRanksRuleArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Authorization rule ID
+    """
+    rank: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The rank (priority) in relation to other rules. Lower rank is higher priority.
+    """
 
 @pulumi.input_type
 class AuthorizationRuleUpdateRanksRuleArgs:
@@ -1894,56 +1853,53 @@ class AuthorizationRuleUpdateRanksRuleArgs:
         pulumi.set(self, "rank", value)
 
 
-if not MYPY:
-    class ConditionChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenChildrenArgsDict']]]]
-        """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-        """
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Condition description
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
-        """
-elif False:
-    ConditionChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class ConditionChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+      - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenChildrenArgsDict']]]]
+    """
+    List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+    """
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Condition description
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+    """
 
 @pulumi.input_type
 class ConditionChildrenArgs:
@@ -2131,52 +2087,49 @@ class ConditionChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class ConditionChildrenChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Condition type.
-          - Choices: `ConditionAttributes`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Condition description
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        """
-elif False:
-    ConditionChildrenChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class ConditionChildrenChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Condition type.
+      - Choices: `ConditionAttributes`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Condition description
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Condition name. Required if `condition_type` is `ConditionReference`, if `condition_type` is `ConditionAttributes` then this attribute is not used.
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+    """
 
 @pulumi.input_type
 class ConditionChildrenChildrenArgs:
@@ -2348,48 +2301,45 @@ class ConditionChildrenChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class PolicySetChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
-          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenChildrenArgsDict']]]]
-        """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
-        """
-elif False:
-    PolicySetChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class PolicySetChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
+      - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    childrens: NotRequired[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenChildrenArgsDict']]]]
+    """
+    List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
+    """
 
 @pulumi.input_type
 class PolicySetChildrenArgs:
@@ -2545,44 +2495,41 @@ class PolicySetChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class PolicySetChildrenChildrenArgsDict(TypedDict):
-        condition_type: pulumi.Input[_builtins.str]
-        """
-        Condition type.
-          - Choices: `ConditionAttributes`, `ConditionReference`
-        """
-        attribute_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary attribute name
-        """
-        attribute_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Attribute value for condition. Value type is specified in dictionary object.
-        """
-        dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary name
-        """
-        dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dictionary value
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        UUID for condition
-        """
-        is_negate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whereas this condition is in negate mode
-        """
-        operator: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Equality operator
-          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
-        """
-elif False:
-    PolicySetChildrenChildrenArgsDict: TypeAlias = Mapping[str, Any]
+class PolicySetChildrenChildrenArgsDict(TypedDict):
+    condition_type: pulumi.Input[_builtins.str]
+    """
+    Condition type.
+      - Choices: `ConditionAttributes`, `ConditionReference`
+    """
+    attribute_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary attribute name
+    """
+    attribute_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Attribute value for condition. Value type is specified in dictionary object.
+    """
+    dictionary_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary name
+    """
+    dictionary_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dictionary value
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    UUID for condition
+    """
+    is_negate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whereas this condition is in negate mode
+    """
+    operator: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Equality operator
+      - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+    """
 
 @pulumi.input_type
 class PolicySetChildrenChildrenArgs:
@@ -2722,18 +2669,15 @@ class PolicySetChildrenChildrenArgs:
         pulumi.set(self, "operator", value)
 
 
-if not MYPY:
-    class PolicySetUpdateRanksPolicyArgsDict(TypedDict):
-        rank: pulumi.Input[_builtins.int]
-        """
-        The rank (priority) in relation to other rules. Lower rank is higher priority.
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Policy set ID
-        """
-elif False:
-    PolicySetUpdateRanksPolicyArgsDict: TypeAlias = Mapping[str, Any]
+class PolicySetUpdateRanksPolicyArgsDict(TypedDict):
+    rank: pulumi.Input[_builtins.int]
+    """
+    The rank (priority) in relation to other rules. Lower rank is higher priority.
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Policy set ID
+    """
 
 @pulumi.input_type
 class PolicySetUpdateRanksPolicyArgs:
