@@ -19,24 +19,19 @@ __all__ = [
     'DeviceIpArgsDict',
 ]
 
-MYPY = False
-
-if not MYPY:
-    class DeviceIpArgsDict(TypedDict):
-        ipaddress: pulumi.Input[_builtins.str]
-        """
-        It can be either single ip address or ip range address
-        """
-        ipaddress_exclude: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        It can be either single ip address or ip range address
-        """
-        mask: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Subnet mask length
-        """
-elif False:
-    DeviceIpArgsDict: TypeAlias = Mapping[str, Any]
+class DeviceIpArgsDict(TypedDict):
+    ipaddress: pulumi.Input[_builtins.str]
+    """
+    It can be either single ip address or ip range address
+    """
+    ipaddress_exclude: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    It can be either single ip address or ip range address
+    """
+    mask: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Subnet mask length
+    """
 
 @pulumi.input_type
 class DeviceIpArgs:
