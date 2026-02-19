@@ -20,6 +20,8 @@ if typing.TYPE_CHECKING:
     network = __network
     import pulumi_ise.networkaccess as __networkaccess
     networkaccess = __networkaccess
+    import pulumi_ise.profiling as __profiling
+    profiling = __profiling
     import pulumi_ise.system as __system
     system = __system
     import pulumi_ise.trustsec as __trustsec
@@ -30,6 +32,7 @@ else:
     identitymanagement = _utilities.lazy_import('pulumi_ise.identitymanagement')
     network = _utilities.lazy_import('pulumi_ise.network')
     networkaccess = _utilities.lazy_import('pulumi_ise.networkaccess')
+    profiling = _utilities.lazy_import('pulumi_ise.profiling')
     system = _utilities.lazy_import('pulumi_ise.system')
     trustsec = _utilities.lazy_import('pulumi_ise.trustsec')
 

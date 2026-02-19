@@ -105,6 +105,8 @@
         "networkaccess/policySetUpdateRank.ts",
         "networkaccess/policySetUpdateRanks.ts",
         "networkaccess/timeAndDateCondition.ts",
+        "profiling/getProfilerProfile.ts",
+        "profiling/index.ts",
         "provider.ts",
         "system/getLicenseTierState.ts",
         "system/getRepository.ts",
