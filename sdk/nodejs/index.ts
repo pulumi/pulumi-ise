@@ -15,6 +15,7 @@ import * as deviceadmin from "./deviceadmin";
 import * as identitymanagement from "./identitymanagement";
 import * as network from "./network";
 import * as networkaccess from "./networkaccess";
+import * as profiling from "./profiling";
 import * as system from "./system";
 import * as trustsec from "./trustsec";
 import * as types from "./types";
@@ -25,6 +26,7 @@ export {
     identitymanagement,
     network,
     networkaccess,
+    profiling,
     system,
     trustsec,
     types,

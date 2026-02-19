@@ -44,6 +44,7 @@ const (
 	modIdentityManagement = "IdentityManagement"
 	modNetwork            = "Network"
 	modNetworkAccess      = "NetworkAccess"
+	modProfiling          = "Profiling"
 	modSystem             = "System"
 	modTrustSec           = "TrustSec"
 )
@@ -55,6 +56,7 @@ var moduleNames = map[string]string{
 	"endpoint":         modIdentityManagement,
 	"identity":         modIdentityManagement,
 	"network_access":   modNetworkAccess,
+	"profiler":         modProfiling,
 	// At time of adding, both sxp objects (resource:ise_sxp_domain_filter,
 	// function:ise_sxp_domain_filter) are in the TrustSec group upstream.
 	"sxp":      modTrustSec,
