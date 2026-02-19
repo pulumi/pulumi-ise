@@ -25,6 +25,7 @@
                 "identitymanagement": "IdentityManagement",
                 "network": "Network",
                 "networkaccess": "NetworkAccess",
+                "profiling": "Profiling",
                 "system": "System",
                 "trustsec": "TrustSec"
             },
@@ -15447,6 +15448,51 @@
                     "startTime",
                     "weekDays",
                     "weekDaysExceptions"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:profiling/getProfilerProfile:getProfilerProfile": {
+            "description": "This data source can read profiling policies.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.profiling.getProfilerProfile({\n    name: \"Polycom-Device\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.profiling.get_profiler_profile(name=\"Polycom-Device\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.Profiling.GetProfilerProfile.Invoke(new()\n    {\n        Name = \"Polycom-Device\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/profiling\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := profiling.GetProfilerProfile(ctx, \u0026profiling.GetProfilerProfileArgs{\n\t\t\tName: pulumi.StringRef(\"Polycom-Device\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.profiling.ProfilingFunctions;\nimport com.pulumi.ise.profiling.inputs.GetProfilerProfileArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ProfilingFunctions.getProfilerProfile(GetProfilerProfileArgs.builder()\n            .name(\"Polycom-Device\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:profiling:getProfilerProfile\n      arguments:\n        name: Polycom-Device\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getProfilerProfile.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Profile name\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getProfilerProfile.\n",
+                "properties": {
+                    "description": {
+                        "description": "Description\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Profile name\n",
+                        "type": "string"
+                    },
+                    "parentId": {
+                        "description": "Parent ID\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "id",
+                    "name",
+                    "parentId"
                 ],
                 "type": "object"
             }
