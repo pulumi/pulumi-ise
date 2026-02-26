@@ -37,6 +37,7 @@ class AuthorizationGlobalExceptionRuleArgs:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthorizationGlobalExceptionRule resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
@@ -275,6 +276,7 @@ class _AuthorizationGlobalExceptionRuleState:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationGlobalExceptionRule resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
@@ -546,6 +548,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         $ pulumi import ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
@@ -602,6 +605,7 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AuthorizationGlobalExceptionRuleArgs args: The arguments to use to populate this resource's properties.

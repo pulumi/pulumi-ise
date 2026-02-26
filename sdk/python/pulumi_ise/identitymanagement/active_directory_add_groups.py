@@ -30,6 +30,7 @@ class ActiveDirectoryAddGroupsArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ActiveDirectoryAddGroups resource.
+
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
         :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
@@ -150,6 +151,7 @@ class _ActiveDirectoryAddGroupsState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryAddGroups resources.
+
         :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
                  - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.str] description: Join point Description
@@ -297,6 +299,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
             }])
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
@@ -336,6 +339,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
                 "type": "GLOBAL",
             }])
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ActiveDirectoryAddGroupsArgs args: The arguments to use to populate this resource's properties.

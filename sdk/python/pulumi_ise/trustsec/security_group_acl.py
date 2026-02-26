@@ -26,6 +26,7 @@ class SecurityGroupAclArgs:
                  read_only: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SecurityGroupAcl resource.
+
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] ip_version: IP Version
@@ -117,6 +118,7 @@ class _SecurityGroupAclState:
                  read_only: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering SecurityGroupAcl resources.
+
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] ip_version: IP Version
@@ -236,6 +238,7 @@ class SecurityGroupAcl(pulumi.CustomResource):
         $ pulumi import ise:trustsec/securityGroupAcl:SecurityGroupAcl example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] acl_content: Content of ACL
@@ -276,6 +279,7 @@ class SecurityGroupAcl(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:trustsec/securityGroupAcl:SecurityGroupAcl example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SecurityGroupAclArgs args: The arguments to use to populate this resource's properties.

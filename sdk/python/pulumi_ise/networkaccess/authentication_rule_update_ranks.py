@@ -25,6 +25,7 @@ class AuthenticationRuleUpdateRanksArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleUpdateRanksRuleArgs']]]] = None):
         """
         The set of arguments for constructing a AuthenticationRuleUpdateRanks resource.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         """
         pulumi.set(__self__, "policy_set_id", policy_set_id)
@@ -60,6 +61,7 @@ class _AuthenticationRuleUpdateRanksState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleUpdateRanksRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering AuthenticationRuleUpdateRanks resources.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         """
         if policy_set_id is not None:
@@ -115,6 +117,7 @@ class AuthenticationRuleUpdateRanks(pulumi.CustomResource):
             }])
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
@@ -141,6 +144,7 @@ class AuthenticationRuleUpdateRanks(pulumi.CustomResource):
                 "rank": 0,
             }])
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AuthenticationRuleUpdateRanksArgs args: The arguments to use to populate this resource's properties.

@@ -71,6 +71,7 @@ class DeviceArgs:
                  trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Device resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]] ips: List of IP subnets
         :param pulumi.Input[_builtins.bool] authentication_dtls_required: Enforce use of DTLS
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
@@ -868,6 +869,7 @@ class _DeviceState:
                  trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Device resources.
+
         :param pulumi.Input[_builtins.bool] authentication_dtls_required: Enforce use of DTLS
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
@@ -1735,6 +1737,7 @@ class Device(pulumi.CustomResource):
         $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] authentication_dtls_required: Enforce use of DTLS
@@ -1869,6 +1872,7 @@ class Device(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:network/device:Device example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param DeviceArgs args: The arguments to use to populate this resource's properties.

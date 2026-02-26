@@ -56,6 +56,7 @@ class ActiveDirectoryJoinPointArgs:
                  unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ActiveDirectoryJoinPoint resource.
+
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
                  - Default value: `Default_Scope`
@@ -621,6 +622,7 @@ class _ActiveDirectoryJoinPointState:
                  unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryJoinPoint resources.
+
         :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
                  - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.int] aging_time: Aging Time
@@ -1255,6 +1257,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] ad_scopes_names: String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
@@ -1377,6 +1380,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ActiveDirectoryJoinPointArgs args: The arguments to use to populate this resource's properties.

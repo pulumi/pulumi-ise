@@ -27,6 +27,7 @@ class TacacsCommandSetArgs:
                  permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a TacacsCommandSet resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS command set
         :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands
@@ -97,6 +98,7 @@ class _TacacsCommandSetState:
                  permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering TacacsCommandSet resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS command set
         :param pulumi.Input[_builtins.bool] permit_unmatched: Permit unmatched commands
@@ -197,6 +199,7 @@ class TacacsCommandSet(pulumi.CustomResource):
         $ pulumi import ise:deviceadmin/tacacsCommandSet:TacacsCommandSet example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -237,6 +240,7 @@ class TacacsCommandSet(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:deviceadmin/tacacsCommandSet:TacacsCommandSet example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TacacsCommandSetArgs args: The arguments to use to populate this resource's properties.

@@ -26,6 +26,7 @@ class SecurityGroupArgs:
                  propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SecurityGroup resource.
+
         :param pulumi.Input[_builtins.int] value: `-1` to auto-generate
                  - Range: `-1`-`65519`
         :param pulumi.Input[_builtins.str] description: Description
@@ -115,6 +116,7 @@ class _SecurityGroupState:
                  value: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SecurityGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.bool] is_read_only: Read-only
         :param pulumi.Input[_builtins.str] name: The name of the security group
@@ -232,6 +234,7 @@ class SecurityGroup(pulumi.CustomResource):
         $ pulumi import ise:trustsec/securityGroup:SecurityGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -271,6 +274,7 @@ class SecurityGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:trustsec/securityGroup:SecurityGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SecurityGroupArgs args: The arguments to use to populate this resource's properties.

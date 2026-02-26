@@ -25,6 +25,7 @@ class DictionaryArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Dictionary resource.
+
         :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type
                  - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
         :param pulumi.Input[_builtins.str] version: The version of the dictionary
@@ -97,6 +98,7 @@ class _DictionaryState:
                  version: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Dictionary resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the dictionary
         :param pulumi.Input[_builtins.str] dictionary_attr_type: The dictionary attribute type
                  - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
@@ -197,6 +199,7 @@ class Dictionary(pulumi.CustomResource):
         $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the dictionary
@@ -234,6 +237,7 @@ class Dictionary(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:networkaccess/dictionary:Dictionary example "Dict1"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param DictionaryArgs args: The arguments to use to populate this resource's properties.

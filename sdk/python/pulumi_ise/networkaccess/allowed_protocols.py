@@ -98,6 +98,7 @@ class AllowedProtocolsArgs:
                  teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a AllowedProtocols resource.
+
         :param pulumi.Input[_builtins.bool] allow_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] allow_eap_fast: Allow EAP Fast
         :param pulumi.Input[_builtins.bool] allow_eap_md5: Allow EAP MD5
@@ -1348,6 +1349,7 @@ class _AllowedProtocolsState:
                  teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering AllowedProtocols resources.
+
         :param pulumi.Input[_builtins.bool] allow5g: Allow 5G. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] allow_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] allow_eap_fast: Allow EAP Fast
@@ -2711,6 +2713,7 @@ class AllowedProtocols(pulumi.CustomResource):
         $ pulumi import ise:networkaccess/allowedProtocols:AllowedProtocols example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allow5g: Allow 5G. This field is only supported from ISE 3.2.
@@ -2904,6 +2907,7 @@ class AllowedProtocols(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:networkaccess/allowedProtocols:AllowedProtocols example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AllowedProtocolsArgs args: The arguments to use to populate this resource's properties.

@@ -27,6 +27,7 @@ class EgressMatrixCellArgs:
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a EgressMatrixCell resource.
+
         :param pulumi.Input[_builtins.str] destination_sgt_id: Destination Trustsec Security Group ID
         :param pulumi.Input[_builtins.str] source_sgt_id: Source Trustsec Security Group ID
         :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified.
@@ -137,6 +138,7 @@ class _EgressMatrixCellState:
                  source_sgt_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering EgressMatrixCell resources.
+
         :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified.
                  - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
                  - Default value: `NONE`
@@ -277,6 +279,7 @@ class EgressMatrixCell(pulumi.CustomResource):
         $ pulumi import ise:trustsec/egressMatrixCell:EgressMatrixCell example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_rule: Can be used only if sgacls not specified.
@@ -321,6 +324,7 @@ class EgressMatrixCell(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:trustsec/egressMatrixCell:EgressMatrixCell example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param EgressMatrixCellArgs args: The arguments to use to populate this resource's properties.

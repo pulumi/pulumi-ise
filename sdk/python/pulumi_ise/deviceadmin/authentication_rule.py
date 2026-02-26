@@ -41,6 +41,7 @@ class AuthenticationRuleArgs:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationRule resource.
+
         :param pulumi.Input[_builtins.str] if_auth_fail: Action to perform when authentication fails such as Bad credentials, disabled user and so on
                  - Choices: `REJECT`, `DROP`, `CONTINUE`
         :param pulumi.Input[_builtins.str] if_process_fail: Action to perform when ISE is unable to access the identity database
@@ -345,6 +346,7 @@ class _AuthenticationRuleState:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthenticationRule resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
@@ -690,6 +692,7 @@ class AuthenticationRule(pulumi.CustomResource):
         $ pulumi import ise:deviceadmin/authenticationRule:AuthenticationRule example "76d24097-41c4-4558-a4d0-a8c07ac08470,76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AuthenticationRuleChildrenArgs', 'AuthenticationRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
@@ -757,6 +760,7 @@ class AuthenticationRule(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:deviceadmin/authenticationRule:AuthenticationRule example "76d24097-41c4-4558-a4d0-a8c07ac08470,76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AuthenticationRuleArgs args: The arguments to use to populate this resource's properties.

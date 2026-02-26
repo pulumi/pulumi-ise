@@ -22,6 +22,7 @@ class EgressPushMatrixArgs:
                  force: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a EgressPushMatrix resource.
+
         :param pulumi.Input[_builtins.bool] force: Set to true to re-trigger push on update. Will automatically reset to false after execution.
                  - Default value: `false`
         """
@@ -48,6 +49,7 @@ class _EgressPushMatrixState:
                  force: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering EgressPushMatrix resources.
+
         :param pulumi.Input[_builtins.bool] force: Set to true to re-trigger push on update. Will automatically reset to false after execution.
                  - Default value: `false`
         """
@@ -88,6 +90,7 @@ class EgressPushMatrix(pulumi.CustomResource):
         example = ise.trustsec.EgressPushMatrix("example", force=False)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] force: Set to true to re-trigger push on update. Will automatically reset to false after execution.
@@ -110,6 +113,7 @@ class EgressPushMatrix(pulumi.CustomResource):
 
         example = ise.trustsec.EgressPushMatrix("example", force=False)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param EgressPushMatrixArgs args: The arguments to use to populate this resource's properties.

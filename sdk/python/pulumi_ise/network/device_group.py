@@ -24,6 +24,7 @@ class DeviceGroupArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a DeviceGroup resource.
+
         :param pulumi.Input[_builtins.str] root_group: The name of the root device group.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the network device group including its hierarchy, e.g. `Device Type#All Device Types#ACCESS`.
@@ -79,6 +80,7 @@ class _DeviceGroupState:
                  root_group: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering DeviceGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the network device group including its hierarchy, e.g. `Device Type#All Device Types#ACCESS`.
         :param pulumi.Input[_builtins.str] root_group: The name of the root device group.
@@ -160,6 +162,7 @@ class DeviceGroup(pulumi.CustomResource):
         $ pulumi import ise:network/deviceGroup:DeviceGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -194,6 +197,7 @@ class DeviceGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:network/deviceGroup:DeviceGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param DeviceGroupArgs args: The arguments to use to populate this resource's properties.

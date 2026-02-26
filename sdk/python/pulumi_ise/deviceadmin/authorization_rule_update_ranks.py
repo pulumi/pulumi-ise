@@ -25,6 +25,7 @@ class AuthorizationRuleUpdateRanksArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]] = None):
         """
         The set of arguments for constructing a AuthorizationRuleUpdateRanks resource.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         """
         pulumi.set(__self__, "policy_set_id", policy_set_id)
@@ -60,6 +61,7 @@ class _AuthorizationRuleUpdateRanksState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering AuthorizationRuleUpdateRanks resources.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         """
         if policy_set_id is not None:
@@ -115,6 +117,7 @@ class AuthorizationRuleUpdateRanks(pulumi.CustomResource):
             }])
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
@@ -141,6 +144,7 @@ class AuthorizationRuleUpdateRanks(pulumi.CustomResource):
                 "rank": 0,
             }])
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AuthorizationRuleUpdateRanksArgs args: The arguments to use to populate this resource's properties.

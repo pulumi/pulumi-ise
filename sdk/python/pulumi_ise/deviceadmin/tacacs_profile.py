@@ -26,6 +26,7 @@ class TacacsProfileArgs:
                  session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]] = None):
         """
         The set of arguments for constructing a TacacsProfile resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS profile
         """
@@ -78,6 +79,7 @@ class _TacacsProfileState:
                  session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]] = None):
         """
         Input properties used for looking up and filtering TacacsProfile resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the TACACS profile
         """
@@ -159,6 +161,7 @@ class TacacsProfile(pulumi.CustomResource):
         $ pulumi import ise:deviceadmin/tacacsProfile:TacacsProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -196,6 +199,7 @@ class TacacsProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:deviceadmin/tacacsProfile:TacacsProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TacacsProfileArgs args: The arguments to use to populate this resource's properties.

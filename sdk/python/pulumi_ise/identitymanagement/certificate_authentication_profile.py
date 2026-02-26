@@ -28,6 +28,7 @@ class CertificateAuthenticationProfileArgs:
                  username_from: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CertificateAuthenticationProfile resource.
+
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
@@ -162,6 +163,7 @@ class _CertificateAuthenticationProfileState:
                  username_from: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CertificateAuthenticationProfile resources.
+
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] certificate_attribute_name: Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
@@ -325,6 +327,7 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allowed_as_user_name: Allow as username
@@ -374,6 +377,7 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CertificateAuthenticationProfileArgs args: The arguments to use to populate this resource's properties.

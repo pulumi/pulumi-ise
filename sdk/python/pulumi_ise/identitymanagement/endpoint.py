@@ -47,6 +47,7 @@ class EndpointArgs:
                  static_profile_assignment_defined: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Endpoint resource.
+
         :param pulumi.Input[_builtins.str] mac: MAC address of the endpoint
         :param pulumi.Input[_builtins.bool] static_group_assignment: Static Group Assignment
         :param pulumi.Input[_builtins.bool] static_profile_assignment: Static Profile Assignment
@@ -472,6 +473,7 @@ class _EndpointState:
                  static_profile_assignment_defined: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Endpoint resources.
+
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] custom_attributes: Custom Attributes
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] group_id: Identity Group ID
@@ -931,6 +933,7 @@ class Endpoint(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/endpoint:Endpoint example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] custom_attributes: Custom Attributes
@@ -996,6 +999,7 @@ class Endpoint(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/endpoint:Endpoint example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param EndpointArgs args: The arguments to use to populate this resource's properties.

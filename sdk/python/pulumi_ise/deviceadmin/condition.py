@@ -33,6 +33,7 @@ class ConditionArgs:
                  operator: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Condition resource.
+
         :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
                  - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
@@ -204,6 +205,7 @@ class _ConditionState:
                  operator: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Condition resources.
+
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
@@ -406,6 +408,7 @@ class Condition(pulumi.CustomResource):
         $ pulumi import ise:deviceadmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
@@ -454,6 +457,7 @@ class Condition(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:deviceadmin/condition:Condition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ConditionArgs args: The arguments to use to populate this resource's properties.
