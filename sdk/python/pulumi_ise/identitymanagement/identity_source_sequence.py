@@ -28,6 +28,7 @@ class IdentitySourceSequenceArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a IdentitySourceSequence resource.
+
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         :param pulumi.Input[_builtins.str] certificate_authentication_profile: Certificate Authentication Profile, empty if doesn't exist
         :param pulumi.Input[_builtins.str] description: Description
@@ -109,6 +110,7 @@ class _IdentitySourceSequenceState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IdentitySourceSequence resources.
+
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         :param pulumi.Input[_builtins.str] certificate_authentication_profile: Certificate Authentication Profile, empty if doesn't exist
         :param pulumi.Input[_builtins.str] description: Description
@@ -223,6 +225,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/identitySourceSequence:IdentitySourceSequence example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
@@ -263,6 +266,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/identitySourceSequence:IdentitySourceSequence example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param IdentitySourceSequenceArgs args: The arguments to use to populate this resource's properties.

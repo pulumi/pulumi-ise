@@ -35,6 +35,7 @@ class InternalUserArgs:
                  password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a InternalUser resource.
+
         :param pulumi.Input[_builtins.str] password: The password of the internal user
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
@@ -272,6 +273,7 @@ class _InternalUserState:
                  password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering InternalUser resources.
+
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
                  - Default value: `true`
@@ -544,6 +546,7 @@ class InternalUser(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/internalUser:InternalUser example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
@@ -601,6 +604,7 @@ class InternalUser(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/internalUser:InternalUser example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param InternalUserArgs args: The arguments to use to populate this resource's properties.

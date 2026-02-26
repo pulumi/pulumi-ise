@@ -28,6 +28,7 @@ class RepositoryArgs:
                  user_name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Repository resource.
+
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] protocol: Protocol
                  - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
@@ -148,6 +149,7 @@ class _RepositoryState:
                  user_name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Repository resources.
+
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
@@ -299,6 +301,7 @@ class Repository(pulumi.CustomResource):
         $ pulumi import ise:system/repository:Repository example "repo1"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
@@ -342,6 +345,7 @@ class Repository(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:system/repository:Repository example "repo1"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param RepositoryArgs args: The arguments to use to populate this resource's properties.

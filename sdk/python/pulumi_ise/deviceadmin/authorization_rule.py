@@ -39,6 +39,7 @@ class AuthorizationRuleArgs:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthorizationRule resource.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] command_sets: Command sets enforce the specified list of commands that can be executed by a device administrator
@@ -308,6 +309,7 @@ class _AuthorizationRuleState:
                  state: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationRule resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] command_sets: Command sets enforce the specified list of commands that can be executed by a device administrator
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
@@ -613,6 +615,7 @@ class AuthorizationRule(pulumi.CustomResource):
         $ pulumi import ise:deviceadmin/authorizationRule:AuthorizationRule example "76d24097-41c4-4558-a4d0-a8c07ac08470,76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
@@ -673,6 +676,7 @@ class AuthorizationRule(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:deviceadmin/authorizationRule:AuthorizationRule example "76d24097-41c4-4558-a4d0-a8c07ac08470,76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AuthorizationRuleArgs args: The arguments to use to populate this resource's properties.

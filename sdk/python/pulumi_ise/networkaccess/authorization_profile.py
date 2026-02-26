@@ -56,6 +56,7 @@ class AuthorizationProfileArgs:
                  web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthorizationProfile resource.
+
         :param pulumi.Input[_builtins.str] access_type: Access type
                  - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
                  - Default value: `ACCESS_ACCEPT`
@@ -620,6 +621,7 @@ class _AuthorizationProfileState:
                  web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationProfile resources.
+
         :param pulumi.Input[_builtins.str] access_type: Access type
                  - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
                  - Default value: `ACCESS_ACCEPT`
@@ -1242,6 +1244,7 @@ class AuthorizationProfile(pulumi.CustomResource):
         $ pulumi import ise:networkaccess/authorizationProfile:AuthorizationProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_type: Access type
@@ -1353,6 +1356,7 @@ class AuthorizationProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:networkaccess/authorizationProfile:AuthorizationProfile example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AuthorizationProfileArgs args: The arguments to use to populate this resource's properties.

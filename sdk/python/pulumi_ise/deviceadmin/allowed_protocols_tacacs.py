@@ -26,6 +26,7 @@ class AllowedProtocolsTacacsArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AllowedProtocolsTacacs resource.
+
         :param pulumi.Input[_builtins.bool] allow_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] allow_ms_chap_v1: Allow MS CHAP v1
         :param pulumi.Input[_builtins.bool] allow_pap_ascii: Allow PAP ASCII
@@ -111,6 +112,7 @@ class _AllowedProtocolsTacacsState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AllowedProtocolsTacacs resources.
+
         :param pulumi.Input[_builtins.bool] allow_chap: Allow CHAP
         :param pulumi.Input[_builtins.bool] allow_ms_chap_v1: Allow MS CHAP v1
         :param pulumi.Input[_builtins.bool] allow_pap_ascii: Allow PAP ASCII
@@ -226,6 +228,7 @@ class AllowedProtocolsTacacs(pulumi.CustomResource):
         $ pulumi import ise:deviceadmin/allowedProtocolsTacacs:AllowedProtocolsTacacs example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allow_chap: Allow CHAP
@@ -264,6 +267,7 @@ class AllowedProtocolsTacacs(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:deviceadmin/allowedProtocolsTacacs:AllowedProtocolsTacacs example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AllowedProtocolsTacacsArgs args: The arguments to use to populate this resource's properties.

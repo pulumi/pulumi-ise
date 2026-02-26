@@ -23,6 +23,7 @@ class PolicySetUpdateRankArgs:
                  rank: pulumi.Input[_builtins.int]):
         """
         The set of arguments for constructing a PolicySetUpdateRank resource.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
         """
@@ -61,6 +62,7 @@ class _PolicySetUpdateRankState:
                  rank: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicySetUpdateRank resources.
+
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
         :param pulumi.Input[_builtins.int] rank: The rank (priority) in relation to other rules. Lower rank is higher priority.
         """
@@ -117,6 +119,7 @@ class PolicySetUpdateRank(pulumi.CustomResource):
             rank=0)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
@@ -141,6 +144,7 @@ class PolicySetUpdateRank(pulumi.CustomResource):
             policy_set_id="d82952cb-b901-4b09-b363-5ebf39bdbaf9",
             rank=0)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicySetUpdateRankArgs args: The arguments to use to populate this resource's properties.

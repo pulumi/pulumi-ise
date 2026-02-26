@@ -81,6 +81,7 @@ class PolicySetUpdateRanks(pulumi.CustomResource):
         }])
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         """
@@ -104,6 +105,7 @@ class PolicySetUpdateRanks(pulumi.CustomResource):
             "rank": 0,
         }])
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicySetUpdateRanksArgs args: The arguments to use to populate this resource's properties.

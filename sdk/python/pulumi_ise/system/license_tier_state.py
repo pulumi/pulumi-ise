@@ -24,6 +24,7 @@ class LicenseTierStateArgs:
                  licenses: pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]):
         """
         The set of arguments for constructing a LicenseTierState resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]] licenses: List of licenses
         """
         pulumi.set(__self__, "licenses", licenses)
@@ -47,6 +48,7 @@ class _LicenseTierStateState:
                  licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]] = None):
         """
         Input properties used for looking up and filtering LicenseTierState resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]] licenses: List of licenses
         """
         if licenses is not None:
@@ -96,6 +98,7 @@ class LicenseTierState(pulumi.CustomResource):
         $ pulumi import ise:system/licenseTierState:LicenseTierState example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]] licenses: List of licenses
@@ -128,6 +131,7 @@ class LicenseTierState(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:system/licenseTierState:LicenseTierState example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicenseTierStateArgs args: The arguments to use to populate this resource's properties.

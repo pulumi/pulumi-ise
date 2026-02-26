@@ -25,6 +25,7 @@ class EndpointIdentityGroupArgs:
                  system_defined: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a EndpointIdentityGroup resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the endpoint identity group
         :param pulumi.Input[_builtins.str] parent_endpoint_identity_group_id: Parent endpoint identity group ID
@@ -97,6 +98,7 @@ class _EndpointIdentityGroupState:
                  system_defined: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering EndpointIdentityGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the endpoint identity group
         :param pulumi.Input[_builtins.str] parent_endpoint_identity_group_id: Parent endpoint identity group ID
@@ -194,6 +196,7 @@ class EndpointIdentityGroup(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -229,6 +232,7 @@ class EndpointIdentityGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param EndpointIdentityGroupArgs args: The arguments to use to populate this resource's properties.

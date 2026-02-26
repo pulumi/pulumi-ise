@@ -23,6 +23,7 @@ class EndpointCustomAttributeArgs:
                  attribute_type: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a EndpointCustomAttribute resource.
+
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
         :param pulumi.Input[_builtins.str] attribute_type: Attribute type
                  - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
@@ -63,6 +64,7 @@ class _EndpointCustomAttributeState:
                  attribute_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering EndpointCustomAttribute resources.
+
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
         :param pulumi.Input[_builtins.str] attribute_type: Attribute type
                  - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
@@ -129,6 +131,7 @@ class EndpointCustomAttribute(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute example "isMobile"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attribute_name: The name of the attribute
@@ -162,6 +165,7 @@ class EndpointCustomAttribute(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute example "isMobile"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param EndpointCustomAttributeArgs args: The arguments to use to populate this resource's properties.

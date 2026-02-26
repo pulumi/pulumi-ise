@@ -34,6 +34,7 @@ class TimeAndDateConditionArgs:
                  week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TimeAndDateCondition resource.
+
         :param pulumi.Input[_builtins.str] description: Condition description
         :param pulumi.Input[_builtins.str] end_date: End date
         :param pulumi.Input[_builtins.str] end_time: End time
@@ -250,6 +251,7 @@ class _TimeAndDateConditionState:
                  week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering TimeAndDateCondition resources.
+
         :param pulumi.Input[_builtins.str] description: Condition description
         :param pulumi.Input[_builtins.str] end_date: End date
         :param pulumi.Input[_builtins.str] end_time: End time
@@ -501,6 +503,7 @@ class TimeAndDateCondition(pulumi.CustomResource):
         $ pulumi import ise:networkaccess/timeAndDateCondition:TimeAndDateCondition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Condition description
@@ -555,6 +558,7 @@ class TimeAndDateCondition(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:networkaccess/timeAndDateCondition:TimeAndDateCondition example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TimeAndDateConditionArgs args: The arguments to use to populate this resource's properties.

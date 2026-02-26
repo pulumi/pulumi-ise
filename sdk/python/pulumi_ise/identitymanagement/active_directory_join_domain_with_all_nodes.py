@@ -25,6 +25,7 @@ class ActiveDirectoryJoinDomainWithAllNodesArgs:
                  join_point_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a ActiveDirectoryJoinDomainWithAllNodes resource.
+
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
         """
         pulumi.set(__self__, "additional_datas", additional_datas)
@@ -59,6 +60,7 @@ class _ActiveDirectoryJoinDomainWithAllNodesState:
                  join_point_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryJoinDomainWithAllNodes resources.
+
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
         """
         if additional_datas is not None:
@@ -114,6 +116,7 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
             }])
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
@@ -140,6 +143,7 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
                 "value": "administrator",
             }])
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ActiveDirectoryJoinDomainWithAllNodesArgs args: The arguments to use to populate this resource's properties.

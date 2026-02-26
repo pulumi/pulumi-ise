@@ -29,6 +29,7 @@ class IpToSgtMappingArgs:
                  sgt: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a IpToSgtMapping resource.
+
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
         :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
                  - Choices: `ALL`, `ND`, `NDG`
@@ -167,6 +168,7 @@ class _IpToSgtMappingState:
                  sgt: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IpToSgtMapping resources.
+
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
         :param pulumi.Input[_builtins.str] deploy_type: Deploy Type
                  - Choices: `ALL`, `ND`, `NDG`
@@ -331,6 +333,7 @@ class IpToSgtMapping(pulumi.CustomResource):
         $ pulumi import ise:trustsec/ipToSgtMapping:IpToSgtMapping example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] deploy_to: Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
@@ -372,6 +375,7 @@ class IpToSgtMapping(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:trustsec/ipToSgtMapping:IpToSgtMapping example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param IpToSgtMappingArgs args: The arguments to use to populate this resource's properties.

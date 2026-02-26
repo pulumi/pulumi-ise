@@ -27,6 +27,7 @@ class SxpDomainFilterArgs:
                  vn: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SxpDomainFilter resource.
+
         :param pulumi.Input[_builtins.str] domains: List of SXP Domains, separated with comma
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: Resource name
@@ -130,6 +131,7 @@ class _SxpDomainFilterState:
                  vn: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SxpDomainFilter resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] domains: List of SXP Domains, separated with comma
         :param pulumi.Input[_builtins.str] name: Resource name
@@ -259,6 +261,7 @@ class SxpDomainFilter(pulumi.CustomResource):
         $ pulumi import ise:trustsec/sxpDomainFilter:SxpDomainFilter example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -296,6 +299,7 @@ class SxpDomainFilter(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:trustsec/sxpDomainFilter:SxpDomainFilter example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SxpDomainFilterArgs args: The arguments to use to populate this resource's properties.

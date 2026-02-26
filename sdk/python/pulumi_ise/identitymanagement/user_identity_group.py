@@ -24,6 +24,7 @@ class UserIdentityGroupArgs:
                  parent: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a UserIdentityGroup resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the user identity group
         :param pulumi.Input[_builtins.str] parent: Parent user identity group, e.g. `NAC Group:NAC:IdentityGroups:User Identity Groups`
@@ -80,6 +81,7 @@ class _UserIdentityGroupState:
                  parent: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering UserIdentityGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the user identity group
         :param pulumi.Input[_builtins.str] parent: Parent user identity group, e.g. `NAC Group:NAC:IdentityGroups:User Identity Groups`
@@ -161,6 +163,7 @@ class UserIdentityGroup(pulumi.CustomResource):
         $ pulumi import ise:identitymanagement/userIdentityGroup:UserIdentityGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -195,6 +198,7 @@ class UserIdentityGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import ise:identitymanagement/userIdentityGroup:UserIdentityGroup example "76d24097-41c4-4558-a4d0-a8c07ac08470"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param UserIdentityGroupArgs args: The arguments to use to populate this resource's properties.
