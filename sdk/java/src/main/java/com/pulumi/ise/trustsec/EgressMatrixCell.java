@@ -132,6 +132,20 @@ public class EgressMatrixCell extends com.pulumi.resources.CustomResource {
         return this.matrixCellStatus;
     }
     /**
+     * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     * 
+     */
+    @Export(name="matrixId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> matrixId;
+
+    /**
+     * @return Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     * 
+     */
+    public Output<Optional<String>> matrixId() {
+        return Codegen.optional(this.matrixId);
+    }
+    /**
      * List of TrustSec Security Groups ACLs
      * 
      */

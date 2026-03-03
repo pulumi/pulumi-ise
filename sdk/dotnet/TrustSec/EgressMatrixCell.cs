@@ -78,6 +78,12 @@ namespace Pulumi.Ise.TrustSec
         public Output<string> MatrixCellStatus { get; private set; } = null!;
 
         /// <summary>
+        /// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        /// </summary>
+        [Output("matrixId")]
+        public Output<string?> MatrixId { get; private set; } = null!;
+
+        /// <summary>
         /// List of TrustSec Security Groups ACLs
         /// </summary>
         [Output("sgacls")]
@@ -163,6 +169,12 @@ namespace Pulumi.Ise.TrustSec
         [Input("matrixCellStatus")]
         public Input<string>? MatrixCellStatus { get; set; }
 
+        /// <summary>
+        /// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        /// </summary>
+        [Input("matrixId")]
+        public Input<string>? MatrixId { get; set; }
+
         [Input("sgacls")]
         private InputList<string>? _sgacls;
 
@@ -216,6 +228,12 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         [Input("matrixCellStatus")]
         public Input<string>? MatrixCellStatus { get; set; }
+
+        /// <summary>
+        /// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        /// </summary>
+        [Input("matrixId")]
+        public Input<string>? MatrixId { get; set; }
 
         [Input("sgacls")]
         private InputList<string>? _sgacls;

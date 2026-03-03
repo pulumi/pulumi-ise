@@ -11274,6 +11274,10 @@
                     "type": "string",
                     "description": "Matrix Cell Status\n  - Choices: `DISABLED`, `ENABLED`, `MONITOR`\n  - Default value: `DISABLED`"
                 },
+                "matrixId": {
+                    "type": "string",
+                    "description": "Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)"
+                },
                 "sgacls": {
                     "type": "array",
                     "items": {
@@ -11309,6 +11313,10 @@
                     "type": "string",
                     "description": "Matrix Cell Status\n  - Choices: `DISABLED`, `ENABLED`, `MONITOR`\n  - Default value: `DISABLED`"
                 },
+                "matrixId": {
+                    "type": "string",
+                    "description": "Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)"
+                },
                 "sgacls": {
                     "type": "array",
                     "items": {
@@ -11343,6 +11351,10 @@
                     "matrixCellStatus": {
                         "type": "string",
                         "description": "Matrix Cell Status\n  - Choices: `DISABLED`, `ENABLED`, `MONITOR`\n  - Default value: `DISABLED`"
+                    },
+                    "matrixId": {
+                        "type": "string",
+                        "description": "Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)"
                     },
                     "sgacls": {
                         "type": "array",
@@ -11654,6 +11666,82 @@
                 "type": "object"
             }
         },
+        "ise:trustsec/matrix:Matrix": {
+            "description": "This resource can manage a TrustSec Matrix.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.Matrix(\"example\", {\n    name: \"MyMatrix\",\n    description: \"My TrustSec Matrix Policy\",\n    matrixPolicyType: \"TRUSTSEC_POLICY\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.Matrix(\"example\",\n    name=\"MyMatrix\",\n    description=\"My TrustSec Matrix Policy\",\n    matrix_policy_type=\"TRUSTSEC_POLICY\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.Matrix(\"example\", new()\n    {\n        Name = \"MyMatrix\",\n        Description = \"My TrustSec Matrix Policy\",\n        MatrixPolicyType = \"TRUSTSEC_POLICY\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewMatrix(ctx, \"example\", \u0026trustsec.MatrixArgs{\n\t\t\tName:             pulumi.String(\"MyMatrix\"),\n\t\t\tDescription:      pulumi.String(\"My TrustSec Matrix Policy\"),\n\t\t\tMatrixPolicyType: pulumi.String(\"TRUSTSEC_POLICY\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.Matrix;\nimport com.pulumi.ise.trustsec.MatrixArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new Matrix(\"example\", MatrixArgs.builder()\n            .name(\"MyMatrix\")\n            .description(\"My TrustSec Matrix Policy\")\n            .matrixPolicyType(\"TRUSTSEC_POLICY\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:Matrix\n    properties:\n      name: MyMatrix\n      description: My TrustSec Matrix Policy\n      matrixPolicyType: TRUSTSEC_POLICY\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/matrix:Matrix example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "properties": {
+                "copyPolicyFrom": {
+                    "type": "string",
+                    "description": "Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies"
+                },
+                "defconLevel": {
+                    "type": "string",
+                    "description": "DEFCON Level for the TrustSec Matrix\n  - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the TrustSec Matrix"
+                },
+                "matrixPolicyType": {
+                    "type": "string",
+                    "description": "Trustsec Matrix Policy Type\n  - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the TrustSec Matrix policy. Must be unique across all matrices."
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "inputProperties": {
+                "copyPolicyFrom": {
+                    "type": "string",
+                    "description": "Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies"
+                },
+                "defconLevel": {
+                    "type": "string",
+                    "description": "DEFCON Level for the TrustSec Matrix\n  - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the TrustSec Matrix"
+                },
+                "matrixPolicyType": {
+                    "type": "string",
+                    "description": "Trustsec Matrix Policy Type\n  - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the TrustSec Matrix policy. Must be unique across all matrices."
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Matrix resources.\n",
+                "properties": {
+                    "copyPolicyFrom": {
+                        "type": "string",
+                        "description": "Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies"
+                    },
+                    "defconLevel": {
+                        "type": "string",
+                        "description": "DEFCON Level for the TrustSec Matrix\n  - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description of the TrustSec Matrix"
+                    },
+                    "matrixPolicyType": {
+                        "type": "string",
+                        "description": "Trustsec Matrix Policy Type\n  - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the TrustSec Matrix policy. Must be unique across all matrices."
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:trustsec/securityGroup:SecurityGroup": {
             "description": "This resource can manage a TrustSec Security Group.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.SecurityGroup(\"example\", {\n    name: \"SGT1234\",\n    description: \"My SGT\",\n    value: 1234,\n    propogateToApic: true,\n    isReadOnly: false,\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.SecurityGroup(\"example\",\n    name=\"SGT1234\",\n    description=\"My SGT\",\n    value=1234,\n    propogate_to_apic=True,\n    is_read_only=False)\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.SecurityGroup(\"example\", new()\n    {\n        Name = \"SGT1234\",\n        Description = \"My SGT\",\n        Value = 1234,\n        PropogateToApic = true,\n        IsReadOnly = false,\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewSecurityGroup(ctx, \"example\", \u0026trustsec.SecurityGroupArgs{\n\t\t\tName:            pulumi.String(\"SGT1234\"),\n\t\t\tDescription:     pulumi.String(\"My SGT\"),\n\t\t\tValue:           pulumi.Int(1234),\n\t\t\tPropogateToApic: pulumi.Bool(true),\n\t\t\tIsReadOnly:      pulumi.Bool(false),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.SecurityGroup;\nimport com.pulumi.ise.trustsec.SecurityGroupArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SecurityGroup(\"example\", SecurityGroupArgs.builder()\n            .name(\"SGT1234\")\n            .description(\"My SGT\")\n            .value(1234)\n            .propogateToApic(true)\n            .isReadOnly(false)\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:SecurityGroup\n    properties:\n      name: SGT1234\n      description: My SGT\n      value: 1234\n      propogateToApic: true\n      isReadOnly: false\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/securityGroup:SecurityGroup example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -11902,6 +11990,58 @@
                     "vn": {
                         "type": "string",
                         "description": "Virtual Network. At least one of subnet or sgt or vn should be defined\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:trustsec/workProcessSettings:WorkProcessSettings": {
+            "description": "This resource can manage a TrustSec Work Process Settings.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.WorkProcessSettings(\"example\", {\n    matrixMode: \"MULTIPLE_MATRICES\",\n    useDefcons: false,\n    enableApprovalWorkflow: false,\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.WorkProcessSettings(\"example\",\n    matrix_mode=\"MULTIPLE_MATRICES\",\n    use_defcons=False,\n    enable_approval_workflow=False)\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.WorkProcessSettings(\"example\", new()\n    {\n        MatrixMode = \"MULTIPLE_MATRICES\",\n        UseDefcons = false,\n        EnableApprovalWorkflow = false,\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewWorkProcessSettings(ctx, \"example\", \u0026trustsec.WorkProcessSettingsArgs{\n\t\t\tMatrixMode:             pulumi.String(\"MULTIPLE_MATRICES\"),\n\t\t\tUseDefcons:             pulumi.Bool(false),\n\t\t\tEnableApprovalWorkflow: pulumi.Bool(false),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.WorkProcessSettings;\nimport com.pulumi.ise.trustsec.WorkProcessSettingsArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new WorkProcessSettings(\"example\", WorkProcessSettingsArgs.builder()\n            .matrixMode(\"MULTIPLE_MATRICES\")\n            .useDefcons(false)\n            .enableApprovalWorkflow(false)\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:WorkProcessSettings\n    properties:\n      matrixMode: MULTIPLE_MATRICES\n      useDefcons: false\n      enableApprovalWorkflow: false\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/workProcessSettings:WorkProcessSettings example \"MULTIPLE_MATRICES\"\n```\n\n",
+            "properties": {
+                "enableApprovalWorkflow": {
+                    "type": "boolean",
+                    "description": "Whether to enable approval workflow for TrustSec Matrix changes\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\"\u003e`false`\u003c/span\u003e"
+                },
+                "matrixMode": {
+                    "type": "string",
+                    "description": "TrustSec Matrix Mode\n  - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`"
+                },
+                "useDefcons": {
+                    "type": "boolean",
+                    "description": "Whether to use DEFCON levels in the TrustSec Matrix"
+                }
+            },
+            "required": [
+                "enableApprovalWorkflow"
+            ],
+            "inputProperties": {
+                "enableApprovalWorkflow": {
+                    "type": "boolean",
+                    "description": "Whether to enable approval workflow for TrustSec Matrix changes\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\"\u003e`false`\u003c/span\u003e"
+                },
+                "matrixMode": {
+                    "type": "string",
+                    "description": "TrustSec Matrix Mode\n  - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`"
+                },
+                "useDefcons": {
+                    "type": "boolean",
+                    "description": "Whether to use DEFCON levels in the TrustSec Matrix"
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering WorkProcessSettings resources.\n",
+                "properties": {
+                    "enableApprovalWorkflow": {
+                        "type": "boolean",
+                        "description": "Whether to enable approval workflow for TrustSec Matrix changes\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\"\u003e`false`\u003c/span\u003e"
+                    },
+                    "matrixMode": {
+                        "type": "string",
+                        "description": "TrustSec Matrix Mode\n  - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`"
+                    },
+                    "useDefcons": {
+                        "type": "boolean",
+                        "description": "Whether to use DEFCON levels in the TrustSec Matrix"
                     }
                 },
                 "type": "object"
@@ -15637,6 +15777,10 @@
                         "description": "Matrix Cell Status\n",
                         "type": "string"
                     },
+                    "matrixId": {
+                        "description": "Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)\n",
+                        "type": "string"
+                    },
                     "sgacls": {
                         "description": "List of TrustSec Security Groups ACLs\n",
                         "items": {
@@ -15655,6 +15799,7 @@
                     "destinationSgtId",
                     "id",
                     "matrixCellStatus",
+                    "matrixId",
                     "sgacls",
                     "sourceSgtId"
                 ],
@@ -15834,6 +15979,61 @@
                     "id",
                     "name",
                     "sgt"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:trustsec/getMatrix:getMatrix": {
+            "description": "This data source can read the TrustSec Matrix.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getMatrix({\n    id: \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_matrix(id=\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetMatrix.Invoke(new()\n    {\n        Id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupMatrix(ctx, \u0026trustsec.LookupMatrixArgs{\n\t\t\tId: pulumi.StringRef(\"76d24097-41c4-4558-a4d0-a8c07ac08470\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetMatrixArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()\n            .id(\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:trustsec:getMatrix\n      arguments:\n        id: 76d24097-41c4-4558-a4d0-a8c07ac08470\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getMatrix.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the TrustSec Matrix policy. Must be unique across all matrices.\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getMatrix.\n",
+                "properties": {
+                    "copyPolicyFrom": {
+                        "description": "Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies\n",
+                        "type": "string"
+                    },
+                    "defconLevel": {
+                        "description": "DEFCON Level for the TrustSec Matrix\n",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Description of the TrustSec Matrix\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "matrixPolicyType": {
+                        "description": "Trustsec Matrix Policy Type\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the TrustSec Matrix policy. Must be unique across all matrices.\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "copyPolicyFrom",
+                    "defconLevel",
+                    "description",
+                    "id",
+                    "matrixPolicyType",
+                    "name"
                 ],
                 "type": "object"
             }

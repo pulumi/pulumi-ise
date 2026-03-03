@@ -80,6 +80,10 @@ export class EgressMatrixCell extends pulumi.CustomResource {
      */
     declare public readonly matrixCellStatus: pulumi.Output<string>;
     /**
+     * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     */
+    declare public readonly matrixId: pulumi.Output<string | undefined>;
+    /**
      * List of TrustSec Security Groups ACLs
      */
     declare public readonly sgacls: pulumi.Output<string[] | undefined>;
@@ -105,6 +109,7 @@ export class EgressMatrixCell extends pulumi.CustomResource {
             resourceInputs["description"] = state?.description;
             resourceInputs["destinationSgtId"] = state?.destinationSgtId;
             resourceInputs["matrixCellStatus"] = state?.matrixCellStatus;
+            resourceInputs["matrixId"] = state?.matrixId;
             resourceInputs["sgacls"] = state?.sgacls;
             resourceInputs["sourceSgtId"] = state?.sourceSgtId;
         } else {
@@ -119,6 +124,7 @@ export class EgressMatrixCell extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["destinationSgtId"] = args?.destinationSgtId;
             resourceInputs["matrixCellStatus"] = args?.matrixCellStatus;
+            resourceInputs["matrixId"] = args?.matrixId;
             resourceInputs["sgacls"] = args?.sgacls;
             resourceInputs["sourceSgtId"] = args?.sourceSgtId;
         }
@@ -151,6 +157,10 @@ export interface EgressMatrixCellState {
      *   - Default value: `DISABLED`
      */
     matrixCellStatus?: pulumi.Input<string>;
+    /**
+     * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     */
+    matrixId?: pulumi.Input<string>;
     /**
      * List of TrustSec Security Groups ACLs
      */
@@ -185,6 +195,10 @@ export interface EgressMatrixCellArgs {
      *   - Default value: `DISABLED`
      */
     matrixCellStatus?: pulumi.Input<string>;
+    /**
+     * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     */
+    matrixId?: pulumi.Input<string>;
     /**
      * List of TrustSec Security Groups ACLs
      */

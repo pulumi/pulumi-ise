@@ -138,6 +138,10 @@ namespace Pulumi.Ise.TrustSec
         /// </summary>
         public readonly string MatrixCellStatus;
         /// <summary>
+        /// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        /// </summary>
+        public readonly string MatrixId;
+        /// <summary>
         /// List of TrustSec Security Groups ACLs
         /// </summary>
         public readonly ImmutableArray<string> Sgacls;
@@ -158,6 +162,8 @@ namespace Pulumi.Ise.TrustSec
 
             string matrixCellStatus,
 
+            string matrixId,
+
             ImmutableArray<string> sgacls,
 
             string sourceSgtId)
@@ -167,6 +173,7 @@ namespace Pulumi.Ise.TrustSec
             DestinationSgtId = destinationSgtId;
             Id = id;
             MatrixCellStatus = matrixCellStatus;
+            MatrixId = matrixId;
             Sgacls = sgacls;
             SourceSgtId = sourceSgtId;
         }

@@ -40,6 +40,11 @@ export const getIpToSgtMappingGroup: typeof import("./getIpToSgtMappingGroup").g
 export const getIpToSgtMappingGroupOutput: typeof import("./getIpToSgtMappingGroup").getIpToSgtMappingGroupOutput = null as any;
 utilities.lazyLoad(exports, ["getIpToSgtMappingGroup","getIpToSgtMappingGroupOutput"], () => require("./getIpToSgtMappingGroup"));
 
+export { GetMatrixArgs, GetMatrixResult, GetMatrixOutputArgs } from "./getMatrix";
+export const getMatrix: typeof import("./getMatrix").getMatrix = null as any;
+export const getMatrixOutput: typeof import("./getMatrix").getMatrixOutput = null as any;
+utilities.lazyLoad(exports, ["getMatrix","getMatrixOutput"], () => require("./getMatrix"));
+
 export { GetSecurityGroupArgs, GetSecurityGroupResult, GetSecurityGroupOutputArgs } from "./getSecurityGroup";
 export const getSecurityGroup: typeof import("./getSecurityGroup").getSecurityGroup = null as any;
 export const getSecurityGroupOutput: typeof import("./getSecurityGroup").getSecurityGroupOutput = null as any;
@@ -65,6 +70,11 @@ export type IpToSgtMappingGroup = import("./ipToSgtMappingGroup").IpToSgtMapping
 export const IpToSgtMappingGroup: typeof import("./ipToSgtMappingGroup").IpToSgtMappingGroup = null as any;
 utilities.lazyLoad(exports, ["IpToSgtMappingGroup"], () => require("./ipToSgtMappingGroup"));
 
+export { MatrixArgs, MatrixState } from "./matrix";
+export type Matrix = import("./matrix").Matrix;
+export const Matrix: typeof import("./matrix").Matrix = null as any;
+utilities.lazyLoad(exports, ["Matrix"], () => require("./matrix"));
+
 export { SecurityGroupArgs, SecurityGroupState } from "./securityGroup";
 export type SecurityGroup = import("./securityGroup").SecurityGroup;
 export const SecurityGroup: typeof import("./securityGroup").SecurityGroup = null as any;
@@ -79,6 +89,11 @@ export { SxpDomainFilterArgs, SxpDomainFilterState } from "./sxpDomainFilter";
 export type SxpDomainFilter = import("./sxpDomainFilter").SxpDomainFilter;
 export const SxpDomainFilter: typeof import("./sxpDomainFilter").SxpDomainFilter = null as any;
 utilities.lazyLoad(exports, ["SxpDomainFilter"], () => require("./sxpDomainFilter"));
+
+export { WorkProcessSettingsArgs, WorkProcessSettingsState } from "./workProcessSettings";
+export type WorkProcessSettings = import("./workProcessSettings").WorkProcessSettings;
+export const WorkProcessSettings: typeof import("./workProcessSettings").WorkProcessSettings = null as any;
+utilities.lazyLoad(exports, ["WorkProcessSettings"], () => require("./workProcessSettings"));
 
 
 const _module = {
@@ -95,12 +110,16 @@ const _module = {
                 return new IpToSgtMapping(name, <any>undefined, { urn })
             case "ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup":
                 return new IpToSgtMappingGroup(name, <any>undefined, { urn })
+            case "ise:trustsec/matrix:Matrix":
+                return new Matrix(name, <any>undefined, { urn })
             case "ise:trustsec/securityGroup:SecurityGroup":
                 return new SecurityGroup(name, <any>undefined, { urn })
             case "ise:trustsec/securityGroupAcl:SecurityGroupAcl":
                 return new SecurityGroupAcl(name, <any>undefined, { urn })
             case "ise:trustsec/sxpDomainFilter:SxpDomainFilter":
                 return new SxpDomainFilter(name, <any>undefined, { urn })
+            case "ise:trustsec/workProcessSettings:WorkProcessSettings":
+                return new WorkProcessSettings(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
@@ -111,6 +130,8 @@ pulumi.runtime.registerResourceModule("ise", "trustsec/egressMatrixCellDefault",
 pulumi.runtime.registerResourceModule("ise", "trustsec/egressPushMatrix", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMapping", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMappingGroup", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/matrix", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroupAcl", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/sxpDomainFilter", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/workProcessSettings", _module)

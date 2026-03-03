@@ -13,11 +13,14 @@ from .get_egress_matrix_cell import *
 from .get_egress_matrix_cell_default import *
 from .get_ip_to_sgt_mapping import *
 from .get_ip_to_sgt_mapping_group import *
+from .get_matrix import *
 from .get_security_group import *
 from .get_security_group_acl import *
 from .get_sxp_domain_filter import *
 from .ip_to_sgt_mapping import *
 from .ip_to_sgt_mapping_group import *
+from .matrix import *
 from .security_group import *
 from .security_group_acl import *
 from .sxp_domain_filter import *
+from .work_process_settings import *

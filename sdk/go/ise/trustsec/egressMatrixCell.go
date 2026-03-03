@@ -69,6 +69,8 @@ type EgressMatrixCell struct {
 	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
 	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringOutput `pulumi:"matrixCellStatus"`
+	// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+	MatrixId pulumi.StringPtrOutput `pulumi:"matrixId"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayOutput `pulumi:"sgacls"`
 	// Source Trustsec Security Group ID
@@ -123,6 +125,8 @@ type egressMatrixCellState struct {
 	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
 	//   - Default value: `DISABLED`
 	MatrixCellStatus *string `pulumi:"matrixCellStatus"`
+	// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+	MatrixId *string `pulumi:"matrixId"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
 	// Source Trustsec Security Group ID
@@ -142,6 +146,8 @@ type EgressMatrixCellState struct {
 	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
 	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringPtrInput
+	// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+	MatrixId pulumi.StringPtrInput
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayInput
 	// Source Trustsec Security Group ID
@@ -165,6 +171,8 @@ type egressMatrixCellArgs struct {
 	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
 	//   - Default value: `DISABLED`
 	MatrixCellStatus *string `pulumi:"matrixCellStatus"`
+	// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+	MatrixId *string `pulumi:"matrixId"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
 	// Source Trustsec Security Group ID
@@ -185,6 +193,8 @@ type EgressMatrixCellArgs struct {
 	//   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
 	//   - Default value: `DISABLED`
 	MatrixCellStatus pulumi.StringPtrInput
+	// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+	MatrixId pulumi.StringPtrInput
 	// List of TrustSec Security Groups ACLs
 	Sgacls pulumi.StringArrayInput
 	// Source Trustsec Security Group ID
@@ -300,6 +310,11 @@ func (o EgressMatrixCellOutput) DestinationSgtId() pulumi.StringOutput {
 //   - Default value: `DISABLED`
 func (o EgressMatrixCellOutput) MatrixCellStatus() pulumi.StringOutput {
 	return o.ApplyT(func(v *EgressMatrixCell) pulumi.StringOutput { return v.MatrixCellStatus }).(pulumi.StringOutput)
+}
+
+// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+func (o EgressMatrixCellOutput) MatrixId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EgressMatrixCell) pulumi.StringPtrOutput { return v.MatrixId }).(pulumi.StringPtrOutput)
 }
 
 // List of TrustSec Security Groups ACLs
