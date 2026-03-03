@@ -37,6 +37,11 @@ public final class GetEgressMatrixCellResult {
      */
     private String matrixCellStatus;
     /**
+     * @return Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     * 
+     */
+    private String matrixId;
+    /**
      * @return List of TrustSec Security Groups ACLs
      * 
      */
@@ -84,6 +89,13 @@ public final class GetEgressMatrixCellResult {
         return this.matrixCellStatus;
     }
     /**
+     * @return Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     * 
+     */
+    public String matrixId() {
+        return this.matrixId;
+    }
+    /**
      * @return List of TrustSec Security Groups ACLs
      * 
      */
@@ -112,6 +124,7 @@ public final class GetEgressMatrixCellResult {
         private String destinationSgtId;
         private String id;
         private String matrixCellStatus;
+        private String matrixId;
         private List<String> sgacls;
         private String sourceSgtId;
         public Builder() {}
@@ -122,6 +135,7 @@ public final class GetEgressMatrixCellResult {
     	      this.destinationSgtId = defaults.destinationSgtId;
     	      this.id = defaults.id;
     	      this.matrixCellStatus = defaults.matrixCellStatus;
+    	      this.matrixId = defaults.matrixId;
     	      this.sgacls = defaults.sgacls;
     	      this.sourceSgtId = defaults.sourceSgtId;
         }
@@ -167,6 +181,14 @@ public final class GetEgressMatrixCellResult {
             return this;
         }
         @CustomType.Setter
+        public Builder matrixId(String matrixId) {
+            if (matrixId == null) {
+              throw new MissingRequiredPropertyException("GetEgressMatrixCellResult", "matrixId");
+            }
+            this.matrixId = matrixId;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sgacls(List<String> sgacls) {
             if (sgacls == null) {
               throw new MissingRequiredPropertyException("GetEgressMatrixCellResult", "sgacls");
@@ -192,6 +214,7 @@ public final class GetEgressMatrixCellResult {
             _resultValue.destinationSgtId = destinationSgtId;
             _resultValue.id = id;
             _resultValue.matrixCellStatus = matrixCellStatus;
+            _resultValue.matrixId = matrixId;
             _resultValue.sgacls = sgacls;
             _resultValue.sourceSgtId = sourceSgtId;
             return _resultValue;

@@ -31,12 +31,16 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &IpToSgtMapping{}
 	case "ise:trustsec/ipToSgtMappingGroup:IpToSgtMappingGroup":
 		r = &IpToSgtMappingGroup{}
+	case "ise:trustsec/matrix:Matrix":
+		r = &Matrix{}
 	case "ise:trustsec/securityGroup:SecurityGroup":
 		r = &SecurityGroup{}
 	case "ise:trustsec/securityGroupAcl:SecurityGroupAcl":
 		r = &SecurityGroupAcl{}
 	case "ise:trustsec/sxpDomainFilter:SxpDomainFilter":
 		r = &SxpDomainFilter{}
+	case "ise:trustsec/workProcessSettings:WorkProcessSettings":
+		r = &WorkProcessSettings{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -77,6 +81,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
+		"trustsec/matrix",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
 		"trustsec/securityGroup",
 		&module{version},
 	)
@@ -88,6 +97,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"trustsec/sxpDomainFilter",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"trustsec/workProcessSettings",
 		&module{version},
 	)
 }

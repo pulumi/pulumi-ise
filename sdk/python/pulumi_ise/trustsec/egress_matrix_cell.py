@@ -24,6 +24,7 @@ class EgressMatrixCellArgs:
                  default_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
+                 matrix_id: Optional[pulumi.Input[_builtins.str]] = None,
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a EgressMatrixCell resource.
@@ -37,6 +38,7 @@ class EgressMatrixCellArgs:
         :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
                  - Choices: `DISABLED`, `ENABLED`, `MONITOR`
                  - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_id: Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         """
         pulumi.set(__self__, "destination_sgt_id", destination_sgt_id)
@@ -47,6 +49,8 @@ class EgressMatrixCellArgs:
             pulumi.set(__self__, "description", description)
         if matrix_cell_status is not None:
             pulumi.set(__self__, "matrix_cell_status", matrix_cell_status)
+        if matrix_id is not None:
+            pulumi.set(__self__, "matrix_id", matrix_id)
         if sgacls is not None:
             pulumi.set(__self__, "sgacls", sgacls)
 
@@ -115,6 +119,18 @@ class EgressMatrixCellArgs:
         pulumi.set(self, "matrix_cell_status", value)
 
     @_builtins.property
+    @pulumi.getter(name="matrixId")
+    def matrix_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        """
+        return pulumi.get(self, "matrix_id")
+
+    @matrix_id.setter
+    def matrix_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "matrix_id", value)
+
+    @_builtins.property
     @pulumi.getter
     def sgacls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -134,6 +150,7 @@ class _EgressMatrixCellState:
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_sgt_id: Optional[pulumi.Input[_builtins.str]] = None,
                  matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
+                 matrix_id: Optional[pulumi.Input[_builtins.str]] = None,
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_sgt_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -147,6 +164,7 @@ class _EgressMatrixCellState:
         :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
                  - Choices: `DISABLED`, `ENABLED`, `MONITOR`
                  - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_id: Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         :param pulumi.Input[_builtins.str] source_sgt_id: Source Trustsec Security Group ID
         """
@@ -158,6 +176,8 @@ class _EgressMatrixCellState:
             pulumi.set(__self__, "destination_sgt_id", destination_sgt_id)
         if matrix_cell_status is not None:
             pulumi.set(__self__, "matrix_cell_status", matrix_cell_status)
+        if matrix_id is not None:
+            pulumi.set(__self__, "matrix_id", matrix_id)
         if sgacls is not None:
             pulumi.set(__self__, "sgacls", sgacls)
         if source_sgt_id is not None:
@@ -216,6 +236,18 @@ class _EgressMatrixCellState:
         pulumi.set(self, "matrix_cell_status", value)
 
     @_builtins.property
+    @pulumi.getter(name="matrixId")
+    def matrix_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        """
+        return pulumi.get(self, "matrix_id")
+
+    @matrix_id.setter
+    def matrix_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "matrix_id", value)
+
+    @_builtins.property
     @pulumi.getter
     def sgacls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -250,6 +282,7 @@ class EgressMatrixCell(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_sgt_id: Optional[pulumi.Input[_builtins.str]] = None,
                  matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
+                 matrix_id: Optional[pulumi.Input[_builtins.str]] = None,
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_sgt_id: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -290,6 +323,7 @@ class EgressMatrixCell(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
                  - Choices: `DISABLED`, `ENABLED`, `MONITOR`
                  - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_id: Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         :param pulumi.Input[_builtins.str] source_sgt_id: Source Trustsec Security Group ID
         """
@@ -345,6 +379,7 @@ class EgressMatrixCell(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_sgt_id: Optional[pulumi.Input[_builtins.str]] = None,
                  matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
+                 matrix_id: Optional[pulumi.Input[_builtins.str]] = None,
                  sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_sgt_id: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -362,6 +397,7 @@ class EgressMatrixCell(pulumi.CustomResource):
                 raise TypeError("Missing required property 'destination_sgt_id'")
             __props__.__dict__["destination_sgt_id"] = destination_sgt_id
             __props__.__dict__["matrix_cell_status"] = matrix_cell_status
+            __props__.__dict__["matrix_id"] = matrix_id
             __props__.__dict__["sgacls"] = sgacls
             if source_sgt_id is None and not opts.urn:
                 raise TypeError("Missing required property 'source_sgt_id'")
@@ -380,6 +416,7 @@ class EgressMatrixCell(pulumi.CustomResource):
             description: Optional[pulumi.Input[_builtins.str]] = None,
             destination_sgt_id: Optional[pulumi.Input[_builtins.str]] = None,
             matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
+            matrix_id: Optional[pulumi.Input[_builtins.str]] = None,
             sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             source_sgt_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'EgressMatrixCell':
         """
@@ -397,6 +434,7 @@ class EgressMatrixCell(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] matrix_cell_status: Matrix Cell Status
                  - Choices: `DISABLED`, `ENABLED`, `MONITOR`
                  - Default value: `DISABLED`
+        :param pulumi.Input[_builtins.str] matrix_id: Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sgacls: List of TrustSec Security Groups ACLs
         :param pulumi.Input[_builtins.str] source_sgt_id: Source Trustsec Security Group ID
         """
@@ -408,6 +446,7 @@ class EgressMatrixCell(pulumi.CustomResource):
         __props__.__dict__["description"] = description
         __props__.__dict__["destination_sgt_id"] = destination_sgt_id
         __props__.__dict__["matrix_cell_status"] = matrix_cell_status
+        __props__.__dict__["matrix_id"] = matrix_id
         __props__.__dict__["sgacls"] = sgacls
         __props__.__dict__["source_sgt_id"] = source_sgt_id
         return EgressMatrixCell(resource_name, opts=opts, __props__=__props__)
@@ -447,6 +486,14 @@ class EgressMatrixCell(pulumi.CustomResource):
           - Default value: `DISABLED`
         """
         return pulumi.get(self, "matrix_cell_status")
+
+    @_builtins.property
+    @pulumi.getter(name="matrixId")
+    def matrix_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        """
+        return pulumi.get(self, "matrix_id")
 
     @_builtins.property
     @pulumi.getter

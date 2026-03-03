@@ -66,6 +66,8 @@ type LookupEgressMatrixCellResult struct {
 	Id string `pulumi:"id"`
 	// Matrix Cell Status
 	MatrixCellStatus string `pulumi:"matrixCellStatus"`
+	// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+	MatrixId string `pulumi:"matrixId"`
 	// List of TrustSec Security Groups ACLs
 	Sgacls []string `pulumi:"sgacls"`
 	// Source Trustsec Security Group ID
@@ -129,6 +131,11 @@ func (o LookupEgressMatrixCellResultOutput) Id() pulumi.StringOutput {
 // Matrix Cell Status
 func (o LookupEgressMatrixCellResultOutput) MatrixCellStatus() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEgressMatrixCellResult) string { return v.MatrixCellStatus }).(pulumi.StringOutput)
+}
+
+// Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+func (o LookupEgressMatrixCellResultOutput) MatrixId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupEgressMatrixCellResult) string { return v.MatrixId }).(pulumi.StringOutput)
 }
 
 // List of TrustSec Security Groups ACLs

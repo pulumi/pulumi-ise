@@ -521,6 +521,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "trustsec/matrix",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/matrix:Matrix": "Matrix"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "trustsec/securityGroup",
   "fqn": "pulumi_ise.trustsec",
   "classes": {
@@ -541,6 +549,14 @@ _utilities.register(
   "fqn": "pulumi_ise.trustsec",
   "classes": {
    "ise:trustsec/sxpDomainFilter:SxpDomainFilter": "SxpDomainFilter"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "trustsec/workProcessSettings",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/workProcessSettings:WorkProcessSettings": "WorkProcessSettings"
   }
  }
 ]

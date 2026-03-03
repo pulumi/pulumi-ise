@@ -17,6 +17,8 @@ import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
 import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
 import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingPlainArgs;
+import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+import com.pulumi.ise.trustsec.inputs.GetMatrixPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
@@ -27,6 +29,7 @@ import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellDefaultResult;
 import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingGroupResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingResult;
+import com.pulumi.ise.trustsec.outputs.GetMatrixResult;
 import com.pulumi.ise.trustsec.outputs.GetSecurityGroupAclResult;
 import com.pulumi.ise.trustsec.outputs.GetSecurityGroupResult;
 import com.pulumi.ise.trustsec.outputs.GetSxpDomainFilterResult;
@@ -992,6 +995,286 @@ public final class TrustsecFunctions {
      */
     public static CompletableFuture<GetIpToSgtMappingGroupResult> getIpToSgtMappingGroupPlain(GetIpToSgtMappingGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", TypeShape.of(GetIpToSgtMappingGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMatrixResult> getMatrix() {
+        return getMatrix(GetMatrixArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMatrixResult> getMatrixPlain() {
+        return getMatrixPlain(GetMatrixPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMatrixResult> getMatrix(GetMatrixArgs args) {
+        return getMatrix(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMatrixResult> getMatrixPlain(GetMatrixPlainArgs args) {
+        return getMatrixPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMatrixResult> getMatrix(GetMatrixArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getMatrix:getMatrix", TypeShape.of(GetMatrixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMatrixResult> getMatrix(GetMatrixArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getMatrix:getMatrix", TypeShape.of(GetMatrixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the TrustSec Matrix.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getMatrix(GetMatrixArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMatrixResult> getMatrixPlain(GetMatrixPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:trustsec/getMatrix:getMatrix", TypeShape.of(GetMatrixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the TrustSec Security Group.

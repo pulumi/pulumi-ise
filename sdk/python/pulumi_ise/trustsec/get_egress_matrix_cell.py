@@ -26,7 +26,7 @@ class GetEgressMatrixCellResult:
     """
     A collection of values returned by getEgressMatrixCell.
     """
-    def __init__(__self__, default_rule=None, description=None, destination_sgt_id=None, id=None, matrix_cell_status=None, sgacls=None, source_sgt_id=None):
+    def __init__(__self__, default_rule=None, description=None, destination_sgt_id=None, id=None, matrix_cell_status=None, matrix_id=None, sgacls=None, source_sgt_id=None):
         if default_rule and not isinstance(default_rule, str):
             raise TypeError("Expected argument 'default_rule' to be a str")
         pulumi.set(__self__, "default_rule", default_rule)
@@ -42,6 +42,9 @@ class GetEgressMatrixCellResult:
         if matrix_cell_status and not isinstance(matrix_cell_status, str):
             raise TypeError("Expected argument 'matrix_cell_status' to be a str")
         pulumi.set(__self__, "matrix_cell_status", matrix_cell_status)
+        if matrix_id and not isinstance(matrix_id, str):
+            raise TypeError("Expected argument 'matrix_id' to be a str")
+        pulumi.set(__self__, "matrix_id", matrix_id)
         if sgacls and not isinstance(sgacls, list):
             raise TypeError("Expected argument 'sgacls' to be a list")
         pulumi.set(__self__, "sgacls", sgacls)
@@ -90,6 +93,14 @@ class GetEgressMatrixCellResult:
         return pulumi.get(self, "matrix_cell_status")
 
     @_builtins.property
+    @pulumi.getter(name="matrixId")
+    def matrix_id(self) -> _builtins.str:
+        """
+        Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+        """
+        return pulumi.get(self, "matrix_id")
+
+    @_builtins.property
     @pulumi.getter
     def sgacls(self) -> Sequence[_builtins.str]:
         """
@@ -117,6 +128,7 @@ class AwaitableGetEgressMatrixCellResult(GetEgressMatrixCellResult):
             destination_sgt_id=self.destination_sgt_id,
             id=self.id,
             matrix_cell_status=self.matrix_cell_status,
+            matrix_id=self.matrix_id,
             sgacls=self.sgacls,
             source_sgt_id=self.source_sgt_id)
 
@@ -149,6 +161,7 @@ def get_egress_matrix_cell(id: Optional[_builtins.str] = None,
         destination_sgt_id=pulumi.get(__ret__, 'destination_sgt_id'),
         id=pulumi.get(__ret__, 'id'),
         matrix_cell_status=pulumi.get(__ret__, 'matrix_cell_status'),
+        matrix_id=pulumi.get(__ret__, 'matrix_id'),
         sgacls=pulumi.get(__ret__, 'sgacls'),
         source_sgt_id=pulumi.get(__ret__, 'source_sgt_id'))
 def get_egress_matrix_cell_output(id: Optional[pulumi.Input[_builtins.str]] = None,
@@ -178,5 +191,6 @@ def get_egress_matrix_cell_output(id: Optional[pulumi.Input[_builtins.str]] = No
         destination_sgt_id=pulumi.get(__response__, 'destination_sgt_id'),
         id=pulumi.get(__response__, 'id'),
         matrix_cell_status=pulumi.get(__response__, 'matrix_cell_status'),
+        matrix_id=pulumi.get(__response__, 'matrix_id'),
         sgacls=pulumi.get(__response__, 'sgacls'),
         source_sgt_id=pulumi.get(__response__, 'source_sgt_id')))

@@ -60,6 +60,10 @@ export interface GetEgressMatrixCellResult {
      */
     readonly matrixCellStatus: string;
     /**
+     * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     */
+    readonly matrixId: string;
+    /**
      * List of TrustSec Security Groups ACLs
      */
     readonly sgacls: string[];

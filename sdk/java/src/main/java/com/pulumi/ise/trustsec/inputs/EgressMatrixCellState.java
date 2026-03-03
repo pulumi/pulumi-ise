@@ -85,6 +85,21 @@ public final class EgressMatrixCellState extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     * 
+     */
+    @Import(name="matrixId")
+    private @Nullable Output<String> matrixId;
+
+    /**
+     * @return Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+     * 
+     */
+    public Optional<Output<String>> matrixId() {
+        return Optional.ofNullable(this.matrixId);
+    }
+
+    /**
      * List of TrustSec Security Groups ACLs
      * 
      */
@@ -121,6 +136,7 @@ public final class EgressMatrixCellState extends com.pulumi.resources.ResourceAr
         this.description = $.description;
         this.destinationSgtId = $.destinationSgtId;
         this.matrixCellStatus = $.matrixCellStatus;
+        this.matrixId = $.matrixId;
         this.sgacls = $.sgacls;
         this.sourceSgtId = $.sourceSgtId;
     }
@@ -233,6 +249,27 @@ public final class EgressMatrixCellState extends com.pulumi.resources.ResourceAr
          */
         public Builder matrixCellStatus(String matrixCellStatus) {
             return matrixCellStatus(Output.of(matrixCellStatus));
+        }
+
+        /**
+         * @param matrixId Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder matrixId(@Nullable Output<String> matrixId) {
+            $.matrixId = matrixId;
+            return this;
+        }
+
+        /**
+         * @param matrixId Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder matrixId(String matrixId) {
+            return matrixId(Output.of(matrixId));
         }
 
         /**
