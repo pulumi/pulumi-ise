@@ -30,6 +30,17 @@ Object.defineProperty(exports, "password", {
 });
 
 /**
+ * HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+ */
+export declare const requestTimeout: number | undefined;
+Object.defineProperty(exports, "requestTimeout", {
+    get() {
+        return __config.getObject<number>("requestTimeout");
+    },
+    enumerable: true,
+});
+
+/**
  * Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
  */
 export declare const retries: number | undefined;

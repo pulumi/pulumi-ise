@@ -58,7 +58,7 @@ type LookupAuthorizationGlobalExceptionRuleArgs struct {
 
 // A collection of values returned by getAuthorizationGlobalExceptionRule.
 type LookupAuthorizationGlobalExceptionRuleResult struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []GetAuthorizationGlobalExceptionRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName string `pulumi:"conditionAttributeName"`
@@ -126,7 +126,7 @@ func (o LookupAuthorizationGlobalExceptionRuleResultOutput) ToLookupAuthorizatio
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o LookupAuthorizationGlobalExceptionRuleResultOutput) Childrens() GetAuthorizationGlobalExceptionRuleChildrenArrayOutput {
 	return o.ApplyT(func(v LookupAuthorizationGlobalExceptionRuleResult) []GetAuthorizationGlobalExceptionRuleChildren {
 		return v.Childrens

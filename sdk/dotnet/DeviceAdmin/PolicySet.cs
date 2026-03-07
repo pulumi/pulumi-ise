@@ -53,7 +53,7 @@ namespace Pulumi.Ise.DeviceAdmin
     public partial class PolicySet : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.PolicySetChildren>> Childrens { get; private set; } = null!;
@@ -201,7 +201,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.PolicySetChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.PolicySetChildrenArgs> Childrens
         {
@@ -314,7 +314,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.PolicySetChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.PolicySetChildrenGetArgs> Childrens
         {

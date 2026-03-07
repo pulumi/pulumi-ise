@@ -61,7 +61,7 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> AttributeValue { get; private set; } = null!;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions.
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.ConditionChildren>> Childrens { get; private set; } = null!;
@@ -172,7 +172,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.ConditionChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions.
         /// </summary>
         public InputList<Inputs.ConditionChildrenArgs> Childrens
         {
@@ -248,7 +248,7 @@ namespace Pulumi.Ise.NetworkAccess
         private InputList<Inputs.ConditionChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        /// List of child conditions.
         /// </summary>
         public InputList<Inputs.ConditionChildrenGetArgs> Childrens
         {

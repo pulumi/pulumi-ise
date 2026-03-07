@@ -82,7 +82,7 @@ class GetConditionResult:
     @pulumi.getter
     def childrens(self) -> Sequence['outputs.GetConditionChildrenResult']:
         """
-        List of child conditions. `condition_type` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+        List of child conditions.
         """
         return pulumi.get(self, "childrens")
 

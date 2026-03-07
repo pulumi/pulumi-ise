@@ -48,7 +48,7 @@ export interface GetAuthorizationGlobalExceptionRuleArgs {
  */
 export interface GetAuthorizationGlobalExceptionRuleResult {
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      */
     readonly childrens: outputs.deviceadmin.GetAuthorizationGlobalExceptionRuleChildren[];
     /**

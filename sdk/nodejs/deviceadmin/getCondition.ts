@@ -56,7 +56,7 @@ export interface GetConditionResult {
      */
     readonly attributeValue: string;
     /**
-     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions
      */
     readonly childrens: outputs.deviceadmin.GetConditionChildren[];
     /**

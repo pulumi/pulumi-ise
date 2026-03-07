@@ -24,7 +24,7 @@ public final class GetConditionResult {
      */
     private String attributeValue;
     /**
-     * @return List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     private List<GetConditionChildren> childrens;
@@ -85,7 +85,7 @@ public final class GetConditionResult {
         return this.attributeValue;
     }
     /**
-     * @return List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public List<GetConditionChildren> childrens() {

@@ -64,7 +64,7 @@ import (
 type AuthorizationExceptionRule struct {
 	pulumi.CustomResourceState
 
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationExceptionRuleChildrenArrayOutput `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrOutput `pulumi:"conditionAttributeName"`
@@ -134,7 +134,7 @@ func GetAuthorizationExceptionRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthorizationExceptionRule resources.
 type authorizationExceptionRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthorizationExceptionRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -172,7 +172,7 @@ type authorizationExceptionRuleState struct {
 }
 
 type AuthorizationExceptionRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationExceptionRuleChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -214,7 +214,7 @@ func (AuthorizationExceptionRuleState) ElementType() reflect.Type {
 }
 
 type authorizationExceptionRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthorizationExceptionRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -253,7 +253,7 @@ type authorizationExceptionRuleArgs struct {
 
 // The set of arguments for constructing a AuthorizationExceptionRule resource.
 type AuthorizationExceptionRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationExceptionRuleChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -377,7 +377,7 @@ func (o AuthorizationExceptionRuleOutput) ToAuthorizationExceptionRuleOutputWith
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o AuthorizationExceptionRuleOutput) Childrens() AuthorizationExceptionRuleChildrenArrayOutput {
 	return o.ApplyT(func(v *AuthorizationExceptionRule) AuthorizationExceptionRuleChildrenArrayOutput { return v.Childrens }).(AuthorizationExceptionRuleChildrenArrayOutput)
 }

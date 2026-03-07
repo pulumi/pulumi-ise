@@ -21,14 +21,14 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
     public static final AuthorizationRuleArgs Empty = new AuthorizationRuleArgs();
 
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      * 
      */
     @Import(name="childrens")
     private @Nullable Output<List<AuthorizationRuleChildrenArgs>> childrens;
 
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public Optional<Output<List<AuthorizationRuleChildrenArgs>>> childrens() {
@@ -306,7 +306,7 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions
          * 
          * @return builder
          * 
@@ -317,7 +317,7 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions
          * 
          * @return builder
          * 
@@ -327,7 +327,7 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions
          * 
          * @return builder
          * 

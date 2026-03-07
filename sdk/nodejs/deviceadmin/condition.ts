@@ -72,7 +72,7 @@ export class Condition extends pulumi.CustomResource {
      */
     declare public readonly attributeValue: pulumi.Output<string | undefined>;
     /**
-     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions
      */
     declare public readonly childrens: pulumi.Output<outputs.deviceadmin.ConditionChildren[] | undefined>;
     /**
@@ -163,7 +163,7 @@ export interface ConditionState {
      */
     attributeValue?: pulumi.Input<string>;
     /**
-     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildren>[]>;
     /**
@@ -211,7 +211,7 @@ export interface ConditionArgs {
      */
     attributeValue?: pulumi.Input<string>;
     /**
-     * List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+     * List of child conditions
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.deviceadmin.ConditionChildren>[]>;
     /**

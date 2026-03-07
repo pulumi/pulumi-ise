@@ -24,9 +24,21 @@ namespace Pulumi.Ise.DeviceAdmin.Inputs
         [Input("attributeValue")]
         public Input<string>? AttributeValue { get; set; }
 
+        [Input("childrens")]
+        private InputList<Inputs.AuthorizationRuleChildrenChildrenChildrenArgs>? _childrens;
+
+        /// <summary>
+        /// List of child conditions
+        /// </summary>
+        public InputList<Inputs.AuthorizationRuleChildrenChildrenChildrenArgs> Childrens
+        {
+            get => _childrens ?? (_childrens = new InputList<Inputs.AuthorizationRuleChildrenChildrenChildrenArgs>());
+            set => _childrens = value;
+        }
+
         /// <summary>
         /// Condition type.
-        ///   - Choices: `ConditionAttributes`, `ConditionReference`
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         [Input("conditionType", required: true)]
         public Input<string> ConditionType { get; set; } = null!;

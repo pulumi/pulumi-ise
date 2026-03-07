@@ -22,6 +22,10 @@ namespace Pulumi.Ise.DeviceAdmin.Outputs
         /// </summary>
         public readonly string AttributeValue;
         /// <summary>
+        /// List of child conditions
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetAuthenticationRuleChildrenChildrenChildrenResult> Childrens;
+        /// <summary>
         /// Condition type.
         /// </summary>
         public readonly string ConditionType;
@@ -52,6 +56,8 @@ namespace Pulumi.Ise.DeviceAdmin.Outputs
 
             string attributeValue,
 
+            ImmutableArray<Outputs.GetAuthenticationRuleChildrenChildrenChildrenResult> childrens,
+
             string conditionType,
 
             string dictionaryName,
@@ -66,6 +72,7 @@ namespace Pulumi.Ise.DeviceAdmin.Outputs
         {
             AttributeName = attributeName;
             AttributeValue = attributeValue;
+            Childrens = childrens;
             ConditionType = conditionType;
             DictionaryName = dictionaryName;
             DictionaryValue = dictionaryValue;

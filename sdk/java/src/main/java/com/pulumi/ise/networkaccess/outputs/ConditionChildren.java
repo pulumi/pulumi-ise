@@ -26,7 +26,7 @@ public final class ConditionChildren {
      */
     private @Nullable String attributeValue;
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     private @Nullable List<ConditionChildrenChildren> childrens;
@@ -89,7 +89,7 @@ public final class ConditionChildren {
         return Optional.ofNullable(this.attributeValue);
     }
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public List<ConditionChildrenChildren> childrens() {

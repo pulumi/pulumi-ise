@@ -64,7 +64,7 @@ import (
 type AuthorizationRule struct {
 	pulumi.CustomResourceState
 
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationRuleChildrenArrayOutput `pulumi:"childrens"`
 	// Command sets enforce the specified list of commands that can be executed by a device administrator
 	CommandSets pulumi.StringArrayOutput `pulumi:"commandSets"`
@@ -134,7 +134,7 @@ func GetAuthorizationRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthorizationRule resources.
 type authorizationRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthorizationRuleChildren `pulumi:"childrens"`
 	// Command sets enforce the specified list of commands that can be executed by a device administrator
 	CommandSets []string `pulumi:"commandSets"`
@@ -172,7 +172,7 @@ type authorizationRuleState struct {
 }
 
 type AuthorizationRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationRuleChildrenArrayInput
 	// Command sets enforce the specified list of commands that can be executed by a device administrator
 	CommandSets pulumi.StringArrayInput
@@ -214,7 +214,7 @@ func (AuthorizationRuleState) ElementType() reflect.Type {
 }
 
 type authorizationRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthorizationRuleChildren `pulumi:"childrens"`
 	// Command sets enforce the specified list of commands that can be executed by a device administrator
 	CommandSets []string `pulumi:"commandSets"`
@@ -253,7 +253,7 @@ type authorizationRuleArgs struct {
 
 // The set of arguments for constructing a AuthorizationRule resource.
 type AuthorizationRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationRuleChildrenArrayInput
 	// Command sets enforce the specified list of commands that can be executed by a device administrator
 	CommandSets pulumi.StringArrayInput
@@ -377,7 +377,7 @@ func (o AuthorizationRuleOutput) ToAuthorizationRuleOutputWithContext(ctx contex
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o AuthorizationRuleOutput) Childrens() AuthorizationRuleChildrenArrayOutput {
 	return o.ApplyT(func(v *AuthorizationRule) AuthorizationRuleChildrenArrayOutput { return v.Childrens }).(AuthorizationRuleChildrenArrayOutput)
 }

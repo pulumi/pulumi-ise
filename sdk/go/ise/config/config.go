@@ -21,6 +21,11 @@ func GetPassword(ctx *pulumi.Context) string {
 	return config.Get(ctx, "ise:password")
 }
 
+// HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+func GetRequestTimeout(ctx *pulumi.Context) int {
+	return config.GetInt(ctx, "ise:requestTimeout")
+}
+
 // Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
 func GetRetries(ctx *pulumi.Context) int {
 	return config.GetInt(ctx, "ise:retries")

@@ -48,6 +48,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+     * 
+     */
+    @Import(name="requestTimeout", json=true)
+    private @Nullable Output<Integer> requestTimeout;
+
+    /**
+     * @return HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+     * 
+     */
+    public Optional<Output<Integer>> requestTimeout() {
+        return Optional.ofNullable(this.requestTimeout);
+    }
+
+    /**
      * Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
      * 
      */
@@ -97,6 +112,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     private ProviderArgs(ProviderArgs $) {
         this.insecure = $.insecure;
         this.password = $.password;
+        this.requestTimeout = $.requestTimeout;
         this.retries = $.retries;
         this.url = $.url;
         this.username = $.username;
@@ -160,6 +176,27 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder password(String password) {
             return password(Output.of(password));
+        }
+
+        /**
+         * @param requestTimeout HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestTimeout(@Nullable Output<Integer> requestTimeout) {
+            $.requestTimeout = requestTimeout;
+            return this;
+        }
+
+        /**
+         * @param requestTimeout HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            return requestTimeout(Output.of(requestTimeout));
         }
 
         /**

@@ -61,7 +61,7 @@ import (
 type PolicySet struct {
 	pulumi.CustomResourceState
 
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens PolicySetChildrenArrayOutput `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrOutput `pulumi:"conditionAttributeName"`
@@ -131,7 +131,7 @@ func GetPolicySet(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering PolicySet resources.
 type policySetState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []PolicySetChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -169,7 +169,7 @@ type policySetState struct {
 }
 
 type PolicySetState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens PolicySetChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -211,7 +211,7 @@ func (PolicySetState) ElementType() reflect.Type {
 }
 
 type policySetArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []PolicySetChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -250,7 +250,7 @@ type policySetArgs struct {
 
 // The set of arguments for constructing a PolicySet resource.
 type PolicySetArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens PolicySetChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -374,7 +374,7 @@ func (o PolicySetOutput) ToPolicySetOutputWithContext(ctx context.Context) Polic
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o PolicySetOutput) Childrens() PolicySetChildrenArrayOutput {
 	return o.ApplyT(func(v *PolicySet) PolicySetChildrenArrayOutput { return v.Childrens }).(PolicySetChildrenArrayOutput)
 }

@@ -54,6 +54,8 @@ type providerArgs struct {
 	Insecure *bool `pulumi:"insecure"`
 	// Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
 	Password *string `pulumi:"password"`
+	// HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+	RequestTimeout *int `pulumi:"requestTimeout"`
 	// Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
 	Retries *int `pulumi:"retries"`
 	// URL of the Cisco ISE instance. This can also be set as the ISE_URL environment variable.
@@ -68,6 +70,8 @@ type ProviderArgs struct {
 	Insecure pulumi.BoolPtrInput
 	// Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
 	Password pulumi.StringPtrInput
+	// HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+	RequestTimeout pulumi.IntPtrInput
 	// Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
 	Retries pulumi.IntPtrInput
 	// URL of the Cisco ISE instance. This can also be set as the ISE_URL environment variable.

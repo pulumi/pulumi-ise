@@ -35,6 +35,13 @@ class _ExportableConfig(types.ModuleType):
         return __config__.get('password')
 
     @_builtins.property
+    def request_timeout(self) -> Optional[int]:
+        """
+        HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+        """
+        return __config__.get_int('requestTimeout')
+
+    @_builtins.property
     def retries(self) -> Optional[int]:
         """
         Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.

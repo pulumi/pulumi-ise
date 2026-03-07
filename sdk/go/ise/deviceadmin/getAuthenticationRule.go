@@ -61,7 +61,7 @@ type LookupAuthenticationRuleArgs struct {
 
 // A collection of values returned by getAuthenticationRule.
 type LookupAuthenticationRuleResult struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []GetAuthenticationRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName string `pulumi:"conditionAttributeName"`
@@ -139,7 +139,7 @@ func (o LookupAuthenticationRuleResultOutput) ToLookupAuthenticationRuleResultOu
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o LookupAuthenticationRuleResultOutput) Childrens() GetAuthenticationRuleChildrenArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []GetAuthenticationRuleChildren { return v.Childrens }).(GetAuthenticationRuleChildrenArrayOutput)
 }

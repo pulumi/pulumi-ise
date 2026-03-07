@@ -6,8 +6,10 @@ package com.pulumi.ise.networkaccess.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.ise.networkaccess.inputs.ConditionChildrenChildrenChildrenArgs;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -48,8 +50,23 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
     }
 
     /**
+     * List of child conditions
+     * 
+     */
+    @Import(name="childrens")
+    private @Nullable Output<List<ConditionChildrenChildrenChildrenArgs>> childrens;
+
+    /**
+     * @return List of child conditions
+     * 
+     */
+    public Optional<Output<List<ConditionChildrenChildrenChildrenArgs>>> childrens() {
+        return Optional.ofNullable(this.childrens);
+    }
+
+    /**
      * Condition type.
-     *   - Choices: `ConditionAttributes`, `ConditionReference`
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     @Import(name="conditionType", required=true)
@@ -57,7 +74,7 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
 
     /**
      * @return Condition type.
-     *   - Choices: `ConditionAttributes`, `ConditionReference`
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     public Output<String> conditionType() {
@@ -176,6 +193,7 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
     private ConditionChildrenChildrenArgs(ConditionChildrenChildrenArgs $) {
         this.attributeName = $.attributeName;
         this.attributeValue = $.attributeValue;
+        this.childrens = $.childrens;
         this.conditionType = $.conditionType;
         this.description = $.description;
         this.dictionaryName = $.dictionaryName;
@@ -247,8 +265,39 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
         }
 
         /**
+         * @param childrens List of child conditions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder childrens(@Nullable Output<List<ConditionChildrenChildrenChildrenArgs>> childrens) {
+            $.childrens = childrens;
+            return this;
+        }
+
+        /**
+         * @param childrens List of child conditions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder childrens(List<ConditionChildrenChildrenChildrenArgs> childrens) {
+            return childrens(Output.of(childrens));
+        }
+
+        /**
+         * @param childrens List of child conditions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder childrens(ConditionChildrenChildrenChildrenArgs... childrens) {
+            return childrens(List.of(childrens));
+        }
+
+        /**
          * @param conditionType Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
          * 
          * @return builder
          * 
@@ -260,7 +309,7 @@ public final class ConditionChildrenChildrenArgs extends com.pulumi.resources.Re
 
         /**
          * @param conditionType Condition type.
-         *   - Choices: `ConditionAttributes`, `ConditionReference`
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
          * 
          * @return builder
          * 

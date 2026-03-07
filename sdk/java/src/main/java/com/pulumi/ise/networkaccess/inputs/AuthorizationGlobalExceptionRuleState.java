@@ -20,14 +20,14 @@ public final class AuthorizationGlobalExceptionRuleState extends com.pulumi.reso
     public static final AuthorizationGlobalExceptionRuleState Empty = new AuthorizationGlobalExceptionRuleState();
 
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      * 
      */
     @Import(name="childrens")
     private @Nullable Output<List<AuthorizationGlobalExceptionRuleChildrenArgs>> childrens;
 
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public Optional<Output<List<AuthorizationGlobalExceptionRuleChildrenArgs>>> childrens() {
@@ -273,7 +273,7 @@ public final class AuthorizationGlobalExceptionRuleState extends com.pulumi.reso
         }
 
         /**
-         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions
          * 
          * @return builder
          * 
@@ -284,7 +284,7 @@ public final class AuthorizationGlobalExceptionRuleState extends com.pulumi.reso
         }
 
         /**
-         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions
          * 
          * @return builder
          * 
@@ -294,7 +294,7 @@ public final class AuthorizationGlobalExceptionRuleState extends com.pulumi.reso
         }
 
         /**
-         * @param childrens List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+         * @param childrens List of child conditions
          * 
          * @return builder
          * 
