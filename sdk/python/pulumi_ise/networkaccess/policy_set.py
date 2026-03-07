@@ -41,7 +41,7 @@ class PolicySetArgs:
         The set of arguments for constructing a PolicySet resource.
 
         :param pulumi.Input[_builtins.str] service_name: Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
-        :param pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -108,7 +108,7 @@ class PolicySetArgs:
     @pulumi.getter
     def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 
@@ -310,7 +310,7 @@ class _PolicySetState:
         """
         Input properties used for looking up and filtering PolicySet resources.
 
-        :param pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -367,7 +367,7 @@ class _PolicySetState:
     @pulumi.getter
     def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 
@@ -617,7 +617,7 @@ class PolicySet(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -767,7 +767,7 @@ class PolicySet(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -813,7 +813,7 @@ class PolicySet(pulumi.CustomResource):
     @pulumi.getter
     def childrens(self) -> pulumi.Output[Optional[Sequence['outputs.PolicySetChildren']]]:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 

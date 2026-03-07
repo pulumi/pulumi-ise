@@ -58,7 +58,7 @@ type LookupPolicySetArgs struct {
 
 // A collection of values returned by getPolicySet.
 type LookupPolicySetResult struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []GetPolicySetChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName string `pulumi:"conditionAttributeName"`
@@ -130,7 +130,7 @@ func (o LookupPolicySetResultOutput) ToLookupPolicySetResultOutputWithContext(ct
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o LookupPolicySetResultOutput) Childrens() GetPolicySetChildrenArrayOutput {
 	return o.ApplyT(func(v LookupPolicySetResult) []GetPolicySetChildren { return v.Childrens }).(GetPolicySetChildrenArrayOutput)
 }

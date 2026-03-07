@@ -5,8 +5,10 @@ package com.pulumi.ise.deviceadmin.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.ise.deviceadmin.outputs.GetAuthorizationRuleChildrenChildrenChildren;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -21,6 +23,11 @@ public final class GetAuthorizationRuleChildrenChildren {
      * 
      */
     private String attributeValue;
+    /**
+     * @return List of child conditions
+     * 
+     */
+    private List<GetAuthorizationRuleChildrenChildrenChildren> childrens;
     /**
      * @return Condition type.
      * 
@@ -66,6 +73,13 @@ public final class GetAuthorizationRuleChildrenChildren {
      */
     public String attributeValue() {
         return this.attributeValue;
+    }
+    /**
+     * @return List of child conditions
+     * 
+     */
+    public List<GetAuthorizationRuleChildrenChildrenChildren> childrens() {
+        return this.childrens;
     }
     /**
      * @return Condition type.
@@ -121,6 +135,7 @@ public final class GetAuthorizationRuleChildrenChildren {
     public static final class Builder {
         private String attributeName;
         private String attributeValue;
+        private List<GetAuthorizationRuleChildrenChildrenChildren> childrens;
         private String conditionType;
         private String dictionaryName;
         private String dictionaryValue;
@@ -132,6 +147,7 @@ public final class GetAuthorizationRuleChildrenChildren {
     	      Objects.requireNonNull(defaults);
     	      this.attributeName = defaults.attributeName;
     	      this.attributeValue = defaults.attributeValue;
+    	      this.childrens = defaults.childrens;
     	      this.conditionType = defaults.conditionType;
     	      this.dictionaryName = defaults.dictionaryName;
     	      this.dictionaryValue = defaults.dictionaryValue;
@@ -155,6 +171,17 @@ public final class GetAuthorizationRuleChildrenChildren {
             }
             this.attributeValue = attributeValue;
             return this;
+        }
+        @CustomType.Setter
+        public Builder childrens(List<GetAuthorizationRuleChildrenChildrenChildren> childrens) {
+            if (childrens == null) {
+              throw new MissingRequiredPropertyException("GetAuthorizationRuleChildrenChildren", "childrens");
+            }
+            this.childrens = childrens;
+            return this;
+        }
+        public Builder childrens(GetAuthorizationRuleChildrenChildrenChildren... childrens) {
+            return childrens(List.of(childrens));
         }
         @CustomType.Setter
         public Builder conditionType(String conditionType) {
@@ -208,6 +235,7 @@ public final class GetAuthorizationRuleChildrenChildren {
             final var _resultValue = new GetAuthorizationRuleChildrenChildren();
             _resultValue.attributeName = attributeName;
             _resultValue.attributeValue = attributeValue;
+            _resultValue.childrens = childrens;
             _resultValue.conditionType = conditionType;
             _resultValue.dictionaryName = dictionaryName;
             _resultValue.dictionaryValue = dictionaryValue;

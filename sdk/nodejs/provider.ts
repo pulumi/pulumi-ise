@@ -51,6 +51,7 @@ export class Provider extends pulumi.ProviderResource {
         {
             resourceInputs["insecure"] = pulumi.output(args?.insecure).apply(JSON.stringify);
             resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
+            resourceInputs["requestTimeout"] = pulumi.output(args?.requestTimeout).apply(JSON.stringify);
             resourceInputs["retries"] = pulumi.output(args?.retries).apply(JSON.stringify);
             resourceInputs["url"] = args?.url;
             resourceInputs["username"] = args?.username;
@@ -83,6 +84,10 @@ export interface ProviderArgs {
      * Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
      */
     password?: pulumi.Input<string>;
+    /**
+     * HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+     */
+    requestTimeout?: pulumi.Input<number>;
     /**
      * Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
      */

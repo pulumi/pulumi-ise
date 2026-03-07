@@ -57,7 +57,7 @@ namespace Pulumi.Ise.DeviceAdmin
     public partial class AuthorizationRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.AuthorizationRuleChildren>> Childrens { get; private set; } = null!;
@@ -205,7 +205,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.AuthorizationRuleChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.AuthorizationRuleChildrenArgs> Childrens
         {
@@ -324,7 +324,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.AuthorizationRuleChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.AuthorizationRuleChildrenGetArgs> Childrens
         {

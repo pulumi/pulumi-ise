@@ -69,7 +69,7 @@ export class AuthorizationExceptionRule extends pulumi.CustomResource {
     }
 
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      */
     declare public readonly childrens: pulumi.Output<outputs.networkaccess.AuthorizationExceptionRuleChildren[] | undefined>;
     /**
@@ -197,7 +197,7 @@ export class AuthorizationExceptionRule extends pulumi.CustomResource {
  */
 export interface AuthorizationExceptionRuleState {
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleChildren>[]>;
     /**
@@ -270,7 +270,7 @@ export interface AuthorizationExceptionRuleState {
  */
 export interface AuthorizationExceptionRuleArgs {
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      */
     childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleChildren>[]>;
     /**

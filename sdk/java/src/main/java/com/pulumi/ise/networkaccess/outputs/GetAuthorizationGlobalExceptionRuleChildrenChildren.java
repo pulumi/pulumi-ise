@@ -5,8 +5,10 @@ package com.pulumi.ise.networkaccess.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.ise.networkaccess.outputs.GetAuthorizationGlobalExceptionRuleChildrenChildrenChildren;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -21,6 +23,11 @@ public final class GetAuthorizationGlobalExceptionRuleChildrenChildren {
      * 
      */
     private String attributeValue;
+    /**
+     * @return List of child conditions
+     * 
+     */
+    private List<GetAuthorizationGlobalExceptionRuleChildrenChildrenChildren> childrens;
     /**
      * @return Condition type.
      * 
@@ -66,6 +73,13 @@ public final class GetAuthorizationGlobalExceptionRuleChildrenChildren {
      */
     public String attributeValue() {
         return this.attributeValue;
+    }
+    /**
+     * @return List of child conditions
+     * 
+     */
+    public List<GetAuthorizationGlobalExceptionRuleChildrenChildrenChildren> childrens() {
+        return this.childrens;
     }
     /**
      * @return Condition type.
@@ -121,6 +135,7 @@ public final class GetAuthorizationGlobalExceptionRuleChildrenChildren {
     public static final class Builder {
         private String attributeName;
         private String attributeValue;
+        private List<GetAuthorizationGlobalExceptionRuleChildrenChildrenChildren> childrens;
         private String conditionType;
         private String dictionaryName;
         private String dictionaryValue;
@@ -132,6 +147,7 @@ public final class GetAuthorizationGlobalExceptionRuleChildrenChildren {
     	      Objects.requireNonNull(defaults);
     	      this.attributeName = defaults.attributeName;
     	      this.attributeValue = defaults.attributeValue;
+    	      this.childrens = defaults.childrens;
     	      this.conditionType = defaults.conditionType;
     	      this.dictionaryName = defaults.dictionaryName;
     	      this.dictionaryValue = defaults.dictionaryValue;
@@ -155,6 +171,17 @@ public final class GetAuthorizationGlobalExceptionRuleChildrenChildren {
             }
             this.attributeValue = attributeValue;
             return this;
+        }
+        @CustomType.Setter
+        public Builder childrens(List<GetAuthorizationGlobalExceptionRuleChildrenChildrenChildren> childrens) {
+            if (childrens == null) {
+              throw new MissingRequiredPropertyException("GetAuthorizationGlobalExceptionRuleChildrenChildren", "childrens");
+            }
+            this.childrens = childrens;
+            return this;
+        }
+        public Builder childrens(GetAuthorizationGlobalExceptionRuleChildrenChildrenChildren... childrens) {
+            return childrens(List.of(childrens));
         }
         @CustomType.Setter
         public Builder conditionType(String conditionType) {
@@ -208,6 +235,7 @@ public final class GetAuthorizationGlobalExceptionRuleChildrenChildren {
             final var _resultValue = new GetAuthorizationGlobalExceptionRuleChildrenChildren();
             _resultValue.attributeName = attributeName;
             _resultValue.attributeValue = attributeValue;
+            _resultValue.childrens = childrens;
             _resultValue.conditionType = conditionType;
             _resultValue.dictionaryName = dictionaryName;
             _resultValue.dictionaryValue = dictionaryValue;

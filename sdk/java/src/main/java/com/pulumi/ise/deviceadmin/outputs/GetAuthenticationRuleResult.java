@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationRuleResult {
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     private List<GetAuthenticationRuleChildren> childrens;
@@ -112,7 +112,7 @@ public final class GetAuthenticationRuleResult {
 
     private GetAuthenticationRuleResult() {}
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public List<GetAuthenticationRuleChildren> childrens() {

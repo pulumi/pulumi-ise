@@ -28,7 +28,7 @@ namespace Pulumi.Ise.DeviceAdmin.Inputs
         private InputList<Inputs.AuthorizationExceptionRuleChildrenChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.AuthorizationExceptionRuleChildrenChildrenArgs> Childrens
         {

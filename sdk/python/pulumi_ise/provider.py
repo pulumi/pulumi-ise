@@ -21,6 +21,7 @@ class ProviderArgs:
     def __init__(__self__, *,
                  insecure: Optional[pulumi.Input[_builtins.bool]] = None,
                  password: Optional[pulumi.Input[_builtins.str]] = None,
+                 request_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  retries: Optional[pulumi.Input[_builtins.int]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  username: Optional[pulumi.Input[_builtins.str]] = None):
@@ -29,6 +30,7 @@ class ProviderArgs:
 
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
+        :param pulumi.Input[_builtins.int] request_timeout: HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
         :param pulumi.Input[_builtins.str] url: URL of the Cisco ISE instance. This can also be set as the ISE_URL environment variable.
         :param pulumi.Input[_builtins.str] username: Username for the ISE instance. This can also be set as the ISE_USERNAME environment variable.
@@ -37,6 +39,8 @@ class ProviderArgs:
             pulumi.set(__self__, "insecure", insecure)
         if password is not None:
             pulumi.set(__self__, "password", password)
+        if request_timeout is not None:
+            pulumi.set(__self__, "request_timeout", request_timeout)
         if retries is not None:
             pulumi.set(__self__, "retries", retries)
         if url is not None:
@@ -67,6 +71,18 @@ class ProviderArgs:
     @password.setter
     def password(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="requestTimeout")
+    def request_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+        """
+        return pulumi.get(self, "request_timeout")
+
+    @request_timeout.setter
+    def request_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "request_timeout", value)
 
     @_builtins.property
     @pulumi.getter
@@ -113,6 +129,7 @@ class Provider(pulumi.ProviderResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  insecure: Optional[pulumi.Input[_builtins.bool]] = None,
                  password: Optional[pulumi.Input[_builtins.str]] = None,
+                 request_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  retries: Optional[pulumi.Input[_builtins.int]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  username: Optional[pulumi.Input[_builtins.str]] = None,
@@ -128,6 +145,7 @@ class Provider(pulumi.ProviderResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
+        :param pulumi.Input[_builtins.int] request_timeout: HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
         :param pulumi.Input[_builtins.str] url: URL of the Cisco ISE instance. This can also be set as the ISE_URL environment variable.
         :param pulumi.Input[_builtins.str] username: Username for the ISE instance. This can also be set as the ISE_USERNAME environment variable.
@@ -162,6 +180,7 @@ class Provider(pulumi.ProviderResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  insecure: Optional[pulumi.Input[_builtins.bool]] = None,
                  password: Optional[pulumi.Input[_builtins.str]] = None,
+                 request_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  retries: Optional[pulumi.Input[_builtins.int]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  username: Optional[pulumi.Input[_builtins.str]] = None,
@@ -176,6 +195,7 @@ class Provider(pulumi.ProviderResource):
 
             __props__.__dict__["insecure"] = pulumi.Output.from_input(insecure).apply(pulumi.runtime.to_json) if insecure is not None else None
             __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
+            __props__.__dict__["request_timeout"] = pulumi.Output.from_input(request_timeout).apply(pulumi.runtime.to_json) if request_timeout is not None else None
             __props__.__dict__["retries"] = pulumi.Output.from_input(retries).apply(pulumi.runtime.to_json) if retries is not None else None
             __props__.__dict__["url"] = url
             __props__.__dict__["username"] = username

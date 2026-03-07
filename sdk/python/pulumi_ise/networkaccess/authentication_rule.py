@@ -49,7 +49,7 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.str] if_user_not_found: Action to perform when user is not found in any of identity stores
                  - Choices: `REJECT`, `DROP`, `CONTINUE`
         :param pulumi.Input[_builtins.str] policy_set_id: Policy set ID
-        :param pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -155,7 +155,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]]]:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 
@@ -347,7 +347,7 @@ class _AuthenticationRuleState:
         """
         Input properties used for looking up and filtering AuthenticationRule resources.
 
-        :param pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -413,7 +413,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthenticationRuleChildrenArgs']]]]:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 
@@ -695,7 +695,7 @@ class AuthenticationRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthenticationRuleChildrenArgs', 'AuthenticationRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthenticationRuleChildrenArgs', 'AuthenticationRuleChildrenArgsDict']]]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -865,7 +865,7 @@ class AuthenticationRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthenticationRuleChildrenArgs', 'AuthenticationRuleChildrenArgsDict']]]] childrens: List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthenticationRuleChildrenArgs', 'AuthenticationRuleChildrenArgsDict']]]] childrens: List of child conditions
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
         :param pulumi.Input[_builtins.str] condition_dictionary_name: Dictionary name
@@ -918,7 +918,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def childrens(self) -> pulumi.Output[Optional[Sequence['outputs.AuthenticationRuleChildren']]]:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 

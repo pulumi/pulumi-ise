@@ -61,7 +61,7 @@ import (
 type AuthorizationGlobalExceptionRule struct {
 	pulumi.CustomResourceState
 
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationGlobalExceptionRuleChildrenArrayOutput `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrOutput `pulumi:"conditionAttributeName"`
@@ -124,7 +124,7 @@ func GetAuthorizationGlobalExceptionRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthorizationGlobalExceptionRule resources.
 type authorizationGlobalExceptionRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthorizationGlobalExceptionRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -158,7 +158,7 @@ type authorizationGlobalExceptionRuleState struct {
 }
 
 type AuthorizationGlobalExceptionRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationGlobalExceptionRuleChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -196,7 +196,7 @@ func (AuthorizationGlobalExceptionRuleState) ElementType() reflect.Type {
 }
 
 type authorizationGlobalExceptionRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthorizationGlobalExceptionRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -231,7 +231,7 @@ type authorizationGlobalExceptionRuleArgs struct {
 
 // The set of arguments for constructing a AuthorizationGlobalExceptionRule resource.
 type AuthorizationGlobalExceptionRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthorizationGlobalExceptionRuleChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -351,7 +351,7 @@ func (o AuthorizationGlobalExceptionRuleOutput) ToAuthorizationGlobalExceptionRu
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o AuthorizationGlobalExceptionRuleOutput) Childrens() AuthorizationGlobalExceptionRuleChildrenArrayOutput {
 	return o.ApplyT(func(v *AuthorizationGlobalExceptionRule) AuthorizationGlobalExceptionRuleChildrenArrayOutput {
 		return v.Childrens

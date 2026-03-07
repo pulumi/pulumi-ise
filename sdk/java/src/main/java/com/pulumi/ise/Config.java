@@ -27,6 +27,13 @@ public final class Config {
         return Codegen.stringProp("password").config(config).get();
     }
 /**
+ * HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+ * 
+ */
+    public Optional<Integer> requestTimeout() {
+        return Codegen.integerProp("requestTimeout").config(config).get();
+    }
+/**
  * Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
  * 
  */

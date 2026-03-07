@@ -62,7 +62,7 @@ type LookupConditionResult struct {
 	AttributeName string `pulumi:"attributeName"`
 	// Attribute value for condition. Value type is specified in dictionary object.
 	AttributeValue string `pulumi:"attributeValue"`
-	// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+	// List of child conditions.
 	Childrens []GetConditionChildren `pulumi:"childrens"`
 	// Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
 	ConditionType string `pulumi:"conditionType"`
@@ -128,7 +128,7 @@ func (o LookupConditionResultOutput) AttributeValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConditionResult) string { return v.AttributeValue }).(pulumi.StringOutput)
 }
 
-// List of child conditions. `conditionType` must be one of `LibraryConditionAndBlock` or `LibraryConditionOrBlock`.
+// List of child conditions.
 func (o LookupConditionResultOutput) Childrens() GetConditionChildrenArrayOutput {
 	return o.ApplyT(func(v LookupConditionResult) []GetConditionChildren { return v.Childrens }).(GetConditionChildrenArrayOutput)
 }

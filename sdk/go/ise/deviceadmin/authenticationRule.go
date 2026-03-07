@@ -64,7 +64,7 @@ import (
 type AuthenticationRule struct {
 	pulumi.CustomResourceState
 
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthenticationRuleChildrenArrayOutput `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrOutput `pulumi:"conditionAttributeName"`
@@ -150,7 +150,7 @@ func GetAuthenticationRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthenticationRule resources.
 type authenticationRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthenticationRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -195,7 +195,7 @@ type authenticationRuleState struct {
 }
 
 type AuthenticationRuleState struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthenticationRuleChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -244,7 +244,7 @@ func (AuthenticationRuleState) ElementType() reflect.Type {
 }
 
 type authenticationRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens []AuthenticationRuleChildren `pulumi:"childrens"`
 	// Dictionary attribute name
 	ConditionAttributeName *string `pulumi:"conditionAttributeName"`
@@ -290,7 +290,7 @@ type authenticationRuleArgs struct {
 
 // The set of arguments for constructing a AuthenticationRule resource.
 type AuthenticationRuleArgs struct {
-	// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+	// List of child conditions
 	Childrens AuthenticationRuleChildrenArrayInput
 	// Dictionary attribute name
 	ConditionAttributeName pulumi.StringPtrInput
@@ -421,7 +421,7 @@ func (o AuthenticationRuleOutput) ToAuthenticationRuleOutputWithContext(ctx cont
 	return o
 }
 
-// List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+// List of child conditions
 func (o AuthenticationRuleOutput) Childrens() AuthenticationRuleChildrenArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) AuthenticationRuleChildrenArrayOutput { return v.Childrens }).(AuthenticationRuleChildrenArrayOutput)
 }

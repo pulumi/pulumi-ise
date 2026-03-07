@@ -5,8 +5,10 @@ package com.pulumi.ise.deviceadmin.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.ise.deviceadmin.outputs.GetConditionChildrenChildrenChildren;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -21,6 +23,11 @@ public final class GetConditionChildrenChildren {
      * 
      */
     private String attributeValue;
+    /**
+     * @return List of child conditions
+     * 
+     */
+    private List<GetConditionChildrenChildrenChildren> childrens;
     /**
      * @return Condition type.
      * 
@@ -76,6 +83,13 @@ public final class GetConditionChildrenChildren {
      */
     public String attributeValue() {
         return this.attributeValue;
+    }
+    /**
+     * @return List of child conditions
+     * 
+     */
+    public List<GetConditionChildrenChildrenChildren> childrens() {
+        return this.childrens;
     }
     /**
      * @return Condition type.
@@ -145,6 +159,7 @@ public final class GetConditionChildrenChildren {
     public static final class Builder {
         private String attributeName;
         private String attributeValue;
+        private List<GetConditionChildrenChildrenChildren> childrens;
         private String conditionType;
         private String description;
         private String dictionaryName;
@@ -158,6 +173,7 @@ public final class GetConditionChildrenChildren {
     	      Objects.requireNonNull(defaults);
     	      this.attributeName = defaults.attributeName;
     	      this.attributeValue = defaults.attributeValue;
+    	      this.childrens = defaults.childrens;
     	      this.conditionType = defaults.conditionType;
     	      this.description = defaults.description;
     	      this.dictionaryName = defaults.dictionaryName;
@@ -183,6 +199,17 @@ public final class GetConditionChildrenChildren {
             }
             this.attributeValue = attributeValue;
             return this;
+        }
+        @CustomType.Setter
+        public Builder childrens(List<GetConditionChildrenChildrenChildren> childrens) {
+            if (childrens == null) {
+              throw new MissingRequiredPropertyException("GetConditionChildrenChildren", "childrens");
+            }
+            this.childrens = childrens;
+            return this;
+        }
+        public Builder childrens(GetConditionChildrenChildrenChildren... childrens) {
+            return childrens(List.of(childrens));
         }
         @CustomType.Setter
         public Builder conditionType(String conditionType) {
@@ -252,6 +279,7 @@ public final class GetConditionChildrenChildren {
             final var _resultValue = new GetConditionChildrenChildren();
             _resultValue.attributeName = attributeName;
             _resultValue.attributeValue = attributeValue;
+            _resultValue.childrens = childrens;
             _resultValue.conditionType = conditionType;
             _resultValue.description = description;
             _resultValue.dictionaryName = dictionaryName;

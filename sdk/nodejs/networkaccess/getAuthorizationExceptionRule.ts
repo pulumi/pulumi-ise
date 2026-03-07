@@ -53,7 +53,7 @@ export interface GetAuthorizationExceptionRuleArgs {
  */
 export interface GetAuthorizationExceptionRuleResult {
     /**
-     * List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * List of child conditions
      */
     readonly childrens: outputs.networkaccess.GetAuthorizationExceptionRuleChildren[];
     /**

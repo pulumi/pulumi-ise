@@ -28,7 +28,7 @@ namespace Pulumi.Ise.DeviceAdmin.Inputs
         private InputList<Inputs.ConditionChildrenChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.ConditionChildrenChildrenGetArgs> Childrens
         {

@@ -28,7 +28,7 @@ namespace Pulumi.Ise.NetworkAccess.Inputs
         private InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenChildrenArgs> Childrens
         {

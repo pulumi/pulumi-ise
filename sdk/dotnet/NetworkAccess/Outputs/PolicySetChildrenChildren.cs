@@ -22,8 +22,12 @@ namespace Pulumi.Ise.NetworkAccess.Outputs
         /// </summary>
         public readonly string? AttributeValue;
         /// <summary>
+        /// List of child conditions
+        /// </summary>
+        public readonly ImmutableArray<Outputs.PolicySetChildrenChildrenChildren> Childrens;
+        /// <summary>
         /// Condition type.
-        ///   - Choices: `ConditionAttributes`, `ConditionReference`
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         public readonly string ConditionType;
         /// <summary>
@@ -54,6 +58,8 @@ namespace Pulumi.Ise.NetworkAccess.Outputs
 
             string? attributeValue,
 
+            ImmutableArray<Outputs.PolicySetChildrenChildrenChildren> childrens,
+
             string conditionType,
 
             string? dictionaryName,
@@ -68,6 +74,7 @@ namespace Pulumi.Ise.NetworkAccess.Outputs
         {
             AttributeName = attributeName;
             AttributeValue = attributeValue;
+            Childrens = childrens;
             ConditionType = conditionType;
             DictionaryName = dictionaryName;
             DictionaryValue = dictionaryValue;

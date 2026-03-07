@@ -24,7 +24,7 @@ public final class GetPolicySetChildren {
      */
     private String attributeValue;
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     private List<GetPolicySetChildrenChildren> childrens;
@@ -75,7 +75,7 @@ public final class GetPolicySetChildren {
         return this.attributeValue;
     }
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public List<GetPolicySetChildrenChildren> childrens() {

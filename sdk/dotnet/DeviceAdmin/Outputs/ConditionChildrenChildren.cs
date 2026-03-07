@@ -22,8 +22,12 @@ namespace Pulumi.Ise.DeviceAdmin.Outputs
         /// </summary>
         public readonly string? AttributeValue;
         /// <summary>
+        /// List of child conditions
+        /// </summary>
+        public readonly ImmutableArray<Outputs.ConditionChildrenChildrenChildren> Childrens;
+        /// <summary>
         /// Condition type.
-        ///   - Choices: `ConditionAttributes`, `ConditionReference`
+        ///   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
         /// </summary>
         public readonly string ConditionType;
         /// <summary>
@@ -62,6 +66,8 @@ namespace Pulumi.Ise.DeviceAdmin.Outputs
 
             string? attributeValue,
 
+            ImmutableArray<Outputs.ConditionChildrenChildrenChildren> childrens,
+
             string conditionType,
 
             string? description,
@@ -80,6 +86,7 @@ namespace Pulumi.Ise.DeviceAdmin.Outputs
         {
             AttributeName = attributeName;
             AttributeValue = attributeValue;
+            Childrens = childrens;
             ConditionType = conditionType;
             Description = description;
             DictionaryName = dictionaryName;

@@ -90,7 +90,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def childrens(self) -> Sequence['outputs.GetAuthenticationRuleChildrenResult']:
         """
-        List of child conditions. `condition_type` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        List of child conditions
         """
         return pulumi.get(self, "childrens")
 

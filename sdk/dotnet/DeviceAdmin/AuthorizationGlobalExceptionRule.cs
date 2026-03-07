@@ -55,7 +55,7 @@ namespace Pulumi.Ise.DeviceAdmin
     public partial class AuthorizationGlobalExceptionRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         [Output("childrens")]
         public Output<ImmutableArray<Outputs.AuthorizationGlobalExceptionRuleChildren>> Childrens { get; private set; } = null!;
@@ -191,7 +191,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenArgs> Childrens
         {
@@ -298,7 +298,7 @@ namespace Pulumi.Ise.DeviceAdmin
         private InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenGetArgs>? _childrens;
 
         /// <summary>
-        /// List of child conditions. `ConditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+        /// List of child conditions
         /// </summary>
         public InputList<Inputs.AuthorizationGlobalExceptionRuleChildrenGetArgs> Childrens
         {

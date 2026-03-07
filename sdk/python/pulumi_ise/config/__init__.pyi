@@ -24,6 +24,11 @@ password: Optional[str]
 Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
 """
 
+requestTimeout: Optional[int]
+"""
+HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
+"""
+
 retries: Optional[int]
 """
 Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.

@@ -5,8 +5,10 @@ package com.pulumi.ise.networkaccess.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.ise.networkaccess.outputs.AuthorizationRuleChildrenChildrenChildren;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,8 +26,13 @@ public final class AuthorizationRuleChildrenChildren {
      */
     private @Nullable String attributeValue;
     /**
+     * @return List of child conditions
+     * 
+     */
+    private @Nullable List<AuthorizationRuleChildrenChildrenChildren> childrens;
+    /**
      * @return Condition type.
-     *   - Choices: `ConditionAttributes`, `ConditionReference`
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     private String conditionType;
@@ -72,8 +79,15 @@ public final class AuthorizationRuleChildrenChildren {
         return Optional.ofNullable(this.attributeValue);
     }
     /**
+     * @return List of child conditions
+     * 
+     */
+    public List<AuthorizationRuleChildrenChildrenChildren> childrens() {
+        return this.childrens == null ? List.of() : this.childrens;
+    }
+    /**
      * @return Condition type.
-     *   - Choices: `ConditionAttributes`, `ConditionReference`
+     *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      * 
      */
     public String conditionType() {
@@ -127,6 +141,7 @@ public final class AuthorizationRuleChildrenChildren {
     public static final class Builder {
         private @Nullable String attributeName;
         private @Nullable String attributeValue;
+        private @Nullable List<AuthorizationRuleChildrenChildrenChildren> childrens;
         private String conditionType;
         private @Nullable String dictionaryName;
         private @Nullable String dictionaryValue;
@@ -138,6 +153,7 @@ public final class AuthorizationRuleChildrenChildren {
     	      Objects.requireNonNull(defaults);
     	      this.attributeName = defaults.attributeName;
     	      this.attributeValue = defaults.attributeValue;
+    	      this.childrens = defaults.childrens;
     	      this.conditionType = defaults.conditionType;
     	      this.dictionaryName = defaults.dictionaryName;
     	      this.dictionaryValue = defaults.dictionaryValue;
@@ -157,6 +173,15 @@ public final class AuthorizationRuleChildrenChildren {
 
             this.attributeValue = attributeValue;
             return this;
+        }
+        @CustomType.Setter
+        public Builder childrens(@Nullable List<AuthorizationRuleChildrenChildrenChildren> childrens) {
+
+            this.childrens = childrens;
+            return this;
+        }
+        public Builder childrens(AuthorizationRuleChildrenChildrenChildren... childrens) {
+            return childrens(List.of(childrens));
         }
         @CustomType.Setter
         public Builder conditionType(String conditionType) {
@@ -200,6 +225,7 @@ public final class AuthorizationRuleChildrenChildren {
             final var _resultValue = new AuthorizationRuleChildrenChildren();
             _resultValue.attributeName = attributeName;
             _resultValue.attributeValue = attributeValue;
+            _resultValue.childrens = childrens;
             _resultValue.conditionType = conditionType;
             _resultValue.dictionaryName = dictionaryName;
             _resultValue.dictionaryValue = dictionaryValue;

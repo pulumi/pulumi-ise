@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetPolicySetResult {
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     private List<GetPolicySetChildren> childrens;
@@ -102,7 +102,7 @@ public final class GetPolicySetResult {
 
     private GetPolicySetResult() {}
     /**
-     * @return List of child conditions. `conditionType` must be one of `ConditionAndBlock` or `ConditionOrBlock`.
+     * @return List of child conditions
      * 
      */
     public List<GetPolicySetChildren> childrens() {
