@@ -5,7 +5,7 @@ go 1.25.8
 require (
 	github.com/CiscoDevNet/terraform-provider-ise v0.0.0
 	github.com/ettle/strcase v0.1.1
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.127.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.128.0
 	github.com/pulumi/pulumi/sdk/v3 v3.228.0
 )
 
