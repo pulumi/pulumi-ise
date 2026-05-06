@@ -50,8 +50,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -90,8 +90,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -130,8 +130,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -170,8 +170,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -210,8 +210,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -250,8 +250,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -290,8 +290,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -330,8 +330,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -370,8 +370,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -410,8 +410,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetEgressMatrixCellDefaultArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -450,8 +450,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -490,8 +490,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -530,8 +530,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -570,8 +570,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -610,8 +610,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -650,8 +650,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -690,8 +690,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -730,8 +730,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -770,8 +770,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -810,8 +810,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -850,8 +850,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -890,8 +890,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -930,8 +930,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -970,8 +970,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetIpToSgtMappingGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1010,8 +1010,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1050,8 +1050,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1090,8 +1090,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1130,8 +1130,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1170,8 +1170,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1210,8 +1210,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1250,8 +1250,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetMatrixArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1290,8 +1290,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1330,8 +1330,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1370,8 +1370,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1410,8 +1410,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1450,8 +1450,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1490,8 +1490,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1530,8 +1530,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1570,8 +1570,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1610,8 +1610,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1650,8 +1650,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1690,8 +1690,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1730,8 +1730,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1770,8 +1770,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1810,8 +1810,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1850,8 +1850,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1890,8 +1890,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1930,8 +1930,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1970,8 +1970,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2010,8 +2010,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2050,8 +2050,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2090,8 +2090,8 @@ public final class TrustsecFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.trustsec.TrustsecFunctions;
      * import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

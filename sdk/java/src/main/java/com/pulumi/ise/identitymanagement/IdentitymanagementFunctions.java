@@ -53,8 +53,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -97,8 +97,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -141,8 +141,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -185,8 +185,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -229,8 +229,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryGroupsByDomainArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -273,8 +273,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -313,8 +313,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -353,8 +353,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -393,8 +393,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -433,8 +433,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetActiveDirectoryJoinPointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -473,8 +473,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -513,8 +513,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -553,8 +553,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -593,8 +593,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -633,8 +633,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -673,8 +673,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -713,8 +713,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetCertificateAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -753,8 +753,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -793,8 +793,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -833,8 +833,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -873,8 +873,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -913,8 +913,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -953,8 +953,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -993,8 +993,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1033,8 +1033,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1073,8 +1073,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1113,8 +1113,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1153,8 +1153,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1193,8 +1193,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointCustomAttributeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1233,8 +1233,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1273,8 +1273,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1313,8 +1313,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1353,8 +1353,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1393,8 +1393,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1433,8 +1433,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1473,8 +1473,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetEndpointIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1513,8 +1513,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1553,8 +1553,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1593,8 +1593,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1633,8 +1633,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1673,8 +1673,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1713,8 +1713,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1753,8 +1753,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetIdentitySourceSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1793,8 +1793,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1833,8 +1833,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1873,8 +1873,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1913,8 +1913,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1953,8 +1953,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1993,8 +1993,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2033,8 +2033,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetInternalUserArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2073,8 +2073,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2113,8 +2113,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2153,8 +2153,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2193,8 +2193,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2233,8 +2233,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2273,8 +2273,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2313,8 +2313,8 @@ public final class IdentitymanagementFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.identitymanagement.IdentitymanagementFunctions;
      * import com.pulumi.ise.identitymanagement.inputs.GetUserIdentityGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

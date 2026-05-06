@@ -59,8 +59,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -99,8 +99,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -139,8 +139,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -179,8 +179,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -219,8 +219,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -259,8 +259,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -299,8 +299,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAllowedProtocolsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -339,8 +339,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -380,8 +380,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -421,8 +421,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -462,8 +462,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -503,8 +503,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -544,8 +544,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -585,8 +585,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -626,8 +626,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -667,8 +667,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -708,8 +708,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -749,8 +749,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -789,8 +789,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -829,8 +829,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -869,8 +869,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -909,8 +909,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -949,8 +949,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -989,8 +989,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1029,8 +1029,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1069,8 +1069,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1109,8 +1109,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1149,8 +1149,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1189,8 +1189,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1229,8 +1229,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1269,8 +1269,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1309,8 +1309,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1350,8 +1350,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1391,8 +1391,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1432,8 +1432,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1473,8 +1473,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1514,8 +1514,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1554,8 +1554,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1594,8 +1594,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1634,8 +1634,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1674,8 +1674,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1714,8 +1714,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1754,8 +1754,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1794,8 +1794,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1834,8 +1834,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1874,8 +1874,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1914,8 +1914,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1954,8 +1954,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1994,8 +1994,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2034,8 +2034,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2074,8 +2074,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2114,8 +2114,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2154,8 +2154,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2194,8 +2194,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2234,8 +2234,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2274,8 +2274,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2314,8 +2314,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2354,8 +2354,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2394,8 +2394,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2434,8 +2434,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2474,8 +2474,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2514,8 +2514,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2554,8 +2554,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2594,8 +2594,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2634,8 +2634,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2674,8 +2674,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2714,8 +2714,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2754,8 +2754,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2794,8 +2794,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2834,8 +2834,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2874,8 +2874,8 @@ public final class NetworkaccessFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
      * import com.pulumi.ise.networkaccess.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
