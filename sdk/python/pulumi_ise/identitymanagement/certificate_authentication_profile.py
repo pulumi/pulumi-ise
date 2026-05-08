@@ -19,13 +19,13 @@ __all__ = ['CertificateAuthenticationProfileArgs', 'CertificateAuthenticationPro
 @pulumi.input_type
 class CertificateAuthenticationProfileArgs:
     def __init__(__self__, *,
-                 allowed_as_user_name: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_identity_store_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_from: Optional[pulumi.Input[_builtins.str]] = None):
+                 allowed_as_user_name: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_identity_store_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_from: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CertificateAuthenticationProfile resource.
 
@@ -61,7 +61,7 @@ class CertificateAuthenticationProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowedAsUserName")
-    def allowed_as_user_name(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allowed_as_user_name(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow as username
           - Default value: `false`
@@ -69,12 +69,12 @@ class CertificateAuthenticationProfileArgs:
         return pulumi.get(self, "allowed_as_user_name")
 
     @allowed_as_user_name.setter
-    def allowed_as_user_name(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allowed_as_user_name(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allowed_as_user_name", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateAttributeName")
-    def certificate_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
           - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
@@ -82,24 +82,24 @@ class CertificateAuthenticationProfileArgs:
         return pulumi.get(self, "certificate_attribute_name")
 
     @certificate_attribute_name.setter
-    def certificate_attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_attribute_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="externalIdentityStoreName")
-    def external_identity_store_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def external_identity_store_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
           - Default value: `[not applicable]`
@@ -107,12 +107,12 @@ class CertificateAuthenticationProfileArgs:
         return pulumi.get(self, "external_identity_store_name")
 
     @external_identity_store_name.setter
-    def external_identity_store_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def external_identity_store_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "external_identity_store_name", value)
 
     @_builtins.property
     @pulumi.getter(name="matchMode")
-    def match_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def match_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
           - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
@@ -121,24 +121,24 @@ class CertificateAuthenticationProfileArgs:
         return pulumi.get(self, "match_mode")
 
     @match_mode.setter
-    def match_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def match_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "match_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameFrom")
-    def username_from(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username_from(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
           - Choices: `CERTIFICATE`, `UPN`
@@ -147,20 +147,20 @@ class CertificateAuthenticationProfileArgs:
         return pulumi.get(self, "username_from")
 
     @username_from.setter
-    def username_from(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username_from(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username_from", value)
 
 
 @pulumi.input_type
 class _CertificateAuthenticationProfileState:
     def __init__(__self__, *,
-                 allowed_as_user_name: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_identity_store_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_from: Optional[pulumi.Input[_builtins.str]] = None):
+                 allowed_as_user_name: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_identity_store_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_from: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CertificateAuthenticationProfile resources.
 
@@ -196,7 +196,7 @@ class _CertificateAuthenticationProfileState:
 
     @_builtins.property
     @pulumi.getter(name="allowedAsUserName")
-    def allowed_as_user_name(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allowed_as_user_name(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow as username
           - Default value: `false`
@@ -204,12 +204,12 @@ class _CertificateAuthenticationProfileState:
         return pulumi.get(self, "allowed_as_user_name")
 
     @allowed_as_user_name.setter
-    def allowed_as_user_name(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allowed_as_user_name(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allowed_as_user_name", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateAttributeName")
-    def certificate_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute name of the Certificate Profile - used only when CERTIFICATE is chosen in `username_from`. When `username_from` is set to UPN, ISE automatically sets this to ALL_SUBJECT_AND_ALTERNATIVE_NAMES.
           - Choices: `SUBJECT_COMMON_NAME`, `SUBJECT_ALTERNATIVE_NAME`, `SUBJECT_SERIAL_NUMBER`, `SUBJECT`, `SUBJECT_ALTERNATIVE_NAME_OTHER_NAME`, `SUBJECT_ALTERNATIVE_NAME_EMAIL`, `SUBJECT_ALTERNATIVE_NAME_DNS`, `ALL_SUBJECT_AND_ALTERNATIVE_NAMES`
@@ -217,24 +217,24 @@ class _CertificateAuthenticationProfileState:
         return pulumi.get(self, "certificate_attribute_name")
 
     @certificate_attribute_name.setter
-    def certificate_attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_attribute_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="externalIdentityStoreName")
-    def external_identity_store_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def external_identity_store_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Referred IDStore name for the Certificate Profile or `[not applicable]` in case no identity store is chosen
           - Default value: `[not applicable]`
@@ -242,12 +242,12 @@ class _CertificateAuthenticationProfileState:
         return pulumi.get(self, "external_identity_store_name")
 
     @external_identity_store_name.setter
-    def external_identity_store_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def external_identity_store_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "external_identity_store_name", value)
 
     @_builtins.property
     @pulumi.getter(name="matchMode")
-    def match_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def match_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Match mode of the Certificate Profile. Allowed values: NEVER, RESOLVE_IDENTITY_AMBIGUITY, BINARY_COMPARISON
           - Choices: `NEVER`, `RESOLVE_IDENTITY_AMBIGUITY`, `BINARY_COMPARISON`
@@ -256,24 +256,24 @@ class _CertificateAuthenticationProfileState:
         return pulumi.get(self, "match_mode")
 
     @match_mode.setter
-    def match_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def match_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "match_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameFrom")
-    def username_from(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username_from(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The attribute in the certificate where the user name should be taken from. Allowed values: `CERTIFICATE` (for a specific attribute as defined in certificateAttributeName), `UPN` (for using any Subject or Alternative Name Attributes in the Certificate - an option only in AD)
           - Choices: `CERTIFICATE`, `UPN`
@@ -282,7 +282,7 @@ class _CertificateAuthenticationProfileState:
         return pulumi.get(self, "username_from")
 
     @username_from.setter
-    def username_from(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username_from(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username_from", value)
 
 
@@ -292,13 +292,13 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_as_user_name: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_identity_store_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_from: Optional[pulumi.Input[_builtins.str]] = None,
+                 allowed_as_user_name: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_identity_store_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_from: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Certificate Authentication Profile.
@@ -394,13 +394,13 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_as_user_name: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_identity_store_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_from: Optional[pulumi.Input[_builtins.str]] = None,
+                 allowed_as_user_name: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_identity_store_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_from: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -427,13 +427,13 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allowed_as_user_name: Optional[pulumi.Input[_builtins.bool]] = None,
-            certificate_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            external_identity_store_name: Optional[pulumi.Input[_builtins.str]] = None,
-            match_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            username_from: Optional[pulumi.Input[_builtins.str]] = None) -> 'CertificateAuthenticationProfile':
+            allowed_as_user_name: pulumi.Input[Optional[_builtins.bool]] = None,
+            certificate_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            external_identity_store_name: pulumi.Input[Optional[_builtins.str]] = None,
+            match_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            username_from: pulumi.Input[Optional[_builtins.str]] = None) -> 'CertificateAuthenticationProfile':
         """
         Get an existing CertificateAuthenticationProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

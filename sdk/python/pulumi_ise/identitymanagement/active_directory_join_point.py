@@ -22,38 +22,38 @@ __all__ = ['ActiveDirectoryJoinPointArgs', 'ActiveDirectoryJoinPoint']
 class ActiveDirectoryJoinPointArgs:
     def __init__(__self__, *,
                  domain: pulumi.Input[_builtins.str],
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 aging_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 attributes: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]] = None,
-                 auth_protection_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 department: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_callback_for_dialin_client: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_dialin_permission_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_failed_auth_protection: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_access: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_pass_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_rewrites: Optional[pulumi.Input[_builtins.bool]] = None,
-                 failed_auth_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]] = None,
-                 identity_not_in_ad_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
-                 job_title: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 locality: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizational_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 plaintext_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rewrite_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 state_or_province: Optional[pulumi.Input[_builtins.str]] = None,
-                 street_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 telephone: Optional[pulumi.Input[_builtins.str]] = None,
-                 unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None):
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 aging_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]] = None,
+                 auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 department: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_callback_for_dialin_client: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_dialin_permission_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_failed_auth_protection: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_access: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_pass_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
+                 failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]] = None,
+                 identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
+                 job_title: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 locality: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
+                 street_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 telephone: pulumi.Input[Optional[_builtins.str]] = None,
+                 unreachable_domains_behaviour: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ActiveDirectoryJoinPoint resource.
 
@@ -186,7 +186,7 @@ class ActiveDirectoryJoinPointArgs:
 
     @_builtins.property
     @pulumi.getter(name="adScopesNames")
-    def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ad_scopes_names(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
           - Default value: `Default_Scope`
@@ -194,12 +194,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "ad_scopes_names")
 
     @ad_scopes_names.setter
-    def ad_scopes_names(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ad_scopes_names(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ad_scopes_names", value)
 
     @_builtins.property
     @pulumi.getter(name="agingTime")
-    def aging_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def aging_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Aging Time
           - Default value: `5`
@@ -207,24 +207,24 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "aging_time")
 
     @aging_time.setter
-    def aging_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def aging_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "aging_time", value)
 
     @_builtins.property
     @pulumi.getter
-    def attributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]:
+    def attributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]:
         """
         List of AD attributes
         """
         return pulumi.get(self, "attributes")
 
     @attributes.setter
-    def attributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]):
+    def attributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]):
         pulumi.set(self, "attributes", value)
 
     @_builtins.property
     @pulumi.getter(name="authProtectionType")
-    def auth_protection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auth_protection_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
           - Choices: `WIRELESS`, `WIRED`, `BOTH`
@@ -232,60 +232,60 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "auth_protection_type")
 
     @auth_protection_type.setter
-    def auth_protection_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auth_protection_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auth_protection_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def country(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "country")
 
     @country.setter
-    def country(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country", value)
 
     @_builtins.property
     @pulumi.getter
-    def department(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def department(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "department")
 
     @department.setter
-    def department(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def department(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "department", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Join point description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="enableCallbackForDialinClient")
-    def enable_callback_for_dialin_client(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_callback_for_dialin_client(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Callback For Dial In Client
           - Default value: `false`
@@ -293,12 +293,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_callback_for_dialin_client")
 
     @enable_callback_for_dialin_client.setter
-    def enable_callback_for_dialin_client(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_callback_for_dialin_client(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_callback_for_dialin_client", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDialinPermissionCheck")
-    def enable_dialin_permission_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_dialin_permission_check(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Dial In Permission Check
           - Default value: `false`
@@ -306,24 +306,24 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_dialin_permission_check")
 
     @enable_dialin_permission_check.setter
-    def enable_dialin_permission_check(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_dialin_permission_check(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_dialin_permission_check", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDomainAllowedList")
-    def enable_domain_allowed_list(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_domain_allowed_list(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         - Default value: `true`
         """
         return pulumi.get(self, "enable_domain_allowed_list")
 
     @enable_domain_allowed_list.setter
-    def enable_domain_allowed_list(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_domain_allowed_list(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_domain_allowed_list", value)
 
     @_builtins.property
     @pulumi.getter(name="enableFailedAuthProtection")
-    def enable_failed_auth_protection(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_failed_auth_protection(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable prevent AD account lockout due to too many bad password attempts
           - Default value: `false`
@@ -331,12 +331,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_failed_auth_protection")
 
     @enable_failed_auth_protection.setter
-    def enable_failed_auth_protection(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_failed_auth_protection(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_failed_auth_protection", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMachineAccess")
-    def enable_machine_access(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_machine_access(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Machine Access
           - Default value: `true`
@@ -344,12 +344,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_machine_access")
 
     @enable_machine_access.setter
-    def enable_machine_access(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_machine_access(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_machine_access", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMachineAuth")
-    def enable_machine_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_machine_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Machine Authentication
           - Default value: `true`
@@ -357,12 +357,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_machine_auth")
 
     @enable_machine_auth.setter
-    def enable_machine_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_machine_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_machine_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="enablePassChange")
-    def enable_pass_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_pass_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Password Change
           - Default value: `true`
@@ -370,12 +370,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_pass_change")
 
     @enable_pass_change.setter
-    def enable_pass_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_pass_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_pass_change", value)
 
     @_builtins.property
     @pulumi.getter(name="enableRewrites")
-    def enable_rewrites(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_rewrites(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Rewrites
           - Default value: `false`
@@ -383,12 +383,12 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "enable_rewrites")
 
     @enable_rewrites.setter
-    def enable_rewrites(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_rewrites(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_rewrites", value)
 
     @_builtins.property
     @pulumi.getter(name="failedAuthThreshold")
-    def failed_auth_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def failed_auth_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of bad password attempts
           - Default value: `5`
@@ -396,36 +396,36 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "failed_auth_threshold")
 
     @failed_auth_threshold.setter
-    def failed_auth_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def failed_auth_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "failed_auth_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="firstName")
-    def first_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def first_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "first_name")
 
     @first_name.setter
-    def first_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def first_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "first_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]:
+    def groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]:
         """
         List of AD Groups
         """
         return pulumi.get(self, "groups")
 
     @groups.setter
-    def groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]):
+    def groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]):
         pulumi.set(self, "groups", value)
 
     @_builtins.property
     @pulumi.getter(name="identityNotInAdBehaviour")
-    def identity_not_in_ad_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def identity_not_in_ad_behaviour(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identity Not In AD Behaviour
           - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
@@ -433,72 +433,72 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "identity_not_in_ad_behaviour")
 
     @identity_not_in_ad_behaviour.setter
-    def identity_not_in_ad_behaviour(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def identity_not_in_ad_behaviour(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "identity_not_in_ad_behaviour", value)
 
     @_builtins.property
     @pulumi.getter(name="jobTitle")
-    def job_title(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def job_title(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "job_title")
 
     @job_title.setter
-    def job_title(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def job_title(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "job_title", value)
 
     @_builtins.property
     @pulumi.getter(name="lastName")
-    def last_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "last_name")
 
     @last_name.setter
-    def last_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def locality(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def locality(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "locality")
 
     @locality.setter
-    def locality(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def locality(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "locality", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the active directory join point
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationalUnit")
-    def organizational_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organizational_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "organizational_unit")
 
     @organizational_unit.setter
-    def organizational_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organizational_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organizational_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="plaintextAuth")
-    def plaintext_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def plaintext_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Plain Text Authentication
           - Default value: `false`
@@ -506,24 +506,24 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "plaintext_auth")
 
     @plaintext_auth.setter
-    def plaintext_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def plaintext_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "plaintext_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="rewriteRules")
-    def rewrite_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]:
+    def rewrite_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]:
         """
         List of Rewrite rules
         """
         return pulumi.get(self, "rewrite_rules")
 
     @rewrite_rules.setter
-    def rewrite_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]):
+    def rewrite_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]):
         pulumi.set(self, "rewrite_rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schema(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Schema
           - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
@@ -531,48 +531,48 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "schema")
 
     @schema.setter
-    def schema(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schema(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schema", value)
 
     @_builtins.property
     @pulumi.getter(name="stateOrProvince")
-    def state_or_province(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state_or_province(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "state_or_province")
 
     @state_or_province.setter
-    def state_or_province(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state_or_province(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state_or_province", value)
 
     @_builtins.property
     @pulumi.getter(name="streetAddress")
-    def street_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def street_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "street_address")
 
     @street_address.setter
-    def street_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def street_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "street_address", value)
 
     @_builtins.property
     @pulumi.getter
-    def telephone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def telephone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "telephone")
 
     @telephone.setter
-    def telephone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def telephone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "telephone", value)
 
     @_builtins.property
     @pulumi.getter(name="unreachableDomainsBehaviour")
-    def unreachable_domains_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unreachable_domains_behaviour(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unreachable Domains Behaviour
           - Choices: `PROCEED`, `DROP`
@@ -580,46 +580,46 @@ class ActiveDirectoryJoinPointArgs:
         return pulumi.get(self, "unreachable_domains_behaviour")
 
     @unreachable_domains_behaviour.setter
-    def unreachable_domains_behaviour(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unreachable_domains_behaviour(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unreachable_domains_behaviour", value)
 
 
 @pulumi.input_type
 class _ActiveDirectoryJoinPointState:
     def __init__(__self__, *,
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 aging_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 attributes: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]] = None,
-                 auth_protection_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 department: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_callback_for_dialin_client: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_dialin_permission_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_failed_auth_protection: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_access: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_pass_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_rewrites: Optional[pulumi.Input[_builtins.bool]] = None,
-                 failed_auth_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]] = None,
-                 identity_not_in_ad_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
-                 job_title: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 locality: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizational_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 plaintext_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rewrite_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 state_or_province: Optional[pulumi.Input[_builtins.str]] = None,
-                 street_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 telephone: Optional[pulumi.Input[_builtins.str]] = None,
-                 unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None):
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 aging_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]] = None,
+                 auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 department: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_callback_for_dialin_client: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_dialin_permission_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_failed_auth_protection: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_access: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_pass_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
+                 failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]] = None,
+                 identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
+                 job_title: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 locality: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
+                 street_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 telephone: pulumi.Input[Optional[_builtins.str]] = None,
+                 unreachable_domains_behaviour: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryJoinPoint resources.
 
@@ -741,7 +741,7 @@ class _ActiveDirectoryJoinPointState:
 
     @_builtins.property
     @pulumi.getter(name="adScopesNames")
-    def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ad_scopes_names(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
           - Default value: `Default_Scope`
@@ -749,12 +749,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "ad_scopes_names")
 
     @ad_scopes_names.setter
-    def ad_scopes_names(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ad_scopes_names(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ad_scopes_names", value)
 
     @_builtins.property
     @pulumi.getter(name="agingTime")
-    def aging_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def aging_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Aging Time
           - Default value: `5`
@@ -762,24 +762,24 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "aging_time")
 
     @aging_time.setter
-    def aging_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def aging_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "aging_time", value)
 
     @_builtins.property
     @pulumi.getter
-    def attributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]:
+    def attributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]:
         """
         List of AD attributes
         """
         return pulumi.get(self, "attributes")
 
     @attributes.setter
-    def attributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]):
+    def attributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointAttributeArgs']]]]):
         pulumi.set(self, "attributes", value)
 
     @_builtins.property
     @pulumi.getter(name="authProtectionType")
-    def auth_protection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auth_protection_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
           - Choices: `WIRELESS`, `WIRED`, `BOTH`
@@ -787,72 +787,72 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "auth_protection_type")
 
     @auth_protection_type.setter
-    def auth_protection_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auth_protection_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auth_protection_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def country(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "country")
 
     @country.setter
-    def country(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country", value)
 
     @_builtins.property
     @pulumi.getter
-    def department(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def department(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "department")
 
     @department.setter
-    def department(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def department(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "department", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Join point description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AD domain associated with the join point
         """
         return pulumi.get(self, "domain")
 
     @domain.setter
-    def domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="enableCallbackForDialinClient")
-    def enable_callback_for_dialin_client(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_callback_for_dialin_client(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Callback For Dial In Client
           - Default value: `false`
@@ -860,12 +860,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_callback_for_dialin_client")
 
     @enable_callback_for_dialin_client.setter
-    def enable_callback_for_dialin_client(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_callback_for_dialin_client(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_callback_for_dialin_client", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDialinPermissionCheck")
-    def enable_dialin_permission_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_dialin_permission_check(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Dial In Permission Check
           - Default value: `false`
@@ -873,24 +873,24 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_dialin_permission_check")
 
     @enable_dialin_permission_check.setter
-    def enable_dialin_permission_check(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_dialin_permission_check(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_dialin_permission_check", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDomainAllowedList")
-    def enable_domain_allowed_list(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_domain_allowed_list(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         - Default value: `true`
         """
         return pulumi.get(self, "enable_domain_allowed_list")
 
     @enable_domain_allowed_list.setter
-    def enable_domain_allowed_list(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_domain_allowed_list(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_domain_allowed_list", value)
 
     @_builtins.property
     @pulumi.getter(name="enableFailedAuthProtection")
-    def enable_failed_auth_protection(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_failed_auth_protection(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable prevent AD account lockout due to too many bad password attempts
           - Default value: `false`
@@ -898,12 +898,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_failed_auth_protection")
 
     @enable_failed_auth_protection.setter
-    def enable_failed_auth_protection(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_failed_auth_protection(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_failed_auth_protection", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMachineAccess")
-    def enable_machine_access(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_machine_access(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Machine Access
           - Default value: `true`
@@ -911,12 +911,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_machine_access")
 
     @enable_machine_access.setter
-    def enable_machine_access(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_machine_access(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_machine_access", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMachineAuth")
-    def enable_machine_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_machine_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Machine Authentication
           - Default value: `true`
@@ -924,12 +924,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_machine_auth")
 
     @enable_machine_auth.setter
-    def enable_machine_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_machine_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_machine_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="enablePassChange")
-    def enable_pass_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_pass_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Password Change
           - Default value: `true`
@@ -937,12 +937,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_pass_change")
 
     @enable_pass_change.setter
-    def enable_pass_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_pass_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_pass_change", value)
 
     @_builtins.property
     @pulumi.getter(name="enableRewrites")
-    def enable_rewrites(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_rewrites(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Rewrites
           - Default value: `false`
@@ -950,12 +950,12 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "enable_rewrites")
 
     @enable_rewrites.setter
-    def enable_rewrites(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_rewrites(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_rewrites", value)
 
     @_builtins.property
     @pulumi.getter(name="failedAuthThreshold")
-    def failed_auth_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def failed_auth_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of bad password attempts
           - Default value: `5`
@@ -963,36 +963,36 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "failed_auth_threshold")
 
     @failed_auth_threshold.setter
-    def failed_auth_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def failed_auth_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "failed_auth_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="firstName")
-    def first_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def first_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "first_name")
 
     @first_name.setter
-    def first_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def first_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "first_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]:
+    def groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]:
         """
         List of AD Groups
         """
         return pulumi.get(self, "groups")
 
     @groups.setter
-    def groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]):
+    def groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointGroupArgs']]]]):
         pulumi.set(self, "groups", value)
 
     @_builtins.property
     @pulumi.getter(name="identityNotInAdBehaviour")
-    def identity_not_in_ad_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def identity_not_in_ad_behaviour(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identity Not In AD Behaviour
           - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
@@ -1000,72 +1000,72 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "identity_not_in_ad_behaviour")
 
     @identity_not_in_ad_behaviour.setter
-    def identity_not_in_ad_behaviour(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def identity_not_in_ad_behaviour(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "identity_not_in_ad_behaviour", value)
 
     @_builtins.property
     @pulumi.getter(name="jobTitle")
-    def job_title(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def job_title(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "job_title")
 
     @job_title.setter
-    def job_title(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def job_title(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "job_title", value)
 
     @_builtins.property
     @pulumi.getter(name="lastName")
-    def last_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "last_name")
 
     @last_name.setter
-    def last_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def locality(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def locality(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "locality")
 
     @locality.setter
-    def locality(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def locality(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "locality", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the active directory join point
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationalUnit")
-    def organizational_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organizational_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "organizational_unit")
 
     @organizational_unit.setter
-    def organizational_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organizational_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organizational_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="plaintextAuth")
-    def plaintext_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def plaintext_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Plain Text Authentication
           - Default value: `false`
@@ -1073,24 +1073,24 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "plaintext_auth")
 
     @plaintext_auth.setter
-    def plaintext_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def plaintext_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "plaintext_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="rewriteRules")
-    def rewrite_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]:
+    def rewrite_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]:
         """
         List of Rewrite rules
         """
         return pulumi.get(self, "rewrite_rules")
 
     @rewrite_rules.setter
-    def rewrite_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]):
+    def rewrite_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryJoinPointRewriteRuleArgs']]]]):
         pulumi.set(self, "rewrite_rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def schema(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schema(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Schema
           - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
@@ -1098,48 +1098,48 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "schema")
 
     @schema.setter
-    def schema(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schema(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schema", value)
 
     @_builtins.property
     @pulumi.getter(name="stateOrProvince")
-    def state_or_province(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state_or_province(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "state_or_province")
 
     @state_or_province.setter
-    def state_or_province(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state_or_province(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state_or_province", value)
 
     @_builtins.property
     @pulumi.getter(name="streetAddress")
-    def street_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def street_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "street_address")
 
     @street_address.setter
-    def street_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def street_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "street_address", value)
 
     @_builtins.property
     @pulumi.getter
-    def telephone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def telephone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User info attribute
         """
         return pulumi.get(self, "telephone")
 
     @telephone.setter
-    def telephone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def telephone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "telephone", value)
 
     @_builtins.property
     @pulumi.getter(name="unreachableDomainsBehaviour")
-    def unreachable_domains_behaviour(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unreachable_domains_behaviour(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unreachable Domains Behaviour
           - Choices: `PROCEED`, `DROP`
@@ -1147,7 +1147,7 @@ class _ActiveDirectoryJoinPointState:
         return pulumi.get(self, "unreachable_domains_behaviour")
 
     @unreachable_domains_behaviour.setter
-    def unreachable_domains_behaviour(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unreachable_domains_behaviour(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unreachable_domains_behaviour", value)
 
 
@@ -1157,39 +1157,39 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 aging_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
-                 auth_protection_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 department: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_callback_for_dialin_client: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_dialin_permission_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_failed_auth_protection: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_access: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_pass_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_rewrites: Optional[pulumi.Input[_builtins.bool]] = None,
-                 failed_auth_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
-                 identity_not_in_ad_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
-                 job_title: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 locality: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizational_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 plaintext_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rewrite_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 state_or_province: Optional[pulumi.Input[_builtins.str]] = None,
-                 street_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 telephone: Optional[pulumi.Input[_builtins.str]] = None,
-                 unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 aging_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
+                 auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 department: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_callback_for_dialin_client: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_dialin_permission_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_failed_auth_protection: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_access: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_pass_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
+                 failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
+                 identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
+                 job_title: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 locality: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
+                 street_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 telephone: pulumi.Input[Optional[_builtins.str]] = None,
+                 unreachable_domains_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage an Active Directory Join Point.
@@ -1397,39 +1397,39 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 aging_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
-                 auth_protection_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 department: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_callback_for_dialin_client: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_dialin_permission_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_failed_auth_protection: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_access: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_machine_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_pass_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_rewrites: Optional[pulumi.Input[_builtins.bool]] = None,
-                 failed_auth_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
-                 identity_not_in_ad_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
-                 job_title: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 locality: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizational_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 plaintext_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rewrite_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
-                 schema: Optional[pulumi.Input[_builtins.str]] = None,
-                 state_or_province: Optional[pulumi.Input[_builtins.str]] = None,
-                 street_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 telephone: Optional[pulumi.Input[_builtins.str]] = None,
-                 unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 aging_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
+                 auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 department: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_callback_for_dialin_client: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_dialin_permission_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_failed_auth_protection: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_access: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_machine_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_pass_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
+                 failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
+                 identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
+                 job_title: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 locality: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
+                 schema: pulumi.Input[Optional[_builtins.str]] = None,
+                 state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
+                 street_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 telephone: pulumi.Input[Optional[_builtins.str]] = None,
+                 unreachable_domains_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1484,39 +1484,39 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-            aging_time: Optional[pulumi.Input[_builtins.int]] = None,
-            attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
-            auth_protection_type: Optional[pulumi.Input[_builtins.str]] = None,
-            country: Optional[pulumi.Input[_builtins.str]] = None,
-            department: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            domain: Optional[pulumi.Input[_builtins.str]] = None,
-            email: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_callback_for_dialin_client: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_dialin_permission_check: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_failed_auth_protection: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_machine_access: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_machine_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_pass_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_rewrites: Optional[pulumi.Input[_builtins.bool]] = None,
-            failed_auth_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-            first_name: Optional[pulumi.Input[_builtins.str]] = None,
-            groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
-            identity_not_in_ad_behaviour: Optional[pulumi.Input[_builtins.str]] = None,
-            job_title: Optional[pulumi.Input[_builtins.str]] = None,
-            last_name: Optional[pulumi.Input[_builtins.str]] = None,
-            locality: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            organizational_unit: Optional[pulumi.Input[_builtins.str]] = None,
-            plaintext_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-            rewrite_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
-            schema: Optional[pulumi.Input[_builtins.str]] = None,
-            state_or_province: Optional[pulumi.Input[_builtins.str]] = None,
-            street_address: Optional[pulumi.Input[_builtins.str]] = None,
-            telephone: Optional[pulumi.Input[_builtins.str]] = None,
-            unreachable_domains_behaviour: Optional[pulumi.Input[_builtins.str]] = None) -> 'ActiveDirectoryJoinPoint':
+            ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+            aging_time: pulumi.Input[Optional[_builtins.int]] = None,
+            attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
+            auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
+            country: pulumi.Input[Optional[_builtins.str]] = None,
+            department: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            domain: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_callback_for_dialin_client: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_dialin_permission_check: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_failed_auth_protection: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_machine_access: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_machine_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_pass_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
+            failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            first_name: pulumi.Input[Optional[_builtins.str]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
+            identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
+            job_title: pulumi.Input[Optional[_builtins.str]] = None,
+            last_name: pulumi.Input[Optional[_builtins.str]] = None,
+            locality: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
+            plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
+            schema: pulumi.Input[Optional[_builtins.str]] = None,
+            state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
+            street_address: pulumi.Input[Optional[_builtins.str]] = None,
+            telephone: pulumi.Input[Optional[_builtins.str]] = None,
+            unreachable_domains_behaviour: pulumi.Input[Optional[_builtins.str]] = None) -> 'ActiveDirectoryJoinPoint':
         """
         Get an existing ActiveDirectoryJoinPoint resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

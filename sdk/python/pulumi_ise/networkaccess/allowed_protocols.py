@@ -35,67 +35,67 @@ class AllowedProtocolsArgs:
                  eap_tls_l_bit: pulumi.Input[_builtins.bool],
                  process_host_lookup: pulumi.Input[_builtins.bool],
                  require_message_auth: pulumi.Input[_builtins.bool],
-                 allow5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_accept_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_enable_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_anonymous_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_authenticated_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_authorization_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_authorization_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_machine_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_machine_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_server_returns: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_use_proactive_pac_update_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_use_pacs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_allow_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_enable_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_session_ticket_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_ttls_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_ttls_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 peap_allow_peap_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_peap_v0: Optional[pulumi.Input[_builtins.bool]] = None,
-                 preferred_eap_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 require_cryptobinding: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_downgrade_msk: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_accept_client_cert_during_tunnel_est: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 teap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None):
+                 allow5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_enable_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_anonymous_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_authenticated_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_authorization_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_authorization_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_machine_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_machine_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_server_returns: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_use_proactive_pac_update_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_use_pacs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_allow_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_enable_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_session_ticket_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_ttls_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_ttls_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 peap_allow_peap_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_peap_v0: pulumi.Input[Optional[_builtins.bool]] = None,
+                 preferred_eap_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 teap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_request_basic_pwd_auth: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a AllowedProtocols resource.
 
@@ -523,79 +523,79 @@ class AllowedProtocolsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def allow5g(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow5g(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow 5G. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "allow5g")
 
     @allow5g.setter
-    def allow5g(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow5g(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow5g", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastAcceptClientCert")
-    def eap_fast_accept_client_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_accept_client_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
         """
         return pulumi.get(self, "eap_fast_accept_client_cert")
 
     @eap_fast_accept_client_cert.setter
-    def eap_fast_accept_client_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_accept_client_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_accept_client_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastAllowMachineAuthentication")
-    def eap_fast_allow_machine_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_allow_machine_authentication(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         """
         return pulumi.get(self, "eap_fast_allow_machine_authentication")
 
     @eap_fast_allow_machine_authentication.setter
-    def eap_fast_allow_machine_authentication(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_allow_machine_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_allow_machine_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapGtc")
-    def eap_fast_eap_gtc(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_gtc(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP GTC
         """
         return pulumi.get(self, "eap_fast_eap_gtc")
 
     @eap_fast_eap_gtc.setter
-    def eap_fast_eap_gtc(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_gtc(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_gtc", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapGtcPwdChange")
-    def eap_fast_eap_gtc_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_gtc_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
         """
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change")
 
     @eap_fast_eap_gtc_pwd_change.setter
-    def eap_fast_eap_gtc_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_gtc_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_gtc_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapGtcPwdChangeRetries")
-    def eap_fast_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_eap_gtc_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
           - Range: `0`-`3`
@@ -603,36 +603,36 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change_retries")
 
     @eap_fast_eap_gtc_pwd_change_retries.setter
-    def eap_fast_eap_gtc_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_eap_gtc_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_eap_gtc_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapMsChapV2")
-    def eap_fast_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2")
 
     @eap_fast_eap_ms_chap_v2.setter
-    def eap_fast_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapMsChapV2PwdChange")
-    def eap_fast_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change")
 
     @eap_fast_eap_ms_chap_v2_pwd_change.setter
-    def eap_fast_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapMsChapV2PwdChangeRetries")
-    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -640,108 +640,108 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries")
 
     @eap_fast_eap_ms_chap_v2_pwd_change_retries.setter
-    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapTls")
-    def eap_fast_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS
         """
         return pulumi.get(self, "eap_fast_eap_tls")
 
     @eap_fast_eap_tls.setter
-    def eap_fast_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapTlsAuthOfExpiredCerts")
-    def eap_fast_eap_tls_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_tls_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
         """
         return pulumi.get(self, "eap_fast_eap_tls_auth_of_expired_certs")
 
     @eap_fast_eap_tls_auth_of_expired_certs.setter
-    def eap_fast_eap_tls_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_tls_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_tls_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEnableEapChaining")
-    def eap_fast_enable_eap_chaining(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_enable_eap_chaining(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable EAP chaining
         """
         return pulumi.get(self, "eap_fast_enable_eap_chaining")
 
     @eap_fast_enable_eap_chaining.setter
-    def eap_fast_enable_eap_chaining(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_enable_eap_chaining(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_enable_eap_chaining", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowAnonymousProvisioning")
-    def eap_fast_pacs_allow_anonymous_provisioning(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_anonymous_provisioning(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_anonymous_provisioning")
 
     @eap_fast_pacs_allow_anonymous_provisioning.setter
-    def eap_fast_pacs_allow_anonymous_provisioning(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_anonymous_provisioning(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_anonymous_provisioning", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowAuthenticatedProvisioning")
-    def eap_fast_pacs_allow_authenticated_provisioning(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_authenticated_provisioning(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_authenticated_provisioning")
 
     @eap_fast_pacs_allow_authenticated_provisioning.setter
-    def eap_fast_pacs_allow_authenticated_provisioning(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_authenticated_provisioning(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_authenticated_provisioning", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowClientCert")
-    def eap_fast_pacs_allow_client_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_client_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_client_cert")
 
     @eap_fast_pacs_allow_client_cert.setter
-    def eap_fast_pacs_allow_client_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_client_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_client_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowMachineAuthentication")
-    def eap_fast_pacs_allow_machine_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_machine_authentication(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_machine_authentication")
 
     @eap_fast_pacs_allow_machine_authentication.setter
-    def eap_fast_pacs_allow_machine_authentication(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_machine_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_machine_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtl")
-    def eap_fast_pacs_authorization_pac_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_authorization_pac_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl")
 
     @eap_fast_pacs_authorization_pac_ttl.setter
-    def eap_fast_pacs_authorization_pac_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_authorization_pac_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_authorization_pac_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtlUnit")
-    def eap_fast_pacs_authorization_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_fast_pacs_authorization_pac_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -749,24 +749,24 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl_unit")
 
     @eap_fast_pacs_authorization_pac_ttl_unit.setter
-    def eap_fast_pacs_authorization_pac_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_fast_pacs_authorization_pac_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_fast_pacs_authorization_pac_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsMachinePacTtl")
-    def eap_fast_pacs_machine_pac_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_machine_pac_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl")
 
     @eap_fast_pacs_machine_pac_ttl.setter
-    def eap_fast_pacs_machine_pac_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_machine_pac_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_machine_pac_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsMachinePacTtlUnit")
-    def eap_fast_pacs_machine_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_fast_pacs_machine_pac_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -774,48 +774,48 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl_unit")
 
     @eap_fast_pacs_machine_pac_ttl_unit.setter
-    def eap_fast_pacs_machine_pac_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_fast_pacs_machine_pac_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_fast_pacs_machine_pac_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsServerReturns")
-    def eap_fast_pacs_server_returns(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_server_returns(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_server_returns")
 
     @eap_fast_pacs_server_returns.setter
-    def eap_fast_pacs_server_returns(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_server_returns(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_server_returns", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsStatelessSessionResume")
-    def eap_fast_pacs_stateless_session_resume(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_stateless_session_resume(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_stateless_session_resume")
 
     @eap_fast_pacs_stateless_session_resume.setter
-    def eap_fast_pacs_stateless_session_resume(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_stateless_session_resume(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_stateless_session_resume", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsTunnelPacTtl")
-    def eap_fast_pacs_tunnel_pac_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_tunnel_pac_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl")
 
     @eap_fast_pacs_tunnel_pac_ttl.setter
-    def eap_fast_pacs_tunnel_pac_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_tunnel_pac_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_tunnel_pac_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsTunnelPacTtlUnit")
-    def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -823,12 +823,12 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl_unit")
 
     @eap_fast_pacs_tunnel_pac_ttl_unit.setter
-    def eap_fast_pacs_tunnel_pac_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_fast_pacs_tunnel_pac_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_fast_pacs_tunnel_pac_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsUseProactivePacUpdatePercentage")
-    def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
           - Range: `1`-`100`
@@ -836,48 +836,48 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_fast_pacs_use_proactive_pac_update_percentage")
 
     @eap_fast_pacs_use_proactive_pac_update_percentage.setter
-    def eap_fast_pacs_use_proactive_pac_update_percentage(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_use_proactive_pac_update_percentage(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_use_proactive_pac_update_percentage", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastUsePacs")
-    def eap_fast_use_pacs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_use_pacs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use PACs
         """
         return pulumi.get(self, "eap_fast_use_pacs")
 
     @eap_fast_use_pacs.setter
-    def eap_fast_use_pacs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_use_pacs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_use_pacs", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsAllowAuthOfExpiredCerts")
-    def eap_tls_allow_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_tls_allow_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow authentication of expired certificates
         """
         return pulumi.get(self, "eap_tls_allow_auth_of_expired_certs")
 
     @eap_tls_allow_auth_of_expired_certs.setter
-    def eap_tls_allow_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_tls_allow_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_tls_allow_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsEnableStatelessSessionResume")
-    def eap_tls_enable_stateless_session_resume(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_tls_enable_stateless_session_resume(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable stateless session resume
         """
         return pulumi.get(self, "eap_tls_enable_stateless_session_resume")
 
     @eap_tls_enable_stateless_session_resume.setter
-    def eap_tls_enable_stateless_session_resume(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_tls_enable_stateless_session_resume(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_tls_enable_stateless_session_resume", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsSessionTicketPercentage")
-    def eap_tls_session_ticket_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_tls_session_ticket_percentage(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
           - Range: `1`-`100`
@@ -885,24 +885,24 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_tls_session_ticket_percentage")
 
     @eap_tls_session_ticket_percentage.setter
-    def eap_tls_session_ticket_percentage(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_tls_session_ticket_percentage(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_tls_session_ticket_percentage", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsSessionTicketTtl")
-    def eap_tls_session_ticket_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_tls_session_ticket_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
         """
         return pulumi.get(self, "eap_tls_session_ticket_ttl")
 
     @eap_tls_session_ticket_ttl.setter
-    def eap_tls_session_ticket_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_tls_session_ticket_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_tls_session_ticket_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsSessionTicketTtlUnit")
-    def eap_tls_session_ticket_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_tls_session_ticket_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -910,60 +910,60 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_tls_session_ticket_ttl_unit")
 
     @eap_tls_session_ticket_ttl_unit.setter
-    def eap_tls_session_ticket_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_tls_session_ticket_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_tls_session_ticket_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsChap")
-    def eap_ttls_chap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_chap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow CHAP
         """
         return pulumi.get(self, "eap_ttls_chap")
 
     @eap_ttls_chap.setter
-    def eap_ttls_chap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_chap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_chap", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMd5")
-    def eap_ttls_eap_md5(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_eap_md5(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MD5
         """
         return pulumi.get(self, "eap_ttls_eap_md5")
 
     @eap_ttls_eap_md5.setter
-    def eap_ttls_eap_md5(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_eap_md5(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_eap_md5", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMsChapV2")
-    def eap_ttls_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2")
 
     @eap_ttls_eap_ms_chap_v2.setter
-    def eap_ttls_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChange")
-    def eap_ttls_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change")
 
     @eap_ttls_eap_ms_chap_v2_pwd_change.setter
-    def eap_ttls_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChangeRetries")
-    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -971,84 +971,84 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries")
 
     @eap_ttls_eap_ms_chap_v2_pwd_change_retries.setter
-    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsMsChapV1")
-    def eap_ttls_ms_chap_v1(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_ms_chap_v1(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v1
         """
         return pulumi.get(self, "eap_ttls_ms_chap_v1")
 
     @eap_ttls_ms_chap_v1.setter
-    def eap_ttls_ms_chap_v1(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_ms_chap_v1(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_ms_chap_v1", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsMsChapV2")
-    def eap_ttls_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v2
         """
         return pulumi.get(self, "eap_ttls_ms_chap_v2")
 
     @eap_ttls_ms_chap_v2.setter
-    def eap_ttls_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsPapAscii")
-    def eap_ttls_pap_ascii(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_pap_ascii(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PAP ASCII
         """
         return pulumi.get(self, "eap_ttls_pap_ascii")
 
     @eap_ttls_pap_ascii.setter
-    def eap_ttls_pap_ascii(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_pap_ascii(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_pap_ascii", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the allowed protocols
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapGtc")
-    def peap_allow_peap_eap_gtc(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_gtc(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP GTC
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc")
 
     @peap_allow_peap_eap_gtc.setter
-    def peap_allow_peap_eap_gtc(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_gtc(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_gtc", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChange")
-    def peap_allow_peap_eap_gtc_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_gtc_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change")
 
     @peap_allow_peap_eap_gtc_pwd_change.setter
-    def peap_allow_peap_eap_gtc_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_gtc_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_gtc_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChangeRetries")
-    def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
           - Range: `0`-`3`
@@ -1056,36 +1056,36 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change_retries")
 
     @peap_allow_peap_eap_gtc_pwd_change_retries.setter
-    def peap_allow_peap_eap_gtc_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def peap_allow_peap_eap_gtc_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "peap_allow_peap_eap_gtc_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapMsChapV2")
-    def peap_allow_peap_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP MS CHAP v2
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2")
 
     @peap_allow_peap_eap_ms_chap_v2.setter
-    def peap_allow_peap_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChange")
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change")
 
     @peap_allow_peap_eap_ms_chap_v2_pwd_change.setter
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChangeRetries")
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -1093,48 +1093,48 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries")
 
     @peap_allow_peap_eap_ms_chap_v2_pwd_change_retries.setter
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapTls")
-    def peap_allow_peap_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP TLS
         """
         return pulumi.get(self, "peap_allow_peap_eap_tls")
 
     @peap_allow_peap_eap_tls.setter
-    def peap_allow_peap_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapTlsAuthOfExpiredCerts")
-    def peap_allow_peap_eap_tls_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_tls_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
         """
         return pulumi.get(self, "peap_allow_peap_eap_tls_auth_of_expired_certs")
 
     @peap_allow_peap_eap_tls_auth_of_expired_certs.setter
-    def peap_allow_peap_eap_tls_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_tls_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_tls_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="peapPeapV0")
-    def peap_peap_v0(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_peap_v0(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP v0
         """
         return pulumi.get(self, "peap_peap_v0")
 
     @peap_peap_v0.setter
-    def peap_peap_v0(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_peap_v0(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_peap_v0", value)
 
     @_builtins.property
     @pulumi.getter(name="preferredEapProtocol")
-    def preferred_eap_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def preferred_eap_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Preferred EAP protocol
           - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
@@ -1142,84 +1142,84 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "preferred_eap_protocol")
 
     @preferred_eap_protocol.setter
-    def preferred_eap_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def preferred_eap_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "preferred_eap_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="requireCryptobinding")
-    def require_cryptobinding(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def require_cryptobinding(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Require cryptobinding
         """
         return pulumi.get(self, "require_cryptobinding")
 
     @require_cryptobinding.setter
-    def require_cryptobinding(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def require_cryptobinding(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "require_cryptobinding", value)
 
     @_builtins.property
     @pulumi.getter(name="teapDowngradeMsk")
-    def teap_downgrade_msk(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_downgrade_msk(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow downgrade to MSK
         """
         return pulumi.get(self, "teap_downgrade_msk")
 
     @teap_downgrade_msk.setter
-    def teap_downgrade_msk(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_downgrade_msk(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_downgrade_msk", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapAcceptClientCertDuringTunnelEst")
-    def teap_eap_accept_client_cert_during_tunnel_est(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_accept_client_cert_during_tunnel_est(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept client certificate during tunnel establishment
         """
         return pulumi.get(self, "teap_eap_accept_client_cert_during_tunnel_est")
 
     @teap_eap_accept_client_cert_during_tunnel_est.setter
-    def teap_eap_accept_client_cert_during_tunnel_est(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_accept_client_cert_during_tunnel_est(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_accept_client_cert_during_tunnel_est", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapChaining")
-    def teap_eap_chaining(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_chaining(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP chaining
         """
         return pulumi.get(self, "teap_eap_chaining")
 
     @teap_eap_chaining.setter
-    def teap_eap_chaining(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_chaining(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_chaining", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapMsChapV2")
-    def teap_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2")
 
     @teap_eap_ms_chap_v2.setter
-    def teap_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapMsChapV2PwdChange")
-    def teap_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change")
 
     @teap_eap_ms_chap_v2_pwd_change.setter
-    def teap_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapMsChapV2PwdChangeRetries")
-    def teap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def teap_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -1227,126 +1227,126 @@ class AllowedProtocolsArgs:
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change_retries")
 
     @teap_eap_ms_chap_v2_pwd_change_retries.setter
-    def teap_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def teap_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "teap_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapTls")
-    def teap_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS
         """
         return pulumi.get(self, "teap_eap_tls")
 
     @teap_eap_tls.setter
-    def teap_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapTlsAuthOfExpiredCerts")
-    def teap_eap_tls_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_tls_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
         """
         return pulumi.get(self, "teap_eap_tls_auth_of_expired_certs")
 
     @teap_eap_tls_auth_of_expired_certs.setter
-    def teap_eap_tls_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_tls_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_tls_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="teapRequestBasicPwdAuth")
-    def teap_request_basic_pwd_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_request_basic_pwd_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Request basic password authentication
         """
         return pulumi.get(self, "teap_request_basic_pwd_auth")
 
     @teap_request_basic_pwd_auth.setter
-    def teap_request_basic_pwd_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_request_basic_pwd_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_request_basic_pwd_auth", value)
 
 
 @pulumi.input_type
 class _AllowedProtocolsState:
     def __init__(__self__, *,
-                 allow5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_fast: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_ttls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_leap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_peap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_preferred_eap_protocol: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_teap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_weak_ciphers_for_eap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_accept_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_enable_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_anonymous_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_authenticated_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_authorization_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_authorization_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_machine_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_machine_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_server_returns: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_use_proactive_pac_update_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_use_pacs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_allow_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_enable_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_l_bit: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_session_ticket_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_ttls_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_ttls_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 peap_allow_peap_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_peap_v0: Optional[pulumi.Input[_builtins.bool]] = None,
-                 preferred_eap_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 process_host_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 require_cryptobinding: Optional[pulumi.Input[_builtins.bool]] = None,
-                 require_message_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_downgrade_msk: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_accept_client_cert_during_tunnel_est: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 teap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None):
+                 allow5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_fast: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_ttls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_leap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_peap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_preferred_eap_protocol: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_enable_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_anonymous_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_authenticated_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_authorization_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_authorization_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_machine_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_machine_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_server_returns: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_use_proactive_pac_update_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_use_pacs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_allow_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_enable_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_l_bit: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_session_ticket_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_ttls_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_ttls_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 peap_allow_peap_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_peap_v0: pulumi.Input[Optional[_builtins.bool]] = None,
+                 preferred_eap_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
+                 require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 teap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_request_basic_pwd_auth: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering AllowedProtocols resources.
 
@@ -1598,235 +1598,235 @@ class _AllowedProtocolsState:
 
     @_builtins.property
     @pulumi.getter
-    def allow5g(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow5g(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow 5G. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "allow5g")
 
     @allow5g.setter
-    def allow5g(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow5g(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow5g", value)
 
     @_builtins.property
     @pulumi.getter(name="allowChap")
-    def allow_chap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_chap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow CHAP
         """
         return pulumi.get(self, "allow_chap")
 
     @allow_chap.setter
-    def allow_chap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_chap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_chap", value)
 
     @_builtins.property
     @pulumi.getter(name="allowEapFast")
-    def allow_eap_fast(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_eap_fast(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP Fast
         """
         return pulumi.get(self, "allow_eap_fast")
 
     @allow_eap_fast.setter
-    def allow_eap_fast(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_eap_fast(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_eap_fast", value)
 
     @_builtins.property
     @pulumi.getter(name="allowEapMd5")
-    def allow_eap_md5(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_eap_md5(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MD5
         """
         return pulumi.get(self, "allow_eap_md5")
 
     @allow_eap_md5.setter
-    def allow_eap_md5(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_eap_md5(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_eap_md5", value)
 
     @_builtins.property
     @pulumi.getter(name="allowEapTls")
-    def allow_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS
         """
         return pulumi.get(self, "allow_eap_tls")
 
     @allow_eap_tls.setter
-    def allow_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="allowEapTtls")
-    def allow_eap_ttls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_eap_ttls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TTLS
         """
         return pulumi.get(self, "allow_eap_ttls")
 
     @allow_eap_ttls.setter
-    def allow_eap_ttls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_eap_ttls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_eap_ttls", value)
 
     @_builtins.property
     @pulumi.getter(name="allowLeap")
-    def allow_leap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_leap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow LEAP
         """
         return pulumi.get(self, "allow_leap")
 
     @allow_leap.setter
-    def allow_leap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_leap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_leap", value)
 
     @_builtins.property
     @pulumi.getter(name="allowMsChapV1")
-    def allow_ms_chap_v1(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_ms_chap_v1(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v1
         """
         return pulumi.get(self, "allow_ms_chap_v1")
 
     @allow_ms_chap_v1.setter
-    def allow_ms_chap_v1(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_ms_chap_v1(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_ms_chap_v1", value)
 
     @_builtins.property
     @pulumi.getter(name="allowMsChapV2")
-    def allow_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v2
         """
         return pulumi.get(self, "allow_ms_chap_v2")
 
     @allow_ms_chap_v2.setter
-    def allow_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="allowPapAscii")
-    def allow_pap_ascii(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_pap_ascii(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PAP ASCII
         """
         return pulumi.get(self, "allow_pap_ascii")
 
     @allow_pap_ascii.setter
-    def allow_pap_ascii(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_pap_ascii(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_pap_ascii", value)
 
     @_builtins.property
     @pulumi.getter(name="allowPeap")
-    def allow_peap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_peap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP
         """
         return pulumi.get(self, "allow_peap")
 
     @allow_peap.setter
-    def allow_peap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_peap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_peap", value)
 
     @_builtins.property
     @pulumi.getter(name="allowPreferredEapProtocol")
-    def allow_preferred_eap_protocol(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_preferred_eap_protocol(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow preferred EAP protocol
         """
         return pulumi.get(self, "allow_preferred_eap_protocol")
 
     @allow_preferred_eap_protocol.setter
-    def allow_preferred_eap_protocol(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_preferred_eap_protocol(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_preferred_eap_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="allowTeap")
-    def allow_teap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_teap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow TEAP
         """
         return pulumi.get(self, "allow_teap")
 
     @allow_teap.setter
-    def allow_teap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_teap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_teap", value)
 
     @_builtins.property
     @pulumi.getter(name="allowWeakCiphersForEap")
-    def allow_weak_ciphers_for_eap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_weak_ciphers_for_eap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow weak ciphers for EAP
         """
         return pulumi.get(self, "allow_weak_ciphers_for_eap")
 
     @allow_weak_ciphers_for_eap.setter
-    def allow_weak_ciphers_for_eap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_weak_ciphers_for_eap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_weak_ciphers_for_eap", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastAcceptClientCert")
-    def eap_fast_accept_client_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_accept_client_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
         """
         return pulumi.get(self, "eap_fast_accept_client_cert")
 
     @eap_fast_accept_client_cert.setter
-    def eap_fast_accept_client_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_accept_client_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_accept_client_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastAllowMachineAuthentication")
-    def eap_fast_allow_machine_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_allow_machine_authentication(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         """
         return pulumi.get(self, "eap_fast_allow_machine_authentication")
 
     @eap_fast_allow_machine_authentication.setter
-    def eap_fast_allow_machine_authentication(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_allow_machine_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_allow_machine_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapGtc")
-    def eap_fast_eap_gtc(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_gtc(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP GTC
         """
         return pulumi.get(self, "eap_fast_eap_gtc")
 
     @eap_fast_eap_gtc.setter
-    def eap_fast_eap_gtc(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_gtc(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_gtc", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapGtcPwdChange")
-    def eap_fast_eap_gtc_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_gtc_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP GTC password change. Is required only if `eap_fast_eap_gtc` is `true`.
         """
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change")
 
     @eap_fast_eap_gtc_pwd_change.setter
-    def eap_fast_eap_gtc_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_gtc_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_gtc_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapGtcPwdChangeRetries")
-    def eap_fast_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_eap_gtc_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP GTC password change retries. Is required only if `eap_fast_eap_gtc` is `true`.
           - Range: `0`-`3`
@@ -1834,36 +1834,36 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_fast_eap_gtc_pwd_change_retries")
 
     @eap_fast_eap_gtc_pwd_change_retries.setter
-    def eap_fast_eap_gtc_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_eap_gtc_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_eap_gtc_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapMsChapV2")
-    def eap_fast_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2")
 
     @eap_fast_eap_ms_chap_v2.setter
-    def eap_fast_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapMsChapV2PwdChange")
-    def eap_fast_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2 password change. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change")
 
     @eap_fast_eap_ms_chap_v2_pwd_change.setter
-    def eap_fast_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapMsChapV2PwdChangeRetries")
-    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP MS CHAP v2 password change retries. Is required only if `eap_fast_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -1871,108 +1871,108 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries")
 
     @eap_fast_eap_ms_chap_v2_pwd_change_retries.setter
-    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapTls")
-    def eap_fast_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS
         """
         return pulumi.get(self, "eap_fast_eap_tls")
 
     @eap_fast_eap_tls.setter
-    def eap_fast_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEapTlsAuthOfExpiredCerts")
-    def eap_fast_eap_tls_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_eap_tls_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS authentication of expired certificates. Is required only if `eap_fast_eap_tls` is `true`.
         """
         return pulumi.get(self, "eap_fast_eap_tls_auth_of_expired_certs")
 
     @eap_fast_eap_tls_auth_of_expired_certs.setter
-    def eap_fast_eap_tls_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_eap_tls_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_eap_tls_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastEnableEapChaining")
-    def eap_fast_enable_eap_chaining(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_enable_eap_chaining(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable EAP chaining
         """
         return pulumi.get(self, "eap_fast_enable_eap_chaining")
 
     @eap_fast_enable_eap_chaining.setter
-    def eap_fast_enable_eap_chaining(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_enable_eap_chaining(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_enable_eap_chaining", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowAnonymousProvisioning")
-    def eap_fast_pacs_allow_anonymous_provisioning(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_anonymous_provisioning(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow anonymous provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_anonymous_provisioning")
 
     @eap_fast_pacs_allow_anonymous_provisioning.setter
-    def eap_fast_pacs_allow_anonymous_provisioning(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_anonymous_provisioning(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_anonymous_provisioning", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowAuthenticatedProvisioning")
-    def eap_fast_pacs_allow_authenticated_provisioning(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_authenticated_provisioning(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow authenticated provisioning. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_authenticated_provisioning")
 
     @eap_fast_pacs_allow_authenticated_provisioning.setter
-    def eap_fast_pacs_allow_authenticated_provisioning(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_authenticated_provisioning(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_authenticated_provisioning", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowClientCert")
-    def eap_fast_pacs_allow_client_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_client_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept client certification for provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_client_cert")
 
     @eap_fast_pacs_allow_client_cert.setter
-    def eap_fast_pacs_allow_client_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_client_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_client_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAllowMachineAuthentication")
-    def eap_fast_pacs_allow_machine_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_allow_machine_authentication(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow machine authentication. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_allow_machine_authentication")
 
     @eap_fast_pacs_allow_machine_authentication.setter
-    def eap_fast_pacs_allow_machine_authentication(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_allow_machine_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_allow_machine_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtl")
-    def eap_fast_pacs_authorization_pac_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_authorization_pac_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Authorization PAC TTL. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl")
 
     @eap_fast_pacs_authorization_pac_ttl.setter
-    def eap_fast_pacs_authorization_pac_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_authorization_pac_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_authorization_pac_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsAuthorizationPacTtlUnit")
-    def eap_fast_pacs_authorization_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_fast_pacs_authorization_pac_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authorization PAC TTL unit. Is required only if `eap_fast_pacs_stateless_session_resume` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -1980,24 +1980,24 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_fast_pacs_authorization_pac_ttl_unit")
 
     @eap_fast_pacs_authorization_pac_ttl_unit.setter
-    def eap_fast_pacs_authorization_pac_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_fast_pacs_authorization_pac_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_fast_pacs_authorization_pac_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsMachinePacTtl")
-    def eap_fast_pacs_machine_pac_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_machine_pac_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Machine PAC TTL. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl")
 
     @eap_fast_pacs_machine_pac_ttl.setter
-    def eap_fast_pacs_machine_pac_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_machine_pac_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_machine_pac_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsMachinePacTtlUnit")
-    def eap_fast_pacs_machine_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_fast_pacs_machine_pac_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Machine PAC TTL unit. Is required only if `eap_fast_pacs_allow_machine_authentication` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -2005,48 +2005,48 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_fast_pacs_machine_pac_ttl_unit")
 
     @eap_fast_pacs_machine_pac_ttl_unit.setter
-    def eap_fast_pacs_machine_pac_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_fast_pacs_machine_pac_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_fast_pacs_machine_pac_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsServerReturns")
-    def eap_fast_pacs_server_returns(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_server_returns(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Server returns access accept after authenticated provisioning. Is required only if `eap_fast_pacs_allow_authenticated_provisioning` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_server_returns")
 
     @eap_fast_pacs_server_returns.setter
-    def eap_fast_pacs_server_returns(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_server_returns(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_server_returns", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsStatelessSessionResume")
-    def eap_fast_pacs_stateless_session_resume(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_pacs_stateless_session_resume(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Stateless session resume. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_stateless_session_resume")
 
     @eap_fast_pacs_stateless_session_resume.setter
-    def eap_fast_pacs_stateless_session_resume(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_pacs_stateless_session_resume(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_pacs_stateless_session_resume", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsTunnelPacTtl")
-    def eap_fast_pacs_tunnel_pac_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_tunnel_pac_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         PACs tunnel PAC time to live. Is required only if `eap_fast_use_pacs` is `true`.
         """
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl")
 
     @eap_fast_pacs_tunnel_pac_ttl.setter
-    def eap_fast_pacs_tunnel_pac_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_tunnel_pac_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_tunnel_pac_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsTunnelPacTtlUnit")
-    def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_fast_pacs_tunnel_pac_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PACs tunnel PAC time to live unit. Is required only if `eap_fast_use_pacs` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -2054,12 +2054,12 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_fast_pacs_tunnel_pac_ttl_unit")
 
     @eap_fast_pacs_tunnel_pac_ttl_unit.setter
-    def eap_fast_pacs_tunnel_pac_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_fast_pacs_tunnel_pac_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_fast_pacs_tunnel_pac_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastPacsUseProactivePacUpdatePercentage")
-    def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_fast_pacs_use_proactive_pac_update_percentage(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Use proactive pac update percentage. Is required only if `eap_fast_use_pacs` is `true`.
           - Range: `1`-`100`
@@ -2067,60 +2067,60 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_fast_pacs_use_proactive_pac_update_percentage")
 
     @eap_fast_pacs_use_proactive_pac_update_percentage.setter
-    def eap_fast_pacs_use_proactive_pac_update_percentage(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_fast_pacs_use_proactive_pac_update_percentage(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_fast_pacs_use_proactive_pac_update_percentage", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastUsePacs")
-    def eap_fast_use_pacs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_fast_use_pacs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use PACs
         """
         return pulumi.get(self, "eap_fast_use_pacs")
 
     @eap_fast_use_pacs.setter
-    def eap_fast_use_pacs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_fast_use_pacs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_fast_use_pacs", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsAllowAuthOfExpiredCerts")
-    def eap_tls_allow_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_tls_allow_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow authentication of expired certificates
         """
         return pulumi.get(self, "eap_tls_allow_auth_of_expired_certs")
 
     @eap_tls_allow_auth_of_expired_certs.setter
-    def eap_tls_allow_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_tls_allow_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_tls_allow_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsEnableStatelessSessionResume")
-    def eap_tls_enable_stateless_session_resume(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_tls_enable_stateless_session_resume(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable stateless session resume
         """
         return pulumi.get(self, "eap_tls_enable_stateless_session_resume")
 
     @eap_tls_enable_stateless_session_resume.setter
-    def eap_tls_enable_stateless_session_resume(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_tls_enable_stateless_session_resume(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_tls_enable_stateless_session_resume", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsLBit")
-    def eap_tls_l_bit(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_tls_l_bit(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         EAP TLS L-Bit
         """
         return pulumi.get(self, "eap_tls_l_bit")
 
     @eap_tls_l_bit.setter
-    def eap_tls_l_bit(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_tls_l_bit(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_tls_l_bit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsSessionTicketPercentage")
-    def eap_tls_session_ticket_percentage(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_tls_session_ticket_percentage(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Session ticket percentage. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
           - Range: `1`-`100`
@@ -2128,24 +2128,24 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_tls_session_ticket_percentage")
 
     @eap_tls_session_ticket_percentage.setter
-    def eap_tls_session_ticket_percentage(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_tls_session_ticket_percentage(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_tls_session_ticket_percentage", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsSessionTicketTtl")
-    def eap_tls_session_ticket_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_tls_session_ticket_ttl(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Session ticket TTL. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
         """
         return pulumi.get(self, "eap_tls_session_ticket_ttl")
 
     @eap_tls_session_ticket_ttl.setter
-    def eap_tls_session_ticket_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_tls_session_ticket_ttl(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_tls_session_ticket_ttl", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTlsSessionTicketTtlUnit")
-    def eap_tls_session_ticket_ttl_unit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eap_tls_session_ticket_ttl_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Session ticket TTL unit. Is required only if `eap_tls_enable_stateless_session_resume` is `true`.
           - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
@@ -2153,60 +2153,60 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_tls_session_ticket_ttl_unit")
 
     @eap_tls_session_ticket_ttl_unit.setter
-    def eap_tls_session_ticket_ttl_unit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eap_tls_session_ticket_ttl_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eap_tls_session_ticket_ttl_unit", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsChap")
-    def eap_ttls_chap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_chap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow CHAP
         """
         return pulumi.get(self, "eap_ttls_chap")
 
     @eap_ttls_chap.setter
-    def eap_ttls_chap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_chap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_chap", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMd5")
-    def eap_ttls_eap_md5(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_eap_md5(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MD5
         """
         return pulumi.get(self, "eap_ttls_eap_md5")
 
     @eap_ttls_eap_md5.setter
-    def eap_ttls_eap_md5(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_eap_md5(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_eap_md5", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMsChapV2")
-    def eap_ttls_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2")
 
     @eap_ttls_eap_ms_chap_v2.setter
-    def eap_ttls_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChange")
-    def eap_ttls_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2 password change. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change")
 
     @eap_ttls_eap_ms_chap_v2_pwd_change.setter
-    def eap_ttls_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsEapMsChapV2PwdChangeRetries")
-    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP MS CHAP v2 password change retries. Is required only if `eap_ttls_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -2214,84 +2214,84 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries")
 
     @eap_ttls_eap_ms_chap_v2_pwd_change_retries.setter
-    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eap_ttls_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eap_ttls_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsMsChapV1")
-    def eap_ttls_ms_chap_v1(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_ms_chap_v1(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v1
         """
         return pulumi.get(self, "eap_ttls_ms_chap_v1")
 
     @eap_ttls_ms_chap_v1.setter
-    def eap_ttls_ms_chap_v1(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_ms_chap_v1(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_ms_chap_v1", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsMsChapV2")
-    def eap_ttls_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v2
         """
         return pulumi.get(self, "eap_ttls_ms_chap_v2")
 
     @eap_ttls_ms_chap_v2.setter
-    def eap_ttls_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="eapTtlsPapAscii")
-    def eap_ttls_pap_ascii(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eap_ttls_pap_ascii(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PAP ASCII
         """
         return pulumi.get(self, "eap_ttls_pap_ascii")
 
     @eap_ttls_pap_ascii.setter
-    def eap_ttls_pap_ascii(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eap_ttls_pap_ascii(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eap_ttls_pap_ascii", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the allowed protocols
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapGtc")
-    def peap_allow_peap_eap_gtc(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_gtc(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP GTC
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc")
 
     @peap_allow_peap_eap_gtc.setter
-    def peap_allow_peap_eap_gtc(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_gtc(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_gtc", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChange")
-    def peap_allow_peap_eap_gtc_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_gtc_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP GTC password change. Is required only if `allow_peap_eap_gtc` is `true`.
         """
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change")
 
     @peap_allow_peap_eap_gtc_pwd_change.setter
-    def peap_allow_peap_eap_gtc_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_gtc_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_gtc_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapGtcPwdChangeRetries")
-    def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def peap_allow_peap_eap_gtc_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         PEAP EAP GTC password change retries. Is required only if `allow_peap_eap_gtc` is `true`.
           - Range: `0`-`3`
@@ -2299,36 +2299,36 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "peap_allow_peap_eap_gtc_pwd_change_retries")
 
     @peap_allow_peap_eap_gtc_pwd_change_retries.setter
-    def peap_allow_peap_eap_gtc_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def peap_allow_peap_eap_gtc_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "peap_allow_peap_eap_gtc_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapMsChapV2")
-    def peap_allow_peap_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP MS CHAP v2
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2")
 
     @peap_allow_peap_eap_ms_chap_v2.setter
-    def peap_allow_peap_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChange")
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP MS CHAP v2 password change. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change")
 
     @peap_allow_peap_eap_ms_chap_v2_pwd_change.setter
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapMsChapV2PwdChangeRetries")
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allow_peap_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -2336,48 +2336,48 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries")
 
     @peap_allow_peap_eap_ms_chap_v2_pwd_change_retries.setter
-    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def peap_allow_peap_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "peap_allow_peap_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapTls")
-    def peap_allow_peap_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP TLS
         """
         return pulumi.get(self, "peap_allow_peap_eap_tls")
 
     @peap_allow_peap_eap_tls.setter
-    def peap_allow_peap_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="peapAllowPeapEapTlsAuthOfExpiredCerts")
-    def peap_allow_peap_eap_tls_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_allow_peap_eap_tls_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peap_allow_peap_eap_tls` is `true`.
         """
         return pulumi.get(self, "peap_allow_peap_eap_tls_auth_of_expired_certs")
 
     @peap_allow_peap_eap_tls_auth_of_expired_certs.setter
-    def peap_allow_peap_eap_tls_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_allow_peap_eap_tls_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_allow_peap_eap_tls_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="peapPeapV0")
-    def peap_peap_v0(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def peap_peap_v0(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PEAP v0
         """
         return pulumi.get(self, "peap_peap_v0")
 
     @peap_peap_v0.setter
-    def peap_peap_v0(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def peap_peap_v0(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "peap_peap_v0", value)
 
     @_builtins.property
     @pulumi.getter(name="preferredEapProtocol")
-    def preferred_eap_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def preferred_eap_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Preferred EAP protocol
           - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
@@ -2385,108 +2385,108 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "preferred_eap_protocol")
 
     @preferred_eap_protocol.setter
-    def preferred_eap_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def preferred_eap_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "preferred_eap_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="processHostLookup")
-    def process_host_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def process_host_lookup(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Process host lookup
         """
         return pulumi.get(self, "process_host_lookup")
 
     @process_host_lookup.setter
-    def process_host_lookup(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def process_host_lookup(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "process_host_lookup", value)
 
     @_builtins.property
     @pulumi.getter(name="requireCryptobinding")
-    def require_cryptobinding(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def require_cryptobinding(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Require cryptobinding
         """
         return pulumi.get(self, "require_cryptobinding")
 
     @require_cryptobinding.setter
-    def require_cryptobinding(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def require_cryptobinding(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "require_cryptobinding", value)
 
     @_builtins.property
     @pulumi.getter(name="requireMessageAuth")
-    def require_message_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def require_message_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Require message authentication
         """
         return pulumi.get(self, "require_message_auth")
 
     @require_message_auth.setter
-    def require_message_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def require_message_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "require_message_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="teapDowngradeMsk")
-    def teap_downgrade_msk(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_downgrade_msk(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow downgrade to MSK
         """
         return pulumi.get(self, "teap_downgrade_msk")
 
     @teap_downgrade_msk.setter
-    def teap_downgrade_msk(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_downgrade_msk(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_downgrade_msk", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapAcceptClientCertDuringTunnelEst")
-    def teap_eap_accept_client_cert_during_tunnel_est(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_accept_client_cert_during_tunnel_est(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept client certificate during tunnel establishment
         """
         return pulumi.get(self, "teap_eap_accept_client_cert_during_tunnel_est")
 
     @teap_eap_accept_client_cert_during_tunnel_est.setter
-    def teap_eap_accept_client_cert_during_tunnel_est(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_accept_client_cert_during_tunnel_est(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_accept_client_cert_during_tunnel_est", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapChaining")
-    def teap_eap_chaining(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_chaining(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP chaining
         """
         return pulumi.get(self, "teap_eap_chaining")
 
     @teap_eap_chaining.setter
-    def teap_eap_chaining(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_chaining(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_chaining", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapMsChapV2")
-    def teap_eap_ms_chap_v2(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_ms_chap_v2(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2")
 
     @teap_eap_ms_chap_v2.setter
-    def teap_eap_ms_chap_v2(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_ms_chap_v2(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_ms_chap_v2", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapMsChapV2PwdChange")
-    def teap_eap_ms_chap_v2_pwd_change(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_ms_chap_v2_pwd_change(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP MS CHAP v2 password change. Is required only if `teap_eap_ms_chap_v2` is `true`.
         """
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change")
 
     @teap_eap_ms_chap_v2_pwd_change.setter
-    def teap_eap_ms_chap_v2_pwd_change(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_ms_chap_v2_pwd_change(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_ms_chap_v2_pwd_change", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapMsChapV2PwdChangeRetries")
-    def teap_eap_ms_chap_v2_pwd_change_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def teap_eap_ms_chap_v2_pwd_change_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EAP MS CHAP v2 password change retries. Is required only if `teap_eap_ms_chap_v2` is `true`.
           - Range: `0`-`3`
@@ -2494,43 +2494,43 @@ class _AllowedProtocolsState:
         return pulumi.get(self, "teap_eap_ms_chap_v2_pwd_change_retries")
 
     @teap_eap_ms_chap_v2_pwd_change_retries.setter
-    def teap_eap_ms_chap_v2_pwd_change_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def teap_eap_ms_chap_v2_pwd_change_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "teap_eap_ms_chap_v2_pwd_change_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapTls")
-    def teap_eap_tls(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_tls(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS
         """
         return pulumi.get(self, "teap_eap_tls")
 
     @teap_eap_tls.setter
-    def teap_eap_tls(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_tls(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_tls", value)
 
     @_builtins.property
     @pulumi.getter(name="teapEapTlsAuthOfExpiredCerts")
-    def teap_eap_tls_auth_of_expired_certs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_eap_tls_auth_of_expired_certs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow EAP TLS authentication of expired certs. Is required only if `teap_eap_tls` is `true`.
         """
         return pulumi.get(self, "teap_eap_tls_auth_of_expired_certs")
 
     @teap_eap_tls_auth_of_expired_certs.setter
-    def teap_eap_tls_auth_of_expired_certs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_eap_tls_auth_of_expired_certs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_eap_tls_auth_of_expired_certs", value)
 
     @_builtins.property
     @pulumi.getter(name="teapRequestBasicPwdAuth")
-    def teap_request_basic_pwd_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def teap_request_basic_pwd_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Request basic password authentication
         """
         return pulumi.get(self, "teap_request_basic_pwd_auth")
 
     @teap_request_basic_pwd_auth.setter
-    def teap_request_basic_pwd_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def teap_request_basic_pwd_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "teap_request_basic_pwd_auth", value)
 
 
@@ -2540,83 +2540,83 @@ class AllowedProtocols(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_fast: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_ttls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_leap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_peap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_preferred_eap_protocol: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_teap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_weak_ciphers_for_eap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_accept_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_enable_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_anonymous_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_authenticated_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_authorization_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_authorization_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_machine_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_machine_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_server_returns: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_use_proactive_pac_update_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_use_pacs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_allow_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_enable_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_l_bit: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_session_ticket_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_ttls_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_ttls_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 peap_allow_peap_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_peap_v0: Optional[pulumi.Input[_builtins.bool]] = None,
-                 preferred_eap_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 process_host_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 require_cryptobinding: Optional[pulumi.Input[_builtins.bool]] = None,
-                 require_message_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_downgrade_msk: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_accept_client_cert_during_tunnel_est: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 teap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None,
+                 allow5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_fast: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_ttls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_leap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_peap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_preferred_eap_protocol: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_enable_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_anonymous_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_authenticated_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_authorization_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_authorization_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_machine_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_machine_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_server_returns: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_use_proactive_pac_update_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_use_pacs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_allow_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_enable_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_l_bit: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_session_ticket_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_ttls_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_ttls_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 peap_allow_peap_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_peap_v0: pulumi.Input[Optional[_builtins.bool]] = None,
+                 preferred_eap_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
+                 require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 teap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_request_basic_pwd_auth: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage an allowed protocols policy element.
@@ -2924,83 +2924,83 @@ class AllowedProtocols(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_fast: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_eap_ttls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_leap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_peap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_preferred_eap_protocol: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_teap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_weak_ciphers_for_eap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_accept_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_enable_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_anonymous_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_authenticated_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_authorization_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_authorization_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_machine_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_machine_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_server_returns: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_pacs_tunnel_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_fast_pacs_use_proactive_pac_update_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_fast_use_pacs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_allow_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_enable_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_l_bit: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_tls_session_ticket_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_tls_session_ticket_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-                 eap_ttls_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 eap_ttls_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 eap_ttls_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 peap_allow_peap_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 peap_allow_peap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_allow_peap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 peap_peap_v0: Optional[pulumi.Input[_builtins.bool]] = None,
-                 preferred_eap_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 process_host_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 require_cryptobinding: Optional[pulumi.Input[_builtins.bool]] = None,
-                 require_message_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_downgrade_msk: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_accept_client_cert_during_tunnel_est: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 teap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None,
+                 allow5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_fast: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_eap_ttls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_leap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_peap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_preferred_eap_protocol: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_enable_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_anonymous_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_authenticated_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_authorization_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_authorization_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_machine_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_machine_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_server_returns: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_pacs_tunnel_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_fast_pacs_use_proactive_pac_update_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_fast_use_pacs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_allow_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_enable_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_l_bit: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_tls_session_ticket_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_tls_session_ticket_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 eap_ttls_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 eap_ttls_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 eap_ttls_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 peap_allow_peap_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 peap_allow_peap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_allow_peap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 peap_peap_v0: pulumi.Input[Optional[_builtins.bool]] = None,
+                 preferred_eap_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
+                 require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 teap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 teap_request_basic_pwd_auth: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -3129,83 +3129,83 @@ class AllowedProtocols(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allow5g: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_eap_fast: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_eap_ttls: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_leap: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_peap: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_preferred_eap_protocol: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_teap: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_weak_ciphers_for_eap: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            eap_fast_accept_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_fast_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_fast_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_enable_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_allow_anonymous_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_allow_authenticated_provisioning: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_allow_client_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_allow_machine_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_authorization_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_fast_pacs_authorization_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-            eap_fast_pacs_machine_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_fast_pacs_machine_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-            eap_fast_pacs_server_returns: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_fast_pacs_tunnel_pac_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_fast_pacs_tunnel_pac_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-            eap_fast_pacs_use_proactive_pac_update_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_fast_use_pacs: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_tls_allow_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_tls_enable_stateless_session_resume: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_tls_l_bit: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_tls_session_ticket_percentage: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_tls_session_ticket_ttl: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_tls_session_ticket_ttl_unit: Optional[pulumi.Input[_builtins.str]] = None,
-            eap_ttls_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_ttls_eap_md5: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_ttls_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_ttls_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_ttls_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            eap_ttls_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_ttls_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-            eap_ttls_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            peap_allow_peap_eap_gtc: Optional[pulumi.Input[_builtins.bool]] = None,
-            peap_allow_peap_eap_gtc_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            peap_allow_peap_eap_gtc_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            peap_allow_peap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-            peap_allow_peap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            peap_allow_peap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-            peap_allow_peap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-            peap_peap_v0: Optional[pulumi.Input[_builtins.bool]] = None,
-            preferred_eap_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            process_host_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-            require_cryptobinding: Optional[pulumi.Input[_builtins.bool]] = None,
-            require_message_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_downgrade_msk: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_eap_accept_client_cert_during_tunnel_est: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_eap_chaining: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_eap_ms_chap_v2: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_eap_ms_chap_v2_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_eap_ms_chap_v2_pwd_change_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            teap_eap_tls: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_eap_tls_auth_of_expired_certs: Optional[pulumi.Input[_builtins.bool]] = None,
-            teap_request_basic_pwd_auth: Optional[pulumi.Input[_builtins.bool]] = None) -> 'AllowedProtocols':
+            allow5g: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_eap_fast: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_eap_ttls: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_leap: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_peap: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_preferred_eap_protocol: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_fast_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_fast_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_enable_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_allow_anonymous_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_allow_authenticated_provisioning: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_allow_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_authorization_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_fast_pacs_authorization_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+            eap_fast_pacs_machine_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_fast_pacs_machine_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+            eap_fast_pacs_server_returns: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_fast_pacs_tunnel_pac_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_fast_pacs_tunnel_pac_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+            eap_fast_pacs_use_proactive_pac_update_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_fast_use_pacs: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_tls_allow_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_tls_enable_stateless_session_resume: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_tls_l_bit: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_tls_session_ticket_percentage: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_tls_session_ticket_ttl: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_tls_session_ticket_ttl_unit: pulumi.Input[Optional[_builtins.str]] = None,
+            eap_ttls_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_ttls_eap_md5: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_ttls_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_ttls_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_ttls_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            eap_ttls_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_ttls_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+            eap_ttls_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            peap_allow_peap_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
+            peap_allow_peap_eap_gtc_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            peap_allow_peap_eap_gtc_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            peap_allow_peap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+            peap_allow_peap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            peap_allow_peap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            peap_allow_peap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+            peap_allow_peap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+            peap_peap_v0: pulumi.Input[Optional[_builtins.bool]] = None,
+            preferred_eap_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+            require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
+            require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_eap_ms_chap_v2: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_eap_ms_chap_v2_pwd_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_eap_ms_chap_v2_pwd_change_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            teap_eap_tls: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_eap_tls_auth_of_expired_certs: pulumi.Input[Optional[_builtins.bool]] = None,
+            teap_request_basic_pwd_auth: pulumi.Input[Optional[_builtins.bool]] = None) -> 'AllowedProtocols':
         """
         Get an existing AllowedProtocols resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

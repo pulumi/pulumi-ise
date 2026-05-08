@@ -680,324 +680,324 @@ export interface AllowedProtocolsState {
     /**
      * Allow 5G. This field is only supported from ISE 3.2.
      */
-    allow5g?: pulumi.Input<boolean>;
+    allow5g?: pulumi.Input<boolean | undefined>;
     /**
      * Allow CHAP
      */
-    allowChap?: pulumi.Input<boolean>;
+    allowChap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP Fast
      */
-    allowEapFast?: pulumi.Input<boolean>;
+    allowEapFast?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MD5
      */
-    allowEapMd5?: pulumi.Input<boolean>;
+    allowEapMd5?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP TLS
      */
-    allowEapTls?: pulumi.Input<boolean>;
+    allowEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP TTLS
      */
-    allowEapTtls?: pulumi.Input<boolean>;
+    allowEapTtls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow LEAP
      */
-    allowLeap?: pulumi.Input<boolean>;
+    allowLeap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow MS CHAP v1
      */
-    allowMsChapV1?: pulumi.Input<boolean>;
+    allowMsChapV1?: pulumi.Input<boolean | undefined>;
     /**
      * Allow MS CHAP v2
      */
-    allowMsChapV2?: pulumi.Input<boolean>;
+    allowMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PAP ASCII
      */
-    allowPapAscii?: pulumi.Input<boolean>;
+    allowPapAscii?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP
      */
-    allowPeap?: pulumi.Input<boolean>;
+    allowPeap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow preferred EAP protocol
      */
-    allowPreferredEapProtocol?: pulumi.Input<boolean>;
+    allowPreferredEapProtocol?: pulumi.Input<boolean | undefined>;
     /**
      * Allow TEAP
      */
-    allowTeap?: pulumi.Input<boolean>;
+    allowTeap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow weak ciphers for EAP
      */
-    allowWeakCiphersForEap?: pulumi.Input<boolean>;
+    allowWeakCiphersForEap?: pulumi.Input<boolean | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
-    eapFastAcceptClientCert?: pulumi.Input<boolean>;
+    eapFastAcceptClientCert?: pulumi.Input<boolean | undefined>;
     /**
      * Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      */
-    eapFastAllowMachineAuthentication?: pulumi.Input<boolean>;
+    eapFastAllowMachineAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP GTC
      */
-    eapFastEapGtc?: pulumi.Input<boolean>;
+    eapFastEapGtc?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      */
-    eapFastEapGtcPwdChange?: pulumi.Input<boolean>;
+    eapFastEapGtcPwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
      *   - Range: `0`-`3`
      */
-    eapFastEapGtcPwdChangeRetries?: pulumi.Input<number>;
+    eapFastEapGtcPwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    eapFastEapMsChapV2?: pulumi.Input<boolean>;
+    eapFastEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      */
-    eapFastEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    eapFastEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    eapFastEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    eapFastEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow EAP TLS
      */
-    eapFastEapTls?: pulumi.Input<boolean>;
+    eapFastEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      */
-    eapFastEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    eapFastEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Enable EAP chaining
      */
-    eapFastEnableEapChaining?: pulumi.Input<boolean>;
+    eapFastEnableEapChaining?: pulumi.Input<boolean | undefined>;
     /**
      * Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsAllowAnonymousProvisioning?: pulumi.Input<boolean>;
+    eapFastPacsAllowAnonymousProvisioning?: pulumi.Input<boolean | undefined>;
     /**
      * Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsAllowAuthenticatedProvisioning?: pulumi.Input<boolean>;
+    eapFastPacsAllowAuthenticatedProvisioning?: pulumi.Input<boolean | undefined>;
     /**
      * Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
-    eapFastPacsAllowClientCert?: pulumi.Input<boolean>;
+    eapFastPacsAllowClientCert?: pulumi.Input<boolean | undefined>;
     /**
      * Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsAllowMachineAuthentication?: pulumi.Input<boolean>;
+    eapFastPacsAllowMachineAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      */
-    eapFastPacsAuthorizationPacTtl?: pulumi.Input<number>;
+    eapFastPacsAuthorizationPacTtl?: pulumi.Input<number | undefined>;
     /**
      * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapFastPacsAuthorizationPacTtlUnit?: pulumi.Input<string>;
+    eapFastPacsAuthorizationPacTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      */
-    eapFastPacsMachinePacTtl?: pulumi.Input<number>;
+    eapFastPacsMachinePacTtl?: pulumi.Input<number | undefined>;
     /**
      * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapFastPacsMachinePacTtlUnit?: pulumi.Input<string>;
+    eapFastPacsMachinePacTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
-    eapFastPacsServerReturns?: pulumi.Input<boolean>;
+    eapFastPacsServerReturns?: pulumi.Input<boolean | undefined>;
     /**
      * Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsStatelessSessionResume?: pulumi.Input<boolean>;
+    eapFastPacsStatelessSessionResume?: pulumi.Input<boolean | undefined>;
     /**
      * PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsTunnelPacTtl?: pulumi.Input<number>;
+    eapFastPacsTunnelPacTtl?: pulumi.Input<number | undefined>;
     /**
      * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapFastPacsTunnelPacTtlUnit?: pulumi.Input<string>;
+    eapFastPacsTunnelPacTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
      *   - Range: `1`-`100`
      */
-    eapFastPacsUseProactivePacUpdatePercentage?: pulumi.Input<number>;
+    eapFastPacsUseProactivePacUpdatePercentage?: pulumi.Input<number | undefined>;
     /**
      * Use PACs
      */
-    eapFastUsePacs?: pulumi.Input<boolean>;
+    eapFastUsePacs?: pulumi.Input<boolean | undefined>;
     /**
      * Allow authentication of expired certificates
      */
-    eapTlsAllowAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    eapTlsAllowAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Enable stateless session resume
      */
-    eapTlsEnableStatelessSessionResume?: pulumi.Input<boolean>;
+    eapTlsEnableStatelessSessionResume?: pulumi.Input<boolean | undefined>;
     /**
      * EAP TLS L-Bit
      */
-    eapTlsLBit?: pulumi.Input<boolean>;
+    eapTlsLBit?: pulumi.Input<boolean | undefined>;
     /**
      * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Range: `1`-`100`
      */
-    eapTlsSessionTicketPercentage?: pulumi.Input<number>;
+    eapTlsSessionTicketPercentage?: pulumi.Input<number | undefined>;
     /**
      * Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      */
-    eapTlsSessionTicketTtl?: pulumi.Input<number>;
+    eapTlsSessionTicketTtl?: pulumi.Input<number | undefined>;
     /**
      * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapTlsSessionTicketTtlUnit?: pulumi.Input<string>;
+    eapTlsSessionTicketTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Allow CHAP
      */
-    eapTtlsChap?: pulumi.Input<boolean>;
+    eapTtlsChap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MD5
      */
-    eapTtlsEapMd5?: pulumi.Input<boolean>;
+    eapTtlsEapMd5?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    eapTtlsEapMsChapV2?: pulumi.Input<boolean>;
+    eapTtlsEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      */
-    eapTtlsEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    eapTtlsEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    eapTtlsEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    eapTtlsEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow MS CHAP v1
      */
-    eapTtlsMsChapV1?: pulumi.Input<boolean>;
+    eapTtlsMsChapV1?: pulumi.Input<boolean | undefined>;
     /**
      * Allow MS CHAP v2
      */
-    eapTtlsMsChapV2?: pulumi.Input<boolean>;
+    eapTtlsMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PAP ASCII
      */
-    eapTtlsPapAscii?: pulumi.Input<boolean>;
+    eapTtlsPapAscii?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the allowed protocols
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Allow PEAP EAP GTC
      */
-    peapAllowPeapEapGtc?: pulumi.Input<boolean>;
+    peapAllowPeapEapGtc?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      */
-    peapAllowPeapEapGtcPwdChange?: pulumi.Input<boolean>;
+    peapAllowPeapEapGtcPwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
      *   - Range: `0`-`3`
      */
-    peapAllowPeapEapGtcPwdChangeRetries?: pulumi.Input<number>;
+    peapAllowPeapEapGtcPwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2
      */
-    peapAllowPeapEapMsChapV2?: pulumi.Input<boolean>;
+    peapAllowPeapEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      */
-    peapAllowPeapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    peapAllowPeapEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    peapAllowPeapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    peapAllowPeapEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow PEAP EAP TLS
      */
-    peapAllowPeapEapTls?: pulumi.Input<boolean>;
+    peapAllowPeapEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      */
-    peapAllowPeapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    peapAllowPeapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP v0
      */
-    peapPeapV0?: pulumi.Input<boolean>;
+    peapPeapV0?: pulumi.Input<boolean | undefined>;
     /**
      * Preferred EAP protocol
      *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      */
-    preferredEapProtocol?: pulumi.Input<string>;
+    preferredEapProtocol?: pulumi.Input<string | undefined>;
     /**
      * Process host lookup
      */
-    processHostLookup?: pulumi.Input<boolean>;
+    processHostLookup?: pulumi.Input<boolean | undefined>;
     /**
      * Require cryptobinding
      */
-    requireCryptobinding?: pulumi.Input<boolean>;
+    requireCryptobinding?: pulumi.Input<boolean | undefined>;
     /**
      * Require message authentication
      */
-    requireMessageAuth?: pulumi.Input<boolean>;
+    requireMessageAuth?: pulumi.Input<boolean | undefined>;
     /**
      * Allow downgrade to MSK
      */
-    teapDowngradeMsk?: pulumi.Input<boolean>;
+    teapDowngradeMsk?: pulumi.Input<boolean | undefined>;
     /**
      * Accept client certificate during tunnel establishment
      */
-    teapEapAcceptClientCertDuringTunnelEst?: pulumi.Input<boolean>;
+    teapEapAcceptClientCertDuringTunnelEst?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP chaining
      */
-    teapEapChaining?: pulumi.Input<boolean>;
+    teapEapChaining?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    teapEapMsChapV2?: pulumi.Input<boolean>;
+    teapEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      */
-    teapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    teapEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    teapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    teapEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow EAP TLS
      */
-    teapEapTls?: pulumi.Input<boolean>;
+    teapEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      */
-    teapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    teapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Request basic password authentication
      */
-    teapRequestBasicPwdAuth?: pulumi.Input<boolean>;
+    teapRequestBasicPwdAuth?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -1007,7 +1007,7 @@ export interface AllowedProtocolsArgs {
     /**
      * Allow 5G. This field is only supported from ISE 3.2.
      */
-    allow5g?: pulumi.Input<boolean>;
+    allow5g?: pulumi.Input<boolean | undefined>;
     /**
      * Allow CHAP
      */
@@ -1063,121 +1063,121 @@ export interface AllowedProtocolsArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
-    eapFastAcceptClientCert?: pulumi.Input<boolean>;
+    eapFastAcceptClientCert?: pulumi.Input<boolean | undefined>;
     /**
      * Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
      */
-    eapFastAllowMachineAuthentication?: pulumi.Input<boolean>;
+    eapFastAllowMachineAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP GTC
      */
-    eapFastEapGtc?: pulumi.Input<boolean>;
+    eapFastEapGtc?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP GTC password change. Is required only if `eapFastEapGtc` is `true`.
      */
-    eapFastEapGtcPwdChange?: pulumi.Input<boolean>;
+    eapFastEapGtcPwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP GTC password change retries. Is required only if `eapFastEapGtc` is `true`.
      *   - Range: `0`-`3`
      */
-    eapFastEapGtcPwdChangeRetries?: pulumi.Input<number>;
+    eapFastEapGtcPwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    eapFastEapMsChapV2?: pulumi.Input<boolean>;
+    eapFastEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `eapFastEapMsChapV2` is `true`.
      */
-    eapFastEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    eapFastEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP MS CHAP v2 password change retries. Is required only if `eapFastEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    eapFastEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    eapFastEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow EAP TLS
      */
-    eapFastEapTls?: pulumi.Input<boolean>;
+    eapFastEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP TLS authentication of expired certificates. Is required only if `eapFastEapTls` is `true`.
      */
-    eapFastEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    eapFastEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Enable EAP chaining
      */
-    eapFastEnableEapChaining?: pulumi.Input<boolean>;
+    eapFastEnableEapChaining?: pulumi.Input<boolean | undefined>;
     /**
      * Allow anonymous provisioning. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsAllowAnonymousProvisioning?: pulumi.Input<boolean>;
+    eapFastPacsAllowAnonymousProvisioning?: pulumi.Input<boolean | undefined>;
     /**
      * Allow authenticated provisioning. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsAllowAuthenticatedProvisioning?: pulumi.Input<boolean>;
+    eapFastPacsAllowAuthenticatedProvisioning?: pulumi.Input<boolean | undefined>;
     /**
      * Accept client certification for provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
-    eapFastPacsAllowClientCert?: pulumi.Input<boolean>;
+    eapFastPacsAllowClientCert?: pulumi.Input<boolean | undefined>;
     /**
      * Allow machine authentication. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsAllowMachineAuthentication?: pulumi.Input<boolean>;
+    eapFastPacsAllowMachineAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * Authorization PAC TTL. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      */
-    eapFastPacsAuthorizationPacTtl?: pulumi.Input<number>;
+    eapFastPacsAuthorizationPacTtl?: pulumi.Input<number | undefined>;
     /**
      * Authorization PAC TTL unit. Is required only if `eapFastPacsStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapFastPacsAuthorizationPacTtlUnit?: pulumi.Input<string>;
+    eapFastPacsAuthorizationPacTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Machine PAC TTL. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      */
-    eapFastPacsMachinePacTtl?: pulumi.Input<number>;
+    eapFastPacsMachinePacTtl?: pulumi.Input<number | undefined>;
     /**
      * Machine PAC TTL unit. Is required only if `eapFastPacsAllowMachineAuthentication` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapFastPacsMachinePacTtlUnit?: pulumi.Input<string>;
+    eapFastPacsMachinePacTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Server returns access accept after authenticated provisioning. Is required only if `eapFastPacsAllowAuthenticatedProvisioning` is `true`.
      */
-    eapFastPacsServerReturns?: pulumi.Input<boolean>;
+    eapFastPacsServerReturns?: pulumi.Input<boolean | undefined>;
     /**
      * Stateless session resume. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsStatelessSessionResume?: pulumi.Input<boolean>;
+    eapFastPacsStatelessSessionResume?: pulumi.Input<boolean | undefined>;
     /**
      * PACs tunnel PAC time to live. Is required only if `eapFastUsePacs` is `true`.
      */
-    eapFastPacsTunnelPacTtl?: pulumi.Input<number>;
+    eapFastPacsTunnelPacTtl?: pulumi.Input<number | undefined>;
     /**
      * PACs tunnel PAC time to live unit. Is required only if `eapFastUsePacs` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapFastPacsTunnelPacTtlUnit?: pulumi.Input<string>;
+    eapFastPacsTunnelPacTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Use proactive pac update percentage. Is required only if `eapFastUsePacs` is `true`.
      *   - Range: `1`-`100`
      */
-    eapFastPacsUseProactivePacUpdatePercentage?: pulumi.Input<number>;
+    eapFastPacsUseProactivePacUpdatePercentage?: pulumi.Input<number | undefined>;
     /**
      * Use PACs
      */
-    eapFastUsePacs?: pulumi.Input<boolean>;
+    eapFastUsePacs?: pulumi.Input<boolean | undefined>;
     /**
      * Allow authentication of expired certificates
      */
-    eapTlsAllowAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    eapTlsAllowAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Enable stateless session resume
      */
-    eapTlsEnableStatelessSessionResume?: pulumi.Input<boolean>;
+    eapTlsEnableStatelessSessionResume?: pulumi.Input<boolean | undefined>;
     /**
      * EAP TLS L-Bit
      */
@@ -1186,96 +1186,96 @@ export interface AllowedProtocolsArgs {
      * Session ticket percentage. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Range: `1`-`100`
      */
-    eapTlsSessionTicketPercentage?: pulumi.Input<number>;
+    eapTlsSessionTicketPercentage?: pulumi.Input<number | undefined>;
     /**
      * Session ticket TTL. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      */
-    eapTlsSessionTicketTtl?: pulumi.Input<number>;
+    eapTlsSessionTicketTtl?: pulumi.Input<number | undefined>;
     /**
      * Session ticket TTL unit. Is required only if `eapTlsEnableStatelessSessionResume` is `true`.
      *   - Choices: `SECONDS`, `MINUTES`, `HOURS`, `DAYS`, `WEEKS`
      */
-    eapTlsSessionTicketTtlUnit?: pulumi.Input<string>;
+    eapTlsSessionTicketTtlUnit?: pulumi.Input<string | undefined>;
     /**
      * Allow CHAP
      */
-    eapTtlsChap?: pulumi.Input<boolean>;
+    eapTtlsChap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MD5
      */
-    eapTtlsEapMd5?: pulumi.Input<boolean>;
+    eapTtlsEapMd5?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    eapTtlsEapMsChapV2?: pulumi.Input<boolean>;
+    eapTtlsEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `eapTtlsEapMsChapV2` is `true`.
      */
-    eapTtlsEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    eapTtlsEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP MS CHAP v2 password change retries. Is required only if `eapTtlsEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    eapTtlsEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    eapTtlsEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow MS CHAP v1
      */
-    eapTtlsMsChapV1?: pulumi.Input<boolean>;
+    eapTtlsMsChapV1?: pulumi.Input<boolean | undefined>;
     /**
      * Allow MS CHAP v2
      */
-    eapTtlsMsChapV2?: pulumi.Input<boolean>;
+    eapTtlsMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PAP ASCII
      */
-    eapTtlsPapAscii?: pulumi.Input<boolean>;
+    eapTtlsPapAscii?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the allowed protocols
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Allow PEAP EAP GTC
      */
-    peapAllowPeapEapGtc?: pulumi.Input<boolean>;
+    peapAllowPeapEapGtc?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP GTC password change. Is required only if `allowPeapEapGtc` is `true`.
      */
-    peapAllowPeapEapGtcPwdChange?: pulumi.Input<boolean>;
+    peapAllowPeapEapGtcPwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * PEAP EAP GTC password change retries. Is required only if `allowPeapEapGtc` is `true`.
      *   - Range: `0`-`3`
      */
-    peapAllowPeapEapGtcPwdChangeRetries?: pulumi.Input<number>;
+    peapAllowPeapEapGtcPwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2
      */
-    peapAllowPeapEapMsChapV2?: pulumi.Input<boolean>;
+    peapAllowPeapEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2 password change. Is required only if `allowPeapEapMsChapV2` is `true`.
      */
-    peapAllowPeapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    peapAllowPeapEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP MS CHAP v2 password change retries. Is required only if `allowPeapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    peapAllowPeapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    peapAllowPeapEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow PEAP EAP TLS
      */
-    peapAllowPeapEapTls?: pulumi.Input<boolean>;
+    peapAllowPeapEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP EAP TLS authentication of expired certificates. Is required only if `peapAllowPeapEapTls` is `true`.
      */
-    peapAllowPeapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    peapAllowPeapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PEAP v0
      */
-    peapPeapV0?: pulumi.Input<boolean>;
+    peapPeapV0?: pulumi.Input<boolean | undefined>;
     /**
      * Preferred EAP protocol
      *   - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
      */
-    preferredEapProtocol?: pulumi.Input<string>;
+    preferredEapProtocol?: pulumi.Input<string | undefined>;
     /**
      * Process host lookup
      */
@@ -1283,7 +1283,7 @@ export interface AllowedProtocolsArgs {
     /**
      * Require cryptobinding
      */
-    requireCryptobinding?: pulumi.Input<boolean>;
+    requireCryptobinding?: pulumi.Input<boolean | undefined>;
     /**
      * Require message authentication
      */
@@ -1291,38 +1291,38 @@ export interface AllowedProtocolsArgs {
     /**
      * Allow downgrade to MSK
      */
-    teapDowngradeMsk?: pulumi.Input<boolean>;
+    teapDowngradeMsk?: pulumi.Input<boolean | undefined>;
     /**
      * Accept client certificate during tunnel establishment
      */
-    teapEapAcceptClientCertDuringTunnelEst?: pulumi.Input<boolean>;
+    teapEapAcceptClientCertDuringTunnelEst?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP chaining
      */
-    teapEapChaining?: pulumi.Input<boolean>;
+    teapEapChaining?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2
      */
-    teapEapMsChapV2?: pulumi.Input<boolean>;
+    teapEapMsChapV2?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP MS CHAP v2 password change. Is required only if `teapEapMsChapV2` is `true`.
      */
-    teapEapMsChapV2PwdChange?: pulumi.Input<boolean>;
+    teapEapMsChapV2PwdChange?: pulumi.Input<boolean | undefined>;
     /**
      * EAP MS CHAP v2 password change retries. Is required only if `teapEapMsChapV2` is `true`.
      *   - Range: `0`-`3`
      */
-    teapEapMsChapV2PwdChangeRetries?: pulumi.Input<number>;
+    teapEapMsChapV2PwdChangeRetries?: pulumi.Input<number | undefined>;
     /**
      * Allow EAP TLS
      */
-    teapEapTls?: pulumi.Input<boolean>;
+    teapEapTls?: pulumi.Input<boolean | undefined>;
     /**
      * Allow EAP TLS authentication of expired certs. Is required only if `teapEapTls` is `true`.
      */
-    teapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean>;
+    teapEapTlsAuthOfExpiredCerts?: pulumi.Input<boolean | undefined>;
     /**
      * Request basic password authentication
      */
-    teapRequestBasicPwdAuth?: pulumi.Input<boolean>;
+    teapRequestBasicPwdAuth?: pulumi.Input<boolean | undefined>;
 }

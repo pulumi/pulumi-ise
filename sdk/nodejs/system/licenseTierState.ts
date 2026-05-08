@@ -95,7 +95,7 @@ export interface LicenseTierStateState {
     /**
      * List of licenses
      */
-    licenses?: pulumi.Input<pulumi.Input<inputs.system.LicenseTierStateLicense>[]>;
+    licenses?: pulumi.Input<pulumi.Input<inputs.system.LicenseTierStateLicense>[] | undefined>;
 }
 
 /**

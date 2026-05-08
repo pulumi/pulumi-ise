@@ -60,8 +60,8 @@ class EndpointCustomAttributeArgs:
 @pulumi.input_type
 class _EndpointCustomAttributeState:
     def __init__(__self__, *,
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_type: Optional[pulumi.Input[_builtins.str]] = None):
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering EndpointCustomAttribute resources.
 
@@ -76,19 +76,19 @@ class _EndpointCustomAttributeState:
 
     @_builtins.property
     @pulumi.getter(name="attributeName")
-    def attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the attribute
         """
         return pulumi.get(self, "attribute_name")
 
     @attribute_name.setter
-    def attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="attributeType")
-    def attribute_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attribute_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute type
           - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
@@ -96,7 +96,7 @@ class _EndpointCustomAttributeState:
         return pulumi.get(self, "attribute_type")
 
     @attribute_type.setter
-    def attribute_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attribute_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attribute_type", value)
 
 
@@ -106,8 +106,8 @@ class EndpointCustomAttribute(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage an Endpoint Custom Attribute.
@@ -182,8 +182,8 @@ class EndpointCustomAttribute(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -209,8 +209,8 @@ class EndpointCustomAttribute(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-            attribute_type: Optional[pulumi.Input[_builtins.str]] = None) -> 'EndpointCustomAttribute':
+            attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            attribute_type: pulumi.Input[Optional[_builtins.str]] = None) -> 'EndpointCustomAttribute':
         """
         Get an existing EndpointCustomAttribute resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -138,9 +138,9 @@ export interface GetAuthorizationGlobalExceptionRuleOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

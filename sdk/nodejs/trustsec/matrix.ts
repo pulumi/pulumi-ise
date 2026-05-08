@@ -117,25 +117,25 @@ export interface MatrixState {
     /**
      * Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies
      */
-    copyPolicyFrom?: pulumi.Input<string>;
+    copyPolicyFrom?: pulumi.Input<string | undefined>;
     /**
      * DEFCON Level for the TrustSec Matrix
      *   - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`
      */
-    defconLevel?: pulumi.Input<string>;
+    defconLevel?: pulumi.Input<string | undefined>;
     /**
      * Description of the TrustSec Matrix
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Trustsec Matrix Policy Type
      *   - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`
      */
-    matrixPolicyType?: pulumi.Input<string>;
+    matrixPolicyType?: pulumi.Input<string | undefined>;
     /**
      * The name of the TrustSec Matrix policy. Must be unique across all matrices.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -145,23 +145,23 @@ export interface MatrixArgs {
     /**
      * Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies
      */
-    copyPolicyFrom?: pulumi.Input<string>;
+    copyPolicyFrom?: pulumi.Input<string | undefined>;
     /**
      * DEFCON Level for the TrustSec Matrix
      *   - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`
      */
-    defconLevel?: pulumi.Input<string>;
+    defconLevel?: pulumi.Input<string | undefined>;
     /**
      * Description of the TrustSec Matrix
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Trustsec Matrix Policy Type
      *   - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`
      */
-    matrixPolicyType?: pulumi.Input<string>;
+    matrixPolicyType?: pulumi.Input<string | undefined>;
     /**
      * The name of the TrustSec Matrix policy. Must be unique across all matrices.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

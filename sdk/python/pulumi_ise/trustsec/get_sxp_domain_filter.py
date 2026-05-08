@@ -154,8 +154,8 @@ def get_sxp_domain_filter(id: Optional[_builtins.str] = None,
         sgt=pulumi.get(__ret__, 'sgt'),
         subnet=pulumi.get(__ret__, 'subnet'),
         vn=pulumi.get(__ret__, 'vn'))
-def get_sxp_domain_filter_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                 name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_sxp_domain_filter_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                 name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSxpDomainFilterResult]:
     """
     This data source can read the SXP Domain Filter.

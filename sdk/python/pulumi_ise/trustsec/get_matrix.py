@@ -141,8 +141,8 @@ def get_matrix(id: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         matrix_policy_type=pulumi.get(__ret__, 'matrix_policy_type'),
         name=pulumi.get(__ret__, 'name'))
-def get_matrix_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_matrix_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                      name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetMatrixResult]:
     """
     This data source can read the TrustSec Matrix.

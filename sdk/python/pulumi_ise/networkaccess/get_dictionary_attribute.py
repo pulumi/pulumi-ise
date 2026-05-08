@@ -172,9 +172,9 @@ def get_dictionary_attribute(dictionary_name: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         internal_name=pulumi.get(__ret__, 'internal_name'),
         name=pulumi.get(__ret__, 'name'))
-def get_dictionary_attribute_output(dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                                    id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_dictionary_attribute_output(dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                                    id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                    name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDictionaryAttributeResult]:
     """
     This data source can read the Network Access Dictionary Attribute.

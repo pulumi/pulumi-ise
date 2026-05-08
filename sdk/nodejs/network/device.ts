@@ -433,206 +433,206 @@ export interface DeviceState {
     /**
      * Enforce use of DTLS
      */
-    authenticationDtlsRequired?: pulumi.Input<boolean>;
+    authenticationDtlsRequired?: pulumi.Input<boolean | undefined>;
     /**
      * Enable key wrap
      */
-    authenticationEnableKeyWrap?: pulumi.Input<boolean>;
+    authenticationEnableKeyWrap?: pulumi.Input<boolean | undefined>;
     /**
      * Enable multiple RADIUS shared secrets
      */
-    authenticationEnableMultiSecret?: pulumi.Input<boolean>;
+    authenticationEnableMultiSecret?: pulumi.Input<boolean | undefined>;
     /**
      * Encryption key
      */
-    authenticationEncryptionKey?: pulumi.Input<string>;
+    authenticationEncryptionKey?: pulumi.Input<string | undefined>;
     /**
      * Key input format
      *   - Choices: `ASCII`, `HEXADECIMAL`
      */
-    authenticationEncryptionKeyFormat?: pulumi.Input<string>;
+    authenticationEncryptionKeyFormat?: pulumi.Input<string | undefined>;
     /**
      * Message authenticator code key
      */
-    authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string>;
+    authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string | undefined>;
     /**
      * Network protocol
      *   - Choices: `RADIUS`, `TACACS_PLUS`
      */
-    authenticationNetworkProtocol?: pulumi.Input<string>;
+    authenticationNetworkProtocol?: pulumi.Input<string | undefined>;
     /**
      * RADIUS shared secret
      */
-    authenticationRadiusSharedSecret?: pulumi.Input<string>;
+    authenticationRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * Second RADIUS shared secret
      */
-    authenticationSecondRadiusSharedSecret?: pulumi.Input<string>;
+    authenticationSecondRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * CoA port
      *   - Default value: `1700`
      */
-    coaPort?: pulumi.Input<number>;
+    coaPort?: pulumi.Input<number | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
      */
-    dtlsDnsName?: pulumi.Input<string>;
+    dtlsDnsName?: pulumi.Input<string | undefined>;
     /**
      * List of IP subnets
      */
-    ips?: pulumi.Input<pulumi.Input<inputs.network.DeviceIp>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.network.DeviceIp>[] | undefined>;
     /**
      * Model name
      */
-    modelName?: pulumi.Input<string>;
+    modelName?: pulumi.Input<string | undefined>;
     /**
      * The name of the network device
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
      */
-    networkDeviceGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    networkDeviceGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Profile name
      *   - Default value: `Cisco`
      */
-    profileName?: pulumi.Input<string>;
+    profileName?: pulumi.Input<string | undefined>;
     /**
      * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
      */
-    snmpAuthPassword?: pulumi.Input<string>;
+    snmpAuthPassword?: pulumi.Input<string | undefined>;
     /**
      * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      *   - Choices: `MD5`, `SHA`, `SHA2`
      */
-    snmpAuthProtocol?: pulumi.Input<string>;
+    snmpAuthProtocol?: pulumi.Input<string | undefined>;
     /**
      * SNMP link Trap Query
      */
-    snmpLinkTrapQuery?: pulumi.Input<boolean>;
+    snmpLinkTrapQuery?: pulumi.Input<boolean | undefined>;
     /**
      * SNMP MAC Trap Query
      */
-    snmpMacTrapQuery?: pulumi.Input<boolean>;
+    snmpMacTrapQuery?: pulumi.Input<boolean | undefined>;
     /**
      * Originating Policy Services Node
      */
-    snmpOriginatingPolicyServiceNode?: pulumi.Input<string>;
+    snmpOriginatingPolicyServiceNode?: pulumi.Input<string | undefined>;
     /**
      * SNMP Polling Interval in seconds
      *   - Range: `600`-`86400`
      */
-    snmpPollingInterval?: pulumi.Input<number>;
+    snmpPollingInterval?: pulumi.Input<number | undefined>;
     /**
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
      */
-    snmpPrivacyPassword?: pulumi.Input<string>;
+    snmpPrivacyPassword?: pulumi.Input<string | undefined>;
     /**
      * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
      */
-    snmpPrivacyProtocol?: pulumi.Input<string>;
+    snmpPrivacyProtocol?: pulumi.Input<string | undefined>;
     /**
      * SNMP RO Community
      */
-    snmpRoCommunity?: pulumi.Input<string>;
+    snmpRoCommunity?: pulumi.Input<string | undefined>;
     /**
      * SNMP security level. Required for snmp version 3.
      *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
      */
-    snmpSecurityLevel?: pulumi.Input<string>;
+    snmpSecurityLevel?: pulumi.Input<string | undefined>;
     /**
      * SNMP username. Required for snmp version 3.
      */
-    snmpUsername?: pulumi.Input<string>;
+    snmpUsername?: pulumi.Input<string | undefined>;
     /**
      * SNMP version
      *   - Choices: `ONE`, `TWO_C`, `THREE`
      */
-    snmpVersion?: pulumi.Input<string>;
+    snmpVersion?: pulumi.Input<string | undefined>;
     /**
      * Software version
      */
-    softwareVersion?: pulumi.Input<string>;
+    softwareVersion?: pulumi.Input<string | undefined>;
     /**
      * Connect mode options
      *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      */
-    tacacsConnectModeOptions?: pulumi.Input<string>;
+    tacacsConnectModeOptions?: pulumi.Input<string | undefined>;
     /**
      * Shared secret
      */
-    tacacsSharedSecret?: pulumi.Input<string>;
+    tacacsSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * CoA source host
      */
-    trustsecCoaSourceHost?: pulumi.Input<string>;
+    trustsecCoaSourceHost?: pulumi.Input<string | undefined>;
     /**
      * TrustSec device ID
      */
-    trustsecDeviceId?: pulumi.Input<string>;
+    trustsecDeviceId?: pulumi.Input<string | undefined>;
     /**
      * TrustSec device password
      */
-    trustsecDevicePassword?: pulumi.Input<string>;
+    trustsecDevicePassword?: pulumi.Input<string | undefined>;
     /**
      * Download environment data every X seconds
      */
-    trustsecDownloadEnvironmentDataEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadEnvironmentDataEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Download peer authorization policy every X seconds
      */
-    trustsecDownloadPeerAuthorizationPolicyEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadPeerAuthorizationPolicyEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Download SGACL lists every X seconds
      */
-    trustsecDownloadSgaclListsEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadSgaclListsEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Enable mode password
      */
-    trustsecEnableModePassword?: pulumi.Input<string>;
+    trustsecEnableModePassword?: pulumi.Input<string | undefined>;
     /**
      * EXEC mode password
      */
-    trustsecExecModePassword?: pulumi.Input<string>;
+    trustsecExecModePassword?: pulumi.Input<string | undefined>;
     /**
      * EXEC mode username
      */
-    trustsecExecModeUsername?: pulumi.Input<string>;
+    trustsecExecModeUsername?: pulumi.Input<string | undefined>;
     /**
      * Include this device when deploying Security Group Tag Mapping Updates
      */
-    trustsecIncludeWhenDeployingSgtUpdates?: pulumi.Input<boolean>;
+    trustsecIncludeWhenDeployingSgtUpdates?: pulumi.Input<boolean | undefined>;
     /**
      * Other TrustSec devices to trust this device
      */
-    trustsecOtherSgaDevicesToTrustThisDevice?: pulumi.Input<boolean>;
+    trustsecOtherSgaDevicesToTrustThisDevice?: pulumi.Input<boolean | undefined>;
     /**
      * Re-authenticate every X seconds
      */
-    trustsecReAuthenticationEveryXSeconds?: pulumi.Input<number>;
+    trustsecReAuthenticationEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * REST API password
      */
-    trustsecRestApiPassword?: pulumi.Input<string>;
+    trustsecRestApiPassword?: pulumi.Input<string | undefined>;
     /**
      * REST API username
      */
-    trustsecRestApiUsername?: pulumi.Input<string>;
+    trustsecRestApiUsername?: pulumi.Input<string | undefined>;
     /**
      * Send configuration to device
      */
-    trustsecSendConfigurationToDevice?: pulumi.Input<boolean>;
+    trustsecSendConfigurationToDevice?: pulumi.Input<boolean | undefined>;
     /**
      * Send configuration to device using
      *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      */
-    trustsecSendConfigurationToDeviceUsing?: pulumi.Input<string>;
+    trustsecSendConfigurationToDeviceUsing?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -642,54 +642,54 @@ export interface DeviceArgs {
     /**
      * Enforce use of DTLS
      */
-    authenticationDtlsRequired?: pulumi.Input<boolean>;
+    authenticationDtlsRequired?: pulumi.Input<boolean | undefined>;
     /**
      * Enable key wrap
      */
-    authenticationEnableKeyWrap?: pulumi.Input<boolean>;
+    authenticationEnableKeyWrap?: pulumi.Input<boolean | undefined>;
     /**
      * Enable multiple RADIUS shared secrets
      */
-    authenticationEnableMultiSecret?: pulumi.Input<boolean>;
+    authenticationEnableMultiSecret?: pulumi.Input<boolean | undefined>;
     /**
      * Encryption key
      */
-    authenticationEncryptionKey?: pulumi.Input<string>;
+    authenticationEncryptionKey?: pulumi.Input<string | undefined>;
     /**
      * Key input format
      *   - Choices: `ASCII`, `HEXADECIMAL`
      */
-    authenticationEncryptionKeyFormat?: pulumi.Input<string>;
+    authenticationEncryptionKeyFormat?: pulumi.Input<string | undefined>;
     /**
      * Message authenticator code key
      */
-    authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string>;
+    authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string | undefined>;
     /**
      * Network protocol
      *   - Choices: `RADIUS`, `TACACS_PLUS`
      */
-    authenticationNetworkProtocol?: pulumi.Input<string>;
+    authenticationNetworkProtocol?: pulumi.Input<string | undefined>;
     /**
      * RADIUS shared secret
      */
-    authenticationRadiusSharedSecret?: pulumi.Input<string>;
+    authenticationRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * Second RADIUS shared secret
      */
-    authenticationSecondRadiusSharedSecret?: pulumi.Input<string>;
+    authenticationSecondRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * CoA port
      *   - Default value: `1700`
      */
-    coaPort?: pulumi.Input<number>;
+    coaPort?: pulumi.Input<number | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
      */
-    dtlsDnsName?: pulumi.Input<string>;
+    dtlsDnsName?: pulumi.Input<string | undefined>;
     /**
      * List of IP subnets
      */
@@ -697,149 +697,149 @@ export interface DeviceArgs {
     /**
      * Model name
      */
-    modelName?: pulumi.Input<string>;
+    modelName?: pulumi.Input<string | undefined>;
     /**
      * The name of the network device
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
      */
-    networkDeviceGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    networkDeviceGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Profile name
      *   - Default value: `Cisco`
      */
-    profileName?: pulumi.Input<string>;
+    profileName?: pulumi.Input<string | undefined>;
     /**
      * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
      */
-    snmpAuthPassword?: pulumi.Input<string>;
+    snmpAuthPassword?: pulumi.Input<string | undefined>;
     /**
      * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      *   - Choices: `MD5`, `SHA`, `SHA2`
      */
-    snmpAuthProtocol?: pulumi.Input<string>;
+    snmpAuthProtocol?: pulumi.Input<string | undefined>;
     /**
      * SNMP link Trap Query
      */
-    snmpLinkTrapQuery?: pulumi.Input<boolean>;
+    snmpLinkTrapQuery?: pulumi.Input<boolean | undefined>;
     /**
      * SNMP MAC Trap Query
      */
-    snmpMacTrapQuery?: pulumi.Input<boolean>;
+    snmpMacTrapQuery?: pulumi.Input<boolean | undefined>;
     /**
      * Originating Policy Services Node
      */
-    snmpOriginatingPolicyServiceNode?: pulumi.Input<string>;
+    snmpOriginatingPolicyServiceNode?: pulumi.Input<string | undefined>;
     /**
      * SNMP Polling Interval in seconds
      *   - Range: `600`-`86400`
      */
-    snmpPollingInterval?: pulumi.Input<number>;
+    snmpPollingInterval?: pulumi.Input<number | undefined>;
     /**
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
      */
-    snmpPrivacyPassword?: pulumi.Input<string>;
+    snmpPrivacyPassword?: pulumi.Input<string | undefined>;
     /**
      * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
      */
-    snmpPrivacyProtocol?: pulumi.Input<string>;
+    snmpPrivacyProtocol?: pulumi.Input<string | undefined>;
     /**
      * SNMP RO Community
      */
-    snmpRoCommunity?: pulumi.Input<string>;
+    snmpRoCommunity?: pulumi.Input<string | undefined>;
     /**
      * SNMP security level. Required for snmp version 3.
      *   - Choices: `NO_AUTH`, `AUTH`, `PRIV`
      */
-    snmpSecurityLevel?: pulumi.Input<string>;
+    snmpSecurityLevel?: pulumi.Input<string | undefined>;
     /**
      * SNMP username. Required for snmp version 3.
      */
-    snmpUsername?: pulumi.Input<string>;
+    snmpUsername?: pulumi.Input<string | undefined>;
     /**
      * SNMP version
      *   - Choices: `ONE`, `TWO_C`, `THREE`
      */
-    snmpVersion?: pulumi.Input<string>;
+    snmpVersion?: pulumi.Input<string | undefined>;
     /**
      * Software version
      */
-    softwareVersion?: pulumi.Input<string>;
+    softwareVersion?: pulumi.Input<string | undefined>;
     /**
      * Connect mode options
      *   - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
      */
-    tacacsConnectModeOptions?: pulumi.Input<string>;
+    tacacsConnectModeOptions?: pulumi.Input<string | undefined>;
     /**
      * Shared secret
      */
-    tacacsSharedSecret?: pulumi.Input<string>;
+    tacacsSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * CoA source host
      */
-    trustsecCoaSourceHost?: pulumi.Input<string>;
+    trustsecCoaSourceHost?: pulumi.Input<string | undefined>;
     /**
      * TrustSec device ID
      */
-    trustsecDeviceId?: pulumi.Input<string>;
+    trustsecDeviceId?: pulumi.Input<string | undefined>;
     /**
      * TrustSec device password
      */
-    trustsecDevicePassword?: pulumi.Input<string>;
+    trustsecDevicePassword?: pulumi.Input<string | undefined>;
     /**
      * Download environment data every X seconds
      */
-    trustsecDownloadEnvironmentDataEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadEnvironmentDataEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Download peer authorization policy every X seconds
      */
-    trustsecDownloadPeerAuthorizationPolicyEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadPeerAuthorizationPolicyEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Download SGACL lists every X seconds
      */
-    trustsecDownloadSgaclListsEveryXSeconds?: pulumi.Input<number>;
+    trustsecDownloadSgaclListsEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Enable mode password
      */
-    trustsecEnableModePassword?: pulumi.Input<string>;
+    trustsecEnableModePassword?: pulumi.Input<string | undefined>;
     /**
      * EXEC mode password
      */
-    trustsecExecModePassword?: pulumi.Input<string>;
+    trustsecExecModePassword?: pulumi.Input<string | undefined>;
     /**
      * EXEC mode username
      */
-    trustsecExecModeUsername?: pulumi.Input<string>;
+    trustsecExecModeUsername?: pulumi.Input<string | undefined>;
     /**
      * Include this device when deploying Security Group Tag Mapping Updates
      */
-    trustsecIncludeWhenDeployingSgtUpdates?: pulumi.Input<boolean>;
+    trustsecIncludeWhenDeployingSgtUpdates?: pulumi.Input<boolean | undefined>;
     /**
      * Other TrustSec devices to trust this device
      */
-    trustsecOtherSgaDevicesToTrustThisDevice?: pulumi.Input<boolean>;
+    trustsecOtherSgaDevicesToTrustThisDevice?: pulumi.Input<boolean | undefined>;
     /**
      * Re-authenticate every X seconds
      */
-    trustsecReAuthenticationEveryXSeconds?: pulumi.Input<number>;
+    trustsecReAuthenticationEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * REST API password
      */
-    trustsecRestApiPassword?: pulumi.Input<string>;
+    trustsecRestApiPassword?: pulumi.Input<string | undefined>;
     /**
      * REST API username
      */
-    trustsecRestApiUsername?: pulumi.Input<string>;
+    trustsecRestApiUsername?: pulumi.Input<string | undefined>;
     /**
      * Send configuration to device
      */
-    trustsecSendConfigurationToDevice?: pulumi.Input<boolean>;
+    trustsecSendConfigurationToDevice?: pulumi.Input<boolean | undefined>;
     /**
      * Send configuration to device using
      *   - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
      */
-    trustsecSendConfigurationToDeviceUsing?: pulumi.Input<string>;
+    trustsecSendConfigurationToDeviceUsing?: pulumi.Input<string | undefined>;
 }

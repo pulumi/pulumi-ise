@@ -19,19 +19,19 @@ __all__ = ['TimeAndDateConditionArgs', 'TimeAndDateCondition']
 @pulumi.input_type
 class TimeAndDateConditionArgs:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 week_days: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 week_days: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 week_days_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TimeAndDateCondition resource.
 
@@ -78,177 +78,177 @@ class TimeAndDateConditionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="endDate")
-    def end_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         End date
         """
         return pulumi.get(self, "end_date")
 
     @end_date.setter
-    def end_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end_date", value)
 
     @_builtins.property
     @pulumi.getter(name="endTime")
-    def end_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         End time
         """
         return pulumi.get(self, "end_time")
 
     @end_time.setter
-    def end_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end_time", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionEndDate")
-    def exception_end_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_end_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception end date
         """
         return pulumi.get(self, "exception_end_date")
 
     @exception_end_date.setter
-    def exception_end_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_end_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_end_date", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionEndTime")
-    def exception_end_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_end_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception end time
         """
         return pulumi.get(self, "exception_end_time")
 
     @exception_end_time.setter
-    def exception_end_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_end_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_end_time", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionStartDate")
-    def exception_start_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_start_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception start date
         """
         return pulumi.get(self, "exception_start_date")
 
     @exception_start_date.setter
-    def exception_start_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_start_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_start_date", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionStartTime")
-    def exception_start_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_start_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception start time
         """
         return pulumi.get(self, "exception_start_time")
 
     @exception_start_time.setter
-    def exception_start_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_start_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_start_time", value)
 
     @_builtins.property
     @pulumi.getter(name="isNegate")
-    def is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "is_negate")
 
     @is_negate.setter
-    def is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_negate", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="startDate")
-    def start_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Start date
         """
         return pulumi.get(self, "start_date")
 
     @start_date.setter
-    def start_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start_date", value)
 
     @_builtins.property
     @pulumi.getter(name="startTime")
-    def start_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Start time
         """
         return pulumi.get(self, "start_time")
 
     @start_time.setter
-    def start_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start_time", value)
 
     @_builtins.property
     @pulumi.getter(name="weekDays")
-    def week_days(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def week_days(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Defines for which days this condition will be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. Default - List of all week days.
         """
         return pulumi.get(self, "week_days")
 
     @week_days.setter
-    def week_days(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def week_days(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "week_days", value)
 
     @_builtins.property
     @pulumi.getter(name="weekDaysExceptions")
-    def week_days_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def week_days_exceptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Defines for which days this condition will NOT be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
         """
         return pulumi.get(self, "week_days_exceptions")
 
     @week_days_exceptions.setter
-    def week_days_exceptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def week_days_exceptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "week_days_exceptions", value)
 
 
 @pulumi.input_type
 class _TimeAndDateConditionState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 week_days: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 week_days: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 week_days_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering TimeAndDateCondition resources.
 
@@ -295,158 +295,158 @@ class _TimeAndDateConditionState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="endDate")
-    def end_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         End date
         """
         return pulumi.get(self, "end_date")
 
     @end_date.setter
-    def end_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end_date", value)
 
     @_builtins.property
     @pulumi.getter(name="endTime")
-    def end_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         End time
         """
         return pulumi.get(self, "end_time")
 
     @end_time.setter
-    def end_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end_time", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionEndDate")
-    def exception_end_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_end_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception end date
         """
         return pulumi.get(self, "exception_end_date")
 
     @exception_end_date.setter
-    def exception_end_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_end_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_end_date", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionEndTime")
-    def exception_end_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_end_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception end time
         """
         return pulumi.get(self, "exception_end_time")
 
     @exception_end_time.setter
-    def exception_end_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_end_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_end_time", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionStartDate")
-    def exception_start_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_start_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception start date
         """
         return pulumi.get(self, "exception_start_date")
 
     @exception_start_date.setter
-    def exception_start_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_start_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_start_date", value)
 
     @_builtins.property
     @pulumi.getter(name="exceptionStartTime")
-    def exception_start_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exception_start_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exception start time
         """
         return pulumi.get(self, "exception_start_time")
 
     @exception_start_time.setter
-    def exception_start_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exception_start_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exception_start_time", value)
 
     @_builtins.property
     @pulumi.getter(name="isNegate")
-    def is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "is_negate")
 
     @is_negate.setter
-    def is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_negate", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="startDate")
-    def start_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Start date
         """
         return pulumi.get(self, "start_date")
 
     @start_date.setter
-    def start_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start_date", value)
 
     @_builtins.property
     @pulumi.getter(name="startTime")
-    def start_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Start time
         """
         return pulumi.get(self, "start_time")
 
     @start_time.setter
-    def start_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start_time", value)
 
     @_builtins.property
     @pulumi.getter(name="weekDays")
-    def week_days(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def week_days(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Defines for which days this condition will be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. Default - List of all week days.
         """
         return pulumi.get(self, "week_days")
 
     @week_days.setter
-    def week_days(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def week_days(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "week_days", value)
 
     @_builtins.property
     @pulumi.getter(name="weekDaysExceptions")
-    def week_days_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def week_days_exceptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Defines for which days this condition will NOT be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
         """
         return pulumi.get(self, "week_days_exceptions")
 
     @week_days_exceptions.setter
-    def week_days_exceptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def week_days_exceptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "week_days_exceptions", value)
 
 
@@ -456,19 +456,19 @@ class TimeAndDateCondition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 week_days: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 week_days: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 week_days_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         This resource can manage a Network Access Time And Date Condition.
@@ -575,19 +575,19 @@ class TimeAndDateCondition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_end_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 exception_start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 start_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 week_days: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_end_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 exception_start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 start_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 week_days: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 week_days_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -620,19 +620,19 @@ class TimeAndDateCondition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            end_date: Optional[pulumi.Input[_builtins.str]] = None,
-            end_time: Optional[pulumi.Input[_builtins.str]] = None,
-            exception_end_date: Optional[pulumi.Input[_builtins.str]] = None,
-            exception_end_time: Optional[pulumi.Input[_builtins.str]] = None,
-            exception_start_date: Optional[pulumi.Input[_builtins.str]] = None,
-            exception_start_time: Optional[pulumi.Input[_builtins.str]] = None,
-            is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            start_date: Optional[pulumi.Input[_builtins.str]] = None,
-            start_time: Optional[pulumi.Input[_builtins.str]] = None,
-            week_days: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            week_days_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'TimeAndDateCondition':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            end_date: pulumi.Input[Optional[_builtins.str]] = None,
+            end_time: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_end_date: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_end_time: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_start_date: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_start_time: pulumi.Input[Optional[_builtins.str]] = None,
+            is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            start_date: pulumi.Input[Optional[_builtins.str]] = None,
+            start_time: pulumi.Input[Optional[_builtins.str]] = None,
+            week_days: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            week_days_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'TimeAndDateCondition':
         """
         Get an existing TimeAndDateCondition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -21,7 +21,7 @@ __all__ = ['PolicySetUpdateRanksArgs', 'PolicySetUpdateRanks']
 @pulumi.input_type
 class PolicySetUpdateRanksArgs:
     def __init__(__self__, *,
-                 policies: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]] = None):
+                 policies: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]] = None):
         """
         The set of arguments for constructing a PolicySetUpdateRanks resource.
         """
@@ -30,18 +30,18 @@ class PolicySetUpdateRanksArgs:
 
     @_builtins.property
     @pulumi.getter
-    def policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]:
+    def policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]:
         return pulumi.get(self, "policies")
 
     @policies.setter
-    def policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]):
+    def policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]):
         pulumi.set(self, "policies", value)
 
 
 @pulumi.input_type
 class _PolicySetUpdateRanksState:
     def __init__(__self__, *,
-                 policies: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]] = None):
+                 policies: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]] = None):
         """
         Input properties used for looking up and filtering PolicySetUpdateRanks resources.
         """
@@ -50,11 +50,11 @@ class _PolicySetUpdateRanksState:
 
     @_builtins.property
     @pulumi.getter
-    def policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]:
+    def policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]:
         return pulumi.get(self, "policies")
 
     @policies.setter
-    def policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]):
+    def policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetUpdateRanksPolicyArgs']]]]):
         pulumi.set(self, "policies", value)
 
 
@@ -64,7 +64,7 @@ class PolicySetUpdateRanks(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict']]]]] = None,
+                 policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource is used to bulk update rank field in device admin policy set. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_policy_set resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
@@ -122,7 +122,7 @@ class PolicySetUpdateRanks(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict']]]]] = None,
+                 policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -143,7 +143,7 @@ class PolicySetUpdateRanks(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict']]]]] = None) -> 'PolicySetUpdateRanks':
+            policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict']]]]] = None) -> 'PolicySetUpdateRanks':
         """
         Get an existing PolicySetUpdateRanks resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

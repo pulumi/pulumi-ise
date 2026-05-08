@@ -173,55 +173,55 @@ export interface TimeAndDateConditionState {
     /**
      * Condition description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * End date
      */
-    endDate?: pulumi.Input<string>;
+    endDate?: pulumi.Input<string | undefined>;
     /**
      * End time
      */
-    endTime?: pulumi.Input<string>;
+    endTime?: pulumi.Input<string | undefined>;
     /**
      * Exception end date
      */
-    exceptionEndDate?: pulumi.Input<string>;
+    exceptionEndDate?: pulumi.Input<string | undefined>;
     /**
      * Exception end time
      */
-    exceptionEndTime?: pulumi.Input<string>;
+    exceptionEndTime?: pulumi.Input<string | undefined>;
     /**
      * Exception start date
      */
-    exceptionStartDate?: pulumi.Input<string>;
+    exceptionStartDate?: pulumi.Input<string | undefined>;
     /**
      * Exception start time
      */
-    exceptionStartTime?: pulumi.Input<string>;
+    exceptionStartTime?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    isNegate?: pulumi.Input<boolean>;
+    isNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Condition name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Start date
      */
-    startDate?: pulumi.Input<string>;
+    startDate?: pulumi.Input<string | undefined>;
     /**
      * Start time
      */
-    startTime?: pulumi.Input<string>;
+    startTime?: pulumi.Input<string | undefined>;
     /**
      * Defines for which days this condition will be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. Default - List of all week days.
      */
-    weekDays?: pulumi.Input<pulumi.Input<string>[]>;
+    weekDays?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Defines for which days this condition will NOT be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
-    weekDaysExceptions?: pulumi.Input<pulumi.Input<string>[]>;
+    weekDaysExceptions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -231,53 +231,53 @@ export interface TimeAndDateConditionArgs {
     /**
      * Condition description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * End date
      */
-    endDate?: pulumi.Input<string>;
+    endDate?: pulumi.Input<string | undefined>;
     /**
      * End time
      */
-    endTime?: pulumi.Input<string>;
+    endTime?: pulumi.Input<string | undefined>;
     /**
      * Exception end date
      */
-    exceptionEndDate?: pulumi.Input<string>;
+    exceptionEndDate?: pulumi.Input<string | undefined>;
     /**
      * Exception end time
      */
-    exceptionEndTime?: pulumi.Input<string>;
+    exceptionEndTime?: pulumi.Input<string | undefined>;
     /**
      * Exception start date
      */
-    exceptionStartDate?: pulumi.Input<string>;
+    exceptionStartDate?: pulumi.Input<string | undefined>;
     /**
      * Exception start time
      */
-    exceptionStartTime?: pulumi.Input<string>;
+    exceptionStartTime?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    isNegate?: pulumi.Input<boolean>;
+    isNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Condition name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Start date
      */
-    startDate?: pulumi.Input<string>;
+    startDate?: pulumi.Input<string | undefined>;
     /**
      * Start time
      */
-    startTime?: pulumi.Input<string>;
+    startTime?: pulumi.Input<string | undefined>;
     /**
      * Defines for which days this condition will be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. Default - List of all week days.
      */
-    weekDays?: pulumi.Input<pulumi.Input<string>[]>;
+    weekDays?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Defines for which days this condition will NOT be matched. List of weekdays - `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
-    weekDaysExceptions?: pulumi.Input<pulumi.Input<string>[]>;
+    weekDaysExceptions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

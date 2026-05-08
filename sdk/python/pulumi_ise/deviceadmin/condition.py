@@ -22,15 +22,15 @@ __all__ = ['ConditionArgs', 'Condition']
 class ConditionArgs:
     def __init__(__self__, *,
                  condition_type: pulumi.Input[_builtins.str],
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input[_builtins.str]] = None):
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Condition resource.
 
@@ -82,103 +82,103 @@ class ConditionArgs:
 
     @_builtins.property
     @pulumi.getter(name="attributeName")
-    def attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary attribute name
         """
         return pulumi.get(self, "attribute_name")
 
     @attribute_name.setter
-    def attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="attributeValue")
-    def attribute_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attribute_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute value for condition. Value type is specified in dictionary object.
         """
         return pulumi.get(self, "attribute_value")
 
     @attribute_value.setter
-    def attribute_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attribute_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attribute_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]]]:
+    def childrens(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenArgs']]]]:
         """
         List of child conditions
         """
         return pulumi.get(self, "childrens")
 
     @childrens.setter
-    def childrens(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]]]):
+    def childrens(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenArgs']]]]):
         pulumi.set(self, "childrens", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dictionaryName")
-    def dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary name
         """
         return pulumi.get(self, "dictionary_name")
 
     @dictionary_name.setter
-    def dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="dictionaryValue")
-    def dictionary_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dictionary_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary value
         """
         return pulumi.get(self, "dictionary_value")
 
     @dictionary_value.setter
-    def dictionary_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dictionary_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dictionary_value", value)
 
     @_builtins.property
     @pulumi.getter(name="isNegate")
-    def is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "is_negate")
 
     @is_negate.setter
-    def is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_negate", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def operator(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def operator(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Equality operator
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
@@ -186,23 +186,23 @@ class ConditionArgs:
         return pulumi.get(self, "operator")
 
     @operator.setter
-    def operator(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def operator(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "operator", value)
 
 
 @pulumi.input_type
 class _ConditionState:
     def __init__(__self__, *,
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input[_builtins.str]] = None):
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenArgs']]]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Condition resources.
 
@@ -242,43 +242,43 @@ class _ConditionState:
 
     @_builtins.property
     @pulumi.getter(name="attributeName")
-    def attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary attribute name
         """
         return pulumi.get(self, "attribute_name")
 
     @attribute_name.setter
-    def attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="attributeValue")
-    def attribute_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attribute_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute value for condition. Value type is specified in dictionary object.
         """
         return pulumi.get(self, "attribute_value")
 
     @attribute_value.setter
-    def attribute_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attribute_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attribute_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]]]:
+    def childrens(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenArgs']]]]:
         """
         List of child conditions
         """
         return pulumi.get(self, "childrens")
 
     @childrens.setter
-    def childrens(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConditionChildrenArgs']]]]):
+    def childrens(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenArgs']]]]):
         pulumi.set(self, "childrens", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionType")
-    def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
           - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
@@ -286,72 +286,72 @@ class _ConditionState:
         return pulumi.get(self, "condition_type")
 
     @condition_type.setter
-    def condition_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dictionaryName")
-    def dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary name
         """
         return pulumi.get(self, "dictionary_name")
 
     @dictionary_name.setter
-    def dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="dictionaryValue")
-    def dictionary_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dictionary_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary value
         """
         return pulumi.get(self, "dictionary_value")
 
     @dictionary_value.setter
-    def dictionary_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dictionary_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dictionary_value", value)
 
     @_builtins.property
     @pulumi.getter(name="isNegate")
-    def is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "is_negate")
 
     @is_negate.setter
-    def is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_negate", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Condition name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def operator(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def operator(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Equality operator
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
@@ -359,7 +359,7 @@ class _ConditionState:
         return pulumi.get(self, "operator")
 
     @operator.setter
-    def operator(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def operator(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "operator", value)
 
 
@@ -369,16 +369,16 @@ class Condition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input[_builtins.str]] = None,
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Device Admin Condition.
@@ -474,16 +474,16 @@ class Condition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input[_builtins.str]] = None,
+                 attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -515,16 +515,16 @@ class Condition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-            attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
-            condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-            dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-            is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            operator: Optional[pulumi.Input[_builtins.str]] = None) -> 'Condition':
+            attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
+            condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+            is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            operator: pulumi.Input[Optional[_builtins.str]] = None) -> 'Condition':
         """
         Get an existing Condition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

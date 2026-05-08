@@ -19,9 +19,9 @@ __all__ = ['WorkProcessSettingsArgs', 'WorkProcessSettings']
 @pulumi.input_type
 class WorkProcessSettingsArgs:
     def __init__(__self__, *,
-                 enable_approval_workflow: Optional[pulumi.Input[_builtins.bool]] = None,
-                 matrix_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_defcons: Optional[pulumi.Input[_builtins.bool]] = None):
+                 enable_approval_workflow: pulumi.Input[Optional[_builtins.bool]] = None,
+                 matrix_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_defcons: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a WorkProcessSettings resource.
 
@@ -40,7 +40,7 @@ class WorkProcessSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="enableApprovalWorkflow")
-    def enable_approval_workflow(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_approval_workflow(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether to enable approval workflow for TrustSec Matrix changes
           - Default value: `false`
@@ -48,12 +48,12 @@ class WorkProcessSettingsArgs:
         return pulumi.get(self, "enable_approval_workflow")
 
     @enable_approval_workflow.setter
-    def enable_approval_workflow(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_approval_workflow(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_approval_workflow", value)
 
     @_builtins.property
     @pulumi.getter(name="matrixMode")
-    def matrix_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def matrix_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec Matrix Mode
           - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`
@@ -61,28 +61,28 @@ class WorkProcessSettingsArgs:
         return pulumi.get(self, "matrix_mode")
 
     @matrix_mode.setter
-    def matrix_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def matrix_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "matrix_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="useDefcons")
-    def use_defcons(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_defcons(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether to use DEFCON levels in the TrustSec Matrix
         """
         return pulumi.get(self, "use_defcons")
 
     @use_defcons.setter
-    def use_defcons(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_defcons(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_defcons", value)
 
 
 @pulumi.input_type
 class _WorkProcessSettingsState:
     def __init__(__self__, *,
-                 enable_approval_workflow: Optional[pulumi.Input[_builtins.bool]] = None,
-                 matrix_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_defcons: Optional[pulumi.Input[_builtins.bool]] = None):
+                 enable_approval_workflow: pulumi.Input[Optional[_builtins.bool]] = None,
+                 matrix_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_defcons: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering WorkProcessSettings resources.
 
@@ -101,7 +101,7 @@ class _WorkProcessSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="enableApprovalWorkflow")
-    def enable_approval_workflow(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_approval_workflow(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether to enable approval workflow for TrustSec Matrix changes
           - Default value: `false`
@@ -109,12 +109,12 @@ class _WorkProcessSettingsState:
         return pulumi.get(self, "enable_approval_workflow")
 
     @enable_approval_workflow.setter
-    def enable_approval_workflow(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_approval_workflow(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_approval_workflow", value)
 
     @_builtins.property
     @pulumi.getter(name="matrixMode")
-    def matrix_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def matrix_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec Matrix Mode
           - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`
@@ -122,19 +122,19 @@ class _WorkProcessSettingsState:
         return pulumi.get(self, "matrix_mode")
 
     @matrix_mode.setter
-    def matrix_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def matrix_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "matrix_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="useDefcons")
-    def use_defcons(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_defcons(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether to use DEFCON levels in the TrustSec Matrix
         """
         return pulumi.get(self, "use_defcons")
 
     @use_defcons.setter
-    def use_defcons(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_defcons(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_defcons", value)
 
 
@@ -144,9 +144,9 @@ class WorkProcessSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enable_approval_workflow: Optional[pulumi.Input[_builtins.bool]] = None,
-                 matrix_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_defcons: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_approval_workflow: pulumi.Input[Optional[_builtins.bool]] = None,
+                 matrix_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_defcons: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage a TrustSec Work Process Settings.
@@ -225,9 +225,9 @@ class WorkProcessSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enable_approval_workflow: Optional[pulumi.Input[_builtins.bool]] = None,
-                 matrix_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_defcons: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_approval_workflow: pulumi.Input[Optional[_builtins.bool]] = None,
+                 matrix_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_defcons: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -250,9 +250,9 @@ class WorkProcessSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enable_approval_workflow: Optional[pulumi.Input[_builtins.bool]] = None,
-            matrix_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            use_defcons: Optional[pulumi.Input[_builtins.bool]] = None) -> 'WorkProcessSettings':
+            enable_approval_workflow: pulumi.Input[Optional[_builtins.bool]] = None,
+            matrix_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            use_defcons: pulumi.Input[Optional[_builtins.bool]] = None) -> 'WorkProcessSettings':
         """
         Get an existing WorkProcessSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

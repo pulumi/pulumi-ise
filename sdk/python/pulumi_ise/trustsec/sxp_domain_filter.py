@@ -20,11 +20,11 @@ __all__ = ['SxpDomainFilterArgs', 'SxpDomainFilter']
 class SxpDomainFilterArgs:
     def __init__(__self__, *,
                  domains: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vn: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vn: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SxpDomainFilter resource.
 
@@ -61,74 +61,74 @@ class SxpDomainFilterArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Resource name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgt(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sgt(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SGT name or ID. At least one of subnet or sgt or vn should be defined
         """
         return pulumi.get(self, "sgt")
 
     @sgt.setter
-    def sgt(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sgt(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sgt", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
     @_builtins.property
     @pulumi.getter
-    def vn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Virtual Network. At least one of subnet or sgt or vn should be defined
         """
         return pulumi.get(self, "vn")
 
     @vn.setter
-    def vn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vn", value)
 
 
 @pulumi.input_type
 class _SxpDomainFilterState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domains: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vn: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domains: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vn: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SxpDomainFilter resources.
 
@@ -154,74 +154,74 @@ class _SxpDomainFilterState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def domains(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domains(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         List of SXP Domains, separated with comma
         """
         return pulumi.get(self, "domains")
 
     @domains.setter
-    def domains(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domains(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domains", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Resource name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgt(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sgt(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SGT name or ID. At least one of subnet or sgt or vn should be defined
         """
         return pulumi.get(self, "sgt")
 
     @sgt.setter
-    def sgt(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sgt(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sgt", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
     @_builtins.property
     @pulumi.getter
-    def vn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Virtual Network. At least one of subnet or sgt or vn should be defined
         """
         return pulumi.get(self, "vn")
 
     @vn.setter
-    def vn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vn", value)
 
 
@@ -231,12 +231,12 @@ class SxpDomainFilter(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domains: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vn: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domains: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vn: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a SXP Domain Filter.
@@ -316,12 +316,12 @@ class SxpDomainFilter(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domains: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vn: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domains: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vn: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -349,12 +349,12 @@ class SxpDomainFilter(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            domains: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sgt: Optional[pulumi.Input[_builtins.str]] = None,
-            subnet: Optional[pulumi.Input[_builtins.str]] = None,
-            vn: Optional[pulumi.Input[_builtins.str]] = None) -> 'SxpDomainFilter':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            domains: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sgt: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            vn: pulumi.Input[Optional[_builtins.str]] = None) -> 'SxpDomainFilter':
         """
         Get an existing SxpDomainFilter resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

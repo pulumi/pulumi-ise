@@ -141,8 +141,8 @@ def get_security_group(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         propogate_to_apic=pulumi.get(__ret__, 'propogate_to_apic'),
         value=pulumi.get(__ret__, 'value'))
-def get_security_group_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_security_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                              name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityGroupResult]:
     """
     This data source can read the TrustSec Security Group.

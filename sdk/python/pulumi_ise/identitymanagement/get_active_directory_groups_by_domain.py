@@ -168,11 +168,11 @@ def get_active_directory_groups_by_domain(domain: Optional[_builtins.str] = None
         join_point_id=pulumi.get(__ret__, 'join_point_id'),
         sid_filter=pulumi.get(__ret__, 'sid_filter'),
         type_filter=pulumi.get(__ret__, 'type_filter'))
-def get_active_directory_groups_by_domain_output(domain: Optional[pulumi.Input[_builtins.str]] = None,
-                                                 filter: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                 join_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                 sid_filter: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                 type_filter: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_active_directory_groups_by_domain_output(domain: pulumi.Input[Optional[_builtins.str]] = None,
+                                                 filter: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                 join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                 sid_filter: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                 type_filter: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetActiveDirectoryGroupsByDomainResult]:
     """
     This data source can read the Active Directory Groups By Domain.

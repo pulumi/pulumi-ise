@@ -19,14 +19,14 @@ __all__ = ['IpToSgtMappingArgs', 'IpToSgtMapping']
 @pulumi.input_type
 class IpToSgtMappingArgs:
     def __init__(__self__, *,
-                 deploy_to: Optional[pulumi.Input[_builtins.str]] = None,
-                 deploy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mapping_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None):
+                 deploy_to: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mapping_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a IpToSgtMapping resource.
 
@@ -59,19 +59,19 @@ class IpToSgtMappingArgs:
 
     @_builtins.property
     @pulumi.getter(name="deployTo")
-    def deploy_to(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deploy_to(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
         """
         return pulumi.get(self, "deploy_to")
 
     @deploy_to.setter
-    def deploy_to(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deploy_to(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deploy_to", value)
 
     @_builtins.property
     @pulumi.getter(name="deployType")
-    def deploy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deploy_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Deploy Type
           - Choices: `ALL`, `ND`, `NDG`
@@ -79,93 +79,93 @@ class IpToSgtMappingArgs:
         return pulumi.get(self, "deploy_type")
 
     @deploy_type.setter
-    def deploy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deploy_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deploy_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="hostIp")
-    def host_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def host_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mandatory if `host_name` is empty
         """
         return pulumi.get(self, "host_ip")
 
     @host_ip.setter
-    def host_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def host_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "host_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="hostName")
-    def host_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def host_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mandatory if `host_ip` is empty
         """
         return pulumi.get(self, "host_name")
 
     @host_name.setter
-    def host_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def host_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "host_name", value)
 
     @_builtins.property
     @pulumi.getter(name="mappingGroup")
-    def mapping_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mapping_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
         """
         return pulumi.get(self, "mapping_group")
 
     @mapping_group.setter
-    def mapping_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mapping_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mapping_group", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the IP to SGT mapping
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgt(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sgt(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Trustsec Security Group ID. Mandatory unless `mapping_group` is set
         """
         return pulumi.get(self, "sgt")
 
     @sgt.setter
-    def sgt(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sgt(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sgt", value)
 
 
 @pulumi.input_type
 class _IpToSgtMappingState:
     def __init__(__self__, *,
-                 deploy_to: Optional[pulumi.Input[_builtins.str]] = None,
-                 deploy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mapping_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None):
+                 deploy_to: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mapping_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IpToSgtMapping resources.
 
@@ -198,19 +198,19 @@ class _IpToSgtMappingState:
 
     @_builtins.property
     @pulumi.getter(name="deployTo")
-    def deploy_to(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deploy_to(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mandatory unless `mapping_group` is set or unless `deploy_type` is `ALL`
         """
         return pulumi.get(self, "deploy_to")
 
     @deploy_to.setter
-    def deploy_to(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deploy_to(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deploy_to", value)
 
     @_builtins.property
     @pulumi.getter(name="deployType")
-    def deploy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deploy_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Deploy Type
           - Choices: `ALL`, `ND`, `NDG`
@@ -218,79 +218,79 @@ class _IpToSgtMappingState:
         return pulumi.get(self, "deploy_type")
 
     @deploy_type.setter
-    def deploy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deploy_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deploy_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="hostIp")
-    def host_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def host_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mandatory if `host_name` is empty
         """
         return pulumi.get(self, "host_ip")
 
     @host_ip.setter
-    def host_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def host_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "host_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="hostName")
-    def host_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def host_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mandatory if `host_ip` is empty
         """
         return pulumi.get(self, "host_name")
 
     @host_name.setter
-    def host_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def host_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "host_name", value)
 
     @_builtins.property
     @pulumi.getter(name="mappingGroup")
-    def mapping_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mapping_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deploy_to` and `deploy_type` are set
         """
         return pulumi.get(self, "mapping_group")
 
     @mapping_group.setter
-    def mapping_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mapping_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mapping_group", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the IP to SGT mapping
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgt(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sgt(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Trustsec Security Group ID. Mandatory unless `mapping_group` is set
         """
         return pulumi.get(self, "sgt")
 
     @sgt.setter
-    def sgt(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sgt(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sgt", value)
 
 
@@ -300,14 +300,14 @@ class IpToSgtMapping(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 deploy_to: Optional[pulumi.Input[_builtins.str]] = None,
-                 deploy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mapping_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None,
+                 deploy_to: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mapping_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a TrustSec IP to SGT Mapping.
@@ -392,14 +392,14 @@ class IpToSgtMapping(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 deploy_to: Optional[pulumi.Input[_builtins.str]] = None,
-                 deploy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mapping_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.str]] = None,
+                 deploy_to: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mapping_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -427,14 +427,14 @@ class IpToSgtMapping(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            deploy_to: Optional[pulumi.Input[_builtins.str]] = None,
-            deploy_type: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            host_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            host_name: Optional[pulumi.Input[_builtins.str]] = None,
-            mapping_group: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sgt: Optional[pulumi.Input[_builtins.str]] = None) -> 'IpToSgtMapping':
+            deploy_to: pulumi.Input[Optional[_builtins.str]] = None,
+            deploy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            host_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            host_name: pulumi.Input[Optional[_builtins.str]] = None,
+            mapping_group: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sgt: pulumi.Input[Optional[_builtins.str]] = None) -> 'IpToSgtMapping':
         """
         Get an existing IpToSgtMapping resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

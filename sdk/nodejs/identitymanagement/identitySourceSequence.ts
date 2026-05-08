@@ -128,20 +128,20 @@ export interface IdentitySourceSequenceState {
     /**
      * Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
      */
-    breakOnStoreFail?: pulumi.Input<boolean>;
+    breakOnStoreFail?: pulumi.Input<boolean | undefined>;
     /**
      * Certificate Authentication Profile, empty if doesn't exist
      */
-    certificateAuthenticationProfile?: pulumi.Input<string>;
+    certificateAuthenticationProfile?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
-    identitySources?: pulumi.Input<pulumi.Input<inputs.identitymanagement.IdentitySourceSequenceIdentitySource>[]>;
+    description?: pulumi.Input<string | undefined>;
+    identitySources?: pulumi.Input<pulumi.Input<inputs.identitymanagement.IdentitySourceSequenceIdentitySource>[] | undefined>;
     /**
      * The name of the identity source sequence
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -159,10 +159,10 @@ export interface IdentitySourceSequenceArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     identitySources: pulumi.Input<pulumi.Input<inputs.identitymanagement.IdentitySourceSequenceIdentitySource>[]>;
     /**
      * The name of the identity source sequence
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

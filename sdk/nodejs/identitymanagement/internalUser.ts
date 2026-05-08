@@ -184,62 +184,62 @@ export interface InternalUserState {
     /**
      * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      */
-    accountNameAlias?: pulumi.Input<string>;
+    accountNameAlias?: pulumi.Input<string | undefined>;
     /**
      * Requires the user to change the password
      *   - Default value: `true`
      */
-    changePassword?: pulumi.Input<boolean>;
+    changePassword?: pulumi.Input<boolean | undefined>;
     /**
      * Key value map
      */
-    customAttributes?: pulumi.Input<string>;
+    customAttributes?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Email address
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * This field is added in ISE 2.0 to support TACACS+
      */
-    enablePassword?: pulumi.Input<string>;
+    enablePassword?: pulumi.Input<string | undefined>;
     /**
      * Whether the user is enabled/disabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * First name of the internal user
      */
-    firstName?: pulumi.Input<string>;
+    firstName?: pulumi.Input<string | undefined>;
     /**
      * Comma separated list of identity group IDs.
      */
-    identityGroups?: pulumi.Input<string>;
+    identityGroups?: pulumi.Input<string | undefined>;
     /**
      * Last name of the internal user
      */
-    lastName?: pulumi.Input<string>;
+    lastName?: pulumi.Input<string | undefined>;
     /**
      * The name of the internal user
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The password of the internal user
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * The ID store where the internal user's password is kept
      *   - Default value: `Internal Users`
      */
-    passwordIdStore?: pulumi.Input<string>;
+    passwordIdStore?: pulumi.Input<string | undefined>;
     /**
      * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
      *   - Default value: `false`
      */
-    passwordNeverExpires?: pulumi.Input<boolean>;
+    passwordNeverExpires?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -249,48 +249,48 @@ export interface InternalUserArgs {
     /**
      * The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
      */
-    accountNameAlias?: pulumi.Input<string>;
+    accountNameAlias?: pulumi.Input<string | undefined>;
     /**
      * Requires the user to change the password
      *   - Default value: `true`
      */
-    changePassword?: pulumi.Input<boolean>;
+    changePassword?: pulumi.Input<boolean | undefined>;
     /**
      * Key value map
      */
-    customAttributes?: pulumi.Input<string>;
+    customAttributes?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Email address
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * This field is added in ISE 2.0 to support TACACS+
      */
-    enablePassword?: pulumi.Input<string>;
+    enablePassword?: pulumi.Input<string | undefined>;
     /**
      * Whether the user is enabled/disabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * First name of the internal user
      */
-    firstName?: pulumi.Input<string>;
+    firstName?: pulumi.Input<string | undefined>;
     /**
      * Comma separated list of identity group IDs.
      */
-    identityGroups?: pulumi.Input<string>;
+    identityGroups?: pulumi.Input<string | undefined>;
     /**
      * Last name of the internal user
      */
-    lastName?: pulumi.Input<string>;
+    lastName?: pulumi.Input<string | undefined>;
     /**
      * The name of the internal user
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The password of the internal user
      */
@@ -299,10 +299,10 @@ export interface InternalUserArgs {
      * The ID store where the internal user's password is kept
      *   - Default value: `Internal Users`
      */
-    passwordIdStore?: pulumi.Input<string>;
+    passwordIdStore?: pulumi.Input<string | undefined>;
     /**
      * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
      *   - Default value: `false`
      */
-    passwordNeverExpires?: pulumi.Input<boolean>;
+    passwordNeverExpires?: pulumi.Input<boolean | undefined>;
 }

@@ -87,7 +87,7 @@ def get_license_tier_state(id: Optional[_builtins.str] = None,
     return AwaitableGetLicenseTierStateResult(
         id=pulumi.get(__ret__, 'id'),
         licenses=pulumi.get(__ret__, 'licenses'))
-def get_license_tier_state_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_license_tier_state_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLicenseTierStateResult]:
     """
     This data source can read the License Tier State.

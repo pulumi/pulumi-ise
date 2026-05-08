@@ -259,8 +259,8 @@ def get_authorization_global_exception_rule(id: Optional[_builtins.str] = None,
         profile=pulumi.get(__ret__, 'profile'),
         rank=pulumi.get(__ret__, 'rank'),
         state=pulumi.get(__ret__, 'state'))
-def get_authorization_global_exception_rule_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_authorization_global_exception_rule_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthorizationGlobalExceptionRuleResult]:
     """
     This data source can read the Device Admin Authorization Global Exception Rule.

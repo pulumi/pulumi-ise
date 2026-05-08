@@ -347,149 +347,149 @@ export interface ActiveDirectoryJoinPointState {
      * String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
      *   - Default value: `Default_Scope`
      */
-    adScopesNames?: pulumi.Input<string>;
+    adScopesNames?: pulumi.Input<string | undefined>;
     /**
      * Aging Time
      *   - Default value: `5`
      */
-    agingTime?: pulumi.Input<number>;
+    agingTime?: pulumi.Input<number | undefined>;
     /**
      * List of AD attributes
      */
-    attributes?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointAttribute>[]>;
+    attributes?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointAttribute>[] | undefined>;
     /**
      * Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
      *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
      */
-    authProtectionType?: pulumi.Input<string>;
+    authProtectionType?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    department?: pulumi.Input<string>;
+    department?: pulumi.Input<string | undefined>;
     /**
      * Join point description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * AD domain associated with the join point
      */
-    domain?: pulumi.Input<string>;
+    domain?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Enable Callback For Dial In Client
      *   - Default value: `false`
      */
-    enableCallbackForDialinClient?: pulumi.Input<boolean>;
+    enableCallbackForDialinClient?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Dial In Permission Check
      *   - Default value: `false`
      */
-    enableDialinPermissionCheck?: pulumi.Input<boolean>;
+    enableDialinPermissionCheck?: pulumi.Input<boolean | undefined>;
     /**
      * - Default value: `true`
      */
-    enableDomainAllowedList?: pulumi.Input<boolean>;
+    enableDomainAllowedList?: pulumi.Input<boolean | undefined>;
     /**
      * Enable prevent AD account lockout due to too many bad password attempts
      *   - Default value: `false`
      */
-    enableFailedAuthProtection?: pulumi.Input<boolean>;
+    enableFailedAuthProtection?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Machine Access
      *   - Default value: `true`
      */
-    enableMachineAccess?: pulumi.Input<boolean>;
+    enableMachineAccess?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Machine Authentication
      *   - Default value: `true`
      */
-    enableMachineAuth?: pulumi.Input<boolean>;
+    enableMachineAuth?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Password Change
      *   - Default value: `true`
      */
-    enablePassChange?: pulumi.Input<boolean>;
+    enablePassChange?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Rewrites
      *   - Default value: `false`
      */
-    enableRewrites?: pulumi.Input<boolean>;
+    enableRewrites?: pulumi.Input<boolean | undefined>;
     /**
      * Number of bad password attempts
      *   - Default value: `5`
      */
-    failedAuthThreshold?: pulumi.Input<number>;
+    failedAuthThreshold?: pulumi.Input<number | undefined>;
     /**
      * User info attribute
      */
-    firstName?: pulumi.Input<string>;
+    firstName?: pulumi.Input<string | undefined>;
     /**
      * List of AD Groups
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointGroup>[] | undefined>;
     /**
      * Identity Not In AD Behaviour
      *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
      */
-    identityNotInAdBehaviour?: pulumi.Input<string>;
+    identityNotInAdBehaviour?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    jobTitle?: pulumi.Input<string>;
+    jobTitle?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    lastName?: pulumi.Input<string>;
+    lastName?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    locality?: pulumi.Input<string>;
+    locality?: pulumi.Input<string | undefined>;
     /**
      * The name of the active directory join point
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    organizationalUnit?: pulumi.Input<string>;
+    organizationalUnit?: pulumi.Input<string | undefined>;
     /**
      * Plain Text Authentication
      *   - Default value: `false`
      */
-    plaintextAuth?: pulumi.Input<boolean>;
+    plaintextAuth?: pulumi.Input<boolean | undefined>;
     /**
      * List of Rewrite rules
      */
-    rewriteRules?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointRewriteRule>[]>;
+    rewriteRules?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointRewriteRule>[] | undefined>;
     /**
      * Schema
      *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    stateOrProvince?: pulumi.Input<string>;
+    stateOrProvince?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    streetAddress?: pulumi.Input<string>;
+    streetAddress?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    telephone?: pulumi.Input<string>;
+    telephone?: pulumi.Input<string | undefined>;
     /**
      * Unreachable Domains Behaviour
      *   - Choices: `PROCEED`, `DROP`
      */
-    unreachableDomainsBehaviour?: pulumi.Input<string>;
+    unreachableDomainsBehaviour?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -500,33 +500,33 @@ export interface ActiveDirectoryJoinPointArgs {
      * String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
      *   - Default value: `Default_Scope`
      */
-    adScopesNames?: pulumi.Input<string>;
+    adScopesNames?: pulumi.Input<string | undefined>;
     /**
      * Aging Time
      *   - Default value: `5`
      */
-    agingTime?: pulumi.Input<number>;
+    agingTime?: pulumi.Input<number | undefined>;
     /**
      * List of AD attributes
      */
-    attributes?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointAttribute>[]>;
+    attributes?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointAttribute>[] | undefined>;
     /**
      * Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
      *   - Choices: `WIRELESS`, `WIRED`, `BOTH`
      */
-    authProtectionType?: pulumi.Input<string>;
+    authProtectionType?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    department?: pulumi.Input<string>;
+    department?: pulumi.Input<string | undefined>;
     /**
      * Join point description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * AD domain associated with the join point
      */
@@ -534,113 +534,113 @@ export interface ActiveDirectoryJoinPointArgs {
     /**
      * User info attribute
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Enable Callback For Dial In Client
      *   - Default value: `false`
      */
-    enableCallbackForDialinClient?: pulumi.Input<boolean>;
+    enableCallbackForDialinClient?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Dial In Permission Check
      *   - Default value: `false`
      */
-    enableDialinPermissionCheck?: pulumi.Input<boolean>;
+    enableDialinPermissionCheck?: pulumi.Input<boolean | undefined>;
     /**
      * - Default value: `true`
      */
-    enableDomainAllowedList?: pulumi.Input<boolean>;
+    enableDomainAllowedList?: pulumi.Input<boolean | undefined>;
     /**
      * Enable prevent AD account lockout due to too many bad password attempts
      *   - Default value: `false`
      */
-    enableFailedAuthProtection?: pulumi.Input<boolean>;
+    enableFailedAuthProtection?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Machine Access
      *   - Default value: `true`
      */
-    enableMachineAccess?: pulumi.Input<boolean>;
+    enableMachineAccess?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Machine Authentication
      *   - Default value: `true`
      */
-    enableMachineAuth?: pulumi.Input<boolean>;
+    enableMachineAuth?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Password Change
      *   - Default value: `true`
      */
-    enablePassChange?: pulumi.Input<boolean>;
+    enablePassChange?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Rewrites
      *   - Default value: `false`
      */
-    enableRewrites?: pulumi.Input<boolean>;
+    enableRewrites?: pulumi.Input<boolean | undefined>;
     /**
      * Number of bad password attempts
      *   - Default value: `5`
      */
-    failedAuthThreshold?: pulumi.Input<number>;
+    failedAuthThreshold?: pulumi.Input<number | undefined>;
     /**
      * User info attribute
      */
-    firstName?: pulumi.Input<string>;
+    firstName?: pulumi.Input<string | undefined>;
     /**
      * List of AD Groups
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointGroup>[] | undefined>;
     /**
      * Identity Not In AD Behaviour
      *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
      */
-    identityNotInAdBehaviour?: pulumi.Input<string>;
+    identityNotInAdBehaviour?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    jobTitle?: pulumi.Input<string>;
+    jobTitle?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    lastName?: pulumi.Input<string>;
+    lastName?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    locality?: pulumi.Input<string>;
+    locality?: pulumi.Input<string | undefined>;
     /**
      * The name of the active directory join point
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    organizationalUnit?: pulumi.Input<string>;
+    organizationalUnit?: pulumi.Input<string | undefined>;
     /**
      * Plain Text Authentication
      *   - Default value: `false`
      */
-    plaintextAuth?: pulumi.Input<boolean>;
+    plaintextAuth?: pulumi.Input<boolean | undefined>;
     /**
      * List of Rewrite rules
      */
-    rewriteRules?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointRewriteRule>[]>;
+    rewriteRules?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinPointRewriteRule>[] | undefined>;
     /**
      * Schema
      *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
      */
-    schema?: pulumi.Input<string>;
+    schema?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    stateOrProvince?: pulumi.Input<string>;
+    stateOrProvince?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    streetAddress?: pulumi.Input<string>;
+    streetAddress?: pulumi.Input<string | undefined>;
     /**
      * User info attribute
      */
-    telephone?: pulumi.Input<string>;
+    telephone?: pulumi.Input<string | undefined>;
     /**
      * Unreachable Domains Behaviour
      *   - Choices: `PROCEED`, `DROP`
      */
-    unreachableDomainsBehaviour?: pulumi.Input<string>;
+    unreachableDomainsBehaviour?: pulumi.Input<string | undefined>;
 }

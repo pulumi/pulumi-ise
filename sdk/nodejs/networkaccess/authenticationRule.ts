@@ -225,81 +225,81 @@ export interface AuthenticationRuleState {
     /**
      * List of child conditions
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildren>[] | undefined>;
     /**
      * Dictionary attribute name
      */
-    conditionAttributeName?: pulumi.Input<string>;
+    conditionAttributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    conditionAttributeValue?: pulumi.Input<string>;
+    conditionAttributeValue?: pulumi.Input<string | undefined>;
     /**
      * Dictionary name
      */
-    conditionDictionaryName?: pulumi.Input<string>;
+    conditionDictionaryName?: pulumi.Input<string | undefined>;
     /**
      * Dictionary value
      */
-    conditionDictionaryValue?: pulumi.Input<string>;
+    conditionDictionaryValue?: pulumi.Input<string | undefined>;
     /**
      * UUID for condition
      */
-    conditionId?: pulumi.Input<string>;
+    conditionId?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    conditionIsNegate?: pulumi.Input<boolean>;
+    conditionIsNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Equality operator
      *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
      */
-    conditionOperator?: pulumi.Input<string>;
+    conditionOperator?: pulumi.Input<string | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
-    conditionType?: pulumi.Input<string>;
+    conditionType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if this rule is the default one
      */
-    default?: pulumi.Input<boolean>;
+    default?: pulumi.Input<boolean | undefined>;
     /**
      * Identity source name from the identity stores
      */
-    identitySourceName?: pulumi.Input<string>;
+    identitySourceName?: pulumi.Input<string | undefined>;
     /**
      * Action to perform when authentication fails such as Bad credentials, disabled user and so on
      *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      */
-    ifAuthFail?: pulumi.Input<string>;
+    ifAuthFail?: pulumi.Input<string | undefined>;
     /**
      * Action to perform when ISE is uanble to access the identity database
      *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      */
-    ifProcessFail?: pulumi.Input<string>;
+    ifProcessFail?: pulumi.Input<string | undefined>;
     /**
      * Action to perform when user is not found in any of identity stores
      *   - Choices: `REJECT`, `DROP`, `CONTINUE`
      */
-    ifUserNotFound?: pulumi.Input<string>;
+    ifUserNotFound?: pulumi.Input<string | undefined>;
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Policy set ID
      */
-    policySetId?: pulumi.Input<string>;
+    policySetId?: pulumi.Input<string | undefined>;
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    rank?: pulumi.Input<number>;
+    rank?: pulumi.Input<number | undefined>;
     /**
      * The state that the rule is in. A disabled rule cannot be matched.
      *   - Choices: `disabled`, `enabled`, `monitor`
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -309,49 +309,49 @@ export interface AuthenticationRuleArgs {
     /**
      * List of child conditions
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleChildren>[] | undefined>;
     /**
      * Dictionary attribute name
      */
-    conditionAttributeName?: pulumi.Input<string>;
+    conditionAttributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    conditionAttributeValue?: pulumi.Input<string>;
+    conditionAttributeValue?: pulumi.Input<string | undefined>;
     /**
      * Dictionary name
      */
-    conditionDictionaryName?: pulumi.Input<string>;
+    conditionDictionaryName?: pulumi.Input<string | undefined>;
     /**
      * Dictionary value
      */
-    conditionDictionaryValue?: pulumi.Input<string>;
+    conditionDictionaryValue?: pulumi.Input<string | undefined>;
     /**
      * UUID for condition
      */
-    conditionId?: pulumi.Input<string>;
+    conditionId?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    conditionIsNegate?: pulumi.Input<boolean>;
+    conditionIsNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Equality operator
      *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
      */
-    conditionOperator?: pulumi.Input<string>;
+    conditionOperator?: pulumi.Input<string | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
-    conditionType?: pulumi.Input<string>;
+    conditionType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if this rule is the default one
      */
-    default?: pulumi.Input<boolean>;
+    default?: pulumi.Input<boolean | undefined>;
     /**
      * Identity source name from the identity stores
      */
-    identitySourceName?: pulumi.Input<string>;
+    identitySourceName?: pulumi.Input<string | undefined>;
     /**
      * Action to perform when authentication fails such as Bad credentials, disabled user and so on
      *   - Choices: `REJECT`, `DROP`, `CONTINUE`
@@ -370,7 +370,7 @@ export interface AuthenticationRuleArgs {
     /**
      * Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Policy set ID
      */
@@ -378,10 +378,10 @@ export interface AuthenticationRuleArgs {
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    rank?: pulumi.Input<number>;
+    rank?: pulumi.Input<number | undefined>;
     /**
      * The state that the rule is in. A disabled rule cannot be matched.
      *   - Choices: `disabled`, `enabled`, `monitor`
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
 }

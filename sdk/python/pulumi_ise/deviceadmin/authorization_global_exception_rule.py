@@ -21,20 +21,20 @@ __all__ = ['AuthorizationGlobalExceptionRuleArgs', 'AuthorizationGlobalException
 @pulumi.input_type
 class AuthorizationGlobalExceptionRuleArgs:
     def __init__(__self__, *,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]] = None,
-                 command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None):
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]] = None,
+                 command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthorizationGlobalExceptionRule resource.
 
@@ -87,103 +87,103 @@ class AuthorizationGlobalExceptionRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]:
+    def childrens(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]:
         """
         List of child conditions
         """
         return pulumi.get(self, "childrens")
 
     @childrens.setter
-    def childrens(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]):
+    def childrens(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]):
         pulumi.set(self, "childrens", value)
 
     @_builtins.property
     @pulumi.getter(name="commandSets")
-    def command_sets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def command_sets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Command sets enforce the specified list of commands that can be executed by a device administrator
         """
         return pulumi.get(self, "command_sets")
 
     @command_sets.setter
-    def command_sets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def command_sets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "command_sets", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeName")
-    def condition_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary attribute name
         """
         return pulumi.get(self, "condition_attribute_name")
 
     @condition_attribute_name.setter
-    def condition_attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeValue")
-    def condition_attribute_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute value for condition. Value type is specified in dictionary object.
         """
         return pulumi.get(self, "condition_attribute_value")
 
     @condition_attribute_value.setter
-    def condition_attribute_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryName")
-    def condition_dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary name
         """
         return pulumi.get(self, "condition_dictionary_name")
 
     @condition_dictionary_name.setter
-    def condition_dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryValue")
-    def condition_dictionary_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary value
         """
         return pulumi.get(self, "condition_dictionary_value")
 
     @condition_dictionary_value.setter
-    def condition_dictionary_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionId")
-    def condition_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         UUID for condition
         """
         return pulumi.get(self, "condition_id")
 
     @condition_id.setter
-    def condition_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_id", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionIsNegate")
-    def condition_is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def condition_is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "condition_is_negate")
 
     @condition_is_negate.setter
-    def condition_is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def condition_is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "condition_is_negate", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionOperator")
-    def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_operator(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Equality operator
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
@@ -191,12 +191,12 @@ class AuthorizationGlobalExceptionRuleArgs:
         return pulumi.get(self, "condition_operator")
 
     @condition_operator.setter
-    def condition_operator(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_operator(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_operator", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionType")
-    def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
           - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
@@ -204,48 +204,48 @@ class AuthorizationGlobalExceptionRuleArgs:
         return pulumi.get(self, "condition_type")
 
     @condition_type.setter
-    def condition_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device admin profiles control the initial login session of the device administrator
         """
         return pulumi.get(self, "profile")
 
     @profile.setter
-    def profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def rank(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rank(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The rank (priority) in relation to other rules. Lower rank is higher priority.
         """
         return pulumi.get(self, "rank")
 
     @rank.setter
-    def rank(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rank(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rank", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state that the rule is in. A disabled rule cannot be matched.
           - Choices: `disabled`, `enabled`, `monitor`
@@ -253,27 +253,27 @@ class AuthorizationGlobalExceptionRuleArgs:
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
 
 @pulumi.input_type
 class _AuthorizationGlobalExceptionRuleState:
     def __init__(__self__, *,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]] = None,
-                 command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None):
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]] = None,
+                 command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationGlobalExceptionRule resources.
 
@@ -326,103 +326,103 @@ class _AuthorizationGlobalExceptionRuleState:
 
     @_builtins.property
     @pulumi.getter
-    def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]:
+    def childrens(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]:
         """
         List of child conditions
         """
         return pulumi.get(self, "childrens")
 
     @childrens.setter
-    def childrens(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]):
+    def childrens(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenArgs']]]]):
         pulumi.set(self, "childrens", value)
 
     @_builtins.property
     @pulumi.getter(name="commandSets")
-    def command_sets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def command_sets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Command sets enforce the specified list of commands that can be executed by a device administrator
         """
         return pulumi.get(self, "command_sets")
 
     @command_sets.setter
-    def command_sets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def command_sets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "command_sets", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeName")
-    def condition_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary attribute name
         """
         return pulumi.get(self, "condition_attribute_name")
 
     @condition_attribute_name.setter
-    def condition_attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeValue")
-    def condition_attribute_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute value for condition. Value type is specified in dictionary object.
         """
         return pulumi.get(self, "condition_attribute_value")
 
     @condition_attribute_value.setter
-    def condition_attribute_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryName")
-    def condition_dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary name
         """
         return pulumi.get(self, "condition_dictionary_name")
 
     @condition_dictionary_name.setter
-    def condition_dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryValue")
-    def condition_dictionary_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary value
         """
         return pulumi.get(self, "condition_dictionary_value")
 
     @condition_dictionary_value.setter
-    def condition_dictionary_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionId")
-    def condition_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         UUID for condition
         """
         return pulumi.get(self, "condition_id")
 
     @condition_id.setter
-    def condition_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_id", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionIsNegate")
-    def condition_is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def condition_is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "condition_is_negate")
 
     @condition_is_negate.setter
-    def condition_is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def condition_is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "condition_is_negate", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionOperator")
-    def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_operator(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Equality operator
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
@@ -430,12 +430,12 @@ class _AuthorizationGlobalExceptionRuleState:
         return pulumi.get(self, "condition_operator")
 
     @condition_operator.setter
-    def condition_operator(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_operator(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_operator", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionType")
-    def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
           - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
@@ -443,48 +443,48 @@ class _AuthorizationGlobalExceptionRuleState:
         return pulumi.get(self, "condition_type")
 
     @condition_type.setter
-    def condition_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Rule name, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device admin profiles control the initial login session of the device administrator
         """
         return pulumi.get(self, "profile")
 
     @profile.setter
-    def profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def rank(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rank(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The rank (priority) in relation to other rules. Lower rank is higher priority.
         """
         return pulumi.get(self, "rank")
 
     @rank.setter
-    def rank(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rank(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rank", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state that the rule is in. A disabled rule cannot be matched.
           - Choices: `disabled`, `enabled`, `monitor`
@@ -492,7 +492,7 @@ class _AuthorizationGlobalExceptionRuleState:
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
 
@@ -502,20 +502,20 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
-                 command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
+                 command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Device Admin Authorization Global Exception Rule.
@@ -622,20 +622,20 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
-                 command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
+                 command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -669,20 +669,20 @@ class AuthorizationGlobalExceptionRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
-            command_sets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-            condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            profile: Optional[pulumi.Input[_builtins.str]] = None,
-            rank: Optional[pulumi.Input[_builtins.int]] = None,
-            state: Optional[pulumi.Input[_builtins.str]] = None) -> 'AuthorizationGlobalExceptionRule':
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleChildrenArgs', 'AuthorizationGlobalExceptionRuleChildrenArgsDict']]]]] = None,
+            command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            profile: pulumi.Input[Optional[_builtins.str]] = None,
+            rank: pulumi.Input[Optional[_builtins.int]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None) -> 'AuthorizationGlobalExceptionRule':
         """
         Get an existing AuthorizationGlobalExceptionRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

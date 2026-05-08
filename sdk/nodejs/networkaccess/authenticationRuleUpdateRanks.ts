@@ -93,8 +93,8 @@ export interface AuthenticationRuleUpdateRanksState {
     /**
      * Policy set ID
      */
-    policySetId?: pulumi.Input<string>;
-    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleUpdateRanksRule>[]>;
+    policySetId?: pulumi.Input<string | undefined>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleUpdateRanksRule>[] | undefined>;
 }
 
 /**
@@ -105,5 +105,5 @@ export interface AuthenticationRuleUpdateRanksArgs {
      * Policy set ID
      */
     policySetId: pulumi.Input<string>;
-    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleUpdateRanksRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthenticationRuleUpdateRanksRule>[] | undefined>;
 }

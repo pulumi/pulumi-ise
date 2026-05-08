@@ -137,31 +137,31 @@ export interface ActiveDirectoryAddGroupsState {
      * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
      *   - Default value: `Default_Scope`
      */
-    adScopesNames?: pulumi.Input<string>;
+    adScopesNames?: pulumi.Input<string | undefined>;
     /**
      * Join point Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * AD domain associated with the join point
      */
-    domain?: pulumi.Input<string>;
+    domain?: pulumi.Input<string | undefined>;
     /**
      * - Default value: `true`
      */
-    enableDomainAllowedList?: pulumi.Input<boolean>;
+    enableDomainAllowedList?: pulumi.Input<boolean | undefined>;
     /**
      * List of AD Groups
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryAddGroupsGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryAddGroupsGroup>[] | undefined>;
     /**
      * Active Directory Join Point ID
      */
-    joinPointId?: pulumi.Input<string>;
+    joinPointId?: pulumi.Input<string | undefined>;
     /**
      * The name of the active directory join point
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -172,11 +172,11 @@ export interface ActiveDirectoryAddGroupsArgs {
      * String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
      *   - Default value: `Default_Scope`
      */
-    adScopesNames?: pulumi.Input<string>;
+    adScopesNames?: pulumi.Input<string | undefined>;
     /**
      * Join point Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * AD domain associated with the join point
      */
@@ -184,11 +184,11 @@ export interface ActiveDirectoryAddGroupsArgs {
     /**
      * - Default value: `true`
      */
-    enableDomainAllowedList?: pulumi.Input<boolean>;
+    enableDomainAllowedList?: pulumi.Input<boolean | undefined>;
     /**
      * List of AD Groups
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryAddGroupsGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryAddGroupsGroup>[] | undefined>;
     /**
      * Active Directory Join Point ID
      */
@@ -196,5 +196,5 @@ export interface ActiveDirectoryAddGroupsArgs {
     /**
      * The name of the active directory join point
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -21,10 +21,10 @@ __all__ = ['TacacsCommandSetArgs', 'TacacsCommandSet']
 @pulumi.input_type
 class TacacsCommandSetArgs:
     def __init__(__self__, *,
-                 commands: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None):
+                 commands: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permit_unmatched: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a TacacsCommandSet resource.
 
@@ -44,40 +44,40 @@ class TacacsCommandSetArgs:
 
     @_builtins.property
     @pulumi.getter
-    def commands(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]:
+    def commands(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]:
         return pulumi.get(self, "commands")
 
     @commands.setter
-    def commands(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]):
+    def commands(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]):
         pulumi.set(self, "commands", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the TACACS command set
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="permitUnmatched")
-    def permit_unmatched(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def permit_unmatched(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Permit unmatched commands
           - Default value: `false`
@@ -85,17 +85,17 @@ class TacacsCommandSetArgs:
         return pulumi.get(self, "permit_unmatched")
 
     @permit_unmatched.setter
-    def permit_unmatched(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def permit_unmatched(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "permit_unmatched", value)
 
 
 @pulumi.input_type
 class _TacacsCommandSetState:
     def __init__(__self__, *,
-                 commands: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None):
+                 commands: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permit_unmatched: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering TacacsCommandSet resources.
 
@@ -115,40 +115,40 @@ class _TacacsCommandSetState:
 
     @_builtins.property
     @pulumi.getter
-    def commands(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]:
+    def commands(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]:
         return pulumi.get(self, "commands")
 
     @commands.setter
-    def commands(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]):
+    def commands(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsCommandSetCommandArgs']]]]):
         pulumi.set(self, "commands", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the TACACS command set
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="permitUnmatched")
-    def permit_unmatched(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def permit_unmatched(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Permit unmatched commands
           - Default value: `false`
@@ -156,7 +156,7 @@ class _TacacsCommandSetState:
         return pulumi.get(self, "permit_unmatched")
 
     @permit_unmatched.setter
-    def permit_unmatched(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def permit_unmatched(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "permit_unmatched", value)
 
 
@@ -166,10 +166,10 @@ class TacacsCommandSet(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 commands: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None,
+                 commands: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permit_unmatched: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage a TACACS Command Set.
@@ -257,10 +257,10 @@ class TacacsCommandSet(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 commands: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None,
+                 commands: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permit_unmatched: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -284,10 +284,10 @@ class TacacsCommandSet(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            commands: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            permit_unmatched: Optional[pulumi.Input[_builtins.bool]] = None) -> 'TacacsCommandSet':
+            commands: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            permit_unmatched: pulumi.Input[Optional[_builtins.bool]] = None) -> 'TacacsCommandSet':
         """
         Get an existing TacacsCommandSet resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

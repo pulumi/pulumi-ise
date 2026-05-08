@@ -117,20 +117,20 @@ export interface DictionaryState {
     /**
      * The description of the dictionary
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The dictionary attribute type
      *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
      */
-    dictionaryAttrType?: pulumi.Input<string>;
+    dictionaryAttrType?: pulumi.Input<string | undefined>;
     /**
      * The dictionary name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the dictionary
      */
-    version?: pulumi.Input<string>;
+    version?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -140,7 +140,7 @@ export interface DictionaryArgs {
     /**
      * The description of the dictionary
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The dictionary attribute type
      *   - Choices: `ENTITY_ATTR`, `MSG_ATTR`, `PIP_ATTR`
@@ -149,7 +149,7 @@ export interface DictionaryArgs {
     /**
      * The dictionary name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the dictionary
      */

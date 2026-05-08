@@ -144,33 +144,33 @@ export interface DictionaryAttributeState {
     /**
      * List of allowed values for the attribute
      */
-    allowedValues?: pulumi.Input<pulumi.Input<inputs.networkaccess.DictionaryAttributeAllowedValue>[]>;
+    allowedValues?: pulumi.Input<pulumi.Input<inputs.networkaccess.DictionaryAttributeAllowedValue>[] | undefined>;
     /**
      * The data type for the dictionary attribute
      *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
      */
-    dataType?: pulumi.Input<string>;
+    dataType?: pulumi.Input<string | undefined>;
     /**
      * The description of the dictionary attribute
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the dictionary the attribute belongs to
      */
-    dictionaryName?: pulumi.Input<string>;
+    dictionaryName?: pulumi.Input<string | undefined>;
     /**
      * The direction type for the dictionary attribute
      *   - Choices: `BOTH`, `IN`, `NONE`, `OUT`
      */
-    directionType?: pulumi.Input<string>;
+    directionType?: pulumi.Input<string | undefined>;
     /**
      * The internal name of the dictionary attribute
      */
-    internalName?: pulumi.Input<string>;
+    internalName?: pulumi.Input<string | undefined>;
     /**
      * The dictionary attribute name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -180,7 +180,7 @@ export interface DictionaryAttributeArgs {
     /**
      * List of allowed values for the attribute
      */
-    allowedValues?: pulumi.Input<pulumi.Input<inputs.networkaccess.DictionaryAttributeAllowedValue>[]>;
+    allowedValues?: pulumi.Input<pulumi.Input<inputs.networkaccess.DictionaryAttributeAllowedValue>[] | undefined>;
     /**
      * The data type for the dictionary attribute
      *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
@@ -189,7 +189,7 @@ export interface DictionaryAttributeArgs {
     /**
      * The description of the dictionary attribute
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the dictionary the attribute belongs to
      */
@@ -198,13 +198,13 @@ export interface DictionaryAttributeArgs {
      * The direction type for the dictionary attribute
      *   - Choices: `BOTH`, `IN`, `NONE`, `OUT`
      */
-    directionType?: pulumi.Input<string>;
+    directionType?: pulumi.Input<string | undefined>;
     /**
      * The internal name of the dictionary attribute
      */
-    internalName?: pulumi.Input<string>;
+    internalName?: pulumi.Input<string | undefined>;
     /**
      * The dictionary attribute name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -93,8 +93,8 @@ export interface AuthorizationExceptionRuleUpdateRanksState {
     /**
      * Policy set ID
      */
-    policySetId?: pulumi.Input<string>;
-    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleUpdateRanksRule>[]>;
+    policySetId?: pulumi.Input<string | undefined>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleUpdateRanksRule>[] | undefined>;
 }
 
 /**
@@ -105,5 +105,5 @@ export interface AuthorizationExceptionRuleUpdateRanksArgs {
      * Policy set ID
      */
     policySetId: pulumi.Input<string>;
-    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleUpdateRanksRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationExceptionRuleUpdateRanksRule>[] | undefined>;
 }

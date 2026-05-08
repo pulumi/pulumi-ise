@@ -334,147 +334,147 @@ export interface AuthorizationProfileState {
      *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
      *   - Default value: `ACCESS_ACCEPT`
      */
-    accessType?: pulumi.Input<string>;
+    accessType?: pulumi.Input<string | undefined>;
     /**
      * ACL
      */
-    acl?: pulumi.Input<string>;
+    acl?: pulumi.Input<string | undefined>;
     /**
      * List of advanced attributes
      */
-    advancedAttributes?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationProfileAdvancedAttribute>[]>;
+    advancedAttributes?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationProfileAdvancedAttribute>[] | undefined>;
     /**
      * Agentless Posture.
      */
-    agentlessPosture?: pulumi.Input<boolean>;
+    agentlessPosture?: pulumi.Input<boolean | undefined>;
     /**
      * Airespace ACL
      */
-    airespaceAcl?: pulumi.Input<string>;
+    airespaceAcl?: pulumi.Input<string | undefined>;
     /**
      * Airespace IPv6 ACL
      */
-    airespaceIpv6Acl?: pulumi.Input<string>;
+    airespaceIpv6Acl?: pulumi.Input<string | undefined>;
     /**
      * ASA VPN
      */
-    asaVpn?: pulumi.Input<string>;
+    asaVpn?: pulumi.Input<string | undefined>;
     /**
      * Auto smart port
      */
-    autoSmartPort?: pulumi.Input<string>;
+    autoSmartPort?: pulumi.Input<string | undefined>;
     /**
      * AVC profile
      */
-    avcProfile?: pulumi.Input<string>;
+    avcProfile?: pulumi.Input<string | undefined>;
     /**
      * DACL name
      */
-    daclName?: pulumi.Input<string>;
+    daclName?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Easy wired session candidate
      *   - Default value: `false`
      */
-    easywiredSessionCandidate?: pulumi.Input<boolean>;
+    easywiredSessionCandidate?: pulumi.Input<boolean | undefined>;
     /**
      * Interface template
      */
-    interfaceTemplate?: pulumi.Input<string>;
+    interfaceTemplate?: pulumi.Input<string | undefined>;
     /**
      * IPv6 ACL
      */
-    ipv6AclFilter?: pulumi.Input<string>;
+    ipv6AclFilter?: pulumi.Input<string | undefined>;
     /**
      * IPv6 DACL name
      */
-    ipv6DaclName?: pulumi.Input<string>;
+    ipv6DaclName?: pulumi.Input<string | undefined>;
     /**
      * MacSec policy
      *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
      */
-    macSecPolicy?: pulumi.Input<string>;
+    macSecPolicy?: pulumi.Input<string | undefined>;
     /**
      * The name of the authorization profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NEAT
      *   - Default value: `false`
      */
-    neat?: pulumi.Input<boolean>;
+    neat?: pulumi.Input<boolean | undefined>;
     /**
      * Value needs to be an existing Network Device Profile
      *   - Default value: `Cisco`
      */
-    profileName?: pulumi.Input<string>;
+    profileName?: pulumi.Input<string | undefined>;
     /**
      * Maintain Connectivity During Reauthentication
      *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
      */
-    reauthenticationConnectivity?: pulumi.Input<string>;
+    reauthenticationConnectivity?: pulumi.Input<string | undefined>;
     /**
      * Reauthentication timer
      *   - Range: `1`-`65535`
      */
-    reauthenticationTimer?: pulumi.Input<number>;
+    reauthenticationTimer?: pulumi.Input<number | undefined>;
     /**
      * Service template
      *   - Default value: `false`
      */
-    serviceTemplate?: pulumi.Input<boolean>;
+    serviceTemplate?: pulumi.Input<boolean | undefined>;
     /**
      * Track movement
      *   - Default value: `false`
      */
-    trackMovement?: pulumi.Input<boolean>;
+    trackMovement?: pulumi.Input<boolean | undefined>;
     /**
      * Unique identifier
      */
-    uniqueIdentifier?: pulumi.Input<string>;
+    uniqueIdentifier?: pulumi.Input<string | undefined>;
     /**
      * Vlan name or ID
      */
-    vlanNameId?: pulumi.Input<string>;
+    vlanNameId?: pulumi.Input<string | undefined>;
     /**
      * Vlan tag ID
      *   - Range: `0`-`31`
      */
-    vlanTagId?: pulumi.Input<number>;
+    vlanTagId?: pulumi.Input<number | undefined>;
     /**
      * Voice domain permission
      *   - Default value: `false`
      */
-    voiceDomainPermission?: pulumi.Input<boolean>;
+    voiceDomainPermission?: pulumi.Input<boolean | undefined>;
     /**
      * Web authentication (local)
      *   - Default value: `false`
      */
-    webAuth?: pulumi.Input<boolean>;
+    webAuth?: pulumi.Input<boolean | undefined>;
     /**
      * Web redirection ACL
      */
-    webRedirectionAcl?: pulumi.Input<string>;
+    webRedirectionAcl?: pulumi.Input<string | undefined>;
     /**
      * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      */
-    webRedirectionDisplayCertificatesRenewalMessages?: pulumi.Input<boolean>;
+    webRedirectionDisplayCertificatesRenewalMessages?: pulumi.Input<boolean | undefined>;
     /**
      * A portal that exist in the DB and fits the `webRedirectionType`
      */
-    webRedirectionPortalName?: pulumi.Input<string>;
+    webRedirectionPortalName?: pulumi.Input<string | undefined>;
     /**
      * IP, hostname or FQDN
      */
-    webRedirectionStaticIpHostNameFqdn?: pulumi.Input<string>;
+    webRedirectionStaticIpHostNameFqdn?: pulumi.Input<string | undefined>;
     /**
      * This type must fit the `webRedirectionPortalName`
      *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      */
-    webRedirectionType?: pulumi.Input<string>;
+    webRedirectionType?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -486,145 +486,145 @@ export interface AuthorizationProfileArgs {
      *   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
      *   - Default value: `ACCESS_ACCEPT`
      */
-    accessType?: pulumi.Input<string>;
+    accessType?: pulumi.Input<string | undefined>;
     /**
      * ACL
      */
-    acl?: pulumi.Input<string>;
+    acl?: pulumi.Input<string | undefined>;
     /**
      * List of advanced attributes
      */
-    advancedAttributes?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationProfileAdvancedAttribute>[]>;
+    advancedAttributes?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationProfileAdvancedAttribute>[] | undefined>;
     /**
      * Agentless Posture.
      */
-    agentlessPosture?: pulumi.Input<boolean>;
+    agentlessPosture?: pulumi.Input<boolean | undefined>;
     /**
      * Airespace ACL
      */
-    airespaceAcl?: pulumi.Input<string>;
+    airespaceAcl?: pulumi.Input<string | undefined>;
     /**
      * Airespace IPv6 ACL
      */
-    airespaceIpv6Acl?: pulumi.Input<string>;
+    airespaceIpv6Acl?: pulumi.Input<string | undefined>;
     /**
      * ASA VPN
      */
-    asaVpn?: pulumi.Input<string>;
+    asaVpn?: pulumi.Input<string | undefined>;
     /**
      * Auto smart port
      */
-    autoSmartPort?: pulumi.Input<string>;
+    autoSmartPort?: pulumi.Input<string | undefined>;
     /**
      * AVC profile
      */
-    avcProfile?: pulumi.Input<string>;
+    avcProfile?: pulumi.Input<string | undefined>;
     /**
      * DACL name
      */
-    daclName?: pulumi.Input<string>;
+    daclName?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Easy wired session candidate
      *   - Default value: `false`
      */
-    easywiredSessionCandidate?: pulumi.Input<boolean>;
+    easywiredSessionCandidate?: pulumi.Input<boolean | undefined>;
     /**
      * Interface template
      */
-    interfaceTemplate?: pulumi.Input<string>;
+    interfaceTemplate?: pulumi.Input<string | undefined>;
     /**
      * IPv6 ACL
      */
-    ipv6AclFilter?: pulumi.Input<string>;
+    ipv6AclFilter?: pulumi.Input<string | undefined>;
     /**
      * IPv6 DACL name
      */
-    ipv6DaclName?: pulumi.Input<string>;
+    ipv6DaclName?: pulumi.Input<string | undefined>;
     /**
      * MacSec policy
      *   - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
      */
-    macSecPolicy?: pulumi.Input<string>;
+    macSecPolicy?: pulumi.Input<string | undefined>;
     /**
      * The name of the authorization profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NEAT
      *   - Default value: `false`
      */
-    neat?: pulumi.Input<boolean>;
+    neat?: pulumi.Input<boolean | undefined>;
     /**
      * Value needs to be an existing Network Device Profile
      *   - Default value: `Cisco`
      */
-    profileName?: pulumi.Input<string>;
+    profileName?: pulumi.Input<string | undefined>;
     /**
      * Maintain Connectivity During Reauthentication
      *   - Choices: `DEFAULT`, `RADIUS_REQUEST`
      */
-    reauthenticationConnectivity?: pulumi.Input<string>;
+    reauthenticationConnectivity?: pulumi.Input<string | undefined>;
     /**
      * Reauthentication timer
      *   - Range: `1`-`65535`
      */
-    reauthenticationTimer?: pulumi.Input<number>;
+    reauthenticationTimer?: pulumi.Input<number | undefined>;
     /**
      * Service template
      *   - Default value: `false`
      */
-    serviceTemplate?: pulumi.Input<boolean>;
+    serviceTemplate?: pulumi.Input<boolean | undefined>;
     /**
      * Track movement
      *   - Default value: `false`
      */
-    trackMovement?: pulumi.Input<boolean>;
+    trackMovement?: pulumi.Input<boolean | undefined>;
     /**
      * Unique identifier
      */
-    uniqueIdentifier?: pulumi.Input<string>;
+    uniqueIdentifier?: pulumi.Input<string | undefined>;
     /**
      * Vlan name or ID
      */
-    vlanNameId?: pulumi.Input<string>;
+    vlanNameId?: pulumi.Input<string | undefined>;
     /**
      * Vlan tag ID
      *   - Range: `0`-`31`
      */
-    vlanTagId?: pulumi.Input<number>;
+    vlanTagId?: pulumi.Input<number | undefined>;
     /**
      * Voice domain permission
      *   - Default value: `false`
      */
-    voiceDomainPermission?: pulumi.Input<boolean>;
+    voiceDomainPermission?: pulumi.Input<boolean | undefined>;
     /**
      * Web authentication (local)
      *   - Default value: `false`
      */
-    webAuth?: pulumi.Input<boolean>;
+    webAuth?: pulumi.Input<boolean | undefined>;
     /**
      * Web redirection ACL
      */
-    webRedirectionAcl?: pulumi.Input<string>;
+    webRedirectionAcl?: pulumi.Input<string | undefined>;
     /**
      * This attribute is mandatory when `webRedirectionType` value is `CentralizedWebAuth`. For all other `webRedirectionType` values the field must be ignored.
      */
-    webRedirectionDisplayCertificatesRenewalMessages?: pulumi.Input<boolean>;
+    webRedirectionDisplayCertificatesRenewalMessages?: pulumi.Input<boolean | undefined>;
     /**
      * A portal that exist in the DB and fits the `webRedirectionType`
      */
-    webRedirectionPortalName?: pulumi.Input<string>;
+    webRedirectionPortalName?: pulumi.Input<string | undefined>;
     /**
      * IP, hostname or FQDN
      */
-    webRedirectionStaticIpHostNameFqdn?: pulumi.Input<string>;
+    webRedirectionStaticIpHostNameFqdn?: pulumi.Input<string | undefined>;
     /**
      * This type must fit the `webRedirectionPortalName`
      *   - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
      */
-    webRedirectionType?: pulumi.Input<string>;
+    webRedirectionType?: pulumi.Input<string | undefined>;
 }

@@ -19,7 +19,7 @@ __all__ = ['EgressPushMatrixArgs', 'EgressPushMatrix']
 @pulumi.input_type
 class EgressPushMatrixArgs:
     def __init__(__self__, *,
-                 force: Optional[pulumi.Input[_builtins.bool]] = None):
+                 force: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a EgressPushMatrix resource.
 
@@ -31,7 +31,7 @@ class EgressPushMatrixArgs:
 
     @_builtins.property
     @pulumi.getter
-    def force(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def force(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set to true to re-trigger push on update. Will automatically reset to false after execution.
           - Default value: `false`
@@ -39,14 +39,14 @@ class EgressPushMatrixArgs:
         return pulumi.get(self, "force")
 
     @force.setter
-    def force(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def force(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "force", value)
 
 
 @pulumi.input_type
 class _EgressPushMatrixState:
     def __init__(__self__, *,
-                 force: Optional[pulumi.Input[_builtins.bool]] = None):
+                 force: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering EgressPushMatrix resources.
 
@@ -58,7 +58,7 @@ class _EgressPushMatrixState:
 
     @_builtins.property
     @pulumi.getter
-    def force(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def force(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set to true to re-trigger push on update. Will automatically reset to false after execution.
           - Default value: `false`
@@ -66,7 +66,7 @@ class _EgressPushMatrixState:
         return pulumi.get(self, "force")
 
     @force.setter
-    def force(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def force(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "force", value)
 
 
@@ -76,7 +76,7 @@ class EgressPushMatrix(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 force: Optional[pulumi.Input[_builtins.bool]] = None,
+                 force: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource triggers a CoA notification on TrustSec Policy, SGACL, or TrustSec Environment Data updates
@@ -130,7 +130,7 @@ class EgressPushMatrix(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 force: Optional[pulumi.Input[_builtins.bool]] = None,
+                 force: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -151,7 +151,7 @@ class EgressPushMatrix(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            force: Optional[pulumi.Input[_builtins.bool]] = None) -> 'EgressPushMatrix':
+            force: pulumi.Input[Optional[_builtins.bool]] = None) -> 'EgressPushMatrix':
         """
         Get an existing EgressPushMatrix resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -180,8 +180,8 @@ def get_ip_to_sgt_mapping(id: Optional[_builtins.str] = None,
         mapping_group=pulumi.get(__ret__, 'mapping_group'),
         name=pulumi.get(__ret__, 'name'),
         sgt=pulumi.get(__ret__, 'sgt'))
-def get_ip_to_sgt_mapping_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                 name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_ip_to_sgt_mapping_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                 name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIpToSgtMappingResult]:
     """
     This data source can read the TrustSec IP to SGT Mapping.

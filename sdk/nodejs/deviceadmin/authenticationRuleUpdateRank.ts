@@ -104,15 +104,15 @@ export interface AuthenticationRuleUpdateRankState {
     /**
      * Policy set ID
      */
-    policySetId?: pulumi.Input<string>;
+    policySetId?: pulumi.Input<string | undefined>;
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    rank?: pulumi.Input<number>;
+    rank?: pulumi.Input<number | undefined>;
     /**
      * Authentication rule ID
      */
-    ruleId?: pulumi.Input<string>;
+    ruleId?: pulumi.Input<string | undefined>;
 }
 
 /**

@@ -109,19 +109,19 @@ export interface EndpointIdentityGroupState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the endpoint identity group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Parent endpoint identity group ID
      */
-    parentEndpointIdentityGroupId?: pulumi.Input<string>;
+    parentEndpointIdentityGroupId?: pulumi.Input<string | undefined>;
     /**
      * System defined endpoint identity group
      */
-    systemDefined?: pulumi.Input<boolean>;
+    systemDefined?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -131,17 +131,17 @@ export interface EndpointIdentityGroupArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the endpoint identity group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Parent endpoint identity group ID
      */
-    parentEndpointIdentityGroupId?: pulumi.Input<string>;
+    parentEndpointIdentityGroupId?: pulumi.Input<string | undefined>;
     /**
      * System defined endpoint identity group
      */
-    systemDefined?: pulumi.Input<boolean>;
+    systemDefined?: pulumi.Input<boolean | undefined>;
 }

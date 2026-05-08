@@ -122,25 +122,25 @@ export interface SecurityGroupAclState {
     /**
      * Content of ACL
      */
-    aclContent?: pulumi.Input<string>;
+    aclContent?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IP Version
      *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
      *   - Default value: `IP_AGNOSTIC`
      */
-    ipVersion?: pulumi.Input<string>;
+    ipVersion?: pulumi.Input<string | undefined>;
     /**
      * The name of the security group ACL
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Read-only
      */
-    readOnly?: pulumi.Input<boolean>;
+    readOnly?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -154,19 +154,19 @@ export interface SecurityGroupAclArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IP Version
      *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
      *   - Default value: `IP_AGNOSTIC`
      */
-    ipVersion?: pulumi.Input<string>;
+    ipVersion?: pulumi.Input<string | undefined>;
     /**
      * The name of the security group ACL
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Read-only
      */
-    readOnly?: pulumi.Input<boolean>;
+    readOnly?: pulumi.Input<boolean | undefined>;
 }

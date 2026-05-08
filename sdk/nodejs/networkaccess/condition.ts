@@ -157,45 +157,45 @@ export interface ConditionState {
     /**
      * Dictionary attribute name
      */
-    attributeName?: pulumi.Input<string>;
+    attributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    attributeValue?: pulumi.Input<string>;
+    attributeValue?: pulumi.Input<string | undefined>;
     /**
      * List of child conditions.
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildren>[] | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
      */
-    conditionType?: pulumi.Input<string>;
+    conditionType?: pulumi.Input<string | undefined>;
     /**
      * Condition description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Dictionary name
      */
-    dictionaryName?: pulumi.Input<string>;
+    dictionaryName?: pulumi.Input<string | undefined>;
     /**
      * Dictionary value
      */
-    dictionaryValue?: pulumi.Input<string>;
+    dictionaryValue?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    isNegate?: pulumi.Input<boolean>;
+    isNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Condition name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Equality operator
      *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
      */
-    operator?: pulumi.Input<string>;
+    operator?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -205,15 +205,15 @@ export interface ConditionArgs {
     /**
      * Dictionary attribute name
      */
-    attributeName?: pulumi.Input<string>;
+    attributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    attributeValue?: pulumi.Input<string>;
+    attributeValue?: pulumi.Input<string | undefined>;
     /**
      * List of child conditions.
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.ConditionChildren>[] | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      *   - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
@@ -222,26 +222,26 @@ export interface ConditionArgs {
     /**
      * Condition description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Dictionary name
      */
-    dictionaryName?: pulumi.Input<string>;
+    dictionaryName?: pulumi.Input<string | undefined>;
     /**
      * Dictionary value
      */
-    dictionaryValue?: pulumi.Input<string>;
+    dictionaryValue?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    isNegate?: pulumi.Input<boolean>;
+    isNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Condition name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Equality operator
      *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
      */
-    operator?: pulumi.Input<string>;
+    operator?: pulumi.Input<string | undefined>;
 }

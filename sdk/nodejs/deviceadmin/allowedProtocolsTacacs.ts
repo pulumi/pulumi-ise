@@ -126,23 +126,23 @@ export interface AllowedProtocolsTacacsState {
     /**
      * Allow CHAP
      */
-    allowChap?: pulumi.Input<boolean>;
+    allowChap?: pulumi.Input<boolean | undefined>;
     /**
      * Allow MS CHAP v1
      */
-    allowMsChapV1?: pulumi.Input<boolean>;
+    allowMsChapV1?: pulumi.Input<boolean | undefined>;
     /**
      * Allow PAP ASCII
      */
-    allowPapAscii?: pulumi.Input<boolean>;
+    allowPapAscii?: pulumi.Input<boolean | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the allowed protocols
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -164,9 +164,9 @@ export interface AllowedProtocolsTacacsArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the allowed protocols
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

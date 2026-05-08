@@ -115,21 +115,21 @@ export interface DownloadableAclState {
     /**
      * The DACL content
      */
-    dacl?: pulumi.Input<string>;
+    dacl?: pulumi.Input<string | undefined>;
     /**
      * The type of ACL
      *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
      *   - Default value: `IPV4`
      */
-    daclType?: pulumi.Input<string>;
+    daclType?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the downloadable ACL
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -145,13 +145,13 @@ export interface DownloadableAclArgs {
      *   - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
      *   - Default value: `IPV4`
      */
-    daclType?: pulumi.Input<string>;
+    daclType?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the downloadable ACL
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

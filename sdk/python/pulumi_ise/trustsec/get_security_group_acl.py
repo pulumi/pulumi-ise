@@ -141,8 +141,8 @@ def get_security_group_acl(id: Optional[_builtins.str] = None,
         ip_version=pulumi.get(__ret__, 'ip_version'),
         name=pulumi.get(__ret__, 'name'),
         read_only=pulumi.get(__ret__, 'read_only'))
-def get_security_group_acl_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_security_group_acl_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                  name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityGroupAclResult]:
     """
     This data source can read the TrustSec Security Group ACL.

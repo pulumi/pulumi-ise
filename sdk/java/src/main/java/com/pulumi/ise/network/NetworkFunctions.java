@@ -32,8 +32,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -72,8 +72,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -112,8 +112,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -152,8 +152,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -192,8 +192,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -232,8 +232,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -272,8 +272,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -312,8 +312,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -352,8 +352,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -392,8 +392,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -432,8 +432,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -472,8 +472,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -512,8 +512,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -552,8 +552,8 @@ public final class NetworkFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.network.NetworkFunctions;
      * import com.pulumi.ise.network.inputs.GetDeviceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

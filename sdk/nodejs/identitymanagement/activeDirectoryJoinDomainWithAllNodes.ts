@@ -93,11 +93,11 @@ export class ActiveDirectoryJoinDomainWithAllNodes extends pulumi.CustomResource
  * Input properties used for looking up and filtering ActiveDirectoryJoinDomainWithAllNodes resources.
  */
 export interface ActiveDirectoryJoinDomainWithAllNodesState {
-    additionalDatas?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinDomainWithAllNodesAdditionalData>[]>;
+    additionalDatas?: pulumi.Input<pulumi.Input<inputs.identitymanagement.ActiveDirectoryJoinDomainWithAllNodesAdditionalData>[] | undefined>;
     /**
      * Active Directory Join Point ID
      */
-    joinPointId?: pulumi.Input<string>;
+    joinPointId?: pulumi.Input<string | undefined>;
 }
 
 /**
