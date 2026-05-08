@@ -1167,6 +1167,88 @@ export namespace deviceadmin {
          */
         attributeValue?: string;
         /**
+         * List of child conditions
+         */
+        childrens?: outputs.deviceadmin.ConditionChildrenChildrenChildrenChildrenChildren[];
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface ConditionChildrenChildrenChildrenChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions
+         */
+        childrens?: outputs.deviceadmin.ConditionChildrenChildrenChildrenChildrenChildrenChildren[];
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface ConditionChildrenChildrenChildrenChildrenChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition
+         */
+        attributeValue?: string;
+        /**
          * Condition type.
          *   - Choices: `ConditionAttributes`, `ConditionReference`
          */
@@ -2129,6 +2211,10 @@ export namespace deviceadmin {
          */
         attributeValue: string;
         /**
+         * List of child conditions
+         */
+        childrens: outputs.deviceadmin.GetConditionChildrenChildrenChildrenChildrenChildren[];
+        /**
          * Condition type.
          */
         conditionType: string;
@@ -2152,6 +2238,48 @@ export namespace deviceadmin {
          * Equality operator
          */
         operator: string;
+    }
+
+    export interface GetConditionChildrenChildrenChildrenChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions
+         */
+        childrens: outputs.deviceadmin.GetConditionChildrenChildrenChildrenChildrenChildrenChildren[];
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetConditionChildrenChildrenChildrenChildrenChildrenChildren {
     }
 
     export interface GetPolicySetChildren {
@@ -4048,6 +4176,88 @@ export namespace networkaccess {
          */
         attributeValue?: string;
         /**
+         * List of child conditions
+         */
+        childrens?: outputs.networkaccess.ConditionChildrenChildrenChildrenChildrenChildren[];
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface ConditionChildrenChildrenChildrenChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition
+         */
+        attributeValue?: string;
+        /**
+         * List of child conditions
+         */
+        childrens?: outputs.networkaccess.ConditionChildrenChildrenChildrenChildrenChildrenChildren[];
+        /**
+         * Condition type.
+         *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName?: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue?: string;
+        /**
+         * UUID for condition
+         */
+        id?: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate?: boolean;
+        /**
+         * Equality operator
+         *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+         */
+        operator?: string;
+    }
+
+    export interface ConditionChildrenChildrenChildrenChildrenChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName?: string;
+        /**
+         * Attribute value for condition
+         */
+        attributeValue?: string;
+        /**
          * Condition type.
          *   - Choices: `ConditionAttributes`, `ConditionReference`
          */
@@ -4073,6 +4283,17 @@ export namespace networkaccess {
          *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
          */
         operator?: string;
+    }
+
+    export interface DictionaryAttributeAllowedValue {
+        /**
+         * The allowed value key
+         */
+        key?: string;
+        /**
+         * The allowed value
+         */
+        value?: string;
     }
 
     export interface GetAuthenticationRuleChildren {
@@ -5037,6 +5258,10 @@ export namespace networkaccess {
          */
         attributeValue: string;
         /**
+         * List of child conditions
+         */
+        childrens: outputs.networkaccess.GetConditionChildrenChildrenChildrenChildrenChildren[];
+        /**
          * Condition type.
          */
         conditionType: string;
@@ -5060,6 +5285,59 @@ export namespace networkaccess {
          * Equality operator
          */
         operator: string;
+    }
+
+    export interface GetConditionChildrenChildrenChildrenChildrenChildren {
+        /**
+         * Dictionary attribute name
+         */
+        attributeName: string;
+        /**
+         * Attribute value for condition
+         */
+        attributeValue: string;
+        /**
+         * List of child conditions
+         */
+        childrens: outputs.networkaccess.GetConditionChildrenChildrenChildrenChildrenChildrenChildren[];
+        /**
+         * Condition type.
+         */
+        conditionType: string;
+        /**
+         * Dictionary name
+         */
+        dictionaryName: string;
+        /**
+         * Dictionary value
+         */
+        dictionaryValue: string;
+        /**
+         * UUID for condition
+         */
+        id: string;
+        /**
+         * Indicates whereas this condition is in negate mode
+         */
+        isNegate: boolean;
+        /**
+         * Equality operator
+         */
+        operator: string;
+    }
+
+    export interface GetConditionChildrenChildrenChildrenChildrenChildrenChildren {
+    }
+
+    export interface GetDictionaryAttributeAllowedValue {
+        /**
+         * The allowed value key
+         */
+        key: string;
+        /**
+         * The allowed value
+         */
+        value: string;
     }
 
     export interface GetPolicySetChildren {

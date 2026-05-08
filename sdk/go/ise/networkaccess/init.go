@@ -53,6 +53,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Condition{}
 	case "ise:networkaccess/dictionary:Dictionary":
 		r = &Dictionary{}
+	case "ise:networkaccess/dictionaryAttribute:DictionaryAttribute":
+		r = &DictionaryAttribute{}
 	case "ise:networkaccess/downloadableAcl:DownloadableAcl":
 		r = &DownloadableAcl{}
 	case "ise:networkaccess/policySet:PolicySet":
@@ -154,6 +156,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"ise",
 		"networkaccess/dictionary",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"networkaccess/dictionaryAttribute",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

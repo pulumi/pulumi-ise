@@ -22,6 +22,7 @@ from .authorization_rule_update_rank import *
 from .authorization_rule_update_ranks import *
 from .condition import *
 from .dictionary import *
+from .dictionary_attribute import *
 from .downloadable_acl import *
 from .get_allowed_protocols import *
 from .get_authentication_rule import *
@@ -31,6 +32,7 @@ from .get_authorization_profile import *
 from .get_authorization_rule import *
 from .get_condition import *
 from .get_dictionary import *
+from .get_dictionary_attribute import *
 from .get_downloadable_acl import *
 from .get_policy_set import *
 from .get_time_and_date_condition import *

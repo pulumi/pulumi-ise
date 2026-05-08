@@ -85,6 +85,11 @@ export type Dictionary = import("./dictionary").Dictionary;
 export const Dictionary: typeof import("./dictionary").Dictionary = null as any;
 utilities.lazyLoad(exports, ["Dictionary"], () => require("./dictionary"));
 
+export { DictionaryAttributeArgs, DictionaryAttributeState } from "./dictionaryAttribute";
+export type DictionaryAttribute = import("./dictionaryAttribute").DictionaryAttribute;
+export const DictionaryAttribute: typeof import("./dictionaryAttribute").DictionaryAttribute = null as any;
+utilities.lazyLoad(exports, ["DictionaryAttribute"], () => require("./dictionaryAttribute"));
+
 export { DownloadableAclArgs, DownloadableAclState } from "./downloadableAcl";
 export type DownloadableAcl = import("./downloadableAcl").DownloadableAcl;
 export const DownloadableAcl: typeof import("./downloadableAcl").DownloadableAcl = null as any;
@@ -129,6 +134,11 @@ export { GetDictionaryArgs, GetDictionaryResult, GetDictionaryOutputArgs } from 
 export const getDictionary: typeof import("./getDictionary").getDictionary = null as any;
 export const getDictionaryOutput: typeof import("./getDictionary").getDictionaryOutput = null as any;
 utilities.lazyLoad(exports, ["getDictionary","getDictionaryOutput"], () => require("./getDictionary"));
+
+export { GetDictionaryAttributeArgs, GetDictionaryAttributeResult, GetDictionaryAttributeOutputArgs } from "./getDictionaryAttribute";
+export const getDictionaryAttribute: typeof import("./getDictionaryAttribute").getDictionaryAttribute = null as any;
+export const getDictionaryAttributeOutput: typeof import("./getDictionaryAttribute").getDictionaryAttributeOutput = null as any;
+utilities.lazyLoad(exports, ["getDictionaryAttribute","getDictionaryAttributeOutput"], () => require("./getDictionaryAttribute"));
 
 export { GetDownloadableAclArgs, GetDownloadableAclResult, GetDownloadableAclOutputArgs } from "./getDownloadableAcl";
 export const getDownloadableAcl: typeof import("./getDownloadableAcl").getDownloadableAcl = null as any;
@@ -202,6 +212,8 @@ const _module = {
                 return new Condition(name, <any>undefined, { urn })
             case "ise:networkaccess/dictionary:Dictionary":
                 return new Dictionary(name, <any>undefined, { urn })
+            case "ise:networkaccess/dictionaryAttribute:DictionaryAttribute":
+                return new DictionaryAttribute(name, <any>undefined, { urn })
             case "ise:networkaccess/downloadableAcl:DownloadableAcl":
                 return new DownloadableAcl(name, <any>undefined, { urn })
             case "ise:networkaccess/policySet:PolicySet":
@@ -233,6 +245,7 @@ pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationRuleUpd
 pulumi.runtime.registerResourceModule("ise", "networkaccess/authorizationRuleUpdateRanks", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/condition", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/dictionary", _module)
+pulumi.runtime.registerResourceModule("ise", "networkaccess/dictionaryAttribute", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/downloadableAcl", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/policySet", _module)
 pulumi.runtime.registerResourceModule("ise", "networkaccess/policySetUpdateRank", _module)
