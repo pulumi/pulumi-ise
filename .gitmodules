@@ -1,4 +1,0 @@
-[submodule "upstream"]
-	path = upstream
-	url = https://github.com/CiscoDevNet/terraform-provider-ise.git
-  ignore = dirty
