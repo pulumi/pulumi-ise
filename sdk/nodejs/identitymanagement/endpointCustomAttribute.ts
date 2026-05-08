@@ -103,12 +103,12 @@ export interface EndpointCustomAttributeState {
     /**
      * The name of the attribute
      */
-    attributeName?: pulumi.Input<string>;
+    attributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute type
      *   - Choices: `Boolean`, `Date`, `Float`, `IP`, `Int`, `Long`, `String`
      */
-    attributeType?: pulumi.Input<string>;
+    attributeType?: pulumi.Input<string | undefined>;
 }
 
 /**

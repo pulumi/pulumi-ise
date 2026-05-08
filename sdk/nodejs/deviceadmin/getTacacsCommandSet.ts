@@ -95,9 +95,9 @@ export interface GetTacacsCommandSetOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * The name of the TACACS command set
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

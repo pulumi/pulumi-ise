@@ -22,21 +22,21 @@ __all__ = ['PolicySetArgs', 'PolicySet']
 class PolicySetArgs:
     def __init__(__self__, *,
                  service_name: pulumi.Input[_builtins.str],
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None):
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenArgs']]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicySet resource.
 
@@ -106,91 +106,91 @@ class PolicySetArgs:
 
     @_builtins.property
     @pulumi.getter
-    def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]:
+    def childrens(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]:
         """
         List of child conditions
         """
         return pulumi.get(self, "childrens")
 
     @childrens.setter
-    def childrens(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]):
+    def childrens(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]):
         pulumi.set(self, "childrens", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeName")
-    def condition_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary attribute name
         """
         return pulumi.get(self, "condition_attribute_name")
 
     @condition_attribute_name.setter
-    def condition_attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeValue")
-    def condition_attribute_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute value for condition. Value type is specified in dictionary object.
         """
         return pulumi.get(self, "condition_attribute_value")
 
     @condition_attribute_value.setter
-    def condition_attribute_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryName")
-    def condition_dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary name
         """
         return pulumi.get(self, "condition_dictionary_name")
 
     @condition_dictionary_name.setter
-    def condition_dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryValue")
-    def condition_dictionary_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary value
         """
         return pulumi.get(self, "condition_dictionary_value")
 
     @condition_dictionary_value.setter
-    def condition_dictionary_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionId")
-    def condition_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         UUID for condition
         """
         return pulumi.get(self, "condition_id")
 
     @condition_id.setter
-    def condition_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_id", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionIsNegate")
-    def condition_is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def condition_is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "condition_is_negate")
 
     @condition_is_negate.setter
-    def condition_is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def condition_is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "condition_is_negate", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionOperator")
-    def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_operator(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Equality operator
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
@@ -198,12 +198,12 @@ class PolicySetArgs:
         return pulumi.get(self, "condition_operator")
 
     @condition_operator.setter
-    def condition_operator(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_operator(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_operator", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionType")
-    def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
           - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
@@ -211,72 +211,72 @@ class PolicySetArgs:
         return pulumi.get(self, "condition_type")
 
     @condition_type.setter
-    def condition_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates if this policy set is the default one
         """
         return pulumi.get(self, "default")
 
     @default.setter
-    def default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy set
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="isProxy")
-    def is_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_proxy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
         """
         return pulumi.get(self, "is_proxy")
 
     @is_proxy.setter
-    def is_proxy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_proxy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_proxy", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rank(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rank(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         """
         return pulumi.get(self, "rank")
 
     @rank.setter
-    def rank(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rank(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rank", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state that the policy set is in. A disabled policy set cannot be matched.
           - Choices: `disabled`, `enabled`, `monitor`
@@ -284,29 +284,29 @@ class PolicySetArgs:
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
 
 @pulumi.input_type
 class _PolicySetState:
     def __init__(__self__, *,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None):
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenArgs']]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicySet resources.
 
@@ -365,91 +365,91 @@ class _PolicySetState:
 
     @_builtins.property
     @pulumi.getter
-    def childrens(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]:
+    def childrens(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]:
         """
         List of child conditions
         """
         return pulumi.get(self, "childrens")
 
     @childrens.setter
-    def childrens(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]):
+    def childrens(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenArgs']]]]):
         pulumi.set(self, "childrens", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeName")
-    def condition_attribute_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary attribute name
         """
         return pulumi.get(self, "condition_attribute_name")
 
     @condition_attribute_name.setter
-    def condition_attribute_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionAttributeValue")
-    def condition_attribute_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_attribute_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Attribute value for condition. Value type is specified in dictionary object.
         """
         return pulumi.get(self, "condition_attribute_value")
 
     @condition_attribute_value.setter
-    def condition_attribute_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_attribute_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_attribute_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryName")
-    def condition_dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary name
         """
         return pulumi.get(self, "condition_dictionary_name")
 
     @condition_dictionary_name.setter
-    def condition_dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionDictionaryValue")
-    def condition_dictionary_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_dictionary_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dictionary value
         """
         return pulumi.get(self, "condition_dictionary_value")
 
     @condition_dictionary_value.setter
-    def condition_dictionary_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_dictionary_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_dictionary_value", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionId")
-    def condition_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         UUID for condition
         """
         return pulumi.get(self, "condition_id")
 
     @condition_id.setter
-    def condition_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_id", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionIsNegate")
-    def condition_is_negate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def condition_is_negate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whereas this condition is in negate mode
         """
         return pulumi.get(self, "condition_is_negate")
 
     @condition_is_negate.setter
-    def condition_is_negate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def condition_is_negate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "condition_is_negate", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionOperator")
-    def condition_operator(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_operator(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Equality operator
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
@@ -457,12 +457,12 @@ class _PolicySetState:
         return pulumi.get(self, "condition_operator")
 
     @condition_operator.setter
-    def condition_operator(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_operator(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_operator", value)
 
     @_builtins.property
     @pulumi.getter(name="conditionType")
-    def condition_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def condition_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
           - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
@@ -470,84 +470,84 @@ class _PolicySetState:
         return pulumi.get(self, "condition_type")
 
     @condition_type.setter
-    def condition_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def condition_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "condition_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates if this policy set is the default one
         """
         return pulumi.get(self, "default")
 
     @default.setter
-    def default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy set
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="isProxy")
-    def is_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_proxy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
         """
         return pulumi.get(self, "is_proxy")
 
     @is_proxy.setter
-    def is_proxy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_proxy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_proxy", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rank(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rank(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The rank (priority) in relation to other policy sets. Lower rank is higher priority.
         """
         return pulumi.get(self, "rank")
 
     @rank.setter
-    def rank(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rank(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rank", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceName")
-    def service_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
         """
         return pulumi.get(self, "service_name")
 
     @service_name.setter
-    def service_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state that the policy set is in. A disabled policy set cannot be matched.
           - Choices: `disabled`, `enabled`, `monitor`
@@ -555,7 +555,7 @@ class _PolicySetState:
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
 
@@ -565,22 +565,22 @@ class PolicySet(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Network Access Policy Set.
@@ -691,22 +691,22 @@ class PolicySet(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]]] = None,
-                 condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-                 condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]]] = None,
+                 condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+                 condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -744,22 +744,22 @@ class PolicySet(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            childrens: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]]] = None,
-            condition_attribute_name: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_attribute_value: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_dictionary_value: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_id: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_is_negate: Optional[pulumi.Input[_builtins.bool]] = None,
-            condition_operator: Optional[pulumi.Input[_builtins.str]] = None,
-            condition_type: Optional[pulumi.Input[_builtins.str]] = None,
-            default: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            is_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            rank: Optional[pulumi.Input[_builtins.int]] = None,
-            service_name: Optional[pulumi.Input[_builtins.str]] = None,
-            state: Optional[pulumi.Input[_builtins.str]] = None) -> 'PolicySet':
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetChildrenArgs', 'PolicySetChildrenArgsDict']]]]] = None,
+            condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            is_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rank: pulumi.Input[Optional[_builtins.int]] = None,
+            service_name: pulumi.Input[Optional[_builtins.str]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None) -> 'PolicySet':
         """
         Get an existing PolicySet resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

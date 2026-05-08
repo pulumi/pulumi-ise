@@ -207,8 +207,8 @@ def get_condition(id: Optional[_builtins.str] = None,
         is_negate=pulumi.get(__ret__, 'is_negate'),
         name=pulumi.get(__ret__, 'name'),
         operator=pulumi.get(__ret__, 'operator'))
-def get_condition_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                         name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_condition_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                         name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConditionResult]:
     """
     This data source can read the Network Access Condition.

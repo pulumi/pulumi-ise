@@ -113,21 +113,21 @@ export interface EgressMatrixCellDefaultState {
      * Can be used only if sgacls not specified. Final Catch All Rule
      *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      */
-    defaultRule?: pulumi.Input<string>;
+    defaultRule?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Matrix Cell Status
      *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
      *   - Default value: `DISABLED`
      */
-    matrixCellStatus?: pulumi.Input<string>;
+    matrixCellStatus?: pulumi.Input<string | undefined>;
     /**
      * List of TrustSec Security Groups ACLs
      */
-    sgacls?: pulumi.Input<pulumi.Input<string>[]>;
+    sgacls?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -138,19 +138,19 @@ export interface EgressMatrixCellDefaultArgs {
      * Can be used only if sgacls not specified. Final Catch All Rule
      *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      */
-    defaultRule?: pulumi.Input<string>;
+    defaultRule?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Matrix Cell Status
      *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
      *   - Default value: `DISABLED`
      */
-    matrixCellStatus?: pulumi.Input<string>;
+    matrixCellStatus?: pulumi.Input<string | undefined>;
     /**
      * List of TrustSec Security Groups ACLs
      */
-    sgacls?: pulumi.Input<pulumi.Input<string>[]>;
+    sgacls?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

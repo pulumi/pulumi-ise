@@ -99,7 +99,7 @@ def get_endpoint_custom_attribute(id: Optional[_builtins.str] = None,
         attribute_name=pulumi.get(__ret__, 'attribute_name'),
         attribute_type=pulumi.get(__ret__, 'attribute_type'),
         id=pulumi.get(__ret__, 'id'))
-def get_endpoint_custom_attribute_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_endpoint_custom_attribute_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEndpointCustomAttributeResult]:
     """
     This data source can read the Endpoint Custom Attribute.

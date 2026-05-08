@@ -122,24 +122,24 @@ export interface IpToSgtMappingGroupState {
     /**
      * Mandatory unless `deployType` is `ALL`
      */
-    deployTo?: pulumi.Input<string>;
+    deployTo?: pulumi.Input<string | undefined>;
     /**
      * Deploy Type
      *   - Choices: `ALL`, `ND`, `NDG`
      */
-    deployType?: pulumi.Input<string>;
+    deployType?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the IP to SGT mapping Group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Trustsec Security Group ID
      */
-    sgt?: pulumi.Input<string>;
+    sgt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -149,7 +149,7 @@ export interface IpToSgtMappingGroupArgs {
     /**
      * Mandatory unless `deployType` is `ALL`
      */
-    deployTo?: pulumi.Input<string>;
+    deployTo?: pulumi.Input<string | undefined>;
     /**
      * Deploy Type
      *   - Choices: `ALL`, `ND`, `NDG`
@@ -158,11 +158,11 @@ export interface IpToSgtMappingGroupArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the IP to SGT mapping Group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Trustsec Security Group ID
      */

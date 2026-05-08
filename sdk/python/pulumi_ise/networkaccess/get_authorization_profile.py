@@ -506,8 +506,8 @@ def get_authorization_profile(id: Optional[_builtins.str] = None,
         web_redirection_portal_name=pulumi.get(__ret__, 'web_redirection_portal_name'),
         web_redirection_static_ip_host_name_fqdn=pulumi.get(__ret__, 'web_redirection_static_ip_host_name_fqdn'),
         web_redirection_type=pulumi.get(__ret__, 'web_redirection_type'))
-def get_authorization_profile_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_authorization_profile_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthorizationProfileResult]:
     """
     This data source can read an authorization profiles policy element.

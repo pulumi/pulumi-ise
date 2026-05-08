@@ -79,27 +79,27 @@ export interface ProviderArgs {
     /**
      * Allow insecure HTTPS client. This can also be set as the ISE_INSECURE environment variable. Defaults to `true`.
      */
-    insecure?: pulumi.Input<boolean>;
+    insecure?: pulumi.Input<boolean | undefined>;
     /**
      * Password for the ISE instance. This can also be set as the ISE_PASSWORD environment variable.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * HTTP request timeout in seconds for REST API calls. This can also be set as the ISE_REQUEST_TIMEOUT environment variable. Defaults to `60`. Increase this value when working with complex nested policy conditions (e.g., 7-level nesting may require 180-300 seconds).
      */
-    requestTimeout?: pulumi.Input<number>;
+    requestTimeout?: pulumi.Input<number | undefined>;
     /**
      * Number of retries for REST API calls. This can also be set as the ISE_RETRIES environment variable. Defaults to `3`.
      */
-    retries?: pulumi.Input<number>;
+    retries?: pulumi.Input<number | undefined>;
     /**
      * URL of the Cisco ISE instance. This can also be set as the ISE_URL environment variable.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
     /**
      * Username for the ISE instance. This can also be set as the ISE_USERNAME environment variable.
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
 }
 
 export namespace Provider {

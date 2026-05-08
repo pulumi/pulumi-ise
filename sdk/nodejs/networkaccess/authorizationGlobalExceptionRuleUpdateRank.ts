@@ -94,11 +94,11 @@ export interface AuthorizationGlobalExceptionRuleUpdateRankState {
     /**
      * The rank (priority) in relation to other rules. Lower rank is higher priority.
      */
-    rank?: pulumi.Input<number>;
+    rank?: pulumi.Input<number | undefined>;
     /**
      * Authorization global exception rule ID
      */
-    ruleId?: pulumi.Input<string>;
+    ruleId?: pulumi.Input<string | undefined>;
 }
 
 /**

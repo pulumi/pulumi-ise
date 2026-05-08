@@ -135,36 +135,36 @@ export interface IpToSgtMappingState {
     /**
      * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      */
-    deployTo?: pulumi.Input<string>;
+    deployTo?: pulumi.Input<string | undefined>;
     /**
      * Deploy Type
      *   - Choices: `ALL`, `ND`, `NDG`
      */
-    deployType?: pulumi.Input<string>;
+    deployType?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Mandatory if `hostName` is empty
      */
-    hostIp?: pulumi.Input<string>;
+    hostIp?: pulumi.Input<string | undefined>;
     /**
      * Mandatory if `hostIp` is empty
      */
-    hostName?: pulumi.Input<string>;
+    hostName?: pulumi.Input<string | undefined>;
     /**
      * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      */
-    mappingGroup?: pulumi.Input<string>;
+    mappingGroup?: pulumi.Input<string | undefined>;
     /**
      * The name of the IP to SGT mapping
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      */
-    sgt?: pulumi.Input<string>;
+    sgt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -174,34 +174,34 @@ export interface IpToSgtMappingArgs {
     /**
      * Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
      */
-    deployTo?: pulumi.Input<string>;
+    deployTo?: pulumi.Input<string | undefined>;
     /**
      * Deploy Type
      *   - Choices: `ALL`, `ND`, `NDG`
      */
-    deployType?: pulumi.Input<string>;
+    deployType?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Mandatory if `hostName` is empty
      */
-    hostIp?: pulumi.Input<string>;
+    hostIp?: pulumi.Input<string | undefined>;
     /**
      * Mandatory if `hostIp` is empty
      */
-    hostName?: pulumi.Input<string>;
+    hostName?: pulumi.Input<string | undefined>;
     /**
      * IP to SGT Mapping Group ID. Mandatory unless `sgt` and `deployTo` and `deployType` are set
      */
-    mappingGroup?: pulumi.Input<string>;
+    mappingGroup?: pulumi.Input<string | undefined>;
     /**
      * The name of the IP to SGT mapping
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Trustsec Security Group ID. Mandatory unless `mappingGroup` is set
      */
-    sgt?: pulumi.Input<string>;
+    sgt?: pulumi.Input<string | undefined>;
 }

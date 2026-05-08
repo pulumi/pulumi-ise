@@ -108,9 +108,9 @@ export interface GetRepositoryOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

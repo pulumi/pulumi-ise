@@ -106,15 +106,15 @@ export interface DeviceGroupState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the network device group including its hierarchy, e.g. `Device Type#All Device Types#ACCESS`.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The name of the root device group.
      */
-    rootGroup?: pulumi.Input<string>;
+    rootGroup?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -124,11 +124,11 @@ export interface DeviceGroupArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the network device group including its hierarchy, e.g. `Device Type#All Device Types#ACCESS`.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The name of the root device group.
      */

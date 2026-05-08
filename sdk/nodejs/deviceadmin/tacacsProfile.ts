@@ -106,12 +106,12 @@ export interface TacacsProfileState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the TACACS profile
      */
-    name?: pulumi.Input<string>;
-    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsProfileSessionAttribute>[]>;
+    name?: pulumi.Input<string | undefined>;
+    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsProfileSessionAttribute>[] | undefined>;
 }
 
 /**
@@ -121,10 +121,10 @@ export interface TacacsProfileArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the TACACS profile
      */
-    name?: pulumi.Input<string>;
-    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsProfileSessionAttribute>[]>;
+    name?: pulumi.Input<string | undefined>;
+    sessionAttributes?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsProfileSessionAttribute>[] | undefined>;
 }

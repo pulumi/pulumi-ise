@@ -108,9 +108,9 @@ export interface GetCertificateAuthenticationProfileOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * The name of the certificate profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

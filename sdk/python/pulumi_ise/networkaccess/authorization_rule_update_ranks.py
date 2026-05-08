@@ -22,7 +22,7 @@ __all__ = ['AuthorizationRuleUpdateRanksArgs', 'AuthorizationRuleUpdateRanks']
 class AuthorizationRuleUpdateRanksArgs:
     def __init__(__self__, *,
                  policy_set_id: pulumi.Input[_builtins.str],
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]] = None):
         """
         The set of arguments for constructing a AuthorizationRuleUpdateRanks resource.
 
@@ -46,19 +46,19 @@ class AuthorizationRuleUpdateRanksArgs:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _AuthorizationRuleUpdateRanksState:
     def __init__(__self__, *,
-                 policy_set_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]] = None):
+                 policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering AuthorizationRuleUpdateRanks resources.
 
@@ -71,23 +71,23 @@ class _AuthorizationRuleUpdateRanksState:
 
     @_builtins.property
     @pulumi.getter(name="policySetId")
-    def policy_set_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy_set_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Policy set ID
         """
         return pulumi.get(self, "policy_set_id")
 
     @policy_set_id.setter
-    def policy_set_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy_set_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy_set_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleUpdateRanksRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
@@ -97,8 +97,8 @@ class AuthorizationRuleUpdateRanks(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 policy_set_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleUpdateRanksRuleArgs', 'AuthorizationRuleUpdateRanksRuleArgsDict']]]]] = None,
+                 policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleUpdateRanksRuleArgs', 'AuthorizationRuleUpdateRanksRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource is used to bulk update rank field in network access authorization rules. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and network_access_policy_set resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
@@ -161,8 +161,8 @@ class AuthorizationRuleUpdateRanks(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 policy_set_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleUpdateRanksRuleArgs', 'AuthorizationRuleUpdateRanksRuleArgsDict']]]]] = None,
+                 policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleUpdateRanksRuleArgs', 'AuthorizationRuleUpdateRanksRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -186,8 +186,8 @@ class AuthorizationRuleUpdateRanks(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            policy_set_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleUpdateRanksRuleArgs', 'AuthorizationRuleUpdateRanksRuleArgsDict']]]]] = None) -> 'AuthorizationRuleUpdateRanks':
+            policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleUpdateRanksRuleArgs', 'AuthorizationRuleUpdateRanksRuleArgsDict']]]]] = None) -> 'AuthorizationRuleUpdateRanks':
         """
         Get an existing AuthorizationRuleUpdateRanks resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

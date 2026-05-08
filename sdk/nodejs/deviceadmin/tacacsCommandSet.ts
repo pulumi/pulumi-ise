@@ -111,38 +111,38 @@ export class TacacsCommandSet extends pulumi.CustomResource {
  * Input properties used for looking up and filtering TacacsCommandSet resources.
  */
 export interface TacacsCommandSetState {
-    commands?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsCommandSetCommand>[]>;
+    commands?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsCommandSetCommand>[] | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the TACACS command set
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Permit unmatched commands
      *   - Default value: `false`
      */
-    permitUnmatched?: pulumi.Input<boolean>;
+    permitUnmatched?: pulumi.Input<boolean | undefined>;
 }
 
 /**
  * The set of arguments for constructing a TacacsCommandSet resource.
  */
 export interface TacacsCommandSetArgs {
-    commands?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsCommandSetCommand>[]>;
+    commands?: pulumi.Input<pulumi.Input<inputs.deviceadmin.TacacsCommandSetCommand>[] | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the TACACS command set
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Permit unmatched commands
      *   - Default value: `false`
      */
-    permitUnmatched?: pulumi.Input<boolean>;
+    permitUnmatched?: pulumi.Input<boolean | undefined>;
 }

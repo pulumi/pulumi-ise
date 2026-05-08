@@ -122,9 +122,9 @@ export interface GetConditionOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Condition name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

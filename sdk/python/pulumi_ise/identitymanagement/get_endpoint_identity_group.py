@@ -128,8 +128,8 @@ def get_endpoint_identity_group(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         parent_endpoint_identity_group_id=pulumi.get(__ret__, 'parent_endpoint_identity_group_id'),
         system_defined=pulumi.get(__ret__, 'system_defined'))
-def get_endpoint_identity_group_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                       name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_endpoint_identity_group_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                       name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEndpointIdentityGroupResult]:
     """
     This data source can read the Endpoint Identity Group.

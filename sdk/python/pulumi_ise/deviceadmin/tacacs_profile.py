@@ -21,9 +21,9 @@ __all__ = ['TacacsProfileArgs', 'TacacsProfile']
 @pulumi.input_type
 class TacacsProfileArgs:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]] = None):
         """
         The set of arguments for constructing a TacacsProfile resource.
 
@@ -39,44 +39,44 @@ class TacacsProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the TACACS profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionAttributes")
-    def session_attributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]:
+    def session_attributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]:
         return pulumi.get(self, "session_attributes")
 
     @session_attributes.setter
-    def session_attributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]):
+    def session_attributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]):
         pulumi.set(self, "session_attributes", value)
 
 
 @pulumi.input_type
 class _TacacsProfileState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]] = None):
         """
         Input properties used for looking up and filtering TacacsProfile resources.
 
@@ -92,35 +92,35 @@ class _TacacsProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the TACACS profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionAttributes")
-    def session_attributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]:
+    def session_attributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]:
         return pulumi.get(self, "session_attributes")
 
     @session_attributes.setter
-    def session_attributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]):
+    def session_attributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TacacsProfileSessionAttributeArgs']]]]):
         pulumi.set(self, "session_attributes", value)
 
 
@@ -130,9 +130,9 @@ class TacacsProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a TACACS Profile.
@@ -216,9 +216,9 @@ class TacacsProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -241,9 +241,9 @@ class TacacsProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            session_attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None) -> 'TacacsProfile':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None) -> 'TacacsProfile':
         """
         Get an existing TacacsProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

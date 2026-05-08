@@ -78,12 +78,12 @@ export class PolicySetUpdateRanks extends pulumi.CustomResource {
  * Input properties used for looking up and filtering PolicySetUpdateRanks resources.
  */
 export interface PolicySetUpdateRanksState {
-    policies?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetUpdateRanksPolicy>[]>;
+    policies?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetUpdateRanksPolicy>[] | undefined>;
 }
 
 /**
  * The set of arguments for constructing a PolicySetUpdateRanks resource.
  */
 export interface PolicySetUpdateRanksArgs {
-    policies?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetUpdateRanksPolicy>[]>;
+    policies?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetUpdateRanksPolicy>[] | undefined>;
 }

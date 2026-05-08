@@ -258,109 +258,109 @@ export interface EndpointState {
     /**
      * Custom Attributes
      */
-    customAttributes?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    customAttributes?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Identity Group ID
      */
-    groupId?: pulumi.Input<string>;
+    groupId?: pulumi.Input<string | undefined>;
     /**
      * Identity Store
      */
-    identityStore?: pulumi.Input<string>;
+    identityStore?: pulumi.Input<string | undefined>;
     /**
      * Identity Store Id
      */
-    identityStoreId?: pulumi.Input<string>;
+    identityStoreId?: pulumi.Input<string | undefined>;
     /**
      * MAC address of the endpoint
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * Mdm Compliance Status
      */
-    mdmComplianceStatus?: pulumi.Input<boolean>;
+    mdmComplianceStatus?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Encrypted
      */
-    mdmEncrypted?: pulumi.Input<boolean>;
+    mdmEncrypted?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Enrolled
      */
-    mdmEnrolled?: pulumi.Input<boolean>;
+    mdmEnrolled?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm IMEI
      */
-    mdmImei?: pulumi.Input<string>;
+    mdmImei?: pulumi.Input<string | undefined>;
     /**
      * Mdm JailBroken
      */
-    mdmJailBroken?: pulumi.Input<boolean>;
+    mdmJailBroken?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Manufacturer
      */
-    mdmManufacturer?: pulumi.Input<string>;
+    mdmManufacturer?: pulumi.Input<string | undefined>;
     /**
      * Mdm Model
      */
-    mdmModel?: pulumi.Input<string>;
+    mdmModel?: pulumi.Input<string | undefined>;
     /**
      * Mdm OS
      */
-    mdmOs?: pulumi.Input<string>;
+    mdmOs?: pulumi.Input<string | undefined>;
     /**
      * Mdm PhoneNumber
      */
-    mdmPhoneNumber?: pulumi.Input<string>;
+    mdmPhoneNumber?: pulumi.Input<string | undefined>;
     /**
      * Mdm Pinlock
      */
-    mdmPinlock?: pulumi.Input<boolean>;
+    mdmPinlock?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Reachable
      */
-    mdmReachable?: pulumi.Input<boolean>;
+    mdmReachable?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Serial
      */
-    mdmSerial?: pulumi.Input<string>;
+    mdmSerial?: pulumi.Input<string | undefined>;
     /**
      * Mdm Server Name
      */
-    mdmServerName?: pulumi.Input<string>;
+    mdmServerName?: pulumi.Input<string | undefined>;
     /**
      * The name of the endpoint
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Portal User
      */
-    portalUser?: pulumi.Input<string>;
+    portalUser?: pulumi.Input<string | undefined>;
     /**
      * Profile ID
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * Static Group Assignment
      */
-    staticGroupAssignment?: pulumi.Input<boolean>;
+    staticGroupAssignment?: pulumi.Input<boolean | undefined>;
     /**
      * staticGroupAssignmentDefined
      *   - Default value: `true`
      */
-    staticGroupAssignmentDefined?: pulumi.Input<boolean>;
+    staticGroupAssignmentDefined?: pulumi.Input<boolean | undefined>;
     /**
      * Static Profile Assignment
      */
-    staticProfileAssignment?: pulumi.Input<boolean>;
+    staticProfileAssignment?: pulumi.Input<boolean | undefined>;
     /**
      * Static Profile Assignment Defined
      *   - Default value: `true`
      */
-    staticProfileAssignmentDefined?: pulumi.Input<boolean>;
+    staticProfileAssignmentDefined?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -370,23 +370,23 @@ export interface EndpointArgs {
     /**
      * Custom Attributes
      */
-    customAttributes?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    customAttributes?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Identity Group ID
      */
-    groupId?: pulumi.Input<string>;
+    groupId?: pulumi.Input<string | undefined>;
     /**
      * Identity Store
      */
-    identityStore?: pulumi.Input<string>;
+    identityStore?: pulumi.Input<string | undefined>;
     /**
      * Identity Store Id
      */
-    identityStoreId?: pulumi.Input<string>;
+    identityStoreId?: pulumi.Input<string | undefined>;
     /**
      * MAC address of the endpoint
      */
@@ -394,67 +394,67 @@ export interface EndpointArgs {
     /**
      * Mdm Compliance Status
      */
-    mdmComplianceStatus?: pulumi.Input<boolean>;
+    mdmComplianceStatus?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Encrypted
      */
-    mdmEncrypted?: pulumi.Input<boolean>;
+    mdmEncrypted?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Enrolled
      */
-    mdmEnrolled?: pulumi.Input<boolean>;
+    mdmEnrolled?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm IMEI
      */
-    mdmImei?: pulumi.Input<string>;
+    mdmImei?: pulumi.Input<string | undefined>;
     /**
      * Mdm JailBroken
      */
-    mdmJailBroken?: pulumi.Input<boolean>;
+    mdmJailBroken?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Manufacturer
      */
-    mdmManufacturer?: pulumi.Input<string>;
+    mdmManufacturer?: pulumi.Input<string | undefined>;
     /**
      * Mdm Model
      */
-    mdmModel?: pulumi.Input<string>;
+    mdmModel?: pulumi.Input<string | undefined>;
     /**
      * Mdm OS
      */
-    mdmOs?: pulumi.Input<string>;
+    mdmOs?: pulumi.Input<string | undefined>;
     /**
      * Mdm PhoneNumber
      */
-    mdmPhoneNumber?: pulumi.Input<string>;
+    mdmPhoneNumber?: pulumi.Input<string | undefined>;
     /**
      * Mdm Pinlock
      */
-    mdmPinlock?: pulumi.Input<boolean>;
+    mdmPinlock?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Reachable
      */
-    mdmReachable?: pulumi.Input<boolean>;
+    mdmReachable?: pulumi.Input<boolean | undefined>;
     /**
      * Mdm Serial
      */
-    mdmSerial?: pulumi.Input<string>;
+    mdmSerial?: pulumi.Input<string | undefined>;
     /**
      * Mdm Server Name
      */
-    mdmServerName?: pulumi.Input<string>;
+    mdmServerName?: pulumi.Input<string | undefined>;
     /**
      * The name of the endpoint
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Portal User
      */
-    portalUser?: pulumi.Input<string>;
+    portalUser?: pulumi.Input<string | undefined>;
     /**
      * Profile ID
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * Static Group Assignment
      */
@@ -463,7 +463,7 @@ export interface EndpointArgs {
      * staticGroupAssignmentDefined
      *   - Default value: `true`
      */
-    staticGroupAssignmentDefined?: pulumi.Input<boolean>;
+    staticGroupAssignmentDefined?: pulumi.Input<boolean | undefined>;
     /**
      * Static Profile Assignment
      */
@@ -472,5 +472,5 @@ export interface EndpointArgs {
      * Static Profile Assignment Defined
      *   - Default value: `true`
      */
-    staticProfileAssignmentDefined?: pulumi.Input<boolean>;
+    staticProfileAssignmentDefined?: pulumi.Input<boolean | undefined>;
 }

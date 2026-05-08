@@ -56,8 +56,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -96,8 +96,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -136,8 +136,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -176,8 +176,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -216,8 +216,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -256,8 +256,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -296,8 +296,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAllowedProtocolsTacacsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -336,8 +336,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -377,8 +377,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -418,8 +418,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -459,8 +459,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -500,8 +500,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -541,8 +541,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -582,8 +582,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -623,8 +623,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -664,8 +664,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -705,8 +705,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -746,8 +746,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -786,8 +786,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -826,8 +826,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -866,8 +866,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -906,8 +906,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -946,8 +946,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -986,8 +986,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationGlobalExceptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1026,8 +1026,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1067,8 +1067,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1108,8 +1108,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1149,8 +1149,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1190,8 +1190,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetAuthorizationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1231,8 +1231,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1271,8 +1271,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1311,8 +1311,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1351,8 +1351,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1391,8 +1391,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1431,8 +1431,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1471,8 +1471,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1511,8 +1511,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1551,8 +1551,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1591,8 +1591,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1631,8 +1631,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1671,8 +1671,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1711,8 +1711,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1751,8 +1751,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetPolicySetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1791,8 +1791,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1831,8 +1831,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1871,8 +1871,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1911,8 +1911,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1951,8 +1951,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1991,8 +1991,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2031,8 +2031,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsCommandSetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2071,8 +2071,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2111,8 +2111,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2151,8 +2151,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2191,8 +2191,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2231,8 +2231,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2271,8 +2271,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2311,8 +2311,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTacacsProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2351,8 +2351,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2391,8 +2391,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2431,8 +2431,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2471,8 +2471,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2511,8 +2511,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2551,8 +2551,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2591,8 +2591,8 @@ public final class DeviceadminFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.ise.deviceadmin.DeviceadminFunctions;
      * import com.pulumi.ise.deviceadmin.inputs.GetTimeAndDateConditionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

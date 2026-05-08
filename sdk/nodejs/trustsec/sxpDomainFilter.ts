@@ -124,27 +124,27 @@ export interface SxpDomainFilterState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of SXP Domains, separated with comma
      */
-    domains?: pulumi.Input<string>;
+    domains?: pulumi.Input<string | undefined>;
     /**
      * Resource name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * SGT name or ID. At least one of subnet or sgt or vn should be defined
      */
-    sgt?: pulumi.Input<string>;
+    sgt?: pulumi.Input<string | undefined>;
     /**
      * Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
     /**
      * Virtual Network. At least one of subnet or sgt or vn should be defined
      */
-    vn?: pulumi.Input<string>;
+    vn?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -154,7 +154,7 @@ export interface SxpDomainFilterArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of SXP Domains, separated with comma
      */
@@ -162,17 +162,17 @@ export interface SxpDomainFilterArgs {
     /**
      * Resource name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * SGT name or ID. At least one of subnet or sgt or vn should be defined
      */
-    sgt?: pulumi.Input<string>;
+    sgt?: pulumi.Input<string | undefined>;
     /**
      * Subnet for filter policy (hostname is not supported). At least one of subnet or sgt or vn should be defined
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
     /**
      * Virtual Network. At least one of subnet or sgt or vn should be defined
      */
-    vn?: pulumi.Input<string>;
+    vn?: pulumi.Input<string | undefined>;
 }

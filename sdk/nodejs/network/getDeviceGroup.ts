@@ -92,9 +92,9 @@ export interface GetDeviceGroupOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * The name of the network device group including its hierarchy, e.g. `Device Type#All Device Types#ACCESS`.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

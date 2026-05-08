@@ -21,39 +21,39 @@ __all__ = ['AuthorizationProfileArgs', 'AuthorizationProfile']
 @pulumi.input_type
 class AuthorizationProfileArgs:
     def __init__(__self__, *,
-                 access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_attributes: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]] = None,
-                 agentless_posture: Optional[pulumi.Input[_builtins.bool]] = None,
-                 airespace_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 airespace_ipv6_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 asa_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 auto_smart_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 avc_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 easywired_session_candidate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 interface_template: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_acl_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_sec_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 neat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_connectivity: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_template: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_movement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unique_identifier: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_name_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_domain_permission: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_display_certificates_renewal_messages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_portal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_static_ip_host_name_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None):
+                 access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]] = None,
+                 agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
+                 airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 asa_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 auto_smart_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 avc_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 easywired_session_candidate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 interface_template: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_acl_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_sec_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 neat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_connectivity: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_template: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_movement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unique_identifier: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_name_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tag_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_domain_permission: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_display_certificates_renewal_messages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_portal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_static_ip_host_name_fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthorizationProfile resource.
 
@@ -174,7 +174,7 @@ class AuthorizationProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessType")
-    def access_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Access type
           - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
@@ -183,132 +183,132 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "access_type")
 
     @access_type.setter
-    def access_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ACL
         """
         return pulumi.get(self, "acl")
 
     @acl.setter
-    def acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "acl", value)
 
     @_builtins.property
     @pulumi.getter(name="advancedAttributes")
-    def advanced_attributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]:
+    def advanced_attributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]:
         """
         List of advanced attributes
         """
         return pulumi.get(self, "advanced_attributes")
 
     @advanced_attributes.setter
-    def advanced_attributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]):
+    def advanced_attributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]):
         pulumi.set(self, "advanced_attributes", value)
 
     @_builtins.property
     @pulumi.getter(name="agentlessPosture")
-    def agentless_posture(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def agentless_posture(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Agentless Posture.
         """
         return pulumi.get(self, "agentless_posture")
 
     @agentless_posture.setter
-    def agentless_posture(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def agentless_posture(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "agentless_posture", value)
 
     @_builtins.property
     @pulumi.getter(name="airespaceAcl")
-    def airespace_acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def airespace_acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Airespace ACL
         """
         return pulumi.get(self, "airespace_acl")
 
     @airespace_acl.setter
-    def airespace_acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def airespace_acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "airespace_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="airespaceIpv6Acl")
-    def airespace_ipv6_acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def airespace_ipv6_acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Airespace IPv6 ACL
         """
         return pulumi.get(self, "airespace_ipv6_acl")
 
     @airespace_ipv6_acl.setter
-    def airespace_ipv6_acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def airespace_ipv6_acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "airespace_ipv6_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="asaVpn")
-    def asa_vpn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def asa_vpn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ASA VPN
         """
         return pulumi.get(self, "asa_vpn")
 
     @asa_vpn.setter
-    def asa_vpn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def asa_vpn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "asa_vpn", value)
 
     @_builtins.property
     @pulumi.getter(name="autoSmartPort")
-    def auto_smart_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auto_smart_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Auto smart port
         """
         return pulumi.get(self, "auto_smart_port")
 
     @auto_smart_port.setter
-    def auto_smart_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auto_smart_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auto_smart_port", value)
 
     @_builtins.property
     @pulumi.getter(name="avcProfile")
-    def avc_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def avc_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AVC profile
         """
         return pulumi.get(self, "avc_profile")
 
     @avc_profile.setter
-    def avc_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def avc_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "avc_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="daclName")
-    def dacl_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dacl_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DACL name
         """
         return pulumi.get(self, "dacl_name")
 
     @dacl_name.setter
-    def dacl_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dacl_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dacl_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="easywiredSessionCandidate")
-    def easywired_session_candidate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def easywired_session_candidate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Easy wired session candidate
           - Default value: `false`
@@ -316,48 +316,48 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "easywired_session_candidate")
 
     @easywired_session_candidate.setter
-    def easywired_session_candidate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def easywired_session_candidate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "easywired_session_candidate", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceTemplate")
-    def interface_template(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_template(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface template
         """
         return pulumi.get(self, "interface_template")
 
     @interface_template.setter
-    def interface_template(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_template(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_template", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AclFilter")
-    def ipv6_acl_filter(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_acl_filter(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 ACL
         """
         return pulumi.get(self, "ipv6_acl_filter")
 
     @ipv6_acl_filter.setter
-    def ipv6_acl_filter(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_acl_filter(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_acl_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DaclName")
-    def ipv6_dacl_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_dacl_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 DACL name
         """
         return pulumi.get(self, "ipv6_dacl_name")
 
     @ipv6_dacl_name.setter
-    def ipv6_dacl_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_dacl_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_dacl_name", value)
 
     @_builtins.property
     @pulumi.getter(name="macSecPolicy")
-    def mac_sec_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac_sec_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         MacSec policy
           - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
@@ -365,24 +365,24 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "mac_sec_policy")
 
     @mac_sec_policy.setter
-    def mac_sec_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac_sec_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac_sec_policy", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the authorization profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def neat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def neat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         NEAT
           - Default value: `false`
@@ -390,12 +390,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "neat")
 
     @neat.setter
-    def neat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def neat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "neat", value)
 
     @_builtins.property
     @pulumi.getter(name="profileName")
-    def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Value needs to be an existing Network Device Profile
           - Default value: `Cisco`
@@ -403,12 +403,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "profile_name")
 
     @profile_name.setter
-    def profile_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_name", value)
 
     @_builtins.property
     @pulumi.getter(name="reauthenticationConnectivity")
-    def reauthentication_connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def reauthentication_connectivity(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Maintain Connectivity During Reauthentication
           - Choices: `DEFAULT`, `RADIUS_REQUEST`
@@ -416,12 +416,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "reauthentication_connectivity")
 
     @reauthentication_connectivity.setter
-    def reauthentication_connectivity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def reauthentication_connectivity(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "reauthentication_connectivity", value)
 
     @_builtins.property
     @pulumi.getter(name="reauthenticationTimer")
-    def reauthentication_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def reauthentication_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Reauthentication timer
           - Range: `1`-`65535`
@@ -429,12 +429,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "reauthentication_timer")
 
     @reauthentication_timer.setter
-    def reauthentication_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def reauthentication_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "reauthentication_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceTemplate")
-    def service_template(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def service_template(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Service template
           - Default value: `false`
@@ -442,12 +442,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "service_template")
 
     @service_template.setter
-    def service_template(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def service_template(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "service_template", value)
 
     @_builtins.property
     @pulumi.getter(name="trackMovement")
-    def track_movement(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def track_movement(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Track movement
           - Default value: `false`
@@ -455,36 +455,36 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "track_movement")
 
     @track_movement.setter
-    def track_movement(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def track_movement(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "track_movement", value)
 
     @_builtins.property
     @pulumi.getter(name="uniqueIdentifier")
-    def unique_identifier(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unique_identifier(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unique identifier
         """
         return pulumi.get(self, "unique_identifier")
 
     @unique_identifier.setter
-    def unique_identifier(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unique_identifier(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unique_identifier", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanNameId")
-    def vlan_name_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vlan_name_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Vlan name or ID
         """
         return pulumi.get(self, "vlan_name_id")
 
     @vlan_name_id.setter
-    def vlan_name_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vlan_name_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vlan_name_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTagId")
-    def vlan_tag_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_tag_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Vlan tag ID
           - Range: `0`-`31`
@@ -492,12 +492,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "vlan_tag_id")
 
     @vlan_tag_id.setter
-    def vlan_tag_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_tag_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_tag_id", value)
 
     @_builtins.property
     @pulumi.getter(name="voiceDomainPermission")
-    def voice_domain_permission(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def voice_domain_permission(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Voice domain permission
           - Default value: `false`
@@ -505,12 +505,12 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "voice_domain_permission")
 
     @voice_domain_permission.setter
-    def voice_domain_permission(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def voice_domain_permission(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "voice_domain_permission", value)
 
     @_builtins.property
     @pulumi.getter(name="webAuth")
-    def web_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def web_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Web authentication (local)
           - Default value: `false`
@@ -518,60 +518,60 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "web_auth")
 
     @web_auth.setter
-    def web_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def web_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "web_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionAcl")
-    def web_redirection_acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Web redirection ACL
         """
         return pulumi.get(self, "web_redirection_acl")
 
     @web_redirection_acl.setter
-    def web_redirection_acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionDisplayCertificatesRenewalMessages")
-    def web_redirection_display_certificates_renewal_messages(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def web_redirection_display_certificates_renewal_messages(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         """
         return pulumi.get(self, "web_redirection_display_certificates_renewal_messages")
 
     @web_redirection_display_certificates_renewal_messages.setter
-    def web_redirection_display_certificates_renewal_messages(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def web_redirection_display_certificates_renewal_messages(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "web_redirection_display_certificates_renewal_messages", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionPortalName")
-    def web_redirection_portal_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_portal_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A portal that exist in the DB and fits the `web_redirection_type`
         """
         return pulumi.get(self, "web_redirection_portal_name")
 
     @web_redirection_portal_name.setter
-    def web_redirection_portal_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_portal_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_portal_name", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionStaticIpHostNameFqdn")
-    def web_redirection_static_ip_host_name_fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_static_ip_host_name_fqdn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP, hostname or FQDN
         """
         return pulumi.get(self, "web_redirection_static_ip_host_name_fqdn")
 
     @web_redirection_static_ip_host_name_fqdn.setter
-    def web_redirection_static_ip_host_name_fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_static_ip_host_name_fqdn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_static_ip_host_name_fqdn", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionType")
-    def web_redirection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This type must fit the `web_redirection_portal_name`
           - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
@@ -579,46 +579,46 @@ class AuthorizationProfileArgs:
         return pulumi.get(self, "web_redirection_type")
 
     @web_redirection_type.setter
-    def web_redirection_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_type", value)
 
 
 @pulumi.input_type
 class _AuthorizationProfileState:
     def __init__(__self__, *,
-                 access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_attributes: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]] = None,
-                 agentless_posture: Optional[pulumi.Input[_builtins.bool]] = None,
-                 airespace_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 airespace_ipv6_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 asa_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 auto_smart_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 avc_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 easywired_session_candidate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 interface_template: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_acl_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_sec_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 neat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_connectivity: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_template: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_movement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unique_identifier: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_name_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_domain_permission: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_display_certificates_renewal_messages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_portal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_static_ip_host_name_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None):
+                 access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]] = None,
+                 agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
+                 airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 asa_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 auto_smart_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 avc_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 easywired_session_candidate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 interface_template: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_acl_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_sec_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 neat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_connectivity: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_template: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_movement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unique_identifier: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_name_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tag_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_domain_permission: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_display_certificates_renewal_messages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_portal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_static_ip_host_name_fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationProfile resources.
 
@@ -739,7 +739,7 @@ class _AuthorizationProfileState:
 
     @_builtins.property
     @pulumi.getter(name="accessType")
-    def access_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Access type
           - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
@@ -748,132 +748,132 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "access_type")
 
     @access_type.setter
-    def access_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ACL
         """
         return pulumi.get(self, "acl")
 
     @acl.setter
-    def acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "acl", value)
 
     @_builtins.property
     @pulumi.getter(name="advancedAttributes")
-    def advanced_attributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]:
+    def advanced_attributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]:
         """
         List of advanced attributes
         """
         return pulumi.get(self, "advanced_attributes")
 
     @advanced_attributes.setter
-    def advanced_attributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]):
+    def advanced_attributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationProfileAdvancedAttributeArgs']]]]):
         pulumi.set(self, "advanced_attributes", value)
 
     @_builtins.property
     @pulumi.getter(name="agentlessPosture")
-    def agentless_posture(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def agentless_posture(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Agentless Posture.
         """
         return pulumi.get(self, "agentless_posture")
 
     @agentless_posture.setter
-    def agentless_posture(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def agentless_posture(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "agentless_posture", value)
 
     @_builtins.property
     @pulumi.getter(name="airespaceAcl")
-    def airespace_acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def airespace_acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Airespace ACL
         """
         return pulumi.get(self, "airespace_acl")
 
     @airespace_acl.setter
-    def airespace_acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def airespace_acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "airespace_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="airespaceIpv6Acl")
-    def airespace_ipv6_acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def airespace_ipv6_acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Airespace IPv6 ACL
         """
         return pulumi.get(self, "airespace_ipv6_acl")
 
     @airespace_ipv6_acl.setter
-    def airespace_ipv6_acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def airespace_ipv6_acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "airespace_ipv6_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="asaVpn")
-    def asa_vpn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def asa_vpn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ASA VPN
         """
         return pulumi.get(self, "asa_vpn")
 
     @asa_vpn.setter
-    def asa_vpn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def asa_vpn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "asa_vpn", value)
 
     @_builtins.property
     @pulumi.getter(name="autoSmartPort")
-    def auto_smart_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auto_smart_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Auto smart port
         """
         return pulumi.get(self, "auto_smart_port")
 
     @auto_smart_port.setter
-    def auto_smart_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auto_smart_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auto_smart_port", value)
 
     @_builtins.property
     @pulumi.getter(name="avcProfile")
-    def avc_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def avc_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AVC profile
         """
         return pulumi.get(self, "avc_profile")
 
     @avc_profile.setter
-    def avc_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def avc_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "avc_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="daclName")
-    def dacl_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dacl_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DACL name
         """
         return pulumi.get(self, "dacl_name")
 
     @dacl_name.setter
-    def dacl_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dacl_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dacl_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="easywiredSessionCandidate")
-    def easywired_session_candidate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def easywired_session_candidate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Easy wired session candidate
           - Default value: `false`
@@ -881,48 +881,48 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "easywired_session_candidate")
 
     @easywired_session_candidate.setter
-    def easywired_session_candidate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def easywired_session_candidate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "easywired_session_candidate", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceTemplate")
-    def interface_template(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_template(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface template
         """
         return pulumi.get(self, "interface_template")
 
     @interface_template.setter
-    def interface_template(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_template(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_template", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AclFilter")
-    def ipv6_acl_filter(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_acl_filter(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 ACL
         """
         return pulumi.get(self, "ipv6_acl_filter")
 
     @ipv6_acl_filter.setter
-    def ipv6_acl_filter(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_acl_filter(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_acl_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DaclName")
-    def ipv6_dacl_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_dacl_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 DACL name
         """
         return pulumi.get(self, "ipv6_dacl_name")
 
     @ipv6_dacl_name.setter
-    def ipv6_dacl_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_dacl_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_dacl_name", value)
 
     @_builtins.property
     @pulumi.getter(name="macSecPolicy")
-    def mac_sec_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac_sec_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         MacSec policy
           - Choices: `MUST_SECURE`, `MUST_NOT_SECURE`, `SHOULD_SECURE`
@@ -930,24 +930,24 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "mac_sec_policy")
 
     @mac_sec_policy.setter
-    def mac_sec_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac_sec_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac_sec_policy", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the authorization profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def neat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def neat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         NEAT
           - Default value: `false`
@@ -955,12 +955,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "neat")
 
     @neat.setter
-    def neat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def neat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "neat", value)
 
     @_builtins.property
     @pulumi.getter(name="profileName")
-    def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Value needs to be an existing Network Device Profile
           - Default value: `Cisco`
@@ -968,12 +968,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "profile_name")
 
     @profile_name.setter
-    def profile_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_name", value)
 
     @_builtins.property
     @pulumi.getter(name="reauthenticationConnectivity")
-    def reauthentication_connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def reauthentication_connectivity(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Maintain Connectivity During Reauthentication
           - Choices: `DEFAULT`, `RADIUS_REQUEST`
@@ -981,12 +981,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "reauthentication_connectivity")
 
     @reauthentication_connectivity.setter
-    def reauthentication_connectivity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def reauthentication_connectivity(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "reauthentication_connectivity", value)
 
     @_builtins.property
     @pulumi.getter(name="reauthenticationTimer")
-    def reauthentication_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def reauthentication_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Reauthentication timer
           - Range: `1`-`65535`
@@ -994,12 +994,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "reauthentication_timer")
 
     @reauthentication_timer.setter
-    def reauthentication_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def reauthentication_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "reauthentication_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceTemplate")
-    def service_template(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def service_template(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Service template
           - Default value: `false`
@@ -1007,12 +1007,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "service_template")
 
     @service_template.setter
-    def service_template(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def service_template(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "service_template", value)
 
     @_builtins.property
     @pulumi.getter(name="trackMovement")
-    def track_movement(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def track_movement(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Track movement
           - Default value: `false`
@@ -1020,36 +1020,36 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "track_movement")
 
     @track_movement.setter
-    def track_movement(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def track_movement(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "track_movement", value)
 
     @_builtins.property
     @pulumi.getter(name="uniqueIdentifier")
-    def unique_identifier(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unique_identifier(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unique identifier
         """
         return pulumi.get(self, "unique_identifier")
 
     @unique_identifier.setter
-    def unique_identifier(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unique_identifier(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unique_identifier", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanNameId")
-    def vlan_name_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vlan_name_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Vlan name or ID
         """
         return pulumi.get(self, "vlan_name_id")
 
     @vlan_name_id.setter
-    def vlan_name_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vlan_name_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vlan_name_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTagId")
-    def vlan_tag_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_tag_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Vlan tag ID
           - Range: `0`-`31`
@@ -1057,12 +1057,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "vlan_tag_id")
 
     @vlan_tag_id.setter
-    def vlan_tag_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_tag_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_tag_id", value)
 
     @_builtins.property
     @pulumi.getter(name="voiceDomainPermission")
-    def voice_domain_permission(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def voice_domain_permission(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Voice domain permission
           - Default value: `false`
@@ -1070,12 +1070,12 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "voice_domain_permission")
 
     @voice_domain_permission.setter
-    def voice_domain_permission(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def voice_domain_permission(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "voice_domain_permission", value)
 
     @_builtins.property
     @pulumi.getter(name="webAuth")
-    def web_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def web_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Web authentication (local)
           - Default value: `false`
@@ -1083,60 +1083,60 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "web_auth")
 
     @web_auth.setter
-    def web_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def web_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "web_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionAcl")
-    def web_redirection_acl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_acl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Web redirection ACL
         """
         return pulumi.get(self, "web_redirection_acl")
 
     @web_redirection_acl.setter
-    def web_redirection_acl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_acl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionDisplayCertificatesRenewalMessages")
-    def web_redirection_display_certificates_renewal_messages(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def web_redirection_display_certificates_renewal_messages(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         This attribute is mandatory when `web_redirection_type` value is `CentralizedWebAuth`. For all other `web_redirection_type` values the field must be ignored.
         """
         return pulumi.get(self, "web_redirection_display_certificates_renewal_messages")
 
     @web_redirection_display_certificates_renewal_messages.setter
-    def web_redirection_display_certificates_renewal_messages(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def web_redirection_display_certificates_renewal_messages(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "web_redirection_display_certificates_renewal_messages", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionPortalName")
-    def web_redirection_portal_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_portal_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A portal that exist in the DB and fits the `web_redirection_type`
         """
         return pulumi.get(self, "web_redirection_portal_name")
 
     @web_redirection_portal_name.setter
-    def web_redirection_portal_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_portal_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_portal_name", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionStaticIpHostNameFqdn")
-    def web_redirection_static_ip_host_name_fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_static_ip_host_name_fqdn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP, hostname or FQDN
         """
         return pulumi.get(self, "web_redirection_static_ip_host_name_fqdn")
 
     @web_redirection_static_ip_host_name_fqdn.setter
-    def web_redirection_static_ip_host_name_fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_static_ip_host_name_fqdn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_static_ip_host_name_fqdn", value)
 
     @_builtins.property
     @pulumi.getter(name="webRedirectionType")
-    def web_redirection_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_redirection_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This type must fit the `web_redirection_portal_name`
           - Choices: `CentralizedWebAuth`, `HotSpot`, `NativeSupplicanProvisioning`, `ClientProvisioning`
@@ -1144,7 +1144,7 @@ class _AuthorizationProfileState:
         return pulumi.get(self, "web_redirection_type")
 
     @web_redirection_type.setter
-    def web_redirection_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_redirection_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_redirection_type", value)
 
 
@@ -1154,39 +1154,39 @@ class AuthorizationProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
-                 agentless_posture: Optional[pulumi.Input[_builtins.bool]] = None,
-                 airespace_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 airespace_ipv6_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 asa_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 auto_smart_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 avc_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 easywired_session_candidate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 interface_template: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_acl_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_sec_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 neat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_connectivity: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_template: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_movement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unique_identifier: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_name_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_domain_permission: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_display_certificates_renewal_messages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_portal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_static_ip_host_name_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
+                 agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
+                 airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 asa_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 auto_smart_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 avc_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 easywired_session_candidate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 interface_template: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_acl_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_sec_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 neat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_connectivity: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_template: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_movement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unique_identifier: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_name_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tag_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_domain_permission: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_display_certificates_renewal_messages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_portal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_static_ip_host_name_fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage an authorization profiles policy element.
@@ -1373,39 +1373,39 @@ class AuthorizationProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
-                 agentless_posture: Optional[pulumi.Input[_builtins.bool]] = None,
-                 airespace_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 airespace_ipv6_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 asa_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 auto_smart_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 avc_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 easywired_session_candidate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 interface_template: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_acl_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_sec_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 neat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_connectivity: Optional[pulumi.Input[_builtins.str]] = None,
-                 reauthentication_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 service_template: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_movement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unique_identifier: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_name_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_domain_permission: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_acl: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_display_certificates_renewal_messages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 web_redirection_portal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_static_ip_host_name_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
+                 agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
+                 airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 asa_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 auto_smart_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 avc_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 easywired_session_candidate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 interface_template: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_acl_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_sec_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 neat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_connectivity: pulumi.Input[Optional[_builtins.str]] = None,
+                 reauthentication_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_template: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_movement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unique_identifier: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_name_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tag_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_domain_permission: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_acl: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_display_certificates_renewal_messages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 web_redirection_portal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_static_ip_host_name_fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_redirection_type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1458,39 +1458,39 @@ class AuthorizationProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_type: Optional[pulumi.Input[_builtins.str]] = None,
-            acl: Optional[pulumi.Input[_builtins.str]] = None,
-            advanced_attributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
-            agentless_posture: Optional[pulumi.Input[_builtins.bool]] = None,
-            airespace_acl: Optional[pulumi.Input[_builtins.str]] = None,
-            airespace_ipv6_acl: Optional[pulumi.Input[_builtins.str]] = None,
-            asa_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-            auto_smart_port: Optional[pulumi.Input[_builtins.str]] = None,
-            avc_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            easywired_session_candidate: Optional[pulumi.Input[_builtins.bool]] = None,
-            interface_template: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_acl_filter: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_dacl_name: Optional[pulumi.Input[_builtins.str]] = None,
-            mac_sec_policy: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            neat: Optional[pulumi.Input[_builtins.bool]] = None,
-            profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-            reauthentication_connectivity: Optional[pulumi.Input[_builtins.str]] = None,
-            reauthentication_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            service_template: Optional[pulumi.Input[_builtins.bool]] = None,
-            track_movement: Optional[pulumi.Input[_builtins.bool]] = None,
-            unique_identifier: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_name_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_tag_id: Optional[pulumi.Input[_builtins.int]] = None,
-            voice_domain_permission: Optional[pulumi.Input[_builtins.bool]] = None,
-            web_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-            web_redirection_acl: Optional[pulumi.Input[_builtins.str]] = None,
-            web_redirection_display_certificates_renewal_messages: Optional[pulumi.Input[_builtins.bool]] = None,
-            web_redirection_portal_name: Optional[pulumi.Input[_builtins.str]] = None,
-            web_redirection_static_ip_host_name_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-            web_redirection_type: Optional[pulumi.Input[_builtins.str]] = None) -> 'AuthorizationProfile':
+            access_type: pulumi.Input[Optional[_builtins.str]] = None,
+            acl: pulumi.Input[Optional[_builtins.str]] = None,
+            advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
+            agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
+            airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
+            airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
+            asa_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+            auto_smart_port: pulumi.Input[Optional[_builtins.str]] = None,
+            avc_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            easywired_session_candidate: pulumi.Input[Optional[_builtins.bool]] = None,
+            interface_template: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_acl_filter: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+            mac_sec_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            neat: pulumi.Input[Optional[_builtins.bool]] = None,
+            profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+            reauthentication_connectivity: pulumi.Input[Optional[_builtins.str]] = None,
+            reauthentication_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            service_template: pulumi.Input[Optional[_builtins.bool]] = None,
+            track_movement: pulumi.Input[Optional[_builtins.bool]] = None,
+            unique_identifier: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_name_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_tag_id: pulumi.Input[Optional[_builtins.int]] = None,
+            voice_domain_permission: pulumi.Input[Optional[_builtins.bool]] = None,
+            web_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            web_redirection_acl: pulumi.Input[Optional[_builtins.str]] = None,
+            web_redirection_display_certificates_renewal_messages: pulumi.Input[Optional[_builtins.bool]] = None,
+            web_redirection_portal_name: pulumi.Input[Optional[_builtins.str]] = None,
+            web_redirection_static_ip_host_name_fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+            web_redirection_type: pulumi.Input[Optional[_builtins.str]] = None) -> 'AuthorizationProfile':
         """
         Get an existing AuthorizationProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

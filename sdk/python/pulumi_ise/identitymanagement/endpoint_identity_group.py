@@ -19,10 +19,10 @@ __all__ = ['EndpointIdentityGroupArgs', 'EndpointIdentityGroup']
 @pulumi.input_type
 class EndpointIdentityGroupArgs:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_endpoint_identity_group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_defined: Optional[pulumi.Input[_builtins.bool]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_endpoint_identity_group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_defined: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a EndpointIdentityGroup resource.
 
@@ -42,60 +42,60 @@ class EndpointIdentityGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the endpoint identity group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="parentEndpointIdentityGroupId")
-    def parent_endpoint_identity_group_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def parent_endpoint_identity_group_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Parent endpoint identity group ID
         """
         return pulumi.get(self, "parent_endpoint_identity_group_id")
 
     @parent_endpoint_identity_group_id.setter
-    def parent_endpoint_identity_group_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def parent_endpoint_identity_group_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parent_endpoint_identity_group_id", value)
 
     @_builtins.property
     @pulumi.getter(name="systemDefined")
-    def system_defined(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def system_defined(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         System defined endpoint identity group
         """
         return pulumi.get(self, "system_defined")
 
     @system_defined.setter
-    def system_defined(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def system_defined(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "system_defined", value)
 
 
 @pulumi.input_type
 class _EndpointIdentityGroupState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_endpoint_identity_group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_defined: Optional[pulumi.Input[_builtins.bool]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_endpoint_identity_group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_defined: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering EndpointIdentityGroup resources.
 
@@ -115,50 +115,50 @@ class _EndpointIdentityGroupState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the endpoint identity group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="parentEndpointIdentityGroupId")
-    def parent_endpoint_identity_group_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def parent_endpoint_identity_group_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Parent endpoint identity group ID
         """
         return pulumi.get(self, "parent_endpoint_identity_group_id")
 
     @parent_endpoint_identity_group_id.setter
-    def parent_endpoint_identity_group_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def parent_endpoint_identity_group_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parent_endpoint_identity_group_id", value)
 
     @_builtins.property
     @pulumi.getter(name="systemDefined")
-    def system_defined(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def system_defined(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         System defined endpoint identity group
         """
         return pulumi.get(self, "system_defined")
 
     @system_defined.setter
-    def system_defined(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def system_defined(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "system_defined", value)
 
 
@@ -168,10 +168,10 @@ class EndpointIdentityGroup(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_endpoint_identity_group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_defined: Optional[pulumi.Input[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_endpoint_identity_group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_defined: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage an Endpoint Identity Group.
@@ -249,10 +249,10 @@ class EndpointIdentityGroup(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_endpoint_identity_group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_defined: Optional[pulumi.Input[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_endpoint_identity_group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_defined: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -276,10 +276,10 @@ class EndpointIdentityGroup(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            parent_endpoint_identity_group_id: Optional[pulumi.Input[_builtins.str]] = None,
-            system_defined: Optional[pulumi.Input[_builtins.bool]] = None) -> 'EndpointIdentityGroup':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            parent_endpoint_identity_group_id: pulumi.Input[Optional[_builtins.str]] = None,
+            system_defined: pulumi.Input[Optional[_builtins.bool]] = None) -> 'EndpointIdentityGroup':
         """
         Get an existing EndpointIdentityGroup resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

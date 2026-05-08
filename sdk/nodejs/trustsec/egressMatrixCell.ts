@@ -142,33 +142,33 @@ export interface EgressMatrixCellState {
      *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      *   - Default value: `NONE`
      */
-    defaultRule?: pulumi.Input<string>;
+    defaultRule?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination Trustsec Security Group ID
      */
-    destinationSgtId?: pulumi.Input<string>;
+    destinationSgtId?: pulumi.Input<string | undefined>;
     /**
      * Matrix Cell Status
      *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
      *   - Default value: `DISABLED`
      */
-    matrixCellStatus?: pulumi.Input<string>;
+    matrixCellStatus?: pulumi.Input<string | undefined>;
     /**
      * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
      */
-    matrixId?: pulumi.Input<string>;
+    matrixId?: pulumi.Input<string | undefined>;
     /**
      * List of TrustSec Security Groups ACLs
      */
-    sgacls?: pulumi.Input<pulumi.Input<string>[]>;
+    sgacls?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source Trustsec Security Group ID
      */
-    sourceSgtId?: pulumi.Input<string>;
+    sourceSgtId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -180,11 +180,11 @@ export interface EgressMatrixCellArgs {
      *   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
      *   - Default value: `NONE`
      */
-    defaultRule?: pulumi.Input<string>;
+    defaultRule?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination Trustsec Security Group ID
      */
@@ -194,15 +194,15 @@ export interface EgressMatrixCellArgs {
      *   - Choices: `DISABLED`, `ENABLED`, `MONITOR`
      *   - Default value: `DISABLED`
      */
-    matrixCellStatus?: pulumi.Input<string>;
+    matrixCellStatus?: pulumi.Input<string | undefined>;
     /**
      * Matrix ID. Default value is Production Matrix Id, when no value is provided during creation. (works with ISE 3.4 p2 and above)
      */
-    matrixId?: pulumi.Input<string>;
+    matrixId?: pulumi.Input<string | undefined>;
     /**
      * List of TrustSec Security Groups ACLs
      */
-    sgacls?: pulumi.Input<pulumi.Input<string>[]>;
+    sgacls?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source Trustsec Security Group ID
      */

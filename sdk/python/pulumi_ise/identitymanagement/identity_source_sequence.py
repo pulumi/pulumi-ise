@@ -24,8 +24,8 @@ class IdentitySourceSequenceArgs:
                  break_on_store_fail: pulumi.Input[_builtins.bool],
                  certificate_authentication_profile: pulumi.Input[_builtins.str],
                  identity_sources: pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a IdentitySourceSequence resource.
 
@@ -77,37 +77,37 @@ class IdentitySourceSequenceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the identity source sequence
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _IdentitySourceSequenceState:
     def __init__(__self__, *,
-                 break_on_store_fail: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IdentitySourceSequence resources.
 
@@ -129,59 +129,59 @@ class _IdentitySourceSequenceState:
 
     @_builtins.property
     @pulumi.getter(name="breakOnStoreFail")
-    def break_on_store_fail(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def break_on_store_fail(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         """
         return pulumi.get(self, "break_on_store_fail")
 
     @break_on_store_fail.setter
-    def break_on_store_fail(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def break_on_store_fail(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "break_on_store_fail", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateAuthenticationProfile")
-    def certificate_authentication_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_authentication_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Certificate Authentication Profile, empty if doesn't exist
         """
         return pulumi.get(self, "certificate_authentication_profile")
 
     @certificate_authentication_profile.setter
-    def certificate_authentication_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_authentication_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_authentication_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="identitySources")
-    def identity_sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]]:
+    def identity_sources(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]]:
         return pulumi.get(self, "identity_sources")
 
     @identity_sources.setter
-    def identity_sources(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]]):
+    def identity_sources(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]]):
         pulumi.set(self, "identity_sources", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the identity source sequence
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
@@ -191,11 +191,11 @@ class IdentitySourceSequence(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 break_on_store_fail: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage an Identity Source Sequence.
@@ -283,11 +283,11 @@ class IdentitySourceSequence(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 break_on_store_fail: Optional[pulumi.Input[_builtins.bool]] = None,
-                 certificate_authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
+                 certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -318,11 +318,11 @@ class IdentitySourceSequence(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            break_on_store_fail: Optional[pulumi.Input[_builtins.bool]] = None,
-            certificate_authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            identity_sources: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None) -> 'IdentitySourceSequence':
+            break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
+            certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> 'IdentitySourceSequence':
         """
         Get an existing IdentitySourceSequence resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -138,32 +138,32 @@ export interface RepositoryState {
     /**
      * Enable PKI
      */
-    enablePki?: pulumi.Input<boolean>;
+    enablePki?: pulumi.Input<boolean | undefined>;
     /**
      * Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Password can contain alphanumeric and/or special characters.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */
-    path?: pulumi.Input<string>;
+    path?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      *   - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Name of the server
      */
-    serverName?: pulumi.Input<string>;
+    serverName?: pulumi.Input<string | undefined>;
     /**
      * User name
      */
-    userName?: pulumi.Input<string>;
+    userName?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -173,15 +173,15 @@ export interface RepositoryArgs {
     /**
      * Enable PKI
      */
-    enablePki?: pulumi.Input<boolean>;
+    enablePki?: pulumi.Input<boolean | undefined>;
     /**
      * Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Password can contain alphanumeric and/or special characters.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */
@@ -194,9 +194,9 @@ export interface RepositoryArgs {
     /**
      * Name of the server
      */
-    serverName?: pulumi.Input<string>;
+    serverName?: pulumi.Input<string | undefined>;
     /**
      * User name
      */
-    userName?: pulumi.Input<string>;
+    userName?: pulumi.Input<string | undefined>;
 }

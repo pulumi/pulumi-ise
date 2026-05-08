@@ -58,8 +58,8 @@ class AuthorizationGlobalExceptionRuleUpdateRankArgs:
 @pulumi.input_type
 class _AuthorizationGlobalExceptionRuleUpdateRankState:
     def __init__(__self__, *,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 rule_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 rule_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthorizationGlobalExceptionRuleUpdateRank resources.
 
@@ -73,26 +73,26 @@ class _AuthorizationGlobalExceptionRuleUpdateRankState:
 
     @_builtins.property
     @pulumi.getter
-    def rank(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rank(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The rank (priority) in relation to other rules. Lower rank is higher priority.
         """
         return pulumi.get(self, "rank")
 
     @rank.setter
-    def rank(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rank(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rank", value)
 
     @_builtins.property
     @pulumi.getter(name="ruleId")
-    def rule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authorization global exception rule ID
         """
         return pulumi.get(self, "rule_id")
 
     @rule_id.setter
-    def rule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rule_id", value)
 
 
@@ -102,8 +102,8 @@ class AuthorizationGlobalExceptionRuleUpdateRank(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 rule_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 rule_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource is used to update rank field in device admin authorization global exception rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authorization_global_exception_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
@@ -161,8 +161,8 @@ class AuthorizationGlobalExceptionRuleUpdateRank(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 rank: Optional[pulumi.Input[_builtins.int]] = None,
-                 rule_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 rank: pulumi.Input[Optional[_builtins.int]] = None,
+                 rule_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -188,8 +188,8 @@ class AuthorizationGlobalExceptionRuleUpdateRank(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            rank: Optional[pulumi.Input[_builtins.int]] = None,
-            rule_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'AuthorizationGlobalExceptionRuleUpdateRank':
+            rank: pulumi.Input[Optional[_builtins.int]] = None,
+            rule_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'AuthorizationGlobalExceptionRuleUpdateRank':
         """
         Get an existing AuthorizationGlobalExceptionRuleUpdateRank resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

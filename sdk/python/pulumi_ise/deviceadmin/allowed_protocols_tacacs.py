@@ -22,8 +22,8 @@ class AllowedProtocolsTacacsArgs:
                  allow_chap: pulumi.Input[_builtins.bool],
                  allow_ms_chap_v1: pulumi.Input[_builtins.bool],
                  allow_pap_ascii: pulumi.Input[_builtins.bool],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AllowedProtocolsTacacs resource.
 
@@ -79,37 +79,37 @@ class AllowedProtocolsTacacsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the allowed protocols
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _AllowedProtocolsTacacsState:
     def __init__(__self__, *,
-                 allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AllowedProtocolsTacacs resources.
 
@@ -132,62 +132,62 @@ class _AllowedProtocolsTacacsState:
 
     @_builtins.property
     @pulumi.getter(name="allowChap")
-    def allow_chap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_chap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow CHAP
         """
         return pulumi.get(self, "allow_chap")
 
     @allow_chap.setter
-    def allow_chap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_chap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_chap", value)
 
     @_builtins.property
     @pulumi.getter(name="allowMsChapV1")
-    def allow_ms_chap_v1(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_ms_chap_v1(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow MS CHAP v1
         """
         return pulumi.get(self, "allow_ms_chap_v1")
 
     @allow_ms_chap_v1.setter
-    def allow_ms_chap_v1(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_ms_chap_v1(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_ms_chap_v1", value)
 
     @_builtins.property
     @pulumi.getter(name="allowPapAscii")
-    def allow_pap_ascii(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_pap_ascii(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow PAP ASCII
         """
         return pulumi.get(self, "allow_pap_ascii")
 
     @allow_pap_ascii.setter
-    def allow_pap_ascii(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_pap_ascii(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_pap_ascii", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the allowed protocols
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
@@ -197,11 +197,11 @@ class AllowedProtocolsTacacs(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a TACACS allowed protocols policy element.
@@ -284,11 +284,11 @@ class AllowedProtocolsTacacs(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-                 allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+                 allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -319,11 +319,11 @@ class AllowedProtocolsTacacs(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allow_chap: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_ms_chap_v1: Optional[pulumi.Input[_builtins.bool]] = None,
-            allow_pap_ascii: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None) -> 'AllowedProtocolsTacacs':
+            allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> 'AllowedProtocolsTacacs':
         """
         Get an existing AllowedProtocolsTacacs resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

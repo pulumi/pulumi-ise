@@ -81,7 +81,7 @@ export interface EgressPushMatrixState {
      * Set to true to re-trigger push on update. Will automatically reset to false after execution.
      *   - Default value: `false`
      */
-    force?: pulumi.Input<boolean>;
+    force?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -92,5 +92,5 @@ export interface EgressPushMatrixArgs {
      * Set to true to re-trigger push on update. Will automatically reset to false after execution.
      *   - Default value: `false`
      */
-    force?: pulumi.Input<boolean>;
+    force?: pulumi.Input<boolean | undefined>;
 }

@@ -21,7 +21,7 @@ __all__ = ['AuthorizationGlobalExceptionRuleUpdateRanksArgs', 'AuthorizationGlob
 @pulumi.input_type
 class AuthorizationGlobalExceptionRuleUpdateRanksArgs:
     def __init__(__self__, *,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]] = None):
         """
         The set of arguments for constructing a AuthorizationGlobalExceptionRuleUpdateRanks resource.
         """
@@ -30,18 +30,18 @@ class AuthorizationGlobalExceptionRuleUpdateRanksArgs:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _AuthorizationGlobalExceptionRuleUpdateRanksState:
     def __init__(__self__, *,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering AuthorizationGlobalExceptionRuleUpdateRanks resources.
         """
@@ -50,11 +50,11 @@ class _AuthorizationGlobalExceptionRuleUpdateRanksState:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
@@ -64,7 +64,7 @@ class AuthorizationGlobalExceptionRuleUpdateRanks(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource is used to bulk update rank field in device admin authorization global exception rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authorization_global_exception_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
@@ -122,7 +122,7 @@ class AuthorizationGlobalExceptionRuleUpdateRanks(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -143,7 +143,7 @@ class AuthorizationGlobalExceptionRuleUpdateRanks(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict']]]]] = None) -> 'AuthorizationGlobalExceptionRuleUpdateRanks':
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict']]]]] = None) -> 'AuthorizationGlobalExceptionRuleUpdateRanks':
         """
         Get an existing AuthorizationGlobalExceptionRuleUpdateRanks resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

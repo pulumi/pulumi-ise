@@ -146,9 +146,9 @@ export interface GetPolicySetOutputArgs {
     /**
      * The id of the object
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

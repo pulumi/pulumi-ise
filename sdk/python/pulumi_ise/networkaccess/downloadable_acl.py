@@ -20,9 +20,9 @@ __all__ = ['DownloadableAclArgs', 'DownloadableAcl']
 class DownloadableAclArgs:
     def __init__(__self__, *,
                  dacl: pulumi.Input[_builtins.str],
-                 dacl_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 dacl_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a DownloadableAcl resource.
 
@@ -55,7 +55,7 @@ class DownloadableAclArgs:
 
     @_builtins.property
     @pulumi.getter(name="daclType")
-    def dacl_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dacl_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of ACL
           - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
@@ -64,41 +64,41 @@ class DownloadableAclArgs:
         return pulumi.get(self, "dacl_type")
 
     @dacl_type.setter
-    def dacl_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dacl_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dacl_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the downloadable ACL
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _DownloadableAclState:
     def __init__(__self__, *,
-                 dacl: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 dacl: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering DownloadableAcl resources.
 
@@ -120,19 +120,19 @@ class _DownloadableAclState:
 
     @_builtins.property
     @pulumi.getter
-    def dacl(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dacl(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DACL content
         """
         return pulumi.get(self, "dacl")
 
     @dacl.setter
-    def dacl(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dacl(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dacl", value)
 
     @_builtins.property
     @pulumi.getter(name="daclType")
-    def dacl_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dacl_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of ACL
           - Choices: `IPV4`, `IPV6`, `IP_AGNOSTIC`
@@ -141,31 +141,31 @@ class _DownloadableAclState:
         return pulumi.get(self, "dacl_type")
 
     @dacl_type.setter
-    def dacl_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dacl_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dacl_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the downloadable ACL
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
@@ -175,10 +175,10 @@ class DownloadableAcl(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 dacl: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 dacl: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Downloadable ACL.
@@ -260,10 +260,10 @@ class DownloadableAcl(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 dacl: Optional[pulumi.Input[_builtins.str]] = None,
-                 dacl_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 dacl: pulumi.Input[Optional[_builtins.str]] = None,
+                 dacl_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -289,10 +289,10 @@ class DownloadableAcl(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            dacl: Optional[pulumi.Input[_builtins.str]] = None,
-            dacl_type: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None) -> 'DownloadableAcl':
+            dacl: pulumi.Input[Optional[_builtins.str]] = None,
+            dacl_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> 'DownloadableAcl':
         """
         Get an existing DownloadableAcl resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

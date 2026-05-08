@@ -23,11 +23,11 @@ class ActiveDirectoryAddGroupsArgs:
     def __init__(__self__, *,
                  domain: pulumi.Input[_builtins.str],
                  join_point_id: pulumi.Input[_builtins.str],
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ActiveDirectoryAddGroups resource.
 
@@ -79,7 +79,7 @@ class ActiveDirectoryAddGroupsArgs:
 
     @_builtins.property
     @pulumi.getter(name="adScopesNames")
-    def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ad_scopes_names(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
           - Default value: `Default_Scope`
@@ -87,68 +87,68 @@ class ActiveDirectoryAddGroupsArgs:
         return pulumi.get(self, "ad_scopes_names")
 
     @ad_scopes_names.setter
-    def ad_scopes_names(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ad_scopes_names(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ad_scopes_names", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Join point Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDomainAllowedList")
-    def enable_domain_allowed_list(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_domain_allowed_list(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         - Default value: `true`
         """
         return pulumi.get(self, "enable_domain_allowed_list")
 
     @enable_domain_allowed_list.setter
-    def enable_domain_allowed_list(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_domain_allowed_list(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_domain_allowed_list", value)
 
     @_builtins.property
     @pulumi.getter
-    def groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]:
+    def groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]:
         """
         List of AD Groups
         """
         return pulumi.get(self, "groups")
 
     @groups.setter
-    def groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]):
+    def groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]):
         pulumi.set(self, "groups", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the active directory join point
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _ActiveDirectoryAddGroupsState:
     def __init__(__self__, *,
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]] = None,
-                 join_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]] = None,
+                 join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ActiveDirectoryAddGroups resources.
 
@@ -178,7 +178,7 @@ class _ActiveDirectoryAddGroupsState:
 
     @_builtins.property
     @pulumi.getter(name="adScopesNames")
-    def ad_scopes_names(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ad_scopes_names(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
           - Default value: `Default_Scope`
@@ -186,79 +186,79 @@ class _ActiveDirectoryAddGroupsState:
         return pulumi.get(self, "ad_scopes_names")
 
     @ad_scopes_names.setter
-    def ad_scopes_names(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ad_scopes_names(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ad_scopes_names", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Join point Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AD domain associated with the join point
         """
         return pulumi.get(self, "domain")
 
     @domain.setter
-    def domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDomainAllowedList")
-    def enable_domain_allowed_list(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_domain_allowed_list(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         - Default value: `true`
         """
         return pulumi.get(self, "enable_domain_allowed_list")
 
     @enable_domain_allowed_list.setter
-    def enable_domain_allowed_list(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_domain_allowed_list(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_domain_allowed_list", value)
 
     @_builtins.property
     @pulumi.getter
-    def groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]:
+    def groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]:
         """
         List of AD Groups
         """
         return pulumi.get(self, "groups")
 
     @groups.setter
-    def groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]):
+    def groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActiveDirectoryAddGroupsGroupArgs']]]]):
         pulumi.set(self, "groups", value)
 
     @_builtins.property
     @pulumi.getter(name="joinPointId")
-    def join_point_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def join_point_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Active Directory Join Point ID
         """
         return pulumi.get(self, "join_point_id")
 
     @join_point_id.setter
-    def join_point_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def join_point_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "join_point_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the active directory join point
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
@@ -268,13 +268,13 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
-                 join_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
+                 join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage an Active Directory Add Groups.
@@ -356,13 +356,13 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
-                 join_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
+                 join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -393,13 +393,13 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ad_scopes_names: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            domain: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_domain_allowed_list: Optional[pulumi.Input[_builtins.bool]] = None,
-            groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
-            join_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None) -> 'ActiveDirectoryAddGroups':
+            ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            domain: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
+            join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> 'ActiveDirectoryAddGroups':
         """
         Get an existing ActiveDirectoryAddGroups resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -167,8 +167,8 @@ def get_certificate_authentication_profile(id: Optional[_builtins.str] = None,
         match_mode=pulumi.get(__ret__, 'match_mode'),
         name=pulumi.get(__ret__, 'name'),
         username_from=pulumi.get(__ret__, 'username_from'))
-def get_certificate_authentication_profile_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_certificate_authentication_profile_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                  name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCertificateAuthenticationProfileResult]:
     """
     This data source can read the Certificate Authentication Profile.

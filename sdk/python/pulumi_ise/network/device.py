@@ -22,53 +22,53 @@ __all__ = ['DeviceArgs', 'Device']
 class DeviceArgs:
     def __init__(__self__, *,
                  ips: pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]],
-                 authentication_dtls_required: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_key_wrap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_multi_secret: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_encryption_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_encryption_key_format: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_message_authenticator_code_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_network_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_second_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 coa_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dtls_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 model_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 software_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_coa_source_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_enable_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_include_when_deploying_sgt_updates: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_other_sga_devices_to_trust_this_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_re_authentication_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_rest_api_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_rest_api_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_send_configuration_to_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_dtls_required: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_key_wrap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 coa_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 model_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 software_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Device resource.
 
@@ -242,55 +242,55 @@ class DeviceArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationDtlsRequired")
-    def authentication_dtls_required(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_dtls_required(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enforce use of DTLS
         """
         return pulumi.get(self, "authentication_dtls_required")
 
     @authentication_dtls_required.setter
-    def authentication_dtls_required(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_dtls_required(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_dtls_required", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEnableKeyWrap")
-    def authentication_enable_key_wrap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_enable_key_wrap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable key wrap
         """
         return pulumi.get(self, "authentication_enable_key_wrap")
 
     @authentication_enable_key_wrap.setter
-    def authentication_enable_key_wrap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_enable_key_wrap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_enable_key_wrap", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEnableMultiSecret")
-    def authentication_enable_multi_secret(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_enable_multi_secret(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable multiple RADIUS shared secrets
         """
         return pulumi.get(self, "authentication_enable_multi_secret")
 
     @authentication_enable_multi_secret.setter
-    def authentication_enable_multi_secret(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_enable_multi_secret(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_enable_multi_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEncryptionKey")
-    def authentication_encryption_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_encryption_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Encryption key
         """
         return pulumi.get(self, "authentication_encryption_key")
 
     @authentication_encryption_key.setter
-    def authentication_encryption_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_encryption_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_encryption_key", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEncryptionKeyFormat")
-    def authentication_encryption_key_format(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_encryption_key_format(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Key input format
           - Choices: `ASCII`, `HEXADECIMAL`
@@ -298,24 +298,24 @@ class DeviceArgs:
         return pulumi.get(self, "authentication_encryption_key_format")
 
     @authentication_encryption_key_format.setter
-    def authentication_encryption_key_format(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_encryption_key_format(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_encryption_key_format", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationMessageAuthenticatorCodeKey")
-    def authentication_message_authenticator_code_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_message_authenticator_code_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Message authenticator code key
         """
         return pulumi.get(self, "authentication_message_authenticator_code_key")
 
     @authentication_message_authenticator_code_key.setter
-    def authentication_message_authenticator_code_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_message_authenticator_code_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_message_authenticator_code_key", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationNetworkProtocol")
-    def authentication_network_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_network_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network protocol
           - Choices: `RADIUS`, `TACACS_PLUS`
@@ -323,36 +323,36 @@ class DeviceArgs:
         return pulumi.get(self, "authentication_network_protocol")
 
     @authentication_network_protocol.setter
-    def authentication_network_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_network_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_network_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationRadiusSharedSecret")
-    def authentication_radius_shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RADIUS shared secret
         """
         return pulumi.get(self, "authentication_radius_shared_secret")
 
     @authentication_radius_shared_secret.setter
-    def authentication_radius_shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_radius_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_radius_shared_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationSecondRadiusSharedSecret")
-    def authentication_second_radius_shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_second_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Second RADIUS shared secret
         """
         return pulumi.get(self, "authentication_second_radius_shared_secret")
 
     @authentication_second_radius_shared_secret.setter
-    def authentication_second_radius_shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_second_radius_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_second_radius_shared_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
-    def coa_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def coa_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         CoA port
           - Default value: `1700`
@@ -360,72 +360,72 @@ class DeviceArgs:
         return pulumi.get(self, "coa_port")
 
     @coa_port.setter
-    def coa_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def coa_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "coa_port", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dtlsDnsName")
-    def dtls_dns_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dtls_dns_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         """
         return pulumi.get(self, "dtls_dns_name")
 
     @dtls_dns_name.setter
-    def dtls_dns_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dtls_dns_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dtls_dns_name", value)
 
     @_builtins.property
     @pulumi.getter(name="modelName")
-    def model_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Model name
         """
         return pulumi.get(self, "model_name")
 
     @model_name.setter
-    def model_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the network device
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkDeviceGroups")
-    def network_device_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def network_device_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
         """
         return pulumi.get(self, "network_device_groups")
 
     @network_device_groups.setter
-    def network_device_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def network_device_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "network_device_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="profileName")
-    def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Profile name
           - Default value: `Cisco`
@@ -433,24 +433,24 @@ class DeviceArgs:
         return pulumi.get(self, "profile_name")
 
     @profile_name.setter
-    def profile_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_name", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthPassword")
-    def snmp_auth_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_auth_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
         """
         return pulumi.get(self, "snmp_auth_password")
 
     @snmp_auth_password.setter
-    def snmp_auth_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_auth_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_auth_password", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthProtocol")
-    def snmp_auth_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_auth_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
           - Choices: `MD5`, `SHA`, `SHA2`
@@ -458,48 +458,48 @@ class DeviceArgs:
         return pulumi.get(self, "snmp_auth_protocol")
 
     @snmp_auth_protocol.setter
-    def snmp_auth_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_auth_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_auth_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpLinkTrapQuery")
-    def snmp_link_trap_query(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_link_trap_query(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         SNMP link Trap Query
         """
         return pulumi.get(self, "snmp_link_trap_query")
 
     @snmp_link_trap_query.setter
-    def snmp_link_trap_query(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_link_trap_query(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_link_trap_query", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpMacTrapQuery")
-    def snmp_mac_trap_query(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_mac_trap_query(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         SNMP MAC Trap Query
         """
         return pulumi.get(self, "snmp_mac_trap_query")
 
     @snmp_mac_trap_query.setter
-    def snmp_mac_trap_query(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_mac_trap_query(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_mac_trap_query", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpOriginatingPolicyServiceNode")
-    def snmp_originating_policy_service_node(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_originating_policy_service_node(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Originating Policy Services Node
         """
         return pulumi.get(self, "snmp_originating_policy_service_node")
 
     @snmp_originating_policy_service_node.setter
-    def snmp_originating_policy_service_node(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_originating_policy_service_node(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_originating_policy_service_node", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPollingInterval")
-    def snmp_polling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def snmp_polling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SNMP Polling Interval in seconds
           - Range: `600`-`86400`
@@ -507,24 +507,24 @@ class DeviceArgs:
         return pulumi.get(self, "snmp_polling_interval")
 
     @snmp_polling_interval.setter
-    def snmp_polling_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def snmp_polling_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "snmp_polling_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyPassword")
-    def snmp_privacy_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_privacy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         """
         return pulumi.get(self, "snmp_privacy_password")
 
     @snmp_privacy_password.setter
-    def snmp_privacy_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_privacy_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_privacy_password", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyProtocol")
-    def snmp_privacy_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_privacy_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
           - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -532,24 +532,24 @@ class DeviceArgs:
         return pulumi.get(self, "snmp_privacy_protocol")
 
     @snmp_privacy_protocol.setter
-    def snmp_privacy_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_privacy_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_privacy_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpRoCommunity")
-    def snmp_ro_community(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_ro_community(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP RO Community
         """
         return pulumi.get(self, "snmp_ro_community")
 
     @snmp_ro_community.setter
-    def snmp_ro_community(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_ro_community(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_ro_community", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpSecurityLevel")
-    def snmp_security_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_security_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP security level. Required for snmp version 3.
           - Choices: `NO_AUTH`, `AUTH`, `PRIV`
@@ -557,24 +557,24 @@ class DeviceArgs:
         return pulumi.get(self, "snmp_security_level")
 
     @snmp_security_level.setter
-    def snmp_security_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_security_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_security_level", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpUsername")
-    def snmp_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP username. Required for snmp version 3.
         """
         return pulumi.get(self, "snmp_username")
 
     @snmp_username.setter
-    def snmp_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_username", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpVersion")
-    def snmp_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP version
           - Choices: `ONE`, `TWO_C`, `THREE`
@@ -582,24 +582,24 @@ class DeviceArgs:
         return pulumi.get(self, "snmp_version")
 
     @snmp_version.setter
-    def snmp_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_version", value)
 
     @_builtins.property
     @pulumi.getter(name="softwareVersion")
-    def software_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def software_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Software version
         """
         return pulumi.get(self, "software_version")
 
     @software_version.setter
-    def software_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def software_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "software_version", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsConnectModeOptions")
-    def tacacs_connect_mode_options(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tacacs_connect_mode_options(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Connect mode options
           - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
@@ -607,204 +607,204 @@ class DeviceArgs:
         return pulumi.get(self, "tacacs_connect_mode_options")
 
     @tacacs_connect_mode_options.setter
-    def tacacs_connect_mode_options(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tacacs_connect_mode_options(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tacacs_connect_mode_options", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsSharedSecret")
-    def tacacs_shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tacacs_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Shared secret
         """
         return pulumi.get(self, "tacacs_shared_secret")
 
     @tacacs_shared_secret.setter
-    def tacacs_shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tacacs_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tacacs_shared_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecCoaSourceHost")
-    def trustsec_coa_source_host(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_coa_source_host(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CoA source host
         """
         return pulumi.get(self, "trustsec_coa_source_host")
 
     @trustsec_coa_source_host.setter
-    def trustsec_coa_source_host(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_coa_source_host(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_coa_source_host", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDeviceId")
-    def trustsec_device_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_device_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec device ID
         """
         return pulumi.get(self, "trustsec_device_id")
 
     @trustsec_device_id.setter
-    def trustsec_device_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_device_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_device_id", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDevicePassword")
-    def trustsec_device_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_device_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec device password
         """
         return pulumi.get(self, "trustsec_device_password")
 
     @trustsec_device_password.setter
-    def trustsec_device_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_device_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_device_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
-    def trustsec_download_environment_data_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_download_environment_data_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Download environment data every X seconds
         """
         return pulumi.get(self, "trustsec_download_environment_data_every_x_seconds")
 
     @trustsec_download_environment_data_every_x_seconds.setter
-    def trustsec_download_environment_data_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_download_environment_data_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_download_environment_data_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadPeerAuthorizationPolicyEveryXSeconds")
-    def trustsec_download_peer_authorization_policy_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_download_peer_authorization_policy_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Download peer authorization policy every X seconds
         """
         return pulumi.get(self, "trustsec_download_peer_authorization_policy_every_x_seconds")
 
     @trustsec_download_peer_authorization_policy_every_x_seconds.setter
-    def trustsec_download_peer_authorization_policy_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_download_peer_authorization_policy_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_download_peer_authorization_policy_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadSgaclListsEveryXSeconds")
-    def trustsec_download_sgacl_lists_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_download_sgacl_lists_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Download SGACL lists every X seconds
         """
         return pulumi.get(self, "trustsec_download_sgacl_lists_every_x_seconds")
 
     @trustsec_download_sgacl_lists_every_x_seconds.setter
-    def trustsec_download_sgacl_lists_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_download_sgacl_lists_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_download_sgacl_lists_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecEnableModePassword")
-    def trustsec_enable_mode_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_enable_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable mode password
         """
         return pulumi.get(self, "trustsec_enable_mode_password")
 
     @trustsec_enable_mode_password.setter
-    def trustsec_enable_mode_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_enable_mode_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_enable_mode_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModePassword")
-    def trustsec_exec_mode_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_exec_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         EXEC mode password
         """
         return pulumi.get(self, "trustsec_exec_mode_password")
 
     @trustsec_exec_mode_password.setter
-    def trustsec_exec_mode_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_exec_mode_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_exec_mode_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModeUsername")
-    def trustsec_exec_mode_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_exec_mode_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         EXEC mode username
         """
         return pulumi.get(self, "trustsec_exec_mode_username")
 
     @trustsec_exec_mode_username.setter
-    def trustsec_exec_mode_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_exec_mode_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_exec_mode_username", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecIncludeWhenDeployingSgtUpdates")
-    def trustsec_include_when_deploying_sgt_updates(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def trustsec_include_when_deploying_sgt_updates(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Include this device when deploying Security Group Tag Mapping Updates
         """
         return pulumi.get(self, "trustsec_include_when_deploying_sgt_updates")
 
     @trustsec_include_when_deploying_sgt_updates.setter
-    def trustsec_include_when_deploying_sgt_updates(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def trustsec_include_when_deploying_sgt_updates(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "trustsec_include_when_deploying_sgt_updates", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecOtherSgaDevicesToTrustThisDevice")
-    def trustsec_other_sga_devices_to_trust_this_device(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def trustsec_other_sga_devices_to_trust_this_device(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Other TrustSec devices to trust this device
         """
         return pulumi.get(self, "trustsec_other_sga_devices_to_trust_this_device")
 
     @trustsec_other_sga_devices_to_trust_this_device.setter
-    def trustsec_other_sga_devices_to_trust_this_device(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def trustsec_other_sga_devices_to_trust_this_device(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "trustsec_other_sga_devices_to_trust_this_device", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecReAuthenticationEveryXSeconds")
-    def trustsec_re_authentication_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_re_authentication_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Re-authenticate every X seconds
         """
         return pulumi.get(self, "trustsec_re_authentication_every_x_seconds")
 
     @trustsec_re_authentication_every_x_seconds.setter
-    def trustsec_re_authentication_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_re_authentication_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_re_authentication_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiPassword")
-    def trustsec_rest_api_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_rest_api_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         REST API password
         """
         return pulumi.get(self, "trustsec_rest_api_password")
 
     @trustsec_rest_api_password.setter
-    def trustsec_rest_api_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_rest_api_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_rest_api_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiUsername")
-    def trustsec_rest_api_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_rest_api_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         REST API username
         """
         return pulumi.get(self, "trustsec_rest_api_username")
 
     @trustsec_rest_api_username.setter
-    def trustsec_rest_api_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_rest_api_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_rest_api_username", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecSendConfigurationToDevice")
-    def trustsec_send_configuration_to_device(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def trustsec_send_configuration_to_device(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Send configuration to device
         """
         return pulumi.get(self, "trustsec_send_configuration_to_device")
 
     @trustsec_send_configuration_to_device.setter
-    def trustsec_send_configuration_to_device(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def trustsec_send_configuration_to_device(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "trustsec_send_configuration_to_device", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecSendConfigurationToDeviceUsing")
-    def trustsec_send_configuration_to_device_using(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_send_configuration_to_device_using(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Send configuration to device using
           - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
@@ -812,61 +812,61 @@ class DeviceArgs:
         return pulumi.get(self, "trustsec_send_configuration_to_device_using")
 
     @trustsec_send_configuration_to_device_using.setter
-    def trustsec_send_configuration_to_device_using(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_send_configuration_to_device_using(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_send_configuration_to_device_using", value)
 
 
 @pulumi.input_type
 class _DeviceState:
     def __init__(__self__, *,
-                 authentication_dtls_required: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_key_wrap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_multi_secret: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_encryption_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_encryption_key_format: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_message_authenticator_code_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_network_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_second_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 coa_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dtls_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]]] = None,
-                 model_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 software_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_coa_source_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_enable_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_include_when_deploying_sgt_updates: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_other_sga_devices_to_trust_this_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_re_authentication_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_rest_api_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_rest_api_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_send_configuration_to_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_dtls_required: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_key_wrap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 coa_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input['DeviceIpArgs']]]] = None,
+                 model_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 software_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Device resources.
 
@@ -1029,55 +1029,55 @@ class _DeviceState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationDtlsRequired")
-    def authentication_dtls_required(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_dtls_required(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enforce use of DTLS
         """
         return pulumi.get(self, "authentication_dtls_required")
 
     @authentication_dtls_required.setter
-    def authentication_dtls_required(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_dtls_required(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_dtls_required", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEnableKeyWrap")
-    def authentication_enable_key_wrap(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_enable_key_wrap(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable key wrap
         """
         return pulumi.get(self, "authentication_enable_key_wrap")
 
     @authentication_enable_key_wrap.setter
-    def authentication_enable_key_wrap(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_enable_key_wrap(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_enable_key_wrap", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEnableMultiSecret")
-    def authentication_enable_multi_secret(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_enable_multi_secret(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable multiple RADIUS shared secrets
         """
         return pulumi.get(self, "authentication_enable_multi_secret")
 
     @authentication_enable_multi_secret.setter
-    def authentication_enable_multi_secret(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_enable_multi_secret(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_enable_multi_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEncryptionKey")
-    def authentication_encryption_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_encryption_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Encryption key
         """
         return pulumi.get(self, "authentication_encryption_key")
 
     @authentication_encryption_key.setter
-    def authentication_encryption_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_encryption_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_encryption_key", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEncryptionKeyFormat")
-    def authentication_encryption_key_format(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_encryption_key_format(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Key input format
           - Choices: `ASCII`, `HEXADECIMAL`
@@ -1085,24 +1085,24 @@ class _DeviceState:
         return pulumi.get(self, "authentication_encryption_key_format")
 
     @authentication_encryption_key_format.setter
-    def authentication_encryption_key_format(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_encryption_key_format(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_encryption_key_format", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationMessageAuthenticatorCodeKey")
-    def authentication_message_authenticator_code_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_message_authenticator_code_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Message authenticator code key
         """
         return pulumi.get(self, "authentication_message_authenticator_code_key")
 
     @authentication_message_authenticator_code_key.setter
-    def authentication_message_authenticator_code_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_message_authenticator_code_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_message_authenticator_code_key", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationNetworkProtocol")
-    def authentication_network_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_network_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network protocol
           - Choices: `RADIUS`, `TACACS_PLUS`
@@ -1110,36 +1110,36 @@ class _DeviceState:
         return pulumi.get(self, "authentication_network_protocol")
 
     @authentication_network_protocol.setter
-    def authentication_network_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_network_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_network_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationRadiusSharedSecret")
-    def authentication_radius_shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RADIUS shared secret
         """
         return pulumi.get(self, "authentication_radius_shared_secret")
 
     @authentication_radius_shared_secret.setter
-    def authentication_radius_shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_radius_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_radius_shared_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationSecondRadiusSharedSecret")
-    def authentication_second_radius_shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_second_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Second RADIUS shared secret
         """
         return pulumi.get(self, "authentication_second_radius_shared_secret")
 
     @authentication_second_radius_shared_secret.setter
-    def authentication_second_radius_shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_second_radius_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_second_radius_shared_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
-    def coa_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def coa_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         CoA port
           - Default value: `1700`
@@ -1147,84 +1147,84 @@ class _DeviceState:
         return pulumi.get(self, "coa_port")
 
     @coa_port.setter
-    def coa_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def coa_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "coa_port", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dtlsDnsName")
-    def dtls_dns_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dtls_dns_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         """
         return pulumi.get(self, "dtls_dns_name")
 
     @dtls_dns_name.setter
-    def dtls_dns_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dtls_dns_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dtls_dns_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]]]:
+    def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DeviceIpArgs']]]]:
         """
         List of IP subnets
         """
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]]]):
+    def ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DeviceIpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
     @pulumi.getter(name="modelName")
-    def model_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Model name
         """
         return pulumi.get(self, "model_name")
 
     @model_name.setter
-    def model_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the network device
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkDeviceGroups")
-    def network_device_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def network_device_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
         """
         return pulumi.get(self, "network_device_groups")
 
     @network_device_groups.setter
-    def network_device_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def network_device_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "network_device_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="profileName")
-    def profile_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Profile name
           - Default value: `Cisco`
@@ -1232,24 +1232,24 @@ class _DeviceState:
         return pulumi.get(self, "profile_name")
 
     @profile_name.setter
-    def profile_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_name", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthPassword")
-    def snmp_auth_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_auth_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
         """
         return pulumi.get(self, "snmp_auth_password")
 
     @snmp_auth_password.setter
-    def snmp_auth_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_auth_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_auth_password", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthProtocol")
-    def snmp_auth_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_auth_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
           - Choices: `MD5`, `SHA`, `SHA2`
@@ -1257,48 +1257,48 @@ class _DeviceState:
         return pulumi.get(self, "snmp_auth_protocol")
 
     @snmp_auth_protocol.setter
-    def snmp_auth_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_auth_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_auth_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpLinkTrapQuery")
-    def snmp_link_trap_query(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_link_trap_query(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         SNMP link Trap Query
         """
         return pulumi.get(self, "snmp_link_trap_query")
 
     @snmp_link_trap_query.setter
-    def snmp_link_trap_query(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_link_trap_query(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_link_trap_query", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpMacTrapQuery")
-    def snmp_mac_trap_query(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_mac_trap_query(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         SNMP MAC Trap Query
         """
         return pulumi.get(self, "snmp_mac_trap_query")
 
     @snmp_mac_trap_query.setter
-    def snmp_mac_trap_query(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_mac_trap_query(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_mac_trap_query", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpOriginatingPolicyServiceNode")
-    def snmp_originating_policy_service_node(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_originating_policy_service_node(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Originating Policy Services Node
         """
         return pulumi.get(self, "snmp_originating_policy_service_node")
 
     @snmp_originating_policy_service_node.setter
-    def snmp_originating_policy_service_node(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_originating_policy_service_node(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_originating_policy_service_node", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPollingInterval")
-    def snmp_polling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def snmp_polling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SNMP Polling Interval in seconds
           - Range: `600`-`86400`
@@ -1306,24 +1306,24 @@ class _DeviceState:
         return pulumi.get(self, "snmp_polling_interval")
 
     @snmp_polling_interval.setter
-    def snmp_polling_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def snmp_polling_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "snmp_polling_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyPassword")
-    def snmp_privacy_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_privacy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         """
         return pulumi.get(self, "snmp_privacy_password")
 
     @snmp_privacy_password.setter
-    def snmp_privacy_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_privacy_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_privacy_password", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyProtocol")
-    def snmp_privacy_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_privacy_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
           - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -1331,24 +1331,24 @@ class _DeviceState:
         return pulumi.get(self, "snmp_privacy_protocol")
 
     @snmp_privacy_protocol.setter
-    def snmp_privacy_protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_privacy_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_privacy_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpRoCommunity")
-    def snmp_ro_community(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_ro_community(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP RO Community
         """
         return pulumi.get(self, "snmp_ro_community")
 
     @snmp_ro_community.setter
-    def snmp_ro_community(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_ro_community(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_ro_community", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpSecurityLevel")
-    def snmp_security_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_security_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP security level. Required for snmp version 3.
           - Choices: `NO_AUTH`, `AUTH`, `PRIV`
@@ -1356,24 +1356,24 @@ class _DeviceState:
         return pulumi.get(self, "snmp_security_level")
 
     @snmp_security_level.setter
-    def snmp_security_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_security_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_security_level", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpUsername")
-    def snmp_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP username. Required for snmp version 3.
         """
         return pulumi.get(self, "snmp_username")
 
     @snmp_username.setter
-    def snmp_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_username", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpVersion")
-    def snmp_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP version
           - Choices: `ONE`, `TWO_C`, `THREE`
@@ -1381,24 +1381,24 @@ class _DeviceState:
         return pulumi.get(self, "snmp_version")
 
     @snmp_version.setter
-    def snmp_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_version", value)
 
     @_builtins.property
     @pulumi.getter(name="softwareVersion")
-    def software_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def software_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Software version
         """
         return pulumi.get(self, "software_version")
 
     @software_version.setter
-    def software_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def software_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "software_version", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsConnectModeOptions")
-    def tacacs_connect_mode_options(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tacacs_connect_mode_options(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Connect mode options
           - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
@@ -1406,204 +1406,204 @@ class _DeviceState:
         return pulumi.get(self, "tacacs_connect_mode_options")
 
     @tacacs_connect_mode_options.setter
-    def tacacs_connect_mode_options(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tacacs_connect_mode_options(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tacacs_connect_mode_options", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsSharedSecret")
-    def tacacs_shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tacacs_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Shared secret
         """
         return pulumi.get(self, "tacacs_shared_secret")
 
     @tacacs_shared_secret.setter
-    def tacacs_shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tacacs_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tacacs_shared_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecCoaSourceHost")
-    def trustsec_coa_source_host(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_coa_source_host(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CoA source host
         """
         return pulumi.get(self, "trustsec_coa_source_host")
 
     @trustsec_coa_source_host.setter
-    def trustsec_coa_source_host(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_coa_source_host(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_coa_source_host", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDeviceId")
-    def trustsec_device_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_device_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec device ID
         """
         return pulumi.get(self, "trustsec_device_id")
 
     @trustsec_device_id.setter
-    def trustsec_device_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_device_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_device_id", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDevicePassword")
-    def trustsec_device_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_device_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec device password
         """
         return pulumi.get(self, "trustsec_device_password")
 
     @trustsec_device_password.setter
-    def trustsec_device_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_device_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_device_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
-    def trustsec_download_environment_data_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_download_environment_data_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Download environment data every X seconds
         """
         return pulumi.get(self, "trustsec_download_environment_data_every_x_seconds")
 
     @trustsec_download_environment_data_every_x_seconds.setter
-    def trustsec_download_environment_data_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_download_environment_data_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_download_environment_data_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadPeerAuthorizationPolicyEveryXSeconds")
-    def trustsec_download_peer_authorization_policy_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_download_peer_authorization_policy_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Download peer authorization policy every X seconds
         """
         return pulumi.get(self, "trustsec_download_peer_authorization_policy_every_x_seconds")
 
     @trustsec_download_peer_authorization_policy_every_x_seconds.setter
-    def trustsec_download_peer_authorization_policy_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_download_peer_authorization_policy_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_download_peer_authorization_policy_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadSgaclListsEveryXSeconds")
-    def trustsec_download_sgacl_lists_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_download_sgacl_lists_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Download SGACL lists every X seconds
         """
         return pulumi.get(self, "trustsec_download_sgacl_lists_every_x_seconds")
 
     @trustsec_download_sgacl_lists_every_x_seconds.setter
-    def trustsec_download_sgacl_lists_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_download_sgacl_lists_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_download_sgacl_lists_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecEnableModePassword")
-    def trustsec_enable_mode_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_enable_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable mode password
         """
         return pulumi.get(self, "trustsec_enable_mode_password")
 
     @trustsec_enable_mode_password.setter
-    def trustsec_enable_mode_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_enable_mode_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_enable_mode_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModePassword")
-    def trustsec_exec_mode_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_exec_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         EXEC mode password
         """
         return pulumi.get(self, "trustsec_exec_mode_password")
 
     @trustsec_exec_mode_password.setter
-    def trustsec_exec_mode_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_exec_mode_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_exec_mode_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModeUsername")
-    def trustsec_exec_mode_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_exec_mode_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         EXEC mode username
         """
         return pulumi.get(self, "trustsec_exec_mode_username")
 
     @trustsec_exec_mode_username.setter
-    def trustsec_exec_mode_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_exec_mode_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_exec_mode_username", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecIncludeWhenDeployingSgtUpdates")
-    def trustsec_include_when_deploying_sgt_updates(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def trustsec_include_when_deploying_sgt_updates(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Include this device when deploying Security Group Tag Mapping Updates
         """
         return pulumi.get(self, "trustsec_include_when_deploying_sgt_updates")
 
     @trustsec_include_when_deploying_sgt_updates.setter
-    def trustsec_include_when_deploying_sgt_updates(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def trustsec_include_when_deploying_sgt_updates(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "trustsec_include_when_deploying_sgt_updates", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecOtherSgaDevicesToTrustThisDevice")
-    def trustsec_other_sga_devices_to_trust_this_device(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def trustsec_other_sga_devices_to_trust_this_device(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Other TrustSec devices to trust this device
         """
         return pulumi.get(self, "trustsec_other_sga_devices_to_trust_this_device")
 
     @trustsec_other_sga_devices_to_trust_this_device.setter
-    def trustsec_other_sga_devices_to_trust_this_device(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def trustsec_other_sga_devices_to_trust_this_device(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "trustsec_other_sga_devices_to_trust_this_device", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecReAuthenticationEveryXSeconds")
-    def trustsec_re_authentication_every_x_seconds(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def trustsec_re_authentication_every_x_seconds(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Re-authenticate every X seconds
         """
         return pulumi.get(self, "trustsec_re_authentication_every_x_seconds")
 
     @trustsec_re_authentication_every_x_seconds.setter
-    def trustsec_re_authentication_every_x_seconds(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def trustsec_re_authentication_every_x_seconds(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "trustsec_re_authentication_every_x_seconds", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiPassword")
-    def trustsec_rest_api_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_rest_api_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         REST API password
         """
         return pulumi.get(self, "trustsec_rest_api_password")
 
     @trustsec_rest_api_password.setter
-    def trustsec_rest_api_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_rest_api_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_rest_api_password", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiUsername")
-    def trustsec_rest_api_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_rest_api_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         REST API username
         """
         return pulumi.get(self, "trustsec_rest_api_username")
 
     @trustsec_rest_api_username.setter
-    def trustsec_rest_api_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_rest_api_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_rest_api_username", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecSendConfigurationToDevice")
-    def trustsec_send_configuration_to_device(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def trustsec_send_configuration_to_device(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Send configuration to device
         """
         return pulumi.get(self, "trustsec_send_configuration_to_device")
 
     @trustsec_send_configuration_to_device.setter
-    def trustsec_send_configuration_to_device(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def trustsec_send_configuration_to_device(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "trustsec_send_configuration_to_device", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecSendConfigurationToDeviceUsing")
-    def trustsec_send_configuration_to_device_using(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trustsec_send_configuration_to_device_using(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Send configuration to device using
           - Choices: `DISABLE_ALL`, `ENABLE_USING_CLI`, `ENABLE_USING_COA`
@@ -1611,7 +1611,7 @@ class _DeviceState:
         return pulumi.get(self, "trustsec_send_configuration_to_device_using")
 
     @trustsec_send_configuration_to_device_using.setter
-    def trustsec_send_configuration_to_device_using(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trustsec_send_configuration_to_device_using(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_send_configuration_to_device_using", value)
 
 
@@ -1621,54 +1621,54 @@ class Device(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_dtls_required: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_key_wrap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_multi_secret: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_encryption_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_encryption_key_format: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_message_authenticator_code_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_network_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_second_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 coa_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dtls_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
-                 model_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 software_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_coa_source_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_enable_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_include_when_deploying_sgt_updates: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_other_sga_devices_to_trust_this_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_re_authentication_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_rest_api_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_rest_api_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_send_configuration_to_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_dtls_required: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_key_wrap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 coa_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
+                 model_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 software_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Network Device.
@@ -1889,54 +1889,54 @@ class Device(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_dtls_required: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_key_wrap: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_enable_multi_secret: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_encryption_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_encryption_key_format: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_message_authenticator_code_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_network_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_second_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 coa_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dtls_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
-                 model_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 software_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_coa_source_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_device_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_enable_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_exec_mode_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_include_when_deploying_sgt_updates: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_other_sga_devices_to_trust_this_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_re_authentication_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-                 trustsec_rest_api_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_rest_api_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 trustsec_send_configuration_to_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_dtls_required: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_key_wrap: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 coa_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
+                 model_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 software_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+                 trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -2006,54 +2006,54 @@ class Device(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_dtls_required: Optional[pulumi.Input[_builtins.bool]] = None,
-            authentication_enable_key_wrap: Optional[pulumi.Input[_builtins.bool]] = None,
-            authentication_enable_multi_secret: Optional[pulumi.Input[_builtins.bool]] = None,
-            authentication_encryption_key: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_encryption_key_format: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_message_authenticator_code_key: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_network_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_second_radius_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            coa_port: Optional[pulumi.Input[_builtins.int]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            dtls_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-            ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
-            model_name: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            profile_name: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_auth_password: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_auth_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_link_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-            snmp_mac_trap_query: Optional[pulumi.Input[_builtins.bool]] = None,
-            snmp_originating_policy_service_node: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_polling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            snmp_privacy_password: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_privacy_protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_ro_community: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_security_level: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_username: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_version: Optional[pulumi.Input[_builtins.str]] = None,
-            software_version: Optional[pulumi.Input[_builtins.str]] = None,
-            tacacs_connect_mode_options: Optional[pulumi.Input[_builtins.str]] = None,
-            tacacs_shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_coa_source_host: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_device_id: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_device_password: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_download_environment_data_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-            trustsec_download_peer_authorization_policy_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-            trustsec_download_sgacl_lists_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-            trustsec_enable_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_exec_mode_password: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_exec_mode_username: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_include_when_deploying_sgt_updates: Optional[pulumi.Input[_builtins.bool]] = None,
-            trustsec_other_sga_devices_to_trust_this_device: Optional[pulumi.Input[_builtins.bool]] = None,
-            trustsec_re_authentication_every_x_seconds: Optional[pulumi.Input[_builtins.int]] = None,
-            trustsec_rest_api_password: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_rest_api_username: Optional[pulumi.Input[_builtins.str]] = None,
-            trustsec_send_configuration_to_device: Optional[pulumi.Input[_builtins.bool]] = None,
-            trustsec_send_configuration_to_device_using: Optional[pulumi.Input[_builtins.str]] = None) -> 'Device':
+            authentication_dtls_required: pulumi.Input[Optional[_builtins.bool]] = None,
+            authentication_enable_key_wrap: pulumi.Input[Optional[_builtins.bool]] = None,
+            authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
+            authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            coa_port: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
+            model_name: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+            snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
+            snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_username: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_version: pulumi.Input[Optional[_builtins.str]] = None,
+            software_version: pulumi.Input[Optional[_builtins.str]] = None,
+            tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
+            tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+            trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+            trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+            trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
+            trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
+            trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+            trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
+            trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None) -> 'Device':
         """
         Get an existing Device resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

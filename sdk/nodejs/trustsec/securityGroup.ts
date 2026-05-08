@@ -121,24 +121,24 @@ export interface SecurityGroupState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Read-only
      */
-    isReadOnly?: pulumi.Input<boolean>;
+    isReadOnly?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the security group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Propagate to APIC (ACI)
      */
-    propogateToApic?: pulumi.Input<boolean>;
+    propogateToApic?: pulumi.Input<boolean | undefined>;
     /**
      * `-1` to auto-generate
      *   - Range: `-1`-`65519`
      */
-    value?: pulumi.Input<number>;
+    value?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -148,19 +148,19 @@ export interface SecurityGroupArgs {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Read-only
      */
-    isReadOnly?: pulumi.Input<boolean>;
+    isReadOnly?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the security group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Propagate to APIC (ACI)
      */
-    propogateToApic?: pulumi.Input<boolean>;
+    propogateToApic?: pulumi.Input<boolean | undefined>;
     /**
      * `-1` to auto-generate
      *   - Range: `-1`-`65519`

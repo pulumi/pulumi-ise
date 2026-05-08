@@ -414,8 +414,8 @@ def get_endpoint(id: Optional[_builtins.str] = None,
         static_group_assignment_defined=pulumi.get(__ret__, 'static_group_assignment_defined'),
         static_profile_assignment=pulumi.get(__ret__, 'static_profile_assignment'),
         static_profile_assignment_defined=pulumi.get(__ret__, 'static_profile_assignment_defined'))
-def get_endpoint_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_endpoint_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                        name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEndpointResult]:
     """
     This data source can read the Endpoint.

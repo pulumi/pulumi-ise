@@ -258,8 +258,8 @@ def get_internal_user(id: Optional[_builtins.str] = None,
         password=pulumi.get(__ret__, 'password'),
         password_id_store=pulumi.get(__ret__, 'password_id_store'),
         password_never_expires=pulumi.get(__ret__, 'password_never_expires'))
-def get_internal_user_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_internal_user_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInternalUserResult]:
     """
     This data source can read the Internal User.

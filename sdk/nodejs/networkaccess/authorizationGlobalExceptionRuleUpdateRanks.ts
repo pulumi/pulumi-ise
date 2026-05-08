@@ -78,12 +78,12 @@ export class AuthorizationGlobalExceptionRuleUpdateRanks extends pulumi.CustomRe
  * Input properties used for looking up and filtering AuthorizationGlobalExceptionRuleUpdateRanks resources.
  */
 export interface AuthorizationGlobalExceptionRuleUpdateRanksState {
-    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRule>[] | undefined>;
 }
 
 /**
  * The set of arguments for constructing a AuthorizationGlobalExceptionRuleUpdateRanks resource.
  */
 export interface AuthorizationGlobalExceptionRuleUpdateRanksArgs {
-    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networkaccess.AuthorizationGlobalExceptionRuleUpdateRanksRule>[] | undefined>;
 }

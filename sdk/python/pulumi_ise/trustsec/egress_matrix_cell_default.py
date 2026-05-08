@@ -19,10 +19,10 @@ __all__ = ['EgressMatrixCellDefaultArgs', 'EgressMatrixCellDefault']
 @pulumi.input_type
 class EgressMatrixCellDefaultArgs:
     def __init__(__self__, *,
-                 default_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a EgressMatrixCellDefault resource.
 
@@ -45,7 +45,7 @@ class EgressMatrixCellDefaultArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultRule")
-    def default_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Can be used only if sgacls not specified. Final Catch All Rule
           - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
@@ -53,24 +53,24 @@ class EgressMatrixCellDefaultArgs:
         return pulumi.get(self, "default_rule")
 
     @default_rule.setter
-    def default_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_rule(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_rule", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="matrixCellStatus")
-    def matrix_cell_status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def matrix_cell_status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Matrix Cell Status
           - Choices: `DISABLED`, `ENABLED`, `MONITOR`
@@ -79,29 +79,29 @@ class EgressMatrixCellDefaultArgs:
         return pulumi.get(self, "matrix_cell_status")
 
     @matrix_cell_status.setter
-    def matrix_cell_status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def matrix_cell_status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "matrix_cell_status", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgacls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def sgacls(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of TrustSec Security Groups ACLs
         """
         return pulumi.get(self, "sgacls")
 
     @sgacls.setter
-    def sgacls(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def sgacls(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "sgacls", value)
 
 
 @pulumi.input_type
 class _EgressMatrixCellDefaultState:
     def __init__(__self__, *,
-                 default_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering EgressMatrixCellDefault resources.
 
@@ -124,7 +124,7 @@ class _EgressMatrixCellDefaultState:
 
     @_builtins.property
     @pulumi.getter(name="defaultRule")
-    def default_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Can be used only if sgacls not specified. Final Catch All Rule
           - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`
@@ -132,24 +132,24 @@ class _EgressMatrixCellDefaultState:
         return pulumi.get(self, "default_rule")
 
     @default_rule.setter
-    def default_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_rule(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_rule", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="matrixCellStatus")
-    def matrix_cell_status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def matrix_cell_status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Matrix Cell Status
           - Choices: `DISABLED`, `ENABLED`, `MONITOR`
@@ -158,19 +158,19 @@ class _EgressMatrixCellDefaultState:
         return pulumi.get(self, "matrix_cell_status")
 
     @matrix_cell_status.setter
-    def matrix_cell_status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def matrix_cell_status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "matrix_cell_status", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgacls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def sgacls(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of TrustSec Security Groups ACLs
         """
         return pulumi.get(self, "sgacls")
 
     @sgacls.setter
-    def sgacls(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def sgacls(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "sgacls", value)
 
 
@@ -180,10 +180,10 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         Allows modifications to the default egress policy matrix rule
@@ -264,10 +264,10 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -291,10 +291,10 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_rule: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            matrix_cell_status: Optional[pulumi.Input[_builtins.str]] = None,
-            sgacls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'EgressMatrixCellDefault':
+            default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+            sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'EgressMatrixCellDefault':
         """
         Get an existing EgressMatrixCellDefault resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

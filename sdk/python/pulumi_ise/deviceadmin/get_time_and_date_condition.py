@@ -245,8 +245,8 @@ def get_time_and_date_condition(id: Optional[_builtins.str] = None,
         start_time=pulumi.get(__ret__, 'start_time'),
         week_days=pulumi.get(__ret__, 'week_days'),
         week_days_exceptions=pulumi.get(__ret__, 'week_days_exceptions'))
-def get_time_and_date_condition_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                       name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_time_and_date_condition_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                       name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTimeAndDateConditionResult]:
     """
     This data source can read the Device Admin Time And Date Condition.

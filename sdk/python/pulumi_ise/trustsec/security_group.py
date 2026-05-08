@@ -20,10 +20,10 @@ __all__ = ['SecurityGroupArgs', 'SecurityGroup']
 class SecurityGroupArgs:
     def __init__(__self__, *,
                  value: pulumi.Input[_builtins.int],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_read_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_read_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propogate_to_apic: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SecurityGroup resource.
 
@@ -59,61 +59,61 @@ class SecurityGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="isReadOnly")
-    def is_read_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_read_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Read-only
         """
         return pulumi.get(self, "is_read_only")
 
     @is_read_only.setter
-    def is_read_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_read_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_read_only", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the security group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="propogateToApic")
-    def propogate_to_apic(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propogate_to_apic(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate to APIC (ACI)
         """
         return pulumi.get(self, "propogate_to_apic")
 
     @propogate_to_apic.setter
-    def propogate_to_apic(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propogate_to_apic(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propogate_to_apic", value)
 
 
 @pulumi.input_type
 class _SecurityGroupState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_read_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 value: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_read_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propogate_to_apic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 value: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SecurityGroup resources.
 
@@ -137,55 +137,55 @@ class _SecurityGroupState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="isReadOnly")
-    def is_read_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_read_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Read-only
         """
         return pulumi.get(self, "is_read_only")
 
     @is_read_only.setter
-    def is_read_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_read_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_read_only", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the security group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="propogateToApic")
-    def propogate_to_apic(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propogate_to_apic(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate to APIC (ACI)
         """
         return pulumi.get(self, "propogate_to_apic")
 
     @propogate_to_apic.setter
-    def propogate_to_apic(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propogate_to_apic(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propogate_to_apic", value)
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def value(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         `-1` to auto-generate
           - Range: `-1`-`65519`
@@ -193,7 +193,7 @@ class _SecurityGroupState:
         return pulumi.get(self, "value")
 
     @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def value(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "value", value)
 
 
@@ -203,11 +203,11 @@ class SecurityGroup(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_read_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 value: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_read_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propogate_to_apic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 value: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a TrustSec Security Group.
@@ -291,11 +291,11 @@ class SecurityGroup(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_read_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 value: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_read_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propogate_to_apic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 value: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -322,11 +322,11 @@ class SecurityGroup(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            is_read_only: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            propogate_to_apic: Optional[pulumi.Input[_builtins.bool]] = None,
-            value: Optional[pulumi.Input[_builtins.int]] = None) -> 'SecurityGroup':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            is_read_only: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            propogate_to_apic: pulumi.Input[Optional[_builtins.bool]] = None,
+            value: pulumi.Input[Optional[_builtins.int]] = None) -> 'SecurityGroup':
         """
         Get an existing SecurityGroup resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

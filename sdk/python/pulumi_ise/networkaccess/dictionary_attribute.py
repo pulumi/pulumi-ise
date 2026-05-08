@@ -23,11 +23,11 @@ class DictionaryAttributeArgs:
     def __init__(__self__, *,
                  data_type: pulumi.Input[_builtins.str],
                  dictionary_name: pulumi.Input[_builtins.str],
-                 allowed_values: Optional[pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 allowed_values: pulumi.Input[Optional[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a DictionaryAttribute resource.
 
@@ -81,31 +81,31 @@ class DictionaryAttributeArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowedValues")
-    def allowed_values(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]:
+    def allowed_values(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]:
         """
         List of allowed values for the attribute
         """
         return pulumi.get(self, "allowed_values")
 
     @allowed_values.setter
-    def allowed_values(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]):
+    def allowed_values(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]):
         pulumi.set(self, "allowed_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the dictionary attribute
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="directionType")
-    def direction_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def direction_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The direction type for the dictionary attribute
           - Choices: `BOTH`, `IN`, `NONE`, `OUT`
@@ -113,44 +113,44 @@ class DictionaryAttributeArgs:
         return pulumi.get(self, "direction_type")
 
     @direction_type.setter
-    def direction_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def direction_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "direction_type", value)
 
     @_builtins.property
     @pulumi.getter(name="internalName")
-    def internal_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def internal_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The internal name of the dictionary attribute
         """
         return pulumi.get(self, "internal_name")
 
     @internal_name.setter
-    def internal_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def internal_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "internal_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The dictionary attribute name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _DictionaryAttributeState:
     def __init__(__self__, *,
-                 allowed_values: Optional[pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]] = None,
-                 data_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 allowed_values: pulumi.Input[Optional[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]] = None,
+                 data_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering DictionaryAttribute resources.
 
@@ -181,19 +181,19 @@ class _DictionaryAttributeState:
 
     @_builtins.property
     @pulumi.getter(name="allowedValues")
-    def allowed_values(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]:
+    def allowed_values(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]:
         """
         List of allowed values for the attribute
         """
         return pulumi.get(self, "allowed_values")
 
     @allowed_values.setter
-    def allowed_values(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]):
+    def allowed_values(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]]]):
         pulumi.set(self, "allowed_values", value)
 
     @_builtins.property
     @pulumi.getter(name="dataType")
-    def data_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def data_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The data type for the dictionary attribute
           - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
@@ -201,36 +201,36 @@ class _DictionaryAttributeState:
         return pulumi.get(self, "data_type")
 
     @data_type.setter
-    def data_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def data_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "data_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the dictionary attribute
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dictionaryName")
-    def dictionary_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dictionary_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the dictionary the attribute belongs to
         """
         return pulumi.get(self, "dictionary_name")
 
     @dictionary_name.setter
-    def dictionary_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dictionary_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dictionary_name", value)
 
     @_builtins.property
     @pulumi.getter(name="directionType")
-    def direction_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def direction_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The direction type for the dictionary attribute
           - Choices: `BOTH`, `IN`, `NONE`, `OUT`
@@ -238,31 +238,31 @@ class _DictionaryAttributeState:
         return pulumi.get(self, "direction_type")
 
     @direction_type.setter
-    def direction_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def direction_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "direction_type", value)
 
     @_builtins.property
     @pulumi.getter(name="internalName")
-    def internal_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def internal_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The internal name of the dictionary attribute
         """
         return pulumi.get(self, "internal_name")
 
     @internal_name.setter
-    def internal_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def internal_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "internal_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The dictionary attribute name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
@@ -272,13 +272,13 @@ class DictionaryAttribute(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_values: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]]] = None,
-                 data_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 allowed_values: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]]] = None,
+                 data_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Network Access Dictionary Attribute.
@@ -375,13 +375,13 @@ class DictionaryAttribute(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_values: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]]] = None,
-                 data_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 allowed_values: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]]] = None,
+                 data_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -412,13 +412,13 @@ class DictionaryAttribute(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allowed_values: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]]] = None,
-            data_type: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            dictionary_name: Optional[pulumi.Input[_builtins.str]] = None,
-            direction_type: Optional[pulumi.Input[_builtins.str]] = None,
-            internal_name: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None) -> 'DictionaryAttribute':
+            allowed_values: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]]] = None,
+            data_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            direction_type: pulumi.Input[Optional[_builtins.str]] = None,
+            internal_name: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> 'DictionaryAttribute':
         """
         Get an existing DictionaryAttribute resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

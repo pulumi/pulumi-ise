@@ -134,7 +134,7 @@ export interface GetActiveDirectoryGroupsByDomainOutputArgs {
     /**
      * Exact match filter on group's CN
      */
-    filter?: pulumi.Input<string>;
+    filter?: pulumi.Input<string | undefined>;
     /**
      * Active Directory Join Point ID
      */
@@ -142,9 +142,9 @@ export interface GetActiveDirectoryGroupsByDomainOutputArgs {
     /**
      * Exact match filter on group's SID, optionally specifying the domain as prefix. e.g. S-1-5-33-544 and R1.dom/S-1-5-33-544 are legal.
      */
-    sidFilter?: pulumi.Input<string>;
+    sidFilter?: pulumi.Input<string | undefined>;
     /**
      * Can be exactly one of: BUILTIN, DOMAIN LOCAL, GLOBAL, UNIVERSAL.
      */
-    typeFilter?: pulumi.Input<string>;
+    typeFilter?: pulumi.Input<string | undefined>;
 }

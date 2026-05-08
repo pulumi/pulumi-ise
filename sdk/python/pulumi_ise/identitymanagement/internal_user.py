@@ -20,19 +20,19 @@ __all__ = ['InternalUserArgs', 'InternalUser']
 class InternalUserArgs:
     def __init__(__self__, *,
                  password: pulumi.Input[_builtins.str],
-                 account_name_alias: Optional[pulumi.Input[_builtins.str]] = None,
-                 change_password: Optional[pulumi.Input[_builtins.bool]] = None,
-                 custom_attributes: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_groups: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_id_store: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None):
+                 account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
+                 change_password: pulumi.Input[Optional[_builtins.bool]] = None,
+                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a InternalUser resource.
 
@@ -96,19 +96,19 @@ class InternalUserArgs:
 
     @_builtins.property
     @pulumi.getter(name="accountNameAlias")
-    def account_name_alias(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def account_name_alias(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "account_name_alias")
 
     @account_name_alias.setter
-    def account_name_alias(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def account_name_alias(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "account_name_alias", value)
 
     @_builtins.property
     @pulumi.getter(name="changePassword")
-    def change_password(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def change_password(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Requires the user to change the password
           - Default value: `true`
@@ -116,120 +116,120 @@ class InternalUserArgs:
         return pulumi.get(self, "change_password")
 
     @change_password.setter
-    def change_password(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def change_password(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "change_password", value)
 
     @_builtins.property
     @pulumi.getter(name="customAttributes")
-    def custom_attributes(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def custom_attributes(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Key value map
         """
         return pulumi.get(self, "custom_attributes")
 
     @custom_attributes.setter
-    def custom_attributes(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def custom_attributes(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "custom_attributes", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Email address
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="enablePassword")
-    def enable_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This field is added in ISE 2.0 to support TACACS+
         """
         return pulumi.get(self, "enable_password")
 
     @enable_password.setter
-    def enable_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_password", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether the user is enabled/disabled
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="firstName")
-    def first_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def first_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         First name of the internal user
         """
         return pulumi.get(self, "first_name")
 
     @first_name.setter
-    def first_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def first_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "first_name", value)
 
     @_builtins.property
     @pulumi.getter(name="identityGroups")
-    def identity_groups(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def identity_groups(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma separated list of identity group IDs.
         """
         return pulumi.get(self, "identity_groups")
 
     @identity_groups.setter
-    def identity_groups(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def identity_groups(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "identity_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="lastName")
-    def last_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Last name of the internal user
         """
         return pulumi.get(self, "last_name")
 
     @last_name.setter
-    def last_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the internal user
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordIdStore")
-    def password_id_store(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password_id_store(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID store where the internal user's password is kept
           - Default value: `Internal Users`
@@ -237,12 +237,12 @@ class InternalUserArgs:
         return pulumi.get(self, "password_id_store")
 
     @password_id_store.setter
-    def password_id_store(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password_id_store(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password_id_store", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordNeverExpires")
-    def password_never_expires(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def password_never_expires(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
           - Default value: `false`
@@ -250,27 +250,27 @@ class InternalUserArgs:
         return pulumi.get(self, "password_never_expires")
 
     @password_never_expires.setter
-    def password_never_expires(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def password_never_expires(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "password_never_expires", value)
 
 
 @pulumi.input_type
 class _InternalUserState:
     def __init__(__self__, *,
-                 account_name_alias: Optional[pulumi.Input[_builtins.str]] = None,
-                 change_password: Optional[pulumi.Input[_builtins.bool]] = None,
-                 custom_attributes: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_groups: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_id_store: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None):
+                 account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
+                 change_password: pulumi.Input[Optional[_builtins.bool]] = None,
+                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering InternalUser resources.
 
@@ -323,19 +323,19 @@ class _InternalUserState:
 
     @_builtins.property
     @pulumi.getter(name="accountNameAlias")
-    def account_name_alias(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def account_name_alias(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         """
         return pulumi.get(self, "account_name_alias")
 
     @account_name_alias.setter
-    def account_name_alias(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def account_name_alias(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "account_name_alias", value)
 
     @_builtins.property
     @pulumi.getter(name="changePassword")
-    def change_password(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def change_password(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Requires the user to change the password
           - Default value: `true`
@@ -343,132 +343,132 @@ class _InternalUserState:
         return pulumi.get(self, "change_password")
 
     @change_password.setter
-    def change_password(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def change_password(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "change_password", value)
 
     @_builtins.property
     @pulumi.getter(name="customAttributes")
-    def custom_attributes(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def custom_attributes(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Key value map
         """
         return pulumi.get(self, "custom_attributes")
 
     @custom_attributes.setter
-    def custom_attributes(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def custom_attributes(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "custom_attributes", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Email address
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="enablePassword")
-    def enable_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This field is added in ISE 2.0 to support TACACS+
         """
         return pulumi.get(self, "enable_password")
 
     @enable_password.setter
-    def enable_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_password", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether the user is enabled/disabled
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="firstName")
-    def first_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def first_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         First name of the internal user
         """
         return pulumi.get(self, "first_name")
 
     @first_name.setter
-    def first_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def first_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "first_name", value)
 
     @_builtins.property
     @pulumi.getter(name="identityGroups")
-    def identity_groups(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def identity_groups(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma separated list of identity group IDs.
         """
         return pulumi.get(self, "identity_groups")
 
     @identity_groups.setter
-    def identity_groups(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def identity_groups(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "identity_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="lastName")
-    def last_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Last name of the internal user
         """
         return pulumi.get(self, "last_name")
 
     @last_name.setter
-    def last_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the internal user
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The password of the internal user
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordIdStore")
-    def password_id_store(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password_id_store(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID store where the internal user's password is kept
           - Default value: `Internal Users`
@@ -476,12 +476,12 @@ class _InternalUserState:
         return pulumi.get(self, "password_id_store")
 
     @password_id_store.setter
-    def password_id_store(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password_id_store(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password_id_store", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordNeverExpires")
-    def password_never_expires(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def password_never_expires(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
           - Default value: `false`
@@ -489,7 +489,7 @@ class _InternalUserState:
         return pulumi.get(self, "password_never_expires")
 
     @password_never_expires.setter
-    def password_never_expires(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def password_never_expires(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "password_never_expires", value)
 
 
@@ -499,20 +499,20 @@ class InternalUser(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 account_name_alias: Optional[pulumi.Input[_builtins.str]] = None,
-                 change_password: Optional[pulumi.Input[_builtins.bool]] = None,
-                 custom_attributes: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_groups: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_id_store: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None,
+                 account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
+                 change_password: pulumi.Input[Optional[_builtins.bool]] = None,
+                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage an Internal User.
@@ -621,20 +621,20 @@ class InternalUser(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 account_name_alias: Optional[pulumi.Input[_builtins.str]] = None,
-                 change_password: Optional[pulumi.Input[_builtins.bool]] = None,
-                 custom_attributes: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 first_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_groups: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_id_store: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None,
+                 account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
+                 change_password: pulumi.Input[Optional[_builtins.bool]] = None,
+                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 first_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -670,20 +670,20 @@ class InternalUser(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            account_name_alias: Optional[pulumi.Input[_builtins.str]] = None,
-            change_password: Optional[pulumi.Input[_builtins.bool]] = None,
-            custom_attributes: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            email: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_password: Optional[pulumi.Input[_builtins.str]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            first_name: Optional[pulumi.Input[_builtins.str]] = None,
-            identity_groups: Optional[pulumi.Input[_builtins.str]] = None,
-            last_name: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            password: Optional[pulumi.Input[_builtins.str]] = None,
-            password_id_store: Optional[pulumi.Input[_builtins.str]] = None,
-            password_never_expires: Optional[pulumi.Input[_builtins.bool]] = None) -> 'InternalUser':
+            account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
+            change_password: pulumi.Input[Optional[_builtins.bool]] = None,
+            custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            first_name: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
+            last_name: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
+            password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None) -> 'InternalUser':
         """
         Get an existing InternalUser resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

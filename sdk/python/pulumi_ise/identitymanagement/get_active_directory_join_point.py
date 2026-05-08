@@ -500,7 +500,7 @@ def get_active_directory_join_point(id: Optional[_builtins.str] = None,
         street_address=pulumi.get(__ret__, 'street_address'),
         telephone=pulumi.get(__ret__, 'telephone'),
         unreachable_domains_behaviour=pulumi.get(__ret__, 'unreachable_domains_behaviour'))
-def get_active_directory_join_point_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_active_directory_join_point_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetActiveDirectoryJoinPointResult]:
     """
     This data source can read the Active Directory Join Point.

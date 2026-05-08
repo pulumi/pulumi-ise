@@ -24,11 +24,11 @@ class DeviceIpArgsDict(TypedDict):
     """
     It can be either single ip address or ip range address
     """
-    ipaddress_exclude: NotRequired[pulumi.Input[_builtins.str]]
+    ipaddress_exclude: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     It can be either single ip address or ip range address
     """
-    mask: NotRequired[pulumi.Input[_builtins.str]]
+    mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subnet mask length
     """
@@ -37,8 +37,8 @@ class DeviceIpArgsDict(TypedDict):
 class DeviceIpArgs:
     def __init__(__self__, *,
                  ipaddress: pulumi.Input[_builtins.str],
-                 ipaddress_exclude: Optional[pulumi.Input[_builtins.str]] = None,
-                 mask: Optional[pulumi.Input[_builtins.str]] = None):
+                 ipaddress_exclude: pulumi.Input[Optional[_builtins.str]] = None,
+                 mask: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] ipaddress: It can be either single ip address or ip range address
         :param pulumi.Input[_builtins.str] ipaddress_exclude: It can be either single ip address or ip range address
@@ -64,26 +64,26 @@ class DeviceIpArgs:
 
     @_builtins.property
     @pulumi.getter(name="ipaddressExclude")
-    def ipaddress_exclude(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipaddress_exclude(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         It can be either single ip address or ip range address
         """
         return pulumi.get(self, "ipaddress_exclude")
 
     @ipaddress_exclude.setter
-    def ipaddress_exclude(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipaddress_exclude(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipaddress_exclude", value)
 
     @_builtins.property
     @pulumi.getter
-    def mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet mask length
         """
         return pulumi.get(self, "mask")
 
     @mask.setter
-    def mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mask", value)
 
 

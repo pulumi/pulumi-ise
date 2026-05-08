@@ -198,70 +198,70 @@ export interface PolicySetState {
     /**
      * List of child conditions
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildren>[] | undefined>;
     /**
      * Dictionary attribute name
      */
-    conditionAttributeName?: pulumi.Input<string>;
+    conditionAttributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    conditionAttributeValue?: pulumi.Input<string>;
+    conditionAttributeValue?: pulumi.Input<string | undefined>;
     /**
      * Dictionary name
      */
-    conditionDictionaryName?: pulumi.Input<string>;
+    conditionDictionaryName?: pulumi.Input<string | undefined>;
     /**
      * Dictionary value
      */
-    conditionDictionaryValue?: pulumi.Input<string>;
+    conditionDictionaryValue?: pulumi.Input<string | undefined>;
     /**
      * UUID for condition
      */
-    conditionId?: pulumi.Input<string>;
+    conditionId?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    conditionIsNegate?: pulumi.Input<boolean>;
+    conditionIsNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Equality operator
      *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
      */
-    conditionOperator?: pulumi.Input<string>;
+    conditionOperator?: pulumi.Input<string | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
-    conditionType?: pulumi.Input<string>;
+    conditionType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if this policy set is the default one
      */
-    default?: pulumi.Input<boolean>;
+    default?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the policy set
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
      */
-    isProxy?: pulumi.Input<boolean>;
+    isProxy?: pulumi.Input<boolean | undefined>;
     /**
      * Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      */
-    rank?: pulumi.Input<number>;
+    rank?: pulumi.Input<number | undefined>;
     /**
      * Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
      */
-    serviceName?: pulumi.Input<string>;
+    serviceName?: pulumi.Input<string | undefined>;
     /**
      * The state that the policy set is in. A disabled policy set cannot be matched.
      *   - Choices: `disabled`, `enabled`, `monitor`
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -271,61 +271,61 @@ export interface PolicySetArgs {
     /**
      * List of child conditions
      */
-    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildren>[]>;
+    childrens?: pulumi.Input<pulumi.Input<inputs.networkaccess.PolicySetChildren>[] | undefined>;
     /**
      * Dictionary attribute name
      */
-    conditionAttributeName?: pulumi.Input<string>;
+    conditionAttributeName?: pulumi.Input<string | undefined>;
     /**
      * Attribute value for condition. Value type is specified in dictionary object.
      */
-    conditionAttributeValue?: pulumi.Input<string>;
+    conditionAttributeValue?: pulumi.Input<string | undefined>;
     /**
      * Dictionary name
      */
-    conditionDictionaryName?: pulumi.Input<string>;
+    conditionDictionaryName?: pulumi.Input<string | undefined>;
     /**
      * Dictionary value
      */
-    conditionDictionaryValue?: pulumi.Input<string>;
+    conditionDictionaryValue?: pulumi.Input<string | undefined>;
     /**
      * UUID for condition
      */
-    conditionId?: pulumi.Input<string>;
+    conditionId?: pulumi.Input<string | undefined>;
     /**
      * Indicates whereas this condition is in negate mode
      */
-    conditionIsNegate?: pulumi.Input<boolean>;
+    conditionIsNegate?: pulumi.Input<boolean | undefined>;
     /**
      * Equality operator
      *   - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`, `macContains`, `macEndsWith`, `macEquals`, `macIn`, `macNotContains`, `macNotEndsWith`, `macNotEquals`, `macNotIn`, `macNotStartsWith`, `macStartsWith`
      */
-    conditionOperator?: pulumi.Input<string>;
+    conditionOperator?: pulumi.Input<string | undefined>;
     /**
      * Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
      *   - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
      */
-    conditionType?: pulumi.Input<string>;
+    conditionType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if this policy set is the default one
      */
-    default?: pulumi.Input<boolean>;
+    default?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the policy set
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'
      */
-    isProxy?: pulumi.Input<boolean>;
+    isProxy?: pulumi.Input<boolean | undefined>;
     /**
      * Given name for the policy set, [Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The rank (priority) in relation to other policy sets. Lower rank is higher priority.
      */
-    rank?: pulumi.Input<number>;
+    rank?: pulumi.Input<number | undefined>;
     /**
      * Policy set service identifier. 'Allowed Protocols' or 'Server Sequence'.
      */
@@ -334,5 +334,5 @@ export interface PolicySetArgs {
      * The state that the policy set is in. A disabled policy set cannot be matched.
      *   - Choices: `disabled`, `enabled`, `monitor`
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
 }

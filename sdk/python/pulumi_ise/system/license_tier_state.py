@@ -45,7 +45,7 @@ class LicenseTierStateArgs:
 @pulumi.input_type
 class _LicenseTierStateState:
     def __init__(__self__, *,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]] = None):
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]] = None):
         """
         Input properties used for looking up and filtering LicenseTierState resources.
 
@@ -56,14 +56,14 @@ class _LicenseTierStateState:
 
     @_builtins.property
     @pulumi.getter
-    def licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]]:
+    def licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]]:
         """
         List of licenses
         """
         return pulumi.get(self, "licenses")
 
     @licenses.setter
-    def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]]):
+    def licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicenseTierStateLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
 
@@ -73,7 +73,7 @@ class LicenseTierState(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None,
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a License Tier State.
@@ -148,7 +148,7 @@ class LicenseTierState(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None,
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -171,7 +171,7 @@ class LicenseTierState(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None) -> 'LicenseTierState':
+            licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicenseTierStateLicenseArgs', 'LicenseTierStateLicenseArgsDict']]]]] = None) -> 'LicenseTierState':
         """
         Get an existing LicenseTierState resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

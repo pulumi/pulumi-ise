@@ -106,16 +106,16 @@ export interface WorkProcessSettingsState {
      * Whether to enable approval workflow for TrustSec Matrix changes
      *   - Default value: `false`
      */
-    enableApprovalWorkflow?: pulumi.Input<boolean>;
+    enableApprovalWorkflow?: pulumi.Input<boolean | undefined>;
     /**
      * TrustSec Matrix Mode
      *   - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`
      */
-    matrixMode?: pulumi.Input<string>;
+    matrixMode?: pulumi.Input<string | undefined>;
     /**
      * Whether to use DEFCON levels in the TrustSec Matrix
      */
-    useDefcons?: pulumi.Input<boolean>;
+    useDefcons?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -126,14 +126,14 @@ export interface WorkProcessSettingsArgs {
      * Whether to enable approval workflow for TrustSec Matrix changes
      *   - Default value: `false`
      */
-    enableApprovalWorkflow?: pulumi.Input<boolean>;
+    enableApprovalWorkflow?: pulumi.Input<boolean | undefined>;
     /**
      * TrustSec Matrix Mode
      *   - Choices: `SINGLE_MATRIX`, `MULTIPLE_MATRICES`
      */
-    matrixMode?: pulumi.Input<string>;
+    matrixMode?: pulumi.Input<string | undefined>;
     /**
      * Whether to use DEFCON levels in the TrustSec Matrix
      */
-    useDefcons?: pulumi.Input<boolean>;
+    useDefcons?: pulumi.Input<boolean | undefined>;
 }

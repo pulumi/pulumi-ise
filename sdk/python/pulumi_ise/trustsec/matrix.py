@@ -19,11 +19,11 @@ __all__ = ['MatrixArgs', 'Matrix']
 @pulumi.input_type
 class MatrixArgs:
     def __init__(__self__, *,
-                 copy_policy_from: Optional[pulumi.Input[_builtins.str]] = None,
-                 defcon_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 copy_policy_from: pulumi.Input[Optional[_builtins.str]] = None,
+                 defcon_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Matrix resource.
 
@@ -48,19 +48,19 @@ class MatrixArgs:
 
     @_builtins.property
     @pulumi.getter(name="copyPolicyFrom")
-    def copy_policy_from(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def copy_policy_from(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies
         """
         return pulumi.get(self, "copy_policy_from")
 
     @copy_policy_from.setter
-    def copy_policy_from(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def copy_policy_from(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "copy_policy_from", value)
 
     @_builtins.property
     @pulumi.getter(name="defconLevel")
-    def defcon_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def defcon_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DEFCON Level for the TrustSec Matrix
           - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`
@@ -68,24 +68,24 @@ class MatrixArgs:
         return pulumi.get(self, "defcon_level")
 
     @defcon_level.setter
-    def defcon_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def defcon_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "defcon_level", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the TrustSec Matrix
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="matrixPolicyType")
-    def matrix_policy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def matrix_policy_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Trustsec Matrix Policy Type
           - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`
@@ -93,30 +93,30 @@ class MatrixArgs:
         return pulumi.get(self, "matrix_policy_type")
 
     @matrix_policy_type.setter
-    def matrix_policy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def matrix_policy_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "matrix_policy_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the TrustSec Matrix policy. Must be unique across all matrices.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _MatrixState:
     def __init__(__self__, *,
-                 copy_policy_from: Optional[pulumi.Input[_builtins.str]] = None,
-                 defcon_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 copy_policy_from: pulumi.Input[Optional[_builtins.str]] = None,
+                 defcon_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Matrix resources.
 
@@ -141,19 +141,19 @@ class _MatrixState:
 
     @_builtins.property
     @pulumi.getter(name="copyPolicyFrom")
-    def copy_policy_from(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def copy_policy_from(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies
         """
         return pulumi.get(self, "copy_policy_from")
 
     @copy_policy_from.setter
-    def copy_policy_from(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def copy_policy_from(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "copy_policy_from", value)
 
     @_builtins.property
     @pulumi.getter(name="defconLevel")
-    def defcon_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def defcon_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DEFCON Level for the TrustSec Matrix
           - Choices: `DEFCON1_CRITICAL`, `DEFCON2_SEVERE`, `DEFCON3_SUBSTANTIAL`, `DEFCON4_MODERATE`, `DEFCON5_NORMAL`
@@ -161,24 +161,24 @@ class _MatrixState:
         return pulumi.get(self, "defcon_level")
 
     @defcon_level.setter
-    def defcon_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def defcon_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "defcon_level", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the TrustSec Matrix
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="matrixPolicyType")
-    def matrix_policy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def matrix_policy_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Trustsec Matrix Policy Type
           - Choices: `TRAFFIC_STEERING_POLICY`, `TRUSTSEC_POLICY`
@@ -186,19 +186,19 @@ class _MatrixState:
         return pulumi.get(self, "matrix_policy_type")
 
     @matrix_policy_type.setter
-    def matrix_policy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def matrix_policy_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "matrix_policy_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the TrustSec Matrix policy. Must be unique across all matrices.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
@@ -208,11 +208,11 @@ class Matrix(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 copy_policy_from: Optional[pulumi.Input[_builtins.str]] = None,
-                 defcon_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 copy_policy_from: pulumi.Input[Optional[_builtins.str]] = None,
+                 defcon_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a TrustSec Matrix.
@@ -293,11 +293,11 @@ class Matrix(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 copy_policy_from: Optional[pulumi.Input[_builtins.str]] = None,
-                 defcon_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 matrix_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 copy_policy_from: pulumi.Input[Optional[_builtins.str]] = None,
+                 defcon_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 matrix_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -322,11 +322,11 @@ class Matrix(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            copy_policy_from: Optional[pulumi.Input[_builtins.str]] = None,
-            defcon_level: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            matrix_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None) -> 'Matrix':
+            copy_policy_from: pulumi.Input[Optional[_builtins.str]] = None,
+            defcon_level: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            matrix_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> 'Matrix':
         """
         Get an existing Matrix resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

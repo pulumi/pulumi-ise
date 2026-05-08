@@ -38,14 +38,14 @@ class ActiveDirectoryAddGroupsGroupArgsDict(TypedDict):
     """
     Required for each group in the group list with no duplication between groups
     """
-    type: NotRequired[pulumi.Input[_builtins.str]]
+    type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
 
 @pulumi.input_type
 class ActiveDirectoryAddGroupsGroupArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
                  sid: pulumi.Input[_builtins.str],
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Required for each group in the group list with no duplication between groups
         :param pulumi.Input[_builtins.str] sid: Required for each group in the group list with no duplication between groups
@@ -81,11 +81,11 @@ class ActiveDirectoryAddGroupsGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
 
@@ -233,14 +233,14 @@ class ActiveDirectoryJoinPointGroupArgsDict(TypedDict):
     """
     Required for each group in the group list with no duplication between groups
     """
-    type: NotRequired[pulumi.Input[_builtins.str]]
+    type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
 
 @pulumi.input_type
 class ActiveDirectoryJoinPointGroupArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
                  sid: pulumi.Input[_builtins.str],
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Required for each group in the group list with no duplication between groups
         :param pulumi.Input[_builtins.str] sid: Required for each group in the group list with no duplication between groups
@@ -276,11 +276,11 @@ class ActiveDirectoryJoinPointGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
 

@@ -1077,8 +1077,8 @@ def get_allowed_protocols(id: Optional[_builtins.str] = None,
         teap_eap_tls=pulumi.get(__ret__, 'teap_eap_tls'),
         teap_eap_tls_auth_of_expired_certs=pulumi.get(__ret__, 'teap_eap_tls_auth_of_expired_certs'),
         teap_request_basic_pwd_auth=pulumi.get(__ret__, 'teap_request_basic_pwd_auth'))
-def get_allowed_protocols_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                 name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_allowed_protocols_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                 name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAllowedProtocolsResult]:
     """
     This data source can read an allowed protocols policy element.
