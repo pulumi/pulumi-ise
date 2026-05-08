@@ -49,6 +49,9 @@ __all__ = [
     'ConditionChildrenChildren',
     'ConditionChildrenChildrenChildren',
     'ConditionChildrenChildrenChildrenChildren',
+    'ConditionChildrenChildrenChildrenChildrenChildren',
+    'ConditionChildrenChildrenChildrenChildrenChildrenChildren',
+    'DictionaryAttributeAllowedValue',
     'PolicySetChildren',
     'PolicySetChildrenChildren',
     'PolicySetChildrenChildrenChildren',
@@ -85,6 +88,9 @@ __all__ = [
     'GetConditionChildrenChildrenResult',
     'GetConditionChildrenChildrenChildrenResult',
     'GetConditionChildrenChildrenChildrenChildrenResult',
+    'GetConditionChildrenChildrenChildrenChildrenChildrenResult',
+    'GetConditionChildrenChildrenChildrenChildrenChildrenChildrenResult',
+    'GetDictionaryAttributeAllowedValueResult',
     'GetPolicySetChildrenResult',
     'GetPolicySetChildrenChildrenResult',
     'GetPolicySetChildrenChildrenChildrenResult',
@@ -4273,6 +4279,296 @@ class ConditionChildrenChildrenChildrenChildren(dict):
                  condition_type: _builtins.str,
                  attribute_name: Optional[_builtins.str] = None,
                  attribute_value: Optional[_builtins.str] = None,
+                 childrens: Optional[Sequence['outputs.ConditionChildrenChildrenChildrenChildrenChildren']] = None,
+                 dictionary_name: Optional[_builtins.str] = None,
+                 dictionary_value: Optional[_builtins.str] = None,
+                 id: Optional[_builtins.str] = None,
+                 is_negate: Optional[_builtins.bool] = None,
+                 operator: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str condition_type: Condition type.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param _builtins.str attribute_name: Dictionary attribute name
+        :param _builtins.str attribute_value: Attribute value for condition
+        :param Sequence['ConditionChildrenChildrenChildrenChildrenChildrenArgs'] childrens: List of child conditions
+        :param _builtins.str dictionary_name: Dictionary name
+        :param _builtins.str dictionary_value: Dictionary value
+        :param _builtins.str id: UUID for condition
+        :param _builtins.bool is_negate: Indicates whereas this condition is in negate mode
+        :param _builtins.str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @_builtins.property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> _builtins.str:
+        """
+        Condition type.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @_builtins.property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[_builtins.str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @_builtins.property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[_builtins.str]:
+        """
+        Attribute value for condition
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.ConditionChildrenChildrenChildrenChildrenChildren']]:
+        """
+        List of child conditions
+        """
+        return pulumi.get(self, "childrens")
+
+    @_builtins.property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[_builtins.str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @_builtins.property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[_builtins.str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> Optional[_builtins.str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[_builtins.bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @_builtins.property
+    @pulumi.getter
+    def operator(self) -> Optional[_builtins.str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class ConditionChildrenChildrenChildrenChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ConditionChildrenChildrenChildrenChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ConditionChildrenChildrenChildrenChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ConditionChildrenChildrenChildrenChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: _builtins.str,
+                 attribute_name: Optional[_builtins.str] = None,
+                 attribute_value: Optional[_builtins.str] = None,
+                 childrens: Optional[Sequence['outputs.ConditionChildrenChildrenChildrenChildrenChildrenChildren']] = None,
+                 dictionary_name: Optional[_builtins.str] = None,
+                 dictionary_value: Optional[_builtins.str] = None,
+                 id: Optional[_builtins.str] = None,
+                 is_negate: Optional[_builtins.bool] = None,
+                 operator: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str condition_type: Condition type.
+                 - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        :param _builtins.str attribute_name: Dictionary attribute name
+        :param _builtins.str attribute_value: Attribute value for condition
+        :param Sequence['ConditionChildrenChildrenChildrenChildrenChildrenChildrenArgs'] childrens: List of child conditions
+        :param _builtins.str dictionary_name: Dictionary name
+        :param _builtins.str dictionary_value: Dictionary value
+        :param _builtins.str id: UUID for condition
+        :param _builtins.bool is_negate: Indicates whereas this condition is in negate mode
+        :param _builtins.str operator: Equality operator
+                 - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        pulumi.set(__self__, "condition_type", condition_type)
+        if attribute_name is not None:
+            pulumi.set(__self__, "attribute_name", attribute_name)
+        if attribute_value is not None:
+            pulumi.set(__self__, "attribute_value", attribute_value)
+        if childrens is not None:
+            pulumi.set(__self__, "childrens", childrens)
+        if dictionary_name is not None:
+            pulumi.set(__self__, "dictionary_name", dictionary_name)
+        if dictionary_value is not None:
+            pulumi.set(__self__, "dictionary_value", dictionary_value)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if is_negate is not None:
+            pulumi.set(__self__, "is_negate", is_negate)
+        if operator is not None:
+            pulumi.set(__self__, "operator", operator)
+
+    @_builtins.property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> _builtins.str:
+        """
+        Condition type.
+          - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`
+        """
+        return pulumi.get(self, "condition_type")
+
+    @_builtins.property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> Optional[_builtins.str]:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @_builtins.property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> Optional[_builtins.str]:
+        """
+        Attribute value for condition
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def childrens(self) -> Optional[Sequence['outputs.ConditionChildrenChildrenChildrenChildrenChildrenChildren']]:
+        """
+        List of child conditions
+        """
+        return pulumi.get(self, "childrens")
+
+    @_builtins.property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> Optional[_builtins.str]:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @_builtins.property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> Optional[_builtins.str]:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> Optional[_builtins.str]:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> Optional[_builtins.bool]:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @_builtins.property
+    @pulumi.getter
+    def operator(self) -> Optional[_builtins.str]:
+        """
+        Equality operator
+          - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class ConditionChildrenChildrenChildrenChildrenChildrenChildren(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "conditionType":
+            suggest = "condition_type"
+        elif key == "attributeName":
+            suggest = "attribute_name"
+        elif key == "attributeValue":
+            suggest = "attribute_value"
+        elif key == "dictionaryName":
+            suggest = "dictionary_name"
+        elif key == "dictionaryValue":
+            suggest = "dictionary_value"
+        elif key == "isNegate":
+            suggest = "is_negate"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ConditionChildrenChildrenChildrenChildrenChildrenChildren. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ConditionChildrenChildrenChildrenChildrenChildrenChildren.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ConditionChildrenChildrenChildrenChildrenChildrenChildren.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 condition_type: _builtins.str,
+                 attribute_name: Optional[_builtins.str] = None,
+                 attribute_value: Optional[_builtins.str] = None,
                  dictionary_name: Optional[_builtins.str] = None,
                  dictionary_value: Optional[_builtins.str] = None,
                  id: Optional[_builtins.str] = None,
@@ -4371,6 +4667,37 @@ class ConditionChildrenChildrenChildrenChildren(dict):
           - Choices: `contains`, `endsWith`, `equals`, `greaterOrEquals`, `greaterThan`, `in`, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, `matches`, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class DictionaryAttributeAllowedValue(dict):
+    def __init__(__self__, *,
+                 key: Optional[_builtins.str] = None,
+                 value: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str key: The allowed value key
+        :param _builtins.str value: The allowed value
+        """
+        if key is not None:
+            pulumi.set(__self__, "key", key)
+        if value is not None:
+            pulumi.set(__self__, "value", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def key(self) -> Optional[_builtins.str]:
+        """
+        The allowed value key
+        """
+        return pulumi.get(self, "key")
+
+    @_builtins.property
+    @pulumi.getter
+    def value(self) -> Optional[_builtins.str]:
+        """
+        The allowed value
+        """
+        return pulumi.get(self, "value")
 
 
 @pulumi.output_type
@@ -7845,6 +8172,7 @@ class GetConditionChildrenChildrenChildrenChildrenResult(dict):
     def __init__(__self__, *,
                  attribute_name: _builtins.str,
                  attribute_value: _builtins.str,
+                 childrens: Sequence['outputs.GetConditionChildrenChildrenChildrenChildrenChildrenResult'],
                  condition_type: _builtins.str,
                  dictionary_name: _builtins.str,
                  dictionary_value: _builtins.str,
@@ -7854,6 +8182,7 @@ class GetConditionChildrenChildrenChildrenChildrenResult(dict):
         """
         :param _builtins.str attribute_name: Dictionary attribute name
         :param _builtins.str attribute_value: Attribute value for condition
+        :param Sequence['GetConditionChildrenChildrenChildrenChildrenChildrenArgs'] childrens: List of child conditions
         :param _builtins.str condition_type: Condition type.
         :param _builtins.str dictionary_name: Dictionary name
         :param _builtins.str dictionary_value: Dictionary value
@@ -7863,6 +8192,7 @@ class GetConditionChildrenChildrenChildrenChildrenResult(dict):
         """
         pulumi.set(__self__, "attribute_name", attribute_name)
         pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
         pulumi.set(__self__, "condition_type", condition_type)
         pulumi.set(__self__, "dictionary_name", dictionary_name)
         pulumi.set(__self__, "dictionary_value", dictionary_value)
@@ -7885,6 +8215,14 @@ class GetConditionChildrenChildrenChildrenChildrenResult(dict):
         Attribute value for condition
         """
         return pulumi.get(self, "attribute_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetConditionChildrenChildrenChildrenChildrenChildrenResult']:
+        """
+        List of child conditions
+        """
+        return pulumi.get(self, "childrens")
 
     @_builtins.property
     @pulumi.getter(name="conditionType")
@@ -7933,6 +8271,147 @@ class GetConditionChildrenChildrenChildrenChildrenResult(dict):
         Equality operator
         """
         return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetConditionChildrenChildrenChildrenChildrenChildrenResult(dict):
+    def __init__(__self__, *,
+                 attribute_name: _builtins.str,
+                 attribute_value: _builtins.str,
+                 childrens: Sequence['outputs.GetConditionChildrenChildrenChildrenChildrenChildrenChildrenResult'],
+                 condition_type: _builtins.str,
+                 dictionary_name: _builtins.str,
+                 dictionary_value: _builtins.str,
+                 id: _builtins.str,
+                 is_negate: _builtins.bool,
+                 operator: _builtins.str):
+        """
+        :param _builtins.str attribute_name: Dictionary attribute name
+        :param _builtins.str attribute_value: Attribute value for condition
+        :param Sequence['GetConditionChildrenChildrenChildrenChildrenChildrenChildrenArgs'] childrens: List of child conditions
+        :param _builtins.str condition_type: Condition type.
+        :param _builtins.str dictionary_name: Dictionary name
+        :param _builtins.str dictionary_value: Dictionary value
+        :param _builtins.str id: UUID for condition
+        :param _builtins.bool is_negate: Indicates whereas this condition is in negate mode
+        :param _builtins.str operator: Equality operator
+        """
+        pulumi.set(__self__, "attribute_name", attribute_name)
+        pulumi.set(__self__, "attribute_value", attribute_value)
+        pulumi.set(__self__, "childrens", childrens)
+        pulumi.set(__self__, "condition_type", condition_type)
+        pulumi.set(__self__, "dictionary_name", dictionary_name)
+        pulumi.set(__self__, "dictionary_value", dictionary_value)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "is_negate", is_negate)
+        pulumi.set(__self__, "operator", operator)
+
+    @_builtins.property
+    @pulumi.getter(name="attributeName")
+    def attribute_name(self) -> _builtins.str:
+        """
+        Dictionary attribute name
+        """
+        return pulumi.get(self, "attribute_name")
+
+    @_builtins.property
+    @pulumi.getter(name="attributeValue")
+    def attribute_value(self) -> _builtins.str:
+        """
+        Attribute value for condition
+        """
+        return pulumi.get(self, "attribute_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def childrens(self) -> Sequence['outputs.GetConditionChildrenChildrenChildrenChildrenChildrenChildrenResult']:
+        """
+        List of child conditions
+        """
+        return pulumi.get(self, "childrens")
+
+    @_builtins.property
+    @pulumi.getter(name="conditionType")
+    def condition_type(self) -> _builtins.str:
+        """
+        Condition type.
+        """
+        return pulumi.get(self, "condition_type")
+
+    @_builtins.property
+    @pulumi.getter(name="dictionaryName")
+    def dictionary_name(self) -> _builtins.str:
+        """
+        Dictionary name
+        """
+        return pulumi.get(self, "dictionary_name")
+
+    @_builtins.property
+    @pulumi.getter(name="dictionaryValue")
+    def dictionary_value(self) -> _builtins.str:
+        """
+        Dictionary value
+        """
+        return pulumi.get(self, "dictionary_value")
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> _builtins.str:
+        """
+        UUID for condition
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter(name="isNegate")
+    def is_negate(self) -> _builtins.bool:
+        """
+        Indicates whereas this condition is in negate mode
+        """
+        return pulumi.get(self, "is_negate")
+
+    @_builtins.property
+    @pulumi.getter
+    def operator(self) -> _builtins.str:
+        """
+        Equality operator
+        """
+        return pulumi.get(self, "operator")
+
+
+@pulumi.output_type
+class GetConditionChildrenChildrenChildrenChildrenChildrenChildrenResult(dict):
+    def __init__(__self__):
+        pass
+
+
+@pulumi.output_type
+class GetDictionaryAttributeAllowedValueResult(dict):
+    def __init__(__self__, *,
+                 key: _builtins.str,
+                 value: _builtins.str):
+        """
+        :param _builtins.str key: The allowed value key
+        :param _builtins.str value: The allowed value
+        """
+        pulumi.set(__self__, "key", key)
+        pulumi.set(__self__, "value", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def key(self) -> _builtins.str:
+        """
+        The allowed value key
+        """
+        return pulumi.get(self, "key")
+
+    @_builtins.property
+    @pulumi.getter
+    def value(self) -> _builtins.str:
+        """
+        The allowed value
+        """
+        return pulumi.get(self, "value")
 
 
 @pulumi.output_type

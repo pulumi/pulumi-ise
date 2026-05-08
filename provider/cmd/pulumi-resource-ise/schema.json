@@ -1414,6 +1414,100 @@
                     "type": "string",
                     "description": "Attribute value for condition\n"
                 },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/ConditionChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
+                "conditionType": {
+                    "type": "string",
+                    "description": "Condition type.\n  - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`\n"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "Dictionary name\n"
+                },
+                "dictionaryValue": {
+                    "type": "string",
+                    "description": "Dictionary value\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "UUID for condition\n"
+                },
+                "isNegate": {
+                    "type": "boolean",
+                    "description": "Indicates whereas this condition is in negate mode\n"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "Equality operator\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`contains`\" pulumi-lang-dotnet=\"`Contains`\" pulumi-lang-go=\"`contains`\" pulumi-lang-python=\"`contains`\" pulumi-lang-yaml=\"`contains`\" pulumi-lang-java=\"`contains`\"\u003e`contains`\u003c/span\u003e, `endsWith`, \u003cspan pulumi-lang-nodejs=\"`equals`\" pulumi-lang-dotnet=\"`Equals`\" pulumi-lang-go=\"`equals`\" pulumi-lang-python=\"`equals`\" pulumi-lang-yaml=\"`equals`\" pulumi-lang-java=\"`equals`\"\u003e`equals`\u003c/span\u003e, `greaterOrEquals`, `greaterThan`, \u003cspan pulumi-lang-nodejs=\"`in`\" pulumi-lang-dotnet=\"`In`\" pulumi-lang-go=\"`in`\" pulumi-lang-python=\"`in`\" pulumi-lang-yaml=\"`in`\" pulumi-lang-java=\"`in`\"\u003e`in`\u003c/span\u003e, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, \u003cspan pulumi-lang-nodejs=\"`matches`\" pulumi-lang-dotnet=\"`Matches`\" pulumi-lang-go=\"`matches`\" pulumi-lang-python=\"`matches`\" pulumi-lang-yaml=\"`matches`\" pulumi-lang-java=\"`matches`\"\u003e`matches`\u003c/span\u003e, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "conditionType"
+            ]
+        },
+        "ise:deviceadmin/ConditionChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildren": {
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "Dictionary attribute name\n"
+                },
+                "attributeValue": {
+                    "type": "string",
+                    "description": "Attribute value for condition\n"
+                },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/ConditionChildrenChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
+                "conditionType": {
+                    "type": "string",
+                    "description": "Condition type.\n  - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`\n"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "Dictionary name\n"
+                },
+                "dictionaryValue": {
+                    "type": "string",
+                    "description": "Dictionary value\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "UUID for condition\n"
+                },
+                "isNegate": {
+                    "type": "boolean",
+                    "description": "Indicates whereas this condition is in negate mode\n"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "Equality operator\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`contains`\" pulumi-lang-dotnet=\"`Contains`\" pulumi-lang-go=\"`contains`\" pulumi-lang-python=\"`contains`\" pulumi-lang-yaml=\"`contains`\" pulumi-lang-java=\"`contains`\"\u003e`contains`\u003c/span\u003e, `endsWith`, \u003cspan pulumi-lang-nodejs=\"`equals`\" pulumi-lang-dotnet=\"`Equals`\" pulumi-lang-go=\"`equals`\" pulumi-lang-python=\"`equals`\" pulumi-lang-yaml=\"`equals`\" pulumi-lang-java=\"`equals`\"\u003e`equals`\u003c/span\u003e, `greaterOrEquals`, `greaterThan`, \u003cspan pulumi-lang-nodejs=\"`in`\" pulumi-lang-dotnet=\"`In`\" pulumi-lang-go=\"`in`\" pulumi-lang-python=\"`in`\" pulumi-lang-yaml=\"`in`\" pulumi-lang-java=\"`in`\"\u003e`in`\u003c/span\u003e, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, \u003cspan pulumi-lang-nodejs=\"`matches`\" pulumi-lang-dotnet=\"`Matches`\" pulumi-lang-go=\"`matches`\" pulumi-lang-python=\"`matches`\" pulumi-lang-yaml=\"`matches`\" pulumi-lang-java=\"`matches`\"\u003e`matches`\u003c/span\u003e, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "conditionType"
+            ]
+        },
+        "ise:deviceadmin/ConditionChildrenChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildrenChildren": {
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "Dictionary attribute name\n"
+                },
+                "attributeValue": {
+                    "type": "string",
+                    "description": "Attribute value for condition\n"
+                },
                 "conditionType": {
                     "type": "string",
                     "description": "Condition type.\n  - Choices: `ConditionAttributes`, `ConditionReference`\n"
@@ -3201,6 +3295,13 @@
                     "type": "string",
                     "description": "Attribute value for condition\n"
                 },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/getConditionChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
                 "conditionType": {
                     "type": "string",
                     "description": "Condition type.\n"
@@ -3230,6 +3331,7 @@
             "required": [
                 "attributeName",
                 "attributeValue",
+                "childrens",
                 "conditionType",
                 "dictionaryName",
                 "dictionaryValue",
@@ -3242,6 +3344,69 @@
                     "requiredInputs": []
                 }
             }
+        },
+        "ise:deviceadmin/getConditionChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildren": {
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "Dictionary attribute name\n"
+                },
+                "attributeValue": {
+                    "type": "string",
+                    "description": "Attribute value for condition\n"
+                },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:deviceadmin/getConditionChildrenChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
+                "conditionType": {
+                    "type": "string",
+                    "description": "Condition type.\n"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "Dictionary name\n"
+                },
+                "dictionaryValue": {
+                    "type": "string",
+                    "description": "Dictionary value\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "UUID for condition\n"
+                },
+                "isNegate": {
+                    "type": "boolean",
+                    "description": "Indicates whereas this condition is in negate mode\n"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "Equality operator\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "attributeName",
+                "attributeValue",
+                "childrens",
+                "conditionType",
+                "dictionaryName",
+                "dictionaryValue",
+                "id",
+                "isNegate",
+                "operator"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "ise:deviceadmin/getConditionChildrenChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildrenChildren": {
+            "type": "object"
         },
         "ise:deviceadmin/getPolicySetChildren:getPolicySetChildren": {
             "properties": {
@@ -5252,6 +5417,100 @@
                     "type": "string",
                     "description": "Attribute value for condition\n"
                 },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/ConditionChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
+                "conditionType": {
+                    "type": "string",
+                    "description": "Condition type.\n  - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`\n"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "Dictionary name\n"
+                },
+                "dictionaryValue": {
+                    "type": "string",
+                    "description": "Dictionary value\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "UUID for condition\n"
+                },
+                "isNegate": {
+                    "type": "boolean",
+                    "description": "Indicates whereas this condition is in negate mode\n"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "Equality operator\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`contains`\" pulumi-lang-dotnet=\"`Contains`\" pulumi-lang-go=\"`contains`\" pulumi-lang-python=\"`contains`\" pulumi-lang-yaml=\"`contains`\" pulumi-lang-java=\"`contains`\"\u003e`contains`\u003c/span\u003e, `endsWith`, \u003cspan pulumi-lang-nodejs=\"`equals`\" pulumi-lang-dotnet=\"`Equals`\" pulumi-lang-go=\"`equals`\" pulumi-lang-python=\"`equals`\" pulumi-lang-yaml=\"`equals`\" pulumi-lang-java=\"`equals`\"\u003e`equals`\u003c/span\u003e, `greaterOrEquals`, `greaterThan`, \u003cspan pulumi-lang-nodejs=\"`in`\" pulumi-lang-dotnet=\"`In`\" pulumi-lang-go=\"`in`\" pulumi-lang-python=\"`in`\" pulumi-lang-yaml=\"`in`\" pulumi-lang-java=\"`in`\"\u003e`in`\u003c/span\u003e, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, \u003cspan pulumi-lang-nodejs=\"`matches`\" pulumi-lang-dotnet=\"`Matches`\" pulumi-lang-go=\"`matches`\" pulumi-lang-python=\"`matches`\" pulumi-lang-yaml=\"`matches`\" pulumi-lang-java=\"`matches`\"\u003e`matches`\u003c/span\u003e, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "conditionType"
+            ]
+        },
+        "ise:networkaccess/ConditionChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildren": {
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "Dictionary attribute name\n"
+                },
+                "attributeValue": {
+                    "type": "string",
+                    "description": "Attribute value for condition\n"
+                },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/ConditionChildrenChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
+                "conditionType": {
+                    "type": "string",
+                    "description": "Condition type.\n  - Choices: `ConditionAndBlock`, `ConditionAttributes`, `ConditionOrBlock`, `ConditionReference`\n"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "Dictionary name\n"
+                },
+                "dictionaryValue": {
+                    "type": "string",
+                    "description": "Dictionary value\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "UUID for condition\n"
+                },
+                "isNegate": {
+                    "type": "boolean",
+                    "description": "Indicates whereas this condition is in negate mode\n"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "Equality operator\n  - Choices: \u003cspan pulumi-lang-nodejs=\"`contains`\" pulumi-lang-dotnet=\"`Contains`\" pulumi-lang-go=\"`contains`\" pulumi-lang-python=\"`contains`\" pulumi-lang-yaml=\"`contains`\" pulumi-lang-java=\"`contains`\"\u003e`contains`\u003c/span\u003e, `endsWith`, \u003cspan pulumi-lang-nodejs=\"`equals`\" pulumi-lang-dotnet=\"`Equals`\" pulumi-lang-go=\"`equals`\" pulumi-lang-python=\"`equals`\" pulumi-lang-yaml=\"`equals`\" pulumi-lang-java=\"`equals`\"\u003e`equals`\u003c/span\u003e, `greaterOrEquals`, `greaterThan`, \u003cspan pulumi-lang-nodejs=\"`in`\" pulumi-lang-dotnet=\"`In`\" pulumi-lang-go=\"`in`\" pulumi-lang-python=\"`in`\" pulumi-lang-yaml=\"`in`\" pulumi-lang-java=\"`in`\"\u003e`in`\u003c/span\u003e, `ipEquals`, `ipGreaterThan`, `ipLessThan`, `ipNotEquals`, `lessOrEquals`, `lessThan`, \u003cspan pulumi-lang-nodejs=\"`matches`\" pulumi-lang-dotnet=\"`Matches`\" pulumi-lang-go=\"`matches`\" pulumi-lang-python=\"`matches`\" pulumi-lang-yaml=\"`matches`\" pulumi-lang-java=\"`matches`\"\u003e`matches`\u003c/span\u003e, `notContains`, `notEndsWith`, `notEquals`, `notIn`, `notStartsWith`, `startsWith`\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "conditionType"
+            ]
+        },
+        "ise:networkaccess/ConditionChildrenChildrenChildrenChildrenChildrenChildren:ConditionChildrenChildrenChildrenChildrenChildrenChildren": {
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "Dictionary attribute name\n"
+                },
+                "attributeValue": {
+                    "type": "string",
+                    "description": "Attribute value for condition\n"
+                },
                 "conditionType": {
                     "type": "string",
                     "description": "Condition type.\n  - Choices: `ConditionAttributes`, `ConditionReference`\n"
@@ -5281,6 +5540,19 @@
             "required": [
                 "conditionType"
             ]
+        },
+        "ise:networkaccess/DictionaryAttributeAllowedValue:DictionaryAttributeAllowedValue": {
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "The allowed value key\n"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "The allowed value\n"
+                }
+            },
+            "type": "object"
         },
         "ise:networkaccess/PolicySetChildren:PolicySetChildren": {
             "properties": {
@@ -7037,6 +7309,13 @@
                     "type": "string",
                     "description": "Attribute value for condition\n"
                 },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/getConditionChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
                 "conditionType": {
                     "type": "string",
                     "description": "Condition type.\n"
@@ -7066,12 +7345,98 @@
             "required": [
                 "attributeName",
                 "attributeValue",
+                "childrens",
                 "conditionType",
                 "dictionaryName",
                 "dictionaryValue",
                 "id",
                 "isNegate",
                 "operator"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "ise:networkaccess/getConditionChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildren": {
+            "properties": {
+                "attributeName": {
+                    "type": "string",
+                    "description": "Dictionary attribute name\n"
+                },
+                "attributeValue": {
+                    "type": "string",
+                    "description": "Attribute value for condition\n"
+                },
+                "childrens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/getConditionChildrenChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildrenChildren"
+                    },
+                    "description": "List of child conditions\n"
+                },
+                "conditionType": {
+                    "type": "string",
+                    "description": "Condition type.\n"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "Dictionary name\n"
+                },
+                "dictionaryValue": {
+                    "type": "string",
+                    "description": "Dictionary value\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "UUID for condition\n"
+                },
+                "isNegate": {
+                    "type": "boolean",
+                    "description": "Indicates whereas this condition is in negate mode\n"
+                },
+                "operator": {
+                    "type": "string",
+                    "description": "Equality operator\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "attributeName",
+                "attributeValue",
+                "childrens",
+                "conditionType",
+                "dictionaryName",
+                "dictionaryValue",
+                "id",
+                "isNegate",
+                "operator"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "ise:networkaccess/getConditionChildrenChildrenChildrenChildrenChildrenChildren:getConditionChildrenChildrenChildrenChildrenChildrenChildren": {
+            "type": "object"
+        },
+        "ise:networkaccess/getDictionaryAttributeAllowedValue:getDictionaryAttributeAllowedValue": {
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "The allowed value key\n"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "The allowed value\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "key",
+                "value"
             ],
             "language": {
                 "nodejs": {
@@ -14783,6 +15148,121 @@
                 "type": "object"
             }
         },
+        "ise:networkaccess/dictionaryAttribute:DictionaryAttribute": {
+            "description": "This resource can manage a Network Access Dictionary Attribute.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.DictionaryAttribute(\"example\", {\n    dictionaryName: \"CustomDict\",\n    name: \"Custom-Attr\",\n    description: \"My custom dictionary attribute\",\n    dataType: \"STRING\",\n    directionType: \"BOTH\",\n    internalName: \"Custom-Attr\",\n    allowedValues: [{\n        key: \"key1\",\n        value: \"value1\",\n    }],\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.DictionaryAttribute(\"example\",\n    dictionary_name=\"CustomDict\",\n    name=\"Custom-Attr\",\n    description=\"My custom dictionary attribute\",\n    data_type=\"STRING\",\n    direction_type=\"BOTH\",\n    internal_name=\"Custom-Attr\",\n    allowed_values=[{\n        \"key\": \"key1\",\n        \"value\": \"value1\",\n    }])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.DictionaryAttribute(\"example\", new()\n    {\n        DictionaryName = \"CustomDict\",\n        Name = \"Custom-Attr\",\n        Description = \"My custom dictionary attribute\",\n        DataType = \"STRING\",\n        DirectionType = \"BOTH\",\n        InternalName = \"Custom-Attr\",\n        AllowedValues = new[]\n        {\n            new Ise.NetworkAccess.Inputs.DictionaryAttributeAllowedValueArgs\n            {\n                Key = \"key1\",\n                Value = \"value1\",\n            },\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewDictionaryAttribute(ctx, \"example\", \u0026networkaccess.DictionaryAttributeArgs{\n\t\t\tDictionaryName: pulumi.String(\"CustomDict\"),\n\t\t\tName:           pulumi.String(\"Custom-Attr\"),\n\t\t\tDescription:    pulumi.String(\"My custom dictionary attribute\"),\n\t\t\tDataType:       pulumi.String(\"STRING\"),\n\t\t\tDirectionType:  pulumi.String(\"BOTH\"),\n\t\t\tInternalName:   pulumi.String(\"Custom-Attr\"),\n\t\t\tAllowedValues: networkaccess.DictionaryAttributeAllowedValueArray{\n\t\t\t\t\u0026networkaccess.DictionaryAttributeAllowedValueArgs{\n\t\t\t\t\tKey:   pulumi.String(\"key1\"),\n\t\t\t\t\tValue: pulumi.String(\"value1\"),\n\t\t\t\t},\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.DictionaryAttribute;\nimport com.pulumi.ise.networkaccess.DictionaryAttributeArgs;\nimport com.pulumi.ise.networkaccess.inputs.DictionaryAttributeAllowedValueArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new DictionaryAttribute(\"example\", DictionaryAttributeArgs.builder()\n            .dictionaryName(\"CustomDict\")\n            .name(\"Custom-Attr\")\n            .description(\"My custom dictionary attribute\")\n            .dataType(\"STRING\")\n            .directionType(\"BOTH\")\n            .internalName(\"Custom-Attr\")\n            .allowedValues(DictionaryAttributeAllowedValueArgs.builder()\n                .key(\"key1\")\n                .value(\"value1\")\n                .build())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:DictionaryAttribute\n    properties:\n      dictionaryName: CustomDict\n      name: Custom-Attr\n      description: My custom dictionary attribute\n      dataType: STRING\n      directionType: BOTH\n      internalName: Custom-Attr\n      allowedValues:\n        - key: key1\n          value: value1\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:networkaccess/dictionaryAttribute:DictionaryAttribute example \"CustomDict,Custom-Attr\"\n```\n\n",
+            "properties": {
+                "allowedValues": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/DictionaryAttributeAllowedValue:DictionaryAttributeAllowedValue"
+                    },
+                    "description": "List of allowed values for the attribute"
+                },
+                "dataType": {
+                    "type": "string",
+                    "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the dictionary attribute"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "The name of the dictionary the attribute belongs to"
+                },
+                "directionType": {
+                    "type": "string",
+                    "description": "The direction type for the dictionary attribute\n  - Choices: `BOTH`, `IN`, `NONE`, `OUT`"
+                },
+                "internalName": {
+                    "type": "string",
+                    "description": "The internal name of the dictionary attribute"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The dictionary attribute name"
+                }
+            },
+            "required": [
+                "dataType",
+                "dictionaryName",
+                "name"
+            ],
+            "inputProperties": {
+                "allowedValues": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ise:networkaccess/DictionaryAttributeAllowedValue:DictionaryAttributeAllowedValue"
+                    },
+                    "description": "List of allowed values for the attribute"
+                },
+                "dataType": {
+                    "type": "string",
+                    "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the dictionary attribute"
+                },
+                "dictionaryName": {
+                    "type": "string",
+                    "description": "The name of the dictionary the attribute belongs to"
+                },
+                "directionType": {
+                    "type": "string",
+                    "description": "The direction type for the dictionary attribute\n  - Choices: `BOTH`, `IN`, `NONE`, `OUT`"
+                },
+                "internalName": {
+                    "type": "string",
+                    "description": "The internal name of the dictionary attribute"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The dictionary attribute name"
+                }
+            },
+            "requiredInputs": [
+                "dataType",
+                "dictionaryName"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering DictionaryAttribute resources.\n",
+                "properties": {
+                    "allowedValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/DictionaryAttributeAllowedValue:DictionaryAttributeAllowedValue"
+                        },
+                        "description": "List of allowed values for the attribute"
+                    },
+                    "dataType": {
+                        "type": "string",
+                        "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the dictionary attribute"
+                    },
+                    "dictionaryName": {
+                        "type": "string",
+                        "description": "The name of the dictionary the attribute belongs to"
+                    },
+                    "directionType": {
+                        "type": "string",
+                        "description": "The direction type for the dictionary attribute\n  - Choices: `BOTH`, `IN`, `NONE`, `OUT`"
+                    },
+                    "internalName": {
+                        "type": "string",
+                        "description": "The internal name of the dictionary attribute"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The dictionary attribute name"
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:networkaccess/downloadableAcl:DownloadableAcl": {
             "description": "This resource can manage a Downloadable ACL.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.networkaccess.DownloadableAcl(\"example\", {\n    name: \"MyACL\",\n    description: \"My first downloadable ACL\",\n    dacl: \"permit ip any any\",\n    daclType: \"IPV4\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.DownloadableAcl(\"example\",\n    name=\"MyACL\",\n    description=\"My first downloadable ACL\",\n    dacl=\"permit ip any any\",\n    dacl_type=\"IPV4\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.NetworkAccess.DownloadableAcl(\"example\", new()\n    {\n        Name = \"MyACL\",\n        Description = \"My first downloadable ACL\",\n        Dacl = \"permit ip any any\",\n        DaclType = \"IPV4\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.NewDownloadableAcl(ctx, \"example\", \u0026networkaccess.DownloadableAclArgs{\n\t\t\tName:        pulumi.String(\"MyACL\"),\n\t\t\tDescription: pulumi.String(\"My first downloadable ACL\"),\n\t\t\tDacl:        pulumi.String(\"permit ip any any\"),\n\t\t\tDaclType:    pulumi.String(\"IPV4\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.DownloadableAcl;\nimport com.pulumi.ise.networkaccess.DownloadableAclArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new DownloadableAcl(\"example\", DownloadableAclArgs.builder()\n            .name(\"MyACL\")\n            .description(\"My first downloadable ACL\")\n            .dacl(\"permit ip any any\")\n            .daclType(\"IPV4\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:networkaccess:DownloadableAcl\n    properties:\n      name: MyACL\n      description: My first downloadable ACL\n      dacl: permit ip any any\n      daclType: IPV4\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:networkaccess/downloadableAcl:DownloadableAcl example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -19554,6 +20034,81 @@
                     "id",
                     "name",
                     "version"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:networkaccess/getDictionaryAttribute:getDictionaryAttribute": {
+            "description": "This data source can read the Network Access Dictionary Attribute.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.networkaccess.getDictionaryAttribute({\n    id: \"Custom-Attr\",\n    dictionaryName: \"CustomDict\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.networkaccess.get_dictionary_attribute(id=\"Custom-Attr\",\n    dictionary_name=\"CustomDict\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.NetworkAccess.GetDictionaryAttribute.Invoke(new()\n    {\n        Id = \"Custom-Attr\",\n        DictionaryName = \"CustomDict\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/networkaccess\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := networkaccess.LookupDictionaryAttribute(ctx, \u0026networkaccess.LookupDictionaryAttributeArgs{\n\t\t\tId:             pulumi.StringRef(\"Custom-Attr\"),\n\t\t\tDictionaryName: \"CustomDict\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.networkaccess.NetworkaccessFunctions;\nimport com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = NetworkaccessFunctions.getDictionaryAttribute(GetDictionaryAttributeArgs.builder()\n            .id(\"Custom-Attr\")\n            .dictionaryName(\"CustomDict\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:networkaccess:getDictionaryAttribute\n      arguments:\n        id: Custom-Attr\n        dictionaryName: CustomDict\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getDictionaryAttribute.\n",
+                "properties": {
+                    "dictionaryName": {
+                        "type": "string",
+                        "description": "The name of the dictionary the attribute belongs to\n"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The dictionary attribute name\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "dictionaryName"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getDictionaryAttribute.\n",
+                "properties": {
+                    "allowedValues": {
+                        "description": "List of allowed values for the attribute\n",
+                        "items": {
+                            "$ref": "#/types/ise:networkaccess/getDictionaryAttributeAllowedValue:getDictionaryAttributeAllowedValue"
+                        },
+                        "type": "array"
+                    },
+                    "dataType": {
+                        "description": "The data type for the dictionary attribute\n",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "The description of the dictionary attribute\n",
+                        "type": "string"
+                    },
+                    "dictionaryName": {
+                        "description": "The name of the dictionary the attribute belongs to\n",
+                        "type": "string"
+                    },
+                    "directionType": {
+                        "description": "The direction type for the dictionary attribute\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "internalName": {
+                        "description": "The internal name of the dictionary attribute\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The dictionary attribute name\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "allowedValues",
+                    "dataType",
+                    "description",
+                    "dictionaryName",
+                    "directionType",
+                    "id",
+                    "internalName",
+                    "name"
                 ],
                 "type": "object"
             }

@@ -24,6 +24,8 @@ import com.pulumi.ise.networkaccess.inputs.GetAuthorizationRulePlainArgs;
 import com.pulumi.ise.networkaccess.inputs.GetConditionArgs;
 import com.pulumi.ise.networkaccess.inputs.GetConditionPlainArgs;
 import com.pulumi.ise.networkaccess.inputs.GetDictionaryArgs;
+import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;
+import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributePlainArgs;
 import com.pulumi.ise.networkaccess.inputs.GetDictionaryPlainArgs;
 import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclArgs;
 import com.pulumi.ise.networkaccess.inputs.GetDownloadableAclPlainArgs;
@@ -38,6 +40,7 @@ import com.pulumi.ise.networkaccess.outputs.GetAuthorizationGlobalExceptionRuleR
 import com.pulumi.ise.networkaccess.outputs.GetAuthorizationProfileResult;
 import com.pulumi.ise.networkaccess.outputs.GetAuthorizationRuleResult;
 import com.pulumi.ise.networkaccess.outputs.GetConditionResult;
+import com.pulumi.ise.networkaccess.outputs.GetDictionaryAttributeResult;
 import com.pulumi.ise.networkaccess.outputs.GetDictionaryResult;
 import com.pulumi.ise.networkaccess.outputs.GetDownloadableAclResult;
 import com.pulumi.ise.networkaccess.outputs.GetPolicySetResult;
@@ -2059,6 +2062,211 @@ public final class NetworkaccessFunctions {
      */
     public static CompletableFuture<GetDictionaryResult> getDictionaryPlain(GetDictionaryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:networkaccess/getDictionary:getDictionary", TypeShape.of(GetDictionaryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Network Access Dictionary Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
+     * import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkaccessFunctions.getDictionaryAttribute(GetDictionaryAttributeArgs.builder()
+     *             .id("Custom-Attr")
+     *             .dictionaryName("CustomDict")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDictionaryAttributeResult> getDictionaryAttribute(GetDictionaryAttributeArgs args) {
+        return getDictionaryAttribute(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Network Access Dictionary Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
+     * import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkaccessFunctions.getDictionaryAttribute(GetDictionaryAttributeArgs.builder()
+     *             .id("Custom-Attr")
+     *             .dictionaryName("CustomDict")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDictionaryAttributeResult> getDictionaryAttributePlain(GetDictionaryAttributePlainArgs args) {
+        return getDictionaryAttributePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Network Access Dictionary Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
+     * import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkaccessFunctions.getDictionaryAttribute(GetDictionaryAttributeArgs.builder()
+     *             .id("Custom-Attr")
+     *             .dictionaryName("CustomDict")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDictionaryAttributeResult> getDictionaryAttribute(GetDictionaryAttributeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:networkaccess/getDictionaryAttribute:getDictionaryAttribute", TypeShape.of(GetDictionaryAttributeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Network Access Dictionary Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
+     * import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkaccessFunctions.getDictionaryAttribute(GetDictionaryAttributeArgs.builder()
+     *             .id("Custom-Attr")
+     *             .dictionaryName("CustomDict")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDictionaryAttributeResult> getDictionaryAttribute(GetDictionaryAttributeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:networkaccess/getDictionaryAttribute:getDictionaryAttribute", TypeShape.of(GetDictionaryAttributeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Network Access Dictionary Attribute.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.networkaccess.NetworkaccessFunctions;
+     * import com.pulumi.ise.networkaccess.inputs.GetDictionaryAttributeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworkaccessFunctions.getDictionaryAttribute(GetDictionaryAttributeArgs.builder()
+     *             .id("Custom-Attr")
+     *             .dictionaryName("CustomDict")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDictionaryAttributeResult> getDictionaryAttributePlain(GetDictionaryAttributePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:networkaccess/getDictionaryAttribute:getDictionaryAttribute", TypeShape.of(GetDictionaryAttributeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Downloadable ACL.

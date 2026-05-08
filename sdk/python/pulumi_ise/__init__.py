@@ -425,6 +425,14 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "networkaccess/dictionaryAttribute",
+  "fqn": "pulumi_ise.networkaccess",
+  "classes": {
+   "ise:networkaccess/dictionaryAttribute:DictionaryAttribute": "DictionaryAttribute"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "networkaccess/downloadableAcl",
   "fqn": "pulumi_ise.networkaccess",
   "classes": {
