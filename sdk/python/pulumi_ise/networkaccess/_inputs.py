@@ -117,7 +117,7 @@ class AuthenticationRuleChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -311,7 +311,7 @@ class AuthenticationRuleChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -505,7 +505,7 @@ class AuthenticationRuleChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -699,7 +699,7 @@ class AuthenticationRuleChildrenChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -893,7 +893,7 @@ class AuthenticationRuleChildrenChildrenChildrenChildrenChildrenArgsDict(TypedDi
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthenticationRuleChildrenChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -1310,7 +1310,7 @@ class AuthorizationExceptionRuleChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -1504,7 +1504,7 @@ class AuthorizationExceptionRuleChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -1698,7 +1698,7 @@ class AuthorizationExceptionRuleChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -1892,7 +1892,7 @@ class AuthorizationExceptionRuleChildrenChildrenChildrenChildrenArgsDict(TypedDi
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -2086,7 +2086,7 @@ class AuthorizationExceptionRuleChildrenChildrenChildrenChildrenChildrenArgsDict
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationExceptionRuleChildrenChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -2503,7 +2503,7 @@ class AuthorizationGlobalExceptionRuleChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -2697,7 +2697,7 @@ class AuthorizationGlobalExceptionRuleChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -2891,7 +2891,7 @@ class AuthorizationGlobalExceptionRuleChildrenChildrenChildrenArgsDict(TypedDict
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -3085,7 +3085,7 @@ class AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenArgsDict(T
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -3279,7 +3279,7 @@ class AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenChildrenAr
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationGlobalExceptionRuleChildrenChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -3828,7 +3828,7 @@ class AuthorizationRuleChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -4022,7 +4022,7 @@ class AuthorizationRuleChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -4216,7 +4216,7 @@ class AuthorizationRuleChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -4410,7 +4410,7 @@ class AuthorizationRuleChildrenChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -4604,7 +4604,7 @@ class AuthorizationRuleChildrenChildrenChildrenChildrenChildrenArgsDict(TypedDic
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AuthorizationRuleChildrenChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -5021,7 +5021,7 @@ class ConditionChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -5255,7 +5255,7 @@ class ConditionChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -5489,7 +5489,7 @@ class ConditionChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -5683,7 +5683,7 @@ class ConditionChildrenChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -5877,7 +5877,7 @@ class ConditionChildrenChildrenChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConditionChildrenChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -6294,7 +6294,7 @@ class PolicySetChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -6488,7 +6488,7 @@ class PolicySetChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -6682,7 +6682,7 @@ class PolicySetChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition. Value type is specified in dictionary object.
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -6876,7 +6876,7 @@ class PolicySetChildrenChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
@@ -7070,7 +7070,7 @@ class PolicySetChildrenChildrenChildrenChildrenChildrenArgsDict(TypedDict):
     """
     Attribute value for condition
     """
-    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenChildrenChildrenChildrenArgs']]]]]
+    childrens: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicySetChildrenChildrenChildrenChildrenChildrenChildrenArgsDict']]]]]
     """
     List of child conditions
     """
