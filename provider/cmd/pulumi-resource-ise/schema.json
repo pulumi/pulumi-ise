@@ -11213,15 +11213,15 @@
             "properties": {
                 "breakOnStoreFail": {
                     "type": "boolean",
-                    "description": "Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication\n"
+                    "description": "Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication"
                 },
                 "certificateAuthenticationProfile": {
                     "type": "string",
-                    "description": "Certificate Authentication Profile, empty if doesn't exist\n"
+                    "description": "Certificate Authentication Profile, empty if doesn't exist\n  - Default value: ``"
                 },
                 "description": {
                     "type": "string",
-                    "description": "Description\n"
+                    "description": "Description"
                 },
                 "identitySources": {
                     "type": "array",
@@ -11231,7 +11231,7 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "The name of the identity source sequence\n"
+                    "description": "The name of the identity source sequence"
                 }
             },
             "required": [
@@ -11243,15 +11243,15 @@
             "inputProperties": {
                 "breakOnStoreFail": {
                     "type": "boolean",
-                    "description": "Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication\n"
+                    "description": "Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication"
                 },
                 "certificateAuthenticationProfile": {
                     "type": "string",
-                    "description": "Certificate Authentication Profile, empty if doesn't exist\n"
+                    "description": "Certificate Authentication Profile, empty if doesn't exist\n  - Default value: ``"
                 },
                 "description": {
                     "type": "string",
-                    "description": "Description\n"
+                    "description": "Description"
                 },
                 "identitySources": {
                     "type": "array",
@@ -11261,12 +11261,11 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "The name of the identity source sequence\n"
+                    "description": "The name of the identity source sequence"
                 }
             },
             "requiredInputs": [
                 "breakOnStoreFail",
-                "certificateAuthenticationProfile",
                 "identitySources"
             ],
             "stateInputs": {
@@ -11274,15 +11273,15 @@
                 "properties": {
                     "breakOnStoreFail": {
                         "type": "boolean",
-                        "description": "Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication\n"
+                        "description": "Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication"
                     },
                     "certificateAuthenticationProfile": {
                         "type": "string",
-                        "description": "Certificate Authentication Profile, empty if doesn't exist\n"
+                        "description": "Certificate Authentication Profile, empty if doesn't exist\n  - Default value: ``"
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description\n"
+                        "description": "Description"
                     },
                     "identitySources": {
                         "type": "array",
@@ -11292,7 +11291,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "The name of the identity source sequence\n"
+                        "description": "The name of the identity source sequence"
                     }
                 },
                 "type": "object"
