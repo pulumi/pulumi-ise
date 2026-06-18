@@ -60,6 +60,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Certificate Authentication Profile, empty if doesn't exist
+        ///   - Default value: ``
         /// </summary>
         [Output("certificateAuthenticationProfile")]
         public Output<string> CertificateAuthenticationProfile { get; private set; } = null!;
@@ -133,9 +134,10 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Certificate Authentication Profile, empty if doesn't exist
+        ///   - Default value: ``
         /// </summary>
-        [Input("certificateAuthenticationProfile", required: true)]
-        public Input<string> CertificateAuthenticationProfile { get; set; } = null!;
+        [Input("certificateAuthenticationProfile")]
+        public Input<string>? CertificateAuthenticationProfile { get; set; }
 
         /// <summary>
         /// Description
@@ -173,6 +175,7 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// Certificate Authentication Profile, empty if doesn't exist
+        ///   - Default value: ``
         /// </summary>
         [Input("certificateAuthenticationProfile")]
         public Input<string>? CertificateAuthenticationProfile { get; set; }

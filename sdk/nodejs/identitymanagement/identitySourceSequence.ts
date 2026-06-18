@@ -69,6 +69,7 @@ export class IdentitySourceSequence extends pulumi.CustomResource {
     declare public readonly breakOnStoreFail: pulumi.Output<boolean>;
     /**
      * Certificate Authentication Profile, empty if doesn't exist
+     *   - Default value: ``
      */
     declare public readonly certificateAuthenticationProfile: pulumi.Output<string>;
     /**
@@ -104,9 +105,6 @@ export class IdentitySourceSequence extends pulumi.CustomResource {
             if (args?.breakOnStoreFail === undefined && !opts.urn) {
                 throw new Error("Missing required property 'breakOnStoreFail'");
             }
-            if (args?.certificateAuthenticationProfile === undefined && !opts.urn) {
-                throw new Error("Missing required property 'certificateAuthenticationProfile'");
-            }
             if (args?.identitySources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'identitySources'");
             }
@@ -131,6 +129,7 @@ export interface IdentitySourceSequenceState {
     breakOnStoreFail?: pulumi.Input<boolean | undefined>;
     /**
      * Certificate Authentication Profile, empty if doesn't exist
+     *   - Default value: ``
      */
     certificateAuthenticationProfile?: pulumi.Input<string | undefined>;
     /**
@@ -154,8 +153,9 @@ export interface IdentitySourceSequenceArgs {
     breakOnStoreFail: pulumi.Input<boolean>;
     /**
      * Certificate Authentication Profile, empty if doesn't exist
+     *   - Default value: ``
      */
-    certificateAuthenticationProfile: pulumi.Input<string>;
+    certificateAuthenticationProfile?: pulumi.Input<string | undefined>;
     /**
      * Description
      */

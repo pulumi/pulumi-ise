@@ -36,17 +36,19 @@ public final class IdentitySourceSequenceArgs extends com.pulumi.resources.Resou
 
     /**
      * Certificate Authentication Profile, empty if doesn&#39;t exist
+     *   - Default value: ``
      * 
      */
-    @Import(name="certificateAuthenticationProfile", required=true)
-    private Output<String> certificateAuthenticationProfile;
+    @Import(name="certificateAuthenticationProfile")
+    private @Nullable Output<String> certificateAuthenticationProfile;
 
     /**
      * @return Certificate Authentication Profile, empty if doesn&#39;t exist
+     *   - Default value: ``
      * 
      */
-    public Output<String> certificateAuthenticationProfile() {
-        return this.certificateAuthenticationProfile;
+    public Optional<Output<String>> certificateAuthenticationProfile() {
+        return Optional.ofNullable(this.certificateAuthenticationProfile);
     }
 
     /**
@@ -137,17 +139,19 @@ public final class IdentitySourceSequenceArgs extends com.pulumi.resources.Resou
 
         /**
          * @param certificateAuthenticationProfile Certificate Authentication Profile, empty if doesn&#39;t exist
+         *   - Default value: ``
          * 
          * @return builder
          * 
          */
-        public Builder certificateAuthenticationProfile(Output<String> certificateAuthenticationProfile) {
+        public Builder certificateAuthenticationProfile(@Nullable Output<String> certificateAuthenticationProfile) {
             $.certificateAuthenticationProfile = certificateAuthenticationProfile;
             return this;
         }
 
         /**
          * @param certificateAuthenticationProfile Certificate Authentication Profile, empty if doesn&#39;t exist
+         *   - Default value: ``
          * 
          * @return builder
          * 
@@ -214,9 +218,6 @@ public final class IdentitySourceSequenceArgs extends com.pulumi.resources.Resou
         public IdentitySourceSequenceArgs build() {
             if ($.breakOnStoreFail == null) {
                 throw new MissingRequiredPropertyException("IdentitySourceSequenceArgs", "breakOnStoreFail");
-            }
-            if ($.certificateAuthenticationProfile == null) {
-                throw new MissingRequiredPropertyException("IdentitySourceSequenceArgs", "certificateAuthenticationProfile");
             }
             if ($.identitySources == null) {
                 throw new MissingRequiredPropertyException("IdentitySourceSequenceArgs", "identitySources");

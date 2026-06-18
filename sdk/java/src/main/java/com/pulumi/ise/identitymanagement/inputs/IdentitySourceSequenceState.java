@@ -35,6 +35,7 @@ public final class IdentitySourceSequenceState extends com.pulumi.resources.Reso
 
     /**
      * Certificate Authentication Profile, empty if doesn&#39;t exist
+     *   - Default value: ``
      * 
      */
     @Import(name="certificateAuthenticationProfile")
@@ -42,6 +43,7 @@ public final class IdentitySourceSequenceState extends com.pulumi.resources.Reso
 
     /**
      * @return Certificate Authentication Profile, empty if doesn&#39;t exist
+     *   - Default value: ``
      * 
      */
     public Optional<Output<String>> certificateAuthenticationProfile() {
@@ -136,6 +138,7 @@ public final class IdentitySourceSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param certificateAuthenticationProfile Certificate Authentication Profile, empty if doesn&#39;t exist
+         *   - Default value: ``
          * 
          * @return builder
          * 
@@ -147,6 +150,7 @@ public final class IdentitySourceSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param certificateAuthenticationProfile Certificate Authentication Profile, empty if doesn&#39;t exist
+         *   - Default value: ``
          * 
          * @return builder
          * 
