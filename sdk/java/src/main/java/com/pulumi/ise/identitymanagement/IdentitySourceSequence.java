@@ -88,6 +88,7 @@ public class IdentitySourceSequence extends com.pulumi.resources.CustomResource 
     }
     /**
      * Certificate Authentication Profile, empty if doesn&#39;t exist
+     *   - Default value: ``
      * 
      */
     @Export(name="certificateAuthenticationProfile", refs={String.class}, tree="[0]")
@@ -95,6 +96,7 @@ public class IdentitySourceSequence extends com.pulumi.resources.CustomResource 
 
     /**
      * @return Certificate Authentication Profile, empty if doesn&#39;t exist
+     *   - Default value: ``
      * 
      */
     public Output<String> certificateAuthenticationProfile() {

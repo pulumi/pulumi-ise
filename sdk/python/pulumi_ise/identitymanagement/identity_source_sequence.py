@@ -22,8 +22,8 @@ __all__ = ['IdentitySourceSequenceArgs', 'IdentitySourceSequence']
 class IdentitySourceSequenceArgs:
     def __init__(__self__, *,
                  break_on_store_fail: pulumi.Input[_builtins.bool],
-                 certificate_authentication_profile: pulumi.Input[_builtins.str],
                  identity_sources: pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]],
+                 certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None):
         """
@@ -31,12 +31,14 @@ class IdentitySourceSequenceArgs:
 
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         :param pulumi.Input[_builtins.str] certificate_authentication_profile: Certificate Authentication Profile, empty if doesn't exist
+                 - Default value: ``
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the identity source sequence
         """
         pulumi.set(__self__, "break_on_store_fail", break_on_store_fail)
-        pulumi.set(__self__, "certificate_authentication_profile", certificate_authentication_profile)
         pulumi.set(__self__, "identity_sources", identity_sources)
+        if certificate_authentication_profile is not None:
+            pulumi.set(__self__, "certificate_authentication_profile", certificate_authentication_profile)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if name is not None:
@@ -55,18 +57,6 @@ class IdentitySourceSequenceArgs:
         pulumi.set(self, "break_on_store_fail", value)
 
     @_builtins.property
-    @pulumi.getter(name="certificateAuthenticationProfile")
-    def certificate_authentication_profile(self) -> pulumi.Input[_builtins.str]:
-        """
-        Certificate Authentication Profile, empty if doesn't exist
-        """
-        return pulumi.get(self, "certificate_authentication_profile")
-
-    @certificate_authentication_profile.setter
-    def certificate_authentication_profile(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "certificate_authentication_profile", value)
-
-    @_builtins.property
     @pulumi.getter(name="identitySources")
     def identity_sources(self) -> pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]:
         return pulumi.get(self, "identity_sources")
@@ -74,6 +64,19 @@ class IdentitySourceSequenceArgs:
     @identity_sources.setter
     def identity_sources(self, value: pulumi.Input[Sequence[pulumi.Input['IdentitySourceSequenceIdentitySourceArgs']]]):
         pulumi.set(self, "identity_sources", value)
+
+    @_builtins.property
+    @pulumi.getter(name="certificateAuthenticationProfile")
+    def certificate_authentication_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Certificate Authentication Profile, empty if doesn't exist
+          - Default value: ``
+        """
+        return pulumi.get(self, "certificate_authentication_profile")
+
+    @certificate_authentication_profile.setter
+    def certificate_authentication_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "certificate_authentication_profile", value)
 
     @_builtins.property
     @pulumi.getter
@@ -113,6 +116,7 @@ class _IdentitySourceSequenceState:
 
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         :param pulumi.Input[_builtins.str] certificate_authentication_profile: Certificate Authentication Profile, empty if doesn't exist
+                 - Default value: ``
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the identity source sequence
         """
@@ -144,6 +148,7 @@ class _IdentitySourceSequenceState:
     def certificate_authentication_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Certificate Authentication Profile, empty if doesn't exist
+          - Default value: ``
         """
         return pulumi.get(self, "certificate_authentication_profile")
 
@@ -230,6 +235,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         :param pulumi.Input[_builtins.str] certificate_authentication_profile: Certificate Authentication Profile, empty if doesn't exist
+                 - Default value: ``
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the identity source sequence
         """
@@ -300,8 +306,6 @@ class IdentitySourceSequence(pulumi.CustomResource):
             if break_on_store_fail is None and not opts.urn:
                 raise TypeError("Missing required property 'break_on_store_fail'")
             __props__.__dict__["break_on_store_fail"] = break_on_store_fail
-            if certificate_authentication_profile is None and not opts.urn:
-                raise TypeError("Missing required property 'certificate_authentication_profile'")
             __props__.__dict__["certificate_authentication_profile"] = certificate_authentication_profile
             __props__.__dict__["description"] = description
             if identity_sources is None and not opts.urn:
@@ -332,6 +336,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] break_on_store_fail: Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
         :param pulumi.Input[_builtins.str] certificate_authentication_profile: Certificate Authentication Profile, empty if doesn't exist
+                 - Default value: ``
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the identity source sequence
         """
@@ -359,6 +364,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
     def certificate_authentication_profile(self) -> pulumi.Output[_builtins.str]:
         """
         Certificate Authentication Profile, empty if doesn't exist
+          - Default value: ``
         """
         return pulumi.get(self, "certificate_authentication_profile")
 

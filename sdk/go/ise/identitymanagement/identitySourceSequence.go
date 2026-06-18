@@ -62,6 +62,7 @@ type IdentitySourceSequence struct {
 	// Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
 	BreakOnStoreFail pulumi.BoolOutput `pulumi:"breakOnStoreFail"`
 	// Certificate Authentication Profile, empty if doesn't exist
+	//   - Default value: ``
 	CertificateAuthenticationProfile pulumi.StringOutput `pulumi:"certificateAuthenticationProfile"`
 	// Description
 	Description     pulumi.StringPtrOutput                          `pulumi:"description"`
@@ -79,9 +80,6 @@ func NewIdentitySourceSequence(ctx *pulumi.Context,
 
 	if args.BreakOnStoreFail == nil {
 		return nil, errors.New("invalid value for required argument 'BreakOnStoreFail'")
-	}
-	if args.CertificateAuthenticationProfile == nil {
-		return nil, errors.New("invalid value for required argument 'CertificateAuthenticationProfile'")
 	}
 	if args.IdentitySources == nil {
 		return nil, errors.New("invalid value for required argument 'IdentitySources'")
@@ -112,6 +110,7 @@ type identitySourceSequenceState struct {
 	// Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
 	BreakOnStoreFail *bool `pulumi:"breakOnStoreFail"`
 	// Certificate Authentication Profile, empty if doesn't exist
+	//   - Default value: ``
 	CertificateAuthenticationProfile *string `pulumi:"certificateAuthenticationProfile"`
 	// Description
 	Description     *string                                `pulumi:"description"`
@@ -124,6 +123,7 @@ type IdentitySourceSequenceState struct {
 	// Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
 	BreakOnStoreFail pulumi.BoolPtrInput
 	// Certificate Authentication Profile, empty if doesn't exist
+	//   - Default value: ``
 	CertificateAuthenticationProfile pulumi.StringPtrInput
 	// Description
 	Description     pulumi.StringPtrInput
@@ -140,7 +140,8 @@ type identitySourceSequenceArgs struct {
 	// Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
 	BreakOnStoreFail bool `pulumi:"breakOnStoreFail"`
 	// Certificate Authentication Profile, empty if doesn't exist
-	CertificateAuthenticationProfile string `pulumi:"certificateAuthenticationProfile"`
+	//   - Default value: ``
+	CertificateAuthenticationProfile *string `pulumi:"certificateAuthenticationProfile"`
 	// Description
 	Description     *string                                `pulumi:"description"`
 	IdentitySources []IdentitySourceSequenceIdentitySource `pulumi:"identitySources"`
@@ -153,7 +154,8 @@ type IdentitySourceSequenceArgs struct {
 	// Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
 	BreakOnStoreFail pulumi.BoolInput
 	// Certificate Authentication Profile, empty if doesn't exist
-	CertificateAuthenticationProfile pulumi.StringInput
+	//   - Default value: ``
+	CertificateAuthenticationProfile pulumi.StringPtrInput
 	// Description
 	Description     pulumi.StringPtrInput
 	IdentitySources IdentitySourceSequenceIdentitySourceArrayInput
@@ -254,6 +256,7 @@ func (o IdentitySourceSequenceOutput) BreakOnStoreFail() pulumi.BoolOutput {
 }
 
 // Certificate Authentication Profile, empty if doesn't exist
+//   - Default value: “
 func (o IdentitySourceSequenceOutput) CertificateAuthenticationProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v *IdentitySourceSequence) pulumi.StringOutput { return v.CertificateAuthenticationProfile }).(pulumi.StringOutput)
 }
