@@ -111,9 +111,9 @@ export class InternalUser extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The password of the internal user
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      */
-    declare public readonly password: pulumi.Output<string>;
+    declare public readonly password: pulumi.Output<string | undefined>;
     /**
      * The ID store where the internal user's password is kept
      *   - Default value: `Internal Users`
@@ -132,7 +132,7 @@ export class InternalUser extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: InternalUserArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args?: InternalUserArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: InternalUserArgs | InternalUserState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -154,9 +154,6 @@ export class InternalUser extends pulumi.CustomResource {
             resourceInputs["passwordNeverExpires"] = state?.passwordNeverExpires;
         } else {
             const args = argsOrState as InternalUserArgs | undefined;
-            if (args?.password === undefined && !opts.urn) {
-                throw new Error("Missing required property 'password'");
-            }
             resourceInputs["accountNameAlias"] = args?.accountNameAlias;
             resourceInputs["changePassword"] = args?.changePassword;
             resourceInputs["customAttributes"] = args?.customAttributes;
@@ -227,7 +224,7 @@ export interface InternalUserState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * The password of the internal user
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      */
     password?: pulumi.Input<string | undefined>;
     /**
@@ -292,9 +289,9 @@ export interface InternalUserArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * The password of the internal user
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      */
-    password: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * The ID store where the internal user's password is kept
      *   - Default value: `Internal Users`

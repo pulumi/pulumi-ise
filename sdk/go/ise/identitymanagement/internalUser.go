@@ -7,7 +7,6 @@ import (
 	"context"
 	"reflect"
 
-	"errors"
 	"github.com/pulumi/pulumi-ise/sdk/go/ise/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -84,8 +83,8 @@ type InternalUser struct {
 	LastName pulumi.StringPtrOutput `pulumi:"lastName"`
 	// The name of the internal user
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The password of the internal user
-	Password pulumi.StringOutput `pulumi:"password"`
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// The ID store where the internal user's password is kept
 	//   - Default value: `Internal Users`
 	PasswordIdStore pulumi.StringOutput `pulumi:"passwordIdStore"`
@@ -98,12 +97,9 @@ type InternalUser struct {
 func NewInternalUser(ctx *pulumi.Context,
 	name string, args *InternalUserArgs, opts ...pulumi.ResourceOption) (*InternalUser, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &InternalUserArgs{}
 	}
 
-	if args.Password == nil {
-		return nil, errors.New("invalid value for required argument 'Password'")
-	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource InternalUser
 	err := ctx.RegisterResource("ise:identitymanagement/internalUser:InternalUser", name, args, &resource, opts...)
@@ -150,7 +146,7 @@ type internalUserState struct {
 	LastName *string `pulumi:"lastName"`
 	// The name of the internal user
 	Name *string `pulumi:"name"`
-	// The password of the internal user
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
 	Password *string `pulumi:"password"`
 	// The ID store where the internal user's password is kept
 	//   - Default value: `Internal Users`
@@ -184,7 +180,7 @@ type InternalUserState struct {
 	LastName pulumi.StringPtrInput
 	// The name of the internal user
 	Name pulumi.StringPtrInput
-	// The password of the internal user
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
 	Password pulumi.StringPtrInput
 	// The ID store where the internal user's password is kept
 	//   - Default value: `Internal Users`
@@ -222,8 +218,8 @@ type internalUserArgs struct {
 	LastName *string `pulumi:"lastName"`
 	// The name of the internal user
 	Name *string `pulumi:"name"`
-	// The password of the internal user
-	Password string `pulumi:"password"`
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+	Password *string `pulumi:"password"`
 	// The ID store where the internal user's password is kept
 	//   - Default value: `Internal Users`
 	PasswordIdStore *string `pulumi:"passwordIdStore"`
@@ -257,8 +253,8 @@ type InternalUserArgs struct {
 	LastName pulumi.StringPtrInput
 	// The name of the internal user
 	Name pulumi.StringPtrInput
-	// The password of the internal user
-	Password pulumi.StringInput
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+	Password pulumi.StringPtrInput
 	// The ID store where the internal user's password is kept
 	//   - Default value: `Internal Users`
 	PasswordIdStore pulumi.StringPtrInput
@@ -410,9 +406,9 @@ func (o InternalUserOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The password of the internal user
-func (o InternalUserOutput) Password() pulumi.StringOutput {
-	return o.ApplyT(func(v *InternalUser) pulumi.StringOutput { return v.Password }).(pulumi.StringOutput)
+// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+func (o InternalUserOutput) Password() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *InternalUser) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
 }
 
 // The ID store where the internal user's password is kept

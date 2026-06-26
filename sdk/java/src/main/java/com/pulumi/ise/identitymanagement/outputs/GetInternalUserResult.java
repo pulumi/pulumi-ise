@@ -72,7 +72,7 @@ public final class GetInternalUserResult {
      */
     private String name;
     /**
-     * @return The password of the internal user
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
     private String password;
@@ -173,7 +173,7 @@ public final class GetInternalUserResult {
         return this.name;
     }
     /**
-     * @return The password of the internal user
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
     public String password() {

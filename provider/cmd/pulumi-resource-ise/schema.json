@@ -11346,7 +11346,7 @@
                 },
                 "password": {
                     "type": "string",
-                    "description": "The password of the internal user"
+                    "description": "The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved."
                 },
                 "passwordIdStore": {
                     "type": "string",
@@ -11360,7 +11360,6 @@
             "required": [
                 "changePassword",
                 "name",
-                "password",
                 "passwordIdStore",
                 "passwordNeverExpires"
             ],
@@ -11411,7 +11410,7 @@
                 },
                 "password": {
                     "type": "string",
-                    "description": "The password of the internal user"
+                    "description": "The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved."
                 },
                 "passwordIdStore": {
                     "type": "string",
@@ -11422,9 +11421,6 @@
                     "description": "Set to \u003cspan pulumi-lang-nodejs=\"`true`\" pulumi-lang-dotnet=\"`True`\" pulumi-lang-go=\"`true`\" pulumi-lang-python=\"`true`\" pulumi-lang-yaml=\"`true`\" pulumi-lang-java=\"`true`\" pulumi-lang-hcl=\"`true`\"\u003e`true`\u003c/span\u003e to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\" pulumi-lang-hcl=\"`false`\"\u003e`false`\u003c/span\u003e"
                 }
             },
-            "requiredInputs": [
-                "password"
-            ],
             "stateInputs": {
                 "description": "Input properties used for looking up and filtering InternalUser resources.\n",
                 "properties": {
@@ -11474,7 +11470,7 @@
                     },
                     "password": {
                         "type": "string",
-                        "description": "The password of the internal user"
+                        "description": "The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved."
                     },
                     "passwordIdStore": {
                         "type": "string",
@@ -18411,7 +18407,7 @@
                         "type": "string"
                     },
                     "password": {
-                        "description": "The password of the internal user\n",
+                        "description": "The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.\n",
                         "type": "string"
                     },
                     "passwordIdStore": {
