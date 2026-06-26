@@ -173,7 +173,7 @@ class GetInternalUserResult:
     @pulumi.getter
     def password(self) -> _builtins.str:
         """
-        The password of the internal user
+        The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
         """
         return pulumi.get(self, "password")
 

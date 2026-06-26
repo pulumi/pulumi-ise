@@ -120,10 +120,10 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The password of the internal user
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
         /// </summary>
         [Output("password")]
-        public Output<string> Password { get; private set; } = null!;
+        public Output<string?> Password { get; private set; } = null!;
 
         /// <summary>
         /// The ID store where the internal user's password is kept
@@ -147,7 +147,7 @@ namespace Pulumi.Ise.IdentityManagement
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public InternalUser(string name, InternalUserArgs args, CustomResourceOptions? options = null)
+        public InternalUser(string name, InternalUserArgs? args = null, CustomResourceOptions? options = null)
             : base("ise:identitymanagement/internalUser:InternalUser", name, args ?? new InternalUserArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -253,10 +253,10 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The password of the internal user
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
         /// </summary>
-        [Input("password", required: true)]
-        public Input<string> Password { get; set; } = null!;
+        [Input("password")]
+        public Input<string>? Password { get; set; }
 
         /// <summary>
         /// The ID store where the internal user's password is kept
@@ -348,7 +348,7 @@ namespace Pulumi.Ise.IdentityManagement
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The password of the internal user
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
         /// </summary>
         [Input("password")]
         public Input<string>? Password { get; set; }

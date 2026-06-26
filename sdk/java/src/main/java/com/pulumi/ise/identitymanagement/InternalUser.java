@@ -230,18 +230,18 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The password of the internal user
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
-    private Output<String> password;
+    private Output</* @Nullable */ String> password;
 
     /**
-     * @return The password of the internal user
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
-    public Output<String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * The ID store where the internal user&#39;s password is kept
@@ -288,7 +288,7 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public InternalUser(java.lang.String name, InternalUserArgs args) {
+    public InternalUser(java.lang.String name, @Nullable InternalUserArgs args) {
         this(name, args, null);
     }
     /**
@@ -297,7 +297,7 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InternalUser(java.lang.String name, InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public InternalUser(java.lang.String name, @Nullable InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("ise:identitymanagement/internalUser:InternalUser", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -305,7 +305,7 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
         super("ise:identitymanagement/internalUser:InternalUser", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static InternalUserArgs makeArgs(InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static InternalUserArgs makeArgs(@Nullable InternalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

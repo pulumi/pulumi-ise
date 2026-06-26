@@ -184,14 +184,14 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The password of the internal user
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return The password of the internal user
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
     public Optional<Output<String>> password() {
@@ -503,7 +503,7 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The password of the internal user
+         * @param password The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
          * 
          * @return builder
          * 
@@ -514,7 +514,7 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The password of the internal user
+         * @param password The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
          * 
          * @return builder
          * 

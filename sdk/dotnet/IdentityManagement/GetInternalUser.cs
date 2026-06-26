@@ -178,7 +178,7 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The password of the internal user
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
         /// </summary>
         public readonly string Password;
         /// <summary>

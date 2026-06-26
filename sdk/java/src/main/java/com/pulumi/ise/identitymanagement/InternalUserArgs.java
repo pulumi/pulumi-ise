@@ -5,7 +5,6 @@ package com.pulumi.ise.identitymanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -185,18 +184,18 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The password of the internal user
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
-    @Import(name="password", required=true)
-    private Output<String> password;
+    @Import(name="password")
+    private @Nullable Output<String> password;
 
     /**
-     * @return The password of the internal user
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
      * 
      */
-    public Output<String> password() {
-        return this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -504,18 +503,18 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The password of the internal user
+         * @param password The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
          * 
          * @return builder
          * 
          */
-        public Builder password(Output<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
         /**
-         * @param password The password of the internal user
+         * @param password The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
          * 
          * @return builder
          * 
@@ -571,9 +570,6 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public InternalUserArgs build() {
-            if ($.password == null) {
-                throw new MissingRequiredPropertyException("InternalUserArgs", "password");
-            }
             return $;
         }
     }

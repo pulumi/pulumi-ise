@@ -82,7 +82,7 @@ type LookupInternalUserResult struct {
 	LastName string `pulumi:"lastName"`
 	// The name of the internal user
 	Name string `pulumi:"name"`
-	// The password of the internal user
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
 	Password string `pulumi:"password"`
 	// The ID store where the internal user's password is kept
 	PasswordIdStore string `pulumi:"passwordIdStore"`
@@ -186,7 +186,7 @@ func (o LookupInternalUserResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupInternalUserResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The password of the internal user
+// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
 func (o LookupInternalUserResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupInternalUserResult) string { return v.Password }).(pulumi.StringOutput)
 }
