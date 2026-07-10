@@ -95,7 +95,7 @@ publishing {
                 inceptionYear = "2022"
                 name = "pulumi-ise"
                 packaging = "jar"
-                description = "A Pulumi package for managing resources on a Cisco ISE (Identity Service Engine) instance."
+                description = $/A Pulumi package for managing resources on a Cisco ISE (Identity Service Engine) instance./$
 
                 url = "https://github.com/pulumi/pulumi-ise"
 
