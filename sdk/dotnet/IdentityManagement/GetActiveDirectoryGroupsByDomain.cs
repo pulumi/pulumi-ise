@@ -190,10 +190,6 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public readonly ImmutableArray<Outputs.GetActiveDirectoryGroupsByDomainGroupResult> Groups;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Active Directory Join Point ID
         /// </summary>
         public readonly string JoinPointId;
@@ -214,8 +210,6 @@ namespace Pulumi.Ise.IdentityManagement
 
             ImmutableArray<Outputs.GetActiveDirectoryGroupsByDomainGroupResult> groups,
 
-            string id,
-
             string joinPointId,
 
             string? sidFilter,
@@ -225,7 +219,6 @@ namespace Pulumi.Ise.IdentityManagement
             Domain = domain;
             Filter = filter;
             Groups = groups;
-            Id = id;
             JoinPointId = joinPointId;
             SidFilter = sidFilter;
             TypeFilter = typeFilter;

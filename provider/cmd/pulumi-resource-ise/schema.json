@@ -17737,10 +17737,6 @@
                         },
                         "type": "array"
                     },
-                    "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.",
-                        "type": "string"
-                    },
                     "joinPointId": {
                         "description": "Active Directory Join Point ID\n",
                         "type": "string"
@@ -17757,8 +17753,7 @@
                 "required": [
                     "domain",
                     "groups",
-                    "joinPointId",
-                    "id"
+                    "joinPointId"
                 ],
                 "type": "object"
             }
