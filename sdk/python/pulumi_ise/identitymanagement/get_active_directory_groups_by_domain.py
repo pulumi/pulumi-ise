@@ -27,7 +27,7 @@ class GetActiveDirectoryGroupsByDomainResult:
     """
     A collection of values returned by getActiveDirectoryGroupsByDomain.
     """
-    def __init__(__self__, domain=None, filter=None, groups=None, id=None, join_point_id=None, sid_filter=None, type_filter=None):
+    def __init__(__self__, domain=None, filter=None, groups=None, join_point_id=None, sid_filter=None, type_filter=None):
         if domain and not isinstance(domain, str):
             raise TypeError("Expected argument 'domain' to be a str")
         pulumi.set(__self__, "domain", domain)
@@ -37,9 +37,6 @@ class GetActiveDirectoryGroupsByDomainResult:
         if groups and not isinstance(groups, list):
             raise TypeError("Expected argument 'groups' to be a list")
         pulumi.set(__self__, "groups", groups)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if join_point_id and not isinstance(join_point_id, str):
             raise TypeError("Expected argument 'join_point_id' to be a str")
         pulumi.set(__self__, "join_point_id", join_point_id)
@@ -75,14 +72,6 @@ class GetActiveDirectoryGroupsByDomainResult:
         return pulumi.get(self, "groups")
 
     @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
     @pulumi.getter(name="joinPointId")
     def join_point_id(self) -> _builtins.str:
         """
@@ -116,7 +105,6 @@ class AwaitableGetActiveDirectoryGroupsByDomainResult(GetActiveDirectoryGroupsBy
             domain=self.domain,
             filter=self.filter,
             groups=self.groups,
-            id=self.id,
             join_point_id=self.join_point_id,
             sid_filter=self.sid_filter,
             type_filter=self.type_filter)
@@ -164,7 +152,6 @@ def get_active_directory_groups_by_domain(domain: Optional[_builtins.str] = None
         domain=pulumi.get(__ret__, 'domain'),
         filter=pulumi.get(__ret__, 'filter'),
         groups=pulumi.get(__ret__, 'groups'),
-        id=pulumi.get(__ret__, 'id'),
         join_point_id=pulumi.get(__ret__, 'join_point_id'),
         sid_filter=pulumi.get(__ret__, 'sid_filter'),
         type_filter=pulumi.get(__ret__, 'type_filter'))
@@ -209,7 +196,6 @@ def get_active_directory_groups_by_domain_output(domain: pulumi.Input[Optional[_
         domain=pulumi.get(__response__, 'domain'),
         filter=pulumi.get(__response__, 'filter'),
         groups=pulumi.get(__response__, 'groups'),
-        id=pulumi.get(__response__, 'id'),
         join_point_id=pulumi.get(__response__, 'join_point_id'),
         sid_filter=pulumi.get(__response__, 'sid_filter'),
         type_filter=pulumi.get(__response__, 'type_filter')))

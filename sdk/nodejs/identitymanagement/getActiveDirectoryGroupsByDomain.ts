@@ -78,10 +78,6 @@ export interface GetActiveDirectoryGroupsByDomainResult {
      */
     readonly groups: outputs.identitymanagement.GetActiveDirectoryGroupsByDomainGroup[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Active Directory Join Point ID
      */
     readonly joinPointId: string;

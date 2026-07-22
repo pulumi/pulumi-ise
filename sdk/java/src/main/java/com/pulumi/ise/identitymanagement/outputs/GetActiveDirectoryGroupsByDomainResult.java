@@ -30,11 +30,6 @@ public final class GetActiveDirectoryGroupsByDomainResult {
      */
     private List<GetActiveDirectoryGroupsByDomainGroup> groups;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Active Directory Join Point ID
      * 
      */
@@ -73,13 +68,6 @@ public final class GetActiveDirectoryGroupsByDomainResult {
         return this.groups;
     }
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
-    /**
      * @return Active Directory Join Point ID
      * 
      */
@@ -113,7 +101,6 @@ public final class GetActiveDirectoryGroupsByDomainResult {
         private String domain;
         private @Nullable String filter;
         private List<GetActiveDirectoryGroupsByDomainGroup> groups;
-        private String id;
         private String joinPointId;
         private @Nullable String sidFilter;
         private @Nullable String typeFilter;
@@ -123,7 +110,6 @@ public final class GetActiveDirectoryGroupsByDomainResult {
     	      this.domain = defaults.domain;
     	      this.filter = defaults.filter;
     	      this.groups = defaults.groups;
-    	      this.id = defaults.id;
     	      this.joinPointId = defaults.joinPointId;
     	      this.sidFilter = defaults.sidFilter;
     	      this.typeFilter = defaults.typeFilter;
@@ -155,14 +141,6 @@ public final class GetActiveDirectoryGroupsByDomainResult {
             return groups(List.of(groups));
         }
         @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetActiveDirectoryGroupsByDomainResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
-        @CustomType.Setter
         public Builder joinPointId(String joinPointId) {
             if (joinPointId == null) {
               throw new MissingRequiredPropertyException("GetActiveDirectoryGroupsByDomainResult", "joinPointId");
@@ -187,7 +165,6 @@ public final class GetActiveDirectoryGroupsByDomainResult {
             _resultValue.domain = domain;
             _resultValue.filter = filter;
             _resultValue.groups = groups;
-            _resultValue.id = id;
             _resultValue.joinPointId = joinPointId;
             _resultValue.sidFilter = sidFilter;
             _resultValue.typeFilter = typeFilter;

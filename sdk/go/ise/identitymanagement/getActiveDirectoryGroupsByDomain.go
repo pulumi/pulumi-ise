@@ -74,8 +74,6 @@ type GetActiveDirectoryGroupsByDomainResult struct {
 	Filter *string `pulumi:"filter"`
 	// List of groups
 	Groups []GetActiveDirectoryGroupsByDomainGroup `pulumi:"groups"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Active Directory Join Point ID
 	JoinPointId string `pulumi:"joinPointId"`
 	// Exact match filter on group's SID, optionally specifying the domain as prefix. e.g. S-1-5-33-544 and R1.dom/S-1-5-33-544 are legal.
@@ -141,11 +139,6 @@ func (o GetActiveDirectoryGroupsByDomainResultOutput) Groups() GetActiveDirector
 	return o.ApplyT(func(v GetActiveDirectoryGroupsByDomainResult) []GetActiveDirectoryGroupsByDomainGroup {
 		return v.Groups
 	}).(GetActiveDirectoryGroupsByDomainGroupArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetActiveDirectoryGroupsByDomainResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetActiveDirectoryGroupsByDomainResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Active Directory Join Point ID
