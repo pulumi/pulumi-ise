@@ -35,7 +35,7 @@ public final class DictionaryAttributeArgs extends com.pulumi.resources.Resource
 
     /**
      * The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      * 
      */
     @Import(name="dataType", required=true)
@@ -43,7 +43,7 @@ public final class DictionaryAttributeArgs extends com.pulumi.resources.Resource
 
     /**
      * @return The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      * 
      */
     public Output<String> dataType() {
@@ -190,7 +190,7 @@ public final class DictionaryAttributeArgs extends com.pulumi.resources.Resource
 
         /**
          * @param dataType The data type for the dictionary attribute
-         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class DictionaryAttributeArgs extends com.pulumi.resources.Resource
 
         /**
          * @param dataType The data type for the dictionary attribute
-         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
          * 
          * @return builder
          * 

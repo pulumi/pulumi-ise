@@ -89,7 +89,7 @@ public class DictionaryAttribute extends com.pulumi.resources.CustomResource {
     }
     /**
      * The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      * 
      */
     @Export(name="dataType", refs={String.class}, tree="[0]")
@@ -97,7 +97,7 @@ public class DictionaryAttribute extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      * 
      */
     public Output<String> dataType() {

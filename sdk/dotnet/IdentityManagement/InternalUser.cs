@@ -66,10 +66,10 @@ namespace Pulumi.Ise.IdentityManagement
         public Output<bool> ChangePassword { get; private set; } = null!;
 
         /// <summary>
-        /// Key value map
+        /// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         /// </summary>
         [Output("customAttributes")]
-        public Output<string?> CustomAttributes { get; private set; } = null!;
+        public Output<ImmutableDictionary<string, string>?> CustomAttributes { get; private set; } = null!;
 
         /// <summary>
         /// Description
@@ -198,11 +198,17 @@ namespace Pulumi.Ise.IdentityManagement
         [Input("changePassword")]
         public Input<bool>? ChangePassword { get; set; }
 
-        /// <summary>
-        /// Key value map
-        /// </summary>
         [Input("customAttributes")]
-        public Input<string>? CustomAttributes { get; set; }
+        private InputMap<string>? _customAttributes;
+
+        /// <summary>
+        /// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+        /// </summary>
+        public InputMap<string> CustomAttributes
+        {
+            get => _customAttributes ?? (_customAttributes = new InputMap<string>());
+            set => _customAttributes = value;
+        }
 
         /// <summary>
         /// Description
@@ -293,11 +299,17 @@ namespace Pulumi.Ise.IdentityManagement
         [Input("changePassword")]
         public Input<bool>? ChangePassword { get; set; }
 
-        /// <summary>
-        /// Key value map
-        /// </summary>
         [Input("customAttributes")]
-        public Input<string>? CustomAttributes { get; set; }
+        private InputMap<string>? _customAttributes;
+
+        /// <summary>
+        /// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+        /// </summary>
+        public InputMap<string> CustomAttributes
+        {
+            get => _customAttributes ?? (_customAttributes = new InputMap<string>());
+            set => _customAttributes = value;
+        }
 
         /// <summary>
         /// Description

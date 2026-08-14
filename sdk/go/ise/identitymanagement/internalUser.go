@@ -65,8 +65,8 @@ type InternalUser struct {
 	// Requires the user to change the password
 	//   - Default value: `true`
 	ChangePassword pulumi.BoolOutput `pulumi:"changePassword"`
-	// Key value map
-	CustomAttributes pulumi.StringPtrOutput `pulumi:"customAttributes"`
+	// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+	CustomAttributes pulumi.StringMapOutput `pulumi:"customAttributes"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Email address
@@ -128,8 +128,8 @@ type internalUserState struct {
 	// Requires the user to change the password
 	//   - Default value: `true`
 	ChangePassword *bool `pulumi:"changePassword"`
-	// Key value map
-	CustomAttributes *string `pulumi:"customAttributes"`
+	// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+	CustomAttributes map[string]string `pulumi:"customAttributes"`
 	// Description
 	Description *string `pulumi:"description"`
 	// Email address
@@ -162,8 +162,8 @@ type InternalUserState struct {
 	// Requires the user to change the password
 	//   - Default value: `true`
 	ChangePassword pulumi.BoolPtrInput
-	// Key value map
-	CustomAttributes pulumi.StringPtrInput
+	// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+	CustomAttributes pulumi.StringMapInput
 	// Description
 	Description pulumi.StringPtrInput
 	// Email address
@@ -200,8 +200,8 @@ type internalUserArgs struct {
 	// Requires the user to change the password
 	//   - Default value: `true`
 	ChangePassword *bool `pulumi:"changePassword"`
-	// Key value map
-	CustomAttributes *string `pulumi:"customAttributes"`
+	// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+	CustomAttributes map[string]string `pulumi:"customAttributes"`
 	// Description
 	Description *string `pulumi:"description"`
 	// Email address
@@ -235,8 +235,8 @@ type InternalUserArgs struct {
 	// Requires the user to change the password
 	//   - Default value: `true`
 	ChangePassword pulumi.BoolPtrInput
-	// Key value map
-	CustomAttributes pulumi.StringPtrInput
+	// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+	CustomAttributes pulumi.StringMapInput
 	// Description
 	Description pulumi.StringPtrInput
 	// Email address
@@ -361,9 +361,9 @@ func (o InternalUserOutput) ChangePassword() pulumi.BoolOutput {
 	return o.ApplyT(func(v *InternalUser) pulumi.BoolOutput { return v.ChangePassword }).(pulumi.BoolOutput)
 }
 
-// Key value map
-func (o InternalUserOutput) CustomAttributes() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *InternalUser) pulumi.StringPtrOutput { return v.CustomAttributes }).(pulumi.StringPtrOutput)
+// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+func (o InternalUserOutput) CustomAttributes() pulumi.StringMapOutput {
+	return o.ApplyT(func(v *InternalUser) pulumi.StringMapOutput { return v.CustomAttributes }).(pulumi.StringMapOutput)
 }
 
 // Description

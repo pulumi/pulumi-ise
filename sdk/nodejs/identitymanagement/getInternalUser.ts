@@ -54,9 +54,9 @@ export interface GetInternalUserResult {
      */
     readonly changePassword: boolean;
     /**
-     * Key value map
+     * Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      */
-    readonly customAttributes: string;
+    readonly customAttributes: {[key: string]: string};
     /**
      * Description
      */

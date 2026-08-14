@@ -63,7 +63,7 @@ type Endpoint struct {
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Identity Group ID
-	GroupId pulumi.StringPtrOutput `pulumi:"groupId"`
+	GroupId pulumi.StringOutput `pulumi:"groupId"`
 	// Identity Store
 	IdentityStore pulumi.StringPtrOutput `pulumi:"identityStore"`
 	// Identity Store Id
@@ -101,7 +101,7 @@ type Endpoint struct {
 	// Portal User
 	PortalUser pulumi.StringPtrOutput `pulumi:"portalUser"`
 	// Profile ID
-	ProfileId pulumi.StringPtrOutput `pulumi:"profileId"`
+	ProfileId pulumi.StringOutput `pulumi:"profileId"`
 	// Static Group Assignment
 	StaticGroupAssignment pulumi.BoolOutput `pulumi:"staticGroupAssignment"`
 	// staticGroupAssignmentDefined
@@ -483,8 +483,8 @@ func (o EndpointOutput) Description() pulumi.StringPtrOutput {
 }
 
 // Identity Group ID
-func (o EndpointOutput) GroupId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *Endpoint) pulumi.StringPtrOutput { return v.GroupId }).(pulumi.StringPtrOutput)
+func (o EndpointOutput) GroupId() pulumi.StringOutput {
+	return o.ApplyT(func(v *Endpoint) pulumi.StringOutput { return v.GroupId }).(pulumi.StringOutput)
 }
 
 // Identity Store
@@ -578,8 +578,8 @@ func (o EndpointOutput) PortalUser() pulumi.StringPtrOutput {
 }
 
 // Profile ID
-func (o EndpointOutput) ProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *Endpoint) pulumi.StringPtrOutput { return v.ProfileId }).(pulumi.StringPtrOutput)
+func (o EndpointOutput) ProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *Endpoint) pulumi.StringOutput { return v.ProfileId }).(pulumi.StringOutput)
 }
 
 // Static Group Assignment

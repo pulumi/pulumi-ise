@@ -32,7 +32,7 @@ class DictionaryAttributeArgs:
         The set of arguments for constructing a DictionaryAttribute resource.
 
         :param pulumi.Input[_builtins.str] data_type: The data type for the dictionary attribute
-                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         :param pulumi.Input[_builtins.str] dictionary_name: The name of the dictionary the attribute belongs to
         :param pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]] allowed_values: List of allowed values for the attribute
         :param pulumi.Input[_builtins.str] description: The description of the dictionary attribute
@@ -59,7 +59,7 @@ class DictionaryAttributeArgs:
     def data_type(self) -> pulumi.Input[_builtins.str]:
         """
         The data type for the dictionary attribute
-          - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+          - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         """
         return pulumi.get(self, "data_type")
 
@@ -156,7 +156,7 @@ class _DictionaryAttributeState:
 
         :param pulumi.Input[Sequence[pulumi.Input['DictionaryAttributeAllowedValueArgs']]] allowed_values: List of allowed values for the attribute
         :param pulumi.Input[_builtins.str] data_type: The data type for the dictionary attribute
-                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         :param pulumi.Input[_builtins.str] description: The description of the dictionary attribute
         :param pulumi.Input[_builtins.str] dictionary_name: The name of the dictionary the attribute belongs to
         :param pulumi.Input[_builtins.str] direction_type: The direction type for the dictionary attribute
@@ -196,7 +196,7 @@ class _DictionaryAttributeState:
     def data_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The data type for the dictionary attribute
-          - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+          - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         """
         return pulumi.get(self, "data_type")
 
@@ -315,7 +315,7 @@ class DictionaryAttribute(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]] allowed_values: List of allowed values for the attribute
         :param pulumi.Input[_builtins.str] data_type: The data type for the dictionary attribute
-                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         :param pulumi.Input[_builtins.str] description: The description of the dictionary attribute
         :param pulumi.Input[_builtins.str] dictionary_name: The name of the dictionary the attribute belongs to
         :param pulumi.Input[_builtins.str] direction_type: The direction type for the dictionary attribute
@@ -428,7 +428,7 @@ class DictionaryAttribute(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict']]]] allowed_values: List of allowed values for the attribute
         :param pulumi.Input[_builtins.str] data_type: The data type for the dictionary attribute
-                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+                 - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         :param pulumi.Input[_builtins.str] description: The description of the dictionary attribute
         :param pulumi.Input[_builtins.str] dictionary_name: The name of the dictionary the attribute belongs to
         :param pulumi.Input[_builtins.str] direction_type: The direction type for the dictionary attribute
@@ -462,7 +462,7 @@ class DictionaryAttribute(pulumi.CustomResource):
     def data_type(self) -> pulumi.Output[_builtins.str]:
         """
         The data type for the dictionary attribute
-          - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+          - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
         """
         return pulumi.get(self, "data_type")
 
