@@ -21,7 +21,7 @@ class InternalUserArgs:
     def __init__(__self__, *,
                  account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
                  change_password: pulumi.Input[Optional[_builtins.bool]] = None,
-                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
@@ -39,7 +39,7 @@ class InternalUserArgs:
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] custom_attributes: Key value map
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] custom_attributes: Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
@@ -110,14 +110,14 @@ class InternalUserArgs:
 
     @_builtins.property
     @pulumi.getter(name="customAttributes")
-    def custom_attributes(self) -> pulumi.Input[Optional[_builtins.str]]:
+    def custom_attributes(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        Key value map
+        Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         """
         return pulumi.get(self, "custom_attributes")
 
     @custom_attributes.setter
-    def custom_attributes(self, value: pulumi.Input[Optional[_builtins.str]]):
+    def custom_attributes(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "custom_attributes", value)
 
     @_builtins.property
@@ -260,7 +260,7 @@ class _InternalUserState:
     def __init__(__self__, *,
                  account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
                  change_password: pulumi.Input[Optional[_builtins.bool]] = None,
-                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
@@ -278,7 +278,7 @@ class _InternalUserState:
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] custom_attributes: Key value map
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] custom_attributes: Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
@@ -349,14 +349,14 @@ class _InternalUserState:
 
     @_builtins.property
     @pulumi.getter(name="customAttributes")
-    def custom_attributes(self) -> pulumi.Input[Optional[_builtins.str]]:
+    def custom_attributes(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        Key value map
+        Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         """
         return pulumi.get(self, "custom_attributes")
 
     @custom_attributes.setter
-    def custom_attributes(self, value: pulumi.Input[Optional[_builtins.str]]):
+    def custom_attributes(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "custom_attributes", value)
 
     @_builtins.property
@@ -502,7 +502,7 @@ class InternalUser(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
                  change_password: pulumi.Input[Optional[_builtins.bool]] = None,
-                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
@@ -553,7 +553,7 @@ class InternalUser(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] custom_attributes: Key value map
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] custom_attributes: Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
@@ -624,7 +624,7 @@ class InternalUser(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
                  change_password: pulumi.Input[Optional[_builtins.bool]] = None,
-                 custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
@@ -671,7 +671,7 @@ class InternalUser(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
             change_password: pulumi.Input[Optional[_builtins.bool]] = None,
-            custom_attributes: pulumi.Input[Optional[_builtins.str]] = None,
+            custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             email: pulumi.Input[Optional[_builtins.str]] = None,
             enable_password: pulumi.Input[Optional[_builtins.str]] = None,
@@ -693,7 +693,7 @@ class InternalUser(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] account_name_alias: The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.bool] change_password: Requires the user to change the password
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] custom_attributes: Key value map
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] custom_attributes: Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
@@ -747,9 +747,9 @@ class InternalUser(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="customAttributes")
-    def custom_attributes(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def custom_attributes(self) -> pulumi.Output[Optional[Mapping[str, _builtins.str]]]:
         """
-        Key value map
+        Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         """
         return pulumi.get(self, "custom_attributes")
 

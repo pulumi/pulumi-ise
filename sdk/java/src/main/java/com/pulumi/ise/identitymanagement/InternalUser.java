@@ -12,6 +12,7 @@ import com.pulumi.ise.identitymanagement.InternalUserArgs;
 import com.pulumi.ise.identitymanagement.inputs.InternalUserState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -104,17 +105,17 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
         return this.changePassword;
     }
     /**
-     * Key value map
+     * Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      * 
      */
-    @Export(name="customAttributes", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> customAttributes;
+    @Export(name="customAttributes", refs={Map.class,String.class}, tree="[0,1,1]")
+    private Output</* @Nullable */ Map<String,String>> customAttributes;
 
     /**
-     * @return Key value map
+     * @return Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      * 
      */
-    public Output<Optional<String>> customAttributes() {
+    public Output<Optional<Map<String,String>>> customAttributes() {
         return Codegen.optional(this.customAttributes);
     }
     /**

@@ -64,7 +64,7 @@ type DictionaryAttribute struct {
 	// List of allowed values for the attribute
 	AllowedValues DictionaryAttributeAllowedValueArrayOutput `pulumi:"allowedValues"`
 	// The data type for the dictionary attribute
-	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
 	DataType pulumi.StringOutput `pulumi:"dataType"`
 	// The description of the dictionary attribute
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -118,7 +118,7 @@ type dictionaryAttributeState struct {
 	// List of allowed values for the attribute
 	AllowedValues []DictionaryAttributeAllowedValue `pulumi:"allowedValues"`
 	// The data type for the dictionary attribute
-	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
 	DataType *string `pulumi:"dataType"`
 	// The description of the dictionary attribute
 	Description *string `pulumi:"description"`
@@ -137,7 +137,7 @@ type DictionaryAttributeState struct {
 	// List of allowed values for the attribute
 	AllowedValues DictionaryAttributeAllowedValueArrayInput
 	// The data type for the dictionary attribute
-	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
 	DataType pulumi.StringPtrInput
 	// The description of the dictionary attribute
 	Description pulumi.StringPtrInput
@@ -160,7 +160,7 @@ type dictionaryAttributeArgs struct {
 	// List of allowed values for the attribute
 	AllowedValues []DictionaryAttributeAllowedValue `pulumi:"allowedValues"`
 	// The data type for the dictionary attribute
-	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
 	DataType string `pulumi:"dataType"`
 	// The description of the dictionary attribute
 	Description *string `pulumi:"description"`
@@ -180,7 +180,7 @@ type DictionaryAttributeArgs struct {
 	// List of allowed values for the attribute
 	AllowedValues DictionaryAttributeAllowedValueArrayInput
 	// The data type for the dictionary attribute
-	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+	//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
 	DataType pulumi.StringInput
 	// The description of the dictionary attribute
 	Description pulumi.StringPtrInput
@@ -288,7 +288,7 @@ func (o DictionaryAttributeOutput) AllowedValues() DictionaryAttributeAllowedVal
 }
 
 // The data type for the dictionary attribute
-//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+//   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
 func (o DictionaryAttributeOutput) DataType() pulumi.StringOutput {
 	return o.ApplyT(func(v *DictionaryAttribute) pulumi.StringOutput { return v.DataType }).(pulumi.StringOutput)
 }

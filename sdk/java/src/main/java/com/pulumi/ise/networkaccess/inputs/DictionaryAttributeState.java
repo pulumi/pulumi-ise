@@ -34,7 +34,7 @@ public final class DictionaryAttributeState extends com.pulumi.resources.Resourc
 
     /**
      * The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      * 
      */
     @Import(name="dataType")
@@ -42,7 +42,7 @@ public final class DictionaryAttributeState extends com.pulumi.resources.Resourc
 
     /**
      * @return The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      * 
      */
     public Optional<Output<String>> dataType() {
@@ -189,7 +189,7 @@ public final class DictionaryAttributeState extends com.pulumi.resources.Resourc
 
         /**
          * @param dataType The data type for the dictionary attribute
-         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
          * 
          * @return builder
          * 
@@ -201,7 +201,7 @@ public final class DictionaryAttributeState extends com.pulumi.resources.Resourc
 
         /**
          * @param dataType The data type for the dictionary attribute
-         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+         *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
          * 
          * @return builder
          * 

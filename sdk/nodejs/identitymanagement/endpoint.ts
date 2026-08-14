@@ -73,7 +73,7 @@ export class Endpoint extends pulumi.CustomResource {
     /**
      * Identity Group ID
      */
-    declare public readonly groupId: pulumi.Output<string | undefined>;
+    declare public readonly groupId: pulumi.Output<string>;
     /**
      * Identity Store
      */
@@ -149,7 +149,7 @@ export class Endpoint extends pulumi.CustomResource {
     /**
      * Profile ID
      */
-    declare public readonly profileId: pulumi.Output<string | undefined>;
+    declare public readonly profileId: pulumi.Output<string>;
     /**
      * Static Group Assignment
      */

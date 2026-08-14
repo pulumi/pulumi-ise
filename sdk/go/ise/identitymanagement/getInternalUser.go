@@ -62,8 +62,8 @@ type LookupInternalUserResult struct {
 	AccountNameAlias string `pulumi:"accountNameAlias"`
 	// Requires the user to change the password
 	ChangePassword bool `pulumi:"changePassword"`
-	// Key value map
-	CustomAttributes string `pulumi:"customAttributes"`
+	// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+	CustomAttributes map[string]string `pulumi:"customAttributes"`
 	// Description
 	Description string `pulumi:"description"`
 	// Email address
@@ -136,9 +136,9 @@ func (o LookupInternalUserResultOutput) ChangePassword() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInternalUserResult) bool { return v.ChangePassword }).(pulumi.BoolOutput)
 }
 
-// Key value map
-func (o LookupInternalUserResultOutput) CustomAttributes() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupInternalUserResult) string { return v.CustomAttributes }).(pulumi.StringOutput)
+// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
+func (o LookupInternalUserResultOutput) CustomAttributes() pulumi.StringMapOutput {
+	return o.ApplyT(func(v LookupInternalUserResult) map[string]string { return v.CustomAttributes }).(pulumi.StringMapOutput)
 }
 
 // Description

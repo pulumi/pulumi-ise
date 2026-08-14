@@ -33,8 +33,8 @@ class GetInternalUserResult:
         if change_password and not isinstance(change_password, bool):
             raise TypeError("Expected argument 'change_password' to be a bool")
         pulumi.set(__self__, "change_password", change_password)
-        if custom_attributes and not isinstance(custom_attributes, str):
-            raise TypeError("Expected argument 'custom_attributes' to be a str")
+        if custom_attributes and not isinstance(custom_attributes, dict):
+            raise TypeError("Expected argument 'custom_attributes' to be a dict")
         pulumi.set(__self__, "custom_attributes", custom_attributes)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
@@ -91,9 +91,9 @@ class GetInternalUserResult:
 
     @_builtins.property
     @pulumi.getter(name="customAttributes")
-    def custom_attributes(self) -> _builtins.str:
+    def custom_attributes(self) -> Mapping[str, _builtins.str]:
         """
-        Key value map
+        Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         """
         return pulumi.get(self, "custom_attributes")
 

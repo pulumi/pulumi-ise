@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -49,17 +50,17 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key value map
+     * Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      * 
      */
     @Import(name="customAttributes")
-    private @Nullable Output<String> customAttributes;
+    private @Nullable Output<Map<String,String>> customAttributes;
 
     /**
-     * @return Key value map
+     * @return Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      * 
      */
-    public Optional<Output<String>> customAttributes() {
+    public Optional<Output<Map<String,String>>> customAttributes() {
         return Optional.ofNullable(this.customAttributes);
     }
 
@@ -314,23 +315,23 @@ public final class InternalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param customAttributes Key value map
+         * @param customAttributes Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
          * 
          * @return builder
          * 
          */
-        public Builder customAttributes(@Nullable Output<String> customAttributes) {
+        public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             $.customAttributes = customAttributes;
             return this;
         }
 
         /**
-         * @param customAttributes Key value map
+         * @param customAttributes Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
          * 
          * @return builder
          * 
          */
-        public Builder customAttributes(String customAttributes) {
+        public Builder customAttributes(Map<String,String> customAttributes) {
             return customAttributes(Output.of(customAttributes));
         }
 

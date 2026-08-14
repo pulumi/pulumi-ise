@@ -75,9 +75,9 @@ export class InternalUser extends pulumi.CustomResource {
      */
     declare public readonly changePassword: pulumi.Output<boolean>;
     /**
-     * Key value map
+     * Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      */
-    declare public readonly customAttributes: pulumi.Output<string | undefined>;
+    declare public readonly customAttributes: pulumi.Output<{[key: string]: string} | undefined>;
     /**
      * Description
      */
@@ -188,9 +188,9 @@ export interface InternalUserState {
      */
     changePassword?: pulumi.Input<boolean | undefined>;
     /**
-     * Key value map
+     * Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      */
-    customAttributes?: pulumi.Input<string | undefined>;
+    customAttributes?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * Description
      */
@@ -253,9 +253,9 @@ export interface InternalUserArgs {
      */
     changePassword?: pulumi.Input<boolean | undefined>;
     /**
-     * Key value map
+     * Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      */
-    customAttributes?: pulumi.Input<string | undefined>;
+    customAttributes?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * Description
      */

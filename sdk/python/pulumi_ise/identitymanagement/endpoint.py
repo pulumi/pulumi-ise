@@ -1205,7 +1205,7 @@ class Endpoint(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="groupId")
-    def group_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def group_id(self) -> pulumi.Output[_builtins.str]:
         """
         Identity Group ID
         """
@@ -1357,7 +1357,7 @@ class Endpoint(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def profile_id(self) -> pulumi.Output[_builtins.str]:
         """
         Profile ID
         """

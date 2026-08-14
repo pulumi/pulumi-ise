@@ -138,9 +138,9 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public readonly bool ChangePassword;
         /// <summary>
-        /// Key value map
+        /// Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
         /// </summary>
-        public readonly string CustomAttributes;
+        public readonly ImmutableDictionary<string, string> CustomAttributes;
         /// <summary>
         /// Description
         /// </summary>
@@ -196,7 +196,7 @@ namespace Pulumi.Ise.IdentityManagement
 
             bool changePassword,
 
-            string customAttributes,
+            ImmutableDictionary<string, string> customAttributes,
 
             string description,
 

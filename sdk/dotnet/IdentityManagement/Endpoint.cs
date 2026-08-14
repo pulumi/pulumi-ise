@@ -65,7 +65,7 @@ namespace Pulumi.Ise.IdentityManagement
         /// Identity Group ID
         /// </summary>
         [Output("groupId")]
-        public Output<string?> GroupId { get; private set; } = null!;
+        public Output<string> GroupId { get; private set; } = null!;
 
         /// <summary>
         /// Identity Store
@@ -179,7 +179,7 @@ namespace Pulumi.Ise.IdentityManagement
         /// Profile ID
         /// </summary>
         [Output("profileId")]
-        public Output<string?> ProfileId { get; private set; } = null!;
+        public Output<string> ProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Static Group Assignment

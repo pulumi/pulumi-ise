@@ -104,14 +104,14 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="groupId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> groupId;
+    private Output<String> groupId;
 
     /**
      * @return Identity Group ID
      * 
      */
-    public Output<Optional<String>> groupId() {
-        return Codegen.optional(this.groupId);
+    public Output<String> groupId() {
+        return this.groupId;
     }
     /**
      * Identity Store
@@ -370,14 +370,14 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="profileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> profileId;
+    private Output<String> profileId;
 
     /**
      * @return Profile ID
      * 
      */
-    public Output<Optional<String>> profileId() {
-        return Codegen.optional(this.profileId);
+    public Output<String> profileId() {
+        return this.profileId;
     }
     /**
      * Static Group Assignment

@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
@@ -22,10 +23,10 @@ public final class GetInternalUserResult {
      */
     private Boolean changePassword;
     /**
-     * @return Key value map
+     * @return Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      * 
      */
-    private String customAttributes;
+    private Map<String,String> customAttributes;
     /**
      * @return Description
      * 
@@ -103,10 +104,10 @@ public final class GetInternalUserResult {
         return this.changePassword;
     }
     /**
-     * @return Key value map
+     * @return Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.
      * 
      */
-    public String customAttributes() {
+    public Map<String,String> customAttributes() {
         return this.customAttributes;
     }
     /**
@@ -205,7 +206,7 @@ public final class GetInternalUserResult {
     public static final class Builder {
         private String accountNameAlias;
         private Boolean changePassword;
-        private String customAttributes;
+        private Map<String,String> customAttributes;
         private String description;
         private String email;
         private String enablePassword;
@@ -255,7 +256,7 @@ public final class GetInternalUserResult {
             return this;
         }
         @CustomType.Setter
-        public Builder customAttributes(String customAttributes) {
+        public Builder customAttributes(Map<String,String> customAttributes) {
             if (customAttributes == null) {
               throw new MissingRequiredPropertyException("GetInternalUserResult", "customAttributes");
             }

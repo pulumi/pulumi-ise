@@ -10864,8 +10864,10 @@
                 }
             },
             "required": [
+                "groupId",
                 "mac",
                 "name",
+                "profileId",
                 "staticGroupAssignment",
                 "staticGroupAssignmentDefined",
                 "staticProfileAssignment",
@@ -11309,8 +11311,11 @@
                     "description": "Requires the user to change the password\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`true`\" pulumi-lang-dotnet=\"`True`\" pulumi-lang-go=\"`true`\" pulumi-lang-python=\"`true`\" pulumi-lang-yaml=\"`true`\" pulumi-lang-java=\"`true`\" pulumi-lang-hcl=\"`true`\"\u003e`true`\u003c/span\u003e"
                 },
                 "customAttributes": {
-                    "type": "string",
-                    "description": "Key value map"
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Key value map of custom attributes. The keys must be defined in the ISE identity store configuration."
                 },
                 "description": {
                     "type": "string",
@@ -11373,8 +11378,11 @@
                     "description": "Requires the user to change the password\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`true`\" pulumi-lang-dotnet=\"`True`\" pulumi-lang-go=\"`true`\" pulumi-lang-python=\"`true`\" pulumi-lang-yaml=\"`true`\" pulumi-lang-java=\"`true`\" pulumi-lang-hcl=\"`true`\"\u003e`true`\u003c/span\u003e"
                 },
                 "customAttributes": {
-                    "type": "string",
-                    "description": "Key value map"
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Key value map of custom attributes. The keys must be defined in the ISE identity store configuration."
                 },
                 "description": {
                     "type": "string",
@@ -11433,8 +11441,11 @@
                         "description": "Requires the user to change the password\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`true`\" pulumi-lang-dotnet=\"`True`\" pulumi-lang-go=\"`true`\" pulumi-lang-python=\"`true`\" pulumi-lang-yaml=\"`true`\" pulumi-lang-java=\"`true`\" pulumi-lang-hcl=\"`true`\"\u003e`true`\u003c/span\u003e"
                     },
                     "customAttributes": {
-                        "type": "string",
-                        "description": "Key value map"
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "Key value map of custom attributes. The keys must be defined in the ISE identity store configuration."
                     },
                     "description": {
                         "type": "string",
@@ -15155,7 +15166,7 @@
                 },
                 "dataType": {
                     "type": "string",
-                    "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`"
+                    "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`"
                 },
                 "description": {
                     "type": "string",
@@ -15193,7 +15204,7 @@
                 },
                 "dataType": {
                     "type": "string",
-                    "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`"
+                    "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`"
                 },
                 "description": {
                     "type": "string",
@@ -15232,7 +15243,7 @@
                     },
                     "dataType": {
                         "type": "string",
-                        "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`"
+                        "description": "The data type for the dictionary attribute\n  - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`"
                     },
                     "description": {
                         "type": "string",
@@ -18362,8 +18373,11 @@
                         "type": "boolean"
                     },
                     "customAttributes": {
-                        "description": "Key value map\n",
-                        "type": "string"
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "description": "Key value map of custom attributes. The keys must be defined in the ISE identity store configuration.\n",
+                        "type": "object"
                     },
                     "description": {
                         "description": "Description\n",

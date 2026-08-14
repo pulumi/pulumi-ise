@@ -71,7 +71,7 @@ export class DictionaryAttribute extends pulumi.CustomResource {
     declare public readonly allowedValues: pulumi.Output<outputs.networkaccess.DictionaryAttributeAllowedValue[] | undefined>;
     /**
      * The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      */
     declare public readonly dataType: pulumi.Output<string>;
     /**
@@ -147,7 +147,7 @@ export interface DictionaryAttributeState {
     allowedValues?: pulumi.Input<pulumi.Input<inputs.networkaccess.DictionaryAttributeAllowedValue>[] | undefined>;
     /**
      * The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      */
     dataType?: pulumi.Input<string | undefined>;
     /**
@@ -183,7 +183,7 @@ export interface DictionaryAttributeArgs {
     allowedValues?: pulumi.Input<pulumi.Input<inputs.networkaccess.DictionaryAttributeAllowedValue>[] | undefined>;
     /**
      * The data type for the dictionary attribute
-     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPv4`, `IPv6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UNIT64`
+     *   - Choices: `BOOLEAN`, `DATE`, `FLOAT`, `INT`, `IP`, `IPV4`, `IPV6`, `IPV6PREFIX`, `LONG`, `OCTET_STRING`, `STRING`, `UNIT32`, `UINT64`
      */
     dataType: pulumi.Input<string>;
     /**
