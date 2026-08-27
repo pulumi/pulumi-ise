@@ -71,12 +71,8 @@ type LookupEndpointIdentityGroupResult struct {
 }
 
 func LookupEndpointIdentityGroupOutput(ctx *pulumi.Context, args LookupEndpointIdentityGroupOutputArgs, opts ...pulumi.InvokeOption) LookupEndpointIdentityGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEndpointIdentityGroupResultOutput, error) {
-			args := v.(LookupEndpointIdentityGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", args, LookupEndpointIdentityGroupResultOutput{}, options).(LookupEndpointIdentityGroupResultOutput), nil
-		}).(LookupEndpointIdentityGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getEndpointIdentityGroup:getEndpointIdentityGroup", args, LookupEndpointIdentityGroupResultOutput{}, options).(LookupEndpointIdentityGroupResultOutput)
 }
 
 // A collection of arguments for invoking getEndpointIdentityGroup.

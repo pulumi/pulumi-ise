@@ -73,12 +73,8 @@ type LookupIpToSgtMappingGroupResult struct {
 }
 
 func LookupIpToSgtMappingGroupOutput(ctx *pulumi.Context, args LookupIpToSgtMappingGroupOutputArgs, opts ...pulumi.InvokeOption) LookupIpToSgtMappingGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIpToSgtMappingGroupResultOutput, error) {
-			args := v.(LookupIpToSgtMappingGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", args, LookupIpToSgtMappingGroupResultOutput{}, options).(LookupIpToSgtMappingGroupResultOutput), nil
-		}).(LookupIpToSgtMappingGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:trustsec/getIpToSgtMappingGroup:getIpToSgtMappingGroup", args, LookupIpToSgtMappingGroupResultOutput{}, options).(LookupIpToSgtMappingGroupResultOutput)
 }
 
 // A collection of arguments for invoking getIpToSgtMappingGroup.

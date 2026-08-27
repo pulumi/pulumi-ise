@@ -70,12 +70,8 @@ type LookupTacacsCommandSetResult struct {
 }
 
 func LookupTacacsCommandSetOutput(ctx *pulumi.Context, args LookupTacacsCommandSetOutputArgs, opts ...pulumi.InvokeOption) LookupTacacsCommandSetResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTacacsCommandSetResultOutput, error) {
-			args := v.(LookupTacacsCommandSetArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", args, LookupTacacsCommandSetResultOutput{}, options).(LookupTacacsCommandSetResultOutput), nil
-		}).(LookupTacacsCommandSetResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:deviceadmin/getTacacsCommandSet:getTacacsCommandSet", args, LookupTacacsCommandSetResultOutput{}, options).(LookupTacacsCommandSetResultOutput)
 }
 
 // A collection of arguments for invoking getTacacsCommandSet.

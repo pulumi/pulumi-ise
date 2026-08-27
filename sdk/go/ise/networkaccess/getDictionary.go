@@ -71,12 +71,8 @@ type LookupDictionaryResult struct {
 }
 
 func LookupDictionaryOutput(ctx *pulumi.Context, args LookupDictionaryOutputArgs, opts ...pulumi.InvokeOption) LookupDictionaryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDictionaryResultOutput, error) {
-			args := v.(LookupDictionaryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getDictionary:getDictionary", args, LookupDictionaryResultOutput{}, options).(LookupDictionaryResultOutput), nil
-		}).(LookupDictionaryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getDictionary:getDictionary", args, LookupDictionaryResultOutput{}, options).(LookupDictionaryResultOutput)
 }
 
 // A collection of arguments for invoking getDictionary.

@@ -98,12 +98,8 @@ type LookupAuthorizationExceptionRuleResult struct {
 }
 
 func LookupAuthorizationExceptionRuleOutput(ctx *pulumi.Context, args LookupAuthorizationExceptionRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationExceptionRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAuthorizationExceptionRuleResultOutput, error) {
-			args := v.(LookupAuthorizationExceptionRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:deviceadmin/getAuthorizationExceptionRule:getAuthorizationExceptionRule", args, LookupAuthorizationExceptionRuleResultOutput{}, options).(LookupAuthorizationExceptionRuleResultOutput), nil
-		}).(LookupAuthorizationExceptionRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:deviceadmin/getAuthorizationExceptionRule:getAuthorizationExceptionRule", args, LookupAuthorizationExceptionRuleResultOutput{}, options).(LookupAuthorizationExceptionRuleResultOutput)
 }
 
 // A collection of arguments for invoking getAuthorizationExceptionRule.

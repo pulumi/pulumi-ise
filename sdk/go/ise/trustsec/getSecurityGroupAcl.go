@@ -73,12 +73,8 @@ type LookupSecurityGroupAclResult struct {
 }
 
 func LookupSecurityGroupAclOutput(ctx *pulumi.Context, args LookupSecurityGroupAclOutputArgs, opts ...pulumi.InvokeOption) LookupSecurityGroupAclResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSecurityGroupAclResultOutput, error) {
-			args := v.(LookupSecurityGroupAclArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", args, LookupSecurityGroupAclResultOutput{}, options).(LookupSecurityGroupAclResultOutput), nil
-		}).(LookupSecurityGroupAclResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", args, LookupSecurityGroupAclResultOutput{}, options).(LookupSecurityGroupAclResultOutput)
 }
 
 // A collection of arguments for invoking getSecurityGroupAcl.

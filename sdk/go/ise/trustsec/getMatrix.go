@@ -73,12 +73,8 @@ type LookupMatrixResult struct {
 }
 
 func LookupMatrixOutput(ctx *pulumi.Context, args LookupMatrixOutputArgs, opts ...pulumi.InvokeOption) LookupMatrixResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupMatrixResultOutput, error) {
-			args := v.(LookupMatrixArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:trustsec/getMatrix:getMatrix", args, LookupMatrixResultOutput{}, options).(LookupMatrixResultOutput), nil
-		}).(LookupMatrixResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:trustsec/getMatrix:getMatrix", args, LookupMatrixResultOutput{}, options).(LookupMatrixResultOutput)
 }
 
 // A collection of arguments for invoking getMatrix.

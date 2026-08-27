@@ -83,12 +83,8 @@ type LookupConditionResult struct {
 }
 
 func LookupConditionOutput(ctx *pulumi.Context, args LookupConditionOutputArgs, opts ...pulumi.InvokeOption) LookupConditionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupConditionResultOutput, error) {
-			args := v.(LookupConditionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getCondition:getCondition", args, LookupConditionResultOutput{}, options).(LookupConditionResultOutput), nil
-		}).(LookupConditionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getCondition:getCondition", args, LookupConditionResultOutput{}, options).(LookupConditionResultOutput)
 }
 
 // A collection of arguments for invoking getCondition.

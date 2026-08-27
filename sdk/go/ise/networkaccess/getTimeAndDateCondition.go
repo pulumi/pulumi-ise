@@ -89,12 +89,8 @@ type LookupTimeAndDateConditionResult struct {
 }
 
 func LookupTimeAndDateConditionOutput(ctx *pulumi.Context, args LookupTimeAndDateConditionOutputArgs, opts ...pulumi.InvokeOption) LookupTimeAndDateConditionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTimeAndDateConditionResultOutput, error) {
-			args := v.(LookupTimeAndDateConditionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getTimeAndDateCondition:getTimeAndDateCondition", args, LookupTimeAndDateConditionResultOutput{}, options).(LookupTimeAndDateConditionResultOutput), nil
-		}).(LookupTimeAndDateConditionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getTimeAndDateCondition:getTimeAndDateCondition", args, LookupTimeAndDateConditionResultOutput{}, options).(LookupTimeAndDateConditionResultOutput)
 }
 
 // A collection of arguments for invoking getTimeAndDateCondition.

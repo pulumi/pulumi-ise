@@ -69,12 +69,8 @@ type LookupUserIdentityGroupResult struct {
 }
 
 func LookupUserIdentityGroupOutput(ctx *pulumi.Context, args LookupUserIdentityGroupOutputArgs, opts ...pulumi.InvokeOption) LookupUserIdentityGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupUserIdentityGroupResultOutput, error) {
-			args := v.(LookupUserIdentityGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", args, LookupUserIdentityGroupResultOutput{}, options).(LookupUserIdentityGroupResultOutput), nil
-		}).(LookupUserIdentityGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getUserIdentityGroup:getUserIdentityGroup", args, LookupUserIdentityGroupResultOutput{}, options).(LookupUserIdentityGroupResultOutput)
 }
 
 // A collection of arguments for invoking getUserIdentityGroup.

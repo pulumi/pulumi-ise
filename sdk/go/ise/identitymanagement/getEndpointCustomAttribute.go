@@ -65,12 +65,8 @@ type LookupEndpointCustomAttributeResult struct {
 }
 
 func LookupEndpointCustomAttributeOutput(ctx *pulumi.Context, args LookupEndpointCustomAttributeOutputArgs, opts ...pulumi.InvokeOption) LookupEndpointCustomAttributeResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEndpointCustomAttributeResultOutput, error) {
-			args := v.(LookupEndpointCustomAttributeArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getEndpointCustomAttribute:getEndpointCustomAttribute", args, LookupEndpointCustomAttributeResultOutput{}, options).(LookupEndpointCustomAttributeResultOutput), nil
-		}).(LookupEndpointCustomAttributeResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getEndpointCustomAttribute:getEndpointCustomAttribute", args, LookupEndpointCustomAttributeResultOutput{}, options).(LookupEndpointCustomAttributeResultOutput)
 }
 
 // A collection of arguments for invoking getEndpointCustomAttribute.

@@ -129,12 +129,8 @@ type LookupAuthorizationProfileResult struct {
 }
 
 func LookupAuthorizationProfileOutput(ctx *pulumi.Context, args LookupAuthorizationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupAuthorizationProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAuthorizationProfileResultOutput, error) {
-			args := v.(LookupAuthorizationProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", args, LookupAuthorizationProfileResultOutput{}, options).(LookupAuthorizationProfileResultOutput), nil
-		}).(LookupAuthorizationProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getAuthorizationProfile:getAuthorizationProfile", args, LookupAuthorizationProfileResultOutput{}, options).(LookupAuthorizationProfileResultOutput)
 }
 
 // A collection of arguments for invoking getAuthorizationProfile.

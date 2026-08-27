@@ -126,12 +126,8 @@ type LookupActiveDirectoryJoinPointResult struct {
 }
 
 func LookupActiveDirectoryJoinPointOutput(ctx *pulumi.Context, args LookupActiveDirectoryJoinPointOutputArgs, opts ...pulumi.InvokeOption) LookupActiveDirectoryJoinPointResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupActiveDirectoryJoinPointResultOutput, error) {
-			args := v.(LookupActiveDirectoryJoinPointArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", args, LookupActiveDirectoryJoinPointResultOutput{}, options).(LookupActiveDirectoryJoinPointResultOutput), nil
-		}).(LookupActiveDirectoryJoinPointResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getActiveDirectoryJoinPoint:getActiveDirectoryJoinPoint", args, LookupActiveDirectoryJoinPointResultOutput{}, options).(LookupActiveDirectoryJoinPointResultOutput)
 }
 
 // A collection of arguments for invoking getActiveDirectoryJoinPoint.
