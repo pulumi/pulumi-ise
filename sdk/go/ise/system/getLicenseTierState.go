@@ -63,12 +63,8 @@ type LookupLicenseTierStateResult struct {
 }
 
 func LookupLicenseTierStateOutput(ctx *pulumi.Context, args LookupLicenseTierStateOutputArgs, opts ...pulumi.InvokeOption) LookupLicenseTierStateResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLicenseTierStateResultOutput, error) {
-			args := v.(LookupLicenseTierStateArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:system/getLicenseTierState:getLicenseTierState", args, LookupLicenseTierStateResultOutput{}, options).(LookupLicenseTierStateResultOutput), nil
-		}).(LookupLicenseTierStateResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:system/getLicenseTierState:getLicenseTierState", args, LookupLicenseTierStateResultOutput{}, options).(LookupLicenseTierStateResultOutput)
 }
 
 // A collection of arguments for invoking getLicenseTierState.

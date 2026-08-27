@@ -91,12 +91,8 @@ type LookupInternalUserResult struct {
 }
 
 func LookupInternalUserOutput(ctx *pulumi.Context, args LookupInternalUserOutputArgs, opts ...pulumi.InvokeOption) LookupInternalUserResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupInternalUserResultOutput, error) {
-			args := v.(LookupInternalUserArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getInternalUser:getInternalUser", args, LookupInternalUserResultOutput{}, options).(LookupInternalUserResultOutput), nil
-		}).(LookupInternalUserResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getInternalUser:getInternalUser", args, LookupInternalUserResultOutput{}, options).(LookupInternalUserResultOutput)
 }
 
 // A collection of arguments for invoking getInternalUser.

@@ -72,12 +72,8 @@ type LookupIdentitySourceSequenceResult struct {
 }
 
 func LookupIdentitySourceSequenceOutput(ctx *pulumi.Context, args LookupIdentitySourceSequenceOutputArgs, opts ...pulumi.InvokeOption) LookupIdentitySourceSequenceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIdentitySourceSequenceResultOutput, error) {
-			args := v.(LookupIdentitySourceSequenceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", args, LookupIdentitySourceSequenceResultOutput{}, options).(LookupIdentitySourceSequenceResultOutput), nil
-		}).(LookupIdentitySourceSequenceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getIdentitySourceSequence:getIdentitySourceSequence", args, LookupIdentitySourceSequenceResultOutput{}, options).(LookupIdentitySourceSequenceResultOutput)
 }
 
 // A collection of arguments for invoking getIdentitySourceSequence.

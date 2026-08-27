@@ -69,12 +69,8 @@ type GetProfilerProfileResult struct {
 }
 
 func GetProfilerProfileOutput(ctx *pulumi.Context, args GetProfilerProfileOutputArgs, opts ...pulumi.InvokeOption) GetProfilerProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetProfilerProfileResultOutput, error) {
-			args := v.(GetProfilerProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:profiling/getProfilerProfile:getProfilerProfile", args, GetProfilerProfileResultOutput{}, options).(GetProfilerProfileResultOutput), nil
-		}).(GetProfilerProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:profiling/getProfilerProfile:getProfilerProfile", args, GetProfilerProfileResultOutput{}, options).(GetProfilerProfileResultOutput)
 }
 
 // A collection of arguments for invoking getProfilerProfile.

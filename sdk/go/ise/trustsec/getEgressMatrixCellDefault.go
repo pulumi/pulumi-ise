@@ -69,12 +69,8 @@ type LookupEgressMatrixCellDefaultResult struct {
 }
 
 func LookupEgressMatrixCellDefaultOutput(ctx *pulumi.Context, args LookupEgressMatrixCellDefaultOutputArgs, opts ...pulumi.InvokeOption) LookupEgressMatrixCellDefaultResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEgressMatrixCellDefaultResultOutput, error) {
-			args := v.(LookupEgressMatrixCellDefaultArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:trustsec/getEgressMatrixCellDefault:getEgressMatrixCellDefault", args, LookupEgressMatrixCellDefaultResultOutput{}, options).(LookupEgressMatrixCellDefaultResultOutput), nil
-		}).(LookupEgressMatrixCellDefaultResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:trustsec/getEgressMatrixCellDefault:getEgressMatrixCellDefault", args, LookupEgressMatrixCellDefaultResultOutput{}, options).(LookupEgressMatrixCellDefaultResultOutput)
 }
 
 // A collection of arguments for invoking getEgressMatrixCellDefault.

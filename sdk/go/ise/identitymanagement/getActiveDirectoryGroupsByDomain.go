@@ -83,12 +83,8 @@ type GetActiveDirectoryGroupsByDomainResult struct {
 }
 
 func GetActiveDirectoryGroupsByDomainOutput(ctx *pulumi.Context, args GetActiveDirectoryGroupsByDomainOutputArgs, opts ...pulumi.InvokeOption) GetActiveDirectoryGroupsByDomainResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetActiveDirectoryGroupsByDomainResultOutput, error) {
-			args := v.(GetActiveDirectoryGroupsByDomainArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", args, GetActiveDirectoryGroupsByDomainResultOutput{}, options).(GetActiveDirectoryGroupsByDomainResultOutput), nil
-		}).(GetActiveDirectoryGroupsByDomainResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getActiveDirectoryGroupsByDomain:getActiveDirectoryGroupsByDomain", args, GetActiveDirectoryGroupsByDomainResultOutput{}, options).(GetActiveDirectoryGroupsByDomainResultOutput)
 }
 
 // A collection of arguments for invoking getActiveDirectoryGroupsByDomain.

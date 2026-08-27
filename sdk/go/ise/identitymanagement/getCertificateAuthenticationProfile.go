@@ -77,12 +77,8 @@ type LookupCertificateAuthenticationProfileResult struct {
 }
 
 func LookupCertificateAuthenticationProfileOutput(ctx *pulumi.Context, args LookupCertificateAuthenticationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupCertificateAuthenticationProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCertificateAuthenticationProfileResultOutput, error) {
-			args := v.(LookupCertificateAuthenticationProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", args, LookupCertificateAuthenticationProfileResultOutput{}, options).(LookupCertificateAuthenticationProfileResultOutput), nil
-		}).(LookupCertificateAuthenticationProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:identitymanagement/getCertificateAuthenticationProfile:getCertificateAuthenticationProfile", args, LookupCertificateAuthenticationProfileResultOutput{}, options).(LookupCertificateAuthenticationProfileResultOutput)
 }
 
 // A collection of arguments for invoking getCertificateAuthenticationProfile.

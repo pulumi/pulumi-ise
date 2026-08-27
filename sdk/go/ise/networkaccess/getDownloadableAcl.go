@@ -71,12 +71,8 @@ type LookupDownloadableAclResult struct {
 }
 
 func LookupDownloadableAclOutput(ctx *pulumi.Context, args LookupDownloadableAclOutputArgs, opts ...pulumi.InvokeOption) LookupDownloadableAclResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDownloadableAclResultOutput, error) {
-			args := v.(LookupDownloadableAclArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", args, LookupDownloadableAclResultOutput{}, options).(LookupDownloadableAclResultOutput), nil
-		}).(LookupDownloadableAclResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getDownloadableAcl:getDownloadableAcl", args, LookupDownloadableAclResultOutput{}, options).(LookupDownloadableAclResultOutput)
 }
 
 // A collection of arguments for invoking getDownloadableAcl.

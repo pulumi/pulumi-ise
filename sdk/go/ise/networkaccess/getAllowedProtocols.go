@@ -217,12 +217,8 @@ type LookupAllowedProtocolsResult struct {
 }
 
 func LookupAllowedProtocolsOutput(ctx *pulumi.Context, args LookupAllowedProtocolsOutputArgs, opts ...pulumi.InvokeOption) LookupAllowedProtocolsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAllowedProtocolsResultOutput, error) {
-			args := v.(LookupAllowedProtocolsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", args, LookupAllowedProtocolsResultOutput{}, options).(LookupAllowedProtocolsResultOutput), nil
-		}).(LookupAllowedProtocolsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getAllowedProtocols:getAllowedProtocols", args, LookupAllowedProtocolsResultOutput{}, options).(LookupAllowedProtocolsResultOutput)
 }
 
 // A collection of arguments for invoking getAllowedProtocols.

@@ -80,12 +80,8 @@ type LookupDictionaryAttributeResult struct {
 }
 
 func LookupDictionaryAttributeOutput(ctx *pulumi.Context, args LookupDictionaryAttributeOutputArgs, opts ...pulumi.InvokeOption) LookupDictionaryAttributeResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDictionaryAttributeResultOutput, error) {
-			args := v.(LookupDictionaryAttributeArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:networkaccess/getDictionaryAttribute:getDictionaryAttribute", args, LookupDictionaryAttributeResultOutput{}, options).(LookupDictionaryAttributeResultOutput), nil
-		}).(LookupDictionaryAttributeResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:networkaccess/getDictionaryAttribute:getDictionaryAttribute", args, LookupDictionaryAttributeResultOutput{}, options).(LookupDictionaryAttributeResultOutput)
 }
 
 // A collection of arguments for invoking getDictionaryAttribute.

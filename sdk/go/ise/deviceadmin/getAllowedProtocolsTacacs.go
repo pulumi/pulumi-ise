@@ -73,12 +73,8 @@ type LookupAllowedProtocolsTacacsResult struct {
 }
 
 func LookupAllowedProtocolsTacacsOutput(ctx *pulumi.Context, args LookupAllowedProtocolsTacacsOutputArgs, opts ...pulumi.InvokeOption) LookupAllowedProtocolsTacacsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAllowedProtocolsTacacsResultOutput, error) {
-			args := v.(LookupAllowedProtocolsTacacsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", args, LookupAllowedProtocolsTacacsResultOutput{}, options).(LookupAllowedProtocolsTacacsResultOutput), nil
-		}).(LookupAllowedProtocolsTacacsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("ise:deviceadmin/getAllowedProtocolsTacacs:getAllowedProtocolsTacacs", args, LookupAllowedProtocolsTacacsResultOutput{}, options).(LookupAllowedProtocolsTacacsResultOutput)
 }
 
 // A collection of arguments for invoking getAllowedProtocolsTacacs.
