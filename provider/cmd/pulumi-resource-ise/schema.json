@@ -11588,7 +11588,7 @@
                 },
                 "coaPort": {
                     "type": "integer",
-                    "description": "CoA port\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`1700`\" pulumi-lang-dotnet=\"`1700`\" pulumi-lang-go=\"`1700`\" pulumi-lang-python=\"`1700`\" pulumi-lang-yaml=\"`1700`\" pulumi-lang-java=\"`1700`\" pulumi-lang-hcl=\"`1700`\"\u003e`1700`\u003c/span\u003e"
+                    "description": "CoA port"
                 },
                 "description": {
                     "type": "string",
@@ -11646,7 +11646,7 @@
                 },
                 "snmpPollingInterval": {
                     "type": "integer",
-                    "description": "SNMP Polling Interval in seconds\n  - Range: \u003cspan pulumi-lang-nodejs=\"`600`\" pulumi-lang-dotnet=\"`600`\" pulumi-lang-go=\"`600`\" pulumi-lang-python=\"`600`\" pulumi-lang-yaml=\"`600`\" pulumi-lang-java=\"`600`\" pulumi-lang-hcl=\"`600`\"\u003e`600`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`86400`\" pulumi-lang-dotnet=\"`86400`\" pulumi-lang-go=\"`86400`\" pulumi-lang-python=\"`86400`\" pulumi-lang-yaml=\"`86400`\" pulumi-lang-java=\"`86400`\" pulumi-lang-hcl=\"`86400`\"\u003e`86400`\u003c/span\u003e"
+                    "description": "SNMP Polling Interval in seconds\n  - Range: \u003cspan pulumi-lang-nodejs=\"`0`\" pulumi-lang-dotnet=\"`0`\" pulumi-lang-go=\"`0`\" pulumi-lang-python=\"`0`\" pulumi-lang-yaml=\"`0`\" pulumi-lang-java=\"`0`\" pulumi-lang-hcl=\"`0`\"\u003e`0`\u003c/span\u003e (disabled) or \u003cspan pulumi-lang-nodejs=\"`600`\" pulumi-lang-dotnet=\"`600`\" pulumi-lang-go=\"`600`\" pulumi-lang-python=\"`600`\" pulumi-lang-yaml=\"`600`\" pulumi-lang-java=\"`600`\" pulumi-lang-hcl=\"`600`\"\u003e`600`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`86400`\" pulumi-lang-dotnet=\"`86400`\" pulumi-lang-go=\"`86400`\" pulumi-lang-python=\"`86400`\" pulumi-lang-yaml=\"`86400`\" pulumi-lang-java=\"`86400`\" pulumi-lang-hcl=\"`86400`\"\u003e`86400`\u003c/span\u003e"
                 },
                 "snmpPrivacyPassword": {
                     "type": "string",
@@ -11750,7 +11750,6 @@
                 }
             },
             "required": [
-                "coaPort",
                 "ips",
                 "name",
                 "profileName"
@@ -11794,7 +11793,7 @@
                 },
                 "coaPort": {
                     "type": "integer",
-                    "description": "CoA port\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`1700`\" pulumi-lang-dotnet=\"`1700`\" pulumi-lang-go=\"`1700`\" pulumi-lang-python=\"`1700`\" pulumi-lang-yaml=\"`1700`\" pulumi-lang-java=\"`1700`\" pulumi-lang-hcl=\"`1700`\"\u003e`1700`\u003c/span\u003e"
+                    "description": "CoA port"
                 },
                 "description": {
                     "type": "string",
@@ -11852,7 +11851,7 @@
                 },
                 "snmpPollingInterval": {
                     "type": "integer",
-                    "description": "SNMP Polling Interval in seconds\n  - Range: \u003cspan pulumi-lang-nodejs=\"`600`\" pulumi-lang-dotnet=\"`600`\" pulumi-lang-go=\"`600`\" pulumi-lang-python=\"`600`\" pulumi-lang-yaml=\"`600`\" pulumi-lang-java=\"`600`\" pulumi-lang-hcl=\"`600`\"\u003e`600`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`86400`\" pulumi-lang-dotnet=\"`86400`\" pulumi-lang-go=\"`86400`\" pulumi-lang-python=\"`86400`\" pulumi-lang-yaml=\"`86400`\" pulumi-lang-java=\"`86400`\" pulumi-lang-hcl=\"`86400`\"\u003e`86400`\u003c/span\u003e"
+                    "description": "SNMP Polling Interval in seconds\n  - Range: \u003cspan pulumi-lang-nodejs=\"`0`\" pulumi-lang-dotnet=\"`0`\" pulumi-lang-go=\"`0`\" pulumi-lang-python=\"`0`\" pulumi-lang-yaml=\"`0`\" pulumi-lang-java=\"`0`\" pulumi-lang-hcl=\"`0`\"\u003e`0`\u003c/span\u003e (disabled) or \u003cspan pulumi-lang-nodejs=\"`600`\" pulumi-lang-dotnet=\"`600`\" pulumi-lang-go=\"`600`\" pulumi-lang-python=\"`600`\" pulumi-lang-yaml=\"`600`\" pulumi-lang-java=\"`600`\" pulumi-lang-hcl=\"`600`\"\u003e`600`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`86400`\" pulumi-lang-dotnet=\"`86400`\" pulumi-lang-go=\"`86400`\" pulumi-lang-python=\"`86400`\" pulumi-lang-yaml=\"`86400`\" pulumi-lang-java=\"`86400`\" pulumi-lang-hcl=\"`86400`\"\u003e`86400`\u003c/span\u003e"
                 },
                 "snmpPrivacyPassword": {
                     "type": "string",
@@ -11999,7 +11998,7 @@
                     },
                     "coaPort": {
                         "type": "integer",
-                        "description": "CoA port\n  - Default value: \u003cspan pulumi-lang-nodejs=\"`1700`\" pulumi-lang-dotnet=\"`1700`\" pulumi-lang-go=\"`1700`\" pulumi-lang-python=\"`1700`\" pulumi-lang-yaml=\"`1700`\" pulumi-lang-java=\"`1700`\" pulumi-lang-hcl=\"`1700`\"\u003e`1700`\u003c/span\u003e"
+                        "description": "CoA port"
                     },
                     "description": {
                         "type": "string",
@@ -12057,7 +12056,7 @@
                     },
                     "snmpPollingInterval": {
                         "type": "integer",
-                        "description": "SNMP Polling Interval in seconds\n  - Range: \u003cspan pulumi-lang-nodejs=\"`600`\" pulumi-lang-dotnet=\"`600`\" pulumi-lang-go=\"`600`\" pulumi-lang-python=\"`600`\" pulumi-lang-yaml=\"`600`\" pulumi-lang-java=\"`600`\" pulumi-lang-hcl=\"`600`\"\u003e`600`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`86400`\" pulumi-lang-dotnet=\"`86400`\" pulumi-lang-go=\"`86400`\" pulumi-lang-python=\"`86400`\" pulumi-lang-yaml=\"`86400`\" pulumi-lang-java=\"`86400`\" pulumi-lang-hcl=\"`86400`\"\u003e`86400`\u003c/span\u003e"
+                        "description": "SNMP Polling Interval in seconds\n  - Range: \u003cspan pulumi-lang-nodejs=\"`0`\" pulumi-lang-dotnet=\"`0`\" pulumi-lang-go=\"`0`\" pulumi-lang-python=\"`0`\" pulumi-lang-yaml=\"`0`\" pulumi-lang-java=\"`0`\" pulumi-lang-hcl=\"`0`\"\u003e`0`\u003c/span\u003e (disabled) or \u003cspan pulumi-lang-nodejs=\"`600`\" pulumi-lang-dotnet=\"`600`\" pulumi-lang-go=\"`600`\" pulumi-lang-python=\"`600`\" pulumi-lang-yaml=\"`600`\" pulumi-lang-java=\"`600`\" pulumi-lang-hcl=\"`600`\"\u003e`600`\u003c/span\u003e-\u003cspan pulumi-lang-nodejs=\"`86400`\" pulumi-lang-dotnet=\"`86400`\" pulumi-lang-go=\"`86400`\" pulumi-lang-python=\"`86400`\" pulumi-lang-yaml=\"`86400`\" pulumi-lang-java=\"`86400`\" pulumi-lang-hcl=\"`86400`\"\u003e`86400`\u003c/span\u003e"
                     },
                     "snmpPrivacyPassword": {
                         "type": "string",
@@ -12282,6 +12281,10 @@
                     "type": "string",
                     "description": "Description"
                 },
+                "displayAdditionalTlsParams": {
+                    "type": "boolean",
+                    "description": "Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5."
+                },
                 "eapFastAcceptClientCert": {
                     "type": "boolean",
                     "description": "Accept client certificates. Is required only if \u003cspan pulumi-lang-nodejs=\"`eapFastUsePacs`\" pulumi-lang-dotnet=\"`EapFastUsePacs`\" pulumi-lang-go=\"`eapFastUsePacs`\" pulumi-lang-python=\"`eap_fast_use_pacs`\" pulumi-lang-yaml=\"`eapFastUsePacs`\" pulumi-lang-java=\"`eapFastUsePacs`\" pulumi-lang-hcl=\"`eap_fast_use_pacs`\"\u003e`eapFastUsePacs`\u003c/span\u003e is \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\" pulumi-lang-hcl=\"`false`\"\u003e`false`\u003c/span\u003e."
@@ -12493,6 +12496,10 @@
                 "requireMessageAuth": {
                     "type": "boolean",
                     "description": "Require message authentication"
+                },
+                "rsaPss": {
+                    "type": "boolean",
+                    "description": "Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4."
                 },
                 "teapDowngradeMsk": {
                     "type": "boolean",
@@ -12611,6 +12618,10 @@
                     "type": "string",
                     "description": "Description"
                 },
+                "displayAdditionalTlsParams": {
+                    "type": "boolean",
+                    "description": "Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5."
+                },
                 "eapFastAcceptClientCert": {
                     "type": "boolean",
                     "description": "Accept client certificates. Is required only if \u003cspan pulumi-lang-nodejs=\"`eapFastUsePacs`\" pulumi-lang-dotnet=\"`EapFastUsePacs`\" pulumi-lang-go=\"`eapFastUsePacs`\" pulumi-lang-python=\"`eap_fast_use_pacs`\" pulumi-lang-yaml=\"`eapFastUsePacs`\" pulumi-lang-java=\"`eapFastUsePacs`\" pulumi-lang-hcl=\"`eap_fast_use_pacs`\"\u003e`eapFastUsePacs`\u003c/span\u003e is \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\" pulumi-lang-hcl=\"`false`\"\u003e`false`\u003c/span\u003e."
@@ -12823,6 +12834,10 @@
                     "type": "boolean",
                     "description": "Require message authentication"
                 },
+                "rsaPss": {
+                    "type": "boolean",
+                    "description": "Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4."
+                },
                 "teapDowngradeMsk": {
                     "type": "boolean",
                     "description": "Allow downgrade to MSK"
@@ -12940,6 +12955,10 @@
                     "description": {
                         "type": "string",
                         "description": "Description"
+                    },
+                    "displayAdditionalTlsParams": {
+                        "type": "boolean",
+                        "description": "Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5."
                     },
                     "eapFastAcceptClientCert": {
                         "type": "boolean",
@@ -13152,6 +13171,10 @@
                     "requireMessageAuth": {
                         "type": "boolean",
                         "description": "Require message authentication"
+                    },
+                    "rsaPss": {
+                        "type": "boolean",
+                        "description": "Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4."
                     },
                     "teapDowngradeMsk": {
                         "type": "boolean",
@@ -16619,6 +16642,146 @@
                 "type": "object"
             }
         },
+        "ise:trustsec/sxpConnection:SxpConnection": {
+            "description": "This resource can manage a SXP Connection.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.SxpConnection(\"example\", {\n    name: \"SXPConnection1\",\n    sxpPeer: \"SXPPeer1\",\n    sxpVpn: \"default\",\n    sxpNode: \"ise1\",\n    ipAddress: \"10.0.0.1\",\n    sxpMode: \"SPEAKER\",\n    sxpVersion: \"VERSION_2\",\n    enabled: true,\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.SxpConnection(\"example\",\n    name=\"SXPConnection1\",\n    sxp_peer=\"SXPPeer1\",\n    sxp_vpn=\"default\",\n    sxp_node=\"ise1\",\n    ip_address=\"10.0.0.1\",\n    sxp_mode=\"SPEAKER\",\n    sxp_version=\"VERSION_2\",\n    enabled=True)\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.SxpConnection(\"example\", new()\n    {\n        Name = \"SXPConnection1\",\n        SxpPeer = \"SXPPeer1\",\n        SxpVpn = \"default\",\n        SxpNode = \"ise1\",\n        IpAddress = \"10.0.0.1\",\n        SxpMode = \"SPEAKER\",\n        SxpVersion = \"VERSION_2\",\n        Enabled = true,\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewSxpConnection(ctx, \"example\", \u0026trustsec.SxpConnectionArgs{\n\t\t\tName:       pulumi.String(\"SXPConnection1\"),\n\t\t\tSxpPeer:    pulumi.String(\"SXPPeer1\"),\n\t\t\tSxpVpn:     pulumi.String(\"default\"),\n\t\t\tSxpNode:    pulumi.String(\"ise1\"),\n\t\t\tIpAddress:  pulumi.String(\"10.0.0.1\"),\n\t\t\tSxpMode:    pulumi.String(\"SPEAKER\"),\n\t\t\tSxpVersion: pulumi.String(\"VERSION_2\"),\n\t\t\tEnabled:    pulumi.Bool(true),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\nresource \"ise_trustsec_sxpconnection\" \"example\" {\n  name        = \"SXPConnection1\"\n  sxp_peer    = \"SXPPeer1\"\n  sxp_vpn     = \"default\"\n  sxp_node    = \"ise1\"\n  ip_address  = \"10.0.0.1\"\n  sxp_mode    = \"SPEAKER\"\n  sxp_version = \"VERSION_2\"\n  enabled     = true\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.SxpConnection;\nimport com.pulumi.ise.trustsec.SxpConnectionArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SxpConnection(\"example\", SxpConnectionArgs.builder()\n            .name(\"SXPConnection1\")\n            .sxpPeer(\"SXPPeer1\")\n            .sxpVpn(\"default\")\n            .sxpNode(\"ise1\")\n            .ipAddress(\"10.0.0.1\")\n            .sxpMode(\"SPEAKER\")\n            .sxpVersion(\"VERSION_2\")\n            .enabled(true)\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:SxpConnection\n    properties:\n      name: SXPConnection1\n      sxpPeer: SXPPeer1\n      sxpVpn: default\n      sxpNode: ise1\n      ipAddress: 10.0.0.1\n      sxpMode: SPEAKER\n      sxpVersion: VERSION_2\n      enabled: true\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/sxpConnection:SxpConnection example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "The description of the SXP connection"
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Enables or disables the SXP connection."
+                },
+                "ipAddress": {
+                    "type": "string",
+                    "description": "The IP address of the SXP peer."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the SXP connection."
+                },
+                "sxpMode": {
+                    "type": "string",
+                    "description": "The SXP connection mode\n  - Choices: `BOTH`, `LISTENER`, `SPEAKER`"
+                },
+                "sxpNode": {
+                    "type": "string",
+                    "description": "The name of the SXP node."
+                },
+                "sxpPeer": {
+                    "type": "string",
+                    "description": "The name of the SXP peer."
+                },
+                "sxpVersion": {
+                    "type": "string",
+                    "description": "The SXP protocol version negotiated with the peer\n  - Choices: `VERSION_1`, `VERSION_2`, `VERSION_3`, `VERSION_4`"
+                },
+                "sxpVpn": {
+                    "type": "string",
+                    "description": "The name of the SXP VPN. Since Cisco ISE 3.0, a comma-separated list of multiple SXP VPN names is supported."
+                }
+            },
+            "required": [
+                "enabled",
+                "ipAddress",
+                "name",
+                "sxpMode",
+                "sxpNode",
+                "sxpPeer",
+                "sxpVersion",
+                "sxpVpn"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "The description of the SXP connection"
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "description": "Enables or disables the SXP connection."
+                },
+                "ipAddress": {
+                    "type": "string",
+                    "description": "The IP address of the SXP peer."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the SXP connection."
+                },
+                "sxpMode": {
+                    "type": "string",
+                    "description": "The SXP connection mode\n  - Choices: `BOTH`, `LISTENER`, `SPEAKER`"
+                },
+                "sxpNode": {
+                    "type": "string",
+                    "description": "The name of the SXP node."
+                },
+                "sxpPeer": {
+                    "type": "string",
+                    "description": "The name of the SXP peer."
+                },
+                "sxpVersion": {
+                    "type": "string",
+                    "description": "The SXP protocol version negotiated with the peer\n  - Choices: `VERSION_1`, `VERSION_2`, `VERSION_3`, `VERSION_4`"
+                },
+                "sxpVpn": {
+                    "type": "string",
+                    "description": "The name of the SXP VPN. Since Cisco ISE 3.0, a comma-separated list of multiple SXP VPN names is supported."
+                }
+            },
+            "requiredInputs": [
+                "enabled",
+                "ipAddress",
+                "sxpMode",
+                "sxpNode",
+                "sxpPeer",
+                "sxpVersion",
+                "sxpVpn"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering SxpConnection resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the SXP connection"
+                    },
+                    "enabled": {
+                        "type": "boolean",
+                        "description": "Enables or disables the SXP connection."
+                    },
+                    "ipAddress": {
+                        "type": "string",
+                        "description": "The IP address of the SXP peer."
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the SXP connection."
+                    },
+                    "sxpMode": {
+                        "type": "string",
+                        "description": "The SXP connection mode\n  - Choices: `BOTH`, `LISTENER`, `SPEAKER`"
+                    },
+                    "sxpNode": {
+                        "type": "string",
+                        "description": "The name of the SXP node."
+                    },
+                    "sxpPeer": {
+                        "type": "string",
+                        "description": "The name of the SXP peer."
+                    },
+                    "sxpVersion": {
+                        "type": "string",
+                        "description": "The SXP protocol version negotiated with the peer\n  - Choices: `VERSION_1`, `VERSION_2`, `VERSION_3`, `VERSION_4`"
+                    },
+                    "sxpVpn": {
+                        "type": "string",
+                        "description": "The name of the SXP VPN. Since Cisco ISE 3.0, a comma-separated list of multiple SXP VPN names is supported."
+                    }
+                },
+                "type": "object"
+            }
+        },
         "ise:trustsec/sxpDomainFilter:SxpDomainFilter": {
             "description": "This resource can manage a SXP Domain Filter.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.SxpDomainFilter(\"example\", {\n    subnet: \"1.0.0.0/24\",\n    vn: \"VN1\",\n    domains: \"default\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.SxpDomainFilter(\"example\",\n    subnet=\"1.0.0.0/24\",\n    vn=\"VN1\",\n    domains=\"default\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.SxpDomainFilter(\"example\", new()\n    {\n        Subnet = \"1.0.0.0/24\",\n        Vn = \"VN1\",\n        Domains = \"default\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewSxpDomainFilter(ctx, \"example\", \u0026trustsec.SxpDomainFilterArgs{\n\t\t\tSubnet:  pulumi.String(\"1.0.0.0/24\"),\n\t\t\tVn:      pulumi.String(\"VN1\"),\n\t\t\tDomains: pulumi.String(\"default\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\nresource \"ise_trustsec_sxpdomainfilter\" \"example\" {\n  subnet  = \"1.0.0.0/24\"\n  vn      = \"VN1\"\n  domains = \"default\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.SxpDomainFilter;\nimport com.pulumi.ise.trustsec.SxpDomainFilterArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SxpDomainFilter(\"example\", SxpDomainFilterArgs.builder()\n            .subnet(\"1.0.0.0/24\")\n            .vn(\"VN1\")\n            .domains(\"default\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:SxpDomainFilter\n    properties:\n      subnet: 1.0.0.0/24\n      vn: VN1\n      domains: default\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/sxpDomainFilter:SxpDomainFilter example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
             "properties": {
@@ -16706,6 +16869,168 @@
                     "vn": {
                         "type": "string",
                         "description": "Virtual Network. At least one of subnet or sgt or vn should be defined\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:trustsec/sxpLocalBinding:SxpLocalBinding": {
+            "description": "This resource can manage a SXP Local Binding.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.SxpLocalBinding(\"example\", {\n    name: \"SXPLocalBinding1\",\n    ipAddressOrHost: \"10.0.0.1\",\n    sgt: \"SGT1234\",\n    sxpVpn: \"default\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.SxpLocalBinding(\"example\",\n    name=\"SXPLocalBinding1\",\n    ip_address_or_host=\"10.0.0.1\",\n    sgt=\"SGT1234\",\n    sxp_vpn=\"default\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.SxpLocalBinding(\"example\", new()\n    {\n        Name = \"SXPLocalBinding1\",\n        IpAddressOrHost = \"10.0.0.1\",\n        Sgt = \"SGT1234\",\n        SxpVpn = \"default\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewSxpLocalBinding(ctx, \"example\", \u0026trustsec.SxpLocalBindingArgs{\n\t\t\tName:            pulumi.String(\"SXPLocalBinding1\"),\n\t\t\tIpAddressOrHost: pulumi.String(\"10.0.0.1\"),\n\t\t\tSgt:             pulumi.String(\"SGT1234\"),\n\t\t\tSxpVpn:          pulumi.String(\"default\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\nresource \"ise_trustsec_sxplocalbinding\" \"example\" {\n  name               = \"SXPLocalBinding1\"\n  ip_address_or_host = \"10.0.0.1\"\n  sgt                = \"SGT1234\"\n  sxp_vpn            = \"default\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.SxpLocalBinding;\nimport com.pulumi.ise.trustsec.SxpLocalBindingArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SxpLocalBinding(\"example\", SxpLocalBindingArgs.builder()\n            .name(\"SXPLocalBinding1\")\n            .ipAddressOrHost(\"10.0.0.1\")\n            .sgt(\"SGT1234\")\n            .sxpVpn(\"default\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:SxpLocalBinding\n    properties:\n      name: SXPLocalBinding1\n      ipAddressOrHost: 10.0.0.1\n      sgt: SGT1234\n      sxpVpn: default\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/sxpLocalBinding:SxpLocalBinding example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "properties": {
+                "bindingName": {
+                    "type": "string",
+                    "description": "The binding name. Deprecated since Cisco ISE 3.0.\n"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the SXP local binding.\n"
+                },
+                "ipAddressOrHost": {
+                    "type": "string",
+                    "description": "The IP address for the static SGT mapping. Hostnames are not supported.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the SXP local binding.\n"
+                },
+                "sgt": {
+                    "type": "string",
+                    "description": "The name of the Security Group (SGT) to map to the IP address. Cisco ISE renders this as `\u003cname\u003e (\u003cdecimal\u003e/\u003chex\u003e)` on read and rejects that form on write, so only the name is kept in state.\n"
+                },
+                "sxpVpn": {
+                    "type": "string",
+                    "description": "Comma-separated list of SXP VPN domains. Since Cisco ISE 3.0, at least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n"
+                },
+                "vns": {
+                    "type": "string",
+                    "description": "Comma-separated list of Virtual Networks. Added in Cisco ISE 3.0. At least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n"
+                }
+            },
+            "required": [
+                "ipAddressOrHost",
+                "name",
+                "sgt"
+            ],
+            "inputProperties": {
+                "bindingName": {
+                    "type": "string",
+                    "description": "The binding name. Deprecated since Cisco ISE 3.0.\n"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the SXP local binding.\n"
+                },
+                "ipAddressOrHost": {
+                    "type": "string",
+                    "description": "The IP address for the static SGT mapping. Hostnames are not supported.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the SXP local binding.\n"
+                },
+                "sgt": {
+                    "type": "string",
+                    "description": "The name of the Security Group (SGT) to map to the IP address. Cisco ISE renders this as `\u003cname\u003e (\u003cdecimal\u003e/\u003chex\u003e)` on read and rejects that form on write, so only the name is kept in state.\n"
+                },
+                "sxpVpn": {
+                    "type": "string",
+                    "description": "Comma-separated list of SXP VPN domains. Since Cisco ISE 3.0, at least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n"
+                },
+                "vns": {
+                    "type": "string",
+                    "description": "Comma-separated list of Virtual Networks. Added in Cisco ISE 3.0. At least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n"
+                }
+            },
+            "requiredInputs": [
+                "ipAddressOrHost",
+                "sgt"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering SxpLocalBinding resources.\n",
+                "properties": {
+                    "bindingName": {
+                        "type": "string",
+                        "description": "The binding name. Deprecated since Cisco ISE 3.0.\n"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the SXP local binding.\n"
+                    },
+                    "ipAddressOrHost": {
+                        "type": "string",
+                        "description": "The IP address for the static SGT mapping. Hostnames are not supported.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the SXP local binding.\n"
+                    },
+                    "sgt": {
+                        "type": "string",
+                        "description": "The name of the Security Group (SGT) to map to the IP address. Cisco ISE renders this as `\u003cname\u003e (\u003cdecimal\u003e/\u003chex\u003e)` on read and rejects that form on write, so only the name is kept in state.\n"
+                    },
+                    "sxpVpn": {
+                        "type": "string",
+                        "description": "Comma-separated list of SXP VPN domains. Since Cisco ISE 3.0, at least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n"
+                    },
+                    "vns": {
+                        "type": "string",
+                        "description": "Comma-separated list of Virtual Networks. Added in Cisco ISE 3.0. At least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ise:trustsec/sxpVpn:SxpVpn": {
+            "description": "This resource can manage a SXP VPN.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = new ise.trustsec.SxpVpn(\"example\", {sxpVpnName: \"sxpvpn1\"});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.SxpVpn(\"example\", sxp_vpn_name=\"sxpvpn1\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Ise.TrustSec.SxpVpn(\"example\", new()\n    {\n        SxpVpnName = \"sxpvpn1\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.NewSxpVpn(ctx, \"example\", \u0026trustsec.SxpVpnArgs{\n\t\t\tSxpVpnName: pulumi.String(\"sxpvpn1\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\nresource \"ise_trustsec_sxpvpn\" \"example\" {\n  sxp_vpn_name = \"sxpvpn1\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.SxpVpn;\nimport com.pulumi.ise.trustsec.SxpVpnArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new SxpVpn(\"example\", SxpVpnArgs.builder()\n            .sxpVpnName(\"sxpvpn1\")\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: ise:trustsec:SxpVpn\n    properties:\n      sxpVpnName: sxpvpn1\n```\n\u003c!--End PulumiCodeChooser --\u003e\n\n## Import\n\nThe `pulumi import` command can be used, for example:\n\n```sh\n$ pulumi import ise:trustsec/sxpVpn:SxpVpn example \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n```\n\n",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "The description of the SXP VPN.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the SXP VPN.\n"
+                },
+                "sxpVpnName": {
+                    "type": "string",
+                    "description": "The name of the SXP VPN domain, for example \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e.\n"
+                }
+            },
+            "required": [
+                "name",
+                "sxpVpnName"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "The description of the SXP VPN.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The name of the SXP VPN.\n"
+                },
+                "sxpVpnName": {
+                    "type": "string",
+                    "description": "The name of the SXP VPN domain, for example \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e.\n"
+                }
+            },
+            "requiredInputs": [
+                "sxpVpnName"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering SxpVpn resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "The description of the SXP VPN.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the SXP VPN.\n"
+                    },
+                    "sxpVpnName": {
+                        "type": "string",
+                        "description": "The name of the SXP VPN domain, for example \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e.\n"
                     }
                 },
                 "type": "object"
@@ -18893,6 +19218,10 @@
                         "description": "Description\n",
                         "type": "string"
                     },
+                    "displayAdditionalTlsParams": {
+                        "description": "Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.\n",
+                        "type": "boolean"
+                    },
                     "eapFastAcceptClientCert": {
                         "description": "Accept client certificates. Is required only if \u003cspan pulumi-lang-nodejs=\"`eapFastUsePacs`\" pulumi-lang-dotnet=\"`EapFastUsePacs`\" pulumi-lang-go=\"`eapFastUsePacs`\" pulumi-lang-python=\"`eap_fast_use_pacs`\" pulumi-lang-yaml=\"`eapFastUsePacs`\" pulumi-lang-java=\"`eapFastUsePacs`\" pulumi-lang-hcl=\"`eap_fast_use_pacs`\"\u003e`eapFastUsePacs`\u003c/span\u003e is \u003cspan pulumi-lang-nodejs=\"`false`\" pulumi-lang-dotnet=\"`False`\" pulumi-lang-go=\"`false`\" pulumi-lang-python=\"`false`\" pulumi-lang-yaml=\"`false`\" pulumi-lang-java=\"`false`\" pulumi-lang-hcl=\"`false`\"\u003e`false`\u003c/span\u003e.\n",
                         "type": "boolean"
@@ -19109,6 +19438,10 @@
                         "description": "Require message authentication\n",
                         "type": "boolean"
                     },
+                    "rsaPss": {
+                        "description": "Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.\n",
+                        "type": "boolean"
+                    },
                     "teapDowngradeMsk": {
                         "description": "Allow downgrade to MSK\n",
                         "type": "boolean"
@@ -19162,6 +19495,7 @@
                     "allowTeap",
                     "allowWeakCiphersForEap",
                     "description",
+                    "displayAdditionalTlsParams",
                     "eapFastAcceptClientCert",
                     "eapFastAllowMachineAuthentication",
                     "eapFastEapGtc",
@@ -19216,6 +19550,7 @@
                     "processHostLookup",
                     "requireCryptobinding",
                     "requireMessageAuth",
+                    "rsaPss",
                     "teapDowngradeMsk",
                     "teapEapAcceptClientCertDuringTunnelEst",
                     "teapEapChaining",
@@ -20937,6 +21272,81 @@
                 "type": "object"
             }
         },
+        "ise:trustsec/getSxpConnection:getSxpConnection": {
+            "description": "This data source can read the SXP Connection.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getSxpConnection({\n    id: \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_sxp_connection(id=\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetSxpConnection.Invoke(new()\n    {\n        Id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupSxpConnection(ctx, \u0026trustsec.LookupSxpConnectionArgs{\n\t\t\tId: pulumi.StringRef(\"76d24097-41c4-4558-a4d0-a8c07ac08470\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\ndata \"ise_trustsec_getsxpconnection\" \"example\" {\n  id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()\n            .id(\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:trustsec:getSxpConnection\n      arguments:\n        id: 76d24097-41c4-4558-a4d0-a8c07ac08470\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getSxpConnection.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the SXP connection.\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getSxpConnection.\n",
+                "properties": {
+                    "description": {
+                        "description": "The description of the SXP connection\n",
+                        "type": "string"
+                    },
+                    "enabled": {
+                        "description": "Enables or disables the SXP connection.\n",
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "ipAddress": {
+                        "description": "The IP address of the SXP peer.\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the SXP connection.\n",
+                        "type": "string"
+                    },
+                    "sxpMode": {
+                        "description": "The SXP connection mode\n",
+                        "type": "string"
+                    },
+                    "sxpNode": {
+                        "description": "The name of the SXP node.\n",
+                        "type": "string"
+                    },
+                    "sxpPeer": {
+                        "description": "The name of the SXP peer.\n",
+                        "type": "string"
+                    },
+                    "sxpVersion": {
+                        "description": "The SXP protocol version negotiated with the peer\n",
+                        "type": "string"
+                    },
+                    "sxpVpn": {
+                        "description": "The name of the SXP VPN. Since Cisco ISE 3.0, a comma-separated list of multiple SXP VPN names is supported.\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "enabled",
+                    "id",
+                    "ipAddress",
+                    "name",
+                    "sxpMode",
+                    "sxpNode",
+                    "sxpPeer",
+                    "sxpVersion",
+                    "sxpVpn"
+                ],
+                "type": "object"
+            }
+        },
         "ise:trustsec/getSxpDomainFilter:getSxpDomainFilter": {
             "description": "This data source can read the SXP Domain Filter.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getSxpDomainFilter({\n    id: \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_sxp_domain_filter(id=\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetSxpDomainFilter.Invoke(new()\n    {\n        Id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupSxpDomainFilter(ctx, \u0026trustsec.LookupSxpDomainFilterArgs{\n\t\t\tId: pulumi.StringRef(\"76d24097-41c4-4558-a4d0-a8c07ac08470\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\ndata \"ise_trustsec_getsxpdomainfilter\" \"example\" {\n  id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getSxpDomainFilter(GetSxpDomainFilterArgs.builder()\n            .id(\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:trustsec:getSxpDomainFilter\n      arguments:\n        id: 76d24097-41c4-4558-a4d0-a8c07ac08470\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "inputs": {
@@ -20993,6 +21403,116 @@
                     "sgt",
                     "subnet",
                     "vn"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:trustsec/getSxpLocalBinding:getSxpLocalBinding": {
+            "description": "This data source can read the SXP Local Binding.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getSxpLocalBinding({\n    id: \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_sxp_local_binding(id=\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetSxpLocalBinding.Invoke(new()\n    {\n        Id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupSxpLocalBinding(ctx, \u0026trustsec.LookupSxpLocalBindingArgs{\n\t\t\tId: pulumi.StringRef(\"76d24097-41c4-4558-a4d0-a8c07ac08470\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\ndata \"ise_trustsec_getsxplocalbinding\" \"example\" {\n  id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()\n            .id(\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:trustsec:getSxpLocalBinding\n      arguments:\n        id: 76d24097-41c4-4558-a4d0-a8c07ac08470\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getSxpLocalBinding.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the SXP local binding.\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getSxpLocalBinding.\n",
+                "properties": {
+                    "bindingName": {
+                        "description": "The binding name. Deprecated since Cisco ISE 3.0.\n",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "The description of the SXP local binding.\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "ipAddressOrHost": {
+                        "description": "The IP address for the static SGT mapping. Hostnames are not supported.\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the SXP local binding.\n",
+                        "type": "string"
+                    },
+                    "sgt": {
+                        "description": "The name of the Security Group (SGT) to map to the IP address. Cisco ISE renders this as `\u003cname\u003e (\u003cdecimal\u003e/\u003chex\u003e)` on read and rejects that form on write, so only the name is kept in state.\n",
+                        "type": "string"
+                    },
+                    "sxpVpn": {
+                        "description": "Comma-separated list of SXP VPN domains. Since Cisco ISE 3.0, at least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n",
+                        "type": "string"
+                    },
+                    "vns": {
+                        "description": "Comma-separated list of Virtual Networks. Added in Cisco ISE 3.0. At least one of \u003cspan pulumi-lang-nodejs=\"`sxpVpn`\" pulumi-lang-dotnet=\"`SxpVpn`\" pulumi-lang-go=\"`sxpVpn`\" pulumi-lang-python=\"`sxp_vpn`\" pulumi-lang-yaml=\"`sxpVpn`\" pulumi-lang-java=\"`sxpVpn`\" pulumi-lang-hcl=\"`sxp_vpn`\"\u003e`sxpVpn`\u003c/span\u003e or \u003cspan pulumi-lang-nodejs=\"`vns`\" pulumi-lang-dotnet=\"`Vns`\" pulumi-lang-go=\"`vns`\" pulumi-lang-python=\"`vns`\" pulumi-lang-yaml=\"`vns`\" pulumi-lang-java=\"`vns`\" pulumi-lang-hcl=\"`vns`\"\u003e`vns`\u003c/span\u003e must be defined.\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "bindingName",
+                    "description",
+                    "id",
+                    "ipAddressOrHost",
+                    "name",
+                    "sgt",
+                    "sxpVpn",
+                    "vns"
+                ],
+                "type": "object"
+            }
+        },
+        "ise:trustsec/getSxpVpn:getSxpVpn": {
+            "description": "This data source can read the SXP VPN.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as ise from \"@pulumi/ise\";\n\nconst example = ise.trustsec.getSxpVpn({\n    id: \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n});\n```\n```python\nimport pulumi\nimport pulumi_ise as ise\n\nexample = ise.trustsec.get_sxp_vpn(id=\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Ise = Pulumi.Ise;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Ise.TrustSec.GetSxpVpn.Invoke(new()\n    {\n        Id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-ise/sdk/go/ise/trustsec\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := trustsec.LookupSxpVpn(ctx, \u0026trustsec.LookupSxpVpnArgs{\n\t\t\tId: pulumi.StringRef(\"76d24097-41c4-4558-a4d0-a8c07ac08470\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```hcl\npulumi {\n  required_providers {\n    ise = {\n      source = \"pulumi/ise\"\n    }\n  }\n}\n\ndata \"ise_trustsec_getsxpvpn\" \"example\" {\n  id = \"76d24097-41c4-4558-a4d0-a8c07ac08470\"\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.ise.trustsec.TrustsecFunctions;\nimport com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()\n            .id(\"76d24097-41c4-4558-a4d0-a8c07ac08470\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: ise:trustsec:getSxpVpn\n      arguments:\n        id: 76d24097-41c4-4558-a4d0-a8c07ac08470\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getSxpVpn.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the object\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the SXP VPN.\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getSxpVpn.\n",
+                "properties": {
+                    "description": {
+                        "description": "The description of the SXP VPN.\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The id of the object\n",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the SXP VPN.\n",
+                        "type": "string"
+                    },
+                    "sxpVpnName": {
+                        "description": "The name of the SXP VPN domain, for example \u003cspan pulumi-lang-nodejs=\"`default`\" pulumi-lang-dotnet=\"`Default`\" pulumi-lang-go=\"`default`\" pulumi-lang-python=\"`default`\" pulumi-lang-yaml=\"`default`\" pulumi-lang-java=\"`default`\" pulumi-lang-hcl=\"`default`\"\u003e`default`\u003c/span\u003e.\n",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "id",
+                    "name",
+                    "sxpVpnName"
                 ],
                 "type": "object"
             }
