@@ -16,11 +16,17 @@ from .get_ip_to_sgt_mapping_group import *
 from .get_matrix import *
 from .get_security_group import *
 from .get_security_group_acl import *
+from .get_sxp_connection import *
 from .get_sxp_domain_filter import *
+from .get_sxp_local_binding import *
+from .get_sxp_vpn import *
 from .ip_to_sgt_mapping import *
 from .ip_to_sgt_mapping_group import *
 from .matrix import *
 from .security_group import *
 from .security_group_acl import *
+from .sxp_connection import *
 from .sxp_domain_filter import *
+from .sxp_local_binding import *
+from .sxp_vpn import *
 from .work_process_settings import *

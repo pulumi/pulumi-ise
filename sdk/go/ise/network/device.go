@@ -119,8 +119,7 @@ type Device struct {
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret pulumi.StringPtrOutput `pulumi:"authenticationSecondRadiusSharedSecret"`
 	// CoA port
-	//   - Default value: `1700`
-	CoaPort pulumi.IntOutput `pulumi:"coaPort"`
+	CoaPort pulumi.IntPtrOutput `pulumi:"coaPort"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
@@ -148,7 +147,7 @@ type Device struct {
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode pulumi.StringPtrOutput `pulumi:"snmpOriginatingPolicyServiceNode"`
 	// SNMP Polling Interval in seconds
-	//   - Range: `600`-`86400`
+	//   - Range: `0` (disabled) or `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrOutput `pulumi:"snmpPollingInterval"`
 	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 	SnmpPrivacyPassword pulumi.StringPtrOutput `pulumi:"snmpPrivacyPassword"`
@@ -261,7 +260,6 @@ type deviceState struct {
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret *string `pulumi:"authenticationSecondRadiusSharedSecret"`
 	// CoA port
-	//   - Default value: `1700`
 	CoaPort *int `pulumi:"coaPort"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -290,7 +288,7 @@ type deviceState struct {
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode *string `pulumi:"snmpOriginatingPolicyServiceNode"`
 	// SNMP Polling Interval in seconds
-	//   - Range: `600`-`86400`
+	//   - Range: `0` (disabled) or `600`-`86400`
 	SnmpPollingInterval *int `pulumi:"snmpPollingInterval"`
 	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 	SnmpPrivacyPassword *string `pulumi:"snmpPrivacyPassword"`
@@ -371,7 +369,6 @@ type DeviceState struct {
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret pulumi.StringPtrInput
 	// CoA port
-	//   - Default value: `1700`
 	CoaPort pulumi.IntPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -400,7 +397,7 @@ type DeviceState struct {
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode pulumi.StringPtrInput
 	// SNMP Polling Interval in seconds
-	//   - Range: `600`-`86400`
+	//   - Range: `0` (disabled) or `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrInput
 	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 	SnmpPrivacyPassword pulumi.StringPtrInput
@@ -485,7 +482,6 @@ type deviceArgs struct {
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret *string `pulumi:"authenticationSecondRadiusSharedSecret"`
 	// CoA port
-	//   - Default value: `1700`
 	CoaPort *int `pulumi:"coaPort"`
 	// Description
 	Description *string `pulumi:"description"`
@@ -514,7 +510,7 @@ type deviceArgs struct {
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode *string `pulumi:"snmpOriginatingPolicyServiceNode"`
 	// SNMP Polling Interval in seconds
-	//   - Range: `600`-`86400`
+	//   - Range: `0` (disabled) or `600`-`86400`
 	SnmpPollingInterval *int `pulumi:"snmpPollingInterval"`
 	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 	SnmpPrivacyPassword *string `pulumi:"snmpPrivacyPassword"`
@@ -596,7 +592,6 @@ type DeviceArgs struct {
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret pulumi.StringPtrInput
 	// CoA port
-	//   - Default value: `1700`
 	CoaPort pulumi.IntPtrInput
 	// Description
 	Description pulumi.StringPtrInput
@@ -625,7 +620,7 @@ type DeviceArgs struct {
 	// Originating Policy Services Node
 	SnmpOriginatingPolicyServiceNode pulumi.StringPtrInput
 	// SNMP Polling Interval in seconds
-	//   - Range: `600`-`86400`
+	//   - Range: `0` (disabled) or `600`-`86400`
 	SnmpPollingInterval pulumi.IntPtrInput
 	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 	SnmpPrivacyPassword pulumi.StringPtrInput
@@ -819,9 +814,8 @@ func (o DeviceOutput) AuthenticationSecondRadiusSharedSecret() pulumi.StringPtrO
 }
 
 // CoA port
-//   - Default value: `1700`
-func (o DeviceOutput) CoaPort() pulumi.IntOutput {
-	return o.ApplyT(func(v *Device) pulumi.IntOutput { return v.CoaPort }).(pulumi.IntOutput)
+func (o DeviceOutput) CoaPort() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *Device) pulumi.IntPtrOutput { return v.CoaPort }).(pulumi.IntPtrOutput)
 }
 
 // Description
@@ -887,7 +881,7 @@ func (o DeviceOutput) SnmpOriginatingPolicyServiceNode() pulumi.StringPtrOutput 
 }
 
 // SNMP Polling Interval in seconds
-//   - Range: `600`-`86400`
+//   - Range: `0` (disabled) or `600`-`86400`
 func (o DeviceOutput) SnmpPollingInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Device) pulumi.IntPtrOutput { return v.SnmpPollingInterval }).(pulumi.IntPtrOutput)
 }

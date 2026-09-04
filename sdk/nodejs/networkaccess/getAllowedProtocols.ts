@@ -106,6 +106,10 @@ export interface GetAllowedProtocolsResult {
      */
     readonly description: string;
     /**
+     * Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     */
+    readonly displayAdditionalTlsParams: boolean;
+    /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
     readonly eapFastAcceptClientCert: boolean;
@@ -321,6 +325,10 @@ export interface GetAllowedProtocolsResult {
      * Require message authentication
      */
     readonly requireMessageAuth: boolean;
+    /**
+     * Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     */
+    readonly rsaPss: boolean;
     /**
      * Allow downgrade to MSK
      */

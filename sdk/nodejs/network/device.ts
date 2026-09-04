@@ -142,9 +142,8 @@ export class Device extends pulumi.CustomResource {
     declare public readonly authenticationSecondRadiusSharedSecret: pulumi.Output<string | undefined>;
     /**
      * CoA port
-     *   - Default value: `1700`
      */
-    declare public readonly coaPort: pulumi.Output<number>;
+    declare public readonly coaPort: pulumi.Output<number | undefined>;
     /**
      * Description
      */
@@ -197,7 +196,7 @@ export class Device extends pulumi.CustomResource {
     declare public readonly snmpOriginatingPolicyServiceNode: pulumi.Output<string | undefined>;
     /**
      * SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      */
     declare public readonly snmpPollingInterval: pulumi.Output<number | undefined>;
     /**
@@ -470,7 +469,6 @@ export interface DeviceState {
     authenticationSecondRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * CoA port
-     *   - Default value: `1700`
      */
     coaPort?: pulumi.Input<number | undefined>;
     /**
@@ -525,7 +523,7 @@ export interface DeviceState {
     snmpOriginatingPolicyServiceNode?: pulumi.Input<string | undefined>;
     /**
      * SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      */
     snmpPollingInterval?: pulumi.Input<number | undefined>;
     /**
@@ -679,7 +677,6 @@ export interface DeviceArgs {
     authenticationSecondRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
      * CoA port
-     *   - Default value: `1700`
      */
     coaPort?: pulumi.Input<number | undefined>;
     /**
@@ -734,7 +731,7 @@ export interface DeviceArgs {
     snmpOriginatingPolicyServiceNode?: pulumi.Input<string | undefined>;
     /**
      * SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      */
     snmpPollingInterval?: pulumi.Input<number | undefined>;
     /**

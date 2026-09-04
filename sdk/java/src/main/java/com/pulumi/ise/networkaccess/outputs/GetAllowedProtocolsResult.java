@@ -88,6 +88,11 @@ public final class GetAllowedProtocolsResult {
      */
     private String description;
     /**
+     * @return Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     * 
+     */
+    private Boolean displayAdditionalTlsParams;
+    /**
      * @return Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
@@ -358,6 +363,11 @@ public final class GetAllowedProtocolsResult {
      */
     private Boolean requireMessageAuth;
     /**
+     * @return Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     * 
+     */
+    private Boolean rsaPss;
+    /**
      * @return Allow downgrade to MSK
      * 
      */
@@ -508,6 +518,13 @@ public final class GetAllowedProtocolsResult {
      */
     public String description() {
         return this.description;
+    }
+    /**
+     * @return Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     * 
+     */
+    public Boolean displayAdditionalTlsParams() {
+        return this.displayAdditionalTlsParams;
     }
     /**
      * @return Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
@@ -888,6 +905,13 @@ public final class GetAllowedProtocolsResult {
         return this.requireMessageAuth;
     }
     /**
+     * @return Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     * 
+     */
+    public Boolean rsaPss() {
+        return this.rsaPss;
+    }
+    /**
      * @return Allow downgrade to MSK
      * 
      */
@@ -975,6 +999,7 @@ public final class GetAllowedProtocolsResult {
         private Boolean allowTeap;
         private Boolean allowWeakCiphersForEap;
         private String description;
+        private Boolean displayAdditionalTlsParams;
         private Boolean eapFastAcceptClientCert;
         private Boolean eapFastAllowMachineAuthentication;
         private Boolean eapFastEapGtc;
@@ -1029,6 +1054,7 @@ public final class GetAllowedProtocolsResult {
         private Boolean processHostLookup;
         private Boolean requireCryptobinding;
         private Boolean requireMessageAuth;
+        private Boolean rsaPss;
         private Boolean teapDowngradeMsk;
         private Boolean teapEapAcceptClientCertDuringTunnelEst;
         private Boolean teapEapChaining;
@@ -1056,6 +1082,7 @@ public final class GetAllowedProtocolsResult {
     	      this.allowTeap = defaults.allowTeap;
     	      this.allowWeakCiphersForEap = defaults.allowWeakCiphersForEap;
     	      this.description = defaults.description;
+    	      this.displayAdditionalTlsParams = defaults.displayAdditionalTlsParams;
     	      this.eapFastAcceptClientCert = defaults.eapFastAcceptClientCert;
     	      this.eapFastAllowMachineAuthentication = defaults.eapFastAllowMachineAuthentication;
     	      this.eapFastEapGtc = defaults.eapFastEapGtc;
@@ -1110,6 +1137,7 @@ public final class GetAllowedProtocolsResult {
     	      this.processHostLookup = defaults.processHostLookup;
     	      this.requireCryptobinding = defaults.requireCryptobinding;
     	      this.requireMessageAuth = defaults.requireMessageAuth;
+    	      this.rsaPss = defaults.rsaPss;
     	      this.teapDowngradeMsk = defaults.teapDowngradeMsk;
     	      this.teapEapAcceptClientCertDuringTunnelEst = defaults.teapEapAcceptClientCertDuringTunnelEst;
     	      this.teapEapChaining = defaults.teapEapChaining;
@@ -1239,6 +1267,14 @@ public final class GetAllowedProtocolsResult {
               throw new MissingRequiredPropertyException("GetAllowedProtocolsResult", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder displayAdditionalTlsParams(Boolean displayAdditionalTlsParams) {
+            if (displayAdditionalTlsParams == null) {
+              throw new MissingRequiredPropertyException("GetAllowedProtocolsResult", "displayAdditionalTlsParams");
+            }
+            this.displayAdditionalTlsParams = displayAdditionalTlsParams;
             return this;
         }
         @CustomType.Setter
@@ -1674,6 +1710,14 @@ public final class GetAllowedProtocolsResult {
             return this;
         }
         @CustomType.Setter
+        public Builder rsaPss(Boolean rsaPss) {
+            if (rsaPss == null) {
+              throw new MissingRequiredPropertyException("GetAllowedProtocolsResult", "rsaPss");
+            }
+            this.rsaPss = rsaPss;
+            return this;
+        }
+        @CustomType.Setter
         public Builder teapDowngradeMsk(Boolean teapDowngradeMsk) {
             if (teapDowngradeMsk == null) {
               throw new MissingRequiredPropertyException("GetAllowedProtocolsResult", "teapDowngradeMsk");
@@ -1762,6 +1806,7 @@ public final class GetAllowedProtocolsResult {
             _resultValue.allowTeap = allowTeap;
             _resultValue.allowWeakCiphersForEap = allowWeakCiphersForEap;
             _resultValue.description = description;
+            _resultValue.displayAdditionalTlsParams = displayAdditionalTlsParams;
             _resultValue.eapFastAcceptClientCert = eapFastAcceptClientCert;
             _resultValue.eapFastAllowMachineAuthentication = eapFastAllowMachineAuthentication;
             _resultValue.eapFastEapGtc = eapFastEapGtc;
@@ -1816,6 +1861,7 @@ public final class GetAllowedProtocolsResult {
             _resultValue.processHostLookup = processHostLookup;
             _resultValue.requireCryptobinding = requireCryptobinding;
             _resultValue.requireMessageAuth = requireMessageAuth;
+            _resultValue.rsaPss = rsaPss;
             _resultValue.teapDowngradeMsk = teapDowngradeMsk;
             _resultValue.teapEapAcceptClientCertDuringTunnelEst = teapEapAcceptClientCertDuringTunnelEst;
             _resultValue.teapEapChaining = teapEapChaining;

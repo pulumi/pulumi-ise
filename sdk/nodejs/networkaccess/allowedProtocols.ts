@@ -189,6 +189,10 @@ export class AllowedProtocols extends pulumi.CustomResource {
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
+     * Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     */
+    declare public readonly displayAdditionalTlsParams: pulumi.Output<boolean | undefined>;
+    /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
     declare public readonly eapFastAcceptClientCert: pulumi.Output<boolean | undefined>;
@@ -413,6 +417,10 @@ export class AllowedProtocols extends pulumi.CustomResource {
      */
     declare public readonly requireMessageAuth: pulumi.Output<boolean>;
     /**
+     * Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     */
+    declare public readonly rsaPss: pulumi.Output<boolean | undefined>;
+    /**
      * Allow downgrade to MSK
      */
     declare public readonly teapDowngradeMsk: pulumi.Output<boolean | undefined>;
@@ -478,6 +486,7 @@ export class AllowedProtocols extends pulumi.CustomResource {
             resourceInputs["allowTeap"] = state?.allowTeap;
             resourceInputs["allowWeakCiphersForEap"] = state?.allowWeakCiphersForEap;
             resourceInputs["description"] = state?.description;
+            resourceInputs["displayAdditionalTlsParams"] = state?.displayAdditionalTlsParams;
             resourceInputs["eapFastAcceptClientCert"] = state?.eapFastAcceptClientCert;
             resourceInputs["eapFastAllowMachineAuthentication"] = state?.eapFastAllowMachineAuthentication;
             resourceInputs["eapFastEapGtc"] = state?.eapFastEapGtc;
@@ -531,6 +540,7 @@ export class AllowedProtocols extends pulumi.CustomResource {
             resourceInputs["processHostLookup"] = state?.processHostLookup;
             resourceInputs["requireCryptobinding"] = state?.requireCryptobinding;
             resourceInputs["requireMessageAuth"] = state?.requireMessageAuth;
+            resourceInputs["rsaPss"] = state?.rsaPss;
             resourceInputs["teapDowngradeMsk"] = state?.teapDowngradeMsk;
             resourceInputs["teapEapAcceptClientCertDuringTunnelEst"] = state?.teapEapAcceptClientCertDuringTunnelEst;
             resourceInputs["teapEapChaining"] = state?.teapEapChaining;
@@ -605,6 +615,7 @@ export class AllowedProtocols extends pulumi.CustomResource {
             resourceInputs["allowTeap"] = args?.allowTeap;
             resourceInputs["allowWeakCiphersForEap"] = args?.allowWeakCiphersForEap;
             resourceInputs["description"] = args?.description;
+            resourceInputs["displayAdditionalTlsParams"] = args?.displayAdditionalTlsParams;
             resourceInputs["eapFastAcceptClientCert"] = args?.eapFastAcceptClientCert;
             resourceInputs["eapFastAllowMachineAuthentication"] = args?.eapFastAllowMachineAuthentication;
             resourceInputs["eapFastEapGtc"] = args?.eapFastEapGtc;
@@ -658,6 +669,7 @@ export class AllowedProtocols extends pulumi.CustomResource {
             resourceInputs["processHostLookup"] = args?.processHostLookup;
             resourceInputs["requireCryptobinding"] = args?.requireCryptobinding;
             resourceInputs["requireMessageAuth"] = args?.requireMessageAuth;
+            resourceInputs["rsaPss"] = args?.rsaPss;
             resourceInputs["teapDowngradeMsk"] = args?.teapDowngradeMsk;
             resourceInputs["teapEapAcceptClientCertDuringTunnelEst"] = args?.teapEapAcceptClientCertDuringTunnelEst;
             resourceInputs["teapEapChaining"] = args?.teapEapChaining;
@@ -737,6 +749,10 @@ export interface AllowedProtocolsState {
      * Description
      */
     description?: pulumi.Input<string | undefined>;
+    /**
+     * Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     */
+    displayAdditionalTlsParams?: pulumi.Input<boolean | undefined>;
     /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
@@ -962,6 +978,10 @@ export interface AllowedProtocolsState {
      */
     requireMessageAuth?: pulumi.Input<boolean | undefined>;
     /**
+     * Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     */
+    rsaPss?: pulumi.Input<boolean | undefined>;
+    /**
      * Allow downgrade to MSK
      */
     teapDowngradeMsk?: pulumi.Input<boolean | undefined>;
@@ -1064,6 +1084,10 @@ export interface AllowedProtocolsArgs {
      * Description
      */
     description?: pulumi.Input<string | undefined>;
+    /**
+     * Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     */
+    displayAdditionalTlsParams?: pulumi.Input<boolean | undefined>;
     /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      */
@@ -1288,6 +1312,10 @@ export interface AllowedProtocolsArgs {
      * Require message authentication
      */
     requireMessageAuth: pulumi.Input<boolean>;
+    /**
+     * Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     */
+    rsaPss?: pulumi.Input<boolean | undefined>;
     /**
      * Allow downgrade to MSK
      */

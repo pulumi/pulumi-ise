@@ -244,19 +244,17 @@ public class Device extends com.pulumi.resources.CustomResource {
     }
     /**
      * CoA port
-     *   - Default value: `1700`
      * 
      */
     @Export(name="coaPort", refs={Integer.class}, tree="[0]")
-    private Output<Integer> coaPort;
+    private Output</* @Nullable */ Integer> coaPort;
 
     /**
      * @return CoA port
-     *   - Default value: `1700`
      * 
      */
-    public Output<Integer> coaPort() {
-        return this.coaPort;
+    public Output<Optional<Integer>> coaPort() {
+        return Codegen.optional(this.coaPort);
     }
     /**
      * Description
@@ -432,7 +430,7 @@ public class Device extends com.pulumi.resources.CustomResource {
     }
     /**
      * SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      * 
      */
     @Export(name="snmpPollingInterval", refs={Integer.class}, tree="[0]")
@@ -440,7 +438,7 @@ public class Device extends com.pulumi.resources.CustomResource {
 
     /**
      * @return SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      * 
      */
     public Output<Optional<Integer>> snmpPollingInterval() {

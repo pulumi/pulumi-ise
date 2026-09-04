@@ -26,7 +26,7 @@ class GetAllowedProtocolsResult:
     """
     A collection of values returned by getAllowedProtocols.
     """
-    def __init__(__self__, allow5g=None, allow_chap=None, allow_eap_fast=None, allow_eap_md5=None, allow_eap_tls=None, allow_eap_ttls=None, allow_leap=None, allow_ms_chap_v1=None, allow_ms_chap_v2=None, allow_pap_ascii=None, allow_peap=None, allow_preferred_eap_protocol=None, allow_teap=None, allow_weak_ciphers_for_eap=None, description=None, eap_fast_accept_client_cert=None, eap_fast_allow_machine_authentication=None, eap_fast_eap_gtc=None, eap_fast_eap_gtc_pwd_change=None, eap_fast_eap_gtc_pwd_change_retries=None, eap_fast_eap_ms_chap_v2=None, eap_fast_eap_ms_chap_v2_pwd_change=None, eap_fast_eap_ms_chap_v2_pwd_change_retries=None, eap_fast_eap_tls=None, eap_fast_eap_tls_auth_of_expired_certs=None, eap_fast_enable_eap_chaining=None, eap_fast_pacs_allow_anonymous_provisioning=None, eap_fast_pacs_allow_authenticated_provisioning=None, eap_fast_pacs_allow_client_cert=None, eap_fast_pacs_allow_machine_authentication=None, eap_fast_pacs_authorization_pac_ttl=None, eap_fast_pacs_authorization_pac_ttl_unit=None, eap_fast_pacs_machine_pac_ttl=None, eap_fast_pacs_machine_pac_ttl_unit=None, eap_fast_pacs_server_returns=None, eap_fast_pacs_stateless_session_resume=None, eap_fast_pacs_tunnel_pac_ttl=None, eap_fast_pacs_tunnel_pac_ttl_unit=None, eap_fast_pacs_use_proactive_pac_update_percentage=None, eap_fast_use_pacs=None, eap_tls_allow_auth_of_expired_certs=None, eap_tls_enable_stateless_session_resume=None, eap_tls_l_bit=None, eap_tls_session_ticket_percentage=None, eap_tls_session_ticket_ttl=None, eap_tls_session_ticket_ttl_unit=None, eap_ttls_chap=None, eap_ttls_eap_md5=None, eap_ttls_eap_ms_chap_v2=None, eap_ttls_eap_ms_chap_v2_pwd_change=None, eap_ttls_eap_ms_chap_v2_pwd_change_retries=None, eap_ttls_ms_chap_v1=None, eap_ttls_ms_chap_v2=None, eap_ttls_pap_ascii=None, id=None, name=None, peap_allow_peap_eap_gtc=None, peap_allow_peap_eap_gtc_pwd_change=None, peap_allow_peap_eap_gtc_pwd_change_retries=None, peap_allow_peap_eap_ms_chap_v2=None, peap_allow_peap_eap_ms_chap_v2_pwd_change=None, peap_allow_peap_eap_ms_chap_v2_pwd_change_retries=None, peap_allow_peap_eap_tls=None, peap_allow_peap_eap_tls_auth_of_expired_certs=None, peap_peap_v0=None, preferred_eap_protocol=None, process_host_lookup=None, require_cryptobinding=None, require_message_auth=None, teap_downgrade_msk=None, teap_eap_accept_client_cert_during_tunnel_est=None, teap_eap_chaining=None, teap_eap_ms_chap_v2=None, teap_eap_ms_chap_v2_pwd_change=None, teap_eap_ms_chap_v2_pwd_change_retries=None, teap_eap_tls=None, teap_eap_tls_auth_of_expired_certs=None, teap_request_basic_pwd_auth=None):
+    def __init__(__self__, allow5g=None, allow_chap=None, allow_eap_fast=None, allow_eap_md5=None, allow_eap_tls=None, allow_eap_ttls=None, allow_leap=None, allow_ms_chap_v1=None, allow_ms_chap_v2=None, allow_pap_ascii=None, allow_peap=None, allow_preferred_eap_protocol=None, allow_teap=None, allow_weak_ciphers_for_eap=None, description=None, display_additional_tls_params=None, eap_fast_accept_client_cert=None, eap_fast_allow_machine_authentication=None, eap_fast_eap_gtc=None, eap_fast_eap_gtc_pwd_change=None, eap_fast_eap_gtc_pwd_change_retries=None, eap_fast_eap_ms_chap_v2=None, eap_fast_eap_ms_chap_v2_pwd_change=None, eap_fast_eap_ms_chap_v2_pwd_change_retries=None, eap_fast_eap_tls=None, eap_fast_eap_tls_auth_of_expired_certs=None, eap_fast_enable_eap_chaining=None, eap_fast_pacs_allow_anonymous_provisioning=None, eap_fast_pacs_allow_authenticated_provisioning=None, eap_fast_pacs_allow_client_cert=None, eap_fast_pacs_allow_machine_authentication=None, eap_fast_pacs_authorization_pac_ttl=None, eap_fast_pacs_authorization_pac_ttl_unit=None, eap_fast_pacs_machine_pac_ttl=None, eap_fast_pacs_machine_pac_ttl_unit=None, eap_fast_pacs_server_returns=None, eap_fast_pacs_stateless_session_resume=None, eap_fast_pacs_tunnel_pac_ttl=None, eap_fast_pacs_tunnel_pac_ttl_unit=None, eap_fast_pacs_use_proactive_pac_update_percentage=None, eap_fast_use_pacs=None, eap_tls_allow_auth_of_expired_certs=None, eap_tls_enable_stateless_session_resume=None, eap_tls_l_bit=None, eap_tls_session_ticket_percentage=None, eap_tls_session_ticket_ttl=None, eap_tls_session_ticket_ttl_unit=None, eap_ttls_chap=None, eap_ttls_eap_md5=None, eap_ttls_eap_ms_chap_v2=None, eap_ttls_eap_ms_chap_v2_pwd_change=None, eap_ttls_eap_ms_chap_v2_pwd_change_retries=None, eap_ttls_ms_chap_v1=None, eap_ttls_ms_chap_v2=None, eap_ttls_pap_ascii=None, id=None, name=None, peap_allow_peap_eap_gtc=None, peap_allow_peap_eap_gtc_pwd_change=None, peap_allow_peap_eap_gtc_pwd_change_retries=None, peap_allow_peap_eap_ms_chap_v2=None, peap_allow_peap_eap_ms_chap_v2_pwd_change=None, peap_allow_peap_eap_ms_chap_v2_pwd_change_retries=None, peap_allow_peap_eap_tls=None, peap_allow_peap_eap_tls_auth_of_expired_certs=None, peap_peap_v0=None, preferred_eap_protocol=None, process_host_lookup=None, require_cryptobinding=None, require_message_auth=None, rsa_pss=None, teap_downgrade_msk=None, teap_eap_accept_client_cert_during_tunnel_est=None, teap_eap_chaining=None, teap_eap_ms_chap_v2=None, teap_eap_ms_chap_v2_pwd_change=None, teap_eap_ms_chap_v2_pwd_change_retries=None, teap_eap_tls=None, teap_eap_tls_auth_of_expired_certs=None, teap_request_basic_pwd_auth=None):
         if allow5g and not isinstance(allow5g, bool):
             raise TypeError("Expected argument 'allow5g' to be a bool")
         pulumi.set(__self__, "allow5g", allow5g)
@@ -72,6 +72,9 @@ class GetAllowedProtocolsResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if display_additional_tls_params and not isinstance(display_additional_tls_params, bool):
+            raise TypeError("Expected argument 'display_additional_tls_params' to be a bool")
+        pulumi.set(__self__, "display_additional_tls_params", display_additional_tls_params)
         if eap_fast_accept_client_cert and not isinstance(eap_fast_accept_client_cert, bool):
             raise TypeError("Expected argument 'eap_fast_accept_client_cert' to be a bool")
         pulumi.set(__self__, "eap_fast_accept_client_cert", eap_fast_accept_client_cert)
@@ -234,6 +237,9 @@ class GetAllowedProtocolsResult:
         if require_message_auth and not isinstance(require_message_auth, bool):
             raise TypeError("Expected argument 'require_message_auth' to be a bool")
         pulumi.set(__self__, "require_message_auth", require_message_auth)
+        if rsa_pss and not isinstance(rsa_pss, bool):
+            raise TypeError("Expected argument 'rsa_pss' to be a bool")
+        pulumi.set(__self__, "rsa_pss", rsa_pss)
         if teap_downgrade_msk and not isinstance(teap_downgrade_msk, bool):
             raise TypeError("Expected argument 'teap_downgrade_msk' to be a bool")
         pulumi.set(__self__, "teap_downgrade_msk", teap_downgrade_msk)
@@ -381,6 +387,14 @@ class GetAllowedProtocolsResult:
         Description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="displayAdditionalTlsParams")
+    def display_additional_tls_params(self) -> _builtins.bool:
+        """
+        Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        """
+        return pulumi.get(self, "display_additional_tls_params")
 
     @_builtins.property
     @pulumi.getter(name="eapFastAcceptClientCert")
@@ -815,6 +829,14 @@ class GetAllowedProtocolsResult:
         return pulumi.get(self, "require_message_auth")
 
     @_builtins.property
+    @pulumi.getter(name="rsaPss")
+    def rsa_pss(self) -> _builtins.bool:
+        """
+        Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        """
+        return pulumi.get(self, "rsa_pss")
+
+    @_builtins.property
     @pulumi.getter(name="teapDowngradeMsk")
     def teap_downgrade_msk(self) -> _builtins.bool:
         """
@@ -908,6 +930,7 @@ class AwaitableGetAllowedProtocolsResult(GetAllowedProtocolsResult):
             allow_teap=self.allow_teap,
             allow_weak_ciphers_for_eap=self.allow_weak_ciphers_for_eap,
             description=self.description,
+            display_additional_tls_params=self.display_additional_tls_params,
             eap_fast_accept_client_cert=self.eap_fast_accept_client_cert,
             eap_fast_allow_machine_authentication=self.eap_fast_allow_machine_authentication,
             eap_fast_eap_gtc=self.eap_fast_eap_gtc,
@@ -962,6 +985,7 @@ class AwaitableGetAllowedProtocolsResult(GetAllowedProtocolsResult):
             process_host_lookup=self.process_host_lookup,
             require_cryptobinding=self.require_cryptobinding,
             require_message_auth=self.require_message_auth,
+            rsa_pss=self.rsa_pss,
             teap_downgrade_msk=self.teap_downgrade_msk,
             teap_eap_accept_client_cert_during_tunnel_est=self.teap_eap_accept_client_cert_during_tunnel_est,
             teap_eap_chaining=self.teap_eap_chaining,
@@ -1014,6 +1038,7 @@ def get_allowed_protocols(id: Optional[_builtins.str] = None,
         allow_teap=pulumi.get(__ret__, 'allow_teap'),
         allow_weak_ciphers_for_eap=pulumi.get(__ret__, 'allow_weak_ciphers_for_eap'),
         description=pulumi.get(__ret__, 'description'),
+        display_additional_tls_params=pulumi.get(__ret__, 'display_additional_tls_params'),
         eap_fast_accept_client_cert=pulumi.get(__ret__, 'eap_fast_accept_client_cert'),
         eap_fast_allow_machine_authentication=pulumi.get(__ret__, 'eap_fast_allow_machine_authentication'),
         eap_fast_eap_gtc=pulumi.get(__ret__, 'eap_fast_eap_gtc'),
@@ -1068,6 +1093,7 @@ def get_allowed_protocols(id: Optional[_builtins.str] = None,
         process_host_lookup=pulumi.get(__ret__, 'process_host_lookup'),
         require_cryptobinding=pulumi.get(__ret__, 'require_cryptobinding'),
         require_message_auth=pulumi.get(__ret__, 'require_message_auth'),
+        rsa_pss=pulumi.get(__ret__, 'rsa_pss'),
         teap_downgrade_msk=pulumi.get(__ret__, 'teap_downgrade_msk'),
         teap_eap_accept_client_cert_during_tunnel_est=pulumi.get(__ret__, 'teap_eap_accept_client_cert_during_tunnel_est'),
         teap_eap_chaining=pulumi.get(__ret__, 'teap_eap_chaining'),
@@ -1117,6 +1143,7 @@ def get_allowed_protocols_output(id: pulumi.Input[Optional[Optional[_builtins.st
         allow_teap=pulumi.get(__response__, 'allow_teap'),
         allow_weak_ciphers_for_eap=pulumi.get(__response__, 'allow_weak_ciphers_for_eap'),
         description=pulumi.get(__response__, 'description'),
+        display_additional_tls_params=pulumi.get(__response__, 'display_additional_tls_params'),
         eap_fast_accept_client_cert=pulumi.get(__response__, 'eap_fast_accept_client_cert'),
         eap_fast_allow_machine_authentication=pulumi.get(__response__, 'eap_fast_allow_machine_authentication'),
         eap_fast_eap_gtc=pulumi.get(__response__, 'eap_fast_eap_gtc'),
@@ -1171,6 +1198,7 @@ def get_allowed_protocols_output(id: pulumi.Input[Optional[Optional[_builtins.st
         process_host_lookup=pulumi.get(__response__, 'process_host_lookup'),
         require_cryptobinding=pulumi.get(__response__, 'require_cryptobinding'),
         require_message_auth=pulumi.get(__response__, 'require_message_auth'),
+        rsa_pss=pulumi.get(__response__, 'rsa_pss'),
         teap_downgrade_msk=pulumi.get(__response__, 'teap_downgrade_msk'),
         teap_eap_accept_client_cert_during_tunnel_est=pulumi.get(__response__, 'teap_eap_accept_client_cert_during_tunnel_est'),
         teap_eap_chaining=pulumi.get(__response__, 'teap_eap_chaining'),

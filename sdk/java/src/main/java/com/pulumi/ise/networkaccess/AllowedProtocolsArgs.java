@@ -244,6 +244,21 @@ public final class AllowedProtocolsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     * 
+     */
+    @Import(name="displayAdditionalTlsParams")
+    private @Nullable Output<Boolean> displayAdditionalTlsParams;
+
+    /**
+     * @return Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     * 
+     */
+    public Optional<Output<Boolean>> displayAdditionalTlsParams() {
+        return Optional.ofNullable(this.displayAdditionalTlsParams);
+    }
+
+    /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
@@ -1063,6 +1078,21 @@ public final class AllowedProtocolsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     * 
+     */
+    @Import(name="rsaPss")
+    private @Nullable Output<Boolean> rsaPss;
+
+    /**
+     * @return Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     * 
+     */
+    public Optional<Output<Boolean>> rsaPss() {
+        return Optional.ofNullable(this.rsaPss);
+    }
+
+    /**
      * Allow downgrade to MSK
      * 
      */
@@ -1217,6 +1247,7 @@ public final class AllowedProtocolsArgs extends com.pulumi.resources.ResourceArg
         this.allowTeap = $.allowTeap;
         this.allowWeakCiphersForEap = $.allowWeakCiphersForEap;
         this.description = $.description;
+        this.displayAdditionalTlsParams = $.displayAdditionalTlsParams;
         this.eapFastAcceptClientCert = $.eapFastAcceptClientCert;
         this.eapFastAllowMachineAuthentication = $.eapFastAllowMachineAuthentication;
         this.eapFastEapGtc = $.eapFastEapGtc;
@@ -1270,6 +1301,7 @@ public final class AllowedProtocolsArgs extends com.pulumi.resources.ResourceArg
         this.processHostLookup = $.processHostLookup;
         this.requireCryptobinding = $.requireCryptobinding;
         this.requireMessageAuth = $.requireMessageAuth;
+        this.rsaPss = $.rsaPss;
         this.teapDowngradeMsk = $.teapDowngradeMsk;
         this.teapEapAcceptClientCertDuringTunnelEst = $.teapEapAcceptClientCertDuringTunnelEst;
         this.teapEapChaining = $.teapEapChaining;
@@ -1612,6 +1644,27 @@ public final class AllowedProtocolsArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param displayAdditionalTlsParams Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayAdditionalTlsParams(@Nullable Output<Boolean> displayAdditionalTlsParams) {
+            $.displayAdditionalTlsParams = displayAdditionalTlsParams;
+            return this;
+        }
+
+        /**
+         * @param displayAdditionalTlsParams Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayAdditionalTlsParams(Boolean displayAdditionalTlsParams) {
+            return displayAdditionalTlsParams(Output.of(displayAdditionalTlsParams));
         }
 
         /**
@@ -2749,6 +2802,27 @@ public final class AllowedProtocolsArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder requireMessageAuth(Boolean requireMessageAuth) {
             return requireMessageAuth(Output.of(requireMessageAuth));
+        }
+
+        /**
+         * @param rsaPss Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rsaPss(@Nullable Output<Boolean> rsaPss) {
+            $.rsaPss = rsaPss;
+            return this;
+        }
+
+        /**
+         * @param rsaPss Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rsaPss(Boolean rsaPss) {
+            return rsaPss(Output.of(rsaPss));
         }
 
         /**

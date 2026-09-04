@@ -88,6 +88,8 @@ type LookupAllowedProtocolsResult struct {
 	AllowWeakCiphersForEap bool `pulumi:"allowWeakCiphersForEap"`
 	// Description
 	Description string `pulumi:"description"`
+	// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+	DisplayAdditionalTlsParams bool `pulumi:"displayAdditionalTlsParams"`
 	// Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
 	EapFastAcceptClientCert bool `pulumi:"eapFastAcceptClientCert"`
 	// Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
@@ -196,6 +198,8 @@ type LookupAllowedProtocolsResult struct {
 	RequireCryptobinding bool `pulumi:"requireCryptobinding"`
 	// Require message authentication
 	RequireMessageAuth bool `pulumi:"requireMessageAuth"`
+	// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+	RsaPss bool `pulumi:"rsaPss"`
 	// Allow downgrade to MSK
 	TeapDowngradeMsk bool `pulumi:"teapDowngradeMsk"`
 	// Accept client certificate during tunnel establishment
@@ -321,6 +325,11 @@ func (o LookupAllowedProtocolsResultOutput) AllowWeakCiphersForEap() pulumi.Bool
 // Description
 func (o LookupAllowedProtocolsResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAllowedProtocolsResult) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+func (o LookupAllowedProtocolsResultOutput) DisplayAdditionalTlsParams() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupAllowedProtocolsResult) bool { return v.DisplayAdditionalTlsParams }).(pulumi.BoolOutput)
 }
 
 // Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
@@ -591,6 +600,11 @@ func (o LookupAllowedProtocolsResultOutput) RequireCryptobinding() pulumi.BoolOu
 // Require message authentication
 func (o LookupAllowedProtocolsResultOutput) RequireMessageAuth() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAllowedProtocolsResult) bool { return v.RequireMessageAuth }).(pulumi.BoolOutput)
+}
+
+// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+func (o LookupAllowedProtocolsResultOutput) RsaPss() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupAllowedProtocolsResult) bool { return v.RsaPss }).(pulumi.BoolOutput)
 }
 
 // Allow downgrade to MSK

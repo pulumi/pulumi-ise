@@ -190,6 +190,10 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly string Description;
         /// <summary>
+        /// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        /// </summary>
+        public readonly bool DisplayAdditionalTlsParams;
+        /// <summary>
         /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         public readonly bool EapFastAcceptClientCert;
@@ -406,6 +410,10 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         public readonly bool RequireMessageAuth;
         /// <summary>
+        /// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        /// </summary>
+        public readonly bool RsaPss;
+        /// <summary>
         /// Allow downgrade to MSK
         /// </summary>
         public readonly bool TeapDowngradeMsk;
@@ -473,6 +481,8 @@ namespace Pulumi.Ise.NetworkAccess
             bool allowWeakCiphersForEap,
 
             string description,
+
+            bool displayAdditionalTlsParams,
 
             bool eapFastAcceptClientCert,
 
@@ -582,6 +592,8 @@ namespace Pulumi.Ise.NetworkAccess
 
             bool requireMessageAuth,
 
+            bool rsaPss,
+
             bool teapDowngradeMsk,
 
             bool teapEapAcceptClientCertDuringTunnelEst,
@@ -615,6 +627,7 @@ namespace Pulumi.Ise.NetworkAccess
             AllowTeap = allowTeap;
             AllowWeakCiphersForEap = allowWeakCiphersForEap;
             Description = description;
+            DisplayAdditionalTlsParams = displayAdditionalTlsParams;
             EapFastAcceptClientCert = eapFastAcceptClientCert;
             EapFastAllowMachineAuthentication = eapFastAllowMachineAuthentication;
             EapFastEapGtc = eapFastEapGtc;
@@ -669,6 +682,7 @@ namespace Pulumi.Ise.NetworkAccess
             ProcessHostLookup = processHostLookup;
             RequireCryptobinding = requireCryptobinding;
             RequireMessageAuth = requireMessageAuth;
+            RsaPss = rsaPss;
             TeapDowngradeMsk = teapDowngradeMsk;
             TeapEapAcceptClientCertDuringTunnelEst = teapEapAcceptClientCertDuringTunnelEst;
             TeapEapChaining = teapEapChaining;

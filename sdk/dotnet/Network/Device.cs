@@ -149,10 +149,9 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// CoA port
-        ///   - Default value: `1700`
         /// </summary>
         [Output("coaPort")]
-        public Output<int> CoaPort { get; private set; } = null!;
+        public Output<int?> CoaPort { get; private set; } = null!;
 
         /// <summary>
         /// Description
@@ -230,7 +229,7 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// SNMP Polling Interval in seconds
-        ///   - Range: `600`-`86400`
+        ///   - Range: `0` (disabled) or `600`-`86400`
         /// </summary>
         [Output("snmpPollingInterval")]
         public Output<int?> SnmpPollingInterval { get; private set; } = null!;
@@ -494,7 +493,6 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// CoA port
-        ///   - Default value: `1700`
         /// </summary>
         [Input("coaPort")]
         public Input<int>? CoaPort { get; set; }
@@ -587,7 +585,7 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// SNMP Polling Interval in seconds
-        ///   - Range: `600`-`86400`
+        ///   - Range: `0` (disabled) or `600`-`86400`
         /// </summary>
         [Input("snmpPollingInterval")]
         public Input<int>? SnmpPollingInterval { get; set; }
@@ -813,7 +811,6 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// CoA port
-        ///   - Default value: `1700`
         /// </summary>
         [Input("coaPort")]
         public Input<int>? CoaPort { get; set; }
@@ -906,7 +903,7 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// SNMP Polling Interval in seconds
-        ///   - Range: `600`-`86400`
+        ///   - Range: `0` (disabled) or `600`-`86400`
         /// </summary>
         [Input("snmpPollingInterval")]
         public Input<int>? SnmpPollingInterval { get; set; }
