@@ -553,10 +553,34 @@ _utilities.register(
  },
  {
   "pkg": "ise",
+  "mod": "trustsec/sxpConnection",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/sxpConnection:SxpConnection": "SxpConnection"
+  }
+ },
+ {
+  "pkg": "ise",
   "mod": "trustsec/sxpDomainFilter",
   "fqn": "pulumi_ise.trustsec",
   "classes": {
    "ise:trustsec/sxpDomainFilter:SxpDomainFilter": "SxpDomainFilter"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "trustsec/sxpLocalBinding",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/sxpLocalBinding:SxpLocalBinding": "SxpLocalBinding"
+  }
+ },
+ {
+  "pkg": "ise",
+  "mod": "trustsec/sxpVpn",
+  "fqn": "pulumi_ise.trustsec",
+  "classes": {
+   "ise:trustsec/sxpVpn:SxpVpn": "SxpVpn"
   }
  },
  {

@@ -37,6 +37,7 @@ class AllowedProtocolsArgs:
                  require_message_auth: pulumi.Input[_builtins.bool],
                  allow5g: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 display_additional_tls_params: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -87,6 +88,7 @@ class AllowedProtocolsArgs:
                  peap_peap_v0: pulumi.Input[Optional[_builtins.bool]] = None,
                  preferred_eap_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsa_pss: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -117,6 +119,7 @@ class AllowedProtocolsArgs:
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
         :param pulumi.Input[_builtins.bool] allow5g: Allow 5G. This field is only supported from ISE 3.2.
         :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.bool] display_additional_tls_params: Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
         :param pulumi.Input[_builtins.bool] eap_fast_accept_client_cert: Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
@@ -179,6 +182,7 @@ class AllowedProtocolsArgs:
         :param pulumi.Input[_builtins.str] preferred_eap_protocol: Preferred EAP protocol
                  - Choices: `EAP_FAST`, `PEAP`, `LEAP`, `EAP_MD5`, `EAP_TLS`, `EAP_TTLS`, `TEAP`
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
+        :param pulumi.Input[_builtins.bool] rsa_pss: Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
         :param pulumi.Input[_builtins.bool] teap_downgrade_msk: Allow downgrade to MSK
         :param pulumi.Input[_builtins.bool] teap_eap_accept_client_cert_during_tunnel_est: Accept client certificate during tunnel establishment
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
@@ -210,6 +214,8 @@ class AllowedProtocolsArgs:
             pulumi.set(__self__, "allow5g", allow5g)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if display_additional_tls_params is not None:
+            pulumi.set(__self__, "display_additional_tls_params", display_additional_tls_params)
         if eap_fast_accept_client_cert is not None:
             pulumi.set(__self__, "eap_fast_accept_client_cert", eap_fast_accept_client_cert)
         if eap_fast_allow_machine_authentication is not None:
@@ -310,6 +316,8 @@ class AllowedProtocolsArgs:
             pulumi.set(__self__, "preferred_eap_protocol", preferred_eap_protocol)
         if require_cryptobinding is not None:
             pulumi.set(__self__, "require_cryptobinding", require_cryptobinding)
+        if rsa_pss is not None:
+            pulumi.set(__self__, "rsa_pss", rsa_pss)
         if teap_downgrade_msk is not None:
             pulumi.set(__self__, "teap_downgrade_msk", teap_downgrade_msk)
         if teap_eap_accept_client_cert_during_tunnel_est is not None:
@@ -544,6 +552,18 @@ class AllowedProtocolsArgs:
     @description.setter
     def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="displayAdditionalTlsParams")
+    def display_additional_tls_params(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        """
+        return pulumi.get(self, "display_additional_tls_params")
+
+    @display_additional_tls_params.setter
+    def display_additional_tls_params(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "display_additional_tls_params", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastAcceptClientCert")
@@ -1158,6 +1178,18 @@ class AllowedProtocolsArgs:
         pulumi.set(self, "require_cryptobinding", value)
 
     @_builtins.property
+    @pulumi.getter(name="rsaPss")
+    def rsa_pss(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        """
+        return pulumi.get(self, "rsa_pss")
+
+    @rsa_pss.setter
+    def rsa_pss(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "rsa_pss", value)
+
+    @_builtins.property
     @pulumi.getter(name="teapDowngradeMsk")
     def teap_downgrade_msk(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -1285,6 +1317,7 @@ class _AllowedProtocolsState:
                  allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
                  allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 display_additional_tls_params: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1338,6 +1371,7 @@ class _AllowedProtocolsState:
                  process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
                  require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
                  require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsa_pss: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1365,6 +1399,7 @@ class _AllowedProtocolsState:
         :param pulumi.Input[_builtins.bool] allow_teap: Allow TEAP
         :param pulumi.Input[_builtins.bool] allow_weak_ciphers_for_eap: Allow weak ciphers for EAP
         :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.bool] display_additional_tls_params: Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
         :param pulumi.Input[_builtins.bool] eap_fast_accept_client_cert: Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
@@ -1430,6 +1465,7 @@ class _AllowedProtocolsState:
         :param pulumi.Input[_builtins.bool] process_host_lookup: Process host lookup
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
+        :param pulumi.Input[_builtins.bool] rsa_pss: Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
         :param pulumi.Input[_builtins.bool] teap_downgrade_msk: Allow downgrade to MSK
         :param pulumi.Input[_builtins.bool] teap_eap_accept_client_cert_during_tunnel_est: Accept client certificate during tunnel establishment
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
@@ -1471,6 +1507,8 @@ class _AllowedProtocolsState:
             pulumi.set(__self__, "allow_weak_ciphers_for_eap", allow_weak_ciphers_for_eap)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if display_additional_tls_params is not None:
+            pulumi.set(__self__, "display_additional_tls_params", display_additional_tls_params)
         if eap_fast_accept_client_cert is not None:
             pulumi.set(__self__, "eap_fast_accept_client_cert", eap_fast_accept_client_cert)
         if eap_fast_allow_machine_authentication is not None:
@@ -1577,6 +1615,8 @@ class _AllowedProtocolsState:
             pulumi.set(__self__, "require_cryptobinding", require_cryptobinding)
         if require_message_auth is not None:
             pulumi.set(__self__, "require_message_auth", require_message_auth)
+        if rsa_pss is not None:
+            pulumi.set(__self__, "rsa_pss", rsa_pss)
         if teap_downgrade_msk is not None:
             pulumi.set(__self__, "teap_downgrade_msk", teap_downgrade_msk)
         if teap_eap_accept_client_cert_during_tunnel_est is not None:
@@ -1775,6 +1815,18 @@ class _AllowedProtocolsState:
     @description.setter
     def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="displayAdditionalTlsParams")
+    def display_additional_tls_params(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        """
+        return pulumi.get(self, "display_additional_tls_params")
+
+    @display_additional_tls_params.setter
+    def display_additional_tls_params(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "display_additional_tls_params", value)
 
     @_builtins.property
     @pulumi.getter(name="eapFastAcceptClientCert")
@@ -2425,6 +2477,18 @@ class _AllowedProtocolsState:
         pulumi.set(self, "require_message_auth", value)
 
     @_builtins.property
+    @pulumi.getter(name="rsaPss")
+    def rsa_pss(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        """
+        return pulumi.get(self, "rsa_pss")
+
+    @rsa_pss.setter
+    def rsa_pss(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "rsa_pss", value)
+
+    @_builtins.property
     @pulumi.getter(name="teapDowngradeMsk")
     def teap_downgrade_msk(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
@@ -2555,6 +2619,7 @@ class AllowedProtocols(pulumi.CustomResource):
                  allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
                  allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 display_additional_tls_params: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2608,6 +2673,7 @@ class AllowedProtocols(pulumi.CustomResource):
                  process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
                  require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
                  require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsa_pss: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2731,6 +2797,7 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] allow_teap: Allow TEAP
         :param pulumi.Input[_builtins.bool] allow_weak_ciphers_for_eap: Allow weak ciphers for EAP
         :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.bool] display_additional_tls_params: Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
         :param pulumi.Input[_builtins.bool] eap_fast_accept_client_cert: Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
@@ -2796,6 +2863,7 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] process_host_lookup: Process host lookup
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
+        :param pulumi.Input[_builtins.bool] rsa_pss: Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
         :param pulumi.Input[_builtins.bool] teap_downgrade_msk: Allow downgrade to MSK
         :param pulumi.Input[_builtins.bool] teap_eap_accept_client_cert_during_tunnel_est: Accept client certificate during tunnel establishment
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
@@ -2939,6 +3007,7 @@ class AllowedProtocols(pulumi.CustomResource):
                  allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
                  allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 display_additional_tls_params: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
                  eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2992,6 +3061,7 @@ class AllowedProtocols(pulumi.CustomResource):
                  process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
                  require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
                  require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsa_pss: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
                  teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -3051,6 +3121,7 @@ class AllowedProtocols(pulumi.CustomResource):
                 raise TypeError("Missing required property 'allow_weak_ciphers_for_eap'")
             __props__.__dict__["allow_weak_ciphers_for_eap"] = allow_weak_ciphers_for_eap
             __props__.__dict__["description"] = description
+            __props__.__dict__["display_additional_tls_params"] = display_additional_tls_params
             __props__.__dict__["eap_fast_accept_client_cert"] = eap_fast_accept_client_cert
             __props__.__dict__["eap_fast_allow_machine_authentication"] = eap_fast_allow_machine_authentication
             __props__.__dict__["eap_fast_eap_gtc"] = eap_fast_eap_gtc
@@ -3110,6 +3181,7 @@ class AllowedProtocols(pulumi.CustomResource):
             if require_message_auth is None and not opts.urn:
                 raise TypeError("Missing required property 'require_message_auth'")
             __props__.__dict__["require_message_auth"] = require_message_auth
+            __props__.__dict__["rsa_pss"] = rsa_pss
             __props__.__dict__["teap_downgrade_msk"] = teap_downgrade_msk
             __props__.__dict__["teap_eap_accept_client_cert_during_tunnel_est"] = teap_eap_accept_client_cert_during_tunnel_est
             __props__.__dict__["teap_eap_chaining"] = teap_eap_chaining
@@ -3144,6 +3216,7 @@ class AllowedProtocols(pulumi.CustomResource):
             allow_teap: pulumi.Input[Optional[_builtins.bool]] = None,
             allow_weak_ciphers_for_eap: pulumi.Input[Optional[_builtins.bool]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
+            display_additional_tls_params: pulumi.Input[Optional[_builtins.bool]] = None,
             eap_fast_accept_client_cert: pulumi.Input[Optional[_builtins.bool]] = None,
             eap_fast_allow_machine_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
             eap_fast_eap_gtc: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -3197,6 +3270,7 @@ class AllowedProtocols(pulumi.CustomResource):
             process_host_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
             require_cryptobinding: pulumi.Input[Optional[_builtins.bool]] = None,
             require_message_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            rsa_pss: pulumi.Input[Optional[_builtins.bool]] = None,
             teap_downgrade_msk: pulumi.Input[Optional[_builtins.bool]] = None,
             teap_eap_accept_client_cert_during_tunnel_est: pulumi.Input[Optional[_builtins.bool]] = None,
             teap_eap_chaining: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -3228,6 +3302,7 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] allow_teap: Allow TEAP
         :param pulumi.Input[_builtins.bool] allow_weak_ciphers_for_eap: Allow weak ciphers for EAP
         :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.bool] display_additional_tls_params: Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
         :param pulumi.Input[_builtins.bool] eap_fast_accept_client_cert: Accept client certificates. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_allow_machine_authentication: Allow machine authentication. Is required only if `eap_fast_use_pacs` is `false`.
         :param pulumi.Input[_builtins.bool] eap_fast_eap_gtc: Allow EAP GTC
@@ -3293,6 +3368,7 @@ class AllowedProtocols(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] process_host_lookup: Process host lookup
         :param pulumi.Input[_builtins.bool] require_cryptobinding: Require cryptobinding
         :param pulumi.Input[_builtins.bool] require_message_auth: Require message authentication
+        :param pulumi.Input[_builtins.bool] rsa_pss: Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
         :param pulumi.Input[_builtins.bool] teap_downgrade_msk: Allow downgrade to MSK
         :param pulumi.Input[_builtins.bool] teap_eap_accept_client_cert_during_tunnel_est: Accept client certificate during tunnel establishment
         :param pulumi.Input[_builtins.bool] teap_eap_chaining: Allow EAP chaining
@@ -3323,6 +3399,7 @@ class AllowedProtocols(pulumi.CustomResource):
         __props__.__dict__["allow_teap"] = allow_teap
         __props__.__dict__["allow_weak_ciphers_for_eap"] = allow_weak_ciphers_for_eap
         __props__.__dict__["description"] = description
+        __props__.__dict__["display_additional_tls_params"] = display_additional_tls_params
         __props__.__dict__["eap_fast_accept_client_cert"] = eap_fast_accept_client_cert
         __props__.__dict__["eap_fast_allow_machine_authentication"] = eap_fast_allow_machine_authentication
         __props__.__dict__["eap_fast_eap_gtc"] = eap_fast_eap_gtc
@@ -3376,6 +3453,7 @@ class AllowedProtocols(pulumi.CustomResource):
         __props__.__dict__["process_host_lookup"] = process_host_lookup
         __props__.__dict__["require_cryptobinding"] = require_cryptobinding
         __props__.__dict__["require_message_auth"] = require_message_auth
+        __props__.__dict__["rsa_pss"] = rsa_pss
         __props__.__dict__["teap_downgrade_msk"] = teap_downgrade_msk
         __props__.__dict__["teap_eap_accept_client_cert_during_tunnel_est"] = teap_eap_accept_client_cert_during_tunnel_est
         __props__.__dict__["teap_eap_chaining"] = teap_eap_chaining
@@ -3506,6 +3584,14 @@ class AllowedProtocols(pulumi.CustomResource):
         Description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="displayAdditionalTlsParams")
+    def display_additional_tls_params(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        """
+        return pulumi.get(self, "display_additional_tls_params")
 
     @_builtins.property
     @pulumi.getter(name="eapFastAcceptClientCert")
@@ -3942,6 +4028,14 @@ class AllowedProtocols(pulumi.CustomResource):
         Require message authentication
         """
         return pulumi.get(self, "require_message_auth")
+
+    @_builtins.property
+    @pulumi.getter(name="rsaPss")
+    def rsa_pss(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        """
+        return pulumi.get(self, "rsa_pss")
 
     @_builtins.property
     @pulumi.getter(name="teapDowngradeMsk")

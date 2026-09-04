@@ -348,6 +348,20 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
+     * Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     * 
+     */
+    @Export(name="displayAdditionalTlsParams", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> displayAdditionalTlsParams;
+
+    /**
+     * @return Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+     * 
+     */
+    public Output<Optional<Boolean>> displayAdditionalTlsParams() {
+        return Codegen.optional(this.displayAdditionalTlsParams);
+    }
+    /**
      * Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
      * 
      */
@@ -1112,6 +1126,20 @@ public class AllowedProtocols extends com.pulumi.resources.CustomResource {
      */
     public Output<Boolean> requireMessageAuth() {
         return this.requireMessageAuth;
+    }
+    /**
+     * Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     * 
+     */
+    @Export(name="rsaPss", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> rsaPss;
+
+    /**
+     * @return Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+     * 
+     */
+    public Output<Optional<Boolean>> rsaPss() {
+        return Codegen.optional(this.rsaPss);
     }
     /**
      * Allow downgrade to MSK

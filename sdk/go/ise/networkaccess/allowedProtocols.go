@@ -154,6 +154,8 @@ type AllowedProtocols struct {
 	AllowWeakCiphersForEap pulumi.BoolOutput `pulumi:"allowWeakCiphersForEap"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
+	// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+	DisplayAdditionalTlsParams pulumi.BoolPtrOutput `pulumi:"displayAdditionalTlsParams"`
 	// Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
 	EapFastAcceptClientCert pulumi.BoolPtrOutput `pulumi:"eapFastAcceptClientCert"`
 	// Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
@@ -272,6 +274,8 @@ type AllowedProtocols struct {
 	RequireCryptobinding pulumi.BoolPtrOutput `pulumi:"requireCryptobinding"`
 	// Require message authentication
 	RequireMessageAuth pulumi.BoolOutput `pulumi:"requireMessageAuth"`
+	// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+	RsaPss pulumi.BoolPtrOutput `pulumi:"rsaPss"`
 	// Allow downgrade to MSK
 	TeapDowngradeMsk pulumi.BoolPtrOutput `pulumi:"teapDowngradeMsk"`
 	// Accept client certificate during tunnel establishment
@@ -401,6 +405,8 @@ type allowedProtocolsState struct {
 	AllowWeakCiphersForEap *bool `pulumi:"allowWeakCiphersForEap"`
 	// Description
 	Description *string `pulumi:"description"`
+	// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+	DisplayAdditionalTlsParams *bool `pulumi:"displayAdditionalTlsParams"`
 	// Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
 	EapFastAcceptClientCert *bool `pulumi:"eapFastAcceptClientCert"`
 	// Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
@@ -519,6 +525,8 @@ type allowedProtocolsState struct {
 	RequireCryptobinding *bool `pulumi:"requireCryptobinding"`
 	// Require message authentication
 	RequireMessageAuth *bool `pulumi:"requireMessageAuth"`
+	// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+	RsaPss *bool `pulumi:"rsaPss"`
 	// Allow downgrade to MSK
 	TeapDowngradeMsk *bool `pulumi:"teapDowngradeMsk"`
 	// Accept client certificate during tunnel establishment
@@ -571,6 +579,8 @@ type AllowedProtocolsState struct {
 	AllowWeakCiphersForEap pulumi.BoolPtrInput
 	// Description
 	Description pulumi.StringPtrInput
+	// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+	DisplayAdditionalTlsParams pulumi.BoolPtrInput
 	// Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
 	EapFastAcceptClientCert pulumi.BoolPtrInput
 	// Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
@@ -689,6 +699,8 @@ type AllowedProtocolsState struct {
 	RequireCryptobinding pulumi.BoolPtrInput
 	// Require message authentication
 	RequireMessageAuth pulumi.BoolPtrInput
+	// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+	RsaPss pulumi.BoolPtrInput
 	// Allow downgrade to MSK
 	TeapDowngradeMsk pulumi.BoolPtrInput
 	// Accept client certificate during tunnel establishment
@@ -745,6 +757,8 @@ type allowedProtocolsArgs struct {
 	AllowWeakCiphersForEap bool `pulumi:"allowWeakCiphersForEap"`
 	// Description
 	Description *string `pulumi:"description"`
+	// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+	DisplayAdditionalTlsParams *bool `pulumi:"displayAdditionalTlsParams"`
 	// Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
 	EapFastAcceptClientCert *bool `pulumi:"eapFastAcceptClientCert"`
 	// Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
@@ -863,6 +877,8 @@ type allowedProtocolsArgs struct {
 	RequireCryptobinding *bool `pulumi:"requireCryptobinding"`
 	// Require message authentication
 	RequireMessageAuth bool `pulumi:"requireMessageAuth"`
+	// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+	RsaPss *bool `pulumi:"rsaPss"`
 	// Allow downgrade to MSK
 	TeapDowngradeMsk *bool `pulumi:"teapDowngradeMsk"`
 	// Accept client certificate during tunnel establishment
@@ -916,6 +932,8 @@ type AllowedProtocolsArgs struct {
 	AllowWeakCiphersForEap pulumi.BoolInput
 	// Description
 	Description pulumi.StringPtrInput
+	// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+	DisplayAdditionalTlsParams pulumi.BoolPtrInput
 	// Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
 	EapFastAcceptClientCert pulumi.BoolPtrInput
 	// Allow machine authentication. Is required only if `eapFastUsePacs` is `false`.
@@ -1034,6 +1052,8 @@ type AllowedProtocolsArgs struct {
 	RequireCryptobinding pulumi.BoolPtrInput
 	// Require message authentication
 	RequireMessageAuth pulumi.BoolInput
+	// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+	RsaPss pulumi.BoolPtrInput
 	// Allow downgrade to MSK
 	TeapDowngradeMsk pulumi.BoolPtrInput
 	// Accept client certificate during tunnel establishment
@@ -1215,6 +1235,11 @@ func (o AllowedProtocolsOutput) AllowWeakCiphersForEap() pulumi.BoolOutput {
 // Description
 func (o AllowedProtocolsOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
+}
+
+// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+func (o AllowedProtocolsOutput) DisplayAdditionalTlsParams() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.DisplayAdditionalTlsParams }).(pulumi.BoolPtrOutput)
 }
 
 // Accept client certificates. Is required only if `eapFastUsePacs` is `false`.
@@ -1492,6 +1517,11 @@ func (o AllowedProtocolsOutput) RequireCryptobinding() pulumi.BoolPtrOutput {
 // Require message authentication
 func (o AllowedProtocolsOutput) RequireMessageAuth() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolOutput { return v.RequireMessageAuth }).(pulumi.BoolOutput)
+}
+
+// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+func (o AllowedProtocolsOutput) RsaPss() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AllowedProtocols) pulumi.BoolPtrOutput { return v.RsaPss }).(pulumi.BoolPtrOutput)
 }
 
 // Allow downgrade to MSK

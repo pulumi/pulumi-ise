@@ -23,8 +23,14 @@ import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupAclPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupArgs;
 import com.pulumi.ise.trustsec.inputs.GetSecurityGroupPlainArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpConnectionPlainArgs;
 import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterArgs;
 import com.pulumi.ise.trustsec.inputs.GetSxpDomainFilterPlainArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingPlainArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+import com.pulumi.ise.trustsec.inputs.GetSxpVpnPlainArgs;
 import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellDefaultResult;
 import com.pulumi.ise.trustsec.outputs.GetEgressMatrixCellResult;
 import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingGroupResult;
@@ -32,7 +38,10 @@ import com.pulumi.ise.trustsec.outputs.GetIpToSgtMappingResult;
 import com.pulumi.ise.trustsec.outputs.GetMatrixResult;
 import com.pulumi.ise.trustsec.outputs.GetSecurityGroupAclResult;
 import com.pulumi.ise.trustsec.outputs.GetSecurityGroupResult;
+import com.pulumi.ise.trustsec.outputs.GetSxpConnectionResult;
 import com.pulumi.ise.trustsec.outputs.GetSxpDomainFilterResult;
+import com.pulumi.ise.trustsec.outputs.GetSxpLocalBindingResult;
+import com.pulumi.ise.trustsec.outputs.GetSxpVpnResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class TrustsecFunctions {
@@ -1837,6 +1846,286 @@ public final class TrustsecFunctions {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getSecurityGroupAcl:getSecurityGroupAcl", TypeShape.of(GetSecurityGroupAclResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpConnectionResult> getSxpConnection() {
+        return getSxpConnection(GetSxpConnectionArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpConnectionResult> getSxpConnectionPlain() {
+        return getSxpConnectionPlain(GetSxpConnectionPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpConnectionResult> getSxpConnection(GetSxpConnectionArgs args) {
+        return getSxpConnection(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpConnectionResult> getSxpConnectionPlain(GetSxpConnectionPlainArgs args) {
+        return getSxpConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpConnectionResult> getSxpConnection(GetSxpConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpConnection:getSxpConnection", TypeShape.of(GetSxpConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpConnectionResult> getSxpConnection(GetSxpConnectionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpConnection:getSxpConnection", TypeShape.of(GetSxpConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Connection.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpConnectionArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpConnection(GetSxpConnectionArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpConnectionResult> getSxpConnectionPlain(GetSxpConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:trustsec/getSxpConnection:getSxpConnection", TypeShape.of(GetSxpConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the SXP Domain Filter.
      * 
      * ## Example Usage
@@ -2115,5 +2404,565 @@ public final class TrustsecFunctions {
      */
     public static CompletableFuture<GetSxpDomainFilterResult> getSxpDomainFilterPlain(GetSxpDomainFilterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("ise:trustsec/getSxpDomainFilter:getSxpDomainFilter", TypeShape.of(GetSxpDomainFilterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpLocalBindingResult> getSxpLocalBinding() {
+        return getSxpLocalBinding(GetSxpLocalBindingArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpLocalBindingResult> getSxpLocalBindingPlain() {
+        return getSxpLocalBindingPlain(GetSxpLocalBindingPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpLocalBindingResult> getSxpLocalBinding(GetSxpLocalBindingArgs args) {
+        return getSxpLocalBinding(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpLocalBindingResult> getSxpLocalBindingPlain(GetSxpLocalBindingPlainArgs args) {
+        return getSxpLocalBindingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpLocalBindingResult> getSxpLocalBinding(GetSxpLocalBindingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpLocalBinding:getSxpLocalBinding", TypeShape.of(GetSxpLocalBindingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpLocalBindingResult> getSxpLocalBinding(GetSxpLocalBindingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpLocalBinding:getSxpLocalBinding", TypeShape.of(GetSxpLocalBindingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP Local Binding.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpLocalBindingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpLocalBinding(GetSxpLocalBindingArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpLocalBindingResult> getSxpLocalBindingPlain(GetSxpLocalBindingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:trustsec/getSxpLocalBinding:getSxpLocalBinding", TypeShape.of(GetSxpLocalBindingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpVpnResult> getSxpVpn() {
+        return getSxpVpn(GetSxpVpnArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpVpnResult> getSxpVpnPlain() {
+        return getSxpVpnPlain(GetSxpVpnPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpVpnResult> getSxpVpn(GetSxpVpnArgs args) {
+        return getSxpVpn(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpVpnResult> getSxpVpnPlain(GetSxpVpnPlainArgs args) {
+        return getSxpVpnPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpVpnResult> getSxpVpn(GetSxpVpnArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpVpn:getSxpVpn", TypeShape.of(GetSxpVpnResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSxpVpnResult> getSxpVpn(GetSxpVpnArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("ise:trustsec/getSxpVpn:getSxpVpn", TypeShape.of(GetSxpVpnResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SXP VPN.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.ise.trustsec.TrustsecFunctions;
+     * import com.pulumi.ise.trustsec.inputs.GetSxpVpnArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = TrustsecFunctions.getSxpVpn(GetSxpVpnArgs.builder()
+     *             .id("76d24097-41c4-4558-a4d0-a8c07ac08470")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSxpVpnResult> getSxpVpnPlain(GetSxpVpnPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("ise:trustsec/getSxpVpn:getSxpVpn", TypeShape.of(GetSxpVpnResult.class), args, Utilities.withVersion(options));
     }
 }

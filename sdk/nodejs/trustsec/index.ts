@@ -55,10 +55,25 @@ export const getSecurityGroupAcl: typeof import("./getSecurityGroupAcl").getSecu
 export const getSecurityGroupAclOutput: typeof import("./getSecurityGroupAcl").getSecurityGroupAclOutput = null as any;
 utilities.lazyLoad(exports, ["getSecurityGroupAcl","getSecurityGroupAclOutput"], () => require("./getSecurityGroupAcl"));
 
+export { GetSxpConnectionArgs, GetSxpConnectionResult, GetSxpConnectionOutputArgs } from "./getSxpConnection";
+export const getSxpConnection: typeof import("./getSxpConnection").getSxpConnection = null as any;
+export const getSxpConnectionOutput: typeof import("./getSxpConnection").getSxpConnectionOutput = null as any;
+utilities.lazyLoad(exports, ["getSxpConnection","getSxpConnectionOutput"], () => require("./getSxpConnection"));
+
 export { GetSxpDomainFilterArgs, GetSxpDomainFilterResult, GetSxpDomainFilterOutputArgs } from "./getSxpDomainFilter";
 export const getSxpDomainFilter: typeof import("./getSxpDomainFilter").getSxpDomainFilter = null as any;
 export const getSxpDomainFilterOutput: typeof import("./getSxpDomainFilter").getSxpDomainFilterOutput = null as any;
 utilities.lazyLoad(exports, ["getSxpDomainFilter","getSxpDomainFilterOutput"], () => require("./getSxpDomainFilter"));
+
+export { GetSxpLocalBindingArgs, GetSxpLocalBindingResult, GetSxpLocalBindingOutputArgs } from "./getSxpLocalBinding";
+export const getSxpLocalBinding: typeof import("./getSxpLocalBinding").getSxpLocalBinding = null as any;
+export const getSxpLocalBindingOutput: typeof import("./getSxpLocalBinding").getSxpLocalBindingOutput = null as any;
+utilities.lazyLoad(exports, ["getSxpLocalBinding","getSxpLocalBindingOutput"], () => require("./getSxpLocalBinding"));
+
+export { GetSxpVpnArgs, GetSxpVpnResult, GetSxpVpnOutputArgs } from "./getSxpVpn";
+export const getSxpVpn: typeof import("./getSxpVpn").getSxpVpn = null as any;
+export const getSxpVpnOutput: typeof import("./getSxpVpn").getSxpVpnOutput = null as any;
+utilities.lazyLoad(exports, ["getSxpVpn","getSxpVpnOutput"], () => require("./getSxpVpn"));
 
 export { IpToSgtMappingArgs, IpToSgtMappingState } from "./ipToSgtMapping";
 export type IpToSgtMapping = import("./ipToSgtMapping").IpToSgtMapping;
@@ -85,10 +100,25 @@ export type SecurityGroupAcl = import("./securityGroupAcl").SecurityGroupAcl;
 export const SecurityGroupAcl: typeof import("./securityGroupAcl").SecurityGroupAcl = null as any;
 utilities.lazyLoad(exports, ["SecurityGroupAcl"], () => require("./securityGroupAcl"));
 
+export { SxpConnectionArgs, SxpConnectionState } from "./sxpConnection";
+export type SxpConnection = import("./sxpConnection").SxpConnection;
+export const SxpConnection: typeof import("./sxpConnection").SxpConnection = null as any;
+utilities.lazyLoad(exports, ["SxpConnection"], () => require("./sxpConnection"));
+
 export { SxpDomainFilterArgs, SxpDomainFilterState } from "./sxpDomainFilter";
 export type SxpDomainFilter = import("./sxpDomainFilter").SxpDomainFilter;
 export const SxpDomainFilter: typeof import("./sxpDomainFilter").SxpDomainFilter = null as any;
 utilities.lazyLoad(exports, ["SxpDomainFilter"], () => require("./sxpDomainFilter"));
+
+export { SxpLocalBindingArgs, SxpLocalBindingState } from "./sxpLocalBinding";
+export type SxpLocalBinding = import("./sxpLocalBinding").SxpLocalBinding;
+export const SxpLocalBinding: typeof import("./sxpLocalBinding").SxpLocalBinding = null as any;
+utilities.lazyLoad(exports, ["SxpLocalBinding"], () => require("./sxpLocalBinding"));
+
+export { SxpVpnArgs, SxpVpnState } from "./sxpVpn";
+export type SxpVpn = import("./sxpVpn").SxpVpn;
+export const SxpVpn: typeof import("./sxpVpn").SxpVpn = null as any;
+utilities.lazyLoad(exports, ["SxpVpn"], () => require("./sxpVpn"));
 
 export { WorkProcessSettingsArgs, WorkProcessSettingsState } from "./workProcessSettings";
 export type WorkProcessSettings = import("./workProcessSettings").WorkProcessSettings;
@@ -116,8 +146,14 @@ const _module = {
                 return new SecurityGroup(name, <any>undefined, { urn })
             case "ise:trustsec/securityGroupAcl:SecurityGroupAcl":
                 return new SecurityGroupAcl(name, <any>undefined, { urn })
+            case "ise:trustsec/sxpConnection:SxpConnection":
+                return new SxpConnection(name, <any>undefined, { urn })
             case "ise:trustsec/sxpDomainFilter:SxpDomainFilter":
                 return new SxpDomainFilter(name, <any>undefined, { urn })
+            case "ise:trustsec/sxpLocalBinding:SxpLocalBinding":
+                return new SxpLocalBinding(name, <any>undefined, { urn })
+            case "ise:trustsec/sxpVpn:SxpVpn":
+                return new SxpVpn(name, <any>undefined, { urn })
             case "ise:trustsec/workProcessSettings:WorkProcessSettings":
                 return new WorkProcessSettings(name, <any>undefined, { urn })
             default:
@@ -133,5 +169,8 @@ pulumi.runtime.registerResourceModule("ise", "trustsec/ipToSgtMappingGroup", _mo
 pulumi.runtime.registerResourceModule("ise", "trustsec/matrix", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroup", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/securityGroupAcl", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/sxpConnection", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/sxpDomainFilter", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/sxpLocalBinding", _module)
+pulumi.runtime.registerResourceModule("ise", "trustsec/sxpVpn", _module)
 pulumi.runtime.registerResourceModule("ise", "trustsec/workProcessSettings", _module)

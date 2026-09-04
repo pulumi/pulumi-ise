@@ -37,8 +37,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityGroup{}
 	case "ise:trustsec/securityGroupAcl:SecurityGroupAcl":
 		r = &SecurityGroupAcl{}
+	case "ise:trustsec/sxpConnection:SxpConnection":
+		r = &SxpConnection{}
 	case "ise:trustsec/sxpDomainFilter:SxpDomainFilter":
 		r = &SxpDomainFilter{}
+	case "ise:trustsec/sxpLocalBinding:SxpLocalBinding":
+		r = &SxpLocalBinding{}
+	case "ise:trustsec/sxpVpn:SxpVpn":
+		r = &SxpVpn{}
 	case "ise:trustsec/workProcessSettings:WorkProcessSettings":
 		r = &WorkProcessSettings{}
 	default:
@@ -96,7 +102,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"ise",
+		"trustsec/sxpConnection",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
 		"trustsec/sxpDomainFilter",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"trustsec/sxpLocalBinding",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"ise",
+		"trustsec/sxpVpn",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

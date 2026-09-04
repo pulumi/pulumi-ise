@@ -206,6 +206,12 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
+        /// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        /// </summary>
+        [Output("displayAdditionalTlsParams")]
+        public Output<bool?> DisplayAdditionalTlsParams { get; private set; } = null!;
+
+        /// <summary>
         /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
         /// </summary>
         [Output("eapFastAcceptClientCert")]
@@ -536,6 +542,12 @@ namespace Pulumi.Ise.NetworkAccess
         public Output<bool> RequireMessageAuth { get; private set; } = null!;
 
         /// <summary>
+        /// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        /// </summary>
+        [Output("rsaPss")]
+        public Output<bool?> RsaPss { get; private set; } = null!;
+
+        /// <summary>
         /// Allow downgrade to MSK
         /// </summary>
         [Output("teapDowngradeMsk")]
@@ -725,6 +737,12 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
+
+        /// <summary>
+        /// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        /// </summary>
+        [Input("displayAdditionalTlsParams")]
+        public Input<bool>? DisplayAdditionalTlsParams { get; set; }
 
         /// <summary>
         /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
@@ -1057,6 +1075,12 @@ namespace Pulumi.Ise.NetworkAccess
         public Input<bool> RequireMessageAuth { get; set; } = null!;
 
         /// <summary>
+        /// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        /// </summary>
+        [Input("rsaPss")]
+        public Input<bool>? RsaPss { get; set; }
+
+        /// <summary>
         /// Allow downgrade to MSK
         /// </summary>
         [Input("teapDowngradeMsk")]
@@ -1208,6 +1232,12 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
+
+        /// <summary>
+        /// Enable/Disable display additional TLS parameters. This field is only supported from ISE 3.5.
+        /// </summary>
+        [Input("displayAdditionalTlsParams")]
+        public Input<bool>? DisplayAdditionalTlsParams { get; set; }
 
         /// <summary>
         /// Accept client certificates. Is required only if `EapFastUsePacs` is `False`.
@@ -1538,6 +1568,12 @@ namespace Pulumi.Ise.NetworkAccess
         /// </summary>
         [Input("requireMessageAuth")]
         public Input<bool>? RequireMessageAuth { get; set; }
+
+        /// <summary>
+        /// Enable/Disable RSA PSS cipher based on policy. This field is only supported from ISE 3.4.
+        /// </summary>
+        [Input("rsaPss")]
+        public Input<bool>? RsaPss { get; set; }
 
         /// <summary>
         /// Allow downgrade to MSK

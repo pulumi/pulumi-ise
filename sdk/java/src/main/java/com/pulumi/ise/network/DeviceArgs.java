@@ -161,7 +161,6 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * CoA port
-     *   - Default value: `1700`
      * 
      */
     @Import(name="coaPort")
@@ -169,7 +168,6 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return CoA port
-     *   - Default value: `1700`
      * 
      */
     public Optional<Output<Integer>> coaPort() {
@@ -362,7 +360,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      * 
      */
     @Import(name="snmpPollingInterval")
@@ -370,7 +368,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return SNMP Polling Interval in seconds
-     *   - Range: `600`-`86400`
+     *   - Range: `0` (disabled) or `600`-`86400`
      * 
      */
     public Optional<Output<Integer>> snmpPollingInterval() {
@@ -1028,7 +1026,6 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param coaPort CoA port
-         *   - Default value: `1700`
          * 
          * @return builder
          * 
@@ -1040,7 +1037,6 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param coaPort CoA port
-         *   - Default value: `1700`
          * 
          * @return builder
          * 
@@ -1327,7 +1323,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snmpPollingInterval SNMP Polling Interval in seconds
-         *   - Range: `600`-`86400`
+         *   - Range: `0` (disabled) or `600`-`86400`
          * 
          * @return builder
          * 
@@ -1339,7 +1335,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snmpPollingInterval SNMP Polling Interval in seconds
-         *   - Range: `600`-`86400`
+         *   - Range: `0` (disabled) or `600`-`86400`
          * 
          * @return builder
          * 

@@ -85,7 +85,6 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
         :param pulumi.Input[_builtins.int] coa_port: CoA port
-                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[_builtins.str] model_name: Model name
@@ -100,7 +99,7 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
-                 - Range: `600`-`86400`
+                 - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -355,7 +354,6 @@ class DeviceArgs:
     def coa_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         CoA port
-          - Default value: `1700`
         """
         return pulumi.get(self, "coa_port")
 
@@ -502,7 +500,7 @@ class DeviceArgs:
     def snmp_polling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SNMP Polling Interval in seconds
-          - Range: `600`-`86400`
+          - Range: `0` (disabled) or `600`-`86400`
         """
         return pulumi.get(self, "snmp_polling_interval")
 
@@ -882,7 +880,6 @@ class _DeviceState:
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
         :param pulumi.Input[_builtins.int] coa_port: CoA port
-                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[Sequence[pulumi.Input['DeviceIpArgs']]] ips: List of IP subnets
@@ -898,7 +895,7 @@ class _DeviceState:
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
-                 - Range: `600`-`86400`
+                 - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -1142,7 +1139,6 @@ class _DeviceState:
     def coa_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         CoA port
-          - Default value: `1700`
         """
         return pulumi.get(self, "coa_port")
 
@@ -1301,7 +1297,7 @@ class _DeviceState:
     def snmp_polling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SNMP Polling Interval in seconds
-          - Range: `600`-`86400`
+          - Range: `0` (disabled) or `600`-`86400`
         """
         return pulumi.get(self, "snmp_polling_interval")
 
@@ -1752,7 +1748,6 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
         :param pulumi.Input[_builtins.int] coa_port: CoA port
-                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
@@ -1768,7 +1763,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
-                 - Range: `600`-`86400`
+                 - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -2073,7 +2068,6 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
         :param pulumi.Input[_builtins.int] coa_port: CoA port
-                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
         :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
@@ -2089,7 +2083,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] snmp_mac_trap_query: SNMP MAC Trap Query
         :param pulumi.Input[_builtins.str] snmp_originating_policy_service_node: Originating Policy Services Node
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
-                 - Range: `600`-`86400`
+                 - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -2251,10 +2245,9 @@ class Device(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
-    def coa_port(self) -> pulumi.Output[_builtins.int]:
+    def coa_port(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         CoA port
-          - Default value: `1700`
         """
         return pulumi.get(self, "coa_port")
 
@@ -2361,7 +2354,7 @@ class Device(pulumi.CustomResource):
     def snmp_polling_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         SNMP Polling Interval in seconds
-          - Range: `600`-`86400`
+          - Range: `0` (disabled) or `600`-`86400`
         """
         return pulumi.get(self, "snmp_polling_interval")
 
