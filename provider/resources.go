@@ -47,6 +47,11 @@ const (
 	modProfiling          = "Profiling"
 	modSystem             = "System"
 	modTrustSec           = "TrustSec"
+
+	// providerName is the short name of this provider, used as the token
+	// prefix for resources/data sources and in a handful of other places
+	// that need to refer to the provider by its "ise" identifier.
+	providerName = "ise"
 )
 
 var moduleNames = map[string]string{
@@ -82,7 +87,7 @@ var namespaceMap = map[string]string{}
 func convertName(tfname string) (module string, name string) {
 	tfNameItems := strings.Split(tfname, "_")
 	contract.Assertf(len(tfNameItems) >= 2, "Invalid snake case name %s", tfname)
-	contract.Assertf(tfNameItems[0] == "ise", "Invalid snake case name %s. Does not start with ise", tfname)
+	contract.Assertf(tfNameItems[0] == providerName, "Invalid snake case name %s. Does not start with ise", tfname)
 	fullName := strings.Join(tfNameItems[1:], "_")
 	moduleTitle := ""
 	if mod, ok := resourceModules[fullName]; ok {
@@ -117,12 +122,12 @@ func trimPrefixCaseInsensitive(s, prefix string) string {
 
 func makeDataSource(ds string) tokens.ModuleMember {
 	mod, name := convertName(ds)
-	return tfbridge.MakeDataSource("ise", mod, "get"+name)
+	return tfbridge.MakeDataSource(providerName, mod, "get"+name)
 }
 
 func makeResource(res string) tokens.Type {
 	mod, name := convertName(res)
-	return tfbridge.MakeResource("ise", mod, name)
+	return tfbridge.MakeResource(providerName, mod, name)
 }
 
 func moduleComputeStrategy() tfbridge.Strategy {
@@ -146,7 +151,7 @@ func Provider() tfbridge.ProviderInfo {
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
 		P:    p,
-		Name: "ise",
+		Name: providerName,
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
 		DisplayName: "Cisco ISE",
@@ -162,7 +167,7 @@ func Provider() tfbridge.ProviderInfo {
 		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
 		Keywords: []string{
 			"pulumi",
-			"ise",
+			providerName,
 			"category/network",
 		},
 		License:    "Apache-2.0",
@@ -208,10 +213,10 @@ func Provider() tfbridge.ProviderInfo {
 		})(),
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/pulumi/pulumi-%[1]s/sdk/", "ise"),
+				fmt.Sprintf("github.com/pulumi/pulumi-%[1]s/sdk/", providerName),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
-				"ise",
+				providerName,
 			),
 			GenerateResourceContainerTypes: true,
 			RespectSchemaVersion:           true,
