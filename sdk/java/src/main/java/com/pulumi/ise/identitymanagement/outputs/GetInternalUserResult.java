@@ -6,6 +6,7 @@ package com.pulumi.ise.identitymanagement.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -42,6 +43,16 @@ public final class GetInternalUserResult {
      * 
      */
     private String enablePassword;
+    /**
+     * @return This field is added in ISE 2.0 to support TACACS+
+     * 
+     */
+    private String enablePasswordWo;
+    /**
+     * @return Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer enablePasswordWoVersion;
     /**
      * @return Whether the user is enabled/disabled
      * 
@@ -87,6 +98,16 @@ public final class GetInternalUserResult {
      * 
      */
     private Boolean passwordNeverExpires;
+    /**
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     * 
+     */
+    private String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer passwordWoVersion;
 
     private GetInternalUserResult() {}
     /**
@@ -130,6 +151,20 @@ public final class GetInternalUserResult {
      */
     public String enablePassword() {
         return this.enablePassword;
+    }
+    /**
+     * @return This field is added in ISE 2.0 to support TACACS+
+     * 
+     */
+    public String enablePasswordWo() {
+        return this.enablePasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer enablePasswordWoVersion() {
+        return this.enablePasswordWoVersion;
     }
     /**
      * @return Whether the user is enabled/disabled
@@ -194,6 +229,20 @@ public final class GetInternalUserResult {
     public Boolean passwordNeverExpires() {
         return this.passwordNeverExpires;
     }
+    /**
+     * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     * 
+     */
+    public String passwordWo() {
+        return this.passwordWo;
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer passwordWoVersion() {
+        return this.passwordWoVersion;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -210,6 +259,8 @@ public final class GetInternalUserResult {
         private String description;
         private String email;
         private String enablePassword;
+        private String enablePasswordWo;
+        private Integer enablePasswordWoVersion;
         private Boolean enabled;
         private String firstName;
         private String id;
@@ -219,6 +270,8 @@ public final class GetInternalUserResult {
         private String password;
         private String passwordIdStore;
         private Boolean passwordNeverExpires;
+        private String passwordWo;
+        private Integer passwordWoVersion;
         public Builder() {}
         public Builder(GetInternalUserResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -228,6 +281,8 @@ public final class GetInternalUserResult {
     	      this.description = defaults.description;
     	      this.email = defaults.email;
     	      this.enablePassword = defaults.enablePassword;
+    	      this.enablePasswordWo = defaults.enablePasswordWo;
+    	      this.enablePasswordWoVersion = defaults.enablePasswordWoVersion;
     	      this.enabled = defaults.enabled;
     	      this.firstName = defaults.firstName;
     	      this.id = defaults.id;
@@ -237,6 +292,8 @@ public final class GetInternalUserResult {
     	      this.password = defaults.password;
     	      this.passwordIdStore = defaults.passwordIdStore;
     	      this.passwordNeverExpires = defaults.passwordNeverExpires;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
         }
 
         @CustomType.Setter
@@ -285,6 +342,22 @@ public final class GetInternalUserResult {
               throw new MissingRequiredPropertyException("GetInternalUserResult", "enablePassword");
             }
             this.enablePassword = enablePassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enablePasswordWo(String enablePasswordWo) {
+            if (enablePasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetInternalUserResult", "enablePasswordWo");
+            }
+            this.enablePasswordWo = enablePasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enablePasswordWoVersion(Integer enablePasswordWoVersion) {
+            if (enablePasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetInternalUserResult", "enablePasswordWoVersion");
+            }
+            this.enablePasswordWoVersion = enablePasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -359,6 +432,22 @@ public final class GetInternalUserResult {
             this.passwordNeverExpires = passwordNeverExpires;
             return this;
         }
+        @CustomType.Setter
+        public Builder passwordWo(String passwordWo) {
+            if (passwordWo == null) {
+              throw new MissingRequiredPropertyException("GetInternalUserResult", "passwordWo");
+            }
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(Integer passwordWoVersion) {
+            if (passwordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetInternalUserResult", "passwordWoVersion");
+            }
+            this.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
         public GetInternalUserResult build() {
             final var _resultValue = new GetInternalUserResult();
             _resultValue.accountNameAlias = accountNameAlias;
@@ -367,6 +456,8 @@ public final class GetInternalUserResult {
             _resultValue.description = description;
             _resultValue.email = email;
             _resultValue.enablePassword = enablePassword;
+            _resultValue.enablePasswordWo = enablePasswordWo;
+            _resultValue.enablePasswordWoVersion = enablePasswordWoVersion;
             _resultValue.enabled = enabled;
             _resultValue.firstName = firstName;
             _resultValue.id = id;
@@ -376,6 +467,8 @@ public final class GetInternalUserResult {
             _resultValue.password = password;
             _resultValue.passwordIdStore = passwordIdStore;
             _resultValue.passwordNeverExpires = passwordNeverExpires;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             return _resultValue;
         }
     }

@@ -27,13 +27,17 @@ namespace Pulumi.Ise.Network
     ///         Name = "Device1",
     ///         Description = "My device",
     ///         AuthenticationEnableKeyWrap = true,
-    ///         AuthenticationEncryptionKey = "cisco123cisco123",
+    ///         AuthenticationEncryptionKeyWo = "cisco123cisco123",
+    ///         AuthenticationEncryptionKeyWoVersion = 1,
     ///         AuthenticationEncryptionKeyFormat = "ASCII",
-    ///         AuthenticationMessageAuthenticatorCodeKey = "cisco123cisco1235678",
+    ///         AuthenticationMessageAuthenticatorCodeKeyWo = "cisco123cisco1235678",
+    ///         AuthenticationMessageAuthenticatorCodeKeyWoVersion = 1,
     ///         AuthenticationNetworkProtocol = "RADIUS",
-    ///         AuthenticationRadiusSharedSecret = "cisco123",
+    ///         AuthenticationRadiusSharedSecretWo = "cisco123",
+    ///         AuthenticationRadiusSharedSecretWoVersion = 1,
     ///         AuthenticationEnableMultiSecret = true,
-    ///         AuthenticationSecondRadiusSharedSecret = "cisco12345",
+    ///         AuthenticationSecondRadiusSharedSecretWo = "cisco12345",
+    ///         AuthenticationSecondRadiusSharedSecretWoVersion = 1,
     ///         AuthenticationDtlsRequired = true,
     ///         CoaPort = 12345,
     ///         DtlsDnsName = "cisco.com",
@@ -55,17 +59,24 @@ namespace Pulumi.Ise.Network
     ///         SnmpUsername = "user123",
     ///         SnmpSecurityLevel = "PRIV",
     ///         SnmpAuthProtocol = "SHA2",
-    ///         SnmpAuthPassword = "Cisco123",
+    ///         SnmpAuthPasswordWo = "Cisco123",
+    ///         SnmpAuthPasswordWoVersion = 1,
     ///         SnmpPrivacyProtocol = "AES256",
-    ///         SnmpPrivacyPassword = "Cisco12345",
+    ///         SnmpPrivacyPasswordWo = "Cisco12345",
+    ///         SnmpPrivacyPasswordWoVersion = 1,
     ///         TacacsConnectModeOptions = "OFF",
-    ///         TacacsSharedSecret = "cisco123",
+    ///         TacacsSharedSecretWo = "cisco123",
+    ///         TacacsSharedSecretWoVersion = 1,
     ///         TrustsecDeviceId = "device123",
-    ///         TrustsecDevicePassword = "cisco123",
+    ///         TrustsecDevicePasswordWo = "cisco123",
+    ///         TrustsecDevicePasswordWoVersion = 1,
     ///         TrustsecRestApiUsername = "user123",
-    ///         TrustsecRestApiPassword = "Cisco123",
-    ///         TrustsecEnableModePassword = "cisco123",
-    ///         TrustsecExecModePassword = "cisco123",
+    ///         TrustsecRestApiPasswordWo = "Cisco123",
+    ///         TrustsecRestApiPasswordWoVersion = 1,
+    ///         TrustsecEnableModePasswordWo = "cisco123",
+    ///         TrustsecEnableModePasswordWoVersion = 1,
+    ///         TrustsecExecModePasswordWo = "cisco123",
+    ///         TrustsecExecModePasswordWoVersion = 1,
     ///         TrustsecExecModeUsername = "user456",
     ///         TrustsecIncludeWhenDeployingSgtUpdates = true,
     ///         TrustsecDownloadEnvironmentDataEveryXSeconds = 1000,
@@ -111,6 +122,8 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// Encryption key
+        ///   - Only one of `AuthenticationEncryptionKey` and `AuthenticationEncryptionKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationEncryptionKeyWo` together with `AuthenticationEncryptionKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("authenticationEncryptionKey")]
         public Output<string?> AuthenticationEncryptionKey { get; private set; } = null!;
@@ -123,10 +136,40 @@ namespace Pulumi.Ise.Network
         public Output<string?> AuthenticationEncryptionKeyFormat { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Encryption key
+        ///   - Only one of `AuthenticationEncryptionKey` and `AuthenticationEncryptionKeyWo` can be set.
+        /// </summary>
+        [Output("authenticationEncryptionKeyWo")]
+        public Output<string?> AuthenticationEncryptionKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("authenticationEncryptionKeyWoVersion")]
+        public Output<int?> AuthenticationEncryptionKeyWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Message authenticator code key
+        ///   - Only one of `AuthenticationMessageAuthenticatorCodeKey` and `AuthenticationMessageAuthenticatorCodeKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationMessageAuthenticatorCodeKeyWo` together with `AuthenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("authenticationMessageAuthenticatorCodeKey")]
         public Output<string?> AuthenticationMessageAuthenticatorCodeKey { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Message authenticator code key
+        ///   - Only one of `AuthenticationMessageAuthenticatorCodeKey` and `AuthenticationMessageAuthenticatorCodeKeyWo` can be set.
+        /// </summary>
+        [Output("authenticationMessageAuthenticatorCodeKeyWo")]
+        public Output<string?> AuthenticationMessageAuthenticatorCodeKeyWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("authenticationMessageAuthenticatorCodeKeyWoVersion")]
+        public Output<int?> AuthenticationMessageAuthenticatorCodeKeyWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Network protocol
@@ -137,15 +180,47 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// RADIUS shared secret
+        ///   - Only one of `AuthenticationRadiusSharedSecret` and `AuthenticationRadiusSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationRadiusSharedSecretWo` together with `AuthenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("authenticationRadiusSharedSecret")]
         public Output<string?> AuthenticationRadiusSharedSecret { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// RADIUS shared secret
+        ///   - Only one of `AuthenticationRadiusSharedSecret` and `AuthenticationRadiusSharedSecretWo` can be set.
+        /// </summary>
+        [Output("authenticationRadiusSharedSecretWo")]
+        public Output<string?> AuthenticationRadiusSharedSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("authenticationRadiusSharedSecretWoVersion")]
+        public Output<int?> AuthenticationRadiusSharedSecretWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// Second RADIUS shared secret
+        ///   - Only one of `AuthenticationSecondRadiusSharedSecret` and `AuthenticationSecondRadiusSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationSecondRadiusSharedSecretWo` together with `AuthenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("authenticationSecondRadiusSharedSecret")]
         public Output<string?> AuthenticationSecondRadiusSharedSecret { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Second RADIUS shared secret
+        ///   - Only one of `AuthenticationSecondRadiusSharedSecret` and `AuthenticationSecondRadiusSharedSecretWo` can be set.
+        /// </summary>
+        [Output("authenticationSecondRadiusSharedSecretWo")]
+        public Output<string?> AuthenticationSecondRadiusSharedSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("authenticationSecondRadiusSharedSecretWoVersion")]
+        public Output<int?> AuthenticationSecondRadiusSharedSecretWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// CoA port
@@ -198,9 +273,25 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Only one of `SnmpAuthPassword` and `SnmpAuthPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SnmpAuthPasswordWo` together with `SnmpAuthPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("snmpAuthPassword")]
         public Output<string?> SnmpAuthPassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Only one of `SnmpAuthPassword` and `SnmpAuthPasswordWo` can be set.
+        /// </summary>
+        [Output("snmpAuthPasswordWo")]
+        public Output<string?> SnmpAuthPasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `SnmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("snmpAuthPasswordWoVersion")]
+        public Output<int?> SnmpAuthPasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
@@ -236,9 +327,25 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        ///   - Only one of `SnmpPrivacyPassword` and `SnmpPrivacyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SnmpPrivacyPasswordWo` together with `SnmpPrivacyPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("snmpPrivacyPassword")]
         public Output<string?> SnmpPrivacyPassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        ///   - Only one of `SnmpPrivacyPassword` and `SnmpPrivacyPasswordWo` can be set.
+        /// </summary>
+        [Output("snmpPrivacyPasswordWo")]
+        public Output<string?> SnmpPrivacyPasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `SnmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("snmpPrivacyPasswordWoVersion")]
+        public Output<int?> SnmpPrivacyPasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
@@ -288,9 +395,25 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// Shared secret
+        ///   - Only one of `TacacsSharedSecret` and `TacacsSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TacacsSharedSecretWo` together with `TacacsSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("tacacsSharedSecret")]
         public Output<string?> TacacsSharedSecret { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Shared secret
+        ///   - Only one of `TacacsSharedSecret` and `TacacsSharedSecretWo` can be set.
+        /// </summary>
+        [Output("tacacsSharedSecretWo")]
+        public Output<string?> TacacsSharedSecretWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `TacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("tacacsSharedSecretWoVersion")]
+        public Output<int?> TacacsSharedSecretWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// CoA source host
@@ -306,9 +429,25 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// TrustSec device password
+        ///   - Only one of `TrustsecDevicePassword` and `TrustsecDevicePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecDevicePasswordWo` together with `TrustsecDevicePasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("trustsecDevicePassword")]
         public Output<string?> TrustsecDevicePassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// TrustSec device password
+        ///   - Only one of `TrustsecDevicePassword` and `TrustsecDevicePasswordWo` can be set.
+        /// </summary>
+        [Output("trustsecDevicePasswordWo")]
+        public Output<string?> TrustsecDevicePasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("trustsecDevicePasswordWoVersion")]
+        public Output<int?> TrustsecDevicePasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Download environment data every X seconds
@@ -330,15 +469,47 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// Enable mode password
+        ///   - Only one of `TrustsecEnableModePassword` and `TrustsecEnableModePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecEnableModePasswordWo` together with `TrustsecEnableModePasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("trustsecEnableModePassword")]
         public Output<string?> TrustsecEnableModePassword { get; private set; } = null!;
 
         /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Enable mode password
+        ///   - Only one of `TrustsecEnableModePassword` and `TrustsecEnableModePasswordWo` can be set.
+        /// </summary>
+        [Output("trustsecEnableModePasswordWo")]
+        public Output<string?> TrustsecEnableModePasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("trustsecEnableModePasswordWoVersion")]
+        public Output<int?> TrustsecEnableModePasswordWoVersion { get; private set; } = null!;
+
+        /// <summary>
         /// EXEC mode password
+        ///   - Only one of `TrustsecExecModePassword` and `TrustsecExecModePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecExecModePasswordWo` together with `TrustsecExecModePasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("trustsecExecModePassword")]
         public Output<string?> TrustsecExecModePassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// EXEC mode password
+        ///   - Only one of `TrustsecExecModePassword` and `TrustsecExecModePasswordWo` can be set.
+        /// </summary>
+        [Output("trustsecExecModePasswordWo")]
+        public Output<string?> TrustsecExecModePasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("trustsecExecModePasswordWoVersion")]
+        public Output<int?> TrustsecExecModePasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// EXEC mode username
@@ -366,9 +537,25 @@ namespace Pulumi.Ise.Network
 
         /// <summary>
         /// REST API password
+        ///   - Only one of `TrustsecRestApiPassword` and `TrustsecRestApiPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecRestApiPasswordWo` together with `TrustsecRestApiPasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("trustsecRestApiPassword")]
         public Output<string?> TrustsecRestApiPassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// REST API password
+        ///   - Only one of `TrustsecRestApiPassword` and `TrustsecRestApiPasswordWo` can be set.
+        /// </summary>
+        [Output("trustsecRestApiPasswordWo")]
+        public Output<string?> TrustsecRestApiPasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("trustsecRestApiPasswordWoVersion")]
+        public Output<int?> TrustsecRestApiPasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// REST API username
@@ -412,6 +599,31 @@ namespace Pulumi.Ise.Network
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "authenticationEncryptionKey",
+                    "authenticationEncryptionKeyWo",
+                    "authenticationMessageAuthenticatorCodeKey",
+                    "authenticationMessageAuthenticatorCodeKeyWo",
+                    "authenticationRadiusSharedSecret",
+                    "authenticationRadiusSharedSecretWo",
+                    "authenticationSecondRadiusSharedSecret",
+                    "authenticationSecondRadiusSharedSecretWo",
+                    "snmpAuthPassword",
+                    "snmpAuthPasswordWo",
+                    "snmpPrivacyPassword",
+                    "snmpPrivacyPasswordWo",
+                    "tacacsSharedSecret",
+                    "tacacsSharedSecretWo",
+                    "trustsecDevicePassword",
+                    "trustsecDevicePasswordWo",
+                    "trustsecEnableModePassword",
+                    "trustsecEnableModePasswordWo",
+                    "trustsecExecModePassword",
+                    "trustsecExecModePasswordWo",
+                    "trustsecRestApiPassword",
+                    "trustsecRestApiPasswordWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -453,11 +665,23 @@ namespace Pulumi.Ise.Network
         [Input("authenticationEnableMultiSecret")]
         public Input<bool>? AuthenticationEnableMultiSecret { get; set; }
 
+        [Input("authenticationEncryptionKey")]
+        private Input<string>? _authenticationEncryptionKey;
+
         /// <summary>
         /// Encryption key
+        ///   - Only one of `AuthenticationEncryptionKey` and `AuthenticationEncryptionKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationEncryptionKeyWo` together with `AuthenticationEncryptionKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationEncryptionKey")]
-        public Input<string>? AuthenticationEncryptionKey { get; set; }
+        public Input<string>? AuthenticationEncryptionKey
+        {
+            get => _authenticationEncryptionKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationEncryptionKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Key input format
@@ -466,11 +690,71 @@ namespace Pulumi.Ise.Network
         [Input("authenticationEncryptionKeyFormat")]
         public Input<string>? AuthenticationEncryptionKeyFormat { get; set; }
 
+        [Input("authenticationEncryptionKeyWo")]
+        private Input<string>? _authenticationEncryptionKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Encryption key
+        ///   - Only one of `AuthenticationEncryptionKey` and `AuthenticationEncryptionKeyWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationEncryptionKeyWo
+        {
+            get => _authenticationEncryptionKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationEncryptionKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationEncryptionKeyWoVersion")]
+        public Input<int>? AuthenticationEncryptionKeyWoVersion { get; set; }
+
+        [Input("authenticationMessageAuthenticatorCodeKey")]
+        private Input<string>? _authenticationMessageAuthenticatorCodeKey;
+
         /// <summary>
         /// Message authenticator code key
+        ///   - Only one of `AuthenticationMessageAuthenticatorCodeKey` and `AuthenticationMessageAuthenticatorCodeKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationMessageAuthenticatorCodeKeyWo` together with `AuthenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationMessageAuthenticatorCodeKey")]
-        public Input<string>? AuthenticationMessageAuthenticatorCodeKey { get; set; }
+        public Input<string>? AuthenticationMessageAuthenticatorCodeKey
+        {
+            get => _authenticationMessageAuthenticatorCodeKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationMessageAuthenticatorCodeKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("authenticationMessageAuthenticatorCodeKeyWo")]
+        private Input<string>? _authenticationMessageAuthenticatorCodeKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Message authenticator code key
+        ///   - Only one of `AuthenticationMessageAuthenticatorCodeKey` and `AuthenticationMessageAuthenticatorCodeKeyWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationMessageAuthenticatorCodeKeyWo
+        {
+            get => _authenticationMessageAuthenticatorCodeKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationMessageAuthenticatorCodeKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationMessageAuthenticatorCodeKeyWoVersion")]
+        public Input<int>? AuthenticationMessageAuthenticatorCodeKeyWoVersion { get; set; }
 
         /// <summary>
         /// Network protocol
@@ -479,17 +763,89 @@ namespace Pulumi.Ise.Network
         [Input("authenticationNetworkProtocol")]
         public Input<string>? AuthenticationNetworkProtocol { get; set; }
 
+        [Input("authenticationRadiusSharedSecret")]
+        private Input<string>? _authenticationRadiusSharedSecret;
+
         /// <summary>
         /// RADIUS shared secret
+        ///   - Only one of `AuthenticationRadiusSharedSecret` and `AuthenticationRadiusSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationRadiusSharedSecretWo` together with `AuthenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationRadiusSharedSecret")]
-        public Input<string>? AuthenticationRadiusSharedSecret { get; set; }
+        public Input<string>? AuthenticationRadiusSharedSecret
+        {
+            get => _authenticationRadiusSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationRadiusSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("authenticationRadiusSharedSecretWo")]
+        private Input<string>? _authenticationRadiusSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// RADIUS shared secret
+        ///   - Only one of `AuthenticationRadiusSharedSecret` and `AuthenticationRadiusSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationRadiusSharedSecretWo
+        {
+            get => _authenticationRadiusSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationRadiusSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationRadiusSharedSecretWoVersion")]
+        public Input<int>? AuthenticationRadiusSharedSecretWoVersion { get; set; }
+
+        [Input("authenticationSecondRadiusSharedSecret")]
+        private Input<string>? _authenticationSecondRadiusSharedSecret;
 
         /// <summary>
         /// Second RADIUS shared secret
+        ///   - Only one of `AuthenticationSecondRadiusSharedSecret` and `AuthenticationSecondRadiusSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationSecondRadiusSharedSecretWo` together with `AuthenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationSecondRadiusSharedSecret")]
-        public Input<string>? AuthenticationSecondRadiusSharedSecret { get; set; }
+        public Input<string>? AuthenticationSecondRadiusSharedSecret
+        {
+            get => _authenticationSecondRadiusSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationSecondRadiusSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("authenticationSecondRadiusSharedSecretWo")]
+        private Input<string>? _authenticationSecondRadiusSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Second RADIUS shared secret
+        ///   - Only one of `AuthenticationSecondRadiusSharedSecret` and `AuthenticationSecondRadiusSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationSecondRadiusSharedSecretWo
+        {
+            get => _authenticationSecondRadiusSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationSecondRadiusSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationSecondRadiusSharedSecretWoVersion")]
+        public Input<int>? AuthenticationSecondRadiusSharedSecretWoVersion { get; set; }
 
         /// <summary>
         /// CoA port
@@ -552,11 +908,47 @@ namespace Pulumi.Ise.Network
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }
 
+        [Input("snmpAuthPassword")]
+        private Input<string>? _snmpAuthPassword;
+
         /// <summary>
         /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Only one of `SnmpAuthPassword` and `SnmpAuthPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SnmpAuthPasswordWo` together with `SnmpAuthPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("snmpAuthPassword")]
-        public Input<string>? SnmpAuthPassword { get; set; }
+        public Input<string>? SnmpAuthPassword
+        {
+            get => _snmpAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("snmpAuthPasswordWo")]
+        private Input<string>? _snmpAuthPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Only one of `SnmpAuthPassword` and `SnmpAuthPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? SnmpAuthPasswordWo
+        {
+            get => _snmpAuthPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpAuthPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SnmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("snmpAuthPasswordWoVersion")]
+        public Input<int>? SnmpAuthPasswordWoVersion { get; set; }
 
         /// <summary>
         /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
@@ -590,11 +982,47 @@ namespace Pulumi.Ise.Network
         [Input("snmpPollingInterval")]
         public Input<int>? SnmpPollingInterval { get; set; }
 
+        [Input("snmpPrivacyPassword")]
+        private Input<string>? _snmpPrivacyPassword;
+
         /// <summary>
         /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        ///   - Only one of `SnmpPrivacyPassword` and `SnmpPrivacyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SnmpPrivacyPasswordWo` together with `SnmpPrivacyPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("snmpPrivacyPassword")]
-        public Input<string>? SnmpPrivacyPassword { get; set; }
+        public Input<string>? SnmpPrivacyPassword
+        {
+            get => _snmpPrivacyPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpPrivacyPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("snmpPrivacyPasswordWo")]
+        private Input<string>? _snmpPrivacyPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        ///   - Only one of `SnmpPrivacyPassword` and `SnmpPrivacyPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? SnmpPrivacyPasswordWo
+        {
+            get => _snmpPrivacyPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpPrivacyPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SnmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("snmpPrivacyPasswordWoVersion")]
+        public Input<int>? SnmpPrivacyPasswordWoVersion { get; set; }
 
         /// <summary>
         /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
@@ -642,11 +1070,47 @@ namespace Pulumi.Ise.Network
         [Input("tacacsConnectModeOptions")]
         public Input<string>? TacacsConnectModeOptions { get; set; }
 
+        [Input("tacacsSharedSecret")]
+        private Input<string>? _tacacsSharedSecret;
+
         /// <summary>
         /// Shared secret
+        ///   - Only one of `TacacsSharedSecret` and `TacacsSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TacacsSharedSecretWo` together with `TacacsSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("tacacsSharedSecret")]
-        public Input<string>? TacacsSharedSecret { get; set; }
+        public Input<string>? TacacsSharedSecret
+        {
+            get => _tacacsSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _tacacsSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("tacacsSharedSecretWo")]
+        private Input<string>? _tacacsSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Shared secret
+        ///   - Only one of `TacacsSharedSecret` and `TacacsSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? TacacsSharedSecretWo
+        {
+            get => _tacacsSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _tacacsSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("tacacsSharedSecretWoVersion")]
+        public Input<int>? TacacsSharedSecretWoVersion { get; set; }
 
         /// <summary>
         /// CoA source host
@@ -660,11 +1124,47 @@ namespace Pulumi.Ise.Network
         [Input("trustsecDeviceId")]
         public Input<string>? TrustsecDeviceId { get; set; }
 
+        [Input("trustsecDevicePassword")]
+        private Input<string>? _trustsecDevicePassword;
+
         /// <summary>
         /// TrustSec device password
+        ///   - Only one of `TrustsecDevicePassword` and `TrustsecDevicePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecDevicePasswordWo` together with `TrustsecDevicePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecDevicePassword")]
-        public Input<string>? TrustsecDevicePassword { get; set; }
+        public Input<string>? TrustsecDevicePassword
+        {
+            get => _trustsecDevicePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecDevicePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecDevicePasswordWo")]
+        private Input<string>? _trustsecDevicePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// TrustSec device password
+        ///   - Only one of `TrustsecDevicePassword` and `TrustsecDevicePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecDevicePasswordWo
+        {
+            get => _trustsecDevicePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecDevicePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecDevicePasswordWoVersion")]
+        public Input<int>? TrustsecDevicePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Download environment data every X seconds
@@ -684,17 +1184,89 @@ namespace Pulumi.Ise.Network
         [Input("trustsecDownloadSgaclListsEveryXSeconds")]
         public Input<int>? TrustsecDownloadSgaclListsEveryXSeconds { get; set; }
 
+        [Input("trustsecEnableModePassword")]
+        private Input<string>? _trustsecEnableModePassword;
+
         /// <summary>
         /// Enable mode password
+        ///   - Only one of `TrustsecEnableModePassword` and `TrustsecEnableModePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecEnableModePasswordWo` together with `TrustsecEnableModePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecEnableModePassword")]
-        public Input<string>? TrustsecEnableModePassword { get; set; }
+        public Input<string>? TrustsecEnableModePassword
+        {
+            get => _trustsecEnableModePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecEnableModePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecEnableModePasswordWo")]
+        private Input<string>? _trustsecEnableModePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Enable mode password
+        ///   - Only one of `TrustsecEnableModePassword` and `TrustsecEnableModePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecEnableModePasswordWo
+        {
+            get => _trustsecEnableModePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecEnableModePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecEnableModePasswordWoVersion")]
+        public Input<int>? TrustsecEnableModePasswordWoVersion { get; set; }
+
+        [Input("trustsecExecModePassword")]
+        private Input<string>? _trustsecExecModePassword;
 
         /// <summary>
         /// EXEC mode password
+        ///   - Only one of `TrustsecExecModePassword` and `TrustsecExecModePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecExecModePasswordWo` together with `TrustsecExecModePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecExecModePassword")]
-        public Input<string>? TrustsecExecModePassword { get; set; }
+        public Input<string>? TrustsecExecModePassword
+        {
+            get => _trustsecExecModePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecExecModePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecExecModePasswordWo")]
+        private Input<string>? _trustsecExecModePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// EXEC mode password
+        ///   - Only one of `TrustsecExecModePassword` and `TrustsecExecModePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecExecModePasswordWo
+        {
+            get => _trustsecExecModePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecExecModePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecExecModePasswordWoVersion")]
+        public Input<int>? TrustsecExecModePasswordWoVersion { get; set; }
 
         /// <summary>
         /// EXEC mode username
@@ -720,11 +1292,47 @@ namespace Pulumi.Ise.Network
         [Input("trustsecReAuthenticationEveryXSeconds")]
         public Input<int>? TrustsecReAuthenticationEveryXSeconds { get; set; }
 
+        [Input("trustsecRestApiPassword")]
+        private Input<string>? _trustsecRestApiPassword;
+
         /// <summary>
         /// REST API password
+        ///   - Only one of `TrustsecRestApiPassword` and `TrustsecRestApiPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecRestApiPasswordWo` together with `TrustsecRestApiPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecRestApiPassword")]
-        public Input<string>? TrustsecRestApiPassword { get; set; }
+        public Input<string>? TrustsecRestApiPassword
+        {
+            get => _trustsecRestApiPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecRestApiPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecRestApiPasswordWo")]
+        private Input<string>? _trustsecRestApiPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// REST API password
+        ///   - Only one of `TrustsecRestApiPassword` and `TrustsecRestApiPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecRestApiPasswordWo
+        {
+            get => _trustsecRestApiPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecRestApiPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecRestApiPasswordWoVersion")]
+        public Input<int>? TrustsecRestApiPasswordWoVersion { get; set; }
 
         /// <summary>
         /// REST API username
@@ -771,11 +1379,23 @@ namespace Pulumi.Ise.Network
         [Input("authenticationEnableMultiSecret")]
         public Input<bool>? AuthenticationEnableMultiSecret { get; set; }
 
+        [Input("authenticationEncryptionKey")]
+        private Input<string>? _authenticationEncryptionKey;
+
         /// <summary>
         /// Encryption key
+        ///   - Only one of `AuthenticationEncryptionKey` and `AuthenticationEncryptionKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationEncryptionKeyWo` together with `AuthenticationEncryptionKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationEncryptionKey")]
-        public Input<string>? AuthenticationEncryptionKey { get; set; }
+        public Input<string>? AuthenticationEncryptionKey
+        {
+            get => _authenticationEncryptionKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationEncryptionKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Key input format
@@ -784,11 +1404,71 @@ namespace Pulumi.Ise.Network
         [Input("authenticationEncryptionKeyFormat")]
         public Input<string>? AuthenticationEncryptionKeyFormat { get; set; }
 
+        [Input("authenticationEncryptionKeyWo")]
+        private Input<string>? _authenticationEncryptionKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Encryption key
+        ///   - Only one of `AuthenticationEncryptionKey` and `AuthenticationEncryptionKeyWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationEncryptionKeyWo
+        {
+            get => _authenticationEncryptionKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationEncryptionKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationEncryptionKeyWoVersion")]
+        public Input<int>? AuthenticationEncryptionKeyWoVersion { get; set; }
+
+        [Input("authenticationMessageAuthenticatorCodeKey")]
+        private Input<string>? _authenticationMessageAuthenticatorCodeKey;
+
         /// <summary>
         /// Message authenticator code key
+        ///   - Only one of `AuthenticationMessageAuthenticatorCodeKey` and `AuthenticationMessageAuthenticatorCodeKeyWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationMessageAuthenticatorCodeKeyWo` together with `AuthenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationMessageAuthenticatorCodeKey")]
-        public Input<string>? AuthenticationMessageAuthenticatorCodeKey { get; set; }
+        public Input<string>? AuthenticationMessageAuthenticatorCodeKey
+        {
+            get => _authenticationMessageAuthenticatorCodeKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationMessageAuthenticatorCodeKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("authenticationMessageAuthenticatorCodeKeyWo")]
+        private Input<string>? _authenticationMessageAuthenticatorCodeKeyWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Message authenticator code key
+        ///   - Only one of `AuthenticationMessageAuthenticatorCodeKey` and `AuthenticationMessageAuthenticatorCodeKeyWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationMessageAuthenticatorCodeKeyWo
+        {
+            get => _authenticationMessageAuthenticatorCodeKeyWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationMessageAuthenticatorCodeKeyWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationMessageAuthenticatorCodeKeyWoVersion")]
+        public Input<int>? AuthenticationMessageAuthenticatorCodeKeyWoVersion { get; set; }
 
         /// <summary>
         /// Network protocol
@@ -797,17 +1477,89 @@ namespace Pulumi.Ise.Network
         [Input("authenticationNetworkProtocol")]
         public Input<string>? AuthenticationNetworkProtocol { get; set; }
 
+        [Input("authenticationRadiusSharedSecret")]
+        private Input<string>? _authenticationRadiusSharedSecret;
+
         /// <summary>
         /// RADIUS shared secret
+        ///   - Only one of `AuthenticationRadiusSharedSecret` and `AuthenticationRadiusSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationRadiusSharedSecretWo` together with `AuthenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationRadiusSharedSecret")]
-        public Input<string>? AuthenticationRadiusSharedSecret { get; set; }
+        public Input<string>? AuthenticationRadiusSharedSecret
+        {
+            get => _authenticationRadiusSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationRadiusSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("authenticationRadiusSharedSecretWo")]
+        private Input<string>? _authenticationRadiusSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// RADIUS shared secret
+        ///   - Only one of `AuthenticationRadiusSharedSecret` and `AuthenticationRadiusSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationRadiusSharedSecretWo
+        {
+            get => _authenticationRadiusSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationRadiusSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationRadiusSharedSecretWoVersion")]
+        public Input<int>? AuthenticationRadiusSharedSecretWoVersion { get; set; }
+
+        [Input("authenticationSecondRadiusSharedSecret")]
+        private Input<string>? _authenticationSecondRadiusSharedSecret;
 
         /// <summary>
         /// Second RADIUS shared secret
+        ///   - Only one of `AuthenticationSecondRadiusSharedSecret` and `AuthenticationSecondRadiusSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `AuthenticationSecondRadiusSharedSecretWo` together with `AuthenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("authenticationSecondRadiusSharedSecret")]
-        public Input<string>? AuthenticationSecondRadiusSharedSecret { get; set; }
+        public Input<string>? AuthenticationSecondRadiusSharedSecret
+        {
+            get => _authenticationSecondRadiusSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationSecondRadiusSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("authenticationSecondRadiusSharedSecretWo")]
+        private Input<string>? _authenticationSecondRadiusSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Second RADIUS shared secret
+        ///   - Only one of `AuthenticationSecondRadiusSharedSecret` and `AuthenticationSecondRadiusSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? AuthenticationSecondRadiusSharedSecretWo
+        {
+            get => _authenticationSecondRadiusSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationSecondRadiusSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `AuthenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("authenticationSecondRadiusSharedSecretWoVersion")]
+        public Input<int>? AuthenticationSecondRadiusSharedSecretWoVersion { get; set; }
 
         /// <summary>
         /// CoA port
@@ -870,11 +1622,47 @@ namespace Pulumi.Ise.Network
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }
 
+        [Input("snmpAuthPassword")]
+        private Input<string>? _snmpAuthPassword;
+
         /// <summary>
         /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Only one of `SnmpAuthPassword` and `SnmpAuthPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SnmpAuthPasswordWo` together with `SnmpAuthPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("snmpAuthPassword")]
-        public Input<string>? SnmpAuthPassword { get; set; }
+        public Input<string>? SnmpAuthPassword
+        {
+            get => _snmpAuthPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpAuthPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("snmpAuthPasswordWo")]
+        private Input<string>? _snmpAuthPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        ///   - Only one of `SnmpAuthPassword` and `SnmpAuthPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? SnmpAuthPasswordWo
+        {
+            get => _snmpAuthPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpAuthPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SnmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("snmpAuthPasswordWoVersion")]
+        public Input<int>? SnmpAuthPasswordWoVersion { get; set; }
 
         /// <summary>
         /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
@@ -908,11 +1696,47 @@ namespace Pulumi.Ise.Network
         [Input("snmpPollingInterval")]
         public Input<int>? SnmpPollingInterval { get; set; }
 
+        [Input("snmpPrivacyPassword")]
+        private Input<string>? _snmpPrivacyPassword;
+
         /// <summary>
         /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        ///   - Only one of `SnmpPrivacyPassword` and `SnmpPrivacyPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `SnmpPrivacyPasswordWo` together with `SnmpPrivacyPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("snmpPrivacyPassword")]
-        public Input<string>? SnmpPrivacyPassword { get; set; }
+        public Input<string>? SnmpPrivacyPassword
+        {
+            get => _snmpPrivacyPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpPrivacyPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("snmpPrivacyPasswordWo")]
+        private Input<string>? _snmpPrivacyPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        ///   - Only one of `SnmpPrivacyPassword` and `SnmpPrivacyPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? SnmpPrivacyPasswordWo
+        {
+            get => _snmpPrivacyPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _snmpPrivacyPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `SnmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("snmpPrivacyPasswordWoVersion")]
+        public Input<int>? SnmpPrivacyPasswordWoVersion { get; set; }
 
         /// <summary>
         /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
@@ -960,11 +1784,47 @@ namespace Pulumi.Ise.Network
         [Input("tacacsConnectModeOptions")]
         public Input<string>? TacacsConnectModeOptions { get; set; }
 
+        [Input("tacacsSharedSecret")]
+        private Input<string>? _tacacsSharedSecret;
+
         /// <summary>
         /// Shared secret
+        ///   - Only one of `TacacsSharedSecret` and `TacacsSharedSecretWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TacacsSharedSecretWo` together with `TacacsSharedSecretWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("tacacsSharedSecret")]
-        public Input<string>? TacacsSharedSecret { get; set; }
+        public Input<string>? TacacsSharedSecret
+        {
+            get => _tacacsSharedSecret;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _tacacsSharedSecret = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("tacacsSharedSecretWo")]
+        private Input<string>? _tacacsSharedSecretWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Shared secret
+        ///   - Only one of `TacacsSharedSecret` and `TacacsSharedSecretWo` can be set.
+        /// </summary>
+        public Input<string>? TacacsSharedSecretWo
+        {
+            get => _tacacsSharedSecretWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _tacacsSharedSecretWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("tacacsSharedSecretWoVersion")]
+        public Input<int>? TacacsSharedSecretWoVersion { get; set; }
 
         /// <summary>
         /// CoA source host
@@ -978,11 +1838,47 @@ namespace Pulumi.Ise.Network
         [Input("trustsecDeviceId")]
         public Input<string>? TrustsecDeviceId { get; set; }
 
+        [Input("trustsecDevicePassword")]
+        private Input<string>? _trustsecDevicePassword;
+
         /// <summary>
         /// TrustSec device password
+        ///   - Only one of `TrustsecDevicePassword` and `TrustsecDevicePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecDevicePasswordWo` together with `TrustsecDevicePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecDevicePassword")]
-        public Input<string>? TrustsecDevicePassword { get; set; }
+        public Input<string>? TrustsecDevicePassword
+        {
+            get => _trustsecDevicePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecDevicePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecDevicePasswordWo")]
+        private Input<string>? _trustsecDevicePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// TrustSec device password
+        ///   - Only one of `TrustsecDevicePassword` and `TrustsecDevicePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecDevicePasswordWo
+        {
+            get => _trustsecDevicePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecDevicePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecDevicePasswordWoVersion")]
+        public Input<int>? TrustsecDevicePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Download environment data every X seconds
@@ -1002,17 +1898,89 @@ namespace Pulumi.Ise.Network
         [Input("trustsecDownloadSgaclListsEveryXSeconds")]
         public Input<int>? TrustsecDownloadSgaclListsEveryXSeconds { get; set; }
 
+        [Input("trustsecEnableModePassword")]
+        private Input<string>? _trustsecEnableModePassword;
+
         /// <summary>
         /// Enable mode password
+        ///   - Only one of `TrustsecEnableModePassword` and `TrustsecEnableModePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecEnableModePasswordWo` together with `TrustsecEnableModePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecEnableModePassword")]
-        public Input<string>? TrustsecEnableModePassword { get; set; }
+        public Input<string>? TrustsecEnableModePassword
+        {
+            get => _trustsecEnableModePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecEnableModePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecEnableModePasswordWo")]
+        private Input<string>? _trustsecEnableModePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Enable mode password
+        ///   - Only one of `TrustsecEnableModePassword` and `TrustsecEnableModePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecEnableModePasswordWo
+        {
+            get => _trustsecEnableModePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecEnableModePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecEnableModePasswordWoVersion")]
+        public Input<int>? TrustsecEnableModePasswordWoVersion { get; set; }
+
+        [Input("trustsecExecModePassword")]
+        private Input<string>? _trustsecExecModePassword;
 
         /// <summary>
         /// EXEC mode password
+        ///   - Only one of `TrustsecExecModePassword` and `TrustsecExecModePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecExecModePasswordWo` together with `TrustsecExecModePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecExecModePassword")]
-        public Input<string>? TrustsecExecModePassword { get; set; }
+        public Input<string>? TrustsecExecModePassword
+        {
+            get => _trustsecExecModePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecExecModePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecExecModePasswordWo")]
+        private Input<string>? _trustsecExecModePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// EXEC mode password
+        ///   - Only one of `TrustsecExecModePassword` and `TrustsecExecModePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecExecModePasswordWo
+        {
+            get => _trustsecExecModePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecExecModePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecExecModePasswordWoVersion")]
+        public Input<int>? TrustsecExecModePasswordWoVersion { get; set; }
 
         /// <summary>
         /// EXEC mode username
@@ -1038,11 +2006,47 @@ namespace Pulumi.Ise.Network
         [Input("trustsecReAuthenticationEveryXSeconds")]
         public Input<int>? TrustsecReAuthenticationEveryXSeconds { get; set; }
 
+        [Input("trustsecRestApiPassword")]
+        private Input<string>? _trustsecRestApiPassword;
+
         /// <summary>
         /// REST API password
+        ///   - Only one of `TrustsecRestApiPassword` and `TrustsecRestApiPasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `TrustsecRestApiPasswordWo` together with `TrustsecRestApiPasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("trustsecRestApiPassword")]
-        public Input<string>? TrustsecRestApiPassword { get; set; }
+        public Input<string>? TrustsecRestApiPassword
+        {
+            get => _trustsecRestApiPassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecRestApiPassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("trustsecRestApiPasswordWo")]
+        private Input<string>? _trustsecRestApiPasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// REST API password
+        ///   - Only one of `TrustsecRestApiPassword` and `TrustsecRestApiPasswordWo` can be set.
+        /// </summary>
+        public Input<string>? TrustsecRestApiPasswordWo
+        {
+            get => _trustsecRestApiPasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _trustsecRestApiPasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `TrustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("trustsecRestApiPasswordWoVersion")]
+        public Input<int>? TrustsecRestApiPasswordWoVersion { get; set; }
 
         /// <summary>
         /// REST API username

@@ -146,6 +146,14 @@ namespace Pulumi.Ise.System
         /// </summary>
         public readonly string Password;
         /// <summary>
+        /// Password can contain alphanumeric and/or special characters.
+        /// </summary>
+        public readonly string PasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PasswordWoVersion;
+        /// <summary>
         /// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
         /// </summary>
         public readonly string Path;
@@ -172,6 +180,10 @@ namespace Pulumi.Ise.System
 
             string password,
 
+            string passwordWo,
+
+            int passwordWoVersion,
+
             string path,
 
             string protocol,
@@ -184,6 +196,8 @@ namespace Pulumi.Ise.System
             Id = id;
             Name = name;
             Password = password;
+            PasswordWo = passwordWo;
+            PasswordWoVersion = passwordWoVersion;
             Path = path;
             Protocol = protocol;
             ServerName = serverName;

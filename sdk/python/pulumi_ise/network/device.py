@@ -27,10 +27,18 @@ class DeviceArgs:
                  authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
                  authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  coa_port: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -39,12 +47,16 @@ class DeviceArgs:
                  network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
@@ -53,19 +65,29 @@ class DeviceArgs:
                  software_version: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None):
@@ -77,13 +99,37 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
                  - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_encryption_key_wo_version: Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_message_authenticator_code_key_wo_version: Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
                  - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_radius_shared_secret_wo_version: Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_second_radius_shared_secret_wo_version: Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] coa_port: CoA port
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
@@ -93,6 +139,12 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
         :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_auth_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_auth_password_wo_version: Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
                  - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
@@ -101,6 +153,12 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_privacy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_privacy_password_wo_version: Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
@@ -113,19 +171,49 @@ class DeviceArgs:
         :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
                  - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] tacacs_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] tacacs_shared_secret_wo_version: Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[_builtins.str] trustsec_device_password: TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_device_password_wo_version: Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[_builtins.str] trustsec_enable_mode_password: Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_enable_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_enable_mode_password_wo_version: Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_password: EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_exec_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_exec_mode_password_wo_version: Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_username: EXEC mode username
         :param pulumi.Input[_builtins.bool] trustsec_include_when_deploying_sgt_updates: Include this device when deploying Security Group Tag Mapping Updates
         :param pulumi.Input[_builtins.bool] trustsec_other_sga_devices_to_trust_this_device: Other TrustSec devices to trust this device
         :param pulumi.Input[_builtins.int] trustsec_re_authentication_every_x_seconds: Re-authenticate every X seconds
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_rest_api_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_rest_api_password_wo_version: Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
         :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
@@ -142,14 +230,30 @@ class DeviceArgs:
             pulumi.set(__self__, "authentication_encryption_key", authentication_encryption_key)
         if authentication_encryption_key_format is not None:
             pulumi.set(__self__, "authentication_encryption_key_format", authentication_encryption_key_format)
+        if authentication_encryption_key_wo is not None:
+            pulumi.set(__self__, "authentication_encryption_key_wo", authentication_encryption_key_wo)
+        if authentication_encryption_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_encryption_key_wo_version", authentication_encryption_key_wo_version)
         if authentication_message_authenticator_code_key is not None:
             pulumi.set(__self__, "authentication_message_authenticator_code_key", authentication_message_authenticator_code_key)
+        if authentication_message_authenticator_code_key_wo is not None:
+            pulumi.set(__self__, "authentication_message_authenticator_code_key_wo", authentication_message_authenticator_code_key_wo)
+        if authentication_message_authenticator_code_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_message_authenticator_code_key_wo_version", authentication_message_authenticator_code_key_wo_version)
         if authentication_network_protocol is not None:
             pulumi.set(__self__, "authentication_network_protocol", authentication_network_protocol)
         if authentication_radius_shared_secret is not None:
             pulumi.set(__self__, "authentication_radius_shared_secret", authentication_radius_shared_secret)
+        if authentication_radius_shared_secret_wo is not None:
+            pulumi.set(__self__, "authentication_radius_shared_secret_wo", authentication_radius_shared_secret_wo)
+        if authentication_radius_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "authentication_radius_shared_secret_wo_version", authentication_radius_shared_secret_wo_version)
         if authentication_second_radius_shared_secret is not None:
             pulumi.set(__self__, "authentication_second_radius_shared_secret", authentication_second_radius_shared_secret)
+        if authentication_second_radius_shared_secret_wo is not None:
+            pulumi.set(__self__, "authentication_second_radius_shared_secret_wo", authentication_second_radius_shared_secret_wo)
+        if authentication_second_radius_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "authentication_second_radius_shared_secret_wo_version", authentication_second_radius_shared_secret_wo_version)
         if coa_port is not None:
             pulumi.set(__self__, "coa_port", coa_port)
         if description is not None:
@@ -166,6 +270,10 @@ class DeviceArgs:
             pulumi.set(__self__, "profile_name", profile_name)
         if snmp_auth_password is not None:
             pulumi.set(__self__, "snmp_auth_password", snmp_auth_password)
+        if snmp_auth_password_wo is not None:
+            pulumi.set(__self__, "snmp_auth_password_wo", snmp_auth_password_wo)
+        if snmp_auth_password_wo_version is not None:
+            pulumi.set(__self__, "snmp_auth_password_wo_version", snmp_auth_password_wo_version)
         if snmp_auth_protocol is not None:
             pulumi.set(__self__, "snmp_auth_protocol", snmp_auth_protocol)
         if snmp_link_trap_query is not None:
@@ -178,6 +286,10 @@ class DeviceArgs:
             pulumi.set(__self__, "snmp_polling_interval", snmp_polling_interval)
         if snmp_privacy_password is not None:
             pulumi.set(__self__, "snmp_privacy_password", snmp_privacy_password)
+        if snmp_privacy_password_wo is not None:
+            pulumi.set(__self__, "snmp_privacy_password_wo", snmp_privacy_password_wo)
+        if snmp_privacy_password_wo_version is not None:
+            pulumi.set(__self__, "snmp_privacy_password_wo_version", snmp_privacy_password_wo_version)
         if snmp_privacy_protocol is not None:
             pulumi.set(__self__, "snmp_privacy_protocol", snmp_privacy_protocol)
         if snmp_ro_community is not None:
@@ -194,12 +306,20 @@ class DeviceArgs:
             pulumi.set(__self__, "tacacs_connect_mode_options", tacacs_connect_mode_options)
         if tacacs_shared_secret is not None:
             pulumi.set(__self__, "tacacs_shared_secret", tacacs_shared_secret)
+        if tacacs_shared_secret_wo is not None:
+            pulumi.set(__self__, "tacacs_shared_secret_wo", tacacs_shared_secret_wo)
+        if tacacs_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "tacacs_shared_secret_wo_version", tacacs_shared_secret_wo_version)
         if trustsec_coa_source_host is not None:
             pulumi.set(__self__, "trustsec_coa_source_host", trustsec_coa_source_host)
         if trustsec_device_id is not None:
             pulumi.set(__self__, "trustsec_device_id", trustsec_device_id)
         if trustsec_device_password is not None:
             pulumi.set(__self__, "trustsec_device_password", trustsec_device_password)
+        if trustsec_device_password_wo is not None:
+            pulumi.set(__self__, "trustsec_device_password_wo", trustsec_device_password_wo)
+        if trustsec_device_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_device_password_wo_version", trustsec_device_password_wo_version)
         if trustsec_download_environment_data_every_x_seconds is not None:
             pulumi.set(__self__, "trustsec_download_environment_data_every_x_seconds", trustsec_download_environment_data_every_x_seconds)
         if trustsec_download_peer_authorization_policy_every_x_seconds is not None:
@@ -208,8 +328,16 @@ class DeviceArgs:
             pulumi.set(__self__, "trustsec_download_sgacl_lists_every_x_seconds", trustsec_download_sgacl_lists_every_x_seconds)
         if trustsec_enable_mode_password is not None:
             pulumi.set(__self__, "trustsec_enable_mode_password", trustsec_enable_mode_password)
+        if trustsec_enable_mode_password_wo is not None:
+            pulumi.set(__self__, "trustsec_enable_mode_password_wo", trustsec_enable_mode_password_wo)
+        if trustsec_enable_mode_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_enable_mode_password_wo_version", trustsec_enable_mode_password_wo_version)
         if trustsec_exec_mode_password is not None:
             pulumi.set(__self__, "trustsec_exec_mode_password", trustsec_exec_mode_password)
+        if trustsec_exec_mode_password_wo is not None:
+            pulumi.set(__self__, "trustsec_exec_mode_password_wo", trustsec_exec_mode_password_wo)
+        if trustsec_exec_mode_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_exec_mode_password_wo_version", trustsec_exec_mode_password_wo_version)
         if trustsec_exec_mode_username is not None:
             pulumi.set(__self__, "trustsec_exec_mode_username", trustsec_exec_mode_username)
         if trustsec_include_when_deploying_sgt_updates is not None:
@@ -220,6 +348,10 @@ class DeviceArgs:
             pulumi.set(__self__, "trustsec_re_authentication_every_x_seconds", trustsec_re_authentication_every_x_seconds)
         if trustsec_rest_api_password is not None:
             pulumi.set(__self__, "trustsec_rest_api_password", trustsec_rest_api_password)
+        if trustsec_rest_api_password_wo is not None:
+            pulumi.set(__self__, "trustsec_rest_api_password_wo", trustsec_rest_api_password_wo)
+        if trustsec_rest_api_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_rest_api_password_wo_version", trustsec_rest_api_password_wo_version)
         if trustsec_rest_api_username is not None:
             pulumi.set(__self__, "trustsec_rest_api_username", trustsec_rest_api_username)
         if trustsec_send_configuration_to_device is not None:
@@ -280,6 +412,8 @@ class DeviceArgs:
     def authentication_encryption_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Encryption key
+          - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_encryption_key")
 
@@ -301,16 +435,70 @@ class DeviceArgs:
         pulumi.set(self, "authentication_encryption_key_format", value)
 
     @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWo")
+    def authentication_encryption_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Encryption key
+          - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo")
+
+    @authentication_encryption_key_wo.setter
+    def authentication_encryption_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_encryption_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWoVersion")
+    def authentication_encryption_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo_version")
+
+    @authentication_encryption_key_wo_version.setter
+    def authentication_encryption_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_encryption_key_wo_version", value)
+
+    @_builtins.property
     @pulumi.getter(name="authenticationMessageAuthenticatorCodeKey")
     def authentication_message_authenticator_code_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Message authenticator code key
+          - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_message_authenticator_code_key")
 
     @authentication_message_authenticator_code_key.setter
     def authentication_message_authenticator_code_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_message_authenticator_code_key", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWo")
+    def authentication_message_authenticator_code_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Message authenticator code key
+          - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo")
+
+    @authentication_message_authenticator_code_key_wo.setter
+    def authentication_message_authenticator_code_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_message_authenticator_code_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWoVersion")
+    def authentication_message_authenticator_code_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo_version")
+
+    @authentication_message_authenticator_code_key_wo_version.setter
+    def authentication_message_authenticator_code_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_message_authenticator_code_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationNetworkProtocol")
@@ -330,6 +518,8 @@ class DeviceArgs:
     def authentication_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RADIUS shared secret
+          - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_radius_shared_secret")
 
@@ -338,16 +528,70 @@ class DeviceArgs:
         pulumi.set(self, "authentication_radius_shared_secret", value)
 
     @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWo")
+    def authentication_radius_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        RADIUS shared secret
+          - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo")
+
+    @authentication_radius_shared_secret_wo.setter
+    def authentication_radius_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_radius_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWoVersion")
+    def authentication_radius_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo_version")
+
+    @authentication_radius_shared_secret_wo_version.setter
+    def authentication_radius_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_radius_shared_secret_wo_version", value)
+
+    @_builtins.property
     @pulumi.getter(name="authenticationSecondRadiusSharedSecret")
     def authentication_second_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Second RADIUS shared secret
+          - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_second_radius_shared_secret")
 
     @authentication_second_radius_shared_secret.setter
     def authentication_second_radius_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_second_radius_shared_secret", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWo")
+    def authentication_second_radius_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Second RADIUS shared secret
+          - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo")
+
+    @authentication_second_radius_shared_secret_wo.setter
+    def authentication_second_radius_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_second_radius_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWoVersion")
+    def authentication_second_radius_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo_version")
+
+    @authentication_second_radius_shared_secret_wo_version.setter
+    def authentication_second_radius_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_second_radius_shared_secret_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
@@ -439,12 +683,40 @@ class DeviceArgs:
     def snmp_auth_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "snmp_auth_password")
 
     @snmp_auth_password.setter
     def snmp_auth_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_auth_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWo")
+    def snmp_auth_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo")
+
+    @snmp_auth_password_wo.setter
+    def snmp_auth_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "snmp_auth_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWoVersion")
+    def snmp_auth_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo_version")
+
+    @snmp_auth_password_wo_version.setter
+    def snmp_auth_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "snmp_auth_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthProtocol")
@@ -513,12 +785,40 @@ class DeviceArgs:
     def snmp_privacy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+          - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "snmp_privacy_password")
 
     @snmp_privacy_password.setter
     def snmp_privacy_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_privacy_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWo")
+    def snmp_privacy_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+          - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo")
+
+    @snmp_privacy_password_wo.setter
+    def snmp_privacy_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "snmp_privacy_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWoVersion")
+    def snmp_privacy_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo_version")
+
+    @snmp_privacy_password_wo_version.setter
+    def snmp_privacy_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "snmp_privacy_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyProtocol")
@@ -613,12 +913,40 @@ class DeviceArgs:
     def tacacs_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Shared secret
+          - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "tacacs_shared_secret")
 
     @tacacs_shared_secret.setter
     def tacacs_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tacacs_shared_secret", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWo")
+    def tacacs_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Shared secret
+          - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo")
+
+    @tacacs_shared_secret_wo.setter
+    def tacacs_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tacacs_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWoVersion")
+    def tacacs_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo_version")
+
+    @tacacs_shared_secret_wo_version.setter
+    def tacacs_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "tacacs_shared_secret_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecCoaSourceHost")
@@ -649,12 +977,40 @@ class DeviceArgs:
     def trustsec_device_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec device password
+          - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_device_password")
 
     @trustsec_device_password.setter
     def trustsec_device_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_device_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWo")
+    def trustsec_device_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        TrustSec device password
+          - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo")
+
+    @trustsec_device_password_wo.setter
+    def trustsec_device_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_device_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWoVersion")
+    def trustsec_device_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo_version")
+
+    @trustsec_device_password_wo_version.setter
+    def trustsec_device_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_device_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
@@ -697,6 +1053,8 @@ class DeviceArgs:
     def trustsec_enable_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable mode password
+          - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_enable_mode_password")
 
@@ -705,16 +1063,70 @@ class DeviceArgs:
         pulumi.set(self, "trustsec_enable_mode_password", value)
 
     @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWo")
+    def trustsec_enable_mode_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Enable mode password
+          - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo")
+
+    @trustsec_enable_mode_password_wo.setter
+    def trustsec_enable_mode_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_enable_mode_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWoVersion")
+    def trustsec_enable_mode_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo_version")
+
+    @trustsec_enable_mode_password_wo_version.setter
+    def trustsec_enable_mode_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_enable_mode_password_wo_version", value)
+
+    @_builtins.property
     @pulumi.getter(name="trustsecExecModePassword")
     def trustsec_exec_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         EXEC mode password
+          - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_exec_mode_password")
 
     @trustsec_exec_mode_password.setter
     def trustsec_exec_mode_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_exec_mode_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWo")
+    def trustsec_exec_mode_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        EXEC mode password
+          - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo")
+
+    @trustsec_exec_mode_password_wo.setter
+    def trustsec_exec_mode_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_exec_mode_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWoVersion")
+    def trustsec_exec_mode_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo_version")
+
+    @trustsec_exec_mode_password_wo_version.setter
+    def trustsec_exec_mode_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_exec_mode_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModeUsername")
@@ -769,12 +1181,40 @@ class DeviceArgs:
     def trustsec_rest_api_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         REST API password
+          - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_rest_api_password")
 
     @trustsec_rest_api_password.setter
     def trustsec_rest_api_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_rest_api_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWo")
+    def trustsec_rest_api_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        REST API password
+          - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo")
+
+    @trustsec_rest_api_password_wo.setter
+    def trustsec_rest_api_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_rest_api_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWoVersion")
+    def trustsec_rest_api_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo_version")
+
+    @trustsec_rest_api_password_wo_version.setter
+    def trustsec_rest_api_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_rest_api_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiUsername")
@@ -822,10 +1262,18 @@ class _DeviceState:
                  authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
                  authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  coa_port: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -835,12 +1283,16 @@ class _DeviceState:
                  network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
@@ -849,19 +1301,29 @@ class _DeviceState:
                  software_version: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None):
@@ -872,13 +1334,37 @@ class _DeviceState:
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
                  - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_encryption_key_wo_version: Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_message_authenticator_code_key_wo_version: Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
                  - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_radius_shared_secret_wo_version: Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_second_radius_shared_secret_wo_version: Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] coa_port: CoA port
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
@@ -889,6 +1375,12 @@ class _DeviceState:
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
         :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_auth_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_auth_password_wo_version: Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
                  - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
@@ -897,6 +1389,12 @@ class _DeviceState:
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_privacy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_privacy_password_wo_version: Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
@@ -909,19 +1407,49 @@ class _DeviceState:
         :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
                  - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] tacacs_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] tacacs_shared_secret_wo_version: Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[_builtins.str] trustsec_device_password: TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_device_password_wo_version: Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[_builtins.str] trustsec_enable_mode_password: Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_enable_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_enable_mode_password_wo_version: Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_password: EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_exec_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_exec_mode_password_wo_version: Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_username: EXEC mode username
         :param pulumi.Input[_builtins.bool] trustsec_include_when_deploying_sgt_updates: Include this device when deploying Security Group Tag Mapping Updates
         :param pulumi.Input[_builtins.bool] trustsec_other_sga_devices_to_trust_this_device: Other TrustSec devices to trust this device
         :param pulumi.Input[_builtins.int] trustsec_re_authentication_every_x_seconds: Re-authenticate every X seconds
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_rest_api_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_rest_api_password_wo_version: Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
         :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
@@ -937,14 +1465,30 @@ class _DeviceState:
             pulumi.set(__self__, "authentication_encryption_key", authentication_encryption_key)
         if authentication_encryption_key_format is not None:
             pulumi.set(__self__, "authentication_encryption_key_format", authentication_encryption_key_format)
+        if authentication_encryption_key_wo is not None:
+            pulumi.set(__self__, "authentication_encryption_key_wo", authentication_encryption_key_wo)
+        if authentication_encryption_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_encryption_key_wo_version", authentication_encryption_key_wo_version)
         if authentication_message_authenticator_code_key is not None:
             pulumi.set(__self__, "authentication_message_authenticator_code_key", authentication_message_authenticator_code_key)
+        if authentication_message_authenticator_code_key_wo is not None:
+            pulumi.set(__self__, "authentication_message_authenticator_code_key_wo", authentication_message_authenticator_code_key_wo)
+        if authentication_message_authenticator_code_key_wo_version is not None:
+            pulumi.set(__self__, "authentication_message_authenticator_code_key_wo_version", authentication_message_authenticator_code_key_wo_version)
         if authentication_network_protocol is not None:
             pulumi.set(__self__, "authentication_network_protocol", authentication_network_protocol)
         if authentication_radius_shared_secret is not None:
             pulumi.set(__self__, "authentication_radius_shared_secret", authentication_radius_shared_secret)
+        if authentication_radius_shared_secret_wo is not None:
+            pulumi.set(__self__, "authentication_radius_shared_secret_wo", authentication_radius_shared_secret_wo)
+        if authentication_radius_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "authentication_radius_shared_secret_wo_version", authentication_radius_shared_secret_wo_version)
         if authentication_second_radius_shared_secret is not None:
             pulumi.set(__self__, "authentication_second_radius_shared_secret", authentication_second_radius_shared_secret)
+        if authentication_second_radius_shared_secret_wo is not None:
+            pulumi.set(__self__, "authentication_second_radius_shared_secret_wo", authentication_second_radius_shared_secret_wo)
+        if authentication_second_radius_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "authentication_second_radius_shared_secret_wo_version", authentication_second_radius_shared_secret_wo_version)
         if coa_port is not None:
             pulumi.set(__self__, "coa_port", coa_port)
         if description is not None:
@@ -963,6 +1507,10 @@ class _DeviceState:
             pulumi.set(__self__, "profile_name", profile_name)
         if snmp_auth_password is not None:
             pulumi.set(__self__, "snmp_auth_password", snmp_auth_password)
+        if snmp_auth_password_wo is not None:
+            pulumi.set(__self__, "snmp_auth_password_wo", snmp_auth_password_wo)
+        if snmp_auth_password_wo_version is not None:
+            pulumi.set(__self__, "snmp_auth_password_wo_version", snmp_auth_password_wo_version)
         if snmp_auth_protocol is not None:
             pulumi.set(__self__, "snmp_auth_protocol", snmp_auth_protocol)
         if snmp_link_trap_query is not None:
@@ -975,6 +1523,10 @@ class _DeviceState:
             pulumi.set(__self__, "snmp_polling_interval", snmp_polling_interval)
         if snmp_privacy_password is not None:
             pulumi.set(__self__, "snmp_privacy_password", snmp_privacy_password)
+        if snmp_privacy_password_wo is not None:
+            pulumi.set(__self__, "snmp_privacy_password_wo", snmp_privacy_password_wo)
+        if snmp_privacy_password_wo_version is not None:
+            pulumi.set(__self__, "snmp_privacy_password_wo_version", snmp_privacy_password_wo_version)
         if snmp_privacy_protocol is not None:
             pulumi.set(__self__, "snmp_privacy_protocol", snmp_privacy_protocol)
         if snmp_ro_community is not None:
@@ -991,12 +1543,20 @@ class _DeviceState:
             pulumi.set(__self__, "tacacs_connect_mode_options", tacacs_connect_mode_options)
         if tacacs_shared_secret is not None:
             pulumi.set(__self__, "tacacs_shared_secret", tacacs_shared_secret)
+        if tacacs_shared_secret_wo is not None:
+            pulumi.set(__self__, "tacacs_shared_secret_wo", tacacs_shared_secret_wo)
+        if tacacs_shared_secret_wo_version is not None:
+            pulumi.set(__self__, "tacacs_shared_secret_wo_version", tacacs_shared_secret_wo_version)
         if trustsec_coa_source_host is not None:
             pulumi.set(__self__, "trustsec_coa_source_host", trustsec_coa_source_host)
         if trustsec_device_id is not None:
             pulumi.set(__self__, "trustsec_device_id", trustsec_device_id)
         if trustsec_device_password is not None:
             pulumi.set(__self__, "trustsec_device_password", trustsec_device_password)
+        if trustsec_device_password_wo is not None:
+            pulumi.set(__self__, "trustsec_device_password_wo", trustsec_device_password_wo)
+        if trustsec_device_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_device_password_wo_version", trustsec_device_password_wo_version)
         if trustsec_download_environment_data_every_x_seconds is not None:
             pulumi.set(__self__, "trustsec_download_environment_data_every_x_seconds", trustsec_download_environment_data_every_x_seconds)
         if trustsec_download_peer_authorization_policy_every_x_seconds is not None:
@@ -1005,8 +1565,16 @@ class _DeviceState:
             pulumi.set(__self__, "trustsec_download_sgacl_lists_every_x_seconds", trustsec_download_sgacl_lists_every_x_seconds)
         if trustsec_enable_mode_password is not None:
             pulumi.set(__self__, "trustsec_enable_mode_password", trustsec_enable_mode_password)
+        if trustsec_enable_mode_password_wo is not None:
+            pulumi.set(__self__, "trustsec_enable_mode_password_wo", trustsec_enable_mode_password_wo)
+        if trustsec_enable_mode_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_enable_mode_password_wo_version", trustsec_enable_mode_password_wo_version)
         if trustsec_exec_mode_password is not None:
             pulumi.set(__self__, "trustsec_exec_mode_password", trustsec_exec_mode_password)
+        if trustsec_exec_mode_password_wo is not None:
+            pulumi.set(__self__, "trustsec_exec_mode_password_wo", trustsec_exec_mode_password_wo)
+        if trustsec_exec_mode_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_exec_mode_password_wo_version", trustsec_exec_mode_password_wo_version)
         if trustsec_exec_mode_username is not None:
             pulumi.set(__self__, "trustsec_exec_mode_username", trustsec_exec_mode_username)
         if trustsec_include_when_deploying_sgt_updates is not None:
@@ -1017,6 +1585,10 @@ class _DeviceState:
             pulumi.set(__self__, "trustsec_re_authentication_every_x_seconds", trustsec_re_authentication_every_x_seconds)
         if trustsec_rest_api_password is not None:
             pulumi.set(__self__, "trustsec_rest_api_password", trustsec_rest_api_password)
+        if trustsec_rest_api_password_wo is not None:
+            pulumi.set(__self__, "trustsec_rest_api_password_wo", trustsec_rest_api_password_wo)
+        if trustsec_rest_api_password_wo_version is not None:
+            pulumi.set(__self__, "trustsec_rest_api_password_wo_version", trustsec_rest_api_password_wo_version)
         if trustsec_rest_api_username is not None:
             pulumi.set(__self__, "trustsec_rest_api_username", trustsec_rest_api_username)
         if trustsec_send_configuration_to_device is not None:
@@ -1065,6 +1637,8 @@ class _DeviceState:
     def authentication_encryption_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Encryption key
+          - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_encryption_key")
 
@@ -1086,16 +1660,70 @@ class _DeviceState:
         pulumi.set(self, "authentication_encryption_key_format", value)
 
     @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWo")
+    def authentication_encryption_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Encryption key
+          - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo")
+
+    @authentication_encryption_key_wo.setter
+    def authentication_encryption_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_encryption_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWoVersion")
+    def authentication_encryption_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo_version")
+
+    @authentication_encryption_key_wo_version.setter
+    def authentication_encryption_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_encryption_key_wo_version", value)
+
+    @_builtins.property
     @pulumi.getter(name="authenticationMessageAuthenticatorCodeKey")
     def authentication_message_authenticator_code_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Message authenticator code key
+          - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_message_authenticator_code_key")
 
     @authentication_message_authenticator_code_key.setter
     def authentication_message_authenticator_code_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_message_authenticator_code_key", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWo")
+    def authentication_message_authenticator_code_key_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Message authenticator code key
+          - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo")
+
+    @authentication_message_authenticator_code_key_wo.setter
+    def authentication_message_authenticator_code_key_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_message_authenticator_code_key_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWoVersion")
+    def authentication_message_authenticator_code_key_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo_version")
+
+    @authentication_message_authenticator_code_key_wo_version.setter
+    def authentication_message_authenticator_code_key_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_message_authenticator_code_key_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationNetworkProtocol")
@@ -1115,6 +1743,8 @@ class _DeviceState:
     def authentication_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RADIUS shared secret
+          - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_radius_shared_secret")
 
@@ -1123,16 +1753,70 @@ class _DeviceState:
         pulumi.set(self, "authentication_radius_shared_secret", value)
 
     @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWo")
+    def authentication_radius_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        RADIUS shared secret
+          - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo")
+
+    @authentication_radius_shared_secret_wo.setter
+    def authentication_radius_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_radius_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWoVersion")
+    def authentication_radius_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo_version")
+
+    @authentication_radius_shared_secret_wo_version.setter
+    def authentication_radius_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_radius_shared_secret_wo_version", value)
+
+    @_builtins.property
     @pulumi.getter(name="authenticationSecondRadiusSharedSecret")
     def authentication_second_radius_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Second RADIUS shared secret
+          - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_second_radius_shared_secret")
 
     @authentication_second_radius_shared_secret.setter
     def authentication_second_radius_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_second_radius_shared_secret", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWo")
+    def authentication_second_radius_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Second RADIUS shared secret
+          - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo")
+
+    @authentication_second_radius_shared_secret_wo.setter
+    def authentication_second_radius_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "authentication_second_radius_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWoVersion")
+    def authentication_second_radius_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo_version")
+
+    @authentication_second_radius_shared_secret_wo_version.setter
+    def authentication_second_radius_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "authentication_second_radius_shared_secret_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
@@ -1236,12 +1920,40 @@ class _DeviceState:
     def snmp_auth_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "snmp_auth_password")
 
     @snmp_auth_password.setter
     def snmp_auth_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_auth_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWo")
+    def snmp_auth_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo")
+
+    @snmp_auth_password_wo.setter
+    def snmp_auth_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "snmp_auth_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWoVersion")
+    def snmp_auth_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo_version")
+
+    @snmp_auth_password_wo_version.setter
+    def snmp_auth_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "snmp_auth_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthProtocol")
@@ -1310,12 +2022,40 @@ class _DeviceState:
     def snmp_privacy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+          - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "snmp_privacy_password")
 
     @snmp_privacy_password.setter
     def snmp_privacy_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_privacy_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWo")
+    def snmp_privacy_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+          - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo")
+
+    @snmp_privacy_password_wo.setter
+    def snmp_privacy_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "snmp_privacy_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWoVersion")
+    def snmp_privacy_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo_version")
+
+    @snmp_privacy_password_wo_version.setter
+    def snmp_privacy_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "snmp_privacy_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyProtocol")
@@ -1410,12 +2150,40 @@ class _DeviceState:
     def tacacs_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Shared secret
+          - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "tacacs_shared_secret")
 
     @tacacs_shared_secret.setter
     def tacacs_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tacacs_shared_secret", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWo")
+    def tacacs_shared_secret_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Shared secret
+          - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo")
+
+    @tacacs_shared_secret_wo.setter
+    def tacacs_shared_secret_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tacacs_shared_secret_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWoVersion")
+    def tacacs_shared_secret_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo_version")
+
+    @tacacs_shared_secret_wo_version.setter
+    def tacacs_shared_secret_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "tacacs_shared_secret_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecCoaSourceHost")
@@ -1446,12 +2214,40 @@ class _DeviceState:
     def trustsec_device_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TrustSec device password
+          - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_device_password")
 
     @trustsec_device_password.setter
     def trustsec_device_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_device_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWo")
+    def trustsec_device_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        TrustSec device password
+          - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo")
+
+    @trustsec_device_password_wo.setter
+    def trustsec_device_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_device_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWoVersion")
+    def trustsec_device_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo_version")
+
+    @trustsec_device_password_wo_version.setter
+    def trustsec_device_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_device_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
@@ -1494,6 +2290,8 @@ class _DeviceState:
     def trustsec_enable_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable mode password
+          - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_enable_mode_password")
 
@@ -1502,16 +2300,70 @@ class _DeviceState:
         pulumi.set(self, "trustsec_enable_mode_password", value)
 
     @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWo")
+    def trustsec_enable_mode_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Enable mode password
+          - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo")
+
+    @trustsec_enable_mode_password_wo.setter
+    def trustsec_enable_mode_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_enable_mode_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWoVersion")
+    def trustsec_enable_mode_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo_version")
+
+    @trustsec_enable_mode_password_wo_version.setter
+    def trustsec_enable_mode_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_enable_mode_password_wo_version", value)
+
+    @_builtins.property
     @pulumi.getter(name="trustsecExecModePassword")
     def trustsec_exec_mode_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         EXEC mode password
+          - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_exec_mode_password")
 
     @trustsec_exec_mode_password.setter
     def trustsec_exec_mode_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_exec_mode_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWo")
+    def trustsec_exec_mode_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        EXEC mode password
+          - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo")
+
+    @trustsec_exec_mode_password_wo.setter
+    def trustsec_exec_mode_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_exec_mode_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWoVersion")
+    def trustsec_exec_mode_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo_version")
+
+    @trustsec_exec_mode_password_wo_version.setter
+    def trustsec_exec_mode_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_exec_mode_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModeUsername")
@@ -1566,12 +2418,40 @@ class _DeviceState:
     def trustsec_rest_api_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         REST API password
+          - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_rest_api_password")
 
     @trustsec_rest_api_password.setter
     def trustsec_rest_api_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trustsec_rest_api_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWo")
+    def trustsec_rest_api_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        REST API password
+          - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo")
+
+    @trustsec_rest_api_password_wo.setter
+    def trustsec_rest_api_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_rest_api_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWoVersion")
+    def trustsec_rest_api_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo_version")
+
+    @trustsec_rest_api_password_wo_version.setter
+    def trustsec_rest_api_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "trustsec_rest_api_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiUsername")
@@ -1622,10 +2502,18 @@ class Device(pulumi.CustomResource):
                  authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
                  authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  coa_port: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1635,12 +2523,16 @@ class Device(pulumi.CustomResource):
                  network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1649,19 +2541,29 @@ class Device(pulumi.CustomResource):
                  software_version: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1679,13 +2581,17 @@ class Device(pulumi.CustomResource):
             name="Device1",
             description="My device",
             authentication_enable_key_wrap=True,
-            authentication_encryption_key="cisco123cisco123",
+            authentication_encryption_key_wo="cisco123cisco123",
+            authentication_encryption_key_wo_version=1,
             authentication_encryption_key_format="ASCII",
-            authentication_message_authenticator_code_key="cisco123cisco1235678",
+            authentication_message_authenticator_code_key_wo="cisco123cisco1235678",
+            authentication_message_authenticator_code_key_wo_version=1,
             authentication_network_protocol="RADIUS",
-            authentication_radius_shared_secret="cisco123",
+            authentication_radius_shared_secret_wo="cisco123",
+            authentication_radius_shared_secret_wo_version=1,
             authentication_enable_multi_secret=True,
-            authentication_second_radius_shared_secret="cisco12345",
+            authentication_second_radius_shared_secret_wo="cisco12345",
+            authentication_second_radius_shared_secret_wo_version=1,
             authentication_dtls_required=True,
             coa_port=12345,
             dtls_dns_name="cisco.com",
@@ -1703,17 +2609,24 @@ class Device(pulumi.CustomResource):
             snmp_username="user123",
             snmp_security_level="PRIV",
             snmp_auth_protocol="SHA2",
-            snmp_auth_password="Cisco123",
+            snmp_auth_password_wo="Cisco123",
+            snmp_auth_password_wo_version=1,
             snmp_privacy_protocol="AES256",
-            snmp_privacy_password="Cisco12345",
+            snmp_privacy_password_wo="Cisco12345",
+            snmp_privacy_password_wo_version=1,
             tacacs_connect_mode_options="OFF",
-            tacacs_shared_secret="cisco123",
+            tacacs_shared_secret_wo="cisco123",
+            tacacs_shared_secret_wo_version=1,
             trustsec_device_id="device123",
-            trustsec_device_password="cisco123",
+            trustsec_device_password_wo="cisco123",
+            trustsec_device_password_wo_version=1,
             trustsec_rest_api_username="user123",
-            trustsec_rest_api_password="Cisco123",
-            trustsec_enable_mode_password="cisco123",
-            trustsec_exec_mode_password="cisco123",
+            trustsec_rest_api_password_wo="Cisco123",
+            trustsec_rest_api_password_wo_version=1,
+            trustsec_enable_mode_password_wo="cisco123",
+            trustsec_enable_mode_password_wo_version=1,
+            trustsec_exec_mode_password_wo="cisco123",
+            trustsec_exec_mode_password_wo_version=1,
             trustsec_exec_mode_username="user456",
             trustsec_include_when_deploying_sgt_updates=True,
             trustsec_download_environment_data_every_x_seconds=1000,
@@ -1740,13 +2653,37 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
                  - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_encryption_key_wo_version: Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_message_authenticator_code_key_wo_version: Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
                  - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_radius_shared_secret_wo_version: Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_second_radius_shared_secret_wo_version: Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] coa_port: CoA port
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
@@ -1757,6 +2694,12 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
         :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_auth_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_auth_password_wo_version: Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
                  - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
@@ -1765,6 +2708,12 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_privacy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_privacy_password_wo_version: Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
@@ -1777,19 +2726,49 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
                  - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] tacacs_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] tacacs_shared_secret_wo_version: Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[_builtins.str] trustsec_device_password: TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_device_password_wo_version: Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[_builtins.str] trustsec_enable_mode_password: Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_enable_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_enable_mode_password_wo_version: Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_password: EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_exec_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_exec_mode_password_wo_version: Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_username: EXEC mode username
         :param pulumi.Input[_builtins.bool] trustsec_include_when_deploying_sgt_updates: Include this device when deploying Security Group Tag Mapping Updates
         :param pulumi.Input[_builtins.bool] trustsec_other_sga_devices_to_trust_this_device: Other TrustSec devices to trust this device
         :param pulumi.Input[_builtins.int] trustsec_re_authentication_every_x_seconds: Re-authenticate every X seconds
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_rest_api_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_rest_api_password_wo_version: Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
         :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
@@ -1814,13 +2793,17 @@ class Device(pulumi.CustomResource):
             name="Device1",
             description="My device",
             authentication_enable_key_wrap=True,
-            authentication_encryption_key="cisco123cisco123",
+            authentication_encryption_key_wo="cisco123cisco123",
+            authentication_encryption_key_wo_version=1,
             authentication_encryption_key_format="ASCII",
-            authentication_message_authenticator_code_key="cisco123cisco1235678",
+            authentication_message_authenticator_code_key_wo="cisco123cisco1235678",
+            authentication_message_authenticator_code_key_wo_version=1,
             authentication_network_protocol="RADIUS",
-            authentication_radius_shared_secret="cisco123",
+            authentication_radius_shared_secret_wo="cisco123",
+            authentication_radius_shared_secret_wo_version=1,
             authentication_enable_multi_secret=True,
-            authentication_second_radius_shared_secret="cisco12345",
+            authentication_second_radius_shared_secret_wo="cisco12345",
+            authentication_second_radius_shared_secret_wo_version=1,
             authentication_dtls_required=True,
             coa_port=12345,
             dtls_dns_name="cisco.com",
@@ -1838,17 +2821,24 @@ class Device(pulumi.CustomResource):
             snmp_username="user123",
             snmp_security_level="PRIV",
             snmp_auth_protocol="SHA2",
-            snmp_auth_password="Cisco123",
+            snmp_auth_password_wo="Cisco123",
+            snmp_auth_password_wo_version=1,
             snmp_privacy_protocol="AES256",
-            snmp_privacy_password="Cisco12345",
+            snmp_privacy_password_wo="Cisco12345",
+            snmp_privacy_password_wo_version=1,
             tacacs_connect_mode_options="OFF",
-            tacacs_shared_secret="cisco123",
+            tacacs_shared_secret_wo="cisco123",
+            tacacs_shared_secret_wo_version=1,
             trustsec_device_id="device123",
-            trustsec_device_password="cisco123",
+            trustsec_device_password_wo="cisco123",
+            trustsec_device_password_wo_version=1,
             trustsec_rest_api_username="user123",
-            trustsec_rest_api_password="Cisco123",
-            trustsec_enable_mode_password="cisco123",
-            trustsec_exec_mode_password="cisco123",
+            trustsec_rest_api_password_wo="Cisco123",
+            trustsec_rest_api_password_wo_version=1,
+            trustsec_enable_mode_password_wo="cisco123",
+            trustsec_enable_mode_password_wo_version=1,
+            trustsec_exec_mode_password_wo="cisco123",
+            trustsec_exec_mode_password_wo_version=1,
             trustsec_exec_mode_username="user456",
             trustsec_include_when_deploying_sgt_updates=True,
             trustsec_download_environment_data_every_x_seconds=1000,
@@ -1889,10 +2879,18 @@ class Device(pulumi.CustomResource):
                  authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
                  authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_encryption_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_message_authenticator_code_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_second_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  coa_port: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1902,12 +2900,16 @@ class Device(pulumi.CustomResource):
                  network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  profile_name: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_auth_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
                  snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_privacy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1916,19 +2918,29 @@ class Device(pulumi.CustomResource):
                  software_version: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
                  tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_enable_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_exec_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_rest_api_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
                  trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
                  trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1944,12 +2956,20 @@ class Device(pulumi.CustomResource):
             __props__.__dict__["authentication_dtls_required"] = authentication_dtls_required
             __props__.__dict__["authentication_enable_key_wrap"] = authentication_enable_key_wrap
             __props__.__dict__["authentication_enable_multi_secret"] = authentication_enable_multi_secret
-            __props__.__dict__["authentication_encryption_key"] = authentication_encryption_key
+            __props__.__dict__["authentication_encryption_key"] = None if authentication_encryption_key is None else pulumi.Output.secret(authentication_encryption_key)
             __props__.__dict__["authentication_encryption_key_format"] = authentication_encryption_key_format
-            __props__.__dict__["authentication_message_authenticator_code_key"] = authentication_message_authenticator_code_key
+            __props__.__dict__["authentication_encryption_key_wo"] = None if authentication_encryption_key_wo is None else pulumi.Output.secret(authentication_encryption_key_wo)
+            __props__.__dict__["authentication_encryption_key_wo_version"] = authentication_encryption_key_wo_version
+            __props__.__dict__["authentication_message_authenticator_code_key"] = None if authentication_message_authenticator_code_key is None else pulumi.Output.secret(authentication_message_authenticator_code_key)
+            __props__.__dict__["authentication_message_authenticator_code_key_wo"] = None if authentication_message_authenticator_code_key_wo is None else pulumi.Output.secret(authentication_message_authenticator_code_key_wo)
+            __props__.__dict__["authentication_message_authenticator_code_key_wo_version"] = authentication_message_authenticator_code_key_wo_version
             __props__.__dict__["authentication_network_protocol"] = authentication_network_protocol
-            __props__.__dict__["authentication_radius_shared_secret"] = authentication_radius_shared_secret
-            __props__.__dict__["authentication_second_radius_shared_secret"] = authentication_second_radius_shared_secret
+            __props__.__dict__["authentication_radius_shared_secret"] = None if authentication_radius_shared_secret is None else pulumi.Output.secret(authentication_radius_shared_secret)
+            __props__.__dict__["authentication_radius_shared_secret_wo"] = None if authentication_radius_shared_secret_wo is None else pulumi.Output.secret(authentication_radius_shared_secret_wo)
+            __props__.__dict__["authentication_radius_shared_secret_wo_version"] = authentication_radius_shared_secret_wo_version
+            __props__.__dict__["authentication_second_radius_shared_secret"] = None if authentication_second_radius_shared_secret is None else pulumi.Output.secret(authentication_second_radius_shared_secret)
+            __props__.__dict__["authentication_second_radius_shared_secret_wo"] = None if authentication_second_radius_shared_secret_wo is None else pulumi.Output.secret(authentication_second_radius_shared_secret_wo)
+            __props__.__dict__["authentication_second_radius_shared_secret_wo_version"] = authentication_second_radius_shared_secret_wo_version
             __props__.__dict__["coa_port"] = coa_port
             __props__.__dict__["description"] = description
             __props__.__dict__["dtls_dns_name"] = dtls_dns_name
@@ -1960,13 +2980,17 @@ class Device(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["network_device_groups"] = network_device_groups
             __props__.__dict__["profile_name"] = profile_name
-            __props__.__dict__["snmp_auth_password"] = snmp_auth_password
+            __props__.__dict__["snmp_auth_password"] = None if snmp_auth_password is None else pulumi.Output.secret(snmp_auth_password)
+            __props__.__dict__["snmp_auth_password_wo"] = None if snmp_auth_password_wo is None else pulumi.Output.secret(snmp_auth_password_wo)
+            __props__.__dict__["snmp_auth_password_wo_version"] = snmp_auth_password_wo_version
             __props__.__dict__["snmp_auth_protocol"] = snmp_auth_protocol
             __props__.__dict__["snmp_link_trap_query"] = snmp_link_trap_query
             __props__.__dict__["snmp_mac_trap_query"] = snmp_mac_trap_query
             __props__.__dict__["snmp_originating_policy_service_node"] = snmp_originating_policy_service_node
             __props__.__dict__["snmp_polling_interval"] = snmp_polling_interval
-            __props__.__dict__["snmp_privacy_password"] = snmp_privacy_password
+            __props__.__dict__["snmp_privacy_password"] = None if snmp_privacy_password is None else pulumi.Output.secret(snmp_privacy_password)
+            __props__.__dict__["snmp_privacy_password_wo"] = None if snmp_privacy_password_wo is None else pulumi.Output.secret(snmp_privacy_password_wo)
+            __props__.__dict__["snmp_privacy_password_wo_version"] = snmp_privacy_password_wo_version
             __props__.__dict__["snmp_privacy_protocol"] = snmp_privacy_protocol
             __props__.__dict__["snmp_ro_community"] = snmp_ro_community
             __props__.__dict__["snmp_security_level"] = snmp_security_level
@@ -1974,23 +2998,35 @@ class Device(pulumi.CustomResource):
             __props__.__dict__["snmp_version"] = snmp_version
             __props__.__dict__["software_version"] = software_version
             __props__.__dict__["tacacs_connect_mode_options"] = tacacs_connect_mode_options
-            __props__.__dict__["tacacs_shared_secret"] = tacacs_shared_secret
+            __props__.__dict__["tacacs_shared_secret"] = None if tacacs_shared_secret is None else pulumi.Output.secret(tacacs_shared_secret)
+            __props__.__dict__["tacacs_shared_secret_wo"] = None if tacacs_shared_secret_wo is None else pulumi.Output.secret(tacacs_shared_secret_wo)
+            __props__.__dict__["tacacs_shared_secret_wo_version"] = tacacs_shared_secret_wo_version
             __props__.__dict__["trustsec_coa_source_host"] = trustsec_coa_source_host
             __props__.__dict__["trustsec_device_id"] = trustsec_device_id
-            __props__.__dict__["trustsec_device_password"] = trustsec_device_password
+            __props__.__dict__["trustsec_device_password"] = None if trustsec_device_password is None else pulumi.Output.secret(trustsec_device_password)
+            __props__.__dict__["trustsec_device_password_wo"] = None if trustsec_device_password_wo is None else pulumi.Output.secret(trustsec_device_password_wo)
+            __props__.__dict__["trustsec_device_password_wo_version"] = trustsec_device_password_wo_version
             __props__.__dict__["trustsec_download_environment_data_every_x_seconds"] = trustsec_download_environment_data_every_x_seconds
             __props__.__dict__["trustsec_download_peer_authorization_policy_every_x_seconds"] = trustsec_download_peer_authorization_policy_every_x_seconds
             __props__.__dict__["trustsec_download_sgacl_lists_every_x_seconds"] = trustsec_download_sgacl_lists_every_x_seconds
-            __props__.__dict__["trustsec_enable_mode_password"] = trustsec_enable_mode_password
-            __props__.__dict__["trustsec_exec_mode_password"] = trustsec_exec_mode_password
+            __props__.__dict__["trustsec_enable_mode_password"] = None if trustsec_enable_mode_password is None else pulumi.Output.secret(trustsec_enable_mode_password)
+            __props__.__dict__["trustsec_enable_mode_password_wo"] = None if trustsec_enable_mode_password_wo is None else pulumi.Output.secret(trustsec_enable_mode_password_wo)
+            __props__.__dict__["trustsec_enable_mode_password_wo_version"] = trustsec_enable_mode_password_wo_version
+            __props__.__dict__["trustsec_exec_mode_password"] = None if trustsec_exec_mode_password is None else pulumi.Output.secret(trustsec_exec_mode_password)
+            __props__.__dict__["trustsec_exec_mode_password_wo"] = None if trustsec_exec_mode_password_wo is None else pulumi.Output.secret(trustsec_exec_mode_password_wo)
+            __props__.__dict__["trustsec_exec_mode_password_wo_version"] = trustsec_exec_mode_password_wo_version
             __props__.__dict__["trustsec_exec_mode_username"] = trustsec_exec_mode_username
             __props__.__dict__["trustsec_include_when_deploying_sgt_updates"] = trustsec_include_when_deploying_sgt_updates
             __props__.__dict__["trustsec_other_sga_devices_to_trust_this_device"] = trustsec_other_sga_devices_to_trust_this_device
             __props__.__dict__["trustsec_re_authentication_every_x_seconds"] = trustsec_re_authentication_every_x_seconds
-            __props__.__dict__["trustsec_rest_api_password"] = trustsec_rest_api_password
+            __props__.__dict__["trustsec_rest_api_password"] = None if trustsec_rest_api_password is None else pulumi.Output.secret(trustsec_rest_api_password)
+            __props__.__dict__["trustsec_rest_api_password_wo"] = None if trustsec_rest_api_password_wo is None else pulumi.Output.secret(trustsec_rest_api_password_wo)
+            __props__.__dict__["trustsec_rest_api_password_wo_version"] = trustsec_rest_api_password_wo_version
             __props__.__dict__["trustsec_rest_api_username"] = trustsec_rest_api_username
             __props__.__dict__["trustsec_send_configuration_to_device"] = trustsec_send_configuration_to_device
             __props__.__dict__["trustsec_send_configuration_to_device_using"] = trustsec_send_configuration_to_device_using
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["authenticationEncryptionKey", "authenticationEncryptionKeyWo", "authenticationMessageAuthenticatorCodeKey", "authenticationMessageAuthenticatorCodeKeyWo", "authenticationRadiusSharedSecret", "authenticationRadiusSharedSecretWo", "authenticationSecondRadiusSharedSecret", "authenticationSecondRadiusSharedSecretWo", "snmpAuthPassword", "snmpAuthPasswordWo", "snmpPrivacyPassword", "snmpPrivacyPasswordWo", "tacacsSharedSecret", "tacacsSharedSecretWo", "trustsecDevicePassword", "trustsecDevicePasswordWo", "trustsecEnableModePassword", "trustsecEnableModePasswordWo", "trustsecExecModePassword", "trustsecExecModePasswordWo", "trustsecRestApiPassword", "trustsecRestApiPasswordWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Device, __self__).__init__(
             'ise:network/device:Device',
             resource_name,
@@ -2006,10 +3042,18 @@ class Device(pulumi.CustomResource):
             authentication_enable_multi_secret: pulumi.Input[Optional[_builtins.bool]] = None,
             authentication_encryption_key: pulumi.Input[Optional[_builtins.str]] = None,
             authentication_encryption_key_format: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_encryption_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_encryption_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             authentication_message_authenticator_code_key: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_message_authenticator_code_key_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_message_authenticator_code_key_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             authentication_network_protocol: pulumi.Input[Optional[_builtins.str]] = None,
             authentication_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             authentication_second_radius_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_second_radius_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_second_radius_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             coa_port: pulumi.Input[Optional[_builtins.int]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2019,12 +3063,16 @@ class Device(pulumi.CustomResource):
             network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             profile_name: pulumi.Input[Optional[_builtins.str]] = None,
             snmp_auth_password: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_auth_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_auth_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             snmp_auth_protocol: pulumi.Input[Optional[_builtins.str]] = None,
             snmp_link_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
             snmp_mac_trap_query: pulumi.Input[Optional[_builtins.bool]] = None,
             snmp_originating_policy_service_node: pulumi.Input[Optional[_builtins.str]] = None,
             snmp_polling_interval: pulumi.Input[Optional[_builtins.int]] = None,
             snmp_privacy_password: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_privacy_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_privacy_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             snmp_privacy_protocol: pulumi.Input[Optional[_builtins.str]] = None,
             snmp_ro_community: pulumi.Input[Optional[_builtins.str]] = None,
             snmp_security_level: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2033,19 +3081,29 @@ class Device(pulumi.CustomResource):
             software_version: pulumi.Input[Optional[_builtins.str]] = None,
             tacacs_connect_mode_options: pulumi.Input[Optional[_builtins.str]] = None,
             tacacs_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            tacacs_shared_secret_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            tacacs_shared_secret_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_coa_source_host: pulumi.Input[Optional[_builtins.str]] = None,
             trustsec_device_id: pulumi.Input[Optional[_builtins.str]] = None,
             trustsec_device_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_device_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_device_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_download_environment_data_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_download_peer_authorization_policy_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_download_sgacl_lists_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_enable_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_enable_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_enable_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_exec_mode_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_exec_mode_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_exec_mode_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_exec_mode_username: pulumi.Input[Optional[_builtins.str]] = None,
             trustsec_include_when_deploying_sgt_updates: pulumi.Input[Optional[_builtins.bool]] = None,
             trustsec_other_sga_devices_to_trust_this_device: pulumi.Input[Optional[_builtins.bool]] = None,
             trustsec_re_authentication_every_x_seconds: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_rest_api_password: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_rest_api_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_rest_api_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             trustsec_rest_api_username: pulumi.Input[Optional[_builtins.str]] = None,
             trustsec_send_configuration_to_device: pulumi.Input[Optional[_builtins.bool]] = None,
             trustsec_send_configuration_to_device_using: pulumi.Input[Optional[_builtins.str]] = None) -> 'Device':
@@ -2060,13 +3118,37 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] authentication_enable_key_wrap: Enable key wrap
         :param pulumi.Input[_builtins.bool] authentication_enable_multi_secret: Enable multiple RADIUS shared secrets
         :param pulumi.Input[_builtins.str] authentication_encryption_key: Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] authentication_encryption_key_format: Key input format
                  - Choices: `ASCII`, `HEXADECIMAL`
+        :param pulumi.Input[_builtins.str] authentication_encryption_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Encryption key
+                 - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_encryption_key_wo_version: Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key: Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_message_authenticator_code_key_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Message authenticator code key
+                 - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_message_authenticator_code_key_wo_version: Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_network_protocol: Network protocol
                  - Choices: `RADIUS`, `TACACS_PLUS`
         :param pulumi.Input[_builtins.str] authentication_radius_shared_secret: RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               RADIUS shared secret
+                 - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_radius_shared_secret_wo_version: Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret: Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] authentication_second_radius_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Second RADIUS shared secret
+                 - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] authentication_second_radius_shared_secret_wo_version: Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] coa_port: CoA port
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
@@ -2077,6 +3159,12 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] profile_name: Profile name
                  - Default value: `Cisco`
         :param pulumi.Input[_builtins.str] snmp_auth_password: SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_auth_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+                 - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_auth_password_wo_version: Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_auth_protocol: SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
                  - Choices: `MD5`, `SHA`, `SHA2`
         :param pulumi.Input[_builtins.bool] snmp_link_trap_query: SNMP link Trap Query
@@ -2085,6 +3173,12 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] snmp_polling_interval: SNMP Polling Interval in seconds
                  - Range: `0` (disabled) or `600`-`86400`
         :param pulumi.Input[_builtins.str] snmp_privacy_password: SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] snmp_privacy_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+                 - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] snmp_privacy_password_wo_version: Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] snmp_privacy_protocol: SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
                  - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
         :param pulumi.Input[_builtins.str] snmp_ro_community: SNMP RO Community
@@ -2097,19 +3191,49 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tacacs_connect_mode_options: Connect mode options
                  - Choices: `OFF`, `ON_LEGACY`, `ON_DRAFT_COMPLIANT`
         :param pulumi.Input[_builtins.str] tacacs_shared_secret: Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] tacacs_shared_secret_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Shared secret
+                 - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        :param pulumi.Input[_builtins.int] tacacs_shared_secret_wo_version: Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_coa_source_host: CoA source host
         :param pulumi.Input[_builtins.str] trustsec_device_id: TrustSec device ID
         :param pulumi.Input[_builtins.str] trustsec_device_password: TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_device_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               TrustSec device password
+                 - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_device_password_wo_version: Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.int] trustsec_download_environment_data_every_x_seconds: Download environment data every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_peer_authorization_policy_every_x_seconds: Download peer authorization policy every X seconds
         :param pulumi.Input[_builtins.int] trustsec_download_sgacl_lists_every_x_seconds: Download SGACL lists every X seconds
         :param pulumi.Input[_builtins.str] trustsec_enable_mode_password: Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_enable_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Enable mode password
+                 - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_enable_mode_password_wo_version: Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_password: EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_exec_mode_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               EXEC mode password
+                 - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_exec_mode_password_wo_version: Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_exec_mode_username: EXEC mode username
         :param pulumi.Input[_builtins.bool] trustsec_include_when_deploying_sgt_updates: Include this device when deploying Security Group Tag Mapping Updates
         :param pulumi.Input[_builtins.bool] trustsec_other_sga_devices_to_trust_this_device: Other TrustSec devices to trust this device
         :param pulumi.Input[_builtins.int] trustsec_re_authentication_every_x_seconds: Re-authenticate every X seconds
         :param pulumi.Input[_builtins.str] trustsec_rest_api_password: REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] trustsec_rest_api_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               REST API password
+                 - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] trustsec_rest_api_password_wo_version: Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] trustsec_rest_api_username: REST API username
         :param pulumi.Input[_builtins.bool] trustsec_send_configuration_to_device: Send configuration to device
         :param pulumi.Input[_builtins.str] trustsec_send_configuration_to_device_using: Send configuration to device using
@@ -2124,10 +3248,18 @@ class Device(pulumi.CustomResource):
         __props__.__dict__["authentication_enable_multi_secret"] = authentication_enable_multi_secret
         __props__.__dict__["authentication_encryption_key"] = authentication_encryption_key
         __props__.__dict__["authentication_encryption_key_format"] = authentication_encryption_key_format
+        __props__.__dict__["authentication_encryption_key_wo"] = authentication_encryption_key_wo
+        __props__.__dict__["authentication_encryption_key_wo_version"] = authentication_encryption_key_wo_version
         __props__.__dict__["authentication_message_authenticator_code_key"] = authentication_message_authenticator_code_key
+        __props__.__dict__["authentication_message_authenticator_code_key_wo"] = authentication_message_authenticator_code_key_wo
+        __props__.__dict__["authentication_message_authenticator_code_key_wo_version"] = authentication_message_authenticator_code_key_wo_version
         __props__.__dict__["authentication_network_protocol"] = authentication_network_protocol
         __props__.__dict__["authentication_radius_shared_secret"] = authentication_radius_shared_secret
+        __props__.__dict__["authentication_radius_shared_secret_wo"] = authentication_radius_shared_secret_wo
+        __props__.__dict__["authentication_radius_shared_secret_wo_version"] = authentication_radius_shared_secret_wo_version
         __props__.__dict__["authentication_second_radius_shared_secret"] = authentication_second_radius_shared_secret
+        __props__.__dict__["authentication_second_radius_shared_secret_wo"] = authentication_second_radius_shared_secret_wo
+        __props__.__dict__["authentication_second_radius_shared_secret_wo_version"] = authentication_second_radius_shared_secret_wo_version
         __props__.__dict__["coa_port"] = coa_port
         __props__.__dict__["description"] = description
         __props__.__dict__["dtls_dns_name"] = dtls_dns_name
@@ -2137,12 +3269,16 @@ class Device(pulumi.CustomResource):
         __props__.__dict__["network_device_groups"] = network_device_groups
         __props__.__dict__["profile_name"] = profile_name
         __props__.__dict__["snmp_auth_password"] = snmp_auth_password
+        __props__.__dict__["snmp_auth_password_wo"] = snmp_auth_password_wo
+        __props__.__dict__["snmp_auth_password_wo_version"] = snmp_auth_password_wo_version
         __props__.__dict__["snmp_auth_protocol"] = snmp_auth_protocol
         __props__.__dict__["snmp_link_trap_query"] = snmp_link_trap_query
         __props__.__dict__["snmp_mac_trap_query"] = snmp_mac_trap_query
         __props__.__dict__["snmp_originating_policy_service_node"] = snmp_originating_policy_service_node
         __props__.__dict__["snmp_polling_interval"] = snmp_polling_interval
         __props__.__dict__["snmp_privacy_password"] = snmp_privacy_password
+        __props__.__dict__["snmp_privacy_password_wo"] = snmp_privacy_password_wo
+        __props__.__dict__["snmp_privacy_password_wo_version"] = snmp_privacy_password_wo_version
         __props__.__dict__["snmp_privacy_protocol"] = snmp_privacy_protocol
         __props__.__dict__["snmp_ro_community"] = snmp_ro_community
         __props__.__dict__["snmp_security_level"] = snmp_security_level
@@ -2151,19 +3287,29 @@ class Device(pulumi.CustomResource):
         __props__.__dict__["software_version"] = software_version
         __props__.__dict__["tacacs_connect_mode_options"] = tacacs_connect_mode_options
         __props__.__dict__["tacacs_shared_secret"] = tacacs_shared_secret
+        __props__.__dict__["tacacs_shared_secret_wo"] = tacacs_shared_secret_wo
+        __props__.__dict__["tacacs_shared_secret_wo_version"] = tacacs_shared_secret_wo_version
         __props__.__dict__["trustsec_coa_source_host"] = trustsec_coa_source_host
         __props__.__dict__["trustsec_device_id"] = trustsec_device_id
         __props__.__dict__["trustsec_device_password"] = trustsec_device_password
+        __props__.__dict__["trustsec_device_password_wo"] = trustsec_device_password_wo
+        __props__.__dict__["trustsec_device_password_wo_version"] = trustsec_device_password_wo_version
         __props__.__dict__["trustsec_download_environment_data_every_x_seconds"] = trustsec_download_environment_data_every_x_seconds
         __props__.__dict__["trustsec_download_peer_authorization_policy_every_x_seconds"] = trustsec_download_peer_authorization_policy_every_x_seconds
         __props__.__dict__["trustsec_download_sgacl_lists_every_x_seconds"] = trustsec_download_sgacl_lists_every_x_seconds
         __props__.__dict__["trustsec_enable_mode_password"] = trustsec_enable_mode_password
+        __props__.__dict__["trustsec_enable_mode_password_wo"] = trustsec_enable_mode_password_wo
+        __props__.__dict__["trustsec_enable_mode_password_wo_version"] = trustsec_enable_mode_password_wo_version
         __props__.__dict__["trustsec_exec_mode_password"] = trustsec_exec_mode_password
+        __props__.__dict__["trustsec_exec_mode_password_wo"] = trustsec_exec_mode_password_wo
+        __props__.__dict__["trustsec_exec_mode_password_wo_version"] = trustsec_exec_mode_password_wo_version
         __props__.__dict__["trustsec_exec_mode_username"] = trustsec_exec_mode_username
         __props__.__dict__["trustsec_include_when_deploying_sgt_updates"] = trustsec_include_when_deploying_sgt_updates
         __props__.__dict__["trustsec_other_sga_devices_to_trust_this_device"] = trustsec_other_sga_devices_to_trust_this_device
         __props__.__dict__["trustsec_re_authentication_every_x_seconds"] = trustsec_re_authentication_every_x_seconds
         __props__.__dict__["trustsec_rest_api_password"] = trustsec_rest_api_password
+        __props__.__dict__["trustsec_rest_api_password_wo"] = trustsec_rest_api_password_wo
+        __props__.__dict__["trustsec_rest_api_password_wo_version"] = trustsec_rest_api_password_wo_version
         __props__.__dict__["trustsec_rest_api_username"] = trustsec_rest_api_username
         __props__.__dict__["trustsec_send_configuration_to_device"] = trustsec_send_configuration_to_device
         __props__.__dict__["trustsec_send_configuration_to_device_using"] = trustsec_send_configuration_to_device_using
@@ -2198,6 +3344,8 @@ class Device(pulumi.CustomResource):
     def authentication_encryption_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Encryption key
+          - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_encryption_key_wo` together with `authentication_encryption_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_encryption_key")
 
@@ -2211,12 +3359,50 @@ class Device(pulumi.CustomResource):
         return pulumi.get(self, "authentication_encryption_key_format")
 
     @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWo")
+    def authentication_encryption_key_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Encryption key
+          - Only one of `authentication_encryption_key` and `authentication_encryption_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWoVersion")
+    def authentication_encryption_key_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="authenticationMessageAuthenticatorCodeKey")
     def authentication_message_authenticator_code_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Message authenticator code key
+          - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_message_authenticator_code_key_wo` together with `authentication_message_authenticator_code_key_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_message_authenticator_code_key")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWo")
+    def authentication_message_authenticator_code_key_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Message authenticator code key
+          - Only one of `authentication_message_authenticator_code_key` and `authentication_message_authenticator_code_key_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWoVersion")
+    def authentication_message_authenticator_code_key_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationNetworkProtocol")
@@ -2232,16 +3418,56 @@ class Device(pulumi.CustomResource):
     def authentication_radius_shared_secret(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         RADIUS shared secret
+          - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_radius_shared_secret_wo` together with `authentication_radius_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_radius_shared_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWo")
+    def authentication_radius_shared_secret_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        RADIUS shared secret
+          - Only one of `authentication_radius_shared_secret` and `authentication_radius_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWoVersion")
+    def authentication_radius_shared_secret_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationSecondRadiusSharedSecret")
     def authentication_second_radius_shared_secret(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Second RADIUS shared secret
+          - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `authentication_second_radius_shared_secret_wo` together with `authentication_second_radius_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "authentication_second_radius_shared_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWo")
+    def authentication_second_radius_shared_secret_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Second RADIUS shared secret
+          - Only one of `authentication_second_radius_shared_secret` and `authentication_second_radius_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWoVersion")
+    def authentication_second_radius_shared_secret_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
@@ -2313,8 +3539,28 @@ class Device(pulumi.CustomResource):
     def snmp_auth_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `snmp_auth_password_wo` together with `snmp_auth_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "snmp_auth_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWo")
+    def snmp_auth_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+          - Only one of `snmp_auth_password` and `snmp_auth_password_wo` can be set.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWoVersion")
+    def snmp_auth_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="snmpAuthProtocol")
@@ -2363,8 +3609,28 @@ class Device(pulumi.CustomResource):
     def snmp_privacy_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+          - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `snmp_privacy_password_wo` together with `snmp_privacy_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "snmp_privacy_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWo")
+    def snmp_privacy_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+          - Only one of `snmp_privacy_password` and `snmp_privacy_password_wo` can be set.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWoVersion")
+    def snmp_privacy_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyProtocol")
@@ -2431,8 +3697,28 @@ class Device(pulumi.CustomResource):
     def tacacs_shared_secret(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Shared secret
+          - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `tacacs_shared_secret_wo` together with `tacacs_shared_secret_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "tacacs_shared_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWo")
+    def tacacs_shared_secret_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Shared secret
+          - Only one of `tacacs_shared_secret` and `tacacs_shared_secret_wo` can be set.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWoVersion")
+    def tacacs_shared_secret_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecCoaSourceHost")
@@ -2455,8 +3741,28 @@ class Device(pulumi.CustomResource):
     def trustsec_device_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         TrustSec device password
+          - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_device_password_wo` together with `trustsec_device_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_device_password")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWo")
+    def trustsec_device_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        TrustSec device password
+          - Only one of `trustsec_device_password` and `trustsec_device_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWoVersion")
+    def trustsec_device_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
@@ -2487,16 +3793,56 @@ class Device(pulumi.CustomResource):
     def trustsec_enable_mode_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Enable mode password
+          - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_enable_mode_password_wo` together with `trustsec_enable_mode_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_enable_mode_password")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWo")
+    def trustsec_enable_mode_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Enable mode password
+          - Only one of `trustsec_enable_mode_password` and `trustsec_enable_mode_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWoVersion")
+    def trustsec_enable_mode_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModePassword")
     def trustsec_exec_mode_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         EXEC mode password
+          - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_exec_mode_password_wo` together with `trustsec_exec_mode_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_exec_mode_password")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWo")
+    def trustsec_exec_mode_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        EXEC mode password
+          - Only one of `trustsec_exec_mode_password` and `trustsec_exec_mode_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWoVersion")
+    def trustsec_exec_mode_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModeUsername")
@@ -2535,8 +3881,28 @@ class Device(pulumi.CustomResource):
     def trustsec_rest_api_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         REST API password
+          - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `trustsec_rest_api_password_wo` together with `trustsec_rest_api_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "trustsec_rest_api_password")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWo")
+    def trustsec_rest_api_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        REST API password
+          - Only one of `trustsec_rest_api_password` and `trustsec_rest_api_password_wo` can be set.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWoVersion")
+    def trustsec_rest_api_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecRestApiUsername")

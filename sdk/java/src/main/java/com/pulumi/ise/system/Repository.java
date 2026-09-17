@@ -11,7 +11,9 @@ import com.pulumi.ise.Utilities;
 import com.pulumi.ise.system.RepositoryArgs;
 import com.pulumi.ise.system.inputs.RepositoryState;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -48,7 +50,8 @@ import javax.annotation.Nullable;
  *             .path("/dir")
  *             .serverName("server1")
  *             .userName("user9")
- *             .password("cisco123")
+ *             .passwordWo("cisco123")
+ *             .passwordWoVersion(1)
  *             .enablePki(false)
  *             .build());
  * 
@@ -98,6 +101,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
     }
     /**
      * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
@@ -105,10 +110,44 @@ public class Repository extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> password() {
         return Codegen.optional(this.password);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     * 
+     */
+    @Export(name="passwordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> passwordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> passwordWo() {
+        return Codegen.optional(this.passwordWo);
+    }
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="passwordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> passwordWoVersion;
+
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> passwordWoVersion() {
+        return Codegen.optional(this.passwordWoVersion);
     }
     /**
      * Path should always start with &#34;/&#34; and can contain alphanumeric, underscore, hyphen and dot characters.
@@ -208,6 +247,10 @@ public class Repository extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "password",
+                "passwordWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

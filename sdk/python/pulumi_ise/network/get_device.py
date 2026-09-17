@@ -27,7 +27,7 @@ class GetDeviceResult:
     """
     A collection of values returned by getDevice.
     """
-    def __init__(__self__, authentication_dtls_required=None, authentication_enable_key_wrap=None, authentication_enable_multi_secret=None, authentication_encryption_key=None, authentication_encryption_key_format=None, authentication_message_authenticator_code_key=None, authentication_network_protocol=None, authentication_radius_shared_secret=None, authentication_second_radius_shared_secret=None, coa_port=None, description=None, dtls_dns_name=None, id=None, ips=None, model_name=None, name=None, network_device_groups=None, profile_name=None, snmp_auth_password=None, snmp_auth_protocol=None, snmp_link_trap_query=None, snmp_mac_trap_query=None, snmp_originating_policy_service_node=None, snmp_polling_interval=None, snmp_privacy_password=None, snmp_privacy_protocol=None, snmp_ro_community=None, snmp_security_level=None, snmp_username=None, snmp_version=None, software_version=None, tacacs_connect_mode_options=None, tacacs_shared_secret=None, trustsec_coa_source_host=None, trustsec_device_id=None, trustsec_device_password=None, trustsec_download_environment_data_every_x_seconds=None, trustsec_download_peer_authorization_policy_every_x_seconds=None, trustsec_download_sgacl_lists_every_x_seconds=None, trustsec_enable_mode_password=None, trustsec_exec_mode_password=None, trustsec_exec_mode_username=None, trustsec_include_when_deploying_sgt_updates=None, trustsec_other_sga_devices_to_trust_this_device=None, trustsec_re_authentication_every_x_seconds=None, trustsec_rest_api_password=None, trustsec_rest_api_username=None, trustsec_send_configuration_to_device=None, trustsec_send_configuration_to_device_using=None):
+    def __init__(__self__, authentication_dtls_required=None, authentication_enable_key_wrap=None, authentication_enable_multi_secret=None, authentication_encryption_key=None, authentication_encryption_key_format=None, authentication_encryption_key_wo=None, authentication_encryption_key_wo_version=None, authentication_message_authenticator_code_key=None, authentication_message_authenticator_code_key_wo=None, authentication_message_authenticator_code_key_wo_version=None, authentication_network_protocol=None, authentication_radius_shared_secret=None, authentication_radius_shared_secret_wo=None, authentication_radius_shared_secret_wo_version=None, authentication_second_radius_shared_secret=None, authentication_second_radius_shared_secret_wo=None, authentication_second_radius_shared_secret_wo_version=None, coa_port=None, description=None, dtls_dns_name=None, id=None, ips=None, model_name=None, name=None, network_device_groups=None, profile_name=None, snmp_auth_password=None, snmp_auth_password_wo=None, snmp_auth_password_wo_version=None, snmp_auth_protocol=None, snmp_link_trap_query=None, snmp_mac_trap_query=None, snmp_originating_policy_service_node=None, snmp_polling_interval=None, snmp_privacy_password=None, snmp_privacy_password_wo=None, snmp_privacy_password_wo_version=None, snmp_privacy_protocol=None, snmp_ro_community=None, snmp_security_level=None, snmp_username=None, snmp_version=None, software_version=None, tacacs_connect_mode_options=None, tacacs_shared_secret=None, tacacs_shared_secret_wo=None, tacacs_shared_secret_wo_version=None, trustsec_coa_source_host=None, trustsec_device_id=None, trustsec_device_password=None, trustsec_device_password_wo=None, trustsec_device_password_wo_version=None, trustsec_download_environment_data_every_x_seconds=None, trustsec_download_peer_authorization_policy_every_x_seconds=None, trustsec_download_sgacl_lists_every_x_seconds=None, trustsec_enable_mode_password=None, trustsec_enable_mode_password_wo=None, trustsec_enable_mode_password_wo_version=None, trustsec_exec_mode_password=None, trustsec_exec_mode_password_wo=None, trustsec_exec_mode_password_wo_version=None, trustsec_exec_mode_username=None, trustsec_include_when_deploying_sgt_updates=None, trustsec_other_sga_devices_to_trust_this_device=None, trustsec_re_authentication_every_x_seconds=None, trustsec_rest_api_password=None, trustsec_rest_api_password_wo=None, trustsec_rest_api_password_wo_version=None, trustsec_rest_api_username=None, trustsec_send_configuration_to_device=None, trustsec_send_configuration_to_device_using=None):
         if authentication_dtls_required and not isinstance(authentication_dtls_required, bool):
             raise TypeError("Expected argument 'authentication_dtls_required' to be a bool")
         pulumi.set(__self__, "authentication_dtls_required", authentication_dtls_required)
@@ -43,18 +43,42 @@ class GetDeviceResult:
         if authentication_encryption_key_format and not isinstance(authentication_encryption_key_format, str):
             raise TypeError("Expected argument 'authentication_encryption_key_format' to be a str")
         pulumi.set(__self__, "authentication_encryption_key_format", authentication_encryption_key_format)
+        if authentication_encryption_key_wo and not isinstance(authentication_encryption_key_wo, str):
+            raise TypeError("Expected argument 'authentication_encryption_key_wo' to be a str")
+        pulumi.set(__self__, "authentication_encryption_key_wo", authentication_encryption_key_wo)
+        if authentication_encryption_key_wo_version and not isinstance(authentication_encryption_key_wo_version, int):
+            raise TypeError("Expected argument 'authentication_encryption_key_wo_version' to be a int")
+        pulumi.set(__self__, "authentication_encryption_key_wo_version", authentication_encryption_key_wo_version)
         if authentication_message_authenticator_code_key and not isinstance(authentication_message_authenticator_code_key, str):
             raise TypeError("Expected argument 'authentication_message_authenticator_code_key' to be a str")
         pulumi.set(__self__, "authentication_message_authenticator_code_key", authentication_message_authenticator_code_key)
+        if authentication_message_authenticator_code_key_wo and not isinstance(authentication_message_authenticator_code_key_wo, str):
+            raise TypeError("Expected argument 'authentication_message_authenticator_code_key_wo' to be a str")
+        pulumi.set(__self__, "authentication_message_authenticator_code_key_wo", authentication_message_authenticator_code_key_wo)
+        if authentication_message_authenticator_code_key_wo_version and not isinstance(authentication_message_authenticator_code_key_wo_version, int):
+            raise TypeError("Expected argument 'authentication_message_authenticator_code_key_wo_version' to be a int")
+        pulumi.set(__self__, "authentication_message_authenticator_code_key_wo_version", authentication_message_authenticator_code_key_wo_version)
         if authentication_network_protocol and not isinstance(authentication_network_protocol, str):
             raise TypeError("Expected argument 'authentication_network_protocol' to be a str")
         pulumi.set(__self__, "authentication_network_protocol", authentication_network_protocol)
         if authentication_radius_shared_secret and not isinstance(authentication_radius_shared_secret, str):
             raise TypeError("Expected argument 'authentication_radius_shared_secret' to be a str")
         pulumi.set(__self__, "authentication_radius_shared_secret", authentication_radius_shared_secret)
+        if authentication_radius_shared_secret_wo and not isinstance(authentication_radius_shared_secret_wo, str):
+            raise TypeError("Expected argument 'authentication_radius_shared_secret_wo' to be a str")
+        pulumi.set(__self__, "authentication_radius_shared_secret_wo", authentication_radius_shared_secret_wo)
+        if authentication_radius_shared_secret_wo_version and not isinstance(authentication_radius_shared_secret_wo_version, int):
+            raise TypeError("Expected argument 'authentication_radius_shared_secret_wo_version' to be a int")
+        pulumi.set(__self__, "authentication_radius_shared_secret_wo_version", authentication_radius_shared_secret_wo_version)
         if authentication_second_radius_shared_secret and not isinstance(authentication_second_radius_shared_secret, str):
             raise TypeError("Expected argument 'authentication_second_radius_shared_secret' to be a str")
         pulumi.set(__self__, "authentication_second_radius_shared_secret", authentication_second_radius_shared_secret)
+        if authentication_second_radius_shared_secret_wo and not isinstance(authentication_second_radius_shared_secret_wo, str):
+            raise TypeError("Expected argument 'authentication_second_radius_shared_secret_wo' to be a str")
+        pulumi.set(__self__, "authentication_second_radius_shared_secret_wo", authentication_second_radius_shared_secret_wo)
+        if authentication_second_radius_shared_secret_wo_version and not isinstance(authentication_second_radius_shared_secret_wo_version, int):
+            raise TypeError("Expected argument 'authentication_second_radius_shared_secret_wo_version' to be a int")
+        pulumi.set(__self__, "authentication_second_radius_shared_secret_wo_version", authentication_second_radius_shared_secret_wo_version)
         if coa_port and not isinstance(coa_port, int):
             raise TypeError("Expected argument 'coa_port' to be a int")
         pulumi.set(__self__, "coa_port", coa_port)
@@ -85,6 +109,12 @@ class GetDeviceResult:
         if snmp_auth_password and not isinstance(snmp_auth_password, str):
             raise TypeError("Expected argument 'snmp_auth_password' to be a str")
         pulumi.set(__self__, "snmp_auth_password", snmp_auth_password)
+        if snmp_auth_password_wo and not isinstance(snmp_auth_password_wo, str):
+            raise TypeError("Expected argument 'snmp_auth_password_wo' to be a str")
+        pulumi.set(__self__, "snmp_auth_password_wo", snmp_auth_password_wo)
+        if snmp_auth_password_wo_version and not isinstance(snmp_auth_password_wo_version, int):
+            raise TypeError("Expected argument 'snmp_auth_password_wo_version' to be a int")
+        pulumi.set(__self__, "snmp_auth_password_wo_version", snmp_auth_password_wo_version)
         if snmp_auth_protocol and not isinstance(snmp_auth_protocol, str):
             raise TypeError("Expected argument 'snmp_auth_protocol' to be a str")
         pulumi.set(__self__, "snmp_auth_protocol", snmp_auth_protocol)
@@ -103,6 +133,12 @@ class GetDeviceResult:
         if snmp_privacy_password and not isinstance(snmp_privacy_password, str):
             raise TypeError("Expected argument 'snmp_privacy_password' to be a str")
         pulumi.set(__self__, "snmp_privacy_password", snmp_privacy_password)
+        if snmp_privacy_password_wo and not isinstance(snmp_privacy_password_wo, str):
+            raise TypeError("Expected argument 'snmp_privacy_password_wo' to be a str")
+        pulumi.set(__self__, "snmp_privacy_password_wo", snmp_privacy_password_wo)
+        if snmp_privacy_password_wo_version and not isinstance(snmp_privacy_password_wo_version, int):
+            raise TypeError("Expected argument 'snmp_privacy_password_wo_version' to be a int")
+        pulumi.set(__self__, "snmp_privacy_password_wo_version", snmp_privacy_password_wo_version)
         if snmp_privacy_protocol and not isinstance(snmp_privacy_protocol, str):
             raise TypeError("Expected argument 'snmp_privacy_protocol' to be a str")
         pulumi.set(__self__, "snmp_privacy_protocol", snmp_privacy_protocol)
@@ -127,6 +163,12 @@ class GetDeviceResult:
         if tacacs_shared_secret and not isinstance(tacacs_shared_secret, str):
             raise TypeError("Expected argument 'tacacs_shared_secret' to be a str")
         pulumi.set(__self__, "tacacs_shared_secret", tacacs_shared_secret)
+        if tacacs_shared_secret_wo and not isinstance(tacacs_shared_secret_wo, str):
+            raise TypeError("Expected argument 'tacacs_shared_secret_wo' to be a str")
+        pulumi.set(__self__, "tacacs_shared_secret_wo", tacacs_shared_secret_wo)
+        if tacacs_shared_secret_wo_version and not isinstance(tacacs_shared_secret_wo_version, int):
+            raise TypeError("Expected argument 'tacacs_shared_secret_wo_version' to be a int")
+        pulumi.set(__self__, "tacacs_shared_secret_wo_version", tacacs_shared_secret_wo_version)
         if trustsec_coa_source_host and not isinstance(trustsec_coa_source_host, str):
             raise TypeError("Expected argument 'trustsec_coa_source_host' to be a str")
         pulumi.set(__self__, "trustsec_coa_source_host", trustsec_coa_source_host)
@@ -136,6 +178,12 @@ class GetDeviceResult:
         if trustsec_device_password and not isinstance(trustsec_device_password, str):
             raise TypeError("Expected argument 'trustsec_device_password' to be a str")
         pulumi.set(__self__, "trustsec_device_password", trustsec_device_password)
+        if trustsec_device_password_wo and not isinstance(trustsec_device_password_wo, str):
+            raise TypeError("Expected argument 'trustsec_device_password_wo' to be a str")
+        pulumi.set(__self__, "trustsec_device_password_wo", trustsec_device_password_wo)
+        if trustsec_device_password_wo_version and not isinstance(trustsec_device_password_wo_version, int):
+            raise TypeError("Expected argument 'trustsec_device_password_wo_version' to be a int")
+        pulumi.set(__self__, "trustsec_device_password_wo_version", trustsec_device_password_wo_version)
         if trustsec_download_environment_data_every_x_seconds and not isinstance(trustsec_download_environment_data_every_x_seconds, int):
             raise TypeError("Expected argument 'trustsec_download_environment_data_every_x_seconds' to be a int")
         pulumi.set(__self__, "trustsec_download_environment_data_every_x_seconds", trustsec_download_environment_data_every_x_seconds)
@@ -148,9 +196,21 @@ class GetDeviceResult:
         if trustsec_enable_mode_password and not isinstance(trustsec_enable_mode_password, str):
             raise TypeError("Expected argument 'trustsec_enable_mode_password' to be a str")
         pulumi.set(__self__, "trustsec_enable_mode_password", trustsec_enable_mode_password)
+        if trustsec_enable_mode_password_wo and not isinstance(trustsec_enable_mode_password_wo, str):
+            raise TypeError("Expected argument 'trustsec_enable_mode_password_wo' to be a str")
+        pulumi.set(__self__, "trustsec_enable_mode_password_wo", trustsec_enable_mode_password_wo)
+        if trustsec_enable_mode_password_wo_version and not isinstance(trustsec_enable_mode_password_wo_version, int):
+            raise TypeError("Expected argument 'trustsec_enable_mode_password_wo_version' to be a int")
+        pulumi.set(__self__, "trustsec_enable_mode_password_wo_version", trustsec_enable_mode_password_wo_version)
         if trustsec_exec_mode_password and not isinstance(trustsec_exec_mode_password, str):
             raise TypeError("Expected argument 'trustsec_exec_mode_password' to be a str")
         pulumi.set(__self__, "trustsec_exec_mode_password", trustsec_exec_mode_password)
+        if trustsec_exec_mode_password_wo and not isinstance(trustsec_exec_mode_password_wo, str):
+            raise TypeError("Expected argument 'trustsec_exec_mode_password_wo' to be a str")
+        pulumi.set(__self__, "trustsec_exec_mode_password_wo", trustsec_exec_mode_password_wo)
+        if trustsec_exec_mode_password_wo_version and not isinstance(trustsec_exec_mode_password_wo_version, int):
+            raise TypeError("Expected argument 'trustsec_exec_mode_password_wo_version' to be a int")
+        pulumi.set(__self__, "trustsec_exec_mode_password_wo_version", trustsec_exec_mode_password_wo_version)
         if trustsec_exec_mode_username and not isinstance(trustsec_exec_mode_username, str):
             raise TypeError("Expected argument 'trustsec_exec_mode_username' to be a str")
         pulumi.set(__self__, "trustsec_exec_mode_username", trustsec_exec_mode_username)
@@ -166,6 +226,12 @@ class GetDeviceResult:
         if trustsec_rest_api_password and not isinstance(trustsec_rest_api_password, str):
             raise TypeError("Expected argument 'trustsec_rest_api_password' to be a str")
         pulumi.set(__self__, "trustsec_rest_api_password", trustsec_rest_api_password)
+        if trustsec_rest_api_password_wo and not isinstance(trustsec_rest_api_password_wo, str):
+            raise TypeError("Expected argument 'trustsec_rest_api_password_wo' to be a str")
+        pulumi.set(__self__, "trustsec_rest_api_password_wo", trustsec_rest_api_password_wo)
+        if trustsec_rest_api_password_wo_version and not isinstance(trustsec_rest_api_password_wo_version, int):
+            raise TypeError("Expected argument 'trustsec_rest_api_password_wo_version' to be a int")
+        pulumi.set(__self__, "trustsec_rest_api_password_wo_version", trustsec_rest_api_password_wo_version)
         if trustsec_rest_api_username and not isinstance(trustsec_rest_api_username, str):
             raise TypeError("Expected argument 'trustsec_rest_api_username' to be a str")
         pulumi.set(__self__, "trustsec_rest_api_username", trustsec_rest_api_username)
@@ -217,12 +283,44 @@ class GetDeviceResult:
         return pulumi.get(self, "authentication_encryption_key_format")
 
     @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWo")
+    def authentication_encryption_key_wo(self) -> _builtins.str:
+        """
+        Encryption key
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationEncryptionKeyWoVersion")
+    def authentication_encryption_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_encryption_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_encryption_key_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="authenticationMessageAuthenticatorCodeKey")
     def authentication_message_authenticator_code_key(self) -> _builtins.str:
         """
         Message authenticator code key
         """
         return pulumi.get(self, "authentication_message_authenticator_code_key")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWo")
+    def authentication_message_authenticator_code_key_wo(self) -> _builtins.str:
+        """
+        Message authenticator code key
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationMessageAuthenticatorCodeKeyWoVersion")
+    def authentication_message_authenticator_code_key_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_message_authenticator_code_key_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_message_authenticator_code_key_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="authenticationNetworkProtocol")
@@ -241,12 +339,44 @@ class GetDeviceResult:
         return pulumi.get(self, "authentication_radius_shared_secret")
 
     @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWo")
+    def authentication_radius_shared_secret_wo(self) -> _builtins.str:
+        """
+        RADIUS shared secret
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationRadiusSharedSecretWoVersion")
+    def authentication_radius_shared_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_radius_shared_secret_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="authenticationSecondRadiusSharedSecret")
     def authentication_second_radius_shared_secret(self) -> _builtins.str:
         """
         Second RADIUS shared secret
         """
         return pulumi.get(self, "authentication_second_radius_shared_secret")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWo")
+    def authentication_second_radius_shared_secret_wo(self) -> _builtins.str:
+        """
+        Second RADIUS shared secret
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="authenticationSecondRadiusSharedSecretWoVersion")
+    def authentication_second_radius_shared_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `authentication_second_radius_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "authentication_second_radius_shared_secret_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="coaPort")
@@ -329,6 +459,22 @@ class GetDeviceResult:
         return pulumi.get(self, "snmp_auth_password")
 
     @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWo")
+    def snmp_auth_password_wo(self) -> _builtins.str:
+        """
+        SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpAuthPasswordWoVersion")
+    def snmp_auth_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `snmp_auth_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_auth_password_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="snmpAuthProtocol")
     def snmp_auth_protocol(self) -> _builtins.str:
         """
@@ -375,6 +521,22 @@ class GetDeviceResult:
         SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         """
         return pulumi.get(self, "snmp_privacy_password")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWo")
+    def snmp_privacy_password_wo(self) -> _builtins.str:
+        """
+        SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="snmpPrivacyPasswordWoVersion")
+    def snmp_privacy_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `snmp_privacy_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "snmp_privacy_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="snmpPrivacyProtocol")
@@ -441,6 +603,22 @@ class GetDeviceResult:
         return pulumi.get(self, "tacacs_shared_secret")
 
     @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWo")
+    def tacacs_shared_secret_wo(self) -> _builtins.str:
+        """
+        Shared secret
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="tacacsSharedSecretWoVersion")
+    def tacacs_shared_secret_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `tacacs_shared_secret_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "tacacs_shared_secret_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="trustsecCoaSourceHost")
     def trustsec_coa_source_host(self) -> _builtins.str:
         """
@@ -463,6 +641,22 @@ class GetDeviceResult:
         TrustSec device password
         """
         return pulumi.get(self, "trustsec_device_password")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWo")
+    def trustsec_device_password_wo(self) -> _builtins.str:
+        """
+        TrustSec device password
+        """
+        return pulumi.get(self, "trustsec_device_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecDevicePasswordWoVersion")
+    def trustsec_device_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `trustsec_device_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_device_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecDownloadEnvironmentDataEveryXSeconds")
@@ -497,12 +691,44 @@ class GetDeviceResult:
         return pulumi.get(self, "trustsec_enable_mode_password")
 
     @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWo")
+    def trustsec_enable_mode_password_wo(self) -> _builtins.str:
+        """
+        Enable mode password
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecEnableModePasswordWoVersion")
+    def trustsec_enable_mode_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `trustsec_enable_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_enable_mode_password_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="trustsecExecModePassword")
     def trustsec_exec_mode_password(self) -> _builtins.str:
         """
         EXEC mode password
         """
         return pulumi.get(self, "trustsec_exec_mode_password")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWo")
+    def trustsec_exec_mode_password_wo(self) -> _builtins.str:
+        """
+        EXEC mode password
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecExecModePasswordWoVersion")
+    def trustsec_exec_mode_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `trustsec_exec_mode_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_exec_mode_password_wo_version")
 
     @_builtins.property
     @pulumi.getter(name="trustsecExecModeUsername")
@@ -545,6 +771,22 @@ class GetDeviceResult:
         return pulumi.get(self, "trustsec_rest_api_password")
 
     @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWo")
+    def trustsec_rest_api_password_wo(self) -> _builtins.str:
+        """
+        REST API password
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRestApiPasswordWoVersion")
+    def trustsec_rest_api_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `trustsec_rest_api_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "trustsec_rest_api_password_wo_version")
+
+    @_builtins.property
     @pulumi.getter(name="trustsecRestApiUsername")
     def trustsec_rest_api_username(self) -> _builtins.str:
         """
@@ -580,10 +822,18 @@ class AwaitableGetDeviceResult(GetDeviceResult):
             authentication_enable_multi_secret=self.authentication_enable_multi_secret,
             authentication_encryption_key=self.authentication_encryption_key,
             authentication_encryption_key_format=self.authentication_encryption_key_format,
+            authentication_encryption_key_wo=self.authentication_encryption_key_wo,
+            authentication_encryption_key_wo_version=self.authentication_encryption_key_wo_version,
             authentication_message_authenticator_code_key=self.authentication_message_authenticator_code_key,
+            authentication_message_authenticator_code_key_wo=self.authentication_message_authenticator_code_key_wo,
+            authentication_message_authenticator_code_key_wo_version=self.authentication_message_authenticator_code_key_wo_version,
             authentication_network_protocol=self.authentication_network_protocol,
             authentication_radius_shared_secret=self.authentication_radius_shared_secret,
+            authentication_radius_shared_secret_wo=self.authentication_radius_shared_secret_wo,
+            authentication_radius_shared_secret_wo_version=self.authentication_radius_shared_secret_wo_version,
             authentication_second_radius_shared_secret=self.authentication_second_radius_shared_secret,
+            authentication_second_radius_shared_secret_wo=self.authentication_second_radius_shared_secret_wo,
+            authentication_second_radius_shared_secret_wo_version=self.authentication_second_radius_shared_secret_wo_version,
             coa_port=self.coa_port,
             description=self.description,
             dtls_dns_name=self.dtls_dns_name,
@@ -594,12 +844,16 @@ class AwaitableGetDeviceResult(GetDeviceResult):
             network_device_groups=self.network_device_groups,
             profile_name=self.profile_name,
             snmp_auth_password=self.snmp_auth_password,
+            snmp_auth_password_wo=self.snmp_auth_password_wo,
+            snmp_auth_password_wo_version=self.snmp_auth_password_wo_version,
             snmp_auth_protocol=self.snmp_auth_protocol,
             snmp_link_trap_query=self.snmp_link_trap_query,
             snmp_mac_trap_query=self.snmp_mac_trap_query,
             snmp_originating_policy_service_node=self.snmp_originating_policy_service_node,
             snmp_polling_interval=self.snmp_polling_interval,
             snmp_privacy_password=self.snmp_privacy_password,
+            snmp_privacy_password_wo=self.snmp_privacy_password_wo,
+            snmp_privacy_password_wo_version=self.snmp_privacy_password_wo_version,
             snmp_privacy_protocol=self.snmp_privacy_protocol,
             snmp_ro_community=self.snmp_ro_community,
             snmp_security_level=self.snmp_security_level,
@@ -608,19 +862,29 @@ class AwaitableGetDeviceResult(GetDeviceResult):
             software_version=self.software_version,
             tacacs_connect_mode_options=self.tacacs_connect_mode_options,
             tacacs_shared_secret=self.tacacs_shared_secret,
+            tacacs_shared_secret_wo=self.tacacs_shared_secret_wo,
+            tacacs_shared_secret_wo_version=self.tacacs_shared_secret_wo_version,
             trustsec_coa_source_host=self.trustsec_coa_source_host,
             trustsec_device_id=self.trustsec_device_id,
             trustsec_device_password=self.trustsec_device_password,
+            trustsec_device_password_wo=self.trustsec_device_password_wo,
+            trustsec_device_password_wo_version=self.trustsec_device_password_wo_version,
             trustsec_download_environment_data_every_x_seconds=self.trustsec_download_environment_data_every_x_seconds,
             trustsec_download_peer_authorization_policy_every_x_seconds=self.trustsec_download_peer_authorization_policy_every_x_seconds,
             trustsec_download_sgacl_lists_every_x_seconds=self.trustsec_download_sgacl_lists_every_x_seconds,
             trustsec_enable_mode_password=self.trustsec_enable_mode_password,
+            trustsec_enable_mode_password_wo=self.trustsec_enable_mode_password_wo,
+            trustsec_enable_mode_password_wo_version=self.trustsec_enable_mode_password_wo_version,
             trustsec_exec_mode_password=self.trustsec_exec_mode_password,
+            trustsec_exec_mode_password_wo=self.trustsec_exec_mode_password_wo,
+            trustsec_exec_mode_password_wo_version=self.trustsec_exec_mode_password_wo_version,
             trustsec_exec_mode_username=self.trustsec_exec_mode_username,
             trustsec_include_when_deploying_sgt_updates=self.trustsec_include_when_deploying_sgt_updates,
             trustsec_other_sga_devices_to_trust_this_device=self.trustsec_other_sga_devices_to_trust_this_device,
             trustsec_re_authentication_every_x_seconds=self.trustsec_re_authentication_every_x_seconds,
             trustsec_rest_api_password=self.trustsec_rest_api_password,
+            trustsec_rest_api_password_wo=self.trustsec_rest_api_password_wo,
+            trustsec_rest_api_password_wo_version=self.trustsec_rest_api_password_wo_version,
             trustsec_rest_api_username=self.trustsec_rest_api_username,
             trustsec_send_configuration_to_device=self.trustsec_send_configuration_to_device,
             trustsec_send_configuration_to_device_using=self.trustsec_send_configuration_to_device_using)
@@ -657,10 +921,18 @@ def get_device(id: Optional[_builtins.str] = None,
         authentication_enable_multi_secret=pulumi.get(__ret__, 'authentication_enable_multi_secret'),
         authentication_encryption_key=pulumi.get(__ret__, 'authentication_encryption_key'),
         authentication_encryption_key_format=pulumi.get(__ret__, 'authentication_encryption_key_format'),
+        authentication_encryption_key_wo=pulumi.get(__ret__, 'authentication_encryption_key_wo'),
+        authentication_encryption_key_wo_version=pulumi.get(__ret__, 'authentication_encryption_key_wo_version'),
         authentication_message_authenticator_code_key=pulumi.get(__ret__, 'authentication_message_authenticator_code_key'),
+        authentication_message_authenticator_code_key_wo=pulumi.get(__ret__, 'authentication_message_authenticator_code_key_wo'),
+        authentication_message_authenticator_code_key_wo_version=pulumi.get(__ret__, 'authentication_message_authenticator_code_key_wo_version'),
         authentication_network_protocol=pulumi.get(__ret__, 'authentication_network_protocol'),
         authentication_radius_shared_secret=pulumi.get(__ret__, 'authentication_radius_shared_secret'),
+        authentication_radius_shared_secret_wo=pulumi.get(__ret__, 'authentication_radius_shared_secret_wo'),
+        authentication_radius_shared_secret_wo_version=pulumi.get(__ret__, 'authentication_radius_shared_secret_wo_version'),
         authentication_second_radius_shared_secret=pulumi.get(__ret__, 'authentication_second_radius_shared_secret'),
+        authentication_second_radius_shared_secret_wo=pulumi.get(__ret__, 'authentication_second_radius_shared_secret_wo'),
+        authentication_second_radius_shared_secret_wo_version=pulumi.get(__ret__, 'authentication_second_radius_shared_secret_wo_version'),
         coa_port=pulumi.get(__ret__, 'coa_port'),
         description=pulumi.get(__ret__, 'description'),
         dtls_dns_name=pulumi.get(__ret__, 'dtls_dns_name'),
@@ -671,12 +943,16 @@ def get_device(id: Optional[_builtins.str] = None,
         network_device_groups=pulumi.get(__ret__, 'network_device_groups'),
         profile_name=pulumi.get(__ret__, 'profile_name'),
         snmp_auth_password=pulumi.get(__ret__, 'snmp_auth_password'),
+        snmp_auth_password_wo=pulumi.get(__ret__, 'snmp_auth_password_wo'),
+        snmp_auth_password_wo_version=pulumi.get(__ret__, 'snmp_auth_password_wo_version'),
         snmp_auth_protocol=pulumi.get(__ret__, 'snmp_auth_protocol'),
         snmp_link_trap_query=pulumi.get(__ret__, 'snmp_link_trap_query'),
         snmp_mac_trap_query=pulumi.get(__ret__, 'snmp_mac_trap_query'),
         snmp_originating_policy_service_node=pulumi.get(__ret__, 'snmp_originating_policy_service_node'),
         snmp_polling_interval=pulumi.get(__ret__, 'snmp_polling_interval'),
         snmp_privacy_password=pulumi.get(__ret__, 'snmp_privacy_password'),
+        snmp_privacy_password_wo=pulumi.get(__ret__, 'snmp_privacy_password_wo'),
+        snmp_privacy_password_wo_version=pulumi.get(__ret__, 'snmp_privacy_password_wo_version'),
         snmp_privacy_protocol=pulumi.get(__ret__, 'snmp_privacy_protocol'),
         snmp_ro_community=pulumi.get(__ret__, 'snmp_ro_community'),
         snmp_security_level=pulumi.get(__ret__, 'snmp_security_level'),
@@ -685,19 +961,29 @@ def get_device(id: Optional[_builtins.str] = None,
         software_version=pulumi.get(__ret__, 'software_version'),
         tacacs_connect_mode_options=pulumi.get(__ret__, 'tacacs_connect_mode_options'),
         tacacs_shared_secret=pulumi.get(__ret__, 'tacacs_shared_secret'),
+        tacacs_shared_secret_wo=pulumi.get(__ret__, 'tacacs_shared_secret_wo'),
+        tacacs_shared_secret_wo_version=pulumi.get(__ret__, 'tacacs_shared_secret_wo_version'),
         trustsec_coa_source_host=pulumi.get(__ret__, 'trustsec_coa_source_host'),
         trustsec_device_id=pulumi.get(__ret__, 'trustsec_device_id'),
         trustsec_device_password=pulumi.get(__ret__, 'trustsec_device_password'),
+        trustsec_device_password_wo=pulumi.get(__ret__, 'trustsec_device_password_wo'),
+        trustsec_device_password_wo_version=pulumi.get(__ret__, 'trustsec_device_password_wo_version'),
         trustsec_download_environment_data_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_environment_data_every_x_seconds'),
         trustsec_download_peer_authorization_policy_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_peer_authorization_policy_every_x_seconds'),
         trustsec_download_sgacl_lists_every_x_seconds=pulumi.get(__ret__, 'trustsec_download_sgacl_lists_every_x_seconds'),
         trustsec_enable_mode_password=pulumi.get(__ret__, 'trustsec_enable_mode_password'),
+        trustsec_enable_mode_password_wo=pulumi.get(__ret__, 'trustsec_enable_mode_password_wo'),
+        trustsec_enable_mode_password_wo_version=pulumi.get(__ret__, 'trustsec_enable_mode_password_wo_version'),
         trustsec_exec_mode_password=pulumi.get(__ret__, 'trustsec_exec_mode_password'),
+        trustsec_exec_mode_password_wo=pulumi.get(__ret__, 'trustsec_exec_mode_password_wo'),
+        trustsec_exec_mode_password_wo_version=pulumi.get(__ret__, 'trustsec_exec_mode_password_wo_version'),
         trustsec_exec_mode_username=pulumi.get(__ret__, 'trustsec_exec_mode_username'),
         trustsec_include_when_deploying_sgt_updates=pulumi.get(__ret__, 'trustsec_include_when_deploying_sgt_updates'),
         trustsec_other_sga_devices_to_trust_this_device=pulumi.get(__ret__, 'trustsec_other_sga_devices_to_trust_this_device'),
         trustsec_re_authentication_every_x_seconds=pulumi.get(__ret__, 'trustsec_re_authentication_every_x_seconds'),
         trustsec_rest_api_password=pulumi.get(__ret__, 'trustsec_rest_api_password'),
+        trustsec_rest_api_password_wo=pulumi.get(__ret__, 'trustsec_rest_api_password_wo'),
+        trustsec_rest_api_password_wo_version=pulumi.get(__ret__, 'trustsec_rest_api_password_wo_version'),
         trustsec_rest_api_username=pulumi.get(__ret__, 'trustsec_rest_api_username'),
         trustsec_send_configuration_to_device=pulumi.get(__ret__, 'trustsec_send_configuration_to_device'),
         trustsec_send_configuration_to_device_using=pulumi.get(__ret__, 'trustsec_send_configuration_to_device_using'))
@@ -731,10 +1017,18 @@ def get_device_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None
         authentication_enable_multi_secret=pulumi.get(__response__, 'authentication_enable_multi_secret'),
         authentication_encryption_key=pulumi.get(__response__, 'authentication_encryption_key'),
         authentication_encryption_key_format=pulumi.get(__response__, 'authentication_encryption_key_format'),
+        authentication_encryption_key_wo=pulumi.get(__response__, 'authentication_encryption_key_wo'),
+        authentication_encryption_key_wo_version=pulumi.get(__response__, 'authentication_encryption_key_wo_version'),
         authentication_message_authenticator_code_key=pulumi.get(__response__, 'authentication_message_authenticator_code_key'),
+        authentication_message_authenticator_code_key_wo=pulumi.get(__response__, 'authentication_message_authenticator_code_key_wo'),
+        authentication_message_authenticator_code_key_wo_version=pulumi.get(__response__, 'authentication_message_authenticator_code_key_wo_version'),
         authentication_network_protocol=pulumi.get(__response__, 'authentication_network_protocol'),
         authentication_radius_shared_secret=pulumi.get(__response__, 'authentication_radius_shared_secret'),
+        authentication_radius_shared_secret_wo=pulumi.get(__response__, 'authentication_radius_shared_secret_wo'),
+        authentication_radius_shared_secret_wo_version=pulumi.get(__response__, 'authentication_radius_shared_secret_wo_version'),
         authentication_second_radius_shared_secret=pulumi.get(__response__, 'authentication_second_radius_shared_secret'),
+        authentication_second_radius_shared_secret_wo=pulumi.get(__response__, 'authentication_second_radius_shared_secret_wo'),
+        authentication_second_radius_shared_secret_wo_version=pulumi.get(__response__, 'authentication_second_radius_shared_secret_wo_version'),
         coa_port=pulumi.get(__response__, 'coa_port'),
         description=pulumi.get(__response__, 'description'),
         dtls_dns_name=pulumi.get(__response__, 'dtls_dns_name'),
@@ -745,12 +1039,16 @@ def get_device_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None
         network_device_groups=pulumi.get(__response__, 'network_device_groups'),
         profile_name=pulumi.get(__response__, 'profile_name'),
         snmp_auth_password=pulumi.get(__response__, 'snmp_auth_password'),
+        snmp_auth_password_wo=pulumi.get(__response__, 'snmp_auth_password_wo'),
+        snmp_auth_password_wo_version=pulumi.get(__response__, 'snmp_auth_password_wo_version'),
         snmp_auth_protocol=pulumi.get(__response__, 'snmp_auth_protocol'),
         snmp_link_trap_query=pulumi.get(__response__, 'snmp_link_trap_query'),
         snmp_mac_trap_query=pulumi.get(__response__, 'snmp_mac_trap_query'),
         snmp_originating_policy_service_node=pulumi.get(__response__, 'snmp_originating_policy_service_node'),
         snmp_polling_interval=pulumi.get(__response__, 'snmp_polling_interval'),
         snmp_privacy_password=pulumi.get(__response__, 'snmp_privacy_password'),
+        snmp_privacy_password_wo=pulumi.get(__response__, 'snmp_privacy_password_wo'),
+        snmp_privacy_password_wo_version=pulumi.get(__response__, 'snmp_privacy_password_wo_version'),
         snmp_privacy_protocol=pulumi.get(__response__, 'snmp_privacy_protocol'),
         snmp_ro_community=pulumi.get(__response__, 'snmp_ro_community'),
         snmp_security_level=pulumi.get(__response__, 'snmp_security_level'),
@@ -759,19 +1057,29 @@ def get_device_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None
         software_version=pulumi.get(__response__, 'software_version'),
         tacacs_connect_mode_options=pulumi.get(__response__, 'tacacs_connect_mode_options'),
         tacacs_shared_secret=pulumi.get(__response__, 'tacacs_shared_secret'),
+        tacacs_shared_secret_wo=pulumi.get(__response__, 'tacacs_shared_secret_wo'),
+        tacacs_shared_secret_wo_version=pulumi.get(__response__, 'tacacs_shared_secret_wo_version'),
         trustsec_coa_source_host=pulumi.get(__response__, 'trustsec_coa_source_host'),
         trustsec_device_id=pulumi.get(__response__, 'trustsec_device_id'),
         trustsec_device_password=pulumi.get(__response__, 'trustsec_device_password'),
+        trustsec_device_password_wo=pulumi.get(__response__, 'trustsec_device_password_wo'),
+        trustsec_device_password_wo_version=pulumi.get(__response__, 'trustsec_device_password_wo_version'),
         trustsec_download_environment_data_every_x_seconds=pulumi.get(__response__, 'trustsec_download_environment_data_every_x_seconds'),
         trustsec_download_peer_authorization_policy_every_x_seconds=pulumi.get(__response__, 'trustsec_download_peer_authorization_policy_every_x_seconds'),
         trustsec_download_sgacl_lists_every_x_seconds=pulumi.get(__response__, 'trustsec_download_sgacl_lists_every_x_seconds'),
         trustsec_enable_mode_password=pulumi.get(__response__, 'trustsec_enable_mode_password'),
+        trustsec_enable_mode_password_wo=pulumi.get(__response__, 'trustsec_enable_mode_password_wo'),
+        trustsec_enable_mode_password_wo_version=pulumi.get(__response__, 'trustsec_enable_mode_password_wo_version'),
         trustsec_exec_mode_password=pulumi.get(__response__, 'trustsec_exec_mode_password'),
+        trustsec_exec_mode_password_wo=pulumi.get(__response__, 'trustsec_exec_mode_password_wo'),
+        trustsec_exec_mode_password_wo_version=pulumi.get(__response__, 'trustsec_exec_mode_password_wo_version'),
         trustsec_exec_mode_username=pulumi.get(__response__, 'trustsec_exec_mode_username'),
         trustsec_include_when_deploying_sgt_updates=pulumi.get(__response__, 'trustsec_include_when_deploying_sgt_updates'),
         trustsec_other_sga_devices_to_trust_this_device=pulumi.get(__response__, 'trustsec_other_sga_devices_to_trust_this_device'),
         trustsec_re_authentication_every_x_seconds=pulumi.get(__response__, 'trustsec_re_authentication_every_x_seconds'),
         trustsec_rest_api_password=pulumi.get(__response__, 'trustsec_rest_api_password'),
+        trustsec_rest_api_password_wo=pulumi.get(__response__, 'trustsec_rest_api_password_wo'),
+        trustsec_rest_api_password_wo_version=pulumi.get(__response__, 'trustsec_rest_api_password_wo_version'),
         trustsec_rest_api_username=pulumi.get(__response__, 'trustsec_rest_api_username'),
         trustsec_send_configuration_to_device=pulumi.get(__response__, 'trustsec_send_configuration_to_device'),
         trustsec_send_configuration_to_device_using=pulumi.get(__response__, 'trustsec_send_configuration_to_device_using')))

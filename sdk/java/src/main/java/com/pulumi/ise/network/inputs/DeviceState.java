@@ -66,6 +66,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="authenticationEncryptionKey")
@@ -73,6 +75,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> authenticationEncryptionKey() {
@@ -97,7 +101,43 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     * 
+     */
+    @Import(name="authenticationEncryptionKeyWo")
+    private @Nullable Output<String> authenticationEncryptionKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> authenticationEncryptionKeyWo() {
+        return Optional.ofNullable(this.authenticationEncryptionKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="authenticationEncryptionKeyWoVersion")
+    private @Nullable Output<Integer> authenticationEncryptionKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> authenticationEncryptionKeyWoVersion() {
+        return Optional.ofNullable(this.authenticationEncryptionKeyWoVersion);
+    }
+
+    /**
      * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="authenticationMessageAuthenticatorCodeKey")
@@ -105,10 +145,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> authenticationMessageAuthenticatorCodeKey() {
         return Optional.ofNullable(this.authenticationMessageAuthenticatorCodeKey);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     * 
+     */
+    @Import(name="authenticationMessageAuthenticatorCodeKeyWo")
+    private @Nullable Output<String> authenticationMessageAuthenticatorCodeKeyWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> authenticationMessageAuthenticatorCodeKeyWo() {
+        return Optional.ofNullable(this.authenticationMessageAuthenticatorCodeKeyWo);
+    }
+
+    /**
+     * Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="authenticationMessageAuthenticatorCodeKeyWoVersion")
+    private @Nullable Output<Integer> authenticationMessageAuthenticatorCodeKeyWoVersion;
+
+    /**
+     * @return Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> authenticationMessageAuthenticatorCodeKeyWoVersion() {
+        return Optional.ofNullable(this.authenticationMessageAuthenticatorCodeKeyWoVersion);
     }
 
     /**
@@ -130,6 +206,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="authenticationRadiusSharedSecret")
@@ -137,6 +215,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> authenticationRadiusSharedSecret() {
@@ -144,7 +224,43 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     * 
+     */
+    @Import(name="authenticationRadiusSharedSecretWo")
+    private @Nullable Output<String> authenticationRadiusSharedSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> authenticationRadiusSharedSecretWo() {
+        return Optional.ofNullable(this.authenticationRadiusSharedSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="authenticationRadiusSharedSecretWoVersion")
+    private @Nullable Output<Integer> authenticationRadiusSharedSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> authenticationRadiusSharedSecretWoVersion() {
+        return Optional.ofNullable(this.authenticationRadiusSharedSecretWoVersion);
+    }
+
+    /**
      * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="authenticationSecondRadiusSharedSecret")
@@ -152,10 +268,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> authenticationSecondRadiusSharedSecret() {
         return Optional.ofNullable(this.authenticationSecondRadiusSharedSecret);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     * 
+     */
+    @Import(name="authenticationSecondRadiusSharedSecretWo")
+    private @Nullable Output<String> authenticationSecondRadiusSharedSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> authenticationSecondRadiusSharedSecretWo() {
+        return Optional.ofNullable(this.authenticationSecondRadiusSharedSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="authenticationSecondRadiusSharedSecretWoVersion")
+    private @Nullable Output<Integer> authenticationSecondRadiusSharedSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> authenticationSecondRadiusSharedSecretWoVersion() {
+        return Optional.ofNullable(this.authenticationSecondRadiusSharedSecretWoVersion);
     }
 
     /**
@@ -282,6 +434,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="snmpAuthPassword")
@@ -289,10 +443,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> snmpAuthPassword() {
         return Optional.ofNullable(this.snmpAuthPassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     * 
+     */
+    @Import(name="snmpAuthPasswordWo")
+    private @Nullable Output<String> snmpAuthPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> snmpAuthPasswordWo() {
+        return Optional.ofNullable(this.snmpAuthPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="snmpAuthPasswordWoVersion")
+    private @Nullable Output<Integer> snmpAuthPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> snmpAuthPasswordWoVersion() {
+        return Optional.ofNullable(this.snmpAuthPasswordWoVersion);
     }
 
     /**
@@ -376,6 +566,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="snmpPrivacyPassword")
@@ -383,10 +575,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> snmpPrivacyPassword() {
         return Optional.ofNullable(this.snmpPrivacyPassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     * 
+     */
+    @Import(name="snmpPrivacyPasswordWo")
+    private @Nullable Output<String> snmpPrivacyPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> snmpPrivacyPasswordWo() {
+        return Optional.ofNullable(this.snmpPrivacyPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="snmpPrivacyPasswordWoVersion")
+    private @Nullable Output<Integer> snmpPrivacyPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> snmpPrivacyPasswordWoVersion() {
+        return Optional.ofNullable(this.snmpPrivacyPasswordWoVersion);
     }
 
     /**
@@ -504,6 +732,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="tacacsSharedSecret")
@@ -511,10 +741,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> tacacsSharedSecret() {
         return Optional.ofNullable(this.tacacsSharedSecret);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     * 
+     */
+    @Import(name="tacacsSharedSecretWo")
+    private @Nullable Output<String> tacacsSharedSecretWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> tacacsSharedSecretWo() {
+        return Optional.ofNullable(this.tacacsSharedSecretWo);
+    }
+
+    /**
+     * Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="tacacsSharedSecretWoVersion")
+    private @Nullable Output<Integer> tacacsSharedSecretWoVersion;
+
+    /**
+     * @return Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> tacacsSharedSecretWoVersion() {
+        return Optional.ofNullable(this.tacacsSharedSecretWoVersion);
     }
 
     /**
@@ -549,6 +815,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="trustsecDevicePassword")
@@ -556,10 +824,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> trustsecDevicePassword() {
         return Optional.ofNullable(this.trustsecDevicePassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     * 
+     */
+    @Import(name="trustsecDevicePasswordWo")
+    private @Nullable Output<String> trustsecDevicePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> trustsecDevicePasswordWo() {
+        return Optional.ofNullable(this.trustsecDevicePasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="trustsecDevicePasswordWoVersion")
+    private @Nullable Output<Integer> trustsecDevicePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> trustsecDevicePasswordWoVersion() {
+        return Optional.ofNullable(this.trustsecDevicePasswordWoVersion);
     }
 
     /**
@@ -609,6 +913,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="trustsecEnableModePassword")
@@ -616,6 +922,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> trustsecEnableModePassword() {
@@ -623,7 +931,43 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     * 
+     */
+    @Import(name="trustsecEnableModePasswordWo")
+    private @Nullable Output<String> trustsecEnableModePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> trustsecEnableModePasswordWo() {
+        return Optional.ofNullable(this.trustsecEnableModePasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="trustsecEnableModePasswordWoVersion")
+    private @Nullable Output<Integer> trustsecEnableModePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> trustsecEnableModePasswordWoVersion() {
+        return Optional.ofNullable(this.trustsecEnableModePasswordWoVersion);
+    }
+
+    /**
      * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="trustsecExecModePassword")
@@ -631,10 +975,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> trustsecExecModePassword() {
         return Optional.ofNullable(this.trustsecExecModePassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     * 
+     */
+    @Import(name="trustsecExecModePasswordWo")
+    private @Nullable Output<String> trustsecExecModePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> trustsecExecModePasswordWo() {
+        return Optional.ofNullable(this.trustsecExecModePasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="trustsecExecModePasswordWoVersion")
+    private @Nullable Output<Integer> trustsecExecModePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> trustsecExecModePasswordWoVersion() {
+        return Optional.ofNullable(this.trustsecExecModePasswordWoVersion);
     }
 
     /**
@@ -699,6 +1079,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="trustsecRestApiPassword")
@@ -706,10 +1088,46 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> trustsecRestApiPassword() {
         return Optional.ofNullable(this.trustsecRestApiPassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     * 
+     */
+    @Import(name="trustsecRestApiPasswordWo")
+    private @Nullable Output<String> trustsecRestApiPasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> trustsecRestApiPasswordWo() {
+        return Optional.ofNullable(this.trustsecRestApiPasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="trustsecRestApiPasswordWoVersion")
+    private @Nullable Output<Integer> trustsecRestApiPasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> trustsecRestApiPasswordWoVersion() {
+        return Optional.ofNullable(this.trustsecRestApiPasswordWoVersion);
     }
 
     /**
@@ -767,10 +1185,18 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
         this.authenticationEnableMultiSecret = $.authenticationEnableMultiSecret;
         this.authenticationEncryptionKey = $.authenticationEncryptionKey;
         this.authenticationEncryptionKeyFormat = $.authenticationEncryptionKeyFormat;
+        this.authenticationEncryptionKeyWo = $.authenticationEncryptionKeyWo;
+        this.authenticationEncryptionKeyWoVersion = $.authenticationEncryptionKeyWoVersion;
         this.authenticationMessageAuthenticatorCodeKey = $.authenticationMessageAuthenticatorCodeKey;
+        this.authenticationMessageAuthenticatorCodeKeyWo = $.authenticationMessageAuthenticatorCodeKeyWo;
+        this.authenticationMessageAuthenticatorCodeKeyWoVersion = $.authenticationMessageAuthenticatorCodeKeyWoVersion;
         this.authenticationNetworkProtocol = $.authenticationNetworkProtocol;
         this.authenticationRadiusSharedSecret = $.authenticationRadiusSharedSecret;
+        this.authenticationRadiusSharedSecretWo = $.authenticationRadiusSharedSecretWo;
+        this.authenticationRadiusSharedSecretWoVersion = $.authenticationRadiusSharedSecretWoVersion;
         this.authenticationSecondRadiusSharedSecret = $.authenticationSecondRadiusSharedSecret;
+        this.authenticationSecondRadiusSharedSecretWo = $.authenticationSecondRadiusSharedSecretWo;
+        this.authenticationSecondRadiusSharedSecretWoVersion = $.authenticationSecondRadiusSharedSecretWoVersion;
         this.coaPort = $.coaPort;
         this.description = $.description;
         this.dtlsDnsName = $.dtlsDnsName;
@@ -780,12 +1206,16 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
         this.networkDeviceGroups = $.networkDeviceGroups;
         this.profileName = $.profileName;
         this.snmpAuthPassword = $.snmpAuthPassword;
+        this.snmpAuthPasswordWo = $.snmpAuthPasswordWo;
+        this.snmpAuthPasswordWoVersion = $.snmpAuthPasswordWoVersion;
         this.snmpAuthProtocol = $.snmpAuthProtocol;
         this.snmpLinkTrapQuery = $.snmpLinkTrapQuery;
         this.snmpMacTrapQuery = $.snmpMacTrapQuery;
         this.snmpOriginatingPolicyServiceNode = $.snmpOriginatingPolicyServiceNode;
         this.snmpPollingInterval = $.snmpPollingInterval;
         this.snmpPrivacyPassword = $.snmpPrivacyPassword;
+        this.snmpPrivacyPasswordWo = $.snmpPrivacyPasswordWo;
+        this.snmpPrivacyPasswordWoVersion = $.snmpPrivacyPasswordWoVersion;
         this.snmpPrivacyProtocol = $.snmpPrivacyProtocol;
         this.snmpRoCommunity = $.snmpRoCommunity;
         this.snmpSecurityLevel = $.snmpSecurityLevel;
@@ -794,19 +1224,29 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
         this.softwareVersion = $.softwareVersion;
         this.tacacsConnectModeOptions = $.tacacsConnectModeOptions;
         this.tacacsSharedSecret = $.tacacsSharedSecret;
+        this.tacacsSharedSecretWo = $.tacacsSharedSecretWo;
+        this.tacacsSharedSecretWoVersion = $.tacacsSharedSecretWoVersion;
         this.trustsecCoaSourceHost = $.trustsecCoaSourceHost;
         this.trustsecDeviceId = $.trustsecDeviceId;
         this.trustsecDevicePassword = $.trustsecDevicePassword;
+        this.trustsecDevicePasswordWo = $.trustsecDevicePasswordWo;
+        this.trustsecDevicePasswordWoVersion = $.trustsecDevicePasswordWoVersion;
         this.trustsecDownloadEnvironmentDataEveryXSeconds = $.trustsecDownloadEnvironmentDataEveryXSeconds;
         this.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds = $.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
         this.trustsecDownloadSgaclListsEveryXSeconds = $.trustsecDownloadSgaclListsEveryXSeconds;
         this.trustsecEnableModePassword = $.trustsecEnableModePassword;
+        this.trustsecEnableModePasswordWo = $.trustsecEnableModePasswordWo;
+        this.trustsecEnableModePasswordWoVersion = $.trustsecEnableModePasswordWoVersion;
         this.trustsecExecModePassword = $.trustsecExecModePassword;
+        this.trustsecExecModePasswordWo = $.trustsecExecModePasswordWo;
+        this.trustsecExecModePasswordWoVersion = $.trustsecExecModePasswordWoVersion;
         this.trustsecExecModeUsername = $.trustsecExecModeUsername;
         this.trustsecIncludeWhenDeployingSgtUpdates = $.trustsecIncludeWhenDeployingSgtUpdates;
         this.trustsecOtherSgaDevicesToTrustThisDevice = $.trustsecOtherSgaDevicesToTrustThisDevice;
         this.trustsecReAuthenticationEveryXSeconds = $.trustsecReAuthenticationEveryXSeconds;
         this.trustsecRestApiPassword = $.trustsecRestApiPassword;
+        this.trustsecRestApiPasswordWo = $.trustsecRestApiPasswordWo;
+        this.trustsecRestApiPasswordWoVersion = $.trustsecRestApiPasswordWoVersion;
         this.trustsecRestApiUsername = $.trustsecRestApiUsername;
         this.trustsecSendConfigurationToDevice = $.trustsecSendConfigurationToDevice;
         this.trustsecSendConfigurationToDeviceUsing = $.trustsecSendConfigurationToDeviceUsing;
@@ -895,6 +1335,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param authenticationEncryptionKey Encryption key
+         *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -906,6 +1348,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param authenticationEncryptionKey Encryption key
+         *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -938,7 +1382,55 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param authenticationEncryptionKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Encryption key
+         *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationEncryptionKeyWo(@Nullable Output<String> authenticationEncryptionKeyWo) {
+            $.authenticationEncryptionKeyWo = authenticationEncryptionKeyWo;
+            return this;
+        }
+
+        /**
+         * @param authenticationEncryptionKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Encryption key
+         *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationEncryptionKeyWo(String authenticationEncryptionKeyWo) {
+            return authenticationEncryptionKeyWo(Output.of(authenticationEncryptionKeyWo));
+        }
+
+        /**
+         * @param authenticationEncryptionKeyWoVersion Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationEncryptionKeyWoVersion(@Nullable Output<Integer> authenticationEncryptionKeyWoVersion) {
+            $.authenticationEncryptionKeyWoVersion = authenticationEncryptionKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param authenticationEncryptionKeyWoVersion Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationEncryptionKeyWoVersion(Integer authenticationEncryptionKeyWoVersion) {
+            return authenticationEncryptionKeyWoVersion(Output.of(authenticationEncryptionKeyWoVersion));
+        }
+
+        /**
          * @param authenticationMessageAuthenticatorCodeKey Message authenticator code key
+         *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -950,12 +1442,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param authenticationMessageAuthenticatorCodeKey Message authenticator code key
+         *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder authenticationMessageAuthenticatorCodeKey(String authenticationMessageAuthenticatorCodeKey) {
             return authenticationMessageAuthenticatorCodeKey(Output.of(authenticationMessageAuthenticatorCodeKey));
+        }
+
+        /**
+         * @param authenticationMessageAuthenticatorCodeKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Message authenticator code key
+         *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationMessageAuthenticatorCodeKeyWo(@Nullable Output<String> authenticationMessageAuthenticatorCodeKeyWo) {
+            $.authenticationMessageAuthenticatorCodeKeyWo = authenticationMessageAuthenticatorCodeKeyWo;
+            return this;
+        }
+
+        /**
+         * @param authenticationMessageAuthenticatorCodeKeyWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Message authenticator code key
+         *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationMessageAuthenticatorCodeKeyWo(String authenticationMessageAuthenticatorCodeKeyWo) {
+            return authenticationMessageAuthenticatorCodeKeyWo(Output.of(authenticationMessageAuthenticatorCodeKeyWo));
+        }
+
+        /**
+         * @param authenticationMessageAuthenticatorCodeKeyWoVersion Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationMessageAuthenticatorCodeKeyWoVersion(@Nullable Output<Integer> authenticationMessageAuthenticatorCodeKeyWoVersion) {
+            $.authenticationMessageAuthenticatorCodeKeyWoVersion = authenticationMessageAuthenticatorCodeKeyWoVersion;
+            return this;
+        }
+
+        /**
+         * @param authenticationMessageAuthenticatorCodeKeyWoVersion Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationMessageAuthenticatorCodeKeyWoVersion(Integer authenticationMessageAuthenticatorCodeKeyWoVersion) {
+            return authenticationMessageAuthenticatorCodeKeyWoVersion(Output.of(authenticationMessageAuthenticatorCodeKeyWoVersion));
         }
 
         /**
@@ -983,6 +1523,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param authenticationRadiusSharedSecret RADIUS shared secret
+         *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -994,6 +1536,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param authenticationRadiusSharedSecret RADIUS shared secret
+         *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1003,7 +1547,55 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param authenticationRadiusSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * RADIUS shared secret
+         *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationRadiusSharedSecretWo(@Nullable Output<String> authenticationRadiusSharedSecretWo) {
+            $.authenticationRadiusSharedSecretWo = authenticationRadiusSharedSecretWo;
+            return this;
+        }
+
+        /**
+         * @param authenticationRadiusSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * RADIUS shared secret
+         *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationRadiusSharedSecretWo(String authenticationRadiusSharedSecretWo) {
+            return authenticationRadiusSharedSecretWo(Output.of(authenticationRadiusSharedSecretWo));
+        }
+
+        /**
+         * @param authenticationRadiusSharedSecretWoVersion Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationRadiusSharedSecretWoVersion(@Nullable Output<Integer> authenticationRadiusSharedSecretWoVersion) {
+            $.authenticationRadiusSharedSecretWoVersion = authenticationRadiusSharedSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param authenticationRadiusSharedSecretWoVersion Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationRadiusSharedSecretWoVersion(Integer authenticationRadiusSharedSecretWoVersion) {
+            return authenticationRadiusSharedSecretWoVersion(Output.of(authenticationRadiusSharedSecretWoVersion));
+        }
+
+        /**
          * @param authenticationSecondRadiusSharedSecret Second RADIUS shared secret
+         *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1015,12 +1607,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param authenticationSecondRadiusSharedSecret Second RADIUS shared secret
+         *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder authenticationSecondRadiusSharedSecret(String authenticationSecondRadiusSharedSecret) {
             return authenticationSecondRadiusSharedSecret(Output.of(authenticationSecondRadiusSharedSecret));
+        }
+
+        /**
+         * @param authenticationSecondRadiusSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Second RADIUS shared secret
+         *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationSecondRadiusSharedSecretWo(@Nullable Output<String> authenticationSecondRadiusSharedSecretWo) {
+            $.authenticationSecondRadiusSharedSecretWo = authenticationSecondRadiusSharedSecretWo;
+            return this;
+        }
+
+        /**
+         * @param authenticationSecondRadiusSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Second RADIUS shared secret
+         *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationSecondRadiusSharedSecretWo(String authenticationSecondRadiusSharedSecretWo) {
+            return authenticationSecondRadiusSharedSecretWo(Output.of(authenticationSecondRadiusSharedSecretWo));
+        }
+
+        /**
+         * @param authenticationSecondRadiusSharedSecretWoVersion Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationSecondRadiusSharedSecretWoVersion(@Nullable Output<Integer> authenticationSecondRadiusSharedSecretWoVersion) {
+            $.authenticationSecondRadiusSharedSecretWoVersion = authenticationSecondRadiusSharedSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param authenticationSecondRadiusSharedSecretWoVersion Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationSecondRadiusSharedSecretWoVersion(Integer authenticationSecondRadiusSharedSecretWoVersion) {
+            return authenticationSecondRadiusSharedSecretWoVersion(Output.of(authenticationSecondRadiusSharedSecretWoVersion));
         }
 
         /**
@@ -1215,6 +1855,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snmpAuthPassword SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1226,12 +1868,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snmpAuthPassword SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder snmpAuthPassword(String snmpAuthPassword) {
             return snmpAuthPassword(Output.of(snmpAuthPassword));
+        }
+
+        /**
+         * @param snmpAuthPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthPasswordWo(@Nullable Output<String> snmpAuthPasswordWo) {
+            $.snmpAuthPasswordWo = snmpAuthPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param snmpAuthPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+         *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthPasswordWo(String snmpAuthPasswordWo) {
+            return snmpAuthPasswordWo(Output.of(snmpAuthPasswordWo));
+        }
+
+        /**
+         * @param snmpAuthPasswordWoVersion Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthPasswordWoVersion(@Nullable Output<Integer> snmpAuthPasswordWoVersion) {
+            $.snmpAuthPasswordWoVersion = snmpAuthPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param snmpAuthPasswordWoVersion Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpAuthPasswordWoVersion(Integer snmpAuthPasswordWoVersion) {
+            return snmpAuthPasswordWoVersion(Output.of(snmpAuthPasswordWoVersion));
         }
 
         /**
@@ -1345,6 +2035,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snmpPrivacyPassword SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+         *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1356,12 +2048,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snmpPrivacyPassword SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+         *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder snmpPrivacyPassword(String snmpPrivacyPassword) {
             return snmpPrivacyPassword(Output.of(snmpPrivacyPassword));
+        }
+
+        /**
+         * @param snmpPrivacyPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+         *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyPasswordWo(@Nullable Output<String> snmpPrivacyPasswordWo) {
+            $.snmpPrivacyPasswordWo = snmpPrivacyPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param snmpPrivacyPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+         *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyPasswordWo(String snmpPrivacyPasswordWo) {
+            return snmpPrivacyPasswordWo(Output.of(snmpPrivacyPasswordWo));
+        }
+
+        /**
+         * @param snmpPrivacyPasswordWoVersion Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyPasswordWoVersion(@Nullable Output<Integer> snmpPrivacyPasswordWoVersion) {
+            $.snmpPrivacyPasswordWoVersion = snmpPrivacyPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param snmpPrivacyPasswordWoVersion Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snmpPrivacyPasswordWoVersion(Integer snmpPrivacyPasswordWoVersion) {
+            return snmpPrivacyPasswordWoVersion(Output.of(snmpPrivacyPasswordWoVersion));
         }
 
         /**
@@ -1521,6 +2261,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param tacacsSharedSecret Shared secret
+         *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1532,12 +2274,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param tacacsSharedSecret Shared secret
+         *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder tacacsSharedSecret(String tacacsSharedSecret) {
             return tacacsSharedSecret(Output.of(tacacsSharedSecret));
+        }
+
+        /**
+         * @param tacacsSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Shared secret
+         *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tacacsSharedSecretWo(@Nullable Output<String> tacacsSharedSecretWo) {
+            $.tacacsSharedSecretWo = tacacsSharedSecretWo;
+            return this;
+        }
+
+        /**
+         * @param tacacsSharedSecretWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Shared secret
+         *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tacacsSharedSecretWo(String tacacsSharedSecretWo) {
+            return tacacsSharedSecretWo(Output.of(tacacsSharedSecretWo));
+        }
+
+        /**
+         * @param tacacsSharedSecretWoVersion Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tacacsSharedSecretWoVersion(@Nullable Output<Integer> tacacsSharedSecretWoVersion) {
+            $.tacacsSharedSecretWoVersion = tacacsSharedSecretWoVersion;
+            return this;
+        }
+
+        /**
+         * @param tacacsSharedSecretWoVersion Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tacacsSharedSecretWoVersion(Integer tacacsSharedSecretWoVersion) {
+            return tacacsSharedSecretWoVersion(Output.of(tacacsSharedSecretWoVersion));
         }
 
         /**
@@ -1584,6 +2374,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecDevicePassword TrustSec device password
+         *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1595,12 +2387,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecDevicePassword TrustSec device password
+         *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder trustsecDevicePassword(String trustsecDevicePassword) {
             return trustsecDevicePassword(Output.of(trustsecDevicePassword));
+        }
+
+        /**
+         * @param trustsecDevicePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * TrustSec device password
+         *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecDevicePasswordWo(@Nullable Output<String> trustsecDevicePasswordWo) {
+            $.trustsecDevicePasswordWo = trustsecDevicePasswordWo;
+            return this;
+        }
+
+        /**
+         * @param trustsecDevicePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * TrustSec device password
+         *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecDevicePasswordWo(String trustsecDevicePasswordWo) {
+            return trustsecDevicePasswordWo(Output.of(trustsecDevicePasswordWo));
+        }
+
+        /**
+         * @param trustsecDevicePasswordWoVersion Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecDevicePasswordWoVersion(@Nullable Output<Integer> trustsecDevicePasswordWoVersion) {
+            $.trustsecDevicePasswordWoVersion = trustsecDevicePasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param trustsecDevicePasswordWoVersion Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecDevicePasswordWoVersion(Integer trustsecDevicePasswordWoVersion) {
+            return trustsecDevicePasswordWoVersion(Output.of(trustsecDevicePasswordWoVersion));
         }
 
         /**
@@ -1668,6 +2508,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecEnableModePassword Enable mode password
+         *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1679,6 +2521,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecEnableModePassword Enable mode password
+         *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1688,7 +2532,55 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param trustsecEnableModePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Enable mode password
+         *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecEnableModePasswordWo(@Nullable Output<String> trustsecEnableModePasswordWo) {
+            $.trustsecEnableModePasswordWo = trustsecEnableModePasswordWo;
+            return this;
+        }
+
+        /**
+         * @param trustsecEnableModePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * Enable mode password
+         *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecEnableModePasswordWo(String trustsecEnableModePasswordWo) {
+            return trustsecEnableModePasswordWo(Output.of(trustsecEnableModePasswordWo));
+        }
+
+        /**
+         * @param trustsecEnableModePasswordWoVersion Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecEnableModePasswordWoVersion(@Nullable Output<Integer> trustsecEnableModePasswordWoVersion) {
+            $.trustsecEnableModePasswordWoVersion = trustsecEnableModePasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param trustsecEnableModePasswordWoVersion Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecEnableModePasswordWoVersion(Integer trustsecEnableModePasswordWoVersion) {
+            return trustsecEnableModePasswordWoVersion(Output.of(trustsecEnableModePasswordWoVersion));
+        }
+
+        /**
          * @param trustsecExecModePassword EXEC mode password
+         *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1700,12 +2592,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecExecModePassword EXEC mode password
+         *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder trustsecExecModePassword(String trustsecExecModePassword) {
             return trustsecExecModePassword(Output.of(trustsecExecModePassword));
+        }
+
+        /**
+         * @param trustsecExecModePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * EXEC mode password
+         *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecExecModePasswordWo(@Nullable Output<String> trustsecExecModePasswordWo) {
+            $.trustsecExecModePasswordWo = trustsecExecModePasswordWo;
+            return this;
+        }
+
+        /**
+         * @param trustsecExecModePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * EXEC mode password
+         *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecExecModePasswordWo(String trustsecExecModePasswordWo) {
+            return trustsecExecModePasswordWo(Output.of(trustsecExecModePasswordWo));
+        }
+
+        /**
+         * @param trustsecExecModePasswordWoVersion Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecExecModePasswordWoVersion(@Nullable Output<Integer> trustsecExecModePasswordWoVersion) {
+            $.trustsecExecModePasswordWoVersion = trustsecExecModePasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param trustsecExecModePasswordWoVersion Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecExecModePasswordWoVersion(Integer trustsecExecModePasswordWoVersion) {
+            return trustsecExecModePasswordWoVersion(Output.of(trustsecExecModePasswordWoVersion));
         }
 
         /**
@@ -1794,6 +2734,8 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecRestApiPassword REST API password
+         *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -1805,12 +2747,60 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param trustsecRestApiPassword REST API password
+         *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder trustsecRestApiPassword(String trustsecRestApiPassword) {
             return trustsecRestApiPassword(Output.of(trustsecRestApiPassword));
+        }
+
+        /**
+         * @param trustsecRestApiPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * REST API password
+         *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecRestApiPasswordWo(@Nullable Output<String> trustsecRestApiPasswordWo) {
+            $.trustsecRestApiPasswordWo = trustsecRestApiPasswordWo;
+            return this;
+        }
+
+        /**
+         * @param trustsecRestApiPasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * REST API password
+         *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecRestApiPasswordWo(String trustsecRestApiPasswordWo) {
+            return trustsecRestApiPasswordWo(Output.of(trustsecRestApiPasswordWo));
+        }
+
+        /**
+         * @param trustsecRestApiPasswordWoVersion Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecRestApiPasswordWoVersion(@Nullable Output<Integer> trustsecRestApiPasswordWoVersion) {
+            $.trustsecRestApiPasswordWoVersion = trustsecRestApiPasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param trustsecRestApiPasswordWoVersion Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecRestApiPasswordWoVersion(Integer trustsecRestApiPasswordWoVersion) {
+            return trustsecRestApiPasswordWoVersion(Output.of(trustsecRestApiPasswordWoVersion));
         }
 
         /**

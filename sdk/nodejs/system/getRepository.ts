@@ -62,6 +62,14 @@ export interface GetRepositoryResult {
      */
     readonly password: string;
     /**
+     * Password can contain alphanumeric and/or special characters.
+     */
+    readonly passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly passwordWoVersion: number;
+    /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */
     readonly path: string;

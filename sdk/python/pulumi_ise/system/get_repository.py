@@ -26,7 +26,7 @@ class GetRepositoryResult:
     """
     A collection of values returned by getRepository.
     """
-    def __init__(__self__, enable_pki=None, id=None, name=None, password=None, path=None, protocol=None, server_name=None, user_name=None):
+    def __init__(__self__, enable_pki=None, id=None, name=None, password=None, password_wo=None, password_wo_version=None, path=None, protocol=None, server_name=None, user_name=None):
         if enable_pki and not isinstance(enable_pki, bool):
             raise TypeError("Expected argument 'enable_pki' to be a bool")
         pulumi.set(__self__, "enable_pki", enable_pki)
@@ -39,6 +39,12 @@ class GetRepositoryResult:
         if password and not isinstance(password, str):
             raise TypeError("Expected argument 'password' to be a str")
         pulumi.set(__self__, "password", password)
+        if password_wo and not isinstance(password_wo, str):
+            raise TypeError("Expected argument 'password_wo' to be a str")
+        pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version and not isinstance(password_wo_version, int):
+            raise TypeError("Expected argument 'password_wo_version' to be a int")
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
         if path and not isinstance(path, str):
             raise TypeError("Expected argument 'path' to be a str")
         pulumi.set(__self__, "path", path)
@@ -85,6 +91,22 @@ class GetRepositoryResult:
         return pulumi.get(self, "password")
 
     @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        Password can contain alphanumeric and/or special characters.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @_builtins.property
     @pulumi.getter
     def path(self) -> _builtins.str:
         """
@@ -127,6 +149,8 @@ class AwaitableGetRepositoryResult(GetRepositoryResult):
             id=self.id,
             name=self.name,
             password=self.password,
+            password_wo=self.password_wo,
+            password_wo_version=self.password_wo_version,
             path=self.path,
             protocol=self.protocol,
             server_name=self.server_name,
@@ -163,6 +187,8 @@ def get_repository(id: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         password=pulumi.get(__ret__, 'password'),
+        password_wo=pulumi.get(__ret__, 'password_wo'),
+        password_wo_version=pulumi.get(__ret__, 'password_wo_version'),
         path=pulumi.get(__ret__, 'path'),
         protocol=pulumi.get(__ret__, 'protocol'),
         server_name=pulumi.get(__ret__, 'server_name'),
@@ -196,6 +222,8 @@ def get_repository_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = 
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         password=pulumi.get(__response__, 'password'),
+        password_wo=pulumi.get(__response__, 'password_wo'),
+        password_wo_version=pulumi.get(__response__, 'password_wo_version'),
         path=pulumi.get(__response__, 'path'),
         protocol=pulumi.get(__response__, 'protocol'),
         server_name=pulumi.get(__response__, 'server_name'),

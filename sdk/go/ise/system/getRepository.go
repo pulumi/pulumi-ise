@@ -66,6 +66,10 @@ type LookupRepositoryResult struct {
 	Name string `pulumi:"name"`
 	// Password can contain alphanumeric and/or special characters.
 	Password string `pulumi:"password"`
+	// Password can contain alphanumeric and/or special characters.
+	PasswordWo string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion int `pulumi:"passwordWoVersion"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path string `pulumi:"path"`
 	// Protocol
@@ -126,6 +130,16 @@ func (o LookupRepositoryResultOutput) Name() pulumi.StringOutput {
 // Password can contain alphanumeric and/or special characters.
 func (o LookupRepositoryResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRepositoryResult) string { return v.Password }).(pulumi.StringOutput)
+}
+
+// Password can contain alphanumeric and/or special characters.
+func (o LookupRepositoryResultOutput) PasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupRepositoryResult) string { return v.PasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupRepositoryResultOutput) PasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupRepositoryResult) int { return v.PasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.

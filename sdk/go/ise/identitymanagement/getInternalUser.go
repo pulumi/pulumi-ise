@@ -70,6 +70,10 @@ type LookupInternalUserResult struct {
 	Email string `pulumi:"email"`
 	// This field is added in ISE 2.0 to support TACACS+
 	EnablePassword string `pulumi:"enablePassword"`
+	// This field is added in ISE 2.0 to support TACACS+
+	EnablePasswordWo string `pulumi:"enablePasswordWo"`
+	// Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	EnablePasswordWoVersion int `pulumi:"enablePasswordWoVersion"`
 	// Whether the user is enabled/disabled
 	Enabled bool `pulumi:"enabled"`
 	// First name of the internal user
@@ -88,6 +92,10 @@ type LookupInternalUserResult struct {
 	PasswordIdStore string `pulumi:"passwordIdStore"`
 	// Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
 	PasswordNeverExpires bool `pulumi:"passwordNeverExpires"`
+	// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+	PasswordWo string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion int `pulumi:"passwordWoVersion"`
 }
 
 func LookupInternalUserOutput(ctx *pulumi.Context, args LookupInternalUserOutputArgs, opts ...pulumi.InvokeOption) LookupInternalUserResultOutput {
@@ -152,6 +160,16 @@ func (o LookupInternalUserResultOutput) EnablePassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupInternalUserResult) string { return v.EnablePassword }).(pulumi.StringOutput)
 }
 
+// This field is added in ISE 2.0 to support TACACS+
+func (o LookupInternalUserResultOutput) EnablePasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupInternalUserResult) string { return v.EnablePasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupInternalUserResultOutput) EnablePasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupInternalUserResult) int { return v.EnablePasswordWoVersion }).(pulumi.IntOutput)
+}
+
 // Whether the user is enabled/disabled
 func (o LookupInternalUserResultOutput) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInternalUserResult) bool { return v.Enabled }).(pulumi.BoolOutput)
@@ -195,6 +213,16 @@ func (o LookupInternalUserResultOutput) PasswordIdStore() pulumi.StringOutput {
 // Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
 func (o LookupInternalUserResultOutput) PasswordNeverExpires() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInternalUserResult) bool { return v.PasswordNeverExpires }).(pulumi.BoolOutput)
+}
+
+// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+func (o LookupInternalUserResultOutput) PasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupInternalUserResult) string { return v.PasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupInternalUserResultOutput) PasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupInternalUserResult) int { return v.PasswordWoVersion }).(pulumi.IntOutput)
 }
 
 func init() {

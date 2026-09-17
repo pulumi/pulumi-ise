@@ -28,6 +28,11 @@ All resources and functions have been tested with the following releases.
 | ISE      | 3.3.0   |
 | ISE      | 3.4.0   |
 | ISE      | 3.5.0   |
+## Requirements
+
+- Pulumi >= 1.11
+
+Resources that manage secrets expose them as write-only arguments (the `*_wo` attributes), which are only supported in Pulumi 1.11 and later.
 ## Example Usage
 
 ```yaml

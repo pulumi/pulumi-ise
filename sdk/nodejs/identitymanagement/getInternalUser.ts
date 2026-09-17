@@ -70,6 +70,14 @@ export interface GetInternalUserResult {
      */
     readonly enablePassword: string;
     /**
+     * This field is added in ISE 2.0 to support TACACS+
+     */
+    readonly enablePasswordWo: string;
+    /**
+     * Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly enablePasswordWoVersion: number;
+    /**
      * Whether the user is enabled/disabled
      */
     readonly enabled: boolean;
@@ -105,6 +113,14 @@ export interface GetInternalUserResult {
      * Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
      */
     readonly passwordNeverExpires: boolean;
+    /**
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     */
+    readonly passwordWo: string;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly passwordWoVersion: number;
 }
 /**
  * This data source can read the Internal User.

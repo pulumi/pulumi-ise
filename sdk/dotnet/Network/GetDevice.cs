@@ -150,9 +150,25 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly string AuthenticationEncryptionKeyFormat;
         /// <summary>
+        /// Encryption key
+        /// </summary>
+        public readonly string AuthenticationEncryptionKeyWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AuthenticationEncryptionKeyWoVersion;
+        /// <summary>
         /// Message authenticator code key
         /// </summary>
         public readonly string AuthenticationMessageAuthenticatorCodeKey;
+        /// <summary>
+        /// Message authenticator code key
+        /// </summary>
+        public readonly string AuthenticationMessageAuthenticatorCodeKeyWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AuthenticationMessageAuthenticatorCodeKeyWoVersion;
         /// <summary>
         /// Network protocol
         /// </summary>
@@ -162,9 +178,25 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly string AuthenticationRadiusSharedSecret;
         /// <summary>
+        /// RADIUS shared secret
+        /// </summary>
+        public readonly string AuthenticationRadiusSharedSecretWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AuthenticationRadiusSharedSecretWoVersion;
+        /// <summary>
         /// Second RADIUS shared secret
         /// </summary>
         public readonly string AuthenticationSecondRadiusSharedSecret;
+        /// <summary>
+        /// Second RADIUS shared secret
+        /// </summary>
+        public readonly string AuthenticationSecondRadiusSharedSecretWo;
+        /// <summary>
+        /// Rotation trigger for `AuthenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int AuthenticationSecondRadiusSharedSecretWoVersion;
         /// <summary>
         /// CoA port
         /// </summary>
@@ -206,6 +238,14 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly string SnmpAuthPassword;
         /// <summary>
+        /// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+        /// </summary>
+        public readonly string SnmpAuthPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `SnmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int SnmpAuthPasswordWoVersion;
+        /// <summary>
         /// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
         /// </summary>
         public readonly string SnmpAuthProtocol;
@@ -229,6 +269,14 @@ namespace Pulumi.Ise.Network
         /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
         /// </summary>
         public readonly string SnmpPrivacyPassword;
+        /// <summary>
+        /// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+        /// </summary>
+        public readonly string SnmpPrivacyPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `SnmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int SnmpPrivacyPasswordWoVersion;
         /// <summary>
         /// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
         /// </summary>
@@ -262,6 +310,14 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly string TacacsSharedSecret;
         /// <summary>
+        /// Shared secret
+        /// </summary>
+        public readonly string TacacsSharedSecretWo;
+        /// <summary>
+        /// Rotation trigger for `TacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int TacacsSharedSecretWoVersion;
+        /// <summary>
         /// CoA source host
         /// </summary>
         public readonly string TrustsecCoaSourceHost;
@@ -273,6 +329,14 @@ namespace Pulumi.Ise.Network
         /// TrustSec device password
         /// </summary>
         public readonly string TrustsecDevicePassword;
+        /// <summary>
+        /// TrustSec device password
+        /// </summary>
+        public readonly string TrustsecDevicePasswordWo;
+        /// <summary>
+        /// Rotation trigger for `TrustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int TrustsecDevicePasswordWoVersion;
         /// <summary>
         /// Download environment data every X seconds
         /// </summary>
@@ -290,9 +354,25 @@ namespace Pulumi.Ise.Network
         /// </summary>
         public readonly string TrustsecEnableModePassword;
         /// <summary>
+        /// Enable mode password
+        /// </summary>
+        public readonly string TrustsecEnableModePasswordWo;
+        /// <summary>
+        /// Rotation trigger for `TrustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int TrustsecEnableModePasswordWoVersion;
+        /// <summary>
         /// EXEC mode password
         /// </summary>
         public readonly string TrustsecExecModePassword;
+        /// <summary>
+        /// EXEC mode password
+        /// </summary>
+        public readonly string TrustsecExecModePasswordWo;
+        /// <summary>
+        /// Rotation trigger for `TrustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int TrustsecExecModePasswordWoVersion;
         /// <summary>
         /// EXEC mode username
         /// </summary>
@@ -313,6 +393,14 @@ namespace Pulumi.Ise.Network
         /// REST API password
         /// </summary>
         public readonly string TrustsecRestApiPassword;
+        /// <summary>
+        /// REST API password
+        /// </summary>
+        public readonly string TrustsecRestApiPasswordWo;
+        /// <summary>
+        /// Rotation trigger for `TrustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int TrustsecRestApiPasswordWoVersion;
         /// <summary>
         /// REST API username
         /// </summary>
@@ -338,13 +426,29 @@ namespace Pulumi.Ise.Network
 
             string authenticationEncryptionKeyFormat,
 
+            string authenticationEncryptionKeyWo,
+
+            int authenticationEncryptionKeyWoVersion,
+
             string authenticationMessageAuthenticatorCodeKey,
+
+            string authenticationMessageAuthenticatorCodeKeyWo,
+
+            int authenticationMessageAuthenticatorCodeKeyWoVersion,
 
             string authenticationNetworkProtocol,
 
             string authenticationRadiusSharedSecret,
 
+            string authenticationRadiusSharedSecretWo,
+
+            int authenticationRadiusSharedSecretWoVersion,
+
             string authenticationSecondRadiusSharedSecret,
+
+            string authenticationSecondRadiusSharedSecretWo,
+
+            int authenticationSecondRadiusSharedSecretWoVersion,
 
             int coaPort,
 
@@ -366,6 +470,10 @@ namespace Pulumi.Ise.Network
 
             string snmpAuthPassword,
 
+            string snmpAuthPasswordWo,
+
+            int snmpAuthPasswordWoVersion,
+
             string snmpAuthProtocol,
 
             bool snmpLinkTrapQuery,
@@ -377,6 +485,10 @@ namespace Pulumi.Ise.Network
             int snmpPollingInterval,
 
             string snmpPrivacyPassword,
+
+            string snmpPrivacyPasswordWo,
+
+            int snmpPrivacyPasswordWoVersion,
 
             string snmpPrivacyProtocol,
 
@@ -394,11 +506,19 @@ namespace Pulumi.Ise.Network
 
             string tacacsSharedSecret,
 
+            string tacacsSharedSecretWo,
+
+            int tacacsSharedSecretWoVersion,
+
             string trustsecCoaSourceHost,
 
             string trustsecDeviceId,
 
             string trustsecDevicePassword,
+
+            string trustsecDevicePasswordWo,
+
+            int trustsecDevicePasswordWoVersion,
 
             int trustsecDownloadEnvironmentDataEveryXSeconds,
 
@@ -408,7 +528,15 @@ namespace Pulumi.Ise.Network
 
             string trustsecEnableModePassword,
 
+            string trustsecEnableModePasswordWo,
+
+            int trustsecEnableModePasswordWoVersion,
+
             string trustsecExecModePassword,
+
+            string trustsecExecModePasswordWo,
+
+            int trustsecExecModePasswordWoVersion,
 
             string trustsecExecModeUsername,
 
@@ -419,6 +547,10 @@ namespace Pulumi.Ise.Network
             int trustsecReAuthenticationEveryXSeconds,
 
             string trustsecRestApiPassword,
+
+            string trustsecRestApiPasswordWo,
+
+            int trustsecRestApiPasswordWoVersion,
 
             string trustsecRestApiUsername,
 
@@ -431,10 +563,18 @@ namespace Pulumi.Ise.Network
             AuthenticationEnableMultiSecret = authenticationEnableMultiSecret;
             AuthenticationEncryptionKey = authenticationEncryptionKey;
             AuthenticationEncryptionKeyFormat = authenticationEncryptionKeyFormat;
+            AuthenticationEncryptionKeyWo = authenticationEncryptionKeyWo;
+            AuthenticationEncryptionKeyWoVersion = authenticationEncryptionKeyWoVersion;
             AuthenticationMessageAuthenticatorCodeKey = authenticationMessageAuthenticatorCodeKey;
+            AuthenticationMessageAuthenticatorCodeKeyWo = authenticationMessageAuthenticatorCodeKeyWo;
+            AuthenticationMessageAuthenticatorCodeKeyWoVersion = authenticationMessageAuthenticatorCodeKeyWoVersion;
             AuthenticationNetworkProtocol = authenticationNetworkProtocol;
             AuthenticationRadiusSharedSecret = authenticationRadiusSharedSecret;
+            AuthenticationRadiusSharedSecretWo = authenticationRadiusSharedSecretWo;
+            AuthenticationRadiusSharedSecretWoVersion = authenticationRadiusSharedSecretWoVersion;
             AuthenticationSecondRadiusSharedSecret = authenticationSecondRadiusSharedSecret;
+            AuthenticationSecondRadiusSharedSecretWo = authenticationSecondRadiusSharedSecretWo;
+            AuthenticationSecondRadiusSharedSecretWoVersion = authenticationSecondRadiusSharedSecretWoVersion;
             CoaPort = coaPort;
             Description = description;
             DtlsDnsName = dtlsDnsName;
@@ -445,12 +585,16 @@ namespace Pulumi.Ise.Network
             NetworkDeviceGroups = networkDeviceGroups;
             ProfileName = profileName;
             SnmpAuthPassword = snmpAuthPassword;
+            SnmpAuthPasswordWo = snmpAuthPasswordWo;
+            SnmpAuthPasswordWoVersion = snmpAuthPasswordWoVersion;
             SnmpAuthProtocol = snmpAuthProtocol;
             SnmpLinkTrapQuery = snmpLinkTrapQuery;
             SnmpMacTrapQuery = snmpMacTrapQuery;
             SnmpOriginatingPolicyServiceNode = snmpOriginatingPolicyServiceNode;
             SnmpPollingInterval = snmpPollingInterval;
             SnmpPrivacyPassword = snmpPrivacyPassword;
+            SnmpPrivacyPasswordWo = snmpPrivacyPasswordWo;
+            SnmpPrivacyPasswordWoVersion = snmpPrivacyPasswordWoVersion;
             SnmpPrivacyProtocol = snmpPrivacyProtocol;
             SnmpRoCommunity = snmpRoCommunity;
             SnmpSecurityLevel = snmpSecurityLevel;
@@ -459,19 +603,29 @@ namespace Pulumi.Ise.Network
             SoftwareVersion = softwareVersion;
             TacacsConnectModeOptions = tacacsConnectModeOptions;
             TacacsSharedSecret = tacacsSharedSecret;
+            TacacsSharedSecretWo = tacacsSharedSecretWo;
+            TacacsSharedSecretWoVersion = tacacsSharedSecretWoVersion;
             TrustsecCoaSourceHost = trustsecCoaSourceHost;
             TrustsecDeviceId = trustsecDeviceId;
             TrustsecDevicePassword = trustsecDevicePassword;
+            TrustsecDevicePasswordWo = trustsecDevicePasswordWo;
+            TrustsecDevicePasswordWoVersion = trustsecDevicePasswordWoVersion;
             TrustsecDownloadEnvironmentDataEveryXSeconds = trustsecDownloadEnvironmentDataEveryXSeconds;
             TrustsecDownloadPeerAuthorizationPolicyEveryXSeconds = trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
             TrustsecDownloadSgaclListsEveryXSeconds = trustsecDownloadSgaclListsEveryXSeconds;
             TrustsecEnableModePassword = trustsecEnableModePassword;
+            TrustsecEnableModePasswordWo = trustsecEnableModePasswordWo;
+            TrustsecEnableModePasswordWoVersion = trustsecEnableModePasswordWoVersion;
             TrustsecExecModePassword = trustsecExecModePassword;
+            TrustsecExecModePasswordWo = trustsecExecModePasswordWo;
+            TrustsecExecModePasswordWoVersion = trustsecExecModePasswordWoVersion;
             TrustsecExecModeUsername = trustsecExecModeUsername;
             TrustsecIncludeWhenDeployingSgtUpdates = trustsecIncludeWhenDeployingSgtUpdates;
             TrustsecOtherSgaDevicesToTrustThisDevice = trustsecOtherSgaDevicesToTrustThisDevice;
             TrustsecReAuthenticationEveryXSeconds = trustsecReAuthenticationEveryXSeconds;
             TrustsecRestApiPassword = trustsecRestApiPassword;
+            TrustsecRestApiPasswordWo = trustsecRestApiPasswordWo;
+            TrustsecRestApiPasswordWoVersion = trustsecRestApiPasswordWoVersion;
             TrustsecRestApiUsername = trustsecRestApiUsername;
             TrustsecSendConfigurationToDevice = trustsecSendConfigurationToDevice;
             TrustsecSendConfigurationToDeviceUsing = trustsecSendConfigurationToDeviceUsing;

@@ -11,7 +11,9 @@ import com.pulumi.ise.Utilities;
 import com.pulumi.ise.identitymanagement.InternalUserArgs;
 import com.pulumi.ise.identitymanagement.inputs.InternalUserState;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -45,11 +47,13 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) }{{@code
  *         var example = new InternalUser("example", InternalUserArgs.builder()
  *             .name("UserTF")
- *             .password("Cisco123")
+ *             .passwordWo("Cisco123")
+ *             .passwordWoVersion(1)
  *             .changePassword(true)
  *             .email("aaa}{@literal @}{@code cisco.com")
  *             .accountNameAlias("User 1")
- *             .enablePassword("Cisco123")
+ *             .enablePasswordWo("Cisco123")
+ *             .enablePasswordWoVersion(1)
  *             .enabled(true)
  *             .passwordNeverExpires(false)
  *             .firstName("John")
@@ -148,6 +152,8 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
     }
     /**
      * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="enablePassword", refs={String.class}, tree="[0]")
@@ -155,10 +161,44 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
 
     /**
      * @return This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> enablePassword() {
         return Codegen.optional(this.enablePassword);
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     * 
+     */
+    @Export(name="enablePasswordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> enablePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> enablePasswordWo() {
+        return Codegen.optional(this.enablePasswordWo);
+    }
+    /**
+     * Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="enablePasswordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> enablePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> enablePasswordWoVersion() {
+        return Codegen.optional(this.enablePasswordWoVersion);
     }
     /**
      * Whether the user is enabled/disabled
@@ -232,6 +272,8 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
     }
     /**
      * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
@@ -239,6 +281,8 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     public Output<Optional<String>> password() {
@@ -275,6 +319,38 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
      */
     public Output<Boolean> passwordNeverExpires() {
         return this.passwordNeverExpires;
+    }
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     * 
+     */
+    @Export(name="passwordWo", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> passwordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     * 
+     */
+    public Output<Optional<String>> passwordWo() {
+        return Codegen.optional(this.passwordWo);
+    }
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Export(name="passwordWoVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> passwordWoVersion;
+
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Output<Optional<Integer>> passwordWoVersion() {
+        return Codegen.optional(this.passwordWoVersion);
     }
 
     /**
@@ -316,6 +392,12 @@ public class InternalUser extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "enablePassword",
+                "enablePasswordWo",
+                "password",
+                "passwordWo"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

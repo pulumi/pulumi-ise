@@ -68,14 +68,30 @@ type LookupDeviceResult struct {
 	AuthenticationEncryptionKey string `pulumi:"authenticationEncryptionKey"`
 	// Key input format
 	AuthenticationEncryptionKeyFormat string `pulumi:"authenticationEncryptionKeyFormat"`
+	// Encryption key
+	AuthenticationEncryptionKeyWo string `pulumi:"authenticationEncryptionKeyWo"`
+	// Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationEncryptionKeyWoVersion int `pulumi:"authenticationEncryptionKeyWoVersion"`
 	// Message authenticator code key
 	AuthenticationMessageAuthenticatorCodeKey string `pulumi:"authenticationMessageAuthenticatorCodeKey"`
+	// Message authenticator code key
+	AuthenticationMessageAuthenticatorCodeKeyWo string `pulumi:"authenticationMessageAuthenticatorCodeKeyWo"`
+	// Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationMessageAuthenticatorCodeKeyWoVersion int `pulumi:"authenticationMessageAuthenticatorCodeKeyWoVersion"`
 	// Network protocol
 	AuthenticationNetworkProtocol string `pulumi:"authenticationNetworkProtocol"`
 	// RADIUS shared secret
 	AuthenticationRadiusSharedSecret string `pulumi:"authenticationRadiusSharedSecret"`
+	// RADIUS shared secret
+	AuthenticationRadiusSharedSecretWo string `pulumi:"authenticationRadiusSharedSecretWo"`
+	// Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationRadiusSharedSecretWoVersion int `pulumi:"authenticationRadiusSharedSecretWoVersion"`
 	// Second RADIUS shared secret
 	AuthenticationSecondRadiusSharedSecret string `pulumi:"authenticationSecondRadiusSharedSecret"`
+	// Second RADIUS shared secret
+	AuthenticationSecondRadiusSharedSecretWo string `pulumi:"authenticationSecondRadiusSharedSecretWo"`
+	// Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	AuthenticationSecondRadiusSharedSecretWoVersion int `pulumi:"authenticationSecondRadiusSharedSecretWoVersion"`
 	// CoA port
 	CoaPort int `pulumi:"coaPort"`
 	// Description
@@ -96,6 +112,10 @@ type LookupDeviceResult struct {
 	ProfileName string `pulumi:"profileName"`
 	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
 	SnmpAuthPassword string `pulumi:"snmpAuthPassword"`
+	// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+	SnmpAuthPasswordWo string `pulumi:"snmpAuthPasswordWo"`
+	// Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	SnmpAuthPasswordWoVersion int `pulumi:"snmpAuthPasswordWoVersion"`
 	// SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
 	SnmpAuthProtocol string `pulumi:"snmpAuthProtocol"`
 	// SNMP link Trap Query
@@ -108,6 +128,10 @@ type LookupDeviceResult struct {
 	SnmpPollingInterval int `pulumi:"snmpPollingInterval"`
 	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 	SnmpPrivacyPassword string `pulumi:"snmpPrivacyPassword"`
+	// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+	SnmpPrivacyPasswordWo string `pulumi:"snmpPrivacyPasswordWo"`
+	// Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	SnmpPrivacyPasswordWoVersion int `pulumi:"snmpPrivacyPasswordWoVersion"`
 	// SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
 	SnmpPrivacyProtocol string `pulumi:"snmpPrivacyProtocol"`
 	// SNMP RO Community
@@ -124,12 +148,20 @@ type LookupDeviceResult struct {
 	TacacsConnectModeOptions string `pulumi:"tacacsConnectModeOptions"`
 	// Shared secret
 	TacacsSharedSecret string `pulumi:"tacacsSharedSecret"`
+	// Shared secret
+	TacacsSharedSecretWo string `pulumi:"tacacsSharedSecretWo"`
+	// Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	TacacsSharedSecretWoVersion int `pulumi:"tacacsSharedSecretWoVersion"`
 	// CoA source host
 	TrustsecCoaSourceHost string `pulumi:"trustsecCoaSourceHost"`
 	// TrustSec device ID
 	TrustsecDeviceId string `pulumi:"trustsecDeviceId"`
 	// TrustSec device password
 	TrustsecDevicePassword string `pulumi:"trustsecDevicePassword"`
+	// TrustSec device password
+	TrustsecDevicePasswordWo string `pulumi:"trustsecDevicePasswordWo"`
+	// Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	TrustsecDevicePasswordWoVersion int `pulumi:"trustsecDevicePasswordWoVersion"`
 	// Download environment data every X seconds
 	TrustsecDownloadEnvironmentDataEveryXSeconds int `pulumi:"trustsecDownloadEnvironmentDataEveryXSeconds"`
 	// Download peer authorization policy every X seconds
@@ -138,8 +170,16 @@ type LookupDeviceResult struct {
 	TrustsecDownloadSgaclListsEveryXSeconds int `pulumi:"trustsecDownloadSgaclListsEveryXSeconds"`
 	// Enable mode password
 	TrustsecEnableModePassword string `pulumi:"trustsecEnableModePassword"`
+	// Enable mode password
+	TrustsecEnableModePasswordWo string `pulumi:"trustsecEnableModePasswordWo"`
+	// Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	TrustsecEnableModePasswordWoVersion int `pulumi:"trustsecEnableModePasswordWoVersion"`
 	// EXEC mode password
 	TrustsecExecModePassword string `pulumi:"trustsecExecModePassword"`
+	// EXEC mode password
+	TrustsecExecModePasswordWo string `pulumi:"trustsecExecModePasswordWo"`
+	// Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	TrustsecExecModePasswordWoVersion int `pulumi:"trustsecExecModePasswordWoVersion"`
 	// EXEC mode username
 	TrustsecExecModeUsername string `pulumi:"trustsecExecModeUsername"`
 	// Include this device when deploying Security Group Tag Mapping Updates
@@ -150,6 +190,10 @@ type LookupDeviceResult struct {
 	TrustsecReAuthenticationEveryXSeconds int `pulumi:"trustsecReAuthenticationEveryXSeconds"`
 	// REST API password
 	TrustsecRestApiPassword string `pulumi:"trustsecRestApiPassword"`
+	// REST API password
+	TrustsecRestApiPasswordWo string `pulumi:"trustsecRestApiPasswordWo"`
+	// Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	TrustsecRestApiPasswordWoVersion int `pulumi:"trustsecRestApiPasswordWoVersion"`
 	// REST API username
 	TrustsecRestApiUsername string `pulumi:"trustsecRestApiUsername"`
 	// Send configuration to device
@@ -215,9 +259,29 @@ func (o LookupDeviceResultOutput) AuthenticationEncryptionKeyFormat() pulumi.Str
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationEncryptionKeyFormat }).(pulumi.StringOutput)
 }
 
+// Encryption key
+func (o LookupDeviceResultOutput) AuthenticationEncryptionKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationEncryptionKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) AuthenticationEncryptionKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.AuthenticationEncryptionKeyWoVersion }).(pulumi.IntOutput)
+}
+
 // Message authenticator code key
 func (o LookupDeviceResultOutput) AuthenticationMessageAuthenticatorCodeKey() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationMessageAuthenticatorCodeKey }).(pulumi.StringOutput)
+}
+
+// Message authenticator code key
+func (o LookupDeviceResultOutput) AuthenticationMessageAuthenticatorCodeKeyWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationMessageAuthenticatorCodeKeyWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) AuthenticationMessageAuthenticatorCodeKeyWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.AuthenticationMessageAuthenticatorCodeKeyWoVersion }).(pulumi.IntOutput)
 }
 
 // Network protocol
@@ -230,9 +294,29 @@ func (o LookupDeviceResultOutput) AuthenticationRadiusSharedSecret() pulumi.Stri
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationRadiusSharedSecret }).(pulumi.StringOutput)
 }
 
+// RADIUS shared secret
+func (o LookupDeviceResultOutput) AuthenticationRadiusSharedSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationRadiusSharedSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) AuthenticationRadiusSharedSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.AuthenticationRadiusSharedSecretWoVersion }).(pulumi.IntOutput)
+}
+
 // Second RADIUS shared secret
 func (o LookupDeviceResultOutput) AuthenticationSecondRadiusSharedSecret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationSecondRadiusSharedSecret }).(pulumi.StringOutput)
+}
+
+// Second RADIUS shared secret
+func (o LookupDeviceResultOutput) AuthenticationSecondRadiusSharedSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.AuthenticationSecondRadiusSharedSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) AuthenticationSecondRadiusSharedSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.AuthenticationSecondRadiusSharedSecretWoVersion }).(pulumi.IntOutput)
 }
 
 // CoA port
@@ -285,6 +369,16 @@ func (o LookupDeviceResultOutput) SnmpAuthPassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpAuthPassword }).(pulumi.StringOutput)
 }
 
+// SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+func (o LookupDeviceResultOutput) SnmpAuthPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpAuthPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) SnmpAuthPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.SnmpAuthPasswordWoVersion }).(pulumi.IntOutput)
+}
+
 // SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
 func (o LookupDeviceResultOutput) SnmpAuthProtocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpAuthProtocol }).(pulumi.StringOutput)
@@ -313,6 +407,16 @@ func (o LookupDeviceResultOutput) SnmpPollingInterval() pulumi.IntOutput {
 // SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
 func (o LookupDeviceResultOutput) SnmpPrivacyPassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpPrivacyPassword }).(pulumi.StringOutput)
+}
+
+// SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+func (o LookupDeviceResultOutput) SnmpPrivacyPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.SnmpPrivacyPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) SnmpPrivacyPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.SnmpPrivacyPasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
@@ -355,6 +459,16 @@ func (o LookupDeviceResultOutput) TacacsSharedSecret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.TacacsSharedSecret }).(pulumi.StringOutput)
 }
 
+// Shared secret
+func (o LookupDeviceResultOutput) TacacsSharedSecretWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.TacacsSharedSecretWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) TacacsSharedSecretWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.TacacsSharedSecretWoVersion }).(pulumi.IntOutput)
+}
+
 // CoA source host
 func (o LookupDeviceResultOutput) TrustsecCoaSourceHost() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecCoaSourceHost }).(pulumi.StringOutput)
@@ -368,6 +482,16 @@ func (o LookupDeviceResultOutput) TrustsecDeviceId() pulumi.StringOutput {
 // TrustSec device password
 func (o LookupDeviceResultOutput) TrustsecDevicePassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecDevicePassword }).(pulumi.StringOutput)
+}
+
+// TrustSec device password
+func (o LookupDeviceResultOutput) TrustsecDevicePasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecDevicePasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) TrustsecDevicePasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.TrustsecDevicePasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // Download environment data every X seconds
@@ -390,9 +514,29 @@ func (o LookupDeviceResultOutput) TrustsecEnableModePassword() pulumi.StringOutp
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecEnableModePassword }).(pulumi.StringOutput)
 }
 
+// Enable mode password
+func (o LookupDeviceResultOutput) TrustsecEnableModePasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecEnableModePasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) TrustsecEnableModePasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.TrustsecEnableModePasswordWoVersion }).(pulumi.IntOutput)
+}
+
 // EXEC mode password
 func (o LookupDeviceResultOutput) TrustsecExecModePassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecExecModePassword }).(pulumi.StringOutput)
+}
+
+// EXEC mode password
+func (o LookupDeviceResultOutput) TrustsecExecModePasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecExecModePasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) TrustsecExecModePasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.TrustsecExecModePasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // EXEC mode username
@@ -418,6 +562,16 @@ func (o LookupDeviceResultOutput) TrustsecReAuthenticationEveryXSeconds() pulumi
 // REST API password
 func (o LookupDeviceResultOutput) TrustsecRestApiPassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecRestApiPassword }).(pulumi.StringOutput)
+}
+
+// REST API password
+func (o LookupDeviceResultOutput) TrustsecRestApiPasswordWo() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDeviceResult) string { return v.TrustsecRestApiPasswordWo }).(pulumi.StringOutput)
+}
+
+// Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o LookupDeviceResultOutput) TrustsecRestApiPasswordWoVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupDeviceResult) int { return v.TrustsecRestApiPasswordWoVersion }).(pulumi.IntOutput)
 }
 
 // REST API username

@@ -40,10 +40,30 @@ public final class GetDeviceResult {
      */
     private String authenticationEncryptionKeyFormat;
     /**
+     * @return Encryption key
+     * 
+     */
+    private String authenticationEncryptionKeyWo;
+    /**
+     * @return Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer authenticationEncryptionKeyWoVersion;
+    /**
      * @return Message authenticator code key
      * 
      */
     private String authenticationMessageAuthenticatorCodeKey;
+    /**
+     * @return Message authenticator code key
+     * 
+     */
+    private String authenticationMessageAuthenticatorCodeKeyWo;
+    /**
+     * @return Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer authenticationMessageAuthenticatorCodeKeyWoVersion;
     /**
      * @return Network protocol
      * 
@@ -55,10 +75,30 @@ public final class GetDeviceResult {
      */
     private String authenticationRadiusSharedSecret;
     /**
+     * @return RADIUS shared secret
+     * 
+     */
+    private String authenticationRadiusSharedSecretWo;
+    /**
+     * @return Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer authenticationRadiusSharedSecretWoVersion;
+    /**
      * @return Second RADIUS shared secret
      * 
      */
     private String authenticationSecondRadiusSharedSecret;
+    /**
+     * @return Second RADIUS shared secret
+     * 
+     */
+    private String authenticationSecondRadiusSharedSecretWo;
+    /**
+     * @return Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer authenticationSecondRadiusSharedSecretWoVersion;
     /**
      * @return CoA port
      * 
@@ -110,6 +150,16 @@ public final class GetDeviceResult {
      */
     private String snmpAuthPassword;
     /**
+     * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    private String snmpAuthPasswordWo;
+    /**
+     * @return Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer snmpAuthPasswordWoVersion;
+    /**
      * @return SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      * 
      */
@@ -139,6 +189,16 @@ public final class GetDeviceResult {
      * 
      */
     private String snmpPrivacyPassword;
+    /**
+     * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    private String snmpPrivacyPasswordWo;
+    /**
+     * @return Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer snmpPrivacyPasswordWoVersion;
     /**
      * @return SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      * 
@@ -180,6 +240,16 @@ public final class GetDeviceResult {
      */
     private String tacacsSharedSecret;
     /**
+     * @return Shared secret
+     * 
+     */
+    private String tacacsSharedSecretWo;
+    /**
+     * @return Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer tacacsSharedSecretWoVersion;
+    /**
      * @return CoA source host
      * 
      */
@@ -194,6 +264,16 @@ public final class GetDeviceResult {
      * 
      */
     private String trustsecDevicePassword;
+    /**
+     * @return TrustSec device password
+     * 
+     */
+    private String trustsecDevicePasswordWo;
+    /**
+     * @return Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer trustsecDevicePasswordWoVersion;
     /**
      * @return Download environment data every X seconds
      * 
@@ -215,10 +295,30 @@ public final class GetDeviceResult {
      */
     private String trustsecEnableModePassword;
     /**
+     * @return Enable mode password
+     * 
+     */
+    private String trustsecEnableModePasswordWo;
+    /**
+     * @return Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer trustsecEnableModePasswordWoVersion;
+    /**
      * @return EXEC mode password
      * 
      */
     private String trustsecExecModePassword;
+    /**
+     * @return EXEC mode password
+     * 
+     */
+    private String trustsecExecModePasswordWo;
+    /**
+     * @return Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer trustsecExecModePasswordWoVersion;
     /**
      * @return EXEC mode username
      * 
@@ -244,6 +344,16 @@ public final class GetDeviceResult {
      * 
      */
     private String trustsecRestApiPassword;
+    /**
+     * @return REST API password
+     * 
+     */
+    private String trustsecRestApiPasswordWo;
+    /**
+     * @return Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer trustsecRestApiPasswordWoVersion;
     /**
      * @return REST API username
      * 
@@ -297,11 +407,39 @@ public final class GetDeviceResult {
         return this.authenticationEncryptionKeyFormat;
     }
     /**
+     * @return Encryption key
+     * 
+     */
+    public String authenticationEncryptionKeyWo() {
+        return this.authenticationEncryptionKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer authenticationEncryptionKeyWoVersion() {
+        return this.authenticationEncryptionKeyWoVersion;
+    }
+    /**
      * @return Message authenticator code key
      * 
      */
     public String authenticationMessageAuthenticatorCodeKey() {
         return this.authenticationMessageAuthenticatorCodeKey;
+    }
+    /**
+     * @return Message authenticator code key
+     * 
+     */
+    public String authenticationMessageAuthenticatorCodeKeyWo() {
+        return this.authenticationMessageAuthenticatorCodeKeyWo;
+    }
+    /**
+     * @return Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer authenticationMessageAuthenticatorCodeKeyWoVersion() {
+        return this.authenticationMessageAuthenticatorCodeKeyWoVersion;
     }
     /**
      * @return Network protocol
@@ -318,11 +456,39 @@ public final class GetDeviceResult {
         return this.authenticationRadiusSharedSecret;
     }
     /**
+     * @return RADIUS shared secret
+     * 
+     */
+    public String authenticationRadiusSharedSecretWo() {
+        return this.authenticationRadiusSharedSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer authenticationRadiusSharedSecretWoVersion() {
+        return this.authenticationRadiusSharedSecretWoVersion;
+    }
+    /**
      * @return Second RADIUS shared secret
      * 
      */
     public String authenticationSecondRadiusSharedSecret() {
         return this.authenticationSecondRadiusSharedSecret;
+    }
+    /**
+     * @return Second RADIUS shared secret
+     * 
+     */
+    public String authenticationSecondRadiusSharedSecretWo() {
+        return this.authenticationSecondRadiusSharedSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer authenticationSecondRadiusSharedSecretWoVersion() {
+        return this.authenticationSecondRadiusSharedSecretWoVersion;
     }
     /**
      * @return CoA port
@@ -395,6 +561,20 @@ public final class GetDeviceResult {
         return this.snmpAuthPassword;
     }
     /**
+     * @return SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     * 
+     */
+    public String snmpAuthPasswordWo() {
+        return this.snmpAuthPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer snmpAuthPasswordWoVersion() {
+        return this.snmpAuthPasswordWoVersion;
+    }
+    /**
      * @return SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      * 
      */
@@ -435,6 +615,20 @@ public final class GetDeviceResult {
      */
     public String snmpPrivacyPassword() {
         return this.snmpPrivacyPassword;
+    }
+    /**
+     * @return SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     * 
+     */
+    public String snmpPrivacyPasswordWo() {
+        return this.snmpPrivacyPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer snmpPrivacyPasswordWoVersion() {
+        return this.snmpPrivacyPasswordWoVersion;
     }
     /**
      * @return SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
@@ -493,6 +687,20 @@ public final class GetDeviceResult {
         return this.tacacsSharedSecret;
     }
     /**
+     * @return Shared secret
+     * 
+     */
+    public String tacacsSharedSecretWo() {
+        return this.tacacsSharedSecretWo;
+    }
+    /**
+     * @return Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer tacacsSharedSecretWoVersion() {
+        return this.tacacsSharedSecretWoVersion;
+    }
+    /**
      * @return CoA source host
      * 
      */
@@ -512,6 +720,20 @@ public final class GetDeviceResult {
      */
     public String trustsecDevicePassword() {
         return this.trustsecDevicePassword;
+    }
+    /**
+     * @return TrustSec device password
+     * 
+     */
+    public String trustsecDevicePasswordWo() {
+        return this.trustsecDevicePasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer trustsecDevicePasswordWoVersion() {
+        return this.trustsecDevicePasswordWoVersion;
     }
     /**
      * @return Download environment data every X seconds
@@ -542,11 +764,39 @@ public final class GetDeviceResult {
         return this.trustsecEnableModePassword;
     }
     /**
+     * @return Enable mode password
+     * 
+     */
+    public String trustsecEnableModePasswordWo() {
+        return this.trustsecEnableModePasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer trustsecEnableModePasswordWoVersion() {
+        return this.trustsecEnableModePasswordWoVersion;
+    }
+    /**
      * @return EXEC mode password
      * 
      */
     public String trustsecExecModePassword() {
         return this.trustsecExecModePassword;
+    }
+    /**
+     * @return EXEC mode password
+     * 
+     */
+    public String trustsecExecModePasswordWo() {
+        return this.trustsecExecModePasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer trustsecExecModePasswordWoVersion() {
+        return this.trustsecExecModePasswordWoVersion;
     }
     /**
      * @return EXEC mode username
@@ -584,6 +834,20 @@ public final class GetDeviceResult {
         return this.trustsecRestApiPassword;
     }
     /**
+     * @return REST API password
+     * 
+     */
+    public String trustsecRestApiPasswordWo() {
+        return this.trustsecRestApiPasswordWo;
+    }
+    /**
+     * @return Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer trustsecRestApiPasswordWoVersion() {
+        return this.trustsecRestApiPasswordWoVersion;
+    }
+    /**
      * @return REST API username
      * 
      */
@@ -619,10 +883,18 @@ public final class GetDeviceResult {
         private Boolean authenticationEnableMultiSecret;
         private String authenticationEncryptionKey;
         private String authenticationEncryptionKeyFormat;
+        private String authenticationEncryptionKeyWo;
+        private Integer authenticationEncryptionKeyWoVersion;
         private String authenticationMessageAuthenticatorCodeKey;
+        private String authenticationMessageAuthenticatorCodeKeyWo;
+        private Integer authenticationMessageAuthenticatorCodeKeyWoVersion;
         private String authenticationNetworkProtocol;
         private String authenticationRadiusSharedSecret;
+        private String authenticationRadiusSharedSecretWo;
+        private Integer authenticationRadiusSharedSecretWoVersion;
         private String authenticationSecondRadiusSharedSecret;
+        private String authenticationSecondRadiusSharedSecretWo;
+        private Integer authenticationSecondRadiusSharedSecretWoVersion;
         private Integer coaPort;
         private String description;
         private String dtlsDnsName;
@@ -633,12 +905,16 @@ public final class GetDeviceResult {
         private List<String> networkDeviceGroups;
         private String profileName;
         private String snmpAuthPassword;
+        private String snmpAuthPasswordWo;
+        private Integer snmpAuthPasswordWoVersion;
         private String snmpAuthProtocol;
         private Boolean snmpLinkTrapQuery;
         private Boolean snmpMacTrapQuery;
         private String snmpOriginatingPolicyServiceNode;
         private Integer snmpPollingInterval;
         private String snmpPrivacyPassword;
+        private String snmpPrivacyPasswordWo;
+        private Integer snmpPrivacyPasswordWoVersion;
         private String snmpPrivacyProtocol;
         private String snmpRoCommunity;
         private String snmpSecurityLevel;
@@ -647,19 +923,29 @@ public final class GetDeviceResult {
         private String softwareVersion;
         private String tacacsConnectModeOptions;
         private String tacacsSharedSecret;
+        private String tacacsSharedSecretWo;
+        private Integer tacacsSharedSecretWoVersion;
         private String trustsecCoaSourceHost;
         private String trustsecDeviceId;
         private String trustsecDevicePassword;
+        private String trustsecDevicePasswordWo;
+        private Integer trustsecDevicePasswordWoVersion;
         private Integer trustsecDownloadEnvironmentDataEveryXSeconds;
         private Integer trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
         private Integer trustsecDownloadSgaclListsEveryXSeconds;
         private String trustsecEnableModePassword;
+        private String trustsecEnableModePasswordWo;
+        private Integer trustsecEnableModePasswordWoVersion;
         private String trustsecExecModePassword;
+        private String trustsecExecModePasswordWo;
+        private Integer trustsecExecModePasswordWoVersion;
         private String trustsecExecModeUsername;
         private Boolean trustsecIncludeWhenDeployingSgtUpdates;
         private Boolean trustsecOtherSgaDevicesToTrustThisDevice;
         private Integer trustsecReAuthenticationEveryXSeconds;
         private String trustsecRestApiPassword;
+        private String trustsecRestApiPasswordWo;
+        private Integer trustsecRestApiPasswordWoVersion;
         private String trustsecRestApiUsername;
         private Boolean trustsecSendConfigurationToDevice;
         private String trustsecSendConfigurationToDeviceUsing;
@@ -671,10 +957,18 @@ public final class GetDeviceResult {
     	      this.authenticationEnableMultiSecret = defaults.authenticationEnableMultiSecret;
     	      this.authenticationEncryptionKey = defaults.authenticationEncryptionKey;
     	      this.authenticationEncryptionKeyFormat = defaults.authenticationEncryptionKeyFormat;
+    	      this.authenticationEncryptionKeyWo = defaults.authenticationEncryptionKeyWo;
+    	      this.authenticationEncryptionKeyWoVersion = defaults.authenticationEncryptionKeyWoVersion;
     	      this.authenticationMessageAuthenticatorCodeKey = defaults.authenticationMessageAuthenticatorCodeKey;
+    	      this.authenticationMessageAuthenticatorCodeKeyWo = defaults.authenticationMessageAuthenticatorCodeKeyWo;
+    	      this.authenticationMessageAuthenticatorCodeKeyWoVersion = defaults.authenticationMessageAuthenticatorCodeKeyWoVersion;
     	      this.authenticationNetworkProtocol = defaults.authenticationNetworkProtocol;
     	      this.authenticationRadiusSharedSecret = defaults.authenticationRadiusSharedSecret;
+    	      this.authenticationRadiusSharedSecretWo = defaults.authenticationRadiusSharedSecretWo;
+    	      this.authenticationRadiusSharedSecretWoVersion = defaults.authenticationRadiusSharedSecretWoVersion;
     	      this.authenticationSecondRadiusSharedSecret = defaults.authenticationSecondRadiusSharedSecret;
+    	      this.authenticationSecondRadiusSharedSecretWo = defaults.authenticationSecondRadiusSharedSecretWo;
+    	      this.authenticationSecondRadiusSharedSecretWoVersion = defaults.authenticationSecondRadiusSharedSecretWoVersion;
     	      this.coaPort = defaults.coaPort;
     	      this.description = defaults.description;
     	      this.dtlsDnsName = defaults.dtlsDnsName;
@@ -685,12 +979,16 @@ public final class GetDeviceResult {
     	      this.networkDeviceGroups = defaults.networkDeviceGroups;
     	      this.profileName = defaults.profileName;
     	      this.snmpAuthPassword = defaults.snmpAuthPassword;
+    	      this.snmpAuthPasswordWo = defaults.snmpAuthPasswordWo;
+    	      this.snmpAuthPasswordWoVersion = defaults.snmpAuthPasswordWoVersion;
     	      this.snmpAuthProtocol = defaults.snmpAuthProtocol;
     	      this.snmpLinkTrapQuery = defaults.snmpLinkTrapQuery;
     	      this.snmpMacTrapQuery = defaults.snmpMacTrapQuery;
     	      this.snmpOriginatingPolicyServiceNode = defaults.snmpOriginatingPolicyServiceNode;
     	      this.snmpPollingInterval = defaults.snmpPollingInterval;
     	      this.snmpPrivacyPassword = defaults.snmpPrivacyPassword;
+    	      this.snmpPrivacyPasswordWo = defaults.snmpPrivacyPasswordWo;
+    	      this.snmpPrivacyPasswordWoVersion = defaults.snmpPrivacyPasswordWoVersion;
     	      this.snmpPrivacyProtocol = defaults.snmpPrivacyProtocol;
     	      this.snmpRoCommunity = defaults.snmpRoCommunity;
     	      this.snmpSecurityLevel = defaults.snmpSecurityLevel;
@@ -699,19 +997,29 @@ public final class GetDeviceResult {
     	      this.softwareVersion = defaults.softwareVersion;
     	      this.tacacsConnectModeOptions = defaults.tacacsConnectModeOptions;
     	      this.tacacsSharedSecret = defaults.tacacsSharedSecret;
+    	      this.tacacsSharedSecretWo = defaults.tacacsSharedSecretWo;
+    	      this.tacacsSharedSecretWoVersion = defaults.tacacsSharedSecretWoVersion;
     	      this.trustsecCoaSourceHost = defaults.trustsecCoaSourceHost;
     	      this.trustsecDeviceId = defaults.trustsecDeviceId;
     	      this.trustsecDevicePassword = defaults.trustsecDevicePassword;
+    	      this.trustsecDevicePasswordWo = defaults.trustsecDevicePasswordWo;
+    	      this.trustsecDevicePasswordWoVersion = defaults.trustsecDevicePasswordWoVersion;
     	      this.trustsecDownloadEnvironmentDataEveryXSeconds = defaults.trustsecDownloadEnvironmentDataEveryXSeconds;
     	      this.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds = defaults.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
     	      this.trustsecDownloadSgaclListsEveryXSeconds = defaults.trustsecDownloadSgaclListsEveryXSeconds;
     	      this.trustsecEnableModePassword = defaults.trustsecEnableModePassword;
+    	      this.trustsecEnableModePasswordWo = defaults.trustsecEnableModePasswordWo;
+    	      this.trustsecEnableModePasswordWoVersion = defaults.trustsecEnableModePasswordWoVersion;
     	      this.trustsecExecModePassword = defaults.trustsecExecModePassword;
+    	      this.trustsecExecModePasswordWo = defaults.trustsecExecModePasswordWo;
+    	      this.trustsecExecModePasswordWoVersion = defaults.trustsecExecModePasswordWoVersion;
     	      this.trustsecExecModeUsername = defaults.trustsecExecModeUsername;
     	      this.trustsecIncludeWhenDeployingSgtUpdates = defaults.trustsecIncludeWhenDeployingSgtUpdates;
     	      this.trustsecOtherSgaDevicesToTrustThisDevice = defaults.trustsecOtherSgaDevicesToTrustThisDevice;
     	      this.trustsecReAuthenticationEveryXSeconds = defaults.trustsecReAuthenticationEveryXSeconds;
     	      this.trustsecRestApiPassword = defaults.trustsecRestApiPassword;
+    	      this.trustsecRestApiPasswordWo = defaults.trustsecRestApiPasswordWo;
+    	      this.trustsecRestApiPasswordWoVersion = defaults.trustsecRestApiPasswordWoVersion;
     	      this.trustsecRestApiUsername = defaults.trustsecRestApiUsername;
     	      this.trustsecSendConfigurationToDevice = defaults.trustsecSendConfigurationToDevice;
     	      this.trustsecSendConfigurationToDeviceUsing = defaults.trustsecSendConfigurationToDeviceUsing;
@@ -758,11 +1066,43 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder authenticationEncryptionKeyWo(String authenticationEncryptionKeyWo) {
+            if (authenticationEncryptionKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationEncryptionKeyWo");
+            }
+            this.authenticationEncryptionKeyWo = authenticationEncryptionKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationEncryptionKeyWoVersion(Integer authenticationEncryptionKeyWoVersion) {
+            if (authenticationEncryptionKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationEncryptionKeyWoVersion");
+            }
+            this.authenticationEncryptionKeyWoVersion = authenticationEncryptionKeyWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder authenticationMessageAuthenticatorCodeKey(String authenticationMessageAuthenticatorCodeKey) {
             if (authenticationMessageAuthenticatorCodeKey == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationMessageAuthenticatorCodeKey");
             }
             this.authenticationMessageAuthenticatorCodeKey = authenticationMessageAuthenticatorCodeKey;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationMessageAuthenticatorCodeKeyWo(String authenticationMessageAuthenticatorCodeKeyWo) {
+            if (authenticationMessageAuthenticatorCodeKeyWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationMessageAuthenticatorCodeKeyWo");
+            }
+            this.authenticationMessageAuthenticatorCodeKeyWo = authenticationMessageAuthenticatorCodeKeyWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationMessageAuthenticatorCodeKeyWoVersion(Integer authenticationMessageAuthenticatorCodeKeyWoVersion) {
+            if (authenticationMessageAuthenticatorCodeKeyWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationMessageAuthenticatorCodeKeyWoVersion");
+            }
+            this.authenticationMessageAuthenticatorCodeKeyWoVersion = authenticationMessageAuthenticatorCodeKeyWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -782,11 +1122,43 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder authenticationRadiusSharedSecretWo(String authenticationRadiusSharedSecretWo) {
+            if (authenticationRadiusSharedSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationRadiusSharedSecretWo");
+            }
+            this.authenticationRadiusSharedSecretWo = authenticationRadiusSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationRadiusSharedSecretWoVersion(Integer authenticationRadiusSharedSecretWoVersion) {
+            if (authenticationRadiusSharedSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationRadiusSharedSecretWoVersion");
+            }
+            this.authenticationRadiusSharedSecretWoVersion = authenticationRadiusSharedSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder authenticationSecondRadiusSharedSecret(String authenticationSecondRadiusSharedSecret) {
             if (authenticationSecondRadiusSharedSecret == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationSecondRadiusSharedSecret");
             }
             this.authenticationSecondRadiusSharedSecret = authenticationSecondRadiusSharedSecret;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationSecondRadiusSharedSecretWo(String authenticationSecondRadiusSharedSecretWo) {
+            if (authenticationSecondRadiusSharedSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationSecondRadiusSharedSecretWo");
+            }
+            this.authenticationSecondRadiusSharedSecretWo = authenticationSecondRadiusSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder authenticationSecondRadiusSharedSecretWoVersion(Integer authenticationSecondRadiusSharedSecretWoVersion) {
+            if (authenticationSecondRadiusSharedSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "authenticationSecondRadiusSharedSecretWoVersion");
+            }
+            this.authenticationSecondRadiusSharedSecretWoVersion = authenticationSecondRadiusSharedSecretWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -876,6 +1248,22 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snmpAuthPasswordWo(String snmpAuthPasswordWo) {
+            if (snmpAuthPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpAuthPasswordWo");
+            }
+            this.snmpAuthPasswordWo = snmpAuthPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpAuthPasswordWoVersion(Integer snmpAuthPasswordWoVersion) {
+            if (snmpAuthPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpAuthPasswordWoVersion");
+            }
+            this.snmpAuthPasswordWoVersion = snmpAuthPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snmpAuthProtocol(String snmpAuthProtocol) {
             if (snmpAuthProtocol == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "snmpAuthProtocol");
@@ -921,6 +1309,22 @@ public final class GetDeviceResult {
               throw new MissingRequiredPropertyException("GetDeviceResult", "snmpPrivacyPassword");
             }
             this.snmpPrivacyPassword = snmpPrivacyPassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpPrivacyPasswordWo(String snmpPrivacyPasswordWo) {
+            if (snmpPrivacyPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpPrivacyPasswordWo");
+            }
+            this.snmpPrivacyPasswordWo = snmpPrivacyPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snmpPrivacyPasswordWoVersion(Integer snmpPrivacyPasswordWoVersion) {
+            if (snmpPrivacyPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "snmpPrivacyPasswordWoVersion");
+            }
+            this.snmpPrivacyPasswordWoVersion = snmpPrivacyPasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -988,6 +1392,22 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder tacacsSharedSecretWo(String tacacsSharedSecretWo) {
+            if (tacacsSharedSecretWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "tacacsSharedSecretWo");
+            }
+            this.tacacsSharedSecretWo = tacacsSharedSecretWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tacacsSharedSecretWoVersion(Integer tacacsSharedSecretWoVersion) {
+            if (tacacsSharedSecretWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "tacacsSharedSecretWoVersion");
+            }
+            this.tacacsSharedSecretWoVersion = tacacsSharedSecretWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder trustsecCoaSourceHost(String trustsecCoaSourceHost) {
             if (trustsecCoaSourceHost == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecCoaSourceHost");
@@ -1009,6 +1429,22 @@ public final class GetDeviceResult {
               throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecDevicePassword");
             }
             this.trustsecDevicePassword = trustsecDevicePassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecDevicePasswordWo(String trustsecDevicePasswordWo) {
+            if (trustsecDevicePasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecDevicePasswordWo");
+            }
+            this.trustsecDevicePasswordWo = trustsecDevicePasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecDevicePasswordWoVersion(Integer trustsecDevicePasswordWoVersion) {
+            if (trustsecDevicePasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecDevicePasswordWoVersion");
+            }
+            this.trustsecDevicePasswordWoVersion = trustsecDevicePasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -1044,11 +1480,43 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder trustsecEnableModePasswordWo(String trustsecEnableModePasswordWo) {
+            if (trustsecEnableModePasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecEnableModePasswordWo");
+            }
+            this.trustsecEnableModePasswordWo = trustsecEnableModePasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecEnableModePasswordWoVersion(Integer trustsecEnableModePasswordWoVersion) {
+            if (trustsecEnableModePasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecEnableModePasswordWoVersion");
+            }
+            this.trustsecEnableModePasswordWoVersion = trustsecEnableModePasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder trustsecExecModePassword(String trustsecExecModePassword) {
             if (trustsecExecModePassword == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecExecModePassword");
             }
             this.trustsecExecModePassword = trustsecExecModePassword;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecExecModePasswordWo(String trustsecExecModePasswordWo) {
+            if (trustsecExecModePasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecExecModePasswordWo");
+            }
+            this.trustsecExecModePasswordWo = trustsecExecModePasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecExecModePasswordWoVersion(Integer trustsecExecModePasswordWoVersion) {
+            if (trustsecExecModePasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecExecModePasswordWoVersion");
+            }
+            this.trustsecExecModePasswordWoVersion = trustsecExecModePasswordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -1092,6 +1560,22 @@ public final class GetDeviceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder trustsecRestApiPasswordWo(String trustsecRestApiPasswordWo) {
+            if (trustsecRestApiPasswordWo == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecRestApiPasswordWo");
+            }
+            this.trustsecRestApiPasswordWo = trustsecRestApiPasswordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecRestApiPasswordWoVersion(Integer trustsecRestApiPasswordWoVersion) {
+            if (trustsecRestApiPasswordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecRestApiPasswordWoVersion");
+            }
+            this.trustsecRestApiPasswordWoVersion = trustsecRestApiPasswordWoVersion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder trustsecRestApiUsername(String trustsecRestApiUsername) {
             if (trustsecRestApiUsername == null) {
               throw new MissingRequiredPropertyException("GetDeviceResult", "trustsecRestApiUsername");
@@ -1122,10 +1606,18 @@ public final class GetDeviceResult {
             _resultValue.authenticationEnableMultiSecret = authenticationEnableMultiSecret;
             _resultValue.authenticationEncryptionKey = authenticationEncryptionKey;
             _resultValue.authenticationEncryptionKeyFormat = authenticationEncryptionKeyFormat;
+            _resultValue.authenticationEncryptionKeyWo = authenticationEncryptionKeyWo;
+            _resultValue.authenticationEncryptionKeyWoVersion = authenticationEncryptionKeyWoVersion;
             _resultValue.authenticationMessageAuthenticatorCodeKey = authenticationMessageAuthenticatorCodeKey;
+            _resultValue.authenticationMessageAuthenticatorCodeKeyWo = authenticationMessageAuthenticatorCodeKeyWo;
+            _resultValue.authenticationMessageAuthenticatorCodeKeyWoVersion = authenticationMessageAuthenticatorCodeKeyWoVersion;
             _resultValue.authenticationNetworkProtocol = authenticationNetworkProtocol;
             _resultValue.authenticationRadiusSharedSecret = authenticationRadiusSharedSecret;
+            _resultValue.authenticationRadiusSharedSecretWo = authenticationRadiusSharedSecretWo;
+            _resultValue.authenticationRadiusSharedSecretWoVersion = authenticationRadiusSharedSecretWoVersion;
             _resultValue.authenticationSecondRadiusSharedSecret = authenticationSecondRadiusSharedSecret;
+            _resultValue.authenticationSecondRadiusSharedSecretWo = authenticationSecondRadiusSharedSecretWo;
+            _resultValue.authenticationSecondRadiusSharedSecretWoVersion = authenticationSecondRadiusSharedSecretWoVersion;
             _resultValue.coaPort = coaPort;
             _resultValue.description = description;
             _resultValue.dtlsDnsName = dtlsDnsName;
@@ -1136,12 +1628,16 @@ public final class GetDeviceResult {
             _resultValue.networkDeviceGroups = networkDeviceGroups;
             _resultValue.profileName = profileName;
             _resultValue.snmpAuthPassword = snmpAuthPassword;
+            _resultValue.snmpAuthPasswordWo = snmpAuthPasswordWo;
+            _resultValue.snmpAuthPasswordWoVersion = snmpAuthPasswordWoVersion;
             _resultValue.snmpAuthProtocol = snmpAuthProtocol;
             _resultValue.snmpLinkTrapQuery = snmpLinkTrapQuery;
             _resultValue.snmpMacTrapQuery = snmpMacTrapQuery;
             _resultValue.snmpOriginatingPolicyServiceNode = snmpOriginatingPolicyServiceNode;
             _resultValue.snmpPollingInterval = snmpPollingInterval;
             _resultValue.snmpPrivacyPassword = snmpPrivacyPassword;
+            _resultValue.snmpPrivacyPasswordWo = snmpPrivacyPasswordWo;
+            _resultValue.snmpPrivacyPasswordWoVersion = snmpPrivacyPasswordWoVersion;
             _resultValue.snmpPrivacyProtocol = snmpPrivacyProtocol;
             _resultValue.snmpRoCommunity = snmpRoCommunity;
             _resultValue.snmpSecurityLevel = snmpSecurityLevel;
@@ -1150,19 +1646,29 @@ public final class GetDeviceResult {
             _resultValue.softwareVersion = softwareVersion;
             _resultValue.tacacsConnectModeOptions = tacacsConnectModeOptions;
             _resultValue.tacacsSharedSecret = tacacsSharedSecret;
+            _resultValue.tacacsSharedSecretWo = tacacsSharedSecretWo;
+            _resultValue.tacacsSharedSecretWoVersion = tacacsSharedSecretWoVersion;
             _resultValue.trustsecCoaSourceHost = trustsecCoaSourceHost;
             _resultValue.trustsecDeviceId = trustsecDeviceId;
             _resultValue.trustsecDevicePassword = trustsecDevicePassword;
+            _resultValue.trustsecDevicePasswordWo = trustsecDevicePasswordWo;
+            _resultValue.trustsecDevicePasswordWoVersion = trustsecDevicePasswordWoVersion;
             _resultValue.trustsecDownloadEnvironmentDataEveryXSeconds = trustsecDownloadEnvironmentDataEveryXSeconds;
             _resultValue.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds = trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
             _resultValue.trustsecDownloadSgaclListsEveryXSeconds = trustsecDownloadSgaclListsEveryXSeconds;
             _resultValue.trustsecEnableModePassword = trustsecEnableModePassword;
+            _resultValue.trustsecEnableModePasswordWo = trustsecEnableModePasswordWo;
+            _resultValue.trustsecEnableModePasswordWoVersion = trustsecEnableModePasswordWoVersion;
             _resultValue.trustsecExecModePassword = trustsecExecModePassword;
+            _resultValue.trustsecExecModePasswordWo = trustsecExecModePasswordWo;
+            _resultValue.trustsecExecModePasswordWoVersion = trustsecExecModePasswordWoVersion;
             _resultValue.trustsecExecModeUsername = trustsecExecModeUsername;
             _resultValue.trustsecIncludeWhenDeployingSgtUpdates = trustsecIncludeWhenDeployingSgtUpdates;
             _resultValue.trustsecOtherSgaDevicesToTrustThisDevice = trustsecOtherSgaDevicesToTrustThisDevice;
             _resultValue.trustsecReAuthenticationEveryXSeconds = trustsecReAuthenticationEveryXSeconds;
             _resultValue.trustsecRestApiPassword = trustsecRestApiPassword;
+            _resultValue.trustsecRestApiPasswordWo = trustsecRestApiPasswordWo;
+            _resultValue.trustsecRestApiPasswordWoVersion = trustsecRestApiPasswordWoVersion;
             _resultValue.trustsecRestApiUsername = trustsecRestApiUsername;
             _resultValue.trustsecSendConfigurationToDevice = trustsecSendConfigurationToDevice;
             _resultValue.trustsecSendConfigurationToDeviceUsing = trustsecSendConfigurationToDeviceUsing;
