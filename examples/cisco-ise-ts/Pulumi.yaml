@@ -1,3 +1,0 @@
-name: cisco-ise-ts
-runtime: nodejs
-description: A minimal TypeScript Pulumi program
