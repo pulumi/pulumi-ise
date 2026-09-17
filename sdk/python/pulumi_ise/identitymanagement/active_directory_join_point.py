@@ -1777,7 +1777,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def groups(self) -> pulumi.Output[Optional[Sequence['outputs.ActiveDirectoryJoinPointGroup']]]:
+    def groups(self) -> pulumi.Output[Sequence['outputs.ActiveDirectoryJoinPointGroup']]:
         """
         List of AD Groups
         """
@@ -1843,7 +1843,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="rewriteRules")
-    def rewrite_rules(self) -> pulumi.Output[Optional[Sequence['outputs.ActiveDirectoryJoinPointRewriteRule']]]:
+    def rewrite_rules(self) -> pulumi.Output[Sequence['outputs.ActiveDirectoryJoinPointRewriteRule']]:
         """
         List of Rewrite rules
         """

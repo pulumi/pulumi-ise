@@ -154,6 +154,14 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         public readonly string EnablePassword;
         /// <summary>
+        /// This field is added in ISE 2.0 to support TACACS+
+        /// </summary>
+        public readonly string EnablePasswordWo;
+        /// <summary>
+        /// Rotation trigger for `EnablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int EnablePasswordWoVersion;
+        /// <summary>
         /// Whether the user is enabled/disabled
         /// </summary>
         public readonly bool Enabled;
@@ -189,6 +197,14 @@ namespace Pulumi.Ise.IdentityManagement
         /// Set to `True` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
         /// </summary>
         public readonly bool PasswordNeverExpires;
+        /// <summary>
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        /// </summary>
+        public readonly string PasswordWo;
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        public readonly int PasswordWoVersion;
 
         [OutputConstructor]
         private GetInternalUserResult(
@@ -203,6 +219,10 @@ namespace Pulumi.Ise.IdentityManagement
             string email,
 
             string enablePassword,
+
+            string enablePasswordWo,
+
+            int enablePasswordWoVersion,
 
             bool enabled,
 
@@ -220,7 +240,11 @@ namespace Pulumi.Ise.IdentityManagement
 
             string passwordIdStore,
 
-            bool passwordNeverExpires)
+            bool passwordNeverExpires,
+
+            string passwordWo,
+
+            int passwordWoVersion)
         {
             AccountNameAlias = accountNameAlias;
             ChangePassword = changePassword;
@@ -228,6 +252,8 @@ namespace Pulumi.Ise.IdentityManagement
             Description = description;
             Email = email;
             EnablePassword = enablePassword;
+            EnablePasswordWo = enablePasswordWo;
+            EnablePasswordWoVersion = enablePasswordWoVersion;
             Enabled = enabled;
             FirstName = firstName;
             Id = id;
@@ -237,6 +263,8 @@ namespace Pulumi.Ise.IdentityManagement
             Password = password;
             PasswordIdStore = passwordIdStore;
             PasswordNeverExpires = passwordNeverExpires;
+            PasswordWo = passwordWo;
+            PasswordWoVersion = passwordWoVersion;
         }
     }
 }

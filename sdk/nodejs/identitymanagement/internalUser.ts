@@ -15,11 +15,13 @@ import * as utilities from "../utilities";
  *
  * const example = new ise.identitymanagement.InternalUser("example", {
  *     name: "UserTF",
- *     password: "Cisco123",
+ *     passwordWo: "Cisco123",
+ *     passwordWoVersion: 1,
  *     changePassword: true,
  *     email: "aaa@cisco.com",
  *     accountNameAlias: "User 1",
- *     enablePassword: "Cisco123",
+ *     enablePasswordWo: "Cisco123",
+ *     enablePasswordWoVersion: 1,
  *     enabled: true,
  *     passwordNeverExpires: false,
  *     firstName: "John",
@@ -88,8 +90,20 @@ export class InternalUser extends pulumi.CustomResource {
     declare public readonly email: pulumi.Output<string | undefined>;
     /**
      * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly enablePassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     */
+    declare public readonly enablePasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly enablePasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Whether the user is enabled/disabled
      */
@@ -112,6 +126,8 @@ export class InternalUser extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     declare public readonly password: pulumi.Output<string | undefined>;
     /**
@@ -124,6 +140,16 @@ export class InternalUser extends pulumi.CustomResource {
      *   - Default value: `false`
      */
     declare public readonly passwordNeverExpires: pulumi.Output<boolean>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     */
+    declare public readonly passwordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly passwordWoVersion: pulumi.Output<number | undefined>;
 
     /**
      * Create a InternalUser resource with the given unique name, arguments, and options.
@@ -144,6 +170,8 @@ export class InternalUser extends pulumi.CustomResource {
             resourceInputs["description"] = state?.description;
             resourceInputs["email"] = state?.email;
             resourceInputs["enablePassword"] = state?.enablePassword;
+            resourceInputs["enablePasswordWo"] = state?.enablePasswordWo;
+            resourceInputs["enablePasswordWoVersion"] = state?.enablePasswordWoVersion;
             resourceInputs["enabled"] = state?.enabled;
             resourceInputs["firstName"] = state?.firstName;
             resourceInputs["identityGroups"] = state?.identityGroups;
@@ -152,6 +180,8 @@ export class InternalUser extends pulumi.CustomResource {
             resourceInputs["password"] = state?.password;
             resourceInputs["passwordIdStore"] = state?.passwordIdStore;
             resourceInputs["passwordNeverExpires"] = state?.passwordNeverExpires;
+            resourceInputs["passwordWo"] = state?.passwordWo;
+            resourceInputs["passwordWoVersion"] = state?.passwordWoVersion;
         } else {
             const args = argsOrState as InternalUserArgs | undefined;
             resourceInputs["accountNameAlias"] = args?.accountNameAlias;
@@ -159,17 +189,23 @@ export class InternalUser extends pulumi.CustomResource {
             resourceInputs["customAttributes"] = args?.customAttributes;
             resourceInputs["description"] = args?.description;
             resourceInputs["email"] = args?.email;
-            resourceInputs["enablePassword"] = args?.enablePassword;
+            resourceInputs["enablePassword"] = args?.enablePassword ? pulumi.secret(args.enablePassword) : undefined;
+            resourceInputs["enablePasswordWo"] = args?.enablePasswordWo ? pulumi.secret(args.enablePasswordWo) : undefined;
+            resourceInputs["enablePasswordWoVersion"] = args?.enablePasswordWoVersion;
             resourceInputs["enabled"] = args?.enabled;
             resourceInputs["firstName"] = args?.firstName;
             resourceInputs["identityGroups"] = args?.identityGroups;
             resourceInputs["lastName"] = args?.lastName;
             resourceInputs["name"] = args?.name;
-            resourceInputs["password"] = args?.password;
+            resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["passwordIdStore"] = args?.passwordIdStore;
             resourceInputs["passwordNeverExpires"] = args?.passwordNeverExpires;
+            resourceInputs["passwordWo"] = args?.passwordWo ? pulumi.secret(args.passwordWo) : undefined;
+            resourceInputs["passwordWoVersion"] = args?.passwordWoVersion;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["enablePassword", "enablePasswordWo", "password", "passwordWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(InternalUser.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -201,8 +237,20 @@ export interface InternalUserState {
     email?: pulumi.Input<string | undefined>;
     /**
      * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      */
     enablePassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     */
+    enablePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    enablePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Whether the user is enabled/disabled
      */
@@ -225,6 +273,8 @@ export interface InternalUserState {
     name?: pulumi.Input<string | undefined>;
     /**
      * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
@@ -237,6 +287,16 @@ export interface InternalUserState {
      *   - Default value: `false`
      */
     passwordNeverExpires?: pulumi.Input<boolean | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -266,8 +326,20 @@ export interface InternalUserArgs {
     email?: pulumi.Input<string | undefined>;
     /**
      * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      */
     enablePassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     */
+    enablePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    enablePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Whether the user is enabled/disabled
      */
@@ -290,6 +362,8 @@ export interface InternalUserArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
     /**
@@ -302,4 +376,14 @@ export interface InternalUserArgs {
      *   - Default value: `false`
      */
     passwordNeverExpires?: pulumi.Input<boolean | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
 }

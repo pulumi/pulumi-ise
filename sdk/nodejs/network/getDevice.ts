@@ -68,9 +68,25 @@ export interface GetDeviceResult {
      */
     readonly authenticationEncryptionKeyFormat: string;
     /**
+     * Encryption key
+     */
+    readonly authenticationEncryptionKeyWo: string;
+    /**
+     * Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly authenticationEncryptionKeyWoVersion: number;
+    /**
      * Message authenticator code key
      */
     readonly authenticationMessageAuthenticatorCodeKey: string;
+    /**
+     * Message authenticator code key
+     */
+    readonly authenticationMessageAuthenticatorCodeKeyWo: string;
+    /**
+     * Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly authenticationMessageAuthenticatorCodeKeyWoVersion: number;
     /**
      * Network protocol
      */
@@ -80,9 +96,25 @@ export interface GetDeviceResult {
      */
     readonly authenticationRadiusSharedSecret: string;
     /**
+     * RADIUS shared secret
+     */
+    readonly authenticationRadiusSharedSecretWo: string;
+    /**
+     * Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly authenticationRadiusSharedSecretWoVersion: number;
+    /**
      * Second RADIUS shared secret
      */
     readonly authenticationSecondRadiusSharedSecret: string;
+    /**
+     * Second RADIUS shared secret
+     */
+    readonly authenticationSecondRadiusSharedSecretWo: string;
+    /**
+     * Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly authenticationSecondRadiusSharedSecretWoVersion: number;
     /**
      * CoA port
      */
@@ -124,6 +156,14 @@ export interface GetDeviceResult {
      */
     readonly snmpAuthPassword: string;
     /**
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     */
+    readonly snmpAuthPasswordWo: string;
+    /**
+     * Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly snmpAuthPasswordWoVersion: number;
+    /**
      * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      */
     readonly snmpAuthProtocol: string;
@@ -147,6 +187,14 @@ export interface GetDeviceResult {
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
      */
     readonly snmpPrivacyPassword: string;
+    /**
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     */
+    readonly snmpPrivacyPasswordWo: string;
+    /**
+     * Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly snmpPrivacyPasswordWoVersion: number;
     /**
      * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      */
@@ -180,6 +228,14 @@ export interface GetDeviceResult {
      */
     readonly tacacsSharedSecret: string;
     /**
+     * Shared secret
+     */
+    readonly tacacsSharedSecretWo: string;
+    /**
+     * Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly tacacsSharedSecretWoVersion: number;
+    /**
      * CoA source host
      */
     readonly trustsecCoaSourceHost: string;
@@ -191,6 +247,14 @@ export interface GetDeviceResult {
      * TrustSec device password
      */
     readonly trustsecDevicePassword: string;
+    /**
+     * TrustSec device password
+     */
+    readonly trustsecDevicePasswordWo: string;
+    /**
+     * Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly trustsecDevicePasswordWoVersion: number;
     /**
      * Download environment data every X seconds
      */
@@ -208,9 +272,25 @@ export interface GetDeviceResult {
      */
     readonly trustsecEnableModePassword: string;
     /**
+     * Enable mode password
+     */
+    readonly trustsecEnableModePasswordWo: string;
+    /**
+     * Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly trustsecEnableModePasswordWoVersion: number;
+    /**
      * EXEC mode password
      */
     readonly trustsecExecModePassword: string;
+    /**
+     * EXEC mode password
+     */
+    readonly trustsecExecModePasswordWo: string;
+    /**
+     * Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly trustsecExecModePasswordWoVersion: number;
     /**
      * EXEC mode username
      */
@@ -231,6 +311,14 @@ export interface GetDeviceResult {
      * REST API password
      */
     readonly trustsecRestApiPassword: string;
+    /**
+     * REST API password
+     */
+    readonly trustsecRestApiPasswordWo: string;
+    /**
+     * Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    readonly trustsecRestApiPasswordWoVersion: number;
     /**
      * REST API username
      */

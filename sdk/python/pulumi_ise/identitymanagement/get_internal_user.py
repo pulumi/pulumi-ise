@@ -26,7 +26,7 @@ class GetInternalUserResult:
     """
     A collection of values returned by getInternalUser.
     """
-    def __init__(__self__, account_name_alias=None, change_password=None, custom_attributes=None, description=None, email=None, enable_password=None, enabled=None, first_name=None, id=None, identity_groups=None, last_name=None, name=None, password=None, password_id_store=None, password_never_expires=None):
+    def __init__(__self__, account_name_alias=None, change_password=None, custom_attributes=None, description=None, email=None, enable_password=None, enable_password_wo=None, enable_password_wo_version=None, enabled=None, first_name=None, id=None, identity_groups=None, last_name=None, name=None, password=None, password_id_store=None, password_never_expires=None, password_wo=None, password_wo_version=None):
         if account_name_alias and not isinstance(account_name_alias, str):
             raise TypeError("Expected argument 'account_name_alias' to be a str")
         pulumi.set(__self__, "account_name_alias", account_name_alias)
@@ -45,6 +45,12 @@ class GetInternalUserResult:
         if enable_password and not isinstance(enable_password, str):
             raise TypeError("Expected argument 'enable_password' to be a str")
         pulumi.set(__self__, "enable_password", enable_password)
+        if enable_password_wo and not isinstance(enable_password_wo, str):
+            raise TypeError("Expected argument 'enable_password_wo' to be a str")
+        pulumi.set(__self__, "enable_password_wo", enable_password_wo)
+        if enable_password_wo_version and not isinstance(enable_password_wo_version, int):
+            raise TypeError("Expected argument 'enable_password_wo_version' to be a int")
+        pulumi.set(__self__, "enable_password_wo_version", enable_password_wo_version)
         if enabled and not isinstance(enabled, bool):
             raise TypeError("Expected argument 'enabled' to be a bool")
         pulumi.set(__self__, "enabled", enabled)
@@ -72,6 +78,12 @@ class GetInternalUserResult:
         if password_never_expires and not isinstance(password_never_expires, bool):
             raise TypeError("Expected argument 'password_never_expires' to be a bool")
         pulumi.set(__self__, "password_never_expires", password_never_expires)
+        if password_wo and not isinstance(password_wo, str):
+            raise TypeError("Expected argument 'password_wo' to be a str")
+        pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version and not isinstance(password_wo_version, int):
+            raise TypeError("Expected argument 'password_wo_version' to be a int")
+        pulumi.set(__self__, "password_wo_version", password_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="accountNameAlias")
@@ -120,6 +132,22 @@ class GetInternalUserResult:
         This field is added in ISE 2.0 to support TACACS+
         """
         return pulumi.get(self, "enable_password")
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWo")
+    def enable_password_wo(self) -> _builtins.str:
+        """
+        This field is added in ISE 2.0 to support TACACS+
+        """
+        return pulumi.get(self, "enable_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWoVersion")
+    def enable_password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "enable_password_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -193,6 +221,22 @@ class GetInternalUserResult:
         """
         return pulumi.get(self, "password_never_expires")
 
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> _builtins.str:
+        """
+        The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> _builtins.int:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
 
 class AwaitableGetInternalUserResult(GetInternalUserResult):
     # pylint: disable=using-constant-test
@@ -206,6 +250,8 @@ class AwaitableGetInternalUserResult(GetInternalUserResult):
             description=self.description,
             email=self.email,
             enable_password=self.enable_password,
+            enable_password_wo=self.enable_password_wo,
+            enable_password_wo_version=self.enable_password_wo_version,
             enabled=self.enabled,
             first_name=self.first_name,
             id=self.id,
@@ -214,7 +260,9 @@ class AwaitableGetInternalUserResult(GetInternalUserResult):
             name=self.name,
             password=self.password,
             password_id_store=self.password_id_store,
-            password_never_expires=self.password_never_expires)
+            password_never_expires=self.password_never_expires,
+            password_wo=self.password_wo,
+            password_wo_version=self.password_wo_version)
 
 
 def get_internal_user(id: Optional[_builtins.str] = None,
@@ -249,6 +297,8 @@ def get_internal_user(id: Optional[_builtins.str] = None,
         description=pulumi.get(__ret__, 'description'),
         email=pulumi.get(__ret__, 'email'),
         enable_password=pulumi.get(__ret__, 'enable_password'),
+        enable_password_wo=pulumi.get(__ret__, 'enable_password_wo'),
+        enable_password_wo_version=pulumi.get(__ret__, 'enable_password_wo_version'),
         enabled=pulumi.get(__ret__, 'enabled'),
         first_name=pulumi.get(__ret__, 'first_name'),
         id=pulumi.get(__ret__, 'id'),
@@ -257,7 +307,9 @@ def get_internal_user(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         password=pulumi.get(__ret__, 'password'),
         password_id_store=pulumi.get(__ret__, 'password_id_store'),
-        password_never_expires=pulumi.get(__ret__, 'password_never_expires'))
+        password_never_expires=pulumi.get(__ret__, 'password_never_expires'),
+        password_wo=pulumi.get(__ret__, 'password_wo'),
+        password_wo_version=pulumi.get(__ret__, 'password_wo_version'))
 def get_internal_user_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                              name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInternalUserResult]:
@@ -289,6 +341,8 @@ def get_internal_user_output(id: pulumi.Input[Optional[Optional[_builtins.str]]]
         description=pulumi.get(__response__, 'description'),
         email=pulumi.get(__response__, 'email'),
         enable_password=pulumi.get(__response__, 'enable_password'),
+        enable_password_wo=pulumi.get(__response__, 'enable_password_wo'),
+        enable_password_wo_version=pulumi.get(__response__, 'enable_password_wo_version'),
         enabled=pulumi.get(__response__, 'enabled'),
         first_name=pulumi.get(__response__, 'first_name'),
         id=pulumi.get(__response__, 'id'),
@@ -297,4 +351,6 @@ def get_internal_user_output(id: pulumi.Input[Optional[Optional[_builtins.str]]]
         name=pulumi.get(__response__, 'name'),
         password=pulumi.get(__response__, 'password'),
         password_id_store=pulumi.get(__response__, 'password_id_store'),
-        password_never_expires=pulumi.get(__response__, 'password_never_expires')))
+        password_never_expires=pulumi.get(__response__, 'password_never_expires'),
+        password_wo=pulumi.get(__response__, 'password_wo'),
+        password_wo_version=pulumi.get(__response__, 'password_wo_version')))

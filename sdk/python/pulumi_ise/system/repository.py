@@ -24,6 +24,8 @@ class RepositoryArgs:
                  enable_pki: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  server_name: pulumi.Input[Optional[_builtins.str]] = None,
                  user_name: pulumi.Input[Optional[_builtins.str]] = None):
         """
@@ -35,6 +37,12 @@ class RepositoryArgs:
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] server_name: Name of the server
         :param pulumi.Input[_builtins.str] user_name: User name
         """
@@ -46,6 +54,10 @@ class RepositoryArgs:
             pulumi.set(__self__, "name", name)
         if password is not None:
             pulumi.set(__self__, "password", password)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if server_name is not None:
             pulumi.set(__self__, "server_name", server_name)
         if user_name is not None:
@@ -105,12 +117,40 @@ class RepositoryArgs:
     def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password can contain alphanumeric and/or special characters.
+          - Only one of `password` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
     @password.setter
     def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Password can contain alphanumeric and/or special characters.
+          - Only one of `password` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @password_wo.setter
+    def password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @password_wo_version.setter
+    def password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter(name="serverName")
@@ -143,6 +183,8 @@ class _RepositoryState:
                  enable_pki: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  path: pulumi.Input[Optional[_builtins.str]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  server_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -153,6 +195,12 @@ class _RepositoryState:
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] protocol: Protocol
                  - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
@@ -165,6 +213,10 @@ class _RepositoryState:
             pulumi.set(__self__, "name", name)
         if password is not None:
             pulumi.set(__self__, "password", password)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
         if path is not None:
             pulumi.set(__self__, "path", path)
         if protocol is not None:
@@ -203,12 +255,40 @@ class _RepositoryState:
     def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password can contain alphanumeric and/or special characters.
+          - Only one of `password` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
     @password.setter
     def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Password can contain alphanumeric and/or special characters.
+          - Only one of `password` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @password_wo.setter
+    def password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @password_wo_version.setter
+    def password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -269,6 +349,8 @@ class Repository(pulumi.CustomResource):
                  enable_pki: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  path: pulumi.Input[Optional[_builtins.str]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  server_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -289,7 +371,8 @@ class Repository(pulumi.CustomResource):
             path="/dir",
             server_name="server1",
             user_name="user9",
-            password="cisco123",
+            password_wo="cisco123",
+            password_wo_version=1,
             enable_pki=False)
         ```
 
@@ -307,6 +390,12 @@ class Repository(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] protocol: Protocol
                  - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
@@ -334,7 +423,8 @@ class Repository(pulumi.CustomResource):
             path="/dir",
             server_name="server1",
             user_name="user9",
-            password="cisco123",
+            password_wo="cisco123",
+            password_wo_version=1,
             enable_pki=False)
         ```
 
@@ -365,6 +455,8 @@ class Repository(pulumi.CustomResource):
                  enable_pki: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  path: pulumi.Input[Optional[_builtins.str]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  server_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -380,7 +472,9 @@ class Repository(pulumi.CustomResource):
 
             __props__.__dict__["enable_pki"] = enable_pki
             __props__.__dict__["name"] = name
-            __props__.__dict__["password"] = password
+            __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
+            __props__.__dict__["password_wo"] = None if password_wo is None else pulumi.Output.secret(password_wo)
+            __props__.__dict__["password_wo_version"] = password_wo_version
             if path is None and not opts.urn:
                 raise TypeError("Missing required property 'path'")
             __props__.__dict__["path"] = path
@@ -389,6 +483,8 @@ class Repository(pulumi.CustomResource):
             __props__.__dict__["protocol"] = protocol
             __props__.__dict__["server_name"] = server_name
             __props__.__dict__["user_name"] = user_name
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["password", "passwordWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Repository, __self__).__init__(
             'ise:system/repository:Repository',
             resource_name,
@@ -402,6 +498,8 @@ class Repository(pulumi.CustomResource):
             enable_pki: pulumi.Input[Optional[_builtins.bool]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             path: pulumi.Input[Optional[_builtins.str]] = None,
             protocol: pulumi.Input[Optional[_builtins.str]] = None,
             server_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -416,6 +514,12 @@ class Repository(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_pki: Enable PKI
         :param pulumi.Input[_builtins.str] name: Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] password: Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               Password can contain alphanumeric and/or special characters.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.str] path: Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
         :param pulumi.Input[_builtins.str] protocol: Protocol
                  - Choices: `CDROM`, `DISK`, `FTP`, `HTTP`, `HTTPS`, `NFS`, `SFTP`, `TFTP`
@@ -429,6 +533,8 @@ class Repository(pulumi.CustomResource):
         __props__.__dict__["enable_pki"] = enable_pki
         __props__.__dict__["name"] = name
         __props__.__dict__["password"] = password
+        __props__.__dict__["password_wo"] = password_wo
+        __props__.__dict__["password_wo_version"] = password_wo_version
         __props__.__dict__["path"] = path
         __props__.__dict__["protocol"] = protocol
         __props__.__dict__["server_name"] = server_name
@@ -456,8 +562,28 @@ class Repository(pulumi.CustomResource):
     def password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Password can contain alphanumeric and/or special characters.
+          - Only one of `password` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        Password can contain alphanumeric and/or special characters.
+          - Only one of `password` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 
     @_builtins.property
     @pulumi.getter

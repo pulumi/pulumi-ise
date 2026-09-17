@@ -191,7 +191,7 @@ export class ActiveDirectoryJoinPoint extends pulumi.CustomResource {
     /**
      * List of AD Groups
      */
-    declare public readonly groups: pulumi.Output<outputs.identitymanagement.ActiveDirectoryJoinPointGroup[] | undefined>;
+    declare public readonly groups: pulumi.Output<outputs.identitymanagement.ActiveDirectoryJoinPointGroup[]>;
     /**
      * Identity Not In AD Behaviour
      *   - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
@@ -225,7 +225,7 @@ export class ActiveDirectoryJoinPoint extends pulumi.CustomResource {
     /**
      * List of Rewrite rules
      */
-    declare public readonly rewriteRules: pulumi.Output<outputs.identitymanagement.ActiveDirectoryJoinPointRewriteRule[] | undefined>;
+    declare public readonly rewriteRules: pulumi.Output<outputs.identitymanagement.ActiveDirectoryJoinPointRewriteRule[]>;
     /**
      * Schema
      *   - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`

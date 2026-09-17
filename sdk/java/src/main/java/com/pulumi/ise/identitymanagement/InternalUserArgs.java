@@ -6,6 +6,7 @@ package com.pulumi.ise.identitymanagement;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -96,6 +97,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="enablePassword")
@@ -103,10 +106,46 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> enablePassword() {
         return Optional.ofNullable(this.enablePassword);
+    }
+
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     * 
+     */
+    @Import(name="enablePasswordWo")
+    private @Nullable Output<String> enablePasswordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * This field is added in ISE 2.0 to support TACACS+
+     *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> enablePasswordWo() {
+        return Optional.ofNullable(this.enablePasswordWo);
+    }
+
+    /**
+     * Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="enablePasswordWoVersion")
+    private @Nullable Output<Integer> enablePasswordWoVersion;
+
+    /**
+     * @return Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> enablePasswordWoVersion() {
+        return Optional.ofNullable(this.enablePasswordWoVersion);
     }
 
     /**
@@ -186,6 +225,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     @Import(name="password")
@@ -193,6 +234,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      * 
      */
     public Optional<Output<String>> password() {
@@ -233,6 +276,40 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.passwordNeverExpires);
     }
 
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     * 
+     */
+    @Import(name="passwordWo")
+    private @Nullable Output<String> passwordWo;
+
+    /**
+     * @return **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+     *   - Only one of `password` and `passwordWo` can be set.
+     * 
+     */
+    public Optional<Output<String>> passwordWo() {
+        return Optional.ofNullable(this.passwordWo);
+    }
+
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    @Import(name="passwordWoVersion")
+    private @Nullable Output<Integer> passwordWoVersion;
+
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Optional<Output<Integer>> passwordWoVersion() {
+        return Optional.ofNullable(this.passwordWoVersion);
+    }
+
     private InternalUserArgs() {}
 
     private InternalUserArgs(InternalUserArgs $) {
@@ -242,6 +319,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.email = $.email;
         this.enablePassword = $.enablePassword;
+        this.enablePasswordWo = $.enablePasswordWo;
+        this.enablePasswordWoVersion = $.enablePasswordWoVersion;
         this.enabled = $.enabled;
         this.firstName = $.firstName;
         this.identityGroups = $.identityGroups;
@@ -250,6 +329,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
         this.password = $.password;
         this.passwordIdStore = $.passwordIdStore;
         this.passwordNeverExpires = $.passwordNeverExpires;
+        this.passwordWo = $.passwordWo;
+        this.passwordWoVersion = $.passwordWoVersion;
     }
 
     public static Builder builder() {
@@ -379,6 +460,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param enablePassword This field is added in ISE 2.0 to support TACACS+
+         *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -390,12 +473,60 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param enablePassword This field is added in ISE 2.0 to support TACACS+
+         *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `enablePasswordWo` together with `enablePasswordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
          */
         public Builder enablePassword(String enablePassword) {
             return enablePassword(Output.of(enablePassword));
+        }
+
+        /**
+         * @param enablePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * This field is added in ISE 2.0 to support TACACS+
+         *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enablePasswordWo(@Nullable Output<String> enablePasswordWo) {
+            $.enablePasswordWo = enablePasswordWo;
+            return this;
+        }
+
+        /**
+         * @param enablePasswordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * This field is added in ISE 2.0 to support TACACS+
+         *   - Only one of `enablePassword` and `enablePasswordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enablePasswordWo(String enablePasswordWo) {
+            return enablePasswordWo(Output.of(enablePasswordWo));
+        }
+
+        /**
+         * @param enablePasswordWoVersion Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enablePasswordWoVersion(@Nullable Output<Integer> enablePasswordWoVersion) {
+            $.enablePasswordWoVersion = enablePasswordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param enablePasswordWoVersion Rotation trigger for `enablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enablePasswordWoVersion(Integer enablePasswordWoVersion) {
+            return enablePasswordWoVersion(Output.of(enablePasswordWoVersion));
         }
 
         /**
@@ -505,6 +636,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param password The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+         *   - Only one of `password` and `passwordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -516,6 +649,8 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param password The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+         *   - Only one of `password` and `passwordWo` can be set.
+         *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
          * 
          * @return builder
          * 
@@ -568,6 +703,52 @@ public final class InternalUserArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder passwordNeverExpires(Boolean passwordNeverExpires) {
             return passwordNeverExpires(Output.of(passwordNeverExpires));
+        }
+
+        /**
+         * @param passwordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+         *   - Only one of `password` and `passwordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passwordWo(@Nullable Output<String> passwordWo) {
+            $.passwordWo = passwordWo;
+            return this;
+        }
+
+        /**
+         * @param passwordWo **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+         * The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+         *   - Only one of `password` and `passwordWo` can be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passwordWo(String passwordWo) {
+            return passwordWo(Output.of(passwordWo));
+        }
+
+        /**
+         * @param passwordWoVersion Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passwordWoVersion(@Nullable Output<Integer> passwordWoVersion) {
+            $.passwordWoVersion = passwordWoVersion;
+            return this;
+        }
+
+        /**
+         * @param passwordWoVersion Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder passwordWoVersion(Integer passwordWoVersion) {
+            return passwordWoVersion(Output.of(passwordWoVersion));
         }
 
         public InternalUserArgs build() {

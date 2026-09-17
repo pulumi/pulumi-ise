@@ -408,14 +408,14 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
      * 
      */
     @Export(name="groups", refs={List.class,ActiveDirectoryJoinPointGroup.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<ActiveDirectoryJoinPointGroup>> groups;
+    private Output<List<ActiveDirectoryJoinPointGroup>> groups;
 
     /**
      * @return List of AD Groups
      * 
      */
-    public Output<Optional<List<ActiveDirectoryJoinPointGroup>>> groups() {
-        return Codegen.optional(this.groups);
+    public Output<List<ActiveDirectoryJoinPointGroup>> groups() {
+        return this.groups;
     }
     /**
      * Identity Not In AD Behaviour
@@ -524,14 +524,14 @@ public class ActiveDirectoryJoinPoint extends com.pulumi.resources.CustomResourc
      * 
      */
     @Export(name="rewriteRules", refs={List.class,ActiveDirectoryJoinPointRewriteRule.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<ActiveDirectoryJoinPointRewriteRule>> rewriteRules;
+    private Output<List<ActiveDirectoryJoinPointRewriteRule>> rewriteRules;
 
     /**
      * @return List of Rewrite rules
      * 
      */
-    public Output<Optional<List<ActiveDirectoryJoinPointRewriteRule>>> rewriteRules() {
-        return Codegen.optional(this.rewriteRules);
+    public Output<List<ActiveDirectoryJoinPointRewriteRule>> rewriteRules() {
+        return this.rewriteRules;
     }
     /**
      * Schema

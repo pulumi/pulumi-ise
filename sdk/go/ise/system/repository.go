@@ -29,13 +29,14 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := system.NewRepository(ctx, "example", &system.RepositoryArgs{
-//				Name:       pulumi.String("repo1"),
-//				Protocol:   pulumi.String("SFTP"),
-//				Path:       pulumi.String("/dir"),
-//				ServerName: pulumi.String("server1"),
-//				UserName:   pulumi.String("user9"),
-//				Password:   pulumi.String("cisco123"),
-//				EnablePki:  pulumi.Bool(false),
+//				Name:              pulumi.String("repo1"),
+//				Protocol:          pulumi.String("SFTP"),
+//				Path:              pulumi.String("/dir"),
+//				ServerName:        pulumi.String("server1"),
+//				UserName:          pulumi.String("user9"),
+//				PasswordWo:        pulumi.String("cisco123"),
+//				PasswordWoVersion: pulumi.Int(1),
+//				EnablePki:         pulumi.Bool(false),
 //			})
 //			if err != nil {
 //				return err
@@ -61,7 +62,15 @@ type Repository struct {
 	// Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrOutput `pulumi:"password"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrOutput `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrOutput `pulumi:"passwordWoVersion"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path pulumi.StringOutput `pulumi:"path"`
 	// Protocol
@@ -86,6 +95,17 @@ func NewRepository(ctx *pulumi.Context,
 	if args.Protocol == nil {
 		return nil, errors.New("invalid value for required argument 'Protocol'")
 	}
+	if args.Password != nil {
+		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringPtrInput)
+	}
+	if args.PasswordWo != nil {
+		args.PasswordWo = pulumi.ToSecret(args.PasswordWo).(pulumi.StringPtrInput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"password",
+		"passwordWo",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Repository
 	err := ctx.RegisterResource("ise:system/repository:Repository", name, args, &resource, opts...)
@@ -114,7 +134,15 @@ type repositoryState struct {
 	// Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
 	Name *string `pulumi:"name"`
 	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path *string `pulumi:"path"`
 	// Protocol
@@ -132,7 +160,15 @@ type RepositoryState struct {
 	// Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
 	Name pulumi.StringPtrInput
 	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path pulumi.StringPtrInput
 	// Protocol
@@ -154,7 +190,15 @@ type repositoryArgs struct {
 	// Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
 	Name *string `pulumi:"name"`
 	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password *string `pulumi:"password"`
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	PasswordWo *string `pulumi:"passwordWo"`
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion *int `pulumi:"passwordWoVersion"`
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path string `pulumi:"path"`
 	// Protocol
@@ -173,7 +217,15 @@ type RepositoryArgs struct {
 	// Repository name should be less than 80 characters and can contain alphanumeric, underscore, hyphen and dot characters.
 	Name pulumi.StringPtrInput
 	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 	Password pulumi.StringPtrInput
+	// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+	// Password can contain alphanumeric and/or special characters.
+	//   - Only one of `password` and `passwordWo` can be set.
+	PasswordWo pulumi.StringPtrInput
+	// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+	PasswordWoVersion pulumi.IntPtrInput
 	// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
 	Path pulumi.StringInput
 	// Protocol
@@ -283,8 +335,22 @@ func (o RepositoryOutput) Name() pulumi.StringOutput {
 }
 
 // Password can contain alphanumeric and/or special characters.
+//   - Only one of `password` and `passwordWo` can be set.
+//   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
 func (o RepositoryOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Repository) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
+}
+
+// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+// Password can contain alphanumeric and/or special characters.
+//   - Only one of `password` and `passwordWo` can be set.
+func (o RepositoryOutput) PasswordWo() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Repository) pulumi.StringPtrOutput { return v.PasswordWo }).(pulumi.StringPtrOutput)
+}
+
+// Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+func (o RepositoryOutput) PasswordWoVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *Repository) pulumi.IntPtrOutput { return v.PasswordWoVersion }).(pulumi.IntPtrOutput)
 }
 
 // Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.

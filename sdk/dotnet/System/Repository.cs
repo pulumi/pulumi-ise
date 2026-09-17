@@ -29,7 +29,8 @@ namespace Pulumi.Ise.System
     ///         Path = "/dir",
     ///         ServerName = "server1",
     ///         UserName = "user9",
-    ///         Password = "cisco123",
+    ///         PasswordWo = "cisco123",
+    ///         PasswordWoVersion = 1,
     ///         EnablePki = false,
     ///     });
     /// 
@@ -61,9 +62,25 @@ namespace Pulumi.Ise.System
 
         /// <summary>
         /// Password can contain alphanumeric and/or special characters.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("password")]
         public Output<string?> Password { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Password can contain alphanumeric and/or special characters.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        /// </summary>
+        [Output("passwordWo")]
+        public Output<string?> PasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("passwordWoVersion")]
+        public Output<int?> PasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
@@ -113,6 +130,11 @@ namespace Pulumi.Ise.System
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "password",
+                    "passwordWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -148,11 +170,47 @@ namespace Pulumi.Ise.System
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("password")]
+        private Input<string>? _password;
+
         /// <summary>
         /// Password can contain alphanumeric and/or special characters.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("password")]
-        public Input<string>? Password { get; set; }
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("passwordWo")]
+        private Input<string>? _passwordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Password can contain alphanumeric and/or special characters.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PasswordWo
+        {
+            get => _passwordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passwordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("passwordWoVersion")]
+        public Input<int>? PasswordWoVersion { get; set; }
 
         /// <summary>
         /// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
@@ -199,11 +257,47 @@ namespace Pulumi.Ise.System
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("password")]
+        private Input<string>? _password;
+
         /// <summary>
         /// Password can contain alphanumeric and/or special characters.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("password")]
-        public Input<string>? Password { get; set; }
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("passwordWo")]
+        private Input<string>? _passwordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// Password can contain alphanumeric and/or special characters.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PasswordWo
+        {
+            get => _passwordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passwordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("passwordWoVersion")]
+        public Input<int>? PasswordWoVersion { get; set; }
 
         /// <summary>
         /// Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.

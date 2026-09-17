@@ -25,6 +25,8 @@ class InternalUserArgs:
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  first_name: pulumi.Input[Optional[_builtins.str]] = None,
                  identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
@@ -32,7 +34,9 @@ class InternalUserArgs:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
-                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None):
+                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a InternalUser resource.
 
@@ -43,16 +47,28 @@ class InternalUserArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] enable_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] enable_password_wo_version: Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] enabled: Whether the user is enabled/disabled
         :param pulumi.Input[_builtins.str] first_name: First name of the internal user
         :param pulumi.Input[_builtins.str] identity_groups: Comma separated list of identity group IDs.
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
                  - Default value: `Internal Users`
         :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         if account_name_alias is not None:
             pulumi.set(__self__, "account_name_alias", account_name_alias)
@@ -66,6 +82,10 @@ class InternalUserArgs:
             pulumi.set(__self__, "email", email)
         if enable_password is not None:
             pulumi.set(__self__, "enable_password", enable_password)
+        if enable_password_wo is not None:
+            pulumi.set(__self__, "enable_password_wo", enable_password_wo)
+        if enable_password_wo_version is not None:
+            pulumi.set(__self__, "enable_password_wo_version", enable_password_wo_version)
         if enabled is not None:
             pulumi.set(__self__, "enabled", enabled)
         if first_name is not None:
@@ -82,6 +102,10 @@ class InternalUserArgs:
             pulumi.set(__self__, "password_id_store", password_id_store)
         if password_never_expires is not None:
             pulumi.set(__self__, "password_never_expires", password_never_expires)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="accountNameAlias")
@@ -149,12 +173,40 @@ class InternalUserArgs:
     def enable_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This field is added in ISE 2.0 to support TACACS+
+          - Only one of `enable_password` and `enable_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "enable_password")
 
     @enable_password.setter
     def enable_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWo")
+    def enable_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        This field is added in ISE 2.0 to support TACACS+
+          - Only one of `enable_password` and `enable_password_wo` can be set.
+        """
+        return pulumi.get(self, "enable_password_wo")
+
+    @enable_password_wo.setter
+    def enable_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "enable_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWoVersion")
+    def enable_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "enable_password_wo_version")
+
+    @enable_password_wo_version.setter
+    def enable_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "enable_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -221,6 +273,8 @@ class InternalUserArgs:
     def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+          - Only one of `password` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -253,6 +307,32 @@ class InternalUserArgs:
     @password_never_expires.setter
     def password_never_expires(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "password_never_expires", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+          - Only one of `password` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @password_wo.setter
+    def password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @password_wo_version.setter
+    def password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "password_wo_version", value)
 
 
 @pulumi.input_type
@@ -264,6 +344,8 @@ class _InternalUserState:
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  first_name: pulumi.Input[Optional[_builtins.str]] = None,
                  identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
@@ -271,7 +353,9 @@ class _InternalUserState:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
-                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None):
+                 password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering InternalUser resources.
 
@@ -282,16 +366,28 @@ class _InternalUserState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] enable_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] enable_password_wo_version: Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] enabled: Whether the user is enabled/disabled
         :param pulumi.Input[_builtins.str] first_name: First name of the internal user
         :param pulumi.Input[_builtins.str] identity_groups: Comma separated list of identity group IDs.
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
                  - Default value: `Internal Users`
         :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         if account_name_alias is not None:
             pulumi.set(__self__, "account_name_alias", account_name_alias)
@@ -305,6 +401,10 @@ class _InternalUserState:
             pulumi.set(__self__, "email", email)
         if enable_password is not None:
             pulumi.set(__self__, "enable_password", enable_password)
+        if enable_password_wo is not None:
+            pulumi.set(__self__, "enable_password_wo", enable_password_wo)
+        if enable_password_wo_version is not None:
+            pulumi.set(__self__, "enable_password_wo_version", enable_password_wo_version)
         if enabled is not None:
             pulumi.set(__self__, "enabled", enabled)
         if first_name is not None:
@@ -321,6 +421,10 @@ class _InternalUserState:
             pulumi.set(__self__, "password_id_store", password_id_store)
         if password_never_expires is not None:
             pulumi.set(__self__, "password_never_expires", password_never_expires)
+        if password_wo is not None:
+            pulumi.set(__self__, "password_wo", password_wo)
+        if password_wo_version is not None:
+            pulumi.set(__self__, "password_wo_version", password_wo_version)
 
     @_builtins.property
     @pulumi.getter(name="accountNameAlias")
@@ -388,12 +492,40 @@ class _InternalUserState:
     def enable_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         This field is added in ISE 2.0 to support TACACS+
+          - Only one of `enable_password` and `enable_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "enable_password")
 
     @enable_password.setter
     def enable_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_password", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWo")
+    def enable_password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        This field is added in ISE 2.0 to support TACACS+
+          - Only one of `enable_password` and `enable_password_wo` can be set.
+        """
+        return pulumi.get(self, "enable_password_wo")
+
+    @enable_password_wo.setter
+    def enable_password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "enable_password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWoVersion")
+    def enable_password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "enable_password_wo_version")
+
+    @enable_password_wo_version.setter
+    def enable_password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "enable_password_wo_version", value)
 
     @_builtins.property
     @pulumi.getter
@@ -460,6 +592,8 @@ class _InternalUserState:
     def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+          - Only one of `password` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -492,6 +626,32 @@ class _InternalUserState:
     @password_never_expires.setter
     def password_never_expires(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "password_never_expires", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+          - Only one of `password` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @password_wo.setter
+    def password_wo(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "password_wo", value)
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
+
+    @password_wo_version.setter
+    def password_wo_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "password_wo_version", value)
 
 
 @pulumi.type_token("ise:identitymanagement/internalUser:InternalUser")
@@ -506,6 +666,8 @@ class InternalUser(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  first_name: pulumi.Input[Optional[_builtins.str]] = None,
                  identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
@@ -514,6 +676,8 @@ class InternalUser(pulumi.CustomResource):
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
                  password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage an Internal User.
@@ -526,11 +690,13 @@ class InternalUser(pulumi.CustomResource):
 
         example = ise.identitymanagement.InternalUser("example",
             name="UserTF",
-            password="Cisco123",
+            password_wo="Cisco123",
+            password_wo_version=1,
             change_password=True,
             email="aaa@cisco.com",
             account_name_alias="User 1",
-            enable_password="Cisco123",
+            enable_password_wo="Cisco123",
+            enable_password_wo_version=1,
             enabled=True,
             password_never_expires=False,
             first_name="John",
@@ -557,16 +723,28 @@ class InternalUser(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] enable_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] enable_password_wo_version: Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] enabled: Whether the user is enabled/disabled
         :param pulumi.Input[_builtins.str] first_name: First name of the internal user
         :param pulumi.Input[_builtins.str] identity_groups: Comma separated list of identity group IDs.
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
                  - Default value: `Internal Users`
         :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         ...
     @overload
@@ -585,11 +763,13 @@ class InternalUser(pulumi.CustomResource):
 
         example = ise.identitymanagement.InternalUser("example",
             name="UserTF",
-            password="Cisco123",
+            password_wo="Cisco123",
+            password_wo_version=1,
             change_password=True,
             email="aaa@cisco.com",
             account_name_alias="User 1",
-            enable_password="Cisco123",
+            enable_password_wo="Cisco123",
+            enable_password_wo_version=1,
             enabled=True,
             password_never_expires=False,
             first_name="John",
@@ -628,6 +808,8 @@ class InternalUser(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  first_name: pulumi.Input[Optional[_builtins.str]] = None,
                  identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
@@ -636,6 +818,8 @@ class InternalUser(pulumi.CustomResource):
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
                  password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -650,15 +834,21 @@ class InternalUser(pulumi.CustomResource):
             __props__.__dict__["custom_attributes"] = custom_attributes
             __props__.__dict__["description"] = description
             __props__.__dict__["email"] = email
-            __props__.__dict__["enable_password"] = enable_password
+            __props__.__dict__["enable_password"] = None if enable_password is None else pulumi.Output.secret(enable_password)
+            __props__.__dict__["enable_password_wo"] = None if enable_password_wo is None else pulumi.Output.secret(enable_password_wo)
+            __props__.__dict__["enable_password_wo_version"] = enable_password_wo_version
             __props__.__dict__["enabled"] = enabled
             __props__.__dict__["first_name"] = first_name
             __props__.__dict__["identity_groups"] = identity_groups
             __props__.__dict__["last_name"] = last_name
             __props__.__dict__["name"] = name
-            __props__.__dict__["password"] = password
+            __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["password_id_store"] = password_id_store
             __props__.__dict__["password_never_expires"] = password_never_expires
+            __props__.__dict__["password_wo"] = None if password_wo is None else pulumi.Output.secret(password_wo)
+            __props__.__dict__["password_wo_version"] = password_wo_version
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["enablePassword", "enablePasswordWo", "password", "passwordWo"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(InternalUser, __self__).__init__(
             'ise:identitymanagement/internalUser:InternalUser',
             resource_name,
@@ -675,6 +865,8 @@ class InternalUser(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             email: pulumi.Input[Optional[_builtins.str]] = None,
             enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             first_name: pulumi.Input[Optional[_builtins.str]] = None,
             identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
@@ -682,7 +874,9 @@ class InternalUser(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             password: pulumi.Input[Optional[_builtins.str]] = None,
             password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
-            password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None) -> 'InternalUser':
+            password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
+            password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo_version: pulumi.Input[Optional[_builtins.int]] = None) -> 'InternalUser':
         """
         Get an existing InternalUser resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -697,16 +891,28 @@ class InternalUser(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] email: Email address
         :param pulumi.Input[_builtins.str] enable_password: This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
+        :param pulumi.Input[_builtins.str] enable_password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               This field is added in ISE 2.0 to support TACACS+
+                 - Only one of `enable_password` and `enable_password_wo` can be set.
+        :param pulumi.Input[_builtins.int] enable_password_wo_version: Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         :param pulumi.Input[_builtins.bool] enabled: Whether the user is enabled/disabled
         :param pulumi.Input[_builtins.str] first_name: First name of the internal user
         :param pulumi.Input[_builtins.str] identity_groups: Comma separated list of identity group IDs.
         :param pulumi.Input[_builtins.str] last_name: Last name of the internal user
         :param pulumi.Input[_builtins.str] name: The name of the internal user
         :param pulumi.Input[_builtins.str] password: The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+                 - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         :param pulumi.Input[_builtins.str] password_id_store: The ID store where the internal user's password is kept
                  - Default value: `Internal Users`
         :param pulumi.Input[_builtins.bool] password_never_expires: Set to `true` to indicate the user password never expires. This will not apply to Users who are also ISE Admins. This field is only supported from ISE 3.2.
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] password_wo: **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+               The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+                 - Only one of `password` and `password_wo` can be set.
+        :param pulumi.Input[_builtins.int] password_wo_version: Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -718,6 +924,8 @@ class InternalUser(pulumi.CustomResource):
         __props__.__dict__["description"] = description
         __props__.__dict__["email"] = email
         __props__.__dict__["enable_password"] = enable_password
+        __props__.__dict__["enable_password_wo"] = enable_password_wo
+        __props__.__dict__["enable_password_wo_version"] = enable_password_wo_version
         __props__.__dict__["enabled"] = enabled
         __props__.__dict__["first_name"] = first_name
         __props__.__dict__["identity_groups"] = identity_groups
@@ -726,6 +934,8 @@ class InternalUser(pulumi.CustomResource):
         __props__.__dict__["password"] = password
         __props__.__dict__["password_id_store"] = password_id_store
         __props__.__dict__["password_never_expires"] = password_never_expires
+        __props__.__dict__["password_wo"] = password_wo
+        __props__.__dict__["password_wo_version"] = password_wo_version
         return InternalUser(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
@@ -774,8 +984,28 @@ class InternalUser(pulumi.CustomResource):
     def enable_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         This field is added in ISE 2.0 to support TACACS+
+          - Only one of `enable_password` and `enable_password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `enable_password_wo` together with `enable_password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "enable_password")
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWo")
+    def enable_password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        This field is added in ISE 2.0 to support TACACS+
+          - Only one of `enable_password` and `enable_password_wo` can be set.
+        """
+        return pulumi.get(self, "enable_password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="enablePasswordWoVersion")
+    def enable_password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `enable_password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "enable_password_wo_version")
 
     @_builtins.property
     @pulumi.getter
@@ -822,6 +1052,8 @@ class InternalUser(pulumi.CustomResource):
     def password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+          - Only one of `password` and `password_wo` can be set.
+          - This attribute stores the secret in Terraform state. Prefer `password_wo` together with `password_wo_version`, which keeps it out of state.
         """
         return pulumi.get(self, "password")
 
@@ -842,4 +1074,22 @@ class InternalUser(pulumi.CustomResource):
           - Default value: `false`
         """
         return pulumi.get(self, "password_never_expires")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWo")
+    def password_wo(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+          - Only one of `password` and `password_wo` can be set.
+        """
+        return pulumi.get(self, "password_wo")
+
+    @_builtins.property
+    @pulumi.getter(name="passwordWoVersion")
+    def password_wo_version(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Rotation trigger for `password_wo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        """
+        return pulumi.get(self, "password_wo_version")
 

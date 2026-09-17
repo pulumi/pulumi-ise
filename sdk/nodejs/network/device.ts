@@ -19,13 +19,17 @@ import * as utilities from "../utilities";
  *     name: "Device1",
  *     description: "My device",
  *     authenticationEnableKeyWrap: true,
- *     authenticationEncryptionKey: "cisco123cisco123",
+ *     authenticationEncryptionKeyWo: "cisco123cisco123",
+ *     authenticationEncryptionKeyWoVersion: 1,
  *     authenticationEncryptionKeyFormat: "ASCII",
- *     authenticationMessageAuthenticatorCodeKey: "cisco123cisco1235678",
+ *     authenticationMessageAuthenticatorCodeKeyWo: "cisco123cisco1235678",
+ *     authenticationMessageAuthenticatorCodeKeyWoVersion: 1,
  *     authenticationNetworkProtocol: "RADIUS",
- *     authenticationRadiusSharedSecret: "cisco123",
+ *     authenticationRadiusSharedSecretWo: "cisco123",
+ *     authenticationRadiusSharedSecretWoVersion: 1,
  *     authenticationEnableMultiSecret: true,
- *     authenticationSecondRadiusSharedSecret: "cisco12345",
+ *     authenticationSecondRadiusSharedSecretWo: "cisco12345",
+ *     authenticationSecondRadiusSharedSecretWoVersion: 1,
  *     authenticationDtlsRequired: true,
  *     coaPort: 12345,
  *     dtlsDnsName: "cisco.com",
@@ -43,17 +47,24 @@ import * as utilities from "../utilities";
  *     snmpUsername: "user123",
  *     snmpSecurityLevel: "PRIV",
  *     snmpAuthProtocol: "SHA2",
- *     snmpAuthPassword: "Cisco123",
+ *     snmpAuthPasswordWo: "Cisco123",
+ *     snmpAuthPasswordWoVersion: 1,
  *     snmpPrivacyProtocol: "AES256",
- *     snmpPrivacyPassword: "Cisco12345",
+ *     snmpPrivacyPasswordWo: "Cisco12345",
+ *     snmpPrivacyPasswordWoVersion: 1,
  *     tacacsConnectModeOptions: "OFF",
- *     tacacsSharedSecret: "cisco123",
+ *     tacacsSharedSecretWo: "cisco123",
+ *     tacacsSharedSecretWoVersion: 1,
  *     trustsecDeviceId: "device123",
- *     trustsecDevicePassword: "cisco123",
+ *     trustsecDevicePasswordWo: "cisco123",
+ *     trustsecDevicePasswordWoVersion: 1,
  *     trustsecRestApiUsername: "user123",
- *     trustsecRestApiPassword: "Cisco123",
- *     trustsecEnableModePassword: "cisco123",
- *     trustsecExecModePassword: "cisco123",
+ *     trustsecRestApiPasswordWo: "Cisco123",
+ *     trustsecRestApiPasswordWoVersion: 1,
+ *     trustsecEnableModePasswordWo: "cisco123",
+ *     trustsecEnableModePasswordWoVersion: 1,
+ *     trustsecExecModePasswordWo: "cisco123",
+ *     trustsecExecModePasswordWoVersion: 1,
  *     trustsecExecModeUsername: "user456",
  *     trustsecIncludeWhenDeployingSgtUpdates: true,
  *     trustsecDownloadEnvironmentDataEveryXSeconds: 1000,
@@ -116,6 +127,8 @@ export class Device extends pulumi.CustomResource {
     declare public readonly authenticationEnableMultiSecret: pulumi.Output<boolean | undefined>;
     /**
      * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly authenticationEncryptionKey: pulumi.Output<string | undefined>;
     /**
@@ -124,9 +137,31 @@ export class Device extends pulumi.CustomResource {
      */
     declare public readonly authenticationEncryptionKeyFormat: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     */
+    declare public readonly authenticationEncryptionKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly authenticationEncryptionKeyWoVersion: pulumi.Output<number | undefined>;
+    /**
      * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
      */
     declare public readonly authenticationMessageAuthenticatorCodeKey: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     */
+    declare public readonly authenticationMessageAuthenticatorCodeKeyWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly authenticationMessageAuthenticatorCodeKeyWoVersion: pulumi.Output<number | undefined>;
     /**
      * Network protocol
      *   - Choices: `RADIUS`, `TACACS_PLUS`
@@ -134,12 +169,36 @@ export class Device extends pulumi.CustomResource {
     declare public readonly authenticationNetworkProtocol: pulumi.Output<string | undefined>;
     /**
      * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly authenticationRadiusSharedSecret: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     */
+    declare public readonly authenticationRadiusSharedSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly authenticationRadiusSharedSecretWoVersion: pulumi.Output<number | undefined>;
+    /**
      * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly authenticationSecondRadiusSharedSecret: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     */
+    declare public readonly authenticationSecondRadiusSharedSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly authenticationSecondRadiusSharedSecretWoVersion: pulumi.Output<number | undefined>;
     /**
      * CoA port
      */
@@ -175,8 +234,20 @@ export class Device extends pulumi.CustomResource {
     declare public readonly profileName: pulumi.Output<string>;
     /**
      * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly snmpAuthPassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     */
+    declare public readonly snmpAuthPasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly snmpAuthPasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      *   - Choices: `MD5`, `SHA`, `SHA2`
@@ -201,8 +272,20 @@ export class Device extends pulumi.CustomResource {
     declare public readonly snmpPollingInterval: pulumi.Output<number | undefined>;
     /**
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly snmpPrivacyPassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     */
+    declare public readonly snmpPrivacyPasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly snmpPrivacyPasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -237,8 +320,20 @@ export class Device extends pulumi.CustomResource {
     declare public readonly tacacsConnectModeOptions: pulumi.Output<string | undefined>;
     /**
      * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
      */
     declare public readonly tacacsSharedSecret: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     */
+    declare public readonly tacacsSharedSecretWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly tacacsSharedSecretWoVersion: pulumi.Output<number | undefined>;
     /**
      * CoA source host
      */
@@ -249,8 +344,20 @@ export class Device extends pulumi.CustomResource {
     declare public readonly trustsecDeviceId: pulumi.Output<string | undefined>;
     /**
      * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly trustsecDevicePassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     */
+    declare public readonly trustsecDevicePasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly trustsecDevicePasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Download environment data every X seconds
      */
@@ -265,12 +372,36 @@ export class Device extends pulumi.CustomResource {
     declare public readonly trustsecDownloadSgaclListsEveryXSeconds: pulumi.Output<number | undefined>;
     /**
      * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly trustsecEnableModePassword: pulumi.Output<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     */
+    declare public readonly trustsecEnableModePasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly trustsecEnableModePasswordWoVersion: pulumi.Output<number | undefined>;
+    /**
      * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly trustsecExecModePassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     */
+    declare public readonly trustsecExecModePasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly trustsecExecModePasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * EXEC mode username
      */
@@ -289,8 +420,20 @@ export class Device extends pulumi.CustomResource {
     declare public readonly trustsecReAuthenticationEveryXSeconds: pulumi.Output<number | undefined>;
     /**
      * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
      */
     declare public readonly trustsecRestApiPassword: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     */
+    declare public readonly trustsecRestApiPasswordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly trustsecRestApiPasswordWoVersion: pulumi.Output<number | undefined>;
     /**
      * REST API username
      */
@@ -323,10 +466,18 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["authenticationEnableMultiSecret"] = state?.authenticationEnableMultiSecret;
             resourceInputs["authenticationEncryptionKey"] = state?.authenticationEncryptionKey;
             resourceInputs["authenticationEncryptionKeyFormat"] = state?.authenticationEncryptionKeyFormat;
+            resourceInputs["authenticationEncryptionKeyWo"] = state?.authenticationEncryptionKeyWo;
+            resourceInputs["authenticationEncryptionKeyWoVersion"] = state?.authenticationEncryptionKeyWoVersion;
             resourceInputs["authenticationMessageAuthenticatorCodeKey"] = state?.authenticationMessageAuthenticatorCodeKey;
+            resourceInputs["authenticationMessageAuthenticatorCodeKeyWo"] = state?.authenticationMessageAuthenticatorCodeKeyWo;
+            resourceInputs["authenticationMessageAuthenticatorCodeKeyWoVersion"] = state?.authenticationMessageAuthenticatorCodeKeyWoVersion;
             resourceInputs["authenticationNetworkProtocol"] = state?.authenticationNetworkProtocol;
             resourceInputs["authenticationRadiusSharedSecret"] = state?.authenticationRadiusSharedSecret;
+            resourceInputs["authenticationRadiusSharedSecretWo"] = state?.authenticationRadiusSharedSecretWo;
+            resourceInputs["authenticationRadiusSharedSecretWoVersion"] = state?.authenticationRadiusSharedSecretWoVersion;
             resourceInputs["authenticationSecondRadiusSharedSecret"] = state?.authenticationSecondRadiusSharedSecret;
+            resourceInputs["authenticationSecondRadiusSharedSecretWo"] = state?.authenticationSecondRadiusSharedSecretWo;
+            resourceInputs["authenticationSecondRadiusSharedSecretWoVersion"] = state?.authenticationSecondRadiusSharedSecretWoVersion;
             resourceInputs["coaPort"] = state?.coaPort;
             resourceInputs["description"] = state?.description;
             resourceInputs["dtlsDnsName"] = state?.dtlsDnsName;
@@ -336,12 +487,16 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["networkDeviceGroups"] = state?.networkDeviceGroups;
             resourceInputs["profileName"] = state?.profileName;
             resourceInputs["snmpAuthPassword"] = state?.snmpAuthPassword;
+            resourceInputs["snmpAuthPasswordWo"] = state?.snmpAuthPasswordWo;
+            resourceInputs["snmpAuthPasswordWoVersion"] = state?.snmpAuthPasswordWoVersion;
             resourceInputs["snmpAuthProtocol"] = state?.snmpAuthProtocol;
             resourceInputs["snmpLinkTrapQuery"] = state?.snmpLinkTrapQuery;
             resourceInputs["snmpMacTrapQuery"] = state?.snmpMacTrapQuery;
             resourceInputs["snmpOriginatingPolicyServiceNode"] = state?.snmpOriginatingPolicyServiceNode;
             resourceInputs["snmpPollingInterval"] = state?.snmpPollingInterval;
             resourceInputs["snmpPrivacyPassword"] = state?.snmpPrivacyPassword;
+            resourceInputs["snmpPrivacyPasswordWo"] = state?.snmpPrivacyPasswordWo;
+            resourceInputs["snmpPrivacyPasswordWoVersion"] = state?.snmpPrivacyPasswordWoVersion;
             resourceInputs["snmpPrivacyProtocol"] = state?.snmpPrivacyProtocol;
             resourceInputs["snmpRoCommunity"] = state?.snmpRoCommunity;
             resourceInputs["snmpSecurityLevel"] = state?.snmpSecurityLevel;
@@ -350,19 +505,29 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["softwareVersion"] = state?.softwareVersion;
             resourceInputs["tacacsConnectModeOptions"] = state?.tacacsConnectModeOptions;
             resourceInputs["tacacsSharedSecret"] = state?.tacacsSharedSecret;
+            resourceInputs["tacacsSharedSecretWo"] = state?.tacacsSharedSecretWo;
+            resourceInputs["tacacsSharedSecretWoVersion"] = state?.tacacsSharedSecretWoVersion;
             resourceInputs["trustsecCoaSourceHost"] = state?.trustsecCoaSourceHost;
             resourceInputs["trustsecDeviceId"] = state?.trustsecDeviceId;
             resourceInputs["trustsecDevicePassword"] = state?.trustsecDevicePassword;
+            resourceInputs["trustsecDevicePasswordWo"] = state?.trustsecDevicePasswordWo;
+            resourceInputs["trustsecDevicePasswordWoVersion"] = state?.trustsecDevicePasswordWoVersion;
             resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = state?.trustsecDownloadEnvironmentDataEveryXSeconds;
             resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = state?.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
             resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = state?.trustsecDownloadSgaclListsEveryXSeconds;
             resourceInputs["trustsecEnableModePassword"] = state?.trustsecEnableModePassword;
+            resourceInputs["trustsecEnableModePasswordWo"] = state?.trustsecEnableModePasswordWo;
+            resourceInputs["trustsecEnableModePasswordWoVersion"] = state?.trustsecEnableModePasswordWoVersion;
             resourceInputs["trustsecExecModePassword"] = state?.trustsecExecModePassword;
+            resourceInputs["trustsecExecModePasswordWo"] = state?.trustsecExecModePasswordWo;
+            resourceInputs["trustsecExecModePasswordWoVersion"] = state?.trustsecExecModePasswordWoVersion;
             resourceInputs["trustsecExecModeUsername"] = state?.trustsecExecModeUsername;
             resourceInputs["trustsecIncludeWhenDeployingSgtUpdates"] = state?.trustsecIncludeWhenDeployingSgtUpdates;
             resourceInputs["trustsecOtherSgaDevicesToTrustThisDevice"] = state?.trustsecOtherSgaDevicesToTrustThisDevice;
             resourceInputs["trustsecReAuthenticationEveryXSeconds"] = state?.trustsecReAuthenticationEveryXSeconds;
             resourceInputs["trustsecRestApiPassword"] = state?.trustsecRestApiPassword;
+            resourceInputs["trustsecRestApiPasswordWo"] = state?.trustsecRestApiPasswordWo;
+            resourceInputs["trustsecRestApiPasswordWoVersion"] = state?.trustsecRestApiPasswordWoVersion;
             resourceInputs["trustsecRestApiUsername"] = state?.trustsecRestApiUsername;
             resourceInputs["trustsecSendConfigurationToDevice"] = state?.trustsecSendConfigurationToDevice;
             resourceInputs["trustsecSendConfigurationToDeviceUsing"] = state?.trustsecSendConfigurationToDeviceUsing;
@@ -374,12 +539,20 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["authenticationDtlsRequired"] = args?.authenticationDtlsRequired;
             resourceInputs["authenticationEnableKeyWrap"] = args?.authenticationEnableKeyWrap;
             resourceInputs["authenticationEnableMultiSecret"] = args?.authenticationEnableMultiSecret;
-            resourceInputs["authenticationEncryptionKey"] = args?.authenticationEncryptionKey;
+            resourceInputs["authenticationEncryptionKey"] = args?.authenticationEncryptionKey ? pulumi.secret(args.authenticationEncryptionKey) : undefined;
             resourceInputs["authenticationEncryptionKeyFormat"] = args?.authenticationEncryptionKeyFormat;
-            resourceInputs["authenticationMessageAuthenticatorCodeKey"] = args?.authenticationMessageAuthenticatorCodeKey;
+            resourceInputs["authenticationEncryptionKeyWo"] = args?.authenticationEncryptionKeyWo ? pulumi.secret(args.authenticationEncryptionKeyWo) : undefined;
+            resourceInputs["authenticationEncryptionKeyWoVersion"] = args?.authenticationEncryptionKeyWoVersion;
+            resourceInputs["authenticationMessageAuthenticatorCodeKey"] = args?.authenticationMessageAuthenticatorCodeKey ? pulumi.secret(args.authenticationMessageAuthenticatorCodeKey) : undefined;
+            resourceInputs["authenticationMessageAuthenticatorCodeKeyWo"] = args?.authenticationMessageAuthenticatorCodeKeyWo ? pulumi.secret(args.authenticationMessageAuthenticatorCodeKeyWo) : undefined;
+            resourceInputs["authenticationMessageAuthenticatorCodeKeyWoVersion"] = args?.authenticationMessageAuthenticatorCodeKeyWoVersion;
             resourceInputs["authenticationNetworkProtocol"] = args?.authenticationNetworkProtocol;
-            resourceInputs["authenticationRadiusSharedSecret"] = args?.authenticationRadiusSharedSecret;
-            resourceInputs["authenticationSecondRadiusSharedSecret"] = args?.authenticationSecondRadiusSharedSecret;
+            resourceInputs["authenticationRadiusSharedSecret"] = args?.authenticationRadiusSharedSecret ? pulumi.secret(args.authenticationRadiusSharedSecret) : undefined;
+            resourceInputs["authenticationRadiusSharedSecretWo"] = args?.authenticationRadiusSharedSecretWo ? pulumi.secret(args.authenticationRadiusSharedSecretWo) : undefined;
+            resourceInputs["authenticationRadiusSharedSecretWoVersion"] = args?.authenticationRadiusSharedSecretWoVersion;
+            resourceInputs["authenticationSecondRadiusSharedSecret"] = args?.authenticationSecondRadiusSharedSecret ? pulumi.secret(args.authenticationSecondRadiusSharedSecret) : undefined;
+            resourceInputs["authenticationSecondRadiusSharedSecretWo"] = args?.authenticationSecondRadiusSharedSecretWo ? pulumi.secret(args.authenticationSecondRadiusSharedSecretWo) : undefined;
+            resourceInputs["authenticationSecondRadiusSharedSecretWoVersion"] = args?.authenticationSecondRadiusSharedSecretWoVersion;
             resourceInputs["coaPort"] = args?.coaPort;
             resourceInputs["description"] = args?.description;
             resourceInputs["dtlsDnsName"] = args?.dtlsDnsName;
@@ -388,13 +561,17 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["networkDeviceGroups"] = args?.networkDeviceGroups;
             resourceInputs["profileName"] = args?.profileName;
-            resourceInputs["snmpAuthPassword"] = args?.snmpAuthPassword;
+            resourceInputs["snmpAuthPassword"] = args?.snmpAuthPassword ? pulumi.secret(args.snmpAuthPassword) : undefined;
+            resourceInputs["snmpAuthPasswordWo"] = args?.snmpAuthPasswordWo ? pulumi.secret(args.snmpAuthPasswordWo) : undefined;
+            resourceInputs["snmpAuthPasswordWoVersion"] = args?.snmpAuthPasswordWoVersion;
             resourceInputs["snmpAuthProtocol"] = args?.snmpAuthProtocol;
             resourceInputs["snmpLinkTrapQuery"] = args?.snmpLinkTrapQuery;
             resourceInputs["snmpMacTrapQuery"] = args?.snmpMacTrapQuery;
             resourceInputs["snmpOriginatingPolicyServiceNode"] = args?.snmpOriginatingPolicyServiceNode;
             resourceInputs["snmpPollingInterval"] = args?.snmpPollingInterval;
-            resourceInputs["snmpPrivacyPassword"] = args?.snmpPrivacyPassword;
+            resourceInputs["snmpPrivacyPassword"] = args?.snmpPrivacyPassword ? pulumi.secret(args.snmpPrivacyPassword) : undefined;
+            resourceInputs["snmpPrivacyPasswordWo"] = args?.snmpPrivacyPasswordWo ? pulumi.secret(args.snmpPrivacyPasswordWo) : undefined;
+            resourceInputs["snmpPrivacyPasswordWoVersion"] = args?.snmpPrivacyPasswordWoVersion;
             resourceInputs["snmpPrivacyProtocol"] = args?.snmpPrivacyProtocol;
             resourceInputs["snmpRoCommunity"] = args?.snmpRoCommunity;
             resourceInputs["snmpSecurityLevel"] = args?.snmpSecurityLevel;
@@ -402,25 +579,37 @@ export class Device extends pulumi.CustomResource {
             resourceInputs["snmpVersion"] = args?.snmpVersion;
             resourceInputs["softwareVersion"] = args?.softwareVersion;
             resourceInputs["tacacsConnectModeOptions"] = args?.tacacsConnectModeOptions;
-            resourceInputs["tacacsSharedSecret"] = args?.tacacsSharedSecret;
+            resourceInputs["tacacsSharedSecret"] = args?.tacacsSharedSecret ? pulumi.secret(args.tacacsSharedSecret) : undefined;
+            resourceInputs["tacacsSharedSecretWo"] = args?.tacacsSharedSecretWo ? pulumi.secret(args.tacacsSharedSecretWo) : undefined;
+            resourceInputs["tacacsSharedSecretWoVersion"] = args?.tacacsSharedSecretWoVersion;
             resourceInputs["trustsecCoaSourceHost"] = args?.trustsecCoaSourceHost;
             resourceInputs["trustsecDeviceId"] = args?.trustsecDeviceId;
-            resourceInputs["trustsecDevicePassword"] = args?.trustsecDevicePassword;
+            resourceInputs["trustsecDevicePassword"] = args?.trustsecDevicePassword ? pulumi.secret(args.trustsecDevicePassword) : undefined;
+            resourceInputs["trustsecDevicePasswordWo"] = args?.trustsecDevicePasswordWo ? pulumi.secret(args.trustsecDevicePasswordWo) : undefined;
+            resourceInputs["trustsecDevicePasswordWoVersion"] = args?.trustsecDevicePasswordWoVersion;
             resourceInputs["trustsecDownloadEnvironmentDataEveryXSeconds"] = args?.trustsecDownloadEnvironmentDataEveryXSeconds;
             resourceInputs["trustsecDownloadPeerAuthorizationPolicyEveryXSeconds"] = args?.trustsecDownloadPeerAuthorizationPolicyEveryXSeconds;
             resourceInputs["trustsecDownloadSgaclListsEveryXSeconds"] = args?.trustsecDownloadSgaclListsEveryXSeconds;
-            resourceInputs["trustsecEnableModePassword"] = args?.trustsecEnableModePassword;
-            resourceInputs["trustsecExecModePassword"] = args?.trustsecExecModePassword;
+            resourceInputs["trustsecEnableModePassword"] = args?.trustsecEnableModePassword ? pulumi.secret(args.trustsecEnableModePassword) : undefined;
+            resourceInputs["trustsecEnableModePasswordWo"] = args?.trustsecEnableModePasswordWo ? pulumi.secret(args.trustsecEnableModePasswordWo) : undefined;
+            resourceInputs["trustsecEnableModePasswordWoVersion"] = args?.trustsecEnableModePasswordWoVersion;
+            resourceInputs["trustsecExecModePassword"] = args?.trustsecExecModePassword ? pulumi.secret(args.trustsecExecModePassword) : undefined;
+            resourceInputs["trustsecExecModePasswordWo"] = args?.trustsecExecModePasswordWo ? pulumi.secret(args.trustsecExecModePasswordWo) : undefined;
+            resourceInputs["trustsecExecModePasswordWoVersion"] = args?.trustsecExecModePasswordWoVersion;
             resourceInputs["trustsecExecModeUsername"] = args?.trustsecExecModeUsername;
             resourceInputs["trustsecIncludeWhenDeployingSgtUpdates"] = args?.trustsecIncludeWhenDeployingSgtUpdates;
             resourceInputs["trustsecOtherSgaDevicesToTrustThisDevice"] = args?.trustsecOtherSgaDevicesToTrustThisDevice;
             resourceInputs["trustsecReAuthenticationEveryXSeconds"] = args?.trustsecReAuthenticationEveryXSeconds;
-            resourceInputs["trustsecRestApiPassword"] = args?.trustsecRestApiPassword;
+            resourceInputs["trustsecRestApiPassword"] = args?.trustsecRestApiPassword ? pulumi.secret(args.trustsecRestApiPassword) : undefined;
+            resourceInputs["trustsecRestApiPasswordWo"] = args?.trustsecRestApiPasswordWo ? pulumi.secret(args.trustsecRestApiPasswordWo) : undefined;
+            resourceInputs["trustsecRestApiPasswordWoVersion"] = args?.trustsecRestApiPasswordWoVersion;
             resourceInputs["trustsecRestApiUsername"] = args?.trustsecRestApiUsername;
             resourceInputs["trustsecSendConfigurationToDevice"] = args?.trustsecSendConfigurationToDevice;
             resourceInputs["trustsecSendConfigurationToDeviceUsing"] = args?.trustsecSendConfigurationToDeviceUsing;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["authenticationEncryptionKey", "authenticationEncryptionKeyWo", "authenticationMessageAuthenticatorCodeKey", "authenticationMessageAuthenticatorCodeKeyWo", "authenticationRadiusSharedSecret", "authenticationRadiusSharedSecretWo", "authenticationSecondRadiusSharedSecret", "authenticationSecondRadiusSharedSecretWo", "snmpAuthPassword", "snmpAuthPasswordWo", "snmpPrivacyPassword", "snmpPrivacyPasswordWo", "tacacsSharedSecret", "tacacsSharedSecretWo", "trustsecDevicePassword", "trustsecDevicePasswordWo", "trustsecEnableModePassword", "trustsecEnableModePasswordWo", "trustsecExecModePassword", "trustsecExecModePasswordWo", "trustsecRestApiPassword", "trustsecRestApiPasswordWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(Device.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -443,6 +632,8 @@ export interface DeviceState {
     authenticationEnableMultiSecret?: pulumi.Input<boolean | undefined>;
     /**
      * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
      */
     authenticationEncryptionKey?: pulumi.Input<string | undefined>;
     /**
@@ -451,9 +642,31 @@ export interface DeviceState {
      */
     authenticationEncryptionKeyFormat?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     */
+    authenticationEncryptionKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationEncryptionKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
      */
     authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     */
+    authenticationMessageAuthenticatorCodeKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationMessageAuthenticatorCodeKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Network protocol
      *   - Choices: `RADIUS`, `TACACS_PLUS`
@@ -461,12 +674,36 @@ export interface DeviceState {
     authenticationNetworkProtocol?: pulumi.Input<string | undefined>;
     /**
      * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
      */
     authenticationRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     */
+    authenticationRadiusSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationRadiusSharedSecretWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
      */
     authenticationSecondRadiusSharedSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     */
+    authenticationSecondRadiusSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationSecondRadiusSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * CoA port
      */
@@ -502,8 +739,20 @@ export interface DeviceState {
     profileName?: pulumi.Input<string | undefined>;
     /**
      * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
      */
     snmpAuthPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     */
+    snmpAuthPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    snmpAuthPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      *   - Choices: `MD5`, `SHA`, `SHA2`
@@ -528,8 +777,20 @@ export interface DeviceState {
     snmpPollingInterval?: pulumi.Input<number | undefined>;
     /**
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
      */
     snmpPrivacyPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     */
+    snmpPrivacyPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    snmpPrivacyPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -564,8 +825,20 @@ export interface DeviceState {
     tacacsConnectModeOptions?: pulumi.Input<string | undefined>;
     /**
      * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
      */
     tacacsSharedSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     */
+    tacacsSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    tacacsSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * CoA source host
      */
@@ -576,8 +849,20 @@ export interface DeviceState {
     trustsecDeviceId?: pulumi.Input<string | undefined>;
     /**
      * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
      */
     trustsecDevicePassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     */
+    trustsecDevicePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecDevicePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Download environment data every X seconds
      */
@@ -592,12 +877,36 @@ export interface DeviceState {
     trustsecDownloadSgaclListsEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
      */
     trustsecEnableModePassword?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     */
+    trustsecEnableModePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecEnableModePasswordWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
      */
     trustsecExecModePassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     */
+    trustsecExecModePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecExecModePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * EXEC mode username
      */
@@ -616,8 +925,20 @@ export interface DeviceState {
     trustsecReAuthenticationEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
      */
     trustsecRestApiPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     */
+    trustsecRestApiPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecRestApiPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * REST API username
      */
@@ -651,6 +972,8 @@ export interface DeviceArgs {
     authenticationEnableMultiSecret?: pulumi.Input<boolean | undefined>;
     /**
      * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationEncryptionKeyWo` together with `authenticationEncryptionKeyWoVersion`, which keeps it out of state.
      */
     authenticationEncryptionKey?: pulumi.Input<string | undefined>;
     /**
@@ -659,9 +982,31 @@ export interface DeviceArgs {
      */
     authenticationEncryptionKeyFormat?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Encryption key
+     *   - Only one of `authenticationEncryptionKey` and `authenticationEncryptionKeyWo` can be set.
+     */
+    authenticationEncryptionKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationEncryptionKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationEncryptionKeyWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationMessageAuthenticatorCodeKeyWo` together with `authenticationMessageAuthenticatorCodeKeyWoVersion`, which keeps it out of state.
      */
     authenticationMessageAuthenticatorCodeKey?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Message authenticator code key
+     *   - Only one of `authenticationMessageAuthenticatorCodeKey` and `authenticationMessageAuthenticatorCodeKeyWo` can be set.
+     */
+    authenticationMessageAuthenticatorCodeKeyWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationMessageAuthenticatorCodeKeyWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationMessageAuthenticatorCodeKeyWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Network protocol
      *   - Choices: `RADIUS`, `TACACS_PLUS`
@@ -669,12 +1014,36 @@ export interface DeviceArgs {
     authenticationNetworkProtocol?: pulumi.Input<string | undefined>;
     /**
      * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationRadiusSharedSecretWo` together with `authenticationRadiusSharedSecretWoVersion`, which keeps it out of state.
      */
     authenticationRadiusSharedSecret?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * RADIUS shared secret
+     *   - Only one of `authenticationRadiusSharedSecret` and `authenticationRadiusSharedSecretWo` can be set.
+     */
+    authenticationRadiusSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationRadiusSharedSecretWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `authenticationSecondRadiusSharedSecretWo` together with `authenticationSecondRadiusSharedSecretWoVersion`, which keeps it out of state.
      */
     authenticationSecondRadiusSharedSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Second RADIUS shared secret
+     *   - Only one of `authenticationSecondRadiusSharedSecret` and `authenticationSecondRadiusSharedSecretWo` can be set.
+     */
+    authenticationSecondRadiusSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `authenticationSecondRadiusSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    authenticationSecondRadiusSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * CoA port
      */
@@ -710,8 +1079,20 @@ export interface DeviceArgs {
     profileName?: pulumi.Input<string | undefined>;
     /**
      * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpAuthPasswordWo` together with `snmpAuthPasswordWoVersion`, which keeps it out of state.
      */
     snmpAuthPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP authentication password. Required for snmp version 3 and securityLevel AUTH or PRIV.
+     *   - Only one of `snmpAuthPassword` and `snmpAuthPasswordWo` can be set.
+     */
+    snmpAuthPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `snmpAuthPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    snmpAuthPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * SNMP authentication protocol. Required for snmp version 3 and securityLevel AUTH or PRIV.
      *   - Choices: `MD5`, `SHA`, `SHA2`
@@ -736,8 +1117,20 @@ export interface DeviceArgs {
     snmpPollingInterval?: pulumi.Input<number | undefined>;
     /**
      * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `snmpPrivacyPasswordWo` together with `snmpPrivacyPasswordWoVersion`, which keeps it out of state.
      */
     snmpPrivacyPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * SNMP privacy password. Required for snmp version 3 and securityLevel PRIV
+     *   - Only one of `snmpPrivacyPassword` and `snmpPrivacyPasswordWo` can be set.
+     */
+    snmpPrivacyPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `snmpPrivacyPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    snmpPrivacyPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * SNMP privacy protocol. Required for snmp version 3 and securityLevel PRIV.
      *   - Choices: `DES`, `AES128`, `AES192`, `AES256`, `3DES`
@@ -772,8 +1165,20 @@ export interface DeviceArgs {
     tacacsConnectModeOptions?: pulumi.Input<string | undefined>;
     /**
      * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `tacacsSharedSecretWo` together with `tacacsSharedSecretWoVersion`, which keeps it out of state.
      */
     tacacsSharedSecret?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Shared secret
+     *   - Only one of `tacacsSharedSecret` and `tacacsSharedSecretWo` can be set.
+     */
+    tacacsSharedSecretWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `tacacsSharedSecretWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    tacacsSharedSecretWoVersion?: pulumi.Input<number | undefined>;
     /**
      * CoA source host
      */
@@ -784,8 +1189,20 @@ export interface DeviceArgs {
     trustsecDeviceId?: pulumi.Input<string | undefined>;
     /**
      * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecDevicePasswordWo` together with `trustsecDevicePasswordWoVersion`, which keeps it out of state.
      */
     trustsecDevicePassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * TrustSec device password
+     *   - Only one of `trustsecDevicePassword` and `trustsecDevicePasswordWo` can be set.
+     */
+    trustsecDevicePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecDevicePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecDevicePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Download environment data every X seconds
      */
@@ -800,12 +1217,36 @@ export interface DeviceArgs {
     trustsecDownloadSgaclListsEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecEnableModePasswordWo` together with `trustsecEnableModePasswordWoVersion`, which keeps it out of state.
      */
     trustsecEnableModePassword?: pulumi.Input<string | undefined>;
     /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Enable mode password
+     *   - Only one of `trustsecEnableModePassword` and `trustsecEnableModePasswordWo` can be set.
+     */
+    trustsecEnableModePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecEnableModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecEnableModePasswordWoVersion?: pulumi.Input<number | undefined>;
+    /**
      * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecExecModePasswordWo` together with `trustsecExecModePasswordWoVersion`, which keeps it out of state.
      */
     trustsecExecModePassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * EXEC mode password
+     *   - Only one of `trustsecExecModePassword` and `trustsecExecModePasswordWo` can be set.
+     */
+    trustsecExecModePasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecExecModePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecExecModePasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * EXEC mode username
      */
@@ -824,8 +1265,20 @@ export interface DeviceArgs {
     trustsecReAuthenticationEveryXSeconds?: pulumi.Input<number | undefined>;
     /**
      * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `trustsecRestApiPasswordWo` together with `trustsecRestApiPasswordWoVersion`, which keeps it out of state.
      */
     trustsecRestApiPassword?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * REST API password
+     *   - Only one of `trustsecRestApiPassword` and `trustsecRestApiPasswordWo` can be set.
+     */
+    trustsecRestApiPasswordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `trustsecRestApiPasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    trustsecRestApiPasswordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * REST API username
      */

@@ -25,11 +25,13 @@ namespace Pulumi.Ise.IdentityManagement
     ///     var example = new Ise.IdentityManagement.InternalUser("example", new()
     ///     {
     ///         Name = "UserTF",
-    ///         Password = "Cisco123",
+    ///         PasswordWo = "Cisco123",
+    ///         PasswordWoVersion = 1,
     ///         ChangePassword = true,
     ///         Email = "aaa@cisco.com",
     ///         AccountNameAlias = "User 1",
-    ///         EnablePassword = "Cisco123",
+    ///         EnablePasswordWo = "Cisco123",
+    ///         EnablePasswordWoVersion = 1,
     ///         Enabled = true,
     ///         PasswordNeverExpires = false,
     ///         FirstName = "John",
@@ -85,9 +87,25 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// This field is added in ISE 2.0 to support TACACS+
+        ///   - Only one of `EnablePassword` and `EnablePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `EnablePasswordWo` together with `EnablePasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("enablePassword")]
         public Output<string?> EnablePassword { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// This field is added in ISE 2.0 to support TACACS+
+        ///   - Only one of `EnablePassword` and `EnablePasswordWo` can be set.
+        /// </summary>
+        [Output("enablePasswordWo")]
+        public Output<string?> EnablePasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `EnablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("enablePasswordWoVersion")]
+        public Output<int?> EnablePasswordWoVersion { get; private set; } = null!;
 
         /// <summary>
         /// Whether the user is enabled/disabled
@@ -121,6 +139,8 @@ namespace Pulumi.Ise.IdentityManagement
 
         /// <summary>
         /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
         [Output("password")]
         public Output<string?> Password { get; private set; } = null!;
@@ -138,6 +158,20 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         [Output("passwordNeverExpires")]
         public Output<bool> PasswordNeverExpires { get; private set; } = null!;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        /// </summary>
+        [Output("passwordWo")]
+        public Output<string?> PasswordWo { get; private set; } = null!;
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Output("passwordWoVersion")]
+        public Output<int?> PasswordWoVersion { get; private set; } = null!;
 
 
         /// <summary>
@@ -162,6 +196,13 @@ namespace Pulumi.Ise.IdentityManagement
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "enablePassword",
+                    "enablePasswordWo",
+                    "password",
+                    "passwordWo",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -222,11 +263,47 @@ namespace Pulumi.Ise.IdentityManagement
         [Input("email")]
         public Input<string>? Email { get; set; }
 
+        [Input("enablePassword")]
+        private Input<string>? _enablePassword;
+
         /// <summary>
         /// This field is added in ISE 2.0 to support TACACS+
+        ///   - Only one of `EnablePassword` and `EnablePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `EnablePasswordWo` together with `EnablePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("enablePassword")]
-        public Input<string>? EnablePassword { get; set; }
+        public Input<string>? EnablePassword
+        {
+            get => _enablePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _enablePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("enablePasswordWo")]
+        private Input<string>? _enablePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// This field is added in ISE 2.0 to support TACACS+
+        ///   - Only one of `EnablePassword` and `EnablePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? EnablePasswordWo
+        {
+            get => _enablePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _enablePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `EnablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("enablePasswordWoVersion")]
+        public Input<int>? EnablePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Whether the user is enabled/disabled
@@ -258,11 +335,23 @@ namespace Pulumi.Ise.IdentityManagement
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("password")]
+        private Input<string>? _password;
+
         /// <summary>
         /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("password")]
-        public Input<string>? Password { get; set; }
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// The ID store where the internal user's password is kept
@@ -277,6 +366,30 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         [Input("passwordNeverExpires")]
         public Input<bool>? PasswordNeverExpires { get; set; }
+
+        [Input("passwordWo")]
+        private Input<string>? _passwordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PasswordWo
+        {
+            get => _passwordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passwordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("passwordWoVersion")]
+        public Input<int>? PasswordWoVersion { get; set; }
 
         public InternalUserArgs()
         {
@@ -323,11 +436,47 @@ namespace Pulumi.Ise.IdentityManagement
         [Input("email")]
         public Input<string>? Email { get; set; }
 
+        [Input("enablePassword")]
+        private Input<string>? _enablePassword;
+
         /// <summary>
         /// This field is added in ISE 2.0 to support TACACS+
+        ///   - Only one of `EnablePassword` and `EnablePasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `EnablePasswordWo` together with `EnablePasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("enablePassword")]
-        public Input<string>? EnablePassword { get; set; }
+        public Input<string>? EnablePassword
+        {
+            get => _enablePassword;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _enablePassword = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        [Input("enablePasswordWo")]
+        private Input<string>? _enablePasswordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// This field is added in ISE 2.0 to support TACACS+
+        ///   - Only one of `EnablePassword` and `EnablePasswordWo` can be set.
+        /// </summary>
+        public Input<string>? EnablePasswordWo
+        {
+            get => _enablePasswordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _enablePasswordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `EnablePasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("enablePasswordWoVersion")]
+        public Input<int>? EnablePasswordWoVersion { get; set; }
 
         /// <summary>
         /// Whether the user is enabled/disabled
@@ -359,11 +508,23 @@ namespace Pulumi.Ise.IdentityManagement
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("password")]
+        private Input<string>? _password;
+
         /// <summary>
         /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        ///   - This attribute stores the secret in Terraform state. Prefer `PasswordWo` together with `PasswordWoVersion`, which keeps it out of state.
         /// </summary>
-        [Input("password")]
-        public Input<string>? Password { get; set; }
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// The ID store where the internal user's password is kept
@@ -378,6 +539,30 @@ namespace Pulumi.Ise.IdentityManagement
         /// </summary>
         [Input("passwordNeverExpires")]
         public Input<bool>? PasswordNeverExpires { get; set; }
+
+        [Input("passwordWo")]
+        private Input<string>? _passwordWo;
+
+        /// <summary>
+        /// **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+        /// The password of the internal user. Required when creating a new user. When managing existing (brownfield) users the password can be omitted and the existing password will be preserved.
+        ///   - Only one of `Password` and `PasswordWo` can be set.
+        /// </summary>
+        public Input<string>? PasswordWo
+        {
+            get => _passwordWo;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _passwordWo = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// Rotation trigger for `PasswordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+        /// </summary>
+        [Input("passwordWoVersion")]
+        public Input<int>? PasswordWoVersion { get; set; }
 
         public InternalUserState()
         {

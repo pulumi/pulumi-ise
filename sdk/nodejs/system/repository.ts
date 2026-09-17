@@ -19,7 +19,8 @@ import * as utilities from "../utilities";
  *     path: "/dir",
  *     serverName: "server1",
  *     userName: "user9",
- *     password: "cisco123",
+ *     passwordWo: "cisco123",
+ *     passwordWoVersion: 1,
  *     enablePki: false,
  * });
  * ```
@@ -70,8 +71,20 @@ export class Repository extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     declare public readonly password: pulumi.Output<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     */
+    declare public readonly passwordWo: pulumi.Output<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    declare public readonly passwordWoVersion: pulumi.Output<number | undefined>;
     /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */
@@ -106,6 +119,8 @@ export class Repository extends pulumi.CustomResource {
             resourceInputs["enablePki"] = state?.enablePki;
             resourceInputs["name"] = state?.name;
             resourceInputs["password"] = state?.password;
+            resourceInputs["passwordWo"] = state?.passwordWo;
+            resourceInputs["passwordWoVersion"] = state?.passwordWoVersion;
             resourceInputs["path"] = state?.path;
             resourceInputs["protocol"] = state?.protocol;
             resourceInputs["serverName"] = state?.serverName;
@@ -120,13 +135,17 @@ export class Repository extends pulumi.CustomResource {
             }
             resourceInputs["enablePki"] = args?.enablePki;
             resourceInputs["name"] = args?.name;
-            resourceInputs["password"] = args?.password;
+            resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
+            resourceInputs["passwordWo"] = args?.passwordWo ? pulumi.secret(args.passwordWo) : undefined;
+            resourceInputs["passwordWoVersion"] = args?.passwordWoVersion;
             resourceInputs["path"] = args?.path;
             resourceInputs["protocol"] = args?.protocol;
             resourceInputs["serverName"] = args?.serverName;
             resourceInputs["userName"] = args?.userName;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["password", "passwordWo"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(Repository.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -145,8 +164,20 @@ export interface RepositoryState {
     name?: pulumi.Input<string | undefined>;
     /**
      * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */
@@ -180,8 +211,20 @@ export interface RepositoryArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     *   - This attribute stores the secret in Terraform state. Prefer `passwordWo` together with `passwordWoVersion`, which keeps it out of state.
      */
     password?: pulumi.Input<string | undefined>;
+    /**
+     * **NOTE:** This field is write-only and its value will not be updated in state as part of read operations.
+     * Password can contain alphanumeric and/or special characters.
+     *   - Only one of `password` and `passwordWo` can be set.
+     */
+    passwordWo?: pulumi.Input<string | undefined>;
+    /**
+     * Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     */
+    passwordWoVersion?: pulumi.Input<number | undefined>;
     /**
      * Path should always start with "/" and can contain alphanumeric, underscore, hyphen and dot characters.
      */

@@ -6,6 +6,7 @@ package com.pulumi.ise.system.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,6 +32,16 @@ public final class GetRepositoryResult {
      * 
      */
     private String password;
+    /**
+     * @return Password can contain alphanumeric and/or special characters.
+     * 
+     */
+    private String passwordWo;
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    private Integer passwordWoVersion;
     /**
      * @return Path should always start with &#34;/&#34; and can contain alphanumeric, underscore, hyphen and dot characters.
      * 
@@ -82,6 +93,20 @@ public final class GetRepositoryResult {
         return this.password;
     }
     /**
+     * @return Password can contain alphanumeric and/or special characters.
+     * 
+     */
+    public String passwordWo() {
+        return this.passwordWo;
+    }
+    /**
+     * @return Rotation trigger for `passwordWo`. Increment this integer whenever the write-only value changes so Terraform sends the new secret. The value is stored in state; the secret is not.
+     * 
+     */
+    public Integer passwordWoVersion() {
+        return this.passwordWoVersion;
+    }
+    /**
      * @return Path should always start with &#34;/&#34; and can contain alphanumeric, underscore, hyphen and dot characters.
      * 
      */
@@ -123,6 +148,8 @@ public final class GetRepositoryResult {
         private String id;
         private String name;
         private String password;
+        private String passwordWo;
+        private Integer passwordWoVersion;
         private String path;
         private String protocol;
         private String serverName;
@@ -134,6 +161,8 @@ public final class GetRepositoryResult {
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.password = defaults.password;
+    	      this.passwordWo = defaults.passwordWo;
+    	      this.passwordWoVersion = defaults.passwordWoVersion;
     	      this.path = defaults.path;
     	      this.protocol = defaults.protocol;
     	      this.serverName = defaults.serverName;
@@ -170,6 +199,22 @@ public final class GetRepositoryResult {
               throw new MissingRequiredPropertyException("GetRepositoryResult", "password");
             }
             this.password = password;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWo(String passwordWo) {
+            if (passwordWo == null) {
+              throw new MissingRequiredPropertyException("GetRepositoryResult", "passwordWo");
+            }
+            this.passwordWo = passwordWo;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder passwordWoVersion(Integer passwordWoVersion) {
+            if (passwordWoVersion == null) {
+              throw new MissingRequiredPropertyException("GetRepositoryResult", "passwordWoVersion");
+            }
+            this.passwordWoVersion = passwordWoVersion;
             return this;
         }
         @CustomType.Setter
@@ -210,6 +255,8 @@ public final class GetRepositoryResult {
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.password = password;
+            _resultValue.passwordWo = passwordWo;
+            _resultValue.passwordWoVersion = passwordWoVersion;
             _resultValue.path = path;
             _resultValue.protocol = protocol;
             _resultValue.serverName = serverName;
