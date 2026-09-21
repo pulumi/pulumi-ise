@@ -371,7 +371,7 @@ class Condition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
                  attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
-                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict', 'outputs.ConditionChildren']]]]] = None,
                  condition_type: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -413,7 +413,7 @@ class Condition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]] childrens: List of child conditions.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict', 'outputs.ConditionChildren']]]] childrens: List of child conditions.
         :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
                  - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] description: Condition description
@@ -476,7 +476,7 @@ class Condition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
                  attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
-                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict', 'outputs.ConditionChildren']]]]] = None,
                  condition_type: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -517,7 +517,7 @@ class Condition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
             attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
-            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]]] = None,
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict', 'outputs.ConditionChildren']]]]] = None,
             condition_type: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -534,7 +534,7 @@ class Condition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] attribute_value: Attribute value for condition. Value type is specified in dictionary object.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict']]]] childrens: List of child conditions.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict', 'outputs.ConditionChildren']]]] childrens: List of child conditions.
         :param pulumi.Input[_builtins.str] condition_type: Indicates whether the record is the condition itself or a logical aggregation. Logical aggreation indicates that additional conditions are present under the children attribute.
                  - Choices: `LibraryConditionAndBlock`, `LibraryConditionAttributes`, `LibraryConditionOrBlock`
         :param pulumi.Input[_builtins.str] description: Condition description

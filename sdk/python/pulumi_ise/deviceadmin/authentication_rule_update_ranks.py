@@ -98,7 +98,7 @@ class AuthenticationRuleUpdateRanks(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleUpdateRanksRuleArgs', 'AuthenticationRuleUpdateRanksRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleUpdateRanksRuleArgs', 'AuthenticationRuleUpdateRanksRuleArgsDict', 'outputs.AuthenticationRuleUpdateRanksRule']]]]] = None,
                  __props__=None):
         """
         This resource is used to bulk update rank field in device admin authentication rule. It serves as a workaround for the ISE API/Backend limitation which restricts rank assignments to a strictly incremental sequence. By utilizing this resource and device_admin_authentication_rule resource, you can bypass the APIs limitation. Creation of this resource is performing PUT operation (Update) and it only tracks rank field. When this resource is destroyed, no action is performed on ISE and resource is just removed from state.
@@ -162,7 +162,7 @@ class AuthenticationRuleUpdateRanks(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleUpdateRanksRuleArgs', 'AuthenticationRuleUpdateRanksRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleUpdateRanksRuleArgs', 'AuthenticationRuleUpdateRanksRuleArgsDict', 'outputs.AuthenticationRuleUpdateRanksRule']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -187,7 +187,7 @@ class AuthenticationRuleUpdateRanks(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleUpdateRanksRuleArgs', 'AuthenticationRuleUpdateRanksRuleArgsDict']]]]] = None) -> 'AuthenticationRuleUpdateRanks':
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleUpdateRanksRuleArgs', 'AuthenticationRuleUpdateRanksRuleArgsDict', 'outputs.AuthenticationRuleUpdateRanksRule']]]]] = None) -> 'AuthenticationRuleUpdateRanks':
         """
         Get an existing AuthenticationRuleUpdateRanks resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

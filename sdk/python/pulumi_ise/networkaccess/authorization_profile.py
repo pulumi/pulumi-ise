@@ -1156,7 +1156,7 @@ class AuthorizationProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  access_type: pulumi.Input[Optional[_builtins.str]] = None,
                  acl: pulumi.Input[Optional[_builtins.str]] = None,
-                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
+                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict', 'outputs.AuthorizationProfileAdvancedAttribute']]]]] = None,
                  agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
                  airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
                  airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1251,7 +1251,7 @@ class AuthorizationProfile(pulumi.CustomResource):
                  - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
                  - Default value: `ACCESS_ACCEPT`
         :param pulumi.Input[_builtins.str] acl: ACL
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]] advanced_attributes: List of advanced attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict', 'outputs.AuthorizationProfileAdvancedAttribute']]]] advanced_attributes: List of advanced attributes
         :param pulumi.Input[_builtins.bool] agentless_posture: Agentless Posture.
         :param pulumi.Input[_builtins.str] airespace_acl: Airespace ACL
         :param pulumi.Input[_builtins.str] airespace_ipv6_acl: Airespace IPv6 ACL
@@ -1375,7 +1375,7 @@ class AuthorizationProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  access_type: pulumi.Input[Optional[_builtins.str]] = None,
                  acl: pulumi.Input[Optional[_builtins.str]] = None,
-                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
+                 advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict', 'outputs.AuthorizationProfileAdvancedAttribute']]]]] = None,
                  agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
                  airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
                  airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1460,7 +1460,7 @@ class AuthorizationProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             access_type: pulumi.Input[Optional[_builtins.str]] = None,
             acl: pulumi.Input[Optional[_builtins.str]] = None,
-            advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]]] = None,
+            advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict', 'outputs.AuthorizationProfileAdvancedAttribute']]]]] = None,
             agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
             airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
             airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1502,7 +1502,7 @@ class AuthorizationProfile(pulumi.CustomResource):
                  - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`
                  - Default value: `ACCESS_ACCEPT`
         :param pulumi.Input[_builtins.str] acl: ACL
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict']]]] advanced_attributes: List of advanced attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict', 'outputs.AuthorizationProfileAdvancedAttribute']]]] advanced_attributes: List of advanced attributes
         :param pulumi.Input[_builtins.bool] agentless_posture: Agentless Posture.
         :param pulumi.Input[_builtins.str] airespace_acl: Airespace ACL
         :param pulumi.Input[_builtins.str] airespace_ipv6_acl: Airespace IPv6 ACL

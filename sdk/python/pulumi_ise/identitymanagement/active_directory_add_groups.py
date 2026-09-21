@@ -272,7 +272,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  domain: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict', 'outputs.ActiveDirectoryAddGroupsGroup']]]]] = None,
                  join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -307,7 +307,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Join point Description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]] groups: List of AD Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict', 'outputs.ActiveDirectoryAddGroupsGroup']]]] groups: List of AD Groups
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
         :param pulumi.Input[_builtins.str] name: The name of the active directory join point
         """
@@ -360,7 +360,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  domain: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict', 'outputs.ActiveDirectoryAddGroupsGroup']]]]] = None,
                  join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -397,7 +397,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             domain: pulumi.Input[Optional[_builtins.str]] = None,
             enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
-            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict', 'outputs.ActiveDirectoryAddGroupsGroup']]]]] = None,
             join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None) -> 'ActiveDirectoryAddGroups':
         """
@@ -412,7 +412,7 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Join point Description
         :param pulumi.Input[_builtins.str] domain: AD domain associated with the join point
         :param pulumi.Input[_builtins.bool] enable_domain_allowed_list: - Default value: `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict']]]] groups: List of AD Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict', 'outputs.ActiveDirectoryAddGroupsGroup']]]] groups: List of AD Groups
         :param pulumi.Input[_builtins.str] join_point_id: Active Directory Join Point ID
         :param pulumi.Input[_builtins.str] name: The name of the active directory join point
         """

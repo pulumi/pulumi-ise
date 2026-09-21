@@ -132,7 +132,7 @@ class TacacsProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None,
+                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict', 'outputs.TacacsProfileSessionAttribute']]]]] = None,
                  __props__=None):
         """
         This resource can manage a TACACS Profile.
@@ -218,7 +218,7 @@ class TacacsProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None,
+                 session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict', 'outputs.TacacsProfileSessionAttribute']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -243,7 +243,7 @@ class TacacsProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict']]]]] = None) -> 'TacacsProfile':
+            session_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsProfileSessionAttributeArgs', 'TacacsProfileSessionAttributeArgsDict', 'outputs.TacacsProfileSessionAttribute']]]]] = None) -> 'TacacsProfile':
         """
         Get an existing TacacsProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

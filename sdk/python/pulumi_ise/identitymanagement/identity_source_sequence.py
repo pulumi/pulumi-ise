@@ -199,7 +199,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
                  break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
                  certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
+                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict', 'outputs.IdentitySourceSequenceIdentitySource']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -292,7 +292,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
                  break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
                  certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
+                 identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict', 'outputs.IdentitySourceSequenceIdentitySource']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -325,7 +325,7 @@ class IdentitySourceSequence(pulumi.CustomResource):
             break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
             certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict']]]]] = None,
+            identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict', 'outputs.IdentitySourceSequenceIdentitySource']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None) -> 'IdentitySourceSequence':
         """
         Get an existing IdentitySourceSequence resource's state with the given name, id, and optional extra
