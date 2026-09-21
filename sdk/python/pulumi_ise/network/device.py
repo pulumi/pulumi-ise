@@ -2517,7 +2517,7 @@ class Device(pulumi.CustomResource):
                  coa_port: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict', 'outputs.DeviceIp']]]]] = None,
                  model_name: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -2687,7 +2687,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] coa_port: CoA port
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict', 'outputs.DeviceIp']]]] ips: List of IP subnets
         :param pulumi.Input[_builtins.str] model_name: Model name
         :param pulumi.Input[_builtins.str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`
@@ -2894,7 +2894,7 @@ class Device(pulumi.CustomResource):
                  coa_port: pulumi.Input[Optional[_builtins.int]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict', 'outputs.DeviceIp']]]]] = None,
                  model_name: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -3057,7 +3057,7 @@ class Device(pulumi.CustomResource):
             coa_port: pulumi.Input[Optional[_builtins.int]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             dtls_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
-            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict', 'outputs.DeviceIp']]]]] = None,
             model_name: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -3152,7 +3152,7 @@ class Device(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] coa_port: CoA port
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] dtls_dns_name: This value is used to verify the client identity contained in the X.509 RADIUS/DTLS client certificate
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict']]]] ips: List of IP subnets
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DeviceIpArgs', 'DeviceIpArgsDict', 'outputs.DeviceIp']]]] ips: List of IP subnets
         :param pulumi.Input[_builtins.str] model_name: Model name
         :param pulumi.Input[_builtins.str] name: The name of the network device
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_device_groups: List of network device groups, e.g. `Device Type#All Device Types#ACCESS`

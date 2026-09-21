@@ -565,7 +565,7 @@ class AuthorizationRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict']]]]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict', 'outputs.AuthorizationRuleChildren']]]]] = None,
                  command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
                  condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
@@ -618,7 +618,7 @@ class AuthorizationRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict']]]] childrens: List of child conditions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict', 'outputs.AuthorizationRuleChildren']]]] childrens: List of child conditions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] command_sets: Command sets enforce the specified list of commands that can be executed by a device administrator
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.
@@ -693,7 +693,7 @@ class AuthorizationRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict']]]]] = None,
+                 childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict', 'outputs.AuthorizationRuleChildren']]]]] = None,
                  command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
                  condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
@@ -746,7 +746,7 @@ class AuthorizationRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict']]]]] = None,
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict', 'outputs.AuthorizationRuleChildren']]]]] = None,
             command_sets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
             condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
@@ -769,7 +769,7 @@ class AuthorizationRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict']]]] childrens: List of child conditions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict', 'outputs.AuthorizationRuleChildren']]]] childrens: List of child conditions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] command_sets: Command sets enforce the specified list of commands that can be executed by a device administrator
         :param pulumi.Input[_builtins.str] condition_attribute_name: Dictionary attribute name
         :param pulumi.Input[_builtins.str] condition_attribute_value: Attribute value for condition. Value type is specified in dictionary object.

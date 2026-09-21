@@ -1159,7 +1159,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
                  aging_time: pulumi.Input[Optional[_builtins.int]] = None,
-                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
+                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict', 'outputs.ActiveDirectoryJoinPointAttribute']]]]] = None,
                  auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
                  country: pulumi.Input[Optional[_builtins.str]] = None,
                  department: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1176,7 +1176,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
                  failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  first_name: pulumi.Input[Optional[_builtins.str]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict', 'outputs.ActiveDirectoryJoinPointGroup']]]]] = None,
                  identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
                  job_title: pulumi.Input[Optional[_builtins.str]] = None,
                  last_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1184,7 +1184,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
                  plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
-                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
+                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict', 'outputs.ActiveDirectoryJoinPointRewriteRule']]]]] = None,
                  schema: pulumi.Input[Optional[_builtins.str]] = None,
                  state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
                  street_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1264,7 +1264,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.int] aging_time: Aging Time
                  - Default value: `5`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]] attributes: List of AD attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict', 'outputs.ActiveDirectoryJoinPointAttribute']]]] attributes: List of AD attributes
         :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
                  - Choices: `WIRELESS`, `WIRED`, `BOTH`
         :param pulumi.Input[_builtins.str] country: User info attribute
@@ -1290,7 +1290,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] first_name: User info attribute
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]] groups: List of AD Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict', 'outputs.ActiveDirectoryJoinPointGroup']]]] groups: List of AD Groups
         :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour
                  - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         :param pulumi.Input[_builtins.str] job_title: User info attribute
@@ -1300,7 +1300,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] organizational_unit: User info attribute
         :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]] rewrite_rules: List of Rewrite rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict', 'outputs.ActiveDirectoryJoinPointRewriteRule']]]] rewrite_rules: List of Rewrite rules
         :param pulumi.Input[_builtins.str] schema: Schema
                  - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         :param pulumi.Input[_builtins.str] state_or_province: User info attribute
@@ -1399,7 +1399,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
                  aging_time: pulumi.Input[Optional[_builtins.int]] = None,
-                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
+                 attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict', 'outputs.ActiveDirectoryJoinPointAttribute']]]]] = None,
                  auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
                  country: pulumi.Input[Optional[_builtins.str]] = None,
                  department: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1416,7 +1416,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
                  failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  first_name: pulumi.Input[Optional[_builtins.str]] = None,
-                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
+                 groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict', 'outputs.ActiveDirectoryJoinPointGroup']]]]] = None,
                  identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
                  job_title: pulumi.Input[Optional[_builtins.str]] = None,
                  last_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1424,7 +1424,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
                  plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
-                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
+                 rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict', 'outputs.ActiveDirectoryJoinPointRewriteRule']]]]] = None,
                  schema: pulumi.Input[Optional[_builtins.str]] = None,
                  state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
                  street_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1486,7 +1486,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
             aging_time: pulumi.Input[Optional[_builtins.int]] = None,
-            attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]]] = None,
+            attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict', 'outputs.ActiveDirectoryJoinPointAttribute']]]]] = None,
             auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
             country: pulumi.Input[Optional[_builtins.str]] = None,
             department: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1503,7 +1503,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
             enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
             failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
             first_name: pulumi.Input[Optional[_builtins.str]] = None,
-            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict', 'outputs.ActiveDirectoryJoinPointGroup']]]]] = None,
             identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
             job_title: pulumi.Input[Optional[_builtins.str]] = None,
             last_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1511,7 +1511,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
             plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
-            rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]]] = None,
+            rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict', 'outputs.ActiveDirectoryJoinPointRewriteRule']]]]] = None,
             schema: pulumi.Input[Optional[_builtins.str]] = None,
             state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
             street_address: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1528,7 +1528,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
                  - Default value: `Default_Scope`
         :param pulumi.Input[_builtins.int] aging_time: Aging Time
                  - Default value: `5`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict']]]] attributes: List of AD attributes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict', 'outputs.ActiveDirectoryJoinPointAttribute']]]] attributes: List of AD attributes
         :param pulumi.Input[_builtins.str] auth_protection_type: Enable prevent AD account lockout for WIRELESS/WIRED/BOTH
                  - Choices: `WIRELESS`, `WIRED`, `BOTH`
         :param pulumi.Input[_builtins.str] country: User info attribute
@@ -1554,7 +1554,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] failed_auth_threshold: Number of bad password attempts
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] first_name: User info attribute
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict']]]] groups: List of AD Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict', 'outputs.ActiveDirectoryJoinPointGroup']]]] groups: List of AD Groups
         :param pulumi.Input[_builtins.str] identity_not_in_ad_behaviour: Identity Not In AD Behaviour
                  - Choices: `REJECT`, `SEARCH_JOINED_FOREST`, `SEARCH_ALL`
         :param pulumi.Input[_builtins.str] job_title: User info attribute
@@ -1564,7 +1564,7 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] organizational_unit: User info attribute
         :param pulumi.Input[_builtins.bool] plaintext_auth: Plain Text Authentication
                  - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict']]]] rewrite_rules: List of Rewrite rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict', 'outputs.ActiveDirectoryJoinPointRewriteRule']]]] rewrite_rules: List of Rewrite rules
         :param pulumi.Input[_builtins.str] schema: Schema
                  - Choices: `ACTIVE_DIRECTORY`, `CUSTOM`
         :param pulumi.Input[_builtins.str] state_or_province: User info attribute
