@@ -231,7 +231,6 @@ func Provider() tfbridge.ProviderInfo {
 		Java: &tfbridge.JavaInfo{
 			BasePackage: "com.pulumi",
 		},
-		EnableAccurateBridgePreview: true,
 	}
 
 	prov.MustComputeTokens(moduleComputeStrategy())
