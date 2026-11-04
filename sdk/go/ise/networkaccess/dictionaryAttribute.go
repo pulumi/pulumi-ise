@@ -156,6 +156,12 @@ func (DictionaryAttributeState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dictionaryAttributeState)(nil)).Elem()
 }
 
+// DictionaryAttributeExists checks whether an existing DictionaryAttribute resource with the given ID exists.
+func DictionaryAttributeExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DictionaryAttributeState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/dictionaryAttribute:DictionaryAttribute", id, state, "", opts...)
+}
+
 type dictionaryAttributeArgs struct {
 	// List of allowed values for the attribute
 	AllowedValues []DictionaryAttributeAllowedValue `pulumi:"allowedValues"`

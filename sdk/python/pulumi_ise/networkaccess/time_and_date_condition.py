@@ -673,6 +673,38 @@ class TimeAndDateCondition(pulumi.CustomResource):
         __props__.__dict__["week_days_exceptions"] = week_days_exceptions
         return TimeAndDateCondition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            end_date: pulumi.Input[Optional[_builtins.str]] = None,
+            end_time: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_end_date: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_end_time: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_start_date: pulumi.Input[Optional[_builtins.str]] = None,
+            exception_start_time: pulumi.Input[Optional[_builtins.str]] = None,
+            is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            start_date: pulumi.Input[Optional[_builtins.str]] = None,
+            start_time: pulumi.Input[Optional[_builtins.str]] = None,
+            week_days: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            week_days_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["endDate"] = end_date
+        __props__["endTime"] = end_time
+        __props__["exceptionEndDate"] = exception_end_date
+        __props__["exceptionEndTime"] = exception_end_time
+        __props__["exceptionStartDate"] = exception_start_date
+        __props__["exceptionStartTime"] = exception_start_time
+        __props__["isNegate"] = is_negate
+        __props__["name"] = name
+        __props__["startDate"] = start_date
+        __props__["startTime"] = start_time
+        __props__["weekDays"] = week_days
+        __props__["weekDaysExceptions"] = week_days_exceptions
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/timeAndDateCondition:TimeAndDateCondition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

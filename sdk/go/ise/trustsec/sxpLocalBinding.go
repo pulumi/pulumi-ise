@@ -142,6 +142,12 @@ func (SxpLocalBindingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sxpLocalBindingState)(nil)).Elem()
 }
 
+// SxpLocalBindingExists checks whether an existing SxpLocalBinding resource with the given ID exists.
+func SxpLocalBindingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SxpLocalBindingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/sxpLocalBinding:SxpLocalBinding", id, state, "", opts...)
+}
+
 type sxpLocalBindingArgs struct {
 	// The binding name. Deprecated since Cisco ISE 3.0.
 	BindingName *string `pulumi:"bindingName"`

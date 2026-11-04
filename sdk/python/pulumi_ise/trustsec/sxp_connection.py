@@ -526,6 +526,30 @@ class SxpConnection(pulumi.CustomResource):
         __props__.__dict__["sxp_vpn"] = sxp_vpn
         return SxpConnection(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_node: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_peer: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_version: pulumi.Input[Optional[_builtins.str]] = None,
+            sxp_vpn: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["enabled"] = enabled
+        __props__["ipAddress"] = ip_address
+        __props__["name"] = name
+        __props__["sxpMode"] = sxp_mode
+        __props__["sxpNode"] = sxp_node
+        __props__["sxpPeer"] = sxp_peer
+        __props__["sxpVersion"] = sxp_version
+        __props__["sxpVpn"] = sxp_vpn
+        return pulumi.runtime.exists_resource(None, 'ise:trustsec/sxpConnection:SxpConnection', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

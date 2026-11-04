@@ -213,6 +213,12 @@ func (AuthorizationExceptionRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authorizationExceptionRuleState)(nil)).Elem()
 }
 
+// AuthorizationExceptionRuleExists checks whether an existing AuthorizationExceptionRule resource with the given ID exists.
+func AuthorizationExceptionRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthorizationExceptionRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/authorizationExceptionRule:AuthorizationExceptionRule", id, state, "", opts...)
+}
+
 type authorizationExceptionRuleArgs struct {
 	// List of child conditions
 	Childrens []AuthorizationExceptionRuleChildren `pulumi:"childrens"`

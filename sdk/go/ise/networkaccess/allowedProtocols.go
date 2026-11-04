@@ -726,6 +726,12 @@ func (AllowedProtocolsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*allowedProtocolsState)(nil)).Elem()
 }
 
+// AllowedProtocolsExists checks whether an existing AllowedProtocols resource with the given ID exists.
+func AllowedProtocolsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AllowedProtocolsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/allowedProtocols:AllowedProtocols", id, state, "", opts...)
+}
+
 type allowedProtocolsArgs struct {
 	// Allow 5G. This field is only supported from ISE 3.2.
 	Allow5g *bool `pulumi:"allow5g"`

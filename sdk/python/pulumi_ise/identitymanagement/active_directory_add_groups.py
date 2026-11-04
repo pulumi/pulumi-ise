@@ -429,6 +429,26 @@ class ActiveDirectoryAddGroups(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         return ActiveDirectoryAddGroups(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            domain: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryAddGroupsGroupArgs', 'ActiveDirectoryAddGroupsGroupArgsDict', 'outputs.ActiveDirectoryAddGroupsGroup']]]]] = None,
+            join_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["adScopesNames"] = ad_scopes_names
+        __props__["description"] = description
+        __props__["domain"] = domain
+        __props__["enableDomainAllowedList"] = enable_domain_allowed_list
+        __props__["groups"] = groups
+        __props__["joinPointId"] = join_point_id
+        __props__["name"] = name
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/activeDirectoryAddGroups:ActiveDirectoryAddGroups', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> pulumi.Output[_builtins.str]:

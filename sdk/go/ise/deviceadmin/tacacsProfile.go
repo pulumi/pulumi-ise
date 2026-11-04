@@ -113,6 +113,12 @@ func (TacacsProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tacacsProfileState)(nil)).Elem()
 }
 
+// TacacsProfileExists checks whether an existing TacacsProfile resource with the given ID exists.
+func TacacsProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TacacsProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/tacacsProfile:TacacsProfile", id, state, "", opts...)
+}
+
 type tacacsProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

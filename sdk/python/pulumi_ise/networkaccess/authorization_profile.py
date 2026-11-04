@@ -1585,6 +1585,78 @@ class AuthorizationProfile(pulumi.CustomResource):
         __props__.__dict__["web_redirection_type"] = web_redirection_type
         return AuthorizationProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_type: pulumi.Input[Optional[_builtins.str]] = None,
+            acl: pulumi.Input[Optional[_builtins.str]] = None,
+            advanced_attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationProfileAdvancedAttributeArgs', 'AuthorizationProfileAdvancedAttributeArgsDict', 'outputs.AuthorizationProfileAdvancedAttribute']]]]] = None,
+            agentless_posture: pulumi.Input[Optional[_builtins.bool]] = None,
+            airespace_acl: pulumi.Input[Optional[_builtins.str]] = None,
+            airespace_ipv6_acl: pulumi.Input[Optional[_builtins.str]] = None,
+            asa_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+            auto_smart_port: pulumi.Input[Optional[_builtins.str]] = None,
+            avc_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            easywired_session_candidate: pulumi.Input[Optional[_builtins.bool]] = None,
+            interface_template: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_acl_filter: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_dacl_name: pulumi.Input[Optional[_builtins.str]] = None,
+            mac_sec_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            neat: pulumi.Input[Optional[_builtins.bool]] = None,
+            profile_name: pulumi.Input[Optional[_builtins.str]] = None,
+            reauthentication_connectivity: pulumi.Input[Optional[_builtins.str]] = None,
+            reauthentication_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            service_template: pulumi.Input[Optional[_builtins.bool]] = None,
+            track_movement: pulumi.Input[Optional[_builtins.bool]] = None,
+            unique_identifier: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_name_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_tag_id: pulumi.Input[Optional[_builtins.int]] = None,
+            voice_domain_permission: pulumi.Input[Optional[_builtins.bool]] = None,
+            web_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            web_redirection_acl: pulumi.Input[Optional[_builtins.str]] = None,
+            web_redirection_display_certificates_renewal_messages: pulumi.Input[Optional[_builtins.bool]] = None,
+            web_redirection_portal_name: pulumi.Input[Optional[_builtins.str]] = None,
+            web_redirection_static_ip_host_name_fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+            web_redirection_type: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessType"] = access_type
+        __props__["acl"] = acl
+        __props__["advancedAttributes"] = advanced_attributes
+        __props__["agentlessPosture"] = agentless_posture
+        __props__["airespaceAcl"] = airespace_acl
+        __props__["airespaceIpv6Acl"] = airespace_ipv6_acl
+        __props__["asaVpn"] = asa_vpn
+        __props__["autoSmartPort"] = auto_smart_port
+        __props__["avcProfile"] = avc_profile
+        __props__["daclName"] = dacl_name
+        __props__["description"] = description
+        __props__["easywiredSessionCandidate"] = easywired_session_candidate
+        __props__["interfaceTemplate"] = interface_template
+        __props__["ipv6AclFilter"] = ipv6_acl_filter
+        __props__["ipv6DaclName"] = ipv6_dacl_name
+        __props__["macSecPolicy"] = mac_sec_policy
+        __props__["name"] = name
+        __props__["neat"] = neat
+        __props__["profileName"] = profile_name
+        __props__["reauthenticationConnectivity"] = reauthentication_connectivity
+        __props__["reauthenticationTimer"] = reauthentication_timer
+        __props__["serviceTemplate"] = service_template
+        __props__["trackMovement"] = track_movement
+        __props__["uniqueIdentifier"] = unique_identifier
+        __props__["vlanNameId"] = vlan_name_id
+        __props__["vlanTagId"] = vlan_tag_id
+        __props__["voiceDomainPermission"] = voice_domain_permission
+        __props__["webAuth"] = web_auth
+        __props__["webRedirectionAcl"] = web_redirection_acl
+        __props__["webRedirectionDisplayCertificatesRenewalMessages"] = web_redirection_display_certificates_renewal_messages
+        __props__["webRedirectionPortalName"] = web_redirection_portal_name
+        __props__["webRedirectionStaticIpHostNameFqdn"] = web_redirection_static_ip_host_name_fqdn
+        __props__["webRedirectionType"] = web_redirection_type
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/authorizationProfile:AuthorizationProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessType")
     def access_type(self) -> pulumi.Output[_builtins.str]:

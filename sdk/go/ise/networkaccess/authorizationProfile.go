@@ -367,6 +367,12 @@ func (AuthorizationProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authorizationProfileState)(nil)).Elem()
 }
 
+// AuthorizationProfileExists checks whether an existing AuthorizationProfile resource with the given ID exists.
+func AuthorizationProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthorizationProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/authorizationProfile:AuthorizationProfile", id, state, "", opts...)
+}
+
 type authorizationProfileArgs struct {
 	// Access type
 	//   - Choices: `ACCESS_ACCEPT`, `ACCESS_REJECT`

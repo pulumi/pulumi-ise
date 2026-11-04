@@ -159,6 +159,12 @@ func (CertificateAuthenticationProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*certificateAuthenticationProfileState)(nil)).Elem()
 }
 
+// CertificateAuthenticationProfileExists checks whether an existing CertificateAuthenticationProfile resource with the given ID exists.
+func CertificateAuthenticationProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CertificateAuthenticationProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile", id, state, "", opts...)
+}
+
 type certificateAuthenticationProfileArgs struct {
 	// Allow as username
 	//   - Default value: `false`

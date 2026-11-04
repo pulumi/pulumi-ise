@@ -91,6 +91,12 @@ func (EgressPushMatrixState) ElementType() reflect.Type {
 	return reflect.TypeOf((*egressPushMatrixState)(nil)).Elem()
 }
 
+// EgressPushMatrixExists checks whether an existing EgressPushMatrix resource with the given ID exists.
+func EgressPushMatrixExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EgressPushMatrixState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/egressPushMatrix:EgressPushMatrix", id, state, "", opts...)
+}
+
 type egressPushMatrixArgs struct {
 	// Set to true to re-trigger push on update. Will automatically reset to false after execution.
 	//   - Default value: `false`

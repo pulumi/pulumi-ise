@@ -208,6 +208,16 @@ class AuthorizationGlobalExceptionRuleUpdateRank(pulumi.CustomResource):
         __props__.__dict__["rule_id"] = rule_id
         return AuthorizationGlobalExceptionRuleUpdateRank(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            rank: pulumi.Input[Optional[_builtins.int]] = None,
+            rule_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["rank"] = rank
+        __props__["ruleId"] = rule_id
+        return pulumi.runtime.exists_resource(None, 'ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRank:AuthorizationGlobalExceptionRuleUpdateRank', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def rank(self) -> pulumi.Output[_builtins.int]:

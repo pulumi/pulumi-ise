@@ -206,6 +206,16 @@ class ActiveDirectoryJoinDomainWithAllNodes(pulumi.CustomResource):
         __props__.__dict__["join_point_id"] = join_point_id
         return ActiveDirectoryJoinDomainWithAllNodes(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            additional_datas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgs', 'ActiveDirectoryJoinDomainWithAllNodesAdditionalDataArgsDict', 'outputs.ActiveDirectoryJoinDomainWithAllNodesAdditionalData']]]]] = None,
+            join_point_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["additionalDatas"] = additional_datas
+        __props__["joinPointId"] = join_point_id
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="additionalDatas")
     def additional_datas(self) -> pulumi.Output[Sequence['outputs.ActiveDirectoryJoinDomainWithAllNodesAdditionalData']]:

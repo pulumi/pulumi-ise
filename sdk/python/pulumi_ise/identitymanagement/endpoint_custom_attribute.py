@@ -230,6 +230,16 @@ class EndpointCustomAttribute(pulumi.CustomResource):
         __props__.__dict__["attribute_type"] = attribute_type
         return EndpointCustomAttribute(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            attribute_type: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["attributeName"] = attribute_name
+        __props__["attributeType"] = attribute_type
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="attributeName")
     def attribute_name(self) -> pulumi.Output[_builtins.str]:

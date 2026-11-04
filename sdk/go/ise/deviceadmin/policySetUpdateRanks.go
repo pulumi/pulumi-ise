@@ -90,6 +90,12 @@ func (PolicySetUpdateRanksState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policySetUpdateRanksState)(nil)).Elem()
 }
 
+// PolicySetUpdateRanksExists checks whether an existing PolicySetUpdateRanks resource with the given ID exists.
+func PolicySetUpdateRanksExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicySetUpdateRanksState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/policySetUpdateRanks:PolicySetUpdateRanks", id, state, "", opts...)
+}
+
 type policySetUpdateRanksArgs struct {
 	Policies []PolicySetUpdateRanksPolicy `pulumi:"policies"`
 }

@@ -179,6 +179,12 @@ func (SxpConnectionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sxpConnectionState)(nil)).Elem()
 }
 
+// SxpConnectionExists checks whether an existing SxpConnection resource with the given ID exists.
+func SxpConnectionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SxpConnectionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/sxpConnection:SxpConnection", id, state, "", opts...)
+}
+
 type sxpConnectionArgs struct {
 	// The description of the SXP connection
 	Description *string `pulumi:"description"`

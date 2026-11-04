@@ -113,6 +113,12 @@ func (EndpointCustomAttributeState) ElementType() reflect.Type {
 	return reflect.TypeOf((*endpointCustomAttributeState)(nil)).Elem()
 }
 
+// EndpointCustomAttributeExists checks whether an existing EndpointCustomAttribute resource with the given ID exists.
+func EndpointCustomAttributeExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EndpointCustomAttributeState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/endpointCustomAttribute:EndpointCustomAttribute", id, state, "", opts...)
+}
+
 type endpointCustomAttributeArgs struct {
 	// The name of the attribute
 	AttributeName string `pulumi:"attributeName"`

@@ -112,6 +112,12 @@ func (SxpVpnState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sxpVpnState)(nil)).Elem()
 }
 
+// SxpVpnExists checks whether an existing SxpVpn resource with the given ID exists.
+func SxpVpnExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SxpVpnState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/sxpVpn:SxpVpn", id, state, "", opts...)
+}
+
 type sxpVpnArgs struct {
 	// The description of the SXP VPN.
 	Description *string `pulumi:"description"`

@@ -104,6 +104,12 @@ func (ActiveDirectoryJoinDomainWithAllNodesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*activeDirectoryJoinDomainWithAllNodesState)(nil)).Elem()
 }
 
+// ActiveDirectoryJoinDomainWithAllNodesExists checks whether an existing ActiveDirectoryJoinDomainWithAllNodes resource with the given ID exists.
+func ActiveDirectoryJoinDomainWithAllNodesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ActiveDirectoryJoinDomainWithAllNodesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/activeDirectoryJoinDomainWithAllNodes:ActiveDirectoryJoinDomainWithAllNodes", id, state, "", opts...)
+}
+
 type activeDirectoryJoinDomainWithAllNodesArgs struct {
 	AdditionalDatas []ActiveDirectoryJoinDomainWithAllNodesAdditionalData `pulumi:"additionalDatas"`
 	// Active Directory Join Point ID

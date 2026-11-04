@@ -914,6 +914,48 @@ class AuthenticationRule(pulumi.CustomResource):
         __props__.__dict__["state"] = state
         return AuthenticationRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthenticationRuleChildrenArgs', 'AuthenticationRuleChildrenArgsDict', 'outputs.AuthenticationRuleChildren']]]]] = None,
+            condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default: pulumi.Input[Optional[_builtins.bool]] = None,
+            identity_source_name: pulumi.Input[Optional[_builtins.str]] = None,
+            if_auth_fail: pulumi.Input[Optional[_builtins.str]] = None,
+            if_process_fail: pulumi.Input[Optional[_builtins.str]] = None,
+            if_user_not_found: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rank: pulumi.Input[Optional[_builtins.int]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["childrens"] = childrens
+        __props__["conditionAttributeName"] = condition_attribute_name
+        __props__["conditionAttributeValue"] = condition_attribute_value
+        __props__["conditionDictionaryName"] = condition_dictionary_name
+        __props__["conditionDictionaryValue"] = condition_dictionary_value
+        __props__["conditionId"] = condition_id
+        __props__["conditionIsNegate"] = condition_is_negate
+        __props__["conditionOperator"] = condition_operator
+        __props__["conditionType"] = condition_type
+        __props__["default"] = default
+        __props__["identitySourceName"] = identity_source_name
+        __props__["ifAuthFail"] = if_auth_fail
+        __props__["ifProcessFail"] = if_process_fail
+        __props__["ifUserNotFound"] = if_user_not_found
+        __props__["name"] = name
+        __props__["policySetId"] = policy_set_id
+        __props__["rank"] = rank
+        __props__["state"] = state
+        return pulumi.runtime.exists_resource(None, 'ise:deviceadmin/authenticationRule:AuthenticationRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def childrens(self) -> pulumi.Output[Optional[Sequence['outputs.AuthenticationRuleChildren']]]:

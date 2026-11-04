@@ -116,6 +116,12 @@ func (WorkProcessSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*workProcessSettingsState)(nil)).Elem()
 }
 
+// WorkProcessSettingsExists checks whether an existing WorkProcessSettings resource with the given ID exists.
+func WorkProcessSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WorkProcessSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/workProcessSettings:WorkProcessSettings", id, state, "", opts...)
+}
+
 type workProcessSettingsArgs struct {
 	// Whether to enable approval workflow for TrustSec Matrix changes
 	//   - Default value: `false`

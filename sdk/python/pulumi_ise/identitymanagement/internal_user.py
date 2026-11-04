@@ -938,6 +938,48 @@ class InternalUser(pulumi.CustomResource):
         __props__.__dict__["password_wo_version"] = password_wo_version
         return InternalUser(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            account_name_alias: pulumi.Input[Optional[_builtins.str]] = None,
+            change_password: pulumi.Input[Optional[_builtins.bool]] = None,
+            custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_password: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            first_name: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_groups: pulumi.Input[Optional[_builtins.str]] = None,
+            last_name: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_id_store: pulumi.Input[Optional[_builtins.str]] = None,
+            password_never_expires: pulumi.Input[Optional[_builtins.bool]] = None,
+            password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo_version: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accountNameAlias"] = account_name_alias
+        __props__["changePassword"] = change_password
+        __props__["customAttributes"] = custom_attributes
+        __props__["description"] = description
+        __props__["email"] = email
+        __props__["enablePassword"] = enable_password
+        __props__["enablePasswordWo"] = enable_password_wo
+        __props__["enablePasswordWoVersion"] = enable_password_wo_version
+        __props__["enabled"] = enabled
+        __props__["firstName"] = first_name
+        __props__["identityGroups"] = identity_groups
+        __props__["lastName"] = last_name
+        __props__["name"] = name
+        __props__["password"] = password
+        __props__["passwordIdStore"] = password_id_store
+        __props__["passwordNeverExpires"] = password_never_expires
+        __props__["passwordWo"] = password_wo
+        __props__["passwordWoVersion"] = password_wo_version
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/internalUser:InternalUser', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accountNameAlias")
     def account_name_alias(self) -> pulumi.Output[Optional[_builtins.str]]:

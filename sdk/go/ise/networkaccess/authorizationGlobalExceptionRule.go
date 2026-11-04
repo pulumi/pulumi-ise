@@ -195,6 +195,12 @@ func (AuthorizationGlobalExceptionRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authorizationGlobalExceptionRuleState)(nil)).Elem()
 }
 
+// AuthorizationGlobalExceptionRuleExists checks whether an existing AuthorizationGlobalExceptionRule resource with the given ID exists.
+func AuthorizationGlobalExceptionRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthorizationGlobalExceptionRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/authorizationGlobalExceptionRule:AuthorizationGlobalExceptionRule", id, state, "", opts...)
+}
+
 type authorizationGlobalExceptionRuleArgs struct {
 	// List of child conditions
 	Childrens []AuthorizationGlobalExceptionRuleChildren `pulumi:"childrens"`

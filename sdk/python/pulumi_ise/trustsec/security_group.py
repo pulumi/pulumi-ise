@@ -352,6 +352,22 @@ class SecurityGroup(pulumi.CustomResource):
         __props__.__dict__["value"] = value
         return SecurityGroup(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            is_read_only: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            propogate_to_apic: pulumi.Input[Optional[_builtins.bool]] = None,
+            value: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["isReadOnly"] = is_read_only
+        __props__["name"] = name
+        __props__["propogateToApic"] = propogate_to_apic
+        __props__["value"] = value
+        return pulumi.runtime.exists_resource(None, 'ise:trustsec/securityGroup:SecurityGroup', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

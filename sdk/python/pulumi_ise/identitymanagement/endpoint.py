@@ -1187,6 +1187,64 @@ class Endpoint(pulumi.CustomResource):
         __props__.__dict__["static_profile_assignment_defined"] = static_profile_assignment_defined
         return Endpoint(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            custom_attributes: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            group_id: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_store: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_store_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_compliance_status: pulumi.Input[Optional[_builtins.bool]] = None,
+            mdm_encrypted: pulumi.Input[Optional[_builtins.bool]] = None,
+            mdm_enrolled: pulumi.Input[Optional[_builtins.bool]] = None,
+            mdm_imei: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_jail_broken: pulumi.Input[Optional[_builtins.bool]] = None,
+            mdm_manufacturer: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_model: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_os: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_phone_number: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_pinlock: pulumi.Input[Optional[_builtins.bool]] = None,
+            mdm_reachable: pulumi.Input[Optional[_builtins.bool]] = None,
+            mdm_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            mdm_server_name: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            portal_user: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            static_group_assignment: pulumi.Input[Optional[_builtins.bool]] = None,
+            static_group_assignment_defined: pulumi.Input[Optional[_builtins.bool]] = None,
+            static_profile_assignment: pulumi.Input[Optional[_builtins.bool]] = None,
+            static_profile_assignment_defined: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["customAttributes"] = custom_attributes
+        __props__["description"] = description
+        __props__["groupId"] = group_id
+        __props__["identityStore"] = identity_store
+        __props__["identityStoreId"] = identity_store_id
+        __props__["mac"] = mac
+        __props__["mdmComplianceStatus"] = mdm_compliance_status
+        __props__["mdmEncrypted"] = mdm_encrypted
+        __props__["mdmEnrolled"] = mdm_enrolled
+        __props__["mdmImei"] = mdm_imei
+        __props__["mdmJailBroken"] = mdm_jail_broken
+        __props__["mdmManufacturer"] = mdm_manufacturer
+        __props__["mdmModel"] = mdm_model
+        __props__["mdmOs"] = mdm_os
+        __props__["mdmPhoneNumber"] = mdm_phone_number
+        __props__["mdmPinlock"] = mdm_pinlock
+        __props__["mdmReachable"] = mdm_reachable
+        __props__["mdmSerial"] = mdm_serial
+        __props__["mdmServerName"] = mdm_server_name
+        __props__["name"] = name
+        __props__["portalUser"] = portal_user
+        __props__["profileId"] = profile_id
+        __props__["staticGroupAssignment"] = static_group_assignment
+        __props__["staticGroupAssignmentDefined"] = static_group_assignment_defined
+        __props__["staticProfileAssignment"] = static_profile_assignment
+        __props__["staticProfileAssignmentDefined"] = static_profile_assignment_defined
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/endpoint:Endpoint', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="customAttributes")
     def custom_attributes(self) -> pulumi.Output[Optional[Mapping[str, _builtins.str]]]:

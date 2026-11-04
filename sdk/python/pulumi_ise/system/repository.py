@@ -541,6 +541,30 @@ class Repository(pulumi.CustomResource):
         __props__.__dict__["user_name"] = user_name
         return Repository(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enable_pki: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo: pulumi.Input[Optional[_builtins.str]] = None,
+            password_wo_version: pulumi.Input[Optional[_builtins.int]] = None,
+            path: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            server_name: pulumi.Input[Optional[_builtins.str]] = None,
+            user_name: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enablePki"] = enable_pki
+        __props__["name"] = name
+        __props__["password"] = password
+        __props__["passwordWo"] = password_wo
+        __props__["passwordWoVersion"] = password_wo_version
+        __props__["path"] = path
+        __props__["protocol"] = protocol
+        __props__["serverName"] = server_name
+        __props__["userName"] = user_name
+        return pulumi.runtime.exists_resource(None, 'ise:system/repository:Repository', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="enablePki")
     def enable_pki(self) -> pulumi.Output[Optional[_builtins.bool]]:

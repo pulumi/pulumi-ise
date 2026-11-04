@@ -90,6 +90,12 @@ func (AuthorizationGlobalExceptionRuleUpdateRanksState) ElementType() reflect.Ty
 	return reflect.TypeOf((*authorizationGlobalExceptionRuleUpdateRanksState)(nil)).Elem()
 }
 
+// AuthorizationGlobalExceptionRuleUpdateRanksExists checks whether an existing AuthorizationGlobalExceptionRuleUpdateRanks resource with the given ID exists.
+func AuthorizationGlobalExceptionRuleUpdateRanksExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthorizationGlobalExceptionRuleUpdateRanksState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks", id, state, "", opts...)
+}
+
 type authorizationGlobalExceptionRuleUpdateRanksArgs struct {
 	Rules []AuthorizationGlobalExceptionRuleUpdateRanksRule `pulumi:"rules"`
 }

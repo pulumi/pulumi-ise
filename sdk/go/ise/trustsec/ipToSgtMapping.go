@@ -144,6 +144,12 @@ func (IpToSgtMappingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ipToSgtMappingState)(nil)).Elem()
 }
 
+// IpToSgtMappingExists checks whether an existing IpToSgtMapping resource with the given ID exists.
+func IpToSgtMappingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IpToSgtMappingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/ipToSgtMapping:IpToSgtMapping", id, state, "", opts...)
+}
+
 type ipToSgtMappingArgs struct {
 	// Mandatory unless `mappingGroup` is set or unless `deployType` is `ALL`
 	DeployTo *string `pulumi:"deployTo"`

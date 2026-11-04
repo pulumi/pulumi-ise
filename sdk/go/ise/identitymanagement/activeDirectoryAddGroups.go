@@ -146,6 +146,12 @@ func (ActiveDirectoryAddGroupsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*activeDirectoryAddGroupsState)(nil)).Elem()
 }
 
+// ActiveDirectoryAddGroupsExists checks whether an existing ActiveDirectoryAddGroups resource with the given ID exists.
+func ActiveDirectoryAddGroupsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ActiveDirectoryAddGroupsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/activeDirectoryAddGroups:ActiveDirectoryAddGroups", id, state, "", opts...)
+}
+
 type activeDirectoryAddGroupsArgs struct {
 	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comm
 	//   - Default value: `Default_Scope`

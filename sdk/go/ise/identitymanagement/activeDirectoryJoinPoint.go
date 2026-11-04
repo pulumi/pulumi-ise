@@ -388,6 +388,12 @@ func (ActiveDirectoryJoinPointState) ElementType() reflect.Type {
 	return reflect.TypeOf((*activeDirectoryJoinPointState)(nil)).Elem()
 }
 
+// ActiveDirectoryJoinPointExists checks whether an existing ActiveDirectoryJoinPoint resource with the given ID exists.
+func ActiveDirectoryJoinPointExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ActiveDirectoryJoinPointState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint", id, state, "", opts...)
+}
+
 type activeDirectoryJoinPointArgs struct {
 	// String that contains the names of the scopes that the active directory belongs to. Names are separated by comma.
 	//   - Default value: `Default_Scope`

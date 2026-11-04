@@ -1612,6 +1612,78 @@ class ActiveDirectoryJoinPoint(pulumi.CustomResource):
         __props__.__dict__["unreachable_domains_behaviour"] = unreachable_domains_behaviour
         return ActiveDirectoryJoinPoint(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ad_scopes_names: pulumi.Input[Optional[_builtins.str]] = None,
+            aging_time: pulumi.Input[Optional[_builtins.int]] = None,
+            attributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointAttributeArgs', 'ActiveDirectoryJoinPointAttributeArgsDict', 'outputs.ActiveDirectoryJoinPointAttribute']]]]] = None,
+            auth_protection_type: pulumi.Input[Optional[_builtins.str]] = None,
+            country: pulumi.Input[Optional[_builtins.str]] = None,
+            department: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            domain: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_callback_for_dialin_client: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_dialin_permission_check: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_domain_allowed_list: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_failed_auth_protection: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_machine_access: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_machine_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_pass_change: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_rewrites: pulumi.Input[Optional[_builtins.bool]] = None,
+            failed_auth_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            first_name: pulumi.Input[Optional[_builtins.str]] = None,
+            groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointGroupArgs', 'ActiveDirectoryJoinPointGroupArgsDict', 'outputs.ActiveDirectoryJoinPointGroup']]]]] = None,
+            identity_not_in_ad_behaviour: pulumi.Input[Optional[_builtins.str]] = None,
+            job_title: pulumi.Input[Optional[_builtins.str]] = None,
+            last_name: pulumi.Input[Optional[_builtins.str]] = None,
+            locality: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organizational_unit: pulumi.Input[Optional[_builtins.str]] = None,
+            plaintext_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            rewrite_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActiveDirectoryJoinPointRewriteRuleArgs', 'ActiveDirectoryJoinPointRewriteRuleArgsDict', 'outputs.ActiveDirectoryJoinPointRewriteRule']]]]] = None,
+            schema: pulumi.Input[Optional[_builtins.str]] = None,
+            state_or_province: pulumi.Input[Optional[_builtins.str]] = None,
+            street_address: pulumi.Input[Optional[_builtins.str]] = None,
+            telephone: pulumi.Input[Optional[_builtins.str]] = None,
+            unreachable_domains_behaviour: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["adScopesNames"] = ad_scopes_names
+        __props__["agingTime"] = aging_time
+        __props__["attributes"] = attributes
+        __props__["authProtectionType"] = auth_protection_type
+        __props__["country"] = country
+        __props__["department"] = department
+        __props__["description"] = description
+        __props__["domain"] = domain
+        __props__["email"] = email
+        __props__["enableCallbackForDialinClient"] = enable_callback_for_dialin_client
+        __props__["enableDialinPermissionCheck"] = enable_dialin_permission_check
+        __props__["enableDomainAllowedList"] = enable_domain_allowed_list
+        __props__["enableFailedAuthProtection"] = enable_failed_auth_protection
+        __props__["enableMachineAccess"] = enable_machine_access
+        __props__["enableMachineAuth"] = enable_machine_auth
+        __props__["enablePassChange"] = enable_pass_change
+        __props__["enableRewrites"] = enable_rewrites
+        __props__["failedAuthThreshold"] = failed_auth_threshold
+        __props__["firstName"] = first_name
+        __props__["groups"] = groups
+        __props__["identityNotInAdBehaviour"] = identity_not_in_ad_behaviour
+        __props__["jobTitle"] = job_title
+        __props__["lastName"] = last_name
+        __props__["locality"] = locality
+        __props__["name"] = name
+        __props__["organizationalUnit"] = organizational_unit
+        __props__["plaintextAuth"] = plaintext_auth
+        __props__["rewriteRules"] = rewrite_rules
+        __props__["schema"] = schema
+        __props__["stateOrProvince"] = state_or_province
+        __props__["streetAddress"] = street_address
+        __props__["telephone"] = telephone
+        __props__["unreachableDomainsBehaviour"] = unreachable_domains_behaviour
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/activeDirectoryJoinPoint:ActiveDirectoryJoinPoint', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="adScopesNames")
     def ad_scopes_names(self) -> pulumi.Output[_builtins.str]:
