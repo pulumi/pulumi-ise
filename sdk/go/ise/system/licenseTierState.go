@@ -105,6 +105,12 @@ func (LicenseTierStateState) ElementType() reflect.Type {
 	return reflect.TypeOf((*licenseTierStateState)(nil)).Elem()
 }
 
+// LicenseTierStateExists checks whether an existing LicenseTierState resource with the given ID exists.
+func LicenseTierStateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LicenseTierStateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:system/licenseTierState:LicenseTierState", id, state, "", opts...)
+}
+
 type licenseTierStateArgs struct {
 	// List of licenses
 	Licenses []LicenseTierStateLicense `pulumi:"licenses"`

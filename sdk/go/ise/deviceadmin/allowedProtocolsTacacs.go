@@ -134,6 +134,12 @@ func (AllowedProtocolsTacacsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*allowedProtocolsTacacsState)(nil)).Elem()
 }
 
+// AllowedProtocolsTacacsExists checks whether an existing AllowedProtocolsTacacs resource with the given ID exists.
+func AllowedProtocolsTacacsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AllowedProtocolsTacacsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/allowedProtocolsTacacs:AllowedProtocolsTacacs", id, state, "", opts...)
+}
+
 type allowedProtocolsTacacsArgs struct {
 	// Allow CHAP
 	AllowChap bool `pulumi:"allowChap"`

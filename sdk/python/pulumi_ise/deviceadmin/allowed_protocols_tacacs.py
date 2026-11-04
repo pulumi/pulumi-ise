@@ -348,6 +348,22 @@ class AllowedProtocolsTacacs(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         return AllowedProtocolsTacacs(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allow_chap: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_ms_chap_v1: pulumi.Input[Optional[_builtins.bool]] = None,
+            allow_pap_ascii: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowChap"] = allow_chap
+        __props__["allowMsChapV1"] = allow_ms_chap_v1
+        __props__["allowPapAscii"] = allow_pap_ascii
+        __props__["description"] = description
+        __props__["name"] = name
+        return pulumi.runtime.exists_resource(None, 'ise:deviceadmin/allowedProtocolsTacacs:AllowedProtocolsTacacs', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowChap")
     def allow_chap(self) -> pulumi.Output[_builtins.bool]:

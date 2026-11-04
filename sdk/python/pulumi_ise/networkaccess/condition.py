@@ -561,6 +561,32 @@ class Condition(pulumi.CustomResource):
         __props__.__dict__["operator"] = operator
         return Condition(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConditionChildrenArgs', 'ConditionChildrenArgsDict', 'outputs.ConditionChildren']]]]] = None,
+            condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+            is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            operator: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["attributeName"] = attribute_name
+        __props__["attributeValue"] = attribute_value
+        __props__["childrens"] = childrens
+        __props__["conditionType"] = condition_type
+        __props__["description"] = description
+        __props__["dictionaryName"] = dictionary_name
+        __props__["dictionaryValue"] = dictionary_value
+        __props__["isNegate"] = is_negate
+        __props__["name"] = name
+        __props__["operator"] = operator
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/condition:Condition', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="attributeName")
     def attribute_name(self) -> pulumi.Output[Optional[_builtins.str]]:

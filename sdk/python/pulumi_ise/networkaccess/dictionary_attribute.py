@@ -449,6 +449,26 @@ class DictionaryAttribute(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         return DictionaryAttribute(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allowed_values: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DictionaryAttributeAllowedValueArgs', 'DictionaryAttributeAllowedValueArgsDict', 'outputs.DictionaryAttributeAllowedValue']]]]] = None,
+            data_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            direction_type: pulumi.Input[Optional[_builtins.str]] = None,
+            internal_name: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowedValues"] = allowed_values
+        __props__["dataType"] = data_type
+        __props__["description"] = description
+        __props__["dictionaryName"] = dictionary_name
+        __props__["directionType"] = direction_type
+        __props__["internalName"] = internal_name
+        __props__["name"] = name
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/dictionaryAttribute:DictionaryAttribute', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowedValues")
     def allowed_values(self) -> pulumi.Output[Optional[Sequence['outputs.DictionaryAttributeAllowedValue']]]:

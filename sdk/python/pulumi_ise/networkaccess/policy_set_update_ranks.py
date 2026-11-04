@@ -159,6 +159,14 @@ class PolicySetUpdateRanks(pulumi.CustomResource):
         __props__.__dict__["policies"] = policies
         return PolicySetUpdateRanks(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicySetUpdateRanksPolicyArgs', 'PolicySetUpdateRanksPolicyArgsDict', 'outputs.PolicySetUpdateRanksPolicy']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["policies"] = policies
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/policySetUpdateRanks:PolicySetUpdateRanks', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def policies(self) -> pulumi.Output[Optional[Sequence['outputs.PolicySetUpdateRanksPolicy']]]:

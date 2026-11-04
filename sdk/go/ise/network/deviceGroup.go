@@ -114,6 +114,12 @@ func (DeviceGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*deviceGroupState)(nil)).Elem()
 }
 
+// DeviceGroupExists checks whether an existing DeviceGroup resource with the given ID exists.
+func DeviceGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DeviceGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:network/deviceGroup:DeviceGroup", id, state, "", opts...)
+}
+
 type deviceGroupArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

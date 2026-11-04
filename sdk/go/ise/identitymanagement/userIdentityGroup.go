@@ -110,6 +110,12 @@ func (UserIdentityGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*userIdentityGroupState)(nil)).Elem()
 }
 
+// UserIdentityGroupExists checks whether an existing UserIdentityGroup resource with the given ID exists.
+func UserIdentityGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UserIdentityGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/userIdentityGroup:UserIdentityGroup", id, state, "", opts...)
+}
+
 type userIdentityGroupArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

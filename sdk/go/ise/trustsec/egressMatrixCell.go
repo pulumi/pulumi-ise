@@ -158,6 +158,12 @@ func (EgressMatrixCellState) ElementType() reflect.Type {
 	return reflect.TypeOf((*egressMatrixCellState)(nil)).Elem()
 }
 
+// EgressMatrixCellExists checks whether an existing EgressMatrixCell resource with the given ID exists.
+func EgressMatrixCellExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EgressMatrixCellState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/egressMatrixCell:EgressMatrixCell", id, state, "", opts...)
+}
+
 type egressMatrixCellArgs struct {
 	// Can be used only if sgacls not specified.
 	//   - Choices: `NONE`, `DENY_IP`, `PERMIT_IP`

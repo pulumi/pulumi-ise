@@ -184,6 +184,12 @@ func (TimeAndDateConditionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*timeAndDateConditionState)(nil)).Elem()
 }
 
+// TimeAndDateConditionExists checks whether an existing TimeAndDateCondition resource with the given ID exists.
+func TimeAndDateConditionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TimeAndDateConditionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/timeAndDateCondition:TimeAndDateCondition", id, state, "", opts...)
+}
+
 type timeAndDateConditionArgs struct {
 	// Condition description
 	Description *string `pulumi:"description"`

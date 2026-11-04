@@ -116,6 +116,12 @@ func (EndpointIdentityGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*endpointIdentityGroupState)(nil)).Elem()
 }
 
+// EndpointIdentityGroupExists checks whether an existing EndpointIdentityGroup resource with the given ID exists.
+func EndpointIdentityGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EndpointIdentityGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/endpointIdentityGroup:EndpointIdentityGroup", id, state, "", opts...)
+}
+
 type endpointIdentityGroupArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

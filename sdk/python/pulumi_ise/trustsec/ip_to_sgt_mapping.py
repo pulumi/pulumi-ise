@@ -466,6 +466,28 @@ class IpToSgtMapping(pulumi.CustomResource):
         __props__.__dict__["sgt"] = sgt
         return IpToSgtMapping(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            deploy_to: pulumi.Input[Optional[_builtins.str]] = None,
+            deploy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            host_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            host_name: pulumi.Input[Optional[_builtins.str]] = None,
+            mapping_group: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sgt: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["deployTo"] = deploy_to
+        __props__["deployType"] = deploy_type
+        __props__["description"] = description
+        __props__["hostIp"] = host_ip
+        __props__["hostName"] = host_name
+        __props__["mappingGroup"] = mapping_group
+        __props__["name"] = name
+        __props__["sgt"] = sgt
+        return pulumi.runtime.exists_resource(None, 'ise:trustsec/ipToSgtMapping:IpToSgtMapping', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="deployTo")
     def deploy_to(self) -> pulumi.Output[Optional[_builtins.str]]:

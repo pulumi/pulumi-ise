@@ -275,6 +275,18 @@ class WorkProcessSettings(pulumi.CustomResource):
         __props__.__dict__["use_defcons"] = use_defcons
         return WorkProcessSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enable_approval_workflow: pulumi.Input[Optional[_builtins.bool]] = None,
+            matrix_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            use_defcons: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enableApprovalWorkflow"] = enable_approval_workflow
+        __props__["matrixMode"] = matrix_mode
+        __props__["useDefcons"] = use_defcons
+        return pulumi.runtime.exists_resource(None, 'ise:trustsec/workProcessSettings:WorkProcessSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="enableApprovalWorkflow")
     def enable_approval_workflow(self) -> pulumi.Output[_builtins.bool]:

@@ -128,6 +128,12 @@ func (MatrixState) ElementType() reflect.Type {
 	return reflect.TypeOf((*matrixState)(nil)).Elem()
 }
 
+// MatrixExists checks whether an existing Matrix resource with the given ID exists.
+func MatrixExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MatrixState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/matrix:Matrix", id, state, "", opts...)
+}
+
 type matrixArgs struct {
 	// Policy UUID from which the TrustSec Policies needs to be copied. The default value is empty means it will create a new Matrix without any policies
 	CopyPolicyFrom *string `pulumi:"copyPolicyFrom"`

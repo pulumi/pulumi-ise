@@ -811,6 +811,44 @@ class AuthorizationRule(pulumi.CustomResource):
         __props__.__dict__["state"] = state
         return AuthorizationRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            childrens: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationRuleChildrenArgs', 'AuthorizationRuleChildrenArgsDict', 'outputs.AuthorizationRuleChildren']]]]] = None,
+            condition_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_attribute_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_name: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_dictionary_value: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_id: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_is_negate: pulumi.Input[Optional[_builtins.bool]] = None,
+            condition_operator: pulumi.Input[Optional[_builtins.str]] = None,
+            condition_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_set_id: pulumi.Input[Optional[_builtins.str]] = None,
+            profiles: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            rank: pulumi.Input[Optional[_builtins.int]] = None,
+            security_group: pulumi.Input[Optional[_builtins.str]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["childrens"] = childrens
+        __props__["conditionAttributeName"] = condition_attribute_name
+        __props__["conditionAttributeValue"] = condition_attribute_value
+        __props__["conditionDictionaryName"] = condition_dictionary_name
+        __props__["conditionDictionaryValue"] = condition_dictionary_value
+        __props__["conditionId"] = condition_id
+        __props__["conditionIsNegate"] = condition_is_negate
+        __props__["conditionOperator"] = condition_operator
+        __props__["conditionType"] = condition_type
+        __props__["default"] = default
+        __props__["name"] = name
+        __props__["policySetId"] = policy_set_id
+        __props__["profiles"] = profiles
+        __props__["rank"] = rank
+        __props__["securityGroup"] = security_group
+        __props__["state"] = state
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/authorizationRule:AuthorizationRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def childrens(self) -> pulumi.Output[Optional[Sequence['outputs.AuthorizationRuleChildren']]]:

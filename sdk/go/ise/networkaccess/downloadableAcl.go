@@ -127,6 +127,12 @@ func (DownloadableAclState) ElementType() reflect.Type {
 	return reflect.TypeOf((*downloadableAclState)(nil)).Elem()
 }
 
+// DownloadableAclExists checks whether an existing DownloadableAcl resource with the given ID exists.
+func DownloadableAclExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DownloadableAclState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/downloadableAcl:DownloadableAcl", id, state, "", opts...)
+}
+
 type downloadableAclArgs struct {
 	// The DACL content
 	Dacl string `pulumi:"dacl"`

@@ -451,6 +451,26 @@ class EgressMatrixCell(pulumi.CustomResource):
         __props__.__dict__["source_sgt_id"] = source_sgt_id
         return EgressMatrixCell(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_sgt_id: pulumi.Input[Optional[_builtins.str]] = None,
+            matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+            matrix_id: pulumi.Input[Optional[_builtins.str]] = None,
+            sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            source_sgt_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultRule"] = default_rule
+        __props__["description"] = description
+        __props__["destinationSgtId"] = destination_sgt_id
+        __props__["matrixCellStatus"] = matrix_cell_status
+        __props__["matrixId"] = matrix_id
+        __props__["sgacls"] = sgacls
+        __props__["sourceSgtId"] = source_sgt_id
+        return pulumi.runtime.exists_resource(None, 'ise:trustsec/egressMatrixCell:EgressMatrixCell', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultRule")
     def default_rule(self) -> pulumi.Output[_builtins.str]:

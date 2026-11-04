@@ -320,6 +320,20 @@ class EgressMatrixCellDefault(pulumi.CustomResource):
         __props__.__dict__["sgacls"] = sgacls
         return EgressMatrixCellDefault(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            matrix_cell_status: pulumi.Input[Optional[_builtins.str]] = None,
+            sgacls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultRule"] = default_rule
+        __props__["description"] = description
+        __props__["matrixCellStatus"] = matrix_cell_status
+        __props__["sgacls"] = sgacls
+        return pulumi.runtime.exists_resource(None, 'ise:trustsec/egressMatrixCellDefault:EgressMatrixCellDefault', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultRule")
     def default_rule(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -112,6 +112,12 @@ func (AuthorizationRuleUpdateRankState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authorizationRuleUpdateRankState)(nil)).Elem()
 }
 
+// AuthorizationRuleUpdateRankExists checks whether an existing AuthorizationRuleUpdateRank resource with the given ID exists.
+func AuthorizationRuleUpdateRankExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthorizationRuleUpdateRankState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/authorizationRuleUpdateRank:AuthorizationRuleUpdateRank", id, state, "", opts...)
+}
+
 type authorizationRuleUpdateRankArgs struct {
 	// Policy set ID
 	PolicySetId string `pulumi:"policySetId"`

@@ -469,6 +469,26 @@ class CertificateAuthenticationProfile(pulumi.CustomResource):
         __props__.__dict__["username_from"] = username_from
         return CertificateAuthenticationProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allowed_as_user_name: pulumi.Input[Optional[_builtins.bool]] = None,
+            certificate_attribute_name: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            external_identity_store_name: pulumi.Input[Optional[_builtins.str]] = None,
+            match_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            username_from: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowedAsUserName"] = allowed_as_user_name
+        __props__["certificateAttributeName"] = certificate_attribute_name
+        __props__["description"] = description
+        __props__["externalIdentityStoreName"] = external_identity_store_name
+        __props__["matchMode"] = match_mode
+        __props__["name"] = name
+        __props__["usernameFrom"] = username_from
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/certificateAuthenticationProfile:CertificateAuthenticationProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowedAsUserName")
     def allowed_as_user_name(self) -> pulumi.Output[_builtins.bool]:

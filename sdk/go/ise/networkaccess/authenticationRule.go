@@ -243,6 +243,12 @@ func (AuthenticationRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authenticationRuleState)(nil)).Elem()
 }
 
+// AuthenticationRuleExists checks whether an existing AuthenticationRule resource with the given ID exists.
+func AuthenticationRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthenticationRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/authenticationRule:AuthenticationRule", id, state, "", opts...)
+}
+
 type authenticationRuleArgs struct {
 	// List of child conditions
 	Childrens []AuthenticationRuleChildren `pulumi:"childrens"`

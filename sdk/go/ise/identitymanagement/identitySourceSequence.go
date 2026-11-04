@@ -136,6 +136,12 @@ func (IdentitySourceSequenceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*identitySourceSequenceState)(nil)).Elem()
 }
 
+// IdentitySourceSequenceExists checks whether an existing IdentitySourceSequence resource with the given ID exists.
+func IdentitySourceSequenceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IdentitySourceSequenceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/identitySourceSequence:IdentitySourceSequence", id, state, "", opts...)
+}
+
 type identitySourceSequenceArgs struct {
 	// Do not access other stores in the sequence if a selected identity store cannot be accessed for authentication
 	BreakOnStoreFail bool `pulumi:"breakOnStoreFail"`

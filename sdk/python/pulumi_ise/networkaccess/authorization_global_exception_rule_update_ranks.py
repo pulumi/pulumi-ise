@@ -159,6 +159,14 @@ class AuthorizationGlobalExceptionRuleUpdateRanks(pulumi.CustomResource):
         __props__.__dict__["rules"] = rules
         return AuthorizationGlobalExceptionRuleUpdateRanks(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AuthorizationGlobalExceptionRuleUpdateRanksRuleArgs', 'AuthorizationGlobalExceptionRuleUpdateRanksRuleArgsDict', 'outputs.AuthorizationGlobalExceptionRuleUpdateRanksRule']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["rules"] = rules
+        return pulumi.runtime.exists_resource(None, 'ise:networkaccess/authorizationGlobalExceptionRuleUpdateRanks:AuthorizationGlobalExceptionRuleUpdateRanks', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def rules(self) -> pulumi.Output[Optional[Sequence['outputs.AuthorizationGlobalExceptionRuleUpdateRanksRule']]]:

@@ -310,6 +310,20 @@ class TacacsCommandSet(pulumi.CustomResource):
         __props__.__dict__["permit_unmatched"] = permit_unmatched
         return TacacsCommandSet(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            commands: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsCommandSetCommandArgs', 'TacacsCommandSetCommandArgsDict', 'outputs.TacacsCommandSetCommand']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            permit_unmatched: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["commands"] = commands
+        __props__["description"] = description
+        __props__["name"] = name
+        __props__["permitUnmatched"] = permit_unmatched
+        return pulumi.runtime.exists_resource(None, 'ise:deviceadmin/tacacsCommandSet:TacacsCommandSet', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def commands(self) -> pulumi.Output[Optional[Sequence['outputs.TacacsCommandSetCommand']]]:

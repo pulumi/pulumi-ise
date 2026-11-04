@@ -351,6 +351,22 @@ class IdentitySourceSequence(pulumi.CustomResource):
         __props__.__dict__["name"] = name
         return IdentitySourceSequence(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            break_on_store_fail: pulumi.Input[Optional[_builtins.bool]] = None,
+            certificate_authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_sources: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IdentitySourceSequenceIdentitySourceArgs', 'IdentitySourceSequenceIdentitySourceArgsDict', 'outputs.IdentitySourceSequenceIdentitySource']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["breakOnStoreFail"] = break_on_store_fail
+        __props__["certificateAuthenticationProfile"] = certificate_authentication_profile
+        __props__["description"] = description
+        __props__["identitySources"] = identity_sources
+        __props__["name"] = name
+        return pulumi.runtime.exists_resource(None, 'ise:identitymanagement/identitySourceSequence:IdentitySourceSequence', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="breakOnStoreFail")
     def break_on_store_fail(self) -> pulumi.Output[_builtins.bool]:

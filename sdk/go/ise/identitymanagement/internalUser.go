@@ -263,6 +263,12 @@ func (InternalUserState) ElementType() reflect.Type {
 	return reflect.TypeOf((*internalUserState)(nil)).Elem()
 }
 
+// InternalUserExists checks whether an existing InternalUser resource with the given ID exists.
+func InternalUserExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InternalUserState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:identitymanagement/internalUser:InternalUser", id, state, "", opts...)
+}
+
 type internalUserArgs struct {
 	// The Account Name Alias will be used to send email notifications about password expiration. This field is only supported from ISE 3.2.
 	AccountNameAlias *string `pulumi:"accountNameAlias"`

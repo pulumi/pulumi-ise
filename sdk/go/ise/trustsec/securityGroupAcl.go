@@ -134,6 +134,12 @@ func (SecurityGroupAclState) ElementType() reflect.Type {
 	return reflect.TypeOf((*securityGroupAclState)(nil)).Elem()
 }
 
+// SecurityGroupAclExists checks whether an existing SecurityGroupAcl resource with the given ID exists.
+func SecurityGroupAclExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SecurityGroupAclState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/securityGroupAcl:SecurityGroupAcl", id, state, "", opts...)
+}
+
 type securityGroupAclArgs struct {
 	// Content of ACL
 	AclContent string `pulumi:"aclContent"`

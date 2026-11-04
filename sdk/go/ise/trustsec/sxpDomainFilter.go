@@ -132,6 +132,12 @@ func (SxpDomainFilterState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sxpDomainFilterState)(nil)).Elem()
 }
 
+// SxpDomainFilterExists checks whether an existing SxpDomainFilter resource with the given ID exists.
+func SxpDomainFilterExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SxpDomainFilterState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:trustsec/sxpDomainFilter:SxpDomainFilter", id, state, "", opts...)
+}
+
 type sxpDomainFilterArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

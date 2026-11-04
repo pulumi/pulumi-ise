@@ -167,6 +167,12 @@ func (ConditionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*conditionState)(nil)).Elem()
 }
 
+// ConditionExists checks whether an existing Condition resource with the given ID exists.
+func ConditionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ConditionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:networkaccess/condition:Condition", id, state, "", opts...)
+}
+
 type conditionArgs struct {
 	// Dictionary attribute name
 	AttributeName *string `pulumi:"attributeName"`

@@ -123,6 +123,12 @@ func (TacacsCommandSetState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tacacsCommandSetState)(nil)).Elem()
 }
 
+// TacacsCommandSetExists checks whether an existing TacacsCommandSet resource with the given ID exists.
+func TacacsCommandSetExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TacacsCommandSetState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("ise:deviceadmin/tacacsCommandSet:TacacsCommandSet", id, state, "", opts...)
+}
+
 type tacacsCommandSetArgs struct {
 	Commands []TacacsCommandSetCommand `pulumi:"commands"`
 	// Description
